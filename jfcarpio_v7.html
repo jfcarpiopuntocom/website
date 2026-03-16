@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jfcarpio.com — Dashboards · Reportes · Workshops · Blog · Publicaciones</title>
+<meta name="description" content="J.F. Carpio — Economista. Herramientas, análisis y formación para dueños de negocio que toman decisiones en serio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,900;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   jfcarpio.com · v6
+   REGLA ABSOLUTA: jamás gris sobre fondo oscuro.
+   Texto oscuro → blanco / azul claro / ámbar / coral
+   ═══════════════════════════════════════════════ */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+html { background: #060E1D; }
+body {
+  font-family: 'Lora', Georgia, serif;
+  background: #060E1D;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font: inherit; }
+
+/* ── ANIMATIONS ── */
+@-webkit-keyframes fadeUp { from{opacity:0;-webkit-transform:translateY(16px)} to{opacity:1;-webkit-transform:translateY(0)} }
+@keyframes fadeUp         { from{opacity:0;transform:translateY(16px)}         to{opacity:1;transform:translateY(0)} }
+@-webkit-keyframes fadeIn { from{opacity:0} to{opacity:1} }
+@keyframes fadeIn         { from{opacity:0} to{opacity:1} }
+@-webkit-keyframes slideL { from{opacity:0;-webkit-transform:translateX(-24px)} to{opacity:1;-webkit-transform:translateX(0)} }
+@keyframes slideL         { from{opacity:0;transform:translateX(-24px)}         to{opacity:1;transform:translateX(0)} }
+@-webkit-keyframes glow   { 0%,100%{opacity:.55} 50%{opacity:1} }
+@keyframes glow           { 0%,100%{opacity:.55} 50%{opacity:1} }
+
+/* ══════════════════════════
+   TOPBAR
+══════════════════════════ */
+.bar {
+  position: fixed; top:0; left:0; right:0; z-index:800;
+  background: rgba(6,14,29,0.96);
+  -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  display:-webkit-box; display:-webkit-flex; display:flex;
+  -webkit-box-align:center; -webkit-align-items:center; align-items:center;
+  -webkit-box-pack:justify; -webkit-justify-content:space-between; justify-content:space-between;
+  padding: 0 28px; height: 50px;
+}
+.bar-brand {
+  display:-webkit-box; display:-webkit-flex; display:flex;
+  -webkit-box-align:center; -webkit-align-items:center; align-items:center;
+  gap: 9px;
+}
+.bar-hex { width:24px; height:28px; -webkit-flex-shrink:0; flex-shrink:0; }
+.bar-name {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; font-weight:700; color:#FFFFFF;
+  letter-spacing:0.16em; text-transform:uppercase;
+}
+/* Hamburger */
+.ham {
+  width:40px; height:40px;
+  display:-webkit-box; display:-webkit-flex; display:flex;
+  -webkit-box-orient:vertical; -webkit-flex-direction:column; flex-direction:column;
+  -webkit-box-pack:center; -webkit-justify-content:center; justify-content:center;
+  -webkit-box-align:center; -webkit-align-items:center; align-items:center;
+  gap:5px;
+}
+.hl {
+  width:22px; height:1.5px; background:#FFFFFF; display:block;
+  -webkit-transition:all 0.22s ease; transition:all 0.22s ease;
+  -webkit-transform-origin:center; transform-origin:center;
+}
+.ham.open .hl:nth-child(1) { -webkit-transform:translateY(6.5px) rotate(45deg); transform:translateY(6.5px) rotate(45deg); }
+.ham.open .hl:nth-child(2) { opacity:0; -webkit-transform:scaleX(0); transform:scaleX(0); }
+.ham.open .hl:nth-child(3) { -webkit-transform:translateY(-6.5px) rotate(-45deg); transform:translateY(-6.5px) rotate(-45deg); }
+
+/* ══════════════════════════
+   OVERLAY MENU
+══════════════════════════ */
+.ov {
+  position:fixed; inset:0; background:#060E1D; z-index:700;
+  display:none; -webkit-box-orient:vertical; -webkit-flex-direction:column; flex-direction:column;
+  padding: 76px 7% 40px;
+}
+.ov.open {
+  display:-webkit-box; display:-webkit-flex; display:flex;
+  -webkit-animation:fadeIn 0.2s ease both; animation:fadeIn 0.2s ease both;
+}
+.ov-lbl {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:8px; color:#FFFFFF;
+  letter-spacing:0.3em; text-transform:uppercase; margin-bottom:28px;
+}
+.ov-nav { -webkit-box-flex:1; -webkit-flex:1; flex:1; display:-webkit-box; display:-webkit-flex; display:flex; -webkit-box-orient:vertical; -webkit-flex-direction:column; flex-direction:column; -webkit-box-pack:center; -webkit-justify-content:center; justify-content:center; gap:0; }
+.ov-a {
+  display:-webkit-box; display:-webkit-flex; display:flex;
+  -webkit-box-align:center; -webkit-align-items:center; align-items:center;
+  gap:18px; padding:16px 0;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  text-decoration:none; color:#FFFFFF; opacity:0;
+  -webkit-transition:padding-left 0.18s; transition:padding-left 0.18s;
+}
+.ov-a.in { -webkit-animation:slideL 0.38s ease both; animation:slideL 0.38s ease both; }
+.ov.open .ov-a:nth-child(1){-webkit-animation-delay:0.05s;animation-delay:0.05s}
+.ov.open .ov-a:nth-child(2){-webkit-animation-delay:0.11s;animation-delay:0.11s}
+.ov.open .ov-a:nth-child(3){-webkit-animation-delay:0.17s;animation-delay:0.17s}
+.ov.open .ov-a:nth-child(4){-webkit-animation-delay:0.23s;animation-delay:0.23s}
+.ov.open .ov-a:nth-child(5){-webkit-animation-delay:0.29s;animation-delay:0.29s}
+.ov-a:hover { padding-left:7px; }
+.ov-n { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#FFFFFF; letter-spacing:0.12em; min-width:26px; }
+.ov-t {
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:clamp(32px,7vw,64px); font-weight:900;
+  text-transform:uppercase; letter-spacing:-0.01em; line-height:1;
+  -webkit-transition:color 0.14s; transition:color 0.14s;
+}
+.ov-a:hover .ov-t { color:var(--c); }
+.ov-sub { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#FFFFFF; letter-spacing:0.08em; display:none; }
+@media(min-width:560px){ .ov-sub { display:block; } }
+.ov-arr { margin-left:auto; font-size:20px; color:#FFFFFF; -webkit-transition:color 0.14s,-webkit-transform 0.18s; transition:color 0.14s,transform 0.18s; }
+.ov-a:hover .ov-arr { color:var(--c); -webkit-transform:translate(5px,-4px); transform:translate(5px,-4px); }
+
+/* ══════════════════════════
+   HERO BAND (headline only)
+══════════════════════════ */
+.hero {
+  padding: 100px 7% 52px;
+  position:relative; overflow:hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+/* Blobs */
+.blobs { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
+.b1 { position:absolute; border-radius:50%; filter:blur(80px); -webkit-filter:blur(80px); width:48vw; height:48vw; background:rgba(29,91,191,0.16); top:-8%; right:-8%; }
+.b2 { position:absolute; border-radius:50%; filter:blur(80px); -webkit-filter:blur(80px); width:32vw; height:32vw; background:rgba(180,88,10,0.13); bottom:-4%; left:-4%; }
+.b3 { position:absolute; border-radius:50%; filter:blur(80px); -webkit-filter:blur(80px); width:24vw; height:24vw; background:rgba(107,48,204,0.1); top:40%; left:40%; }
+
+.hero-inner { position:relative; z-index:2; max-width:880px; }
+
+.hero-kicker {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:8px; font-weight:700; color:#C4830A;
+  letter-spacing:0.36em; text-transform:uppercase;
+  margin-bottom:26px;
+  display:-webkit-box; display:-webkit-flex; display:flex;
+  -webkit-box-align:center; -webkit-align-items:center; align-items:center; gap:10px;
+  -webkit-animation:fadeUp 0.5s 0.1s both; animation:fadeUp 0.5s 0.1s both;
+}
+.kd { width:6px; height:6px; border-radius:50%; background:#C4830A; -webkit-animation:glow 2.5s infinite; animation:glow 2.5s infinite; }
+
+.hero-h1 {
+  font-family:'Lora',Georgia,serif;
+  font-size:clamp(22px,3.8vw,44px);
+  font-weight:600; font-style:italic;
+  color:#FFFFFF; line-height:1.38;
+  -webkit-animation:fadeUp 0.6s 0.18s both; animation:fadeUp 0.6s 0.18s both;
+}
+.hero-h1 strong { font-style:normal; color:#93BEFF; font-weight:600; }
+
+/* ══════════════════════════
+   BENTO — before long copy
+══════════════════════════ */
+.bento-wrap {
+  background:#060E1D;
+  padding: 0 7% 0;
+  -webkit-animation:fadeUp 0.7s 0.32s both; animation:fadeUp 0.7s 0.32s both;
+}
+
+/* 5-panel bento grid */
+.bento {
+  display:-webkit-box; display:-webkit-flex; display:flex;
+  -webkit-flex-wrap:wrap; flex-wrap:wrap;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-top: none;
+  overflow:hidden;
+}
+
+.pan {
+  position:relative; overflow:hidden;
+  padding: 28px 26px 24px;
+  text-decoration:none; color:#FFFFFF;
+  display:-webkit-box; display:-webkit-flex; display:flex;
+  -webkit-box-orient:vertical; -webkit-flex-direction:column; flex-direction:column;
+  -webkit-box-pack:justify; -webkit-justify-content:space-between; justify-content:space-between;
+  min-height: 188px;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  -webkit-transition: background 0.22s ease; transition: background 0.22s ease;
+  /* mobile: full width */
+  width:100%;
+}
+.pan:hover { background: rgba(255,255,255,0.04); }
+
+/* Left color border — always visible */
+.pan::before {
+  content:''; position:absolute;
+  left:0; top:0; bottom:0; width:3px;
+  background:var(--pc);
+  -webkit-transition:width 0.22s ease; transition:width 0.22s ease;
+}
+.pan:hover::before { width:5px; }
+
+/* Gradient wash on hover */
+.pan::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(135deg, rgba(255,255,255,0.0) 0%, var(--pg) 100%);
+  opacity:0; pointer-events:none;
+  -webkit-transition:opacity 0.28s ease; transition:opacity 0.28s ease;
+}
+.pan:hover::after { opacity:1; }
+
+/* Huge background letter */
+.pan-letter {
+  position:absolute; right:-4px; bottom:-14px;
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:96px; font-weight:900; line-height:1;
+  color:rgba(255,255,255,0.04);
+  letter-spacing:-0.05em; pointer-events:none;
+  -webkit-user-select:none; user-select:none;
+}
+
+/* Panel sizes — tablet */
+@media(min-width:540px){
+  .pan { width:50%; }
+  .pan-wide { width:100%; }
+}
+/* Desktop asymmetric */
+@media(min-width:860px){
+  .pan-a { width:38%; min-height:168px; }  /* Dashboards  */
+  .pan-b { width:37%; min-height:168px; }  /* Reportes    */
+  .pan-c { width:25%; min-height:168px; }  /* Workshops   */
+  .pan-d { width:55%; min-height:160px; }  /* Blog        */
+  .pan-e { width:45%; min-height:160px; }  /* Publicaciones*/
+}
+
+/* Top row */
+.pan-top {
+  display:-webkit-box; display:-webkit-flex; display:flex;
+  -webkit-box-pack:justify; -webkit-justify-content:space-between; justify-content:space-between;
+  -webkit-box-align:start; -webkit-align-items:flex-start; align-items:flex-start;
+  margin-bottom:14px;
+}
+.pan-num {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:8px; color:#FFFFFF;
+  letter-spacing:0.16em;
+}
+.pan-count {
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:26px; font-weight:900; line-height:1;
+}
+
+/* Title */
+.pan-title {
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:clamp(26px,3.5vw,38px); font-weight:900;
+  text-transform:uppercase; letter-spacing:0.01em; line-height:1;
+  color:#FFFFFF; margin-bottom:7px;
+  -webkit-transition:color 0.18s; transition:color 0.18s;
+}
+.pan:hover .pan-title { color:var(--pc); }
+
+/* Description — NEVER grey on dark */
+.pan-desc {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:9px; color:#FFFFFF;
+  letter-spacing:0.07em; line-height:1.58;
+}
+/* Override: bright variant for hover */
+.pan:hover .pan-desc { color:#FFFFFF; }
+
+/* Bottom row */
+.pan-bot {
+  margin-top:18px;
+  display:-webkit-box; display:-webkit-flex; display:flex;
+  -webkit-box-align:center; -webkit-align-items:center; align-items:center;
+  -webkit-box-pack:justify; -webkit-justify-content:space-between; justify-content:space-between;
+}
+.pan-tag {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:7px; font-weight:700;
+  letter-spacing:0.16em; text-transform:uppercase;
+  padding:3px 8px; border:1px solid;
+}
+.pan-arr {
+  font-size:18px; color:#FFFFFF;
+  -webkit-transition:color 0.14s,-webkit-transform 0.18s; transition:color 0.14s,transform 0.18s;
+}
+.pan:hover .pan-arr { color:var(--pc); -webkit-transform:translate(4px,-4px); transform:translate(4px,-4px); }
+
+/* ══════════════════════════
+   COPY SECTION (after bento)
+══════════════════════════ */
+.copy-band {
+  padding: 64px 7% 72px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  max-width: 900px;
+  margin: 0 auto;
+}
+.copy-p {
+  font-family:'Lora',Georgia,serif;
+  font-size:17px; color:#FFFFFF;
+  line-height:1.82; margin-bottom:22px;
+}
+.copy-p strong { color:#FFFFFF; font-weight:600; }
+.copy-p:last-child { margin-bottom:0; }
+.copy-byline {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:9px; color:#FFFFFF;
+  letter-spacing:0.2em; text-transform:uppercase;
+  margin-top:36px;
+  padding-top:28px;
+  border-top:1px solid rgba(255,255,255,0.07);
+}
+.copy-byline span { color:#FFFFFF; }
+
+/* ══════════════════════════
+   FOOTER
+══════════════════════════ */
+.foot {
+  background:#060E1D;
+  border-top:1px solid rgba(255,255,255,0.07);
+  padding:20px 7%;
+  display:-webkit-box; display:-webkit-flex; display:flex;
+  -webkit-box-align:center; -webkit-align-items:center; align-items:center;
+  -webkit-box-pack:justify; -webkit-justify-content:space-between; justify-content:space-between;
+  -webkit-flex-wrap:wrap; flex-wrap:wrap; gap:10px;
+}
+.foot-copy { font-family:'Space Mono','Courier New',monospace; font-size:8px; color:#FFFFFF; letter-spacing:0.12em; }
+.foot-links { display:-webkit-box; display:-webkit-flex; display:flex; }
+.foot-links a {
+  font-family:'Space Mono','Courier New',monospace; font-size:8px;
+  color:#FFFFFF; letter-spacing:0.12em;
+  padding:2px 14px; border-left:1px solid rgba(255,255,255,0.09);
+  -webkit-transition:color 0.14s; transition:color 0.14s;
+}
+.foot-links a:first-child { border-left:none; }
+.foot-links a:hover { color:#FFFFFF; }
+
+/* ══════════════════════════
+   SCROLL REVEAL
+══════════════════════════ */
+.reveal {
+  opacity:0; -webkit-transform:translateY(10px); transform:translateY(10px);
+  -webkit-transition:opacity 0.55s ease,-webkit-transform 0.55s ease;
+          transition:opacity 0.55s ease,transform 0.55s ease;
+}
+.reveal.in { opacity:1; -webkit-transform:translateY(0); transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="bar">
+  <a href="#" class="bar-brand">
+    <svg class="bar-hex" viewBox="0 0 24 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="12,1.5 22.5,7.25 22.5,20.75 12,26.5 1.5,20.75 1.5,7.25" fill="#1D5BBF"/>
+      <text x="12" y="18.5" text-anchor="middle"
+        font-family="'Barlow Condensed','Arial Narrow',Arial"
+        font-size="8.5" font-weight="900" fill="#FFFFFF" letter-spacing="0.15">JFC</text>
+    </svg>
+    <span class="bar-name">jfcarpio.com</span>
+  </a>
+  <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Menú">
+    <span class="hl"></span><span class="hl"></span><span class="hl"></span>
+  </button>
+</header>
+
+<!-- OVERLAY MENU -->
+<div class="ov" id="ov">
+  <p class="ov-lbl">jfcarpio.com — Navegar</p>
+  <nav class="ov-nav">
+    <a href="#dashboards" class="ov-a" onclick="closeMenu()" style="--c:#0A7048;">
+      <span class="ov-n">01</span>
+      <span class="ov-t">Dashboards</span>
+      <span class="ov-sub">Diagnóstico inmediato · Growth OS</span>
+      <span class="ov-arr">↗</span>
+    </a>
+    <a href="#reportes" class="ov-a" onclick="closeMenu()" style="--c:#1D5BBF;">
+      <span class="ov-n">02</span>
+      <span class="ov-t">Reportes</span>
+      <span class="ov-sub">Benchmarks y análisis sectoriales</span>
+      <span class="ov-arr">↗</span>
+    </a>
+    <a href="#workshops" class="ov-a" onclick="closeMenu()" style="--c:#6B30CC;">
+      <span class="ov-n">03</span>
+      <span class="ov-t">Workshops</span>
+      <span class="ov-sub">Formación presencial y online</span>
+      <span class="ov-arr">↗</span>
+    </a>
+    <a href="#blog" class="ov-a" onclick="closeMenu()" style="--c:#C4830A;">
+      <span class="ov-n">04</span>
+      <span class="ov-t">Blog</span>
+      <span class="ov-sub">Economía aplicada, semana a semana</span>
+      <span class="ov-arr">↗</span>
+    </a>
+    <a href="#publicaciones" class="ov-a" onclick="closeMenu()" style="--c:#C4402A;">
+      <span class="ov-n">05</span>
+      <span class="ov-t">Publicaciones</span>
+      <span class="ov-sub">Libros, papers y columnas académicas</span>
+      <span class="ov-arr">↗</span>
+    </a>
+  </nav>
+</div>
+
+<!-- HERO — headline only, tight -->
+<section class="hero">
+  <div class="blobs"><div class="b1"></div><div class="b2"></div><div class="b3"></div></div>
+  <div class="hero-inner">
+
+    <p class="hero-kicker">
+      <span class="kd"></span>
+      Economía aplicada · Empresa privada · Análisis de entorno
+    </p>
+
+    <h1 class="hero-h1">
+      Construir una empresa en Latinoamérica<br>
+      es difícil. El entorno lo hace más difícil.<br>
+      <strong>Aquí encontrarás las herramientas para sobrevivir a los dos.</strong>
+    </h1>
+
+  </div>
+</section>
+
+<!-- BENTO — compact, right after headline -->
+<div class="bento-wrap">
+
+  <!-- Section header flush with bento -->
+  <div style="
+    display:-webkit-box; display:-webkit-flex; display:flex;
+    -webkit-box-align:baseline; -webkit-align-items:baseline; align-items:baseline;
+    -webkit-box-pack:justify; -webkit-justify-content:space-between; justify-content:space-between;
+    padding:32px 0 0;
+    border-top:1px solid rgba(255,255,255,0.05);
+  ">
+    <span style="
+      font-family:'Space Mono','Courier New',monospace;
+      font-size:8px; font-weight:700;
+      color:#FFFFFF; letter-spacing:0.28em; text-transform:uppercase;
+    ">Empieza por lo que más necesitas</span>
+    <span style="
+      font-family:'Space Mono','Courier New',monospace;
+      font-size:8px; color:#FFFFFF; letter-spacing:0.14em;
+    ">5 secciones →</span>
+  </div>
+
+  <div class="bento">
+
+    <!-- 01 DASHBOARDS -->
+    <a href="#dashboards" class="pan pan-a reveal" id="dashboards"
+       style="--pc:#0A9060; --pg:rgba(10,144,96,0.06);">
+      <div class="pan-letter">D</div>
+      <div>
+        <div class="pan-top">
+          <span class="pan-num">01 — Acción inmediata</span>
+          <span class="pan-count" style="color:#0A9060;" data-target="4">0</span>
+        </div>
+        <h3 class="pan-title">Dashboards</h3>
+        <p class="pan-desc">
+          Si tu negocio está en un momento crítico,<br>
+          empieza aquí. Diagnóstico en minutos.
+        </p>
+      </div>
+      <div class="pan-bot">
+        <span class="pan-tag" style="color:#0A9060; border-color:rgba(10,144,96,0.4);">Growth OS</span>
+        <span class="pan-arr">↗</span>
+      </div>
+    </a>
+
+    <!-- 02 REPORTES -->
+    <a href="#reportes" class="pan pan-b reveal" id="reportes"
+       style="--pc:#3B7EE8; --pg:rgba(59,126,232,0.06);">
+      <div class="pan-letter">R</div>
+      <div>
+        <div class="pan-top">
+          <span class="pan-num">02 — Entender el contexto</span>
+          <span class="pan-count" style="color:#3B7EE8;" data-target="7">0</span>
+        </div>
+        <h3 class="pan-title">Reportes</h3>
+        <p class="pan-desc">
+          Benchmarks sectoriales y análisis<br>
+          con datos reales del mercado.
+        </p>
+      </div>
+      <div class="pan-bot">
+        <span class="pan-tag" style="color:#3B7EE8; border-color:rgba(59,126,232,0.4);">Datos reales</span>
+        <span class="pan-arr">↗</span>
+      </div>
+    </a>
+
+    <!-- 03 WORKSHOPS -->
+    <a href="#workshops" class="pan pan-c reveal" id="workshops"
+       style="--pc:#9060E8; --pg:rgba(144,96,232,0.06);">
+      <div class="pan-letter">W</div>
+      <div>
+        <div class="pan-top">
+          <span class="pan-num">03 — Trabajo en vivo</span>
+          <span class="pan-count" style="color:#9060E8;" data-target="3">0</span>
+        </div>
+        <h3 class="pan-title">Work&shy;shops</h3>
+        <p class="pan-desc">
+          Llevas tus números.<br>
+          Salís con un plan.
+        </p>
+      </div>
+      <div class="pan-bot">
+        <span class="pan-tag" style="color:#9060E8; border-color:rgba(144,96,232,0.4);">Presencial</span>
+        <span class="pan-arr">↗</span>
+      </div>
+    </a>
+
+    <!-- 04 BLOG -->
+    <a href="#blog" class="pan pan-d reveal" id="blog"
+       style="--pc:#E8A020; --pg:rgba(232,160,32,0.06);">
+      <div class="pan-letter">B</div>
+      <div>
+        <div class="pan-top">
+          <span class="pan-num">04 — Lectura frecuente</span>
+          <span class="pan-count" style="color:#E8A020;" data-target="48">0</span>
+        </div>
+        <h3 class="pan-title">Blog</h3>
+        <p class="pan-desc">
+          Análisis cortos y directos sobre precios, mercados
+          y decisiones empresariales. Con conclusiones aplicables esta semana.
+        </p>
+      </div>
+      <div class="pan-bot">
+        <span class="pan-tag" style="color:#E8A020; border-color:rgba(232,160,32,0.4);">Economía aplicada</span>
+        <span class="pan-arr">↗</span>
+      </div>
+    </a>
+
+    <!-- 05 PUBLICACIONES -->
+    <a href="#publicaciones" class="pan pan-e reveal" id="publicaciones"
+       style="--pc:#E86040; --pg:rgba(232,96,64,0.06);">
+      <div class="pan-letter">P</div>
+      <div>
+        <div class="pan-top">
+          <span class="pan-num">05 — Rigor académico</span>
+          <span class="pan-count" style="color:#E86040;" data-target="12">0</span>
+        </div>
+        <h3 class="pan-title">Publi&shy;caciones</h3>
+        <p class="pan-desc">
+          Libros, papers y columnas de prensa.
+          El respaldo formal detrás de cada herramienta.
+        </p>
+      </div>
+      <div class="pan-bot">
+        <span class="pan-tag" style="color:#E86040; border-color:rgba(232,96,64,0.4);">Académico</span>
+        <span class="pan-arr">↗</span>
+      </div>
+    </a>
+
+  </div><!-- .bento -->
+</div><!-- .bento-wrap -->
+
+<!-- COPY — after bento -->
+<div class="copy-band reveal">
+  <p class="copy-p">
+    El empresario privado enfrenta dos batallas simultáneas:
+    la de construir un negocio que funcione, y la de operar
+    en un entorno que con frecuencia no le favorece —
+    regulaciones que asfixian, impuestos que desincentivan,
+    señales de mercado distorsionadas por la intervención del Estado.
+    <strong>Ignorar esa segunda batalla no la hace desaparecer.</strong>
+  </p>
+  <p class="copy-p">
+    Este sitio existe en la intersección de dos compromisos:
+    defender la empresa privada como el motor real de prosperidad,
+    y equipar al dueño de negocio con las herramientas de análisis
+    que normalmente solo tienen los economistas y los grandes despachos.
+    Dashboards que diagnostican. Reportes que contextualizan.
+    Talleres donde se trabaja con datos reales, no con casos hipotéticos.
+  </p>
+  <p class="copy-p">
+    <strong>La economía bien entendida no es neutral.</strong>
+    Es una defensa del derecho a producir, a contratar,
+    a arriesgar capital y a retener lo que se genera.
+    Todo lo que publico aquí — el artículo, el análisis,
+    la herramienta — parte de esa convicción.
+  </p>
+  <p class="copy-byline">
+    <span>J.F. Carpio</span> — Economista · Mises Institute · El Comercio · @jfcarpio
+  </p>
+</div>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <span class="foot-copy">© 2026 J.F. Carpio · jfcarpio.com</span>
+  <nav class="foot-links">
+    <a href="mailto:jf@jfcarpio.com">jf@jfcarpio.com</a>
+    <a href="https://instagram.com/jfcarpio">@jfcarpio</a>
+    <a href="#">LinkedIn</a>
+  </nav>
+</footer>
+
+<script>
+/* ── MENU ── */
+function toggleMenu(){
+  var ov=document.getElementById('ov'), h=document.getElementById('ham');
+  var open=ov.className.indexOf('open')!==-1;
+  if(open){ ov.className='ov'; h.className='ham'; document.body.style.overflow=''; }
+  else {
+    ov.className='ov open'; h.className='ham open'; document.body.style.overflow='hidden';
+    var items=ov.querySelectorAll('.ov-a');
+    for(var i=0;i<items.length;i++) items[i].className='ov-a in';
+  }
+}
+function closeMenu(){
+  document.getElementById('ov').className='ov';
+  document.getElementById('ham').className='ham';
+  document.body.style.overflow='';
+}
+
+/* ── COUNTUP ── */
+function countUp(el,target,dur){
+  var n=0, step=target/(dur/16);
+  var t=setInterval(function(){
+    n+=step; if(n>=target){n=target;clearInterval(t);}
+    el.textContent=Math.floor(n);
+  },16);
+}
+
+/* ── SCROLL REVEAL + COUNTUP ── */
+(function(){
+  var els=document.querySelectorAll?document.querySelectorAll('.reveal'):[];
+  var counted=[];
+  for(var i=0;i<els.length;i++) counted.push(false);
+
+  function check(){
+    var wh=window.innerHeight||document.documentElement.clientHeight||600;
+    for(var i=0;i<els.length;i++){
+      if(!els[i].getBoundingClientRect) continue;
+      var top=els[i].getBoundingClientRect().top;
+      if(top<wh-30){
+        var c=els[i].className;
+        if(c.indexOf(' in')===-1) els[i].className=c+' in';
+        if(!counted[i]){
+          counted[i]=true;
+          var ctr=els[i].querySelector?els[i].querySelector('[data-target]'):null;
+          if(ctr) countUp(ctr,parseInt(ctr.getAttribute('data-target'),10),800);
+        }
+      }
+    }
+  }
+  if(window.addEventListener){
+    window.addEventListener('scroll',check,false);
+    window.addEventListener('resize',check,false);
+  } else if(window.attachEvent){
+    window.attachEvent('onscroll',check);
+    window.attachEvent('onresize',check);
+  }
+  setTimeout(check,350);
+})();
+</script>
+</body>
+</html>
