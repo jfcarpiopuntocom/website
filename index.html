@@ -53,8 +53,6 @@
 }
 </script>
 
-<!-- GA4 placeholder / v1.12 -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
 
 <style>
 /* ══════════════════════════════════════════════════════
@@ -355,7 +353,7 @@ button { border:none; background:none; font:inherit; }
   -webkit-transition:background .22s ease; transition:background .22s ease;
   width:100%;
   opacity:0; -webkit-transform:translateY(10px); transform:translateY(10px);
-  -webkit-transition:background .22s,opacity .5s,- webkit-transform .5s; transition:background .22s,opacity .5s,transform .5s;
+  -webkit-transition:background .22s,opacity .5s,-webkit-transform .5s; transition:background .22s,opacity .5s,transform .5s;
 }
 .pan.vis { opacity:1; -webkit-transform:translateY(0); transform:translateY(0); }
 .pan:hover { background:rgba(255,255,255,.035); }
@@ -607,7 +605,7 @@ button { border:none; background:none; font:inherit; }
   border-bottom:1px solid rgba(255,255,255,.05);
   position:relative; opacity:0;
   -webkit-transform:translateX(-10px); transform:translateX(-10px);
-  -webkit-transition:opacity .5s,- webkit-transform .5s; transition:opacity .5s,transform .5s;
+  -webkit-transition:opacity .5s,-webkit-transform .5s; transition:opacity .5s,transform .5s;
 }
 .tl-row.vis { opacity:1; -webkit-transform:translateX(0); transform:translateX(0); }
 .tl-row:last-child { border-bottom:none; }
@@ -913,49 +911,7 @@ button { border:none; background:none; font:inherit; }
   .hero { padding-top:90px; }
   .bento-wrap,.copy-section,.about-section,.terminal-section { padding-left:5%; padding-right:5%; }
   .nl-section { margin-left:5%; margin-right:5%; padding:24px; }
-  
-/* ──────────────────────────────
-   v1.21 SOCIAL PROOF STRIP
-────────────────────────────── */
-.proof-strip {
-  display:-webkit-box; display:-webkit-flex; display:flex;
-  -webkit-box-pack:center; -webkit-justify-content:center; justify-content:center;
-  -webkit-box-align:center; -webkit-align-items:center; align-items:center;
-  -webkit-flex-wrap:wrap; flex-wrap:wrap;
-  gap:0;
-  border-top:1px solid rgba(255,255,255,.07);
-  border-bottom:1px solid rgba(255,255,255,.07);
-  padding:22px 7%;
-  background:#060E1D;
-}
-.proof-item {
-  display:-webkit-box; display:-webkit-flex; display:flex;
-  -webkit-box-orient:vertical; -webkit-flex-direction:column; flex-direction:column;
-  -webkit-box-align:center; -webkit-align-items:center; align-items:center;
-  padding:0 40px;
-}
-.proof-item + .proof-item {
-  border-left:1px solid rgba(255,255,255,.1);
-}
-@media(max-width:600px){
-  .proof-item { padding:14px 20px; border-left:none; border-top:1px solid rgba(255,255,255,.07); }
-  .proof-item:first-child { border-top:none; }
-}
-.proof-num {
-  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
-  font-size:36px; font-weight:900; color:#FFFFFF;
-  letter-spacing:.02em; line-height:1;
-}
-.proof-plus {
-  font-size:22px; font-weight:900; vertical-align:super; margin-left:2px;
-}
-.proof-lbl {
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; color:#FFFFFF;
-  letter-spacing:.2em; text-transform:uppercase;
-  margin-top:5px;
-}
-.copy-section { gap:36px; }
+  .copy-section { gap:36px; }
   .timeline::before { left:70px; }
 }
 </style>
@@ -981,7 +937,7 @@ button { border:none; background:none; font:inherit; }
     </svg>
     <span class="bar-name">jfcarpio.com</span>
   </a>
-  <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Menú">
+  <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Menú" aria-expanded="false" aria-controls="ov">
     <span class="ham-lines"><span class="hl"></span><span class="hl"></span><span class="hl"></span></span>
     <span class="ham-lbl" data-t="ham_lbl">MENÚ</span>
   </button>
@@ -1353,16 +1309,16 @@ button { border:none; background:none; font:inherit; }
 function toggleMenu(){
   var ov=document.getElementById('ov'),h=document.getElementById('ham');
   var open=ov.className.indexOf('open')!==-1;
-  if(open){ov.className='ov';h.className='ham';document.body.style.overflow='';}
+  if(open){ov.className='ov';h.className='ham';h.setAttribute('aria-expanded','false');document.body.style.overflow='';}
   else{
-    ov.className='ov open';h.className='ham open';document.body.style.overflow='hidden';
+    ov.className='ov open';h.className='ham open';h.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';
     var items=ov.querySelectorAll('.ov-a');
     for(var i=0;i<items.length;i++) items[i].className='ov-a in';
   }
 }
 function closeMenu(){
   document.getElementById('ov').className='ov';
-  document.getElementById('ham').className='ham';
+  var h=document.getElementById('ham');h.className='ham';h.setAttribute('aria-expanded','false');
   document.body.style.overflow='';
 }
 document.addEventListener('keydown',function(e){
@@ -1465,40 +1421,6 @@ function openWA(){
   if(conf){conf.style.display='block';setTimeout(function(){conf.style.display='none';},6000);}
 }
 
-async function runQuery(){
-  var q=document.getElementById('tIn').value.trim();
-  if(!q) return;
-  var btn=document.getElementById('tBtn'),
-      out=document.getElementById('tOut'),
-      tx=document.getElementById('tTx'),
-      spin=document.getElementById('tSpin'),
-      lbl=document.getElementById('tLbl');
-  btn.disabled=true; spin.style.display='inline-block';
-  lbl.textContent='PROCESANDO...'; out.className='c-output on'; tx.textContent='';
-  try{
-    var res=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:1000,
-        system:T[lang].sys_prompt,
-        messages:[{role:'user',content:q}]
-      })
-    });
-    var data=await res.json();
-    tx.textContent=data.content?.map(function(b){return b.text||'';}).join('')||(lang==='en'?'No response.':'Sin respuesta.');
-    lbl.textContent='OUTPUT · JFC · GROWTH OS';
-  }catch(e){
-    tx.textContent=lang==='en'?'Connection error. Write to me: jf@jfcarpio.com':'Error de conexión. Escríbeme: jf@jfcarpio.com';
-    lbl.textContent='ERROR';
-  }finally{
-    btn.disabled=false; spin.style.display='none';
-  }
-}
-document.getElementById('tIn').addEventListener('keydown',function(e){
-  if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();runQuery();}
-});
 (function(){
   var ta=document.getElementById('tIn');
   var cc=document.getElementById('cChar');
@@ -1730,10 +1652,10 @@ var T={
     wa_btn:'Write now →',
     wa_btn_s:'WhatsApp →',
     wa_send:'WhatsApp',
-    wa_draft:'Redactar pregunta',
-    wa_confirm:'✓ WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
+    wa_draft:'Draft message',
+    wa_confirm:'✓ WhatsApp opened — if it didn\'t load, write to jf@jfcarpio.com',
     c_char_of:'/300',
-    nl_freq:'Frecuencia irregular — cuando hay algo que vale. Baja cuando quieras.',
+    nl_freq:'Irregular cadence — when there\'s something worth sharing. Unsubscribe anytime.',
     c_helper:'Not sure how to start? Write whatever you have — about your business, the economic environment, a workshop, a report, or just to talk. The second button helps you draft it.',
     wa_follow:'Want to go deeper?',
     wa_default:'Hi, I came from jfcarpio.com and have a question.',
