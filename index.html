@@ -955,6 +955,18 @@ button { border:none; background:none; font:inherit; }
   letter-spacing:.2em; text-transform:uppercase;
   margin-top:5px;
 }
+.copy-list { margin:0 0 18px 0; padding-left:0; list-style:none; }
+.copy-list-item {
+  font-family:'Lora',Georgia,serif;
+  font-size:clamp(14px,1.5vw,17px); line-height:1.65;
+  color:#FFFFFF; padding:8px 0 8px 22px; position:relative;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.copy-list-item:last-child { border-bottom:none; }
+.copy-list-item::before {
+  content:'→'; position:absolute; left:0; top:8px;
+  color:#E8A020; font-family:'Space Mono',monospace; font-size:12px;
+}
 .copy-section { gap:36px; }
   .timeline::before { left:70px; }
 }
@@ -1183,27 +1195,31 @@ button { border:none; background:none; font:inherit; }
 <div class="copy-section">
   <div class="copy-text reveal">
     <p class="copy-p" data-t="cp1">
-      El empresario privado enfrenta dos batallas simultáneas:
-      la de construir un negocio que funcione, y la de operar
-      en un entorno que con frecuencia no le favorece —
-      regulaciones que asfixian, impuestos que desincentivan,
-      señales de mercado distorsionadas por la intervención del Estado.
-      <strong data-t="cp1b">Ignorar esa segunda batalla no la hace desaparecer.</strong>
+      El empresario o emprendedor enfrenta dos batallas simultáneas:
+      construir un negocio que funcione a todo nivel,
+      y operar en un entorno cultural — las ideas de sus empleados y del
+      resto del entorno — que con frecuencia es hostil hacia lo que hace,
+      y plagado de asfixia estatal.
+      <strong data-t="cp1b">(Ignorar las ideas y el entorno no los hace desaparecer.)</strong>
     </p>
     <p class="copy-p" data-t="cp2">
       Este sitio existe en la intersección de dos compromisos:
-      defender la empresa privada como el motor real de prosperidad,
-      y equipar al dueño de negocio con las herramientas de análisis
-      que normalmente solo tienen los economistas y los grandes despachos.
-      Dashboards que diagnostican. Reportes que contextualizan.
-      Talleres donde se trabaja con datos reales, no con casos hipotéticos.
+      defender la empresa privada como el motor de prosperidad de las sociedades,
+      y equipar al/la dueño/a de negocio con herramientas de análisis y cambio
+      que normalmente solo están al acceso de economistas y grandes despachos corporativos.
     </p>
+    <ul class="copy-list" data-t="cp_list" style="margin:0 0 18px 0;padding-left:0;list-style:none;">
+      <li class="copy-list-item" data-t="cp_li1">Dashboards que diagnostican riesgos y oportunidades en tiempo real.</li>
+      <li class="copy-list-item" data-t="cp_li2">Reportes que contextualizan datos con evidencia académica y práctica.</li>
+      <li class="copy-list-item" data-t="cp_li3">Talleres donde se trabaja en reducir el estrés financiero de los equipos, y en generar aprecio y sana gratitud por la empresa privada.</li>
+    </ul>
     <p class="copy-p">
       <strong data-t="cp3a">La economía bien entendida no es neutral.</strong>
       <span data-t="cp3b">
-      Es una defensa del derecho a producir, a contratar,
-      a arriesgar capital y a retener lo que se genera.
-      Todo lo que publico aquí parte de esa convicción.</span>
+      Es una defensa del derecho a producir, a contratar, a arriesgar capital
+      y a retener lo que se genera. Todo lo que publico aquí parte de esas convicciones:
+      la empresa privada como motor del crecimiento económico auténtico,
+      y el crecimiento económico como algo estupendo para las sociedades humanas.</span>
     </p>
     <p class="copy-byline">
       <strong>J. F. Carpio</strong> — <span data-t="byline">Dashboards · Reportes · Workshops</span>
@@ -1769,11 +1785,14 @@ var T={
     p4_desc:'Historia económica, ideas y entorno — cómo ciertas ideas —y malas— realmente lo afectan todo.', p4_tag:'Eleutheros',
     p5_num:'05 — Divulgación y académicos', p5_title:'Publicaciones',
     p5_desc:'Libros, papers y columnas. El respaldo formal detrás de cada herramienta.', p5_tag:'Académico',
-    cp1:'El empresario privado enfrenta dos batallas simultáneas: la de construir un negocio que funcione, y la de operar en un entorno que con frecuencia no le favorece — regulaciones que asfixian, impuestos que desincentivan, señales de mercado distorsionadas por la intervención del Estado.',
-    cp1b:'Ignorar esa segunda batalla no la hace desaparecer.',
-    cp2:'Este sitio existe en la intersección de dos compromisos: defender la empresa privada como el motor real de prosperidad, y equipar al dueño de negocio con las herramientas de análisis que normalmente solo tienen los economistas y los grandes despachos. Dashboards que diagnostican. Reportes que contextualizan. Talleres donde se trabaja con datos reales, no con casos hipotéticos.',
+    cp1:'El empresario o emprendedor enfrenta dos batallas simultáneas: construir un negocio que funcione a todo nivel, y operar en un entorno cultural — las ideas de sus empleados y del resto del entorno — que con frecuencia es hostil hacia lo que hace, y plagado de asfixia estatal.',
+    cp1b:'(Ignorar las ideas y el entorno no los hace desaparecer.)',
+    cp2:'Este sitio existe en la intersección de dos compromisos: defender la empresa privada como el motor de prosperidad de las sociedades, y equipar al/la dueño/a de negocio con herramientas de análisis y cambio que normalmente solo están al acceso de economistas y grandes despachos corporativos.',
+    cp_li1:'Dashboards que diagnostican riesgos y oportunidades en tiempo real.',
+    cp_li2:'Reportes que contextualizan datos con evidencia académica y práctica.',
+    cp_li3:'Talleres donde se trabaja en reducir el estrés financiero de los equipos, y en generar aprecio y sana gratitud por la empresa privada.',
     cp3a:'La economía bien entendida no es neutral.',
-    cp3b:'Es una defensa del derecho a producir, a contratar, a arriesgar capital y a retener lo que se genera. Todo lo que publico aquí parte de esa convicción.',
+    cp3b:'Es una defensa del derecho a producir, a contratar, a arriesgar capital y a retener lo que se genera. Todo lo que publico aquí parte de esas convicciones: la empresa privada como motor del crecimiento económico auténtico, y el crecimiento económico como algo estupendo para las sociedades humanas.',
     proof1:'clientes directos', proof2:'estudiantes', proof3:'años en el campo',
     byline:'Dashboards · Reportes · Workshops',
     tl_lbl:'Trayectoria', tl_title:'Una posición sostenida desde hace décadas',
@@ -1840,11 +1859,14 @@ var T={
     p4_desc:'Economic history, ideas and context — how certain ideas — bad ones — really do change everything.', p4_tag:'Eleutheros',
     p5_num:'05 — Public and academic', p5_title:'Publications',
     p5_desc:'Books, papers and columns. The formal foundation behind every tool.', p5_tag:'Academic',
-    cp1:'The private business owner faces two simultaneous battles: building a business that works, and operating in an environment that often works against them — regulations that strangle, taxes that discourage, market signals distorted by State intervention.',
-    cp1b:'Ignoring that second battle does not make it go away.',
-    cp2:'This site exists at the intersection of two commitments: defending private enterprise as the real engine of prosperity, and equipping business owners with analytical tools that normally only economists and large consulting firms possess. Dashboards that diagnose. Reports that contextualize. Workshops where you work with real data, not hypothetical cases.',
+    cp1:'The entrepreneur faces two simultaneous battles: building a business that works on every level, and operating in a cultural environment — the ideas of employees and the wider surroundings — that is frequently hostile to what they do, and riddled with state asphyxiation.',
+    cp1b:'(Ignoring those ideas and that environment does not make them disappear.)',
+    cp2:'This site exists at the intersection of two commitments: defending private enterprise as the engine of prosperity for societies, and equipping business owners with analytical and change-management tools that are normally only accessible to economists and large corporate firms.',
+    cp_li1:'Dashboards that diagnose risks and opportunities in real time.',
+    cp_li2:'Reports that contextualize data with academic and practical evidence.',
+    cp_li3:'Workshops focused on reducing financial stress in teams, and on building genuine appreciation for private enterprise.',
     cp3a:'Well-understood economics is not neutral.',
-    cp3b:'It is a defense of the right to produce, to hire, to risk capital and to keep what is earned. Everything I publish here stems from that conviction.',
+    cp3b:'It is a defense of the right to produce, to hire, to risk capital and to keep what is earned. Everything I publish here stems from those convictions: private enterprise as the engine of authentic economic growth, and economic growth as something wonderful for human societies.',
     proof1:'direct clients', proof2:'students', proof3:'years in the field',
     byline:'Dashboards · Reports · Workshops',
     tl_lbl:'Track record', tl_title:'A position held for decades',
