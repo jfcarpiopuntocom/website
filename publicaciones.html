@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publicaciones — J.F. Carpio · Investigador Económico</title>
+<meta name="description" content="Papers académicos, libro, artículos en Diario Hoy y revistas empresariales de Juan Fernando Carpio. Economía austriaca, empresa privada e instituciones.">
+<meta name="author" content="Juan Fernando Carpio">
+<meta name="theme-color" content="#060E1D">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jfcarpio.com/publicaciones.html">
+<meta property="og:title" content="Publicaciones — J.F. Carpio · Investigador Económico">
+<meta property="og:description" content="Papers académicos, artículos en medios y ensayos de economía austriaca, empresa privada e instituciones.">
+<meta property="og:image" content="https://jfcarpio.com/og-jfcarpio.png">
+<meta property="og:locale" content="es_EC">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@jfcarpio">
+<meta name="twitter:image" content="https://jfcarpio.com/og-jfcarpio.png">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23060E1D'/><text y='22' x='4' font-family='Arial' font-weight='900' font-size='16' fill='%231D5BBF'>JFC</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+*, *:before, *:after { -webkit-box-sizing:border-box; box-sizing:border-box; margin:0; padding:0; }
+html { background:#060E1D; scroll-behavior:smooth; }
+body {
+  font-family:'Lora',Georgia,serif;
+  background:#060E1D; color:#FFFFFF;
+  font-size:16px; line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+a { text-decoration:none; color:inherit; }
+
+/* ── SCROLL PROGRESS ── */
+.scroll-progress { position:fixed; top:0; left:0; right:0; height:2px; background:rgba(255,255,255,.07); z-index:900; }
+.scroll-progress-fill { height:100%; width:0; background:linear-gradient(90deg,#E86040,#E8A020); transition:width .1s linear; }
+
+/* ── TOPBAR ── */
+.bar {
+  position:fixed; top:2px; left:0; right:0; z-index:800;
+  background:rgba(6,14,29,.97);
+  -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+  display:-webkit-flex; display:flex;
+  -webkit-align-items:center; align-items:center;
+  -webkit-justify-content:space-between; justify-content:space-between;
+  padding:0 28px; height:50px;
+}
+.bar-brand { display:-webkit-flex; display:flex; -webkit-align-items:center; align-items:center; gap:10px; }
+.jfc-mark { width:28px; height:28px; -webkit-flex-shrink:0; flex-shrink:0; }
+.bar-name { font-family:'Space Mono','Courier New',monospace; font-size:10px; font-weight:700; color:#FFFFFF; letter-spacing:.16em; text-transform:uppercase; }
+.bar-back { font-family:'Space Mono','Courier New',monospace; font-size:10px; font-weight:700; color:#FFFFFF; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(255,255,255,.18); padding:5px 12px; transition:border-color .15s, color .15s; }
+.bar-back:hover { border-color:rgba(255,255,255,.5); color:#E8A020; }
+
+/* ── BACKGROUND BLOBS ── */
+.blobs { position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:0; }
+.bl { position:absolute; border-radius:50%; -webkit-filter:blur(90px); filter:blur(90px); }
+.bl1 { width:40vw; height:40vw; background:rgba(232,96,64,.07); top:-8%; right:-6%; }
+.bl2 { width:24vw; height:24vw; background:rgba(29,91,191,.08); bottom:10%; left:-4%; }
+.bl3 { width:18vw; height:18vw; background:rgba(232,160,32,.05); top:50%; right:15%; }
+
+/* ── ANIMATIONS ── */
+@-webkit-keyframes fadeUp { from{opacity:0;-webkit-transform:translateY(14px)} to{opacity:1;-webkit-transform:translateY(0)} }
+@keyframes         fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── PAGE WRAPPER ── */
+.page-wrap {
+  position:relative; z-index:1;
+  padding-top:72px; padding-bottom:80px;
+  min-height:100vh;
+  max-width:880px; margin:0 auto;
+  padding-left:7%; padding-right:7%;
+}
+
+/* ── PAGE HEADER ── */
+.page-header { padding:48px 0 36px; border-bottom:1px solid rgba(255,255,255,.08); -webkit-animation:fadeUp .5s .1s both; animation:fadeUp .5s .1s both; }
+.page-badge { font-family:'Space Mono','Courier New',monospace; font-size:10px; font-weight:700; color:#E86040; letter-spacing:.36em; text-transform:uppercase; display:-webkit-flex; display:flex; -webkit-align-items:center; align-items:center; gap:10px; margin-bottom:20px; }
+.page-badge-dot { width:6px; height:6px; border-radius:50%; background:#E86040; -webkit-flex-shrink:0; flex-shrink:0; }
+.page-title { font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:clamp(32px,6vw,60px); font-weight:900; line-height:1.02; text-transform:uppercase; letter-spacing:-.01em; color:#FFFFFF; margin-bottom:16px; }
+.page-title span { color:#E86040; }
+.page-sub { font-family:'Lora',Georgia,serif; font-size:15px; color:#CCCCCC; line-height:1.7; max-width:560px; }
+
+/* ── SECTION BLOCKS ── */
+.pub-section { margin-top:52px; -webkit-animation:fadeUp .5s .2s both; animation:fadeUp .5s .2s both; }
+.pub-section + .pub-section { margin-top:48px; }
+.sec-header { display:-webkit-flex; display:flex; -webkit-align-items:baseline; align-items:baseline; gap:16px; margin-bottom:20px; padding-bottom:10px; border-bottom:1px solid rgba(255,255,255,.07); }
+.sec-label { font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:22px; font-weight:900; text-transform:uppercase; letter-spacing:.04em; color:#FFFFFF; }
+.sec-label span { color:#E86040; }
+.sec-label-gold { color:#E8A020; }
+.sec-count { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#555555; letter-spacing:.2em; }
+
+/* ── FEATURED CARD (working paper) ── */
+.featured-card {
+  background:linear-gradient(135deg,rgba(232,96,64,.10) 0%,rgba(232,160,32,.07) 100%);
+  border:1px solid rgba(232,96,64,.22);
+  padding:26px 30px; display:block;
+  transition:border-color .2s, background .2s; position:relative;
+  margin-bottom:32px;
+}
+.featured-card:hover { border-color:rgba(232,96,64,.45); background:linear-gradient(135deg,rgba(232,96,64,.15) 0%,rgba(232,160,32,.09) 100%); }
+.fc-badge { font-family:'Space Mono','Courier New',monospace; font-size:9px; font-weight:700; color:#E86040; letter-spacing:.28em; text-transform:uppercase; margin-bottom:8px; }
+.fc-title { font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:clamp(17px,2.8vw,24px); font-weight:900; text-transform:uppercase; color:#FFFFFF; line-height:1.1; margin-bottom:10px; }
+.fc-desc { font-family:'Lora',Georgia,serif; font-size:13.5px; color:#CCCCCC; line-height:1.65; margin-bottom:14px; }
+.fc-meta { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:#888888; letter-spacing:.07em; }
+.fc-arrow { position:absolute; top:26px; right:28px; font-size:17px; color:#E86040; opacity:.55; transition:opacity .2s, transform .2s; }
+.featured-card:hover .fc-arrow { opacity:1; transform:translate(3px,-3px); }
+
+/* ── PAPER ITEM (Academia.edu papers) ── */
+.paper-item {
+  padding:20px 0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  display:-webkit-flex; display:flex;
+  gap:18px;
+}
+.paper-item:last-child { border-bottom:none; }
+.paper-num { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:rgba(255,255,255,.18); letter-spacing:.06em; -webkit-flex-shrink:0; flex-shrink:0; width:28px; padding-top:3px; }
+.paper-body { -webkit-flex:1; flex:1; min-width:0; }
+.paper-title { font-family:'Lora',Georgia,serif; font-size:15px; font-weight:600; color:#FFFFFF; line-height:1.45; margin-bottom:7px; }
+.paper-desc { font-family:'Lora',Georgia,serif; font-size:13px; color:#CCCCCC; line-height:1.6; margin-bottom:9px; }
+.paper-meta { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#666666; letter-spacing:.1em; }
+.paper-tags { display:-webkit-flex; display:flex; -webkit-flex-wrap:wrap; flex-wrap:wrap; gap:5px; margin-top:8px; }
+.ptag { font-family:'Space Mono','Courier New',monospace; font-size:9px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; border:1px solid rgba(255,255,255,.08); padding:2px 7px; color:#888888; }
+.ptag-eco  { color:#28ECAA; border-color:rgba(40,236,170,.18); }
+.ptag-inst { color:#3B7EE8; border-color:rgba(59,126,232,.18); }
+.ptag-emp  { color:#E86040; border-color:rgba(232,96,64,.18); }
+.ptag-gold { color:#E8A020; border-color:rgba(232,160,32,.18); }
+.paper-views { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#444444; letter-spacing:.1em; -webkit-flex-shrink:0; flex-shrink:0; padding-top:3px; }
+
+/* ── BLOG ANTERIOR — collapsible ── */
+.blog-toggle {
+  display:-webkit-flex; display:flex; -webkit-align-items:center; align-items:center;
+  gap:14px; width:100%;
+  padding:14px 0; cursor:pointer;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  margin-bottom:4px;
+  background:none; border-top:none; border-left:none; border-right:none;
+  text-align:left;
+}
+.blog-toggle-label { font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:22px; font-weight:900; text-transform:uppercase; letter-spacing:.04em; color:#FFFFFF; }
+.blog-toggle-label span { color:#E8A020; }
+.blog-toggle-count { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#555555; letter-spacing:.2em; }
+.blog-toggle-icon { font-family:'Space Mono','Courier New',monospace; font-size:11px; color:#555555; margin-left:auto; transition:transform .25s; }
+.blog-toggle[aria-expanded="true"] .blog-toggle-icon { transform:rotate(180deg); }
+.blog-list { display:none; padding-bottom:8px; }
+.blog-list.open { display:block; }
+
+/* ── BLOG ITEM ── */
+.blog-item { display:-webkit-flex; display:flex; gap:16px; padding:14px 0; border-bottom:1px solid rgba(255,255,255,.04); }
+.blog-item:last-child { border-bottom:none; }
+.blog-num { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:rgba(255,255,255,.15); -webkit-flex-shrink:0; flex-shrink:0; width:28px; padding-top:2px; }
+.blog-body { -webkit-flex:1; flex:1; min-width:0; }
+.blog-title { font-family:'Lora',Georgia,serif; font-size:14px; font-weight:600; color:#CCCCCC; line-height:1.4; margin-bottom:5px; }
+.blog-tags { display:-webkit-flex; display:flex; -webkit-flex-wrap:wrap; flex-wrap:wrap; gap:5px; }
+.btag { font-family:'Space Mono','Courier New',monospace; font-size:8px; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(255,255,255,.06); padding:1px 6px; color:#666666; }
+.blog-date { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#444444; -webkit-flex-shrink:0; flex-shrink:0; padding-top:2px; }
+
+/* ── FOOTER ── */
+.foot { background:rgba(6,14,29,.98); border-top:1px solid rgba(255,255,255,.06); padding:22px 28px; display:-webkit-flex; display:flex; -webkit-align-items:center; align-items:center; -webkit-justify-content:space-between; justify-content:space-between; -webkit-flex-wrap:wrap; flex-wrap:wrap; gap:12px; position:relative; z-index:10; }
+.foot-copy { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:#555555; letter-spacing:.1em; }
+.foot-links { display:-webkit-flex; display:flex; gap:18px; -webkit-flex-wrap:wrap; flex-wrap:wrap; }
+.foot-links a { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:#777777; letter-spacing:.1em; display:-webkit-flex; display:flex; -webkit-align-items:center; align-items:center; gap:6px; transition:color .15s; }
+.foot-links a:hover { color:#FFFFFF; }
+.foot-dot { width:5px; height:5px; border-radius:50%; -webkit-flex-shrink:0; flex-shrink:0; }
+
+@media (prefers-reduced-motion: reduce) { *, *:before, *:after { -webkit-animation:none!important; animation:none!important; transition:none!important; } }
+@media (max-width:600px) {
+  .bar { padding:0 16px; }
+  .page-wrap { padding-left:5%; padding-right:5%; }
+  .featured-card { padding:18px; }
+  .fc-arrow { display:none; }
+  .paper-num, .blog-num { display:none; }
+  .foot { padding:18px 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="scroll-progress"><div class="scroll-progress-fill" id="spFill"></div></div>
+
+<div class="blobs" aria-hidden="true">
+  <div class="bl bl1"></div>
+  <div class="bl bl2"></div>
+  <div class="bl bl3"></div>
+</div>
+
+<!-- TOPBAR -->
+<header class="bar">
+  <a href="index.html" class="bar-brand">
+    <img src="./fotojfc.png" alt="J.F. Carpio"
+         class="jfc-mark"
+         style="-webkit-filter:grayscale(100%) contrast(1.1);filter:grayscale(100%) contrast(1.1);border-radius:50%;object-fit:cover;object-position:center top;"
+         width="28" height="28">
+    <span class="bar-name">J.F. Carpio</span>
+  </a>
+  <div>
+    <a href="index.html" class="bar-back">← Home</a>
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <div class="page-badge"><span class="page-badge-dot"></span>05 — Investigación y Divulgación</div>
+    <h1 class="page-title">Publica<span>ciones</span></h1>
+    <p class="page-sub">Papers académicos, libro, artículos en medios de comunicación y ensayos de divulgación. Economía de la escuela austriaca, empresa privada e instituciones.</p>
+  </div>
+
+  <!-- WORKING PAPER 2026 -->
+  <div class="pub-section">
+    <div class="sec-header">
+      <span class="sec-label">Working <span>Paper</span></span>
+      <span class="sec-count">2026</span>
+    </div>
+    <a href="working-paper-hidden-cost.html" class="featured-card">
+      <span class="fc-arrow">↗</span>
+      <div class="fc-badge">Working Paper · Marzo 2026 · En inglés</div>
+      <div class="fc-title">The Hidden Cost of Anti-Capitalist Beliefs in the Workplace</div>
+      <p class="fc-desc">Anti-capitalist beliefs impose measurable, quantifiable costs on private firms: lower accountability, weaker asset stewardship, loyalty that evaporates under stress, and internal crisis amplification. The intervention is not ideological — it is arithmetic.</p>
+      <div class="fc-meta">Juan Fernando Carpio · jfcarpio.com · Economic Researcher · 8 min</div>
+    </a>
+  </div>
+
+  <!-- ACADEMIA.EDU PAPERS -->
+  <div class="pub-section">
+    <div class="sec-header">
+      <span class="sec-label">Papers <span>Académicos</span></span>
+      <span class="sec-count">Academia.edu · 7 papers</span>
+    </div>
+
+    <div class="paper-item">
+      <span class="paper-num">01</span>
+      <div class="paper-body">
+        <div class="paper-title">¿Es el P.I.B. un buen indicador de la situación económica de un país? — Partes 1, 2 y 3</div>
+        <p class="paper-desc">El PIB se utiliza ampliamente como indicador de avance o retroceso económico. Sin embargo, presenta fallas metodológicas sistemáticas que lo hacen inadecuado para ese propósito. Serie en tres partes con análisis y propuesta alternativa.</p>
+        <div class="paper-tags"><span class="ptag ptag-eco">Macroeconomía</span><span class="ptag">PIB</span><span class="ptag">Contabilidad nacional</span></div>
+        <div class="paper-meta" style="margin-top:8px;">Academia.edu · 463 / 272 / 148 vistas</div>
+      </div>
+    </div>
+
+    <div class="paper-item">
+      <span class="paper-num">02</span>
+      <div class="paper-body">
+        <div class="paper-title">Los errores de los economistas neoclásicos</div>
+        <p class="paper-desc">El mainstream anglosajón de la Economía ha construido un edificio conceptual sofisticado pero asentado sobre supuestos incorrectos. Análisis desde la escuela austriaca de los errores metodológicos fundamentales de la corriente neoclásica.</p>
+        <div class="paper-tags"><span class="ptag ptag-eco">Metodología económica</span><span class="ptag">Austriaca</span><span class="ptag">Neoclásica</span></div>
+        <div class="paper-meta" style="margin-top:8px;">Academia.edu · 265 vistas</div>
+      </div>
+    </div>
+
+    <div class="paper-item">
+      <span class="paper-num">03</span>
+      <div class="paper-body">
+        <div class="paper-title">¿Quién es dueño del Yasuní? — Una aproximación desde la ética liberal de la propiedad y los contratos</div>
+        <p class="paper-desc">Los Estados Nación trazaron sus líneas "finales" en los últimos cien años. Dentro de los territorios así delimitados coexisten pueblos, comunidades y recursos cuya titularidad es filosófica y jurídicamente compleja. Una aproximación desde la teoría liberal de la propiedad.</p>
+        <div class="paper-tags"><span class="ptag ptag-inst">Propiedad</span><span class="ptag">Ecuador</span><span class="ptag ptag-eco">Economía ambiental</span><span class="ptag">Ética liberal</span></div>
+        <div class="paper-meta" style="margin-top:8px;">Academia.edu · 205 vistas</div>
+      </div>
+    </div>
+
+    <div class="paper-item">
+      <span class="paper-num">04</span>
+      <div class="paper-body">
+        <div class="paper-title">¿Qué provocó la actual recesión 2008-…?</div>
+        <p class="paper-desc">La desregulación del sistema financiero mundial ha sido culpada por la Gran Recesión. Este paper utiliza el Triángulo Hayekiano para visualizar los verdaderos mecanismos de la crisis y cuestionar el diagnóstico predominante.</p>
+        <div class="paper-tags"><span class="ptag ptag-eco">Ciclos económicos</span><span class="ptag">Hayek</span><span class="ptag">Crisis 2008</span><span class="ptag">Austriaca</span></div>
+        <div class="paper-meta" style="margin-top:8px;">Academia.edu · Pan, 2004 · 232 vistas</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIARIO HOY / REVISTAS -->
+  <div class="pub-section">
+    <div class="sec-header">
+      <span class="sec-label sec-label-gold">Medios y <span style="color:#E86040;">Revistas</span></span>
+      <span class="sec-count">Revista GK · Diario Hoy · Revistas gremiales y empresariales UIO/GYE</span>
+    </div>
+
+    <div class="paper-item">
+      <span class="paper-num">01</span>
+      <div class="paper-body">
+        <div class="paper-title">Por qué comprar en Colombia es bueno para el Ecuador</div>
+        <p class="paper-desc">El comercio transfronterizo como mecanismo de asignación eficiente de recursos: por qué las compras en Colombia no empobrecen al Ecuador sino que revelan precios relativos, arbitraje productivo y la lógica de la ventaja comparativa en acción.</p>
+        <div class="paper-tags"><span class="ptag ptag-eco">Comercio</span><span class="ptag ptag-emp">Política económica</span><span class="ptag">Ecuador</span></div>
+        <div class="paper-meta" style="margin-top:8px;">Revista GK · 7 septiembre 2015</div>
+      </div>
+    </div>
+
+    <div class="paper-item">
+      <span class="paper-num">02</span>
+      <div class="paper-body">
+        <div class="paper-title">El derecho a regalar(se)</div>
+        <p class="paper-desc">La propiedad privada como institución universal y pre-estatal: análisis económico e histórico del derecho a disponer libremente de los propios recursos, sus fundamentos en la acción humana y sus implicaciones para la política pública.</p>
+        <div class="paper-tags"><span class="ptag ptag-inst">Propiedad privada</span><span class="ptag ptag-eco">Derechos económicos</span><span class="ptag">Instituciones</span></div>
+        <div class="paper-meta" style="margin-top:8px;">Revista GK · 15 junio 2015</div>
+      </div>
+    </div>
+
+    <div class="paper-item">
+      <span class="paper-num">03</span>
+      <div class="paper-body">
+        <div class="paper-title">Sim City, la dolarización y las salvaguardas</div>
+        <p class="paper-desc">La dolarización ecuatoriana y las salvaguardas comerciales analizadas desde la teoría del crecimiento económico y la economía del desarrollo: restricciones a las importaciones como política de sustitución versus integración de mercados.</p>
+        <div class="paper-tags"><span class="ptag ptag-eco">Dolarización</span><span class="ptag ptag-emp">Política comercial</span><span class="ptag">Ecuador</span></div>
+        <div class="paper-meta" style="margin-top:8px;">Revista GK · 23 marzo 2015</div>
+      </div>
+    </div>
+
+    <div class="paper-item">
+      <span class="paper-num">04</span>
+      <div class="paper-body">
+        <div class="paper-title">El desastre económico de Nicolás Maduro (y Hugo Chávez)</div>
+        <p class="paper-desc">Anatomía del fracaso venezolano: control de precios, expropiaciones, expansión monetaria y destrucción del capital como caso de estudio sobre las consecuencias predecibles de ignorar los mecanismos de coordinación del mercado.</p>
+        <div class="paper-tags"><span class="ptag ptag-eco">Venezuela</span><span class="ptag ptag-inst">Socialismo</span><span class="ptag">Política económica</span></div>
+        <div class="paper-meta" style="margin-top:8px;">Revista GK · 2 diciembre 2013</div>
+      </div>
+    </div>
+
+    <div class="paper-item" style="opacity:.65;">
+      <span class="paper-num">—</span>
+      <div class="paper-body">
+        <div class="paper-title" style="color:#888888; font-style:italic;">Artículos en Diario Hoy y revistas gremiales y empresariales de Quito y Guayaquil</div>
+        <p class="paper-desc" style="color:#666666;">Columnas y ensayos publicados en medios del sector empresarial ecuatoriano. Índice en preparación.</p>
+        <div class="paper-meta" style="margin-top:8px;">Próximamente</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIBRO -->
+  <div class="pub-section">
+    <div class="sec-header">
+      <span class="sec-label">Libro</span>
+      <span class="sec-count">Próximamente</span>
+    </div>
+    <div style="padding:20px 0; border-bottom:1px solid rgba(255,255,255,.05);">
+      <p style="font-family:'Lora',Georgia,serif; font-size:14px; color:#888888; font-style:italic;">Información sobre el libro próximamente.</p>
+    </div>
+  </div>
+
+  <!-- BLOG ANTERIOR — collapsible -->
+  <div class="pub-section">
+    <button class="blog-toggle" id="blogToggle" aria-expanded="false" aria-controls="blogList" onclick="toggleBlog()">
+      <span class="blog-toggle-label">Blog <span>Anterior</span></span>
+      <span class="blog-toggle-count">Ensayos de divulgación · 2001–2021</span>
+      <span class="blog-toggle-icon" id="blogIcon">▼</span>
+    </button>
+
+    <div class="blog-list" id="blogList">
+
+      <!-- 2021 -->
+      <div style="margin:16px 0 6px; font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#E86040; letter-spacing:.28em; text-transform:uppercase;">2021</div>
+
+      <div class="blog-item">
+        <span class="blog-num">01</span>
+        <div class="blog-body">
+          <div class="blog-title">¿Es sólo la producción material la que cuenta?</div>
+          <div class="blog-tags"><span class="btag">Economía</span><span class="btag">Producción</span></div>
+        </div>
+        <span class="blog-date">2021</span>
+      </div>
+
+      <!-- 2020 -->
+      <div style="margin:16px 0 6px; font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#E86040; letter-spacing:.28em; text-transform:uppercase;">2020</div>
+
+      <div class="blog-item">
+        <span class="blog-num">01</span>
+        <div class="blog-body">
+          <div class="blog-title">Una visión pobrista — Alejandro Rozitchner</div>
+          <div class="blog-tags"><span class="btag">Economía</span><span class="btag">Cultura</span></div>
+        </div>
+        <span class="blog-date">Nov 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">02</span>
+        <div class="blog-body">
+          <div class="blog-title">Keynes muere en Europa del Este</div>
+          <div class="blog-tags"><span class="btag">Keynes</span><span class="btag">Bálticos</span><span class="btag">Historia económica</span></div>
+        </div>
+        <span class="blog-date">Sep 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">03</span>
+        <div class="blog-body">
+          <div class="blog-title">En defensa del lujo</div>
+          <div class="blog-tags"><span class="btag">Capitalismo</span><span class="btag">Bienes</span></div>
+        </div>
+        <span class="blog-date">Ago 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">04</span>
+        <div class="blog-body">
+          <div class="blog-title">¿Más seguridad a través del Estado?</div>
+          <div class="blog-tags"><span class="btag">Estado</span><span class="btag">Propiedad</span></div>
+        </div>
+        <span class="blog-date">Jun 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">05</span>
+        <div class="blog-body">
+          <div class="blog-title">La plusvalía de Say</div>
+          <div class="blog-tags"><span class="btag">Say</span><span class="btag">Reisman</span><span class="btag">Salario</span></div>
+        </div>
+        <span class="blog-date">Jun 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">06</span>
+        <div class="blog-body">
+          <div class="blog-title">Samuelson, Coase y el faro forzoso</div>
+          <div class="blog-tags"><span class="btag">Bienes públicos</span><span class="btag">Coase</span></div>
+        </div>
+        <span class="blog-date">Jun 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">07</span>
+        <div class="blog-body">
+          <div class="blog-title">¿Es el interés "el precio del dinero"?</div>
+          <div class="blog-tags"><span class="btag">Austriaca</span><span class="btag">Interés</span></div>
+        </div>
+        <span class="blog-date">Jun 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">08</span>
+        <div class="blog-body">
+          <div class="blog-title">Una alternativa al PIB — ese indicador consumista</div>
+          <div class="blog-tags"><span class="btag">PIB</span><span class="btag">Contabilidad nacional</span></div>
+        </div>
+        <span class="blog-date">Jun 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">09</span>
+        <div class="blog-body">
+          <div class="blog-title">El PIB mide consumo, no producción</div>
+          <div class="blog-tags"><span class="btag">PIB</span><span class="btag">Macroeconomía</span></div>
+        </div>
+        <span class="blog-date">Jun 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">10</span>
+        <div class="blog-body">
+          <div class="blog-title">¿Por qué fracasa el socialismo?</div>
+          <div class="blog-tags"><span class="btag">Mises</span><span class="btag">Socialismo</span><span class="btag">Cálculo económico</span></div>
+        </div>
+        <span class="blog-date">May 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">11</span>
+        <div class="blog-body">
+          <div class="blog-title">Por qué la dolarización es (muy) buena para el Ecuador</div>
+          <div class="blog-tags"><span class="btag">Ecuador</span><span class="btag">Dolarización</span></div>
+        </div>
+        <span class="blog-date">May 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">12</span>
+        <div class="blog-body">
+          <div class="blog-title">Es bueno salir ganando — defensa moral y económica del lucro</div>
+          <div class="blog-tags"><span class="btag">Empresa</span><span class="btag">Lucro</span><span class="btag">Ética</span></div>
+        </div>
+        <span class="blog-date">May 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">13</span>
+        <div class="blog-body">
+          <div class="blog-title">Cuatro mitos de la economía de pizarrón</div>
+          <div class="blog-tags"><span class="btag">Hazlitt</span><span class="btag">Sofismas</span></div>
+        </div>
+        <span class="blog-date">May 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">14</span>
+        <div class="blog-body">
+          <div class="blog-title">Pobreza y pobres en la sociedad libre</div>
+          <div class="blog-tags"><span class="btag">Pobreza</span><span class="btag">Capitalismo</span></div>
+        </div>
+        <span class="blog-date">May 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">15</span>
+        <div class="blog-body">
+          <div class="blog-title">Socialismo de las propinas en Ecuador</div>
+          <div class="blog-tags"><span class="btag">Ecuador</span><span class="btag">Política pública</span></div>
+        </div>
+        <span class="blog-date">May 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">16</span>
+        <div class="blog-body">
+          <div class="blog-title">Emprendedores: lo bueno, lo malo y lo feo</div>
+          <div class="blog-tags"><span class="btag">Empresa</span><span class="btag">Ecuador</span></div>
+        </div>
+        <span class="blog-date">May 2020</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">17</span>
+        <div class="blog-body">
+          <div class="blog-title">Las Instituciones y los Círculos Concéntricos de la Sociedad</div>
+          <div class="blog-tags"><span class="btag">Instituciones</span><span class="btag">Hayek</span><span class="btag">Menger</span></div>
+        </div>
+        <span class="blog-date">Feb 2020</span>
+      </div>
+
+      <!-- 2019 -->
+      <div style="margin:16px 0 6px; font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#E86040; letter-spacing:.28em; text-transform:uppercase;">2019</div>
+
+      <div class="blog-item">
+        <span class="blog-num">01</span>
+        <div class="blog-body">
+          <div class="blog-title">Minería para el próximo millón de años — George Reisman</div>
+          <div class="blog-tags"><span class="btag">Reisman</span><span class="btag">Abundancia</span><span class="btag">Capital</span></div>
+        </div>
+        <span class="blog-date">Jul 2019</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">02</span>
+        <div class="blog-body">
+          <div class="blog-title">¿Existe tal cosa como un mercado libre? — Barreras naturales y artificiales</div>
+          <div class="blog-tags"><span class="btag">Mercados</span><span class="btag">Empresa</span></div>
+        </div>
+        <span class="blog-date">Feb 2019</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">03</span>
+        <div class="blog-body">
+          <div class="blog-title">¿Es explotación el trabajo asalariado?</div>
+          <div class="blog-tags"><span class="btag">Salario</span><span class="btag">Marx</span><span class="btag">Plusvalía de Say</span></div>
+        </div>
+        <span class="blog-date">Feb 2019</span>
+      </div>
+
+      <!-- 2018 -->
+      <div style="margin:16px 0 6px; font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#E86040; letter-spacing:.28em; text-transform:uppercase;">2018</div>
+
+      <div class="blog-item">
+        <span class="blog-num">01</span>
+        <div class="blog-body">
+          <div class="blog-title">Keynes muere (de nuevo) en Europa del Este</div>
+          <div class="blog-tags"><span class="btag">Keynes</span><span class="btag">Bálticos</span></div>
+        </div>
+        <span class="blog-date">Ago 2018</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">02</span>
+        <div class="blog-body">
+          <div class="blog-title">Sobre la singularidad de la Economía entre las disciplinas del conocimiento</div>
+          <div class="blog-tags"><span class="btag">Epistemología</span><span class="btag">Valor subjetivo</span></div>
+        </div>
+        <span class="blog-date">Ago 2018</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">03</span>
+        <div class="blog-body">
+          <div class="blog-title">¿Es el interés el "precio del dinero"? — Primera versión</div>
+          <div class="blog-tags"><span class="btag">Interés</span><span class="btag">Austriaca</span></div>
+        </div>
+        <span class="blog-date">Jul 2018</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">04</span>
+        <div class="blog-body">
+          <div class="blog-title">Una alternativa al P.I.B. — Primera versión</div>
+          <div class="blog-tags"><span class="btag">PIB</span><span class="btag">Hanke</span></div>
+        </div>
+        <span class="blog-date">Jul 2018</span>
+      </div>
+
+      <div class="blog-item">
+        <span class="blog-num">05</span>
+        <div class="blog-body">
+          <div class="blog-title">Los tres ejes del progreso humano</div>
+          <div class="blog-tags"><span class="btag">Capital</span><span class="btag">Reisman</span><span class="btag">Progreso</span></div>
+        </div>
+        <span class="blog-date">Feb 2018</span>
+      </div>
+
+    </div><!-- /blog-list -->
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div style="margin-top:56px; padding-top:24px; border-top:1px solid rgba(255,255,255,.05); font-family:'Space Mono','Courier New',monospace; font-size:10px; color:#3D3D3D; letter-spacing:.08em;">
+    © 2026 Juan Fernando Carpio · <a href="index.html" style="color:#E86040;">jfcarpio.com</a> · Quito, Ecuador
+  </div>
+
+</div><!-- /page-wrap -->
+
+<!-- FOOTER -->
+<footer class="foot">
+  <a href="index.html" class="foot-copy" style="text-decoration:none;">© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador</a>
+  <nav class="foot-links">
+    <a href="index.html#workshops"><span class="foot-dot" style="background:#00B0C8;"></span>Workshops</a>
+    <a href="index.html#reportes"><span class="foot-dot" style="background:#3B7EE8;"></span>Reportes</a>
+    <a href="blog.html"><span class="foot-dot" style="background:#E8A020;"></span>Blog</a>
+    <a href="working-paper-hidden-cost.html"><span class="foot-dot" style="background:#E86040;"></span>Working Paper</a>
+    <a href="index.html"><span class="foot-dot" style="background:#FFFFFF;"></span>Home</a>
+  </nav>
+</footer>
+
+<script>
+function toggleBlog(){
+  var btn=document.getElementById('blogToggle');
+  var list=document.getElementById('blogList');
+  var icon=document.getElementById('blogIcon');
+  var open=btn.getAttribute('aria-expanded')==='true';
+  btn.setAttribute('aria-expanded', open?'false':'true');
+  list.classList.toggle('open',!open);
+}
+(function(){
+  var fill=document.getElementById('spFill');
+  if(!fill)return;
+  window.addEventListener('scroll',function(){
+    var d=document.documentElement;
+    fill.style.width=Math.min(d.scrollTop/(d.scrollHeight-d.clientHeight)*100,100)+'%';
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
