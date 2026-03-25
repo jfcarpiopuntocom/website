@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hidden Cost of Anti-Capitalist Beliefs — J.F. Carpio Working Paper</title>
+<meta name="description" content="Anti-capitalist beliefs impose measurable costs on private firms: lower accountability, weaker asset stewardship, loyalty that evaporates at stress, and internal crisis amplification. Working Paper by Juan Fernando Carpio.">
+<meta name="author" content="Juan Fernando Carpio">
+<meta name="theme-color" content="#060E1D">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jfcarpio.com/working-paper-hidden-cost.html">
+<meta property="og:title" content="The Hidden Cost of Anti-Capitalist Beliefs in the Workplace — J.F. Carpio">
+<meta property="og:description" content="Anti-capitalist beliefs impose measurable, quantifiable costs on private firms. Working Paper, March 2026.">
+<meta property="og:image" content="https://jfcarpio.com/og-jfcarpio.png">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@jfcarpio">
+<meta name="twitter:image" content="https://jfcarpio.com/og-jfcarpio.png">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23060E1D'/><text y='22' x='4' font-family='Arial' font-weight='900' font-size='16' fill='%231D5BBF'>JFC</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════════════════════════════════════
+   jfcarpio.com — Working Paper · v1.0
+   Background and bar/footer match index.html exactly.
+══════════════════════════════════════════════════════ */
+*, *:before, *:after {
+  -webkit-box-sizing:border-box; box-sizing:border-box;
+  margin:0; padding:0;
+}
+html { background:#060E1D; scroll-behavior:smooth; }
+body {
+  font-family:'Lora',Georgia,serif;
+  background:#060E1D; color:#FFFFFF;
+  font-size:16px; line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+a { text-decoration:none; color:inherit; }
+button { border:none; background:none; font:inherit; cursor:pointer; }
+
+/* ── SCROLL PROGRESS ── */
+.scroll-progress {
+  position:fixed; top:0; left:0; right:0; height:2px;
+  background:rgba(255,255,255,.07); z-index:900;
+}
+.scroll-progress-fill {
+  height:100%; width:0;
+  background:linear-gradient(90deg,#E8A020,#E86040);
+  transition:width .1s linear;
+}
+
+/* ── TOPBAR ── */
+.bar {
+  position:fixed; top:2px; left:0; right:0; z-index:800;
+  background:rgba(6,14,29,.97);
+  -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+  display:-webkit-flex; display:flex;
+  -webkit-align-items:center; align-items:center;
+  -webkit-justify-content:space-between; justify-content:space-between;
+  padding:0 28px; height:50px;
+}
+.bar-brand {
+  display:-webkit-flex; display:flex;
+  -webkit-align-items:center; align-items:center;
+  gap:10px; text-decoration:none;
+}
+.jfc-mark {
+  width:28px; height:28px; -webkit-flex-shrink:0; flex-shrink:0;
+}
+.bar-name {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; font-weight:700; color:#FFFFFF;
+  letter-spacing:.16em; text-transform:uppercase;
+}
+.bar-right {
+  display:-webkit-flex; display:flex;
+  -webkit-align-items:center; align-items:center;
+  gap:12px;
+}
+.bar-back {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; font-weight:700; color:#FFFFFF;
+  letter-spacing:.14em; text-transform:uppercase;
+  border:1px solid rgba(255,255,255,.18);
+  padding:5px 12px;
+  transition:border-color .15s, color .15s;
+}
+.bar-back:hover { border-color:rgba(255,255,255,.5); color:#E8A020; }
+
+/* ── ANIMATIONS ── */
+@-webkit-keyframes fadeUp { from{opacity:0;-webkit-transform:translateY(14px)} to{opacity:1;-webkit-transform:translateY(0)} }
+@keyframes         fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+@-webkit-keyframes fadeIn  { from{opacity:0} to{opacity:1} }
+@keyframes         fadeIn  { from{opacity:0} to{opacity:1} }
+
+/* ── BACKGROUND BLOBS ── */
+.blobs {
+  position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:0;
+}
+.bl {
+  position:absolute; border-radius:50%;
+  -webkit-filter:blur(90px); filter:blur(90px);
+}
+.bl1 { width:40vw; height:40vw; background:rgba(29,91,191,.10); top:-8%; right:-6%; }
+.bl2 { width:24vw; height:24vw; background:rgba(180,88,10,.09); bottom:10%; left:-4%; }
+.bl3 { width:18vw; height:18vw; background:rgba(232,96,64,.06); top:50%; right:15%; }
+
+/* ── ARTICLE WRAPPER ── */
+.article-wrap {
+  position:relative; z-index:1;
+  padding-top:72px; /* clear fixed bar */
+  padding-bottom:80px;
+  min-height:100vh;
+}
+
+/* ── ARTICLE HEADER ── */
+.art-header {
+  max-width:760px;
+  margin:0 auto;
+  padding:48px 7% 36px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  -webkit-animation:fadeUp .5s .1s both; animation:fadeUp .5s .1s both;
+}
+.art-badge {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; font-weight:700; color:#E8A020;
+  letter-spacing:.36em; text-transform:uppercase;
+  display:-webkit-flex; display:flex;
+  -webkit-align-items:center; align-items:center;
+  gap:10px; margin-bottom:20px;
+}
+.art-badge-dot {
+  width:6px; height:6px; border-radius:50%;
+  background:#E8A020; -webkit-flex-shrink:0; flex-shrink:0;
+  -webkit-animation:pulse 2.5s infinite; animation:pulse 2.5s infinite;
+}
+@-webkit-keyframes pulse { 0%,100%{opacity:.5} 50%{opacity:1} }
+@keyframes         pulse { 0%,100%{opacity:.5} 50%{opacity:1} }
+
+.art-title {
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:clamp(28px,5.5vw,52px);
+  font-weight:900; line-height:1.05;
+  text-transform:uppercase; letter-spacing:-.01em;
+  color:#FFFFFF; margin-bottom:20px;
+}
+.art-title span { color:#E8A020; }
+
+.art-meta {
+  display:-webkit-flex; display:flex;
+  -webkit-flex-wrap:wrap; flex-wrap:wrap;
+  gap:8px 22px;
+  margin-bottom:6px;
+}
+.art-meta-item {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:11px; color:#CCCCCC;
+  letter-spacing:.08em;
+}
+.art-meta-item strong {
+  color:#FFFFFF; font-weight:700;
+}
+
+/* ── ABSTRACT BOX ── */
+.abstract-box {
+  max-width:760px; margin:0 auto;
+  padding:28px 7%;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  -webkit-animation:fadeUp .5s .2s both; animation:fadeUp .5s .2s both;
+}
+.abstract-label {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; font-weight:700; color:#E8A020;
+  letter-spacing:.3em; text-transform:uppercase;
+  margin-bottom:14px;
+}
+.abstract-text {
+  font-family:'Lora',Georgia,serif;
+  font-size:15px; font-style:italic;
+  color:#CCCCCC; line-height:1.8;
+  border-left:3px solid #E8A020;
+  padding-left:20px;
+}
+
+/* ── ARTICLE BODY ── */
+.art-body {
+  max-width:760px; margin:0 auto;
+  padding:0 7%;
+  -webkit-animation:fadeUp .5s .3s both; animation:fadeUp .5s .3s both;
+}
+
+/* Section */
+.art-section { margin-top:52px; }
+.art-section:first-child { margin-top:40px; }
+
+.section-label {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; font-weight:700; color:#E8A020;
+  letter-spacing:.3em; text-transform:uppercase;
+  margin-bottom:10px;
+  display:-webkit-flex; display:flex;
+  -webkit-align-items:center; align-items:center;
+  gap:10px;
+}
+.section-label::after {
+  content:'';
+  -webkit-flex:1; flex:1;
+  height:1px; background:rgba(255,255,255,.07);
+}
+
+.art-h2 {
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:clamp(22px,3.5vw,32px);
+  font-weight:900; line-height:1.1;
+  text-transform:uppercase; letter-spacing:.01em;
+  color:#FFFFFF; margin-bottom:18px;
+}
+
+.art-p {
+  font-family:'Lora',Georgia,serif;
+  font-size:16px; color:#CCCCCC; line-height:1.8;
+  margin-bottom:16px;
+}
+.art-p:last-child { margin-bottom:0; }
+
+/* Pullquote */
+.pullquote {
+  margin:32px 0;
+  padding:20px 24px;
+  border-left:3px solid #E8A020;
+  background:rgba(232,160,32,.05);
+}
+.pullquote-text {
+  font-family:'Lora',Georgia,serif;
+  font-size:17px; font-style:italic;
+  color:#FFFFFF; line-height:1.7;
+  margin-bottom:8px;
+}
+.pullquote-attr {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; color:#E8A020;
+  letter-spacing:.14em; text-transform:uppercase;
+}
+
+/* Numbered list of costs */
+.cost-list { margin:24px 0; }
+.cost-item {
+  display:-webkit-flex; display:flex;
+  gap:16px; margin-bottom:20px;
+  padding-bottom:20px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.cost-item:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+.cost-num {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:11px; font-weight:700; color:#E8A020;
+  letter-spacing:.08em; min-width:32px;
+  padding-top:2px;
+}
+.cost-body {
+  font-family:'Lora',Georgia,serif;
+  font-size:15px; color:#CCCCCC; line-height:1.75;
+}
+.cost-body strong { color:#FFFFFF; }
+
+/* ── DATA TABLE (variables) ── */
+.data-table-wrap {
+  margin:28px 0; overflow-x:auto;
+  border:1px solid rgba(255,255,255,.09);
+}
+.data-table {
+  width:100%; border-collapse:collapse;
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:11px;
+}
+.data-table th {
+  background:rgba(232,160,32,.1);
+  color:#E8A020; font-weight:700;
+  letter-spacing:.14em; text-transform:uppercase;
+  padding:10px 14px; text-align:left;
+  border-bottom:1px solid rgba(255,255,255,.09);
+  white-space:nowrap;
+}
+.data-table td {
+  color:#CCCCCC;
+  padding:9px 14px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  vertical-align:top; line-height:1.5;
+}
+.data-table tr:last-child td { border-bottom:none; }
+.data-table tr:hover td { background:rgba(255,255,255,.025); }
+.data-table td:first-child {
+  font-weight:700; color:#FFFFFF;
+  white-space:nowrap;
+}
+.data-table td:nth-child(3) { color:#FFFFFF; }
+
+/* ── FORMULA BOX ── */
+.formula-box {
+  margin:24px 0;
+  padding:20px 24px;
+  border:1px solid rgba(232,160,32,.25);
+  background:rgba(232,160,32,.04);
+}
+.formula-label {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; color:#E8A020;
+  letter-spacing:.22em; text-transform:uppercase;
+  margin-bottom:10px;
+}
+.formula-expr {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:13px; color:#FFFFFF;
+  line-height:1.7;
+}
+.formula-result {
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid rgba(232,160,32,.2);
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:11px; color:#E8A020;
+  letter-spacing:.06em;
+}
+
+/* ── TRANSFORMATION TABLE ── */
+.transform-table {
+  margin:28px 0; overflow-x:auto;
+  border:1px solid rgba(255,255,255,.09);
+}
+.transform-table table {
+  width:100%; border-collapse:collapse;
+}
+.transform-table th {
+  background:rgba(29,91,191,.12);
+  color:#FFFFFF; font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+  padding:11px 16px; text-align:left;
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+.transform-table th:last-child {
+  background:rgba(40,236,170,.07);
+  color:#28ECAA;
+}
+.transform-table td {
+  font-family:'Lora',Georgia,serif;
+  font-size:14px; color:#CCCCCC;
+  padding:11px 16px; line-height:1.5;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  vertical-align:top;
+}
+.transform-table tr:last-child td { border-bottom:none; }
+.transform-table td:last-child { color:#FFFFFF; }
+.transform-table tr:hover td { background:rgba(255,255,255,.02); }
+
+/* ── RESULT ROW ── */
+.result-highlight {
+  margin:28px 0;
+  padding:22px 24px;
+  background:rgba(40,236,170,.06);
+  border-left:3px solid #28ECAA;
+}
+.result-highlight p {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:12px; color:#FFFFFF;
+  letter-spacing:.05em; line-height:1.8;
+}
+.result-highlight strong { color:#28ECAA; }
+
+/* ── REFERENCES ── */
+.references-box {
+  margin:52px 0 0;
+  padding:24px;
+  border:1px solid rgba(255,255,255,.07);
+  background:rgba(255,255,255,.02);
+}
+.references-label {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; font-weight:700; color:#E8A020;
+  letter-spacing:.3em; text-transform:uppercase;
+  margin-bottom:14px;
+}
+.references-list {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:11px; color:#999999;
+  letter-spacing:.04em; line-height:2;
+}
+
+/* ── COPYRIGHT LINE ── */
+.copyright-line {
+  margin-top:28px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.06);
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; color:#CCCCCC;
+  letter-spacing:.1em;
+}
+
+/* ── FOOTER ── */
+.foot {
+  background:#060E1D; border-top:1px solid rgba(255,255,255,.07);
+  padding:22px 7%;
+  display:-webkit-flex; display:flex;
+  -webkit-align-items:center; align-items:center;
+  -webkit-justify-content:space-between; justify-content:space-between;
+  -webkit-flex-wrap:wrap; flex-wrap:wrap; gap:10px;
+  position:relative; z-index:1;
+}
+.foot-copy {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; color:#FFFFFF; letter-spacing:.12em;
+  transition:color .14s;
+}
+.foot-copy:hover { color:#E8A020; }
+.foot-links { display:-webkit-flex; display:flex; -webkit-flex-wrap:wrap; flex-wrap:wrap; }
+.foot-links a {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; color:#FFFFFF;
+  letter-spacing:.12em; padding:2px 14px;
+  border-left:1px solid rgba(255,255,255,.1);
+  transition:opacity .14s;
+}
+.foot-links a:first-child { border-left:none; }
+.foot-links a:hover { opacity:.7; }
+.foot-dot {
+  display:inline-block; width:6px; height:6px;
+  border-radius:50%; margin-right:6px;
+  vertical-align:middle;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px) {
+  .art-title { letter-spacing:-.02em; }
+  .cost-item { gap:10px; }
+  .data-table { font-size:10px; }
+  .data-table th, .data-table td { padding:8px 10px; }
+  .transform-table td, .transform-table th { padding:9px 12px; }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *, *:before, *:after {
+    -webkit-animation-duration:.001ms !important;
+    animation-duration:.001ms !important;
+    transition-duration:.001ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Scroll progress -->
+<div class="scroll-progress"><div class="scroll-progress-fill" id="spFill"></div></div>
+
+<!-- Background blobs -->
+<div class="blobs" aria-hidden="true">
+  <div class="bl bl1"></div>
+  <div class="bl bl2"></div>
+  <div class="bl bl3"></div>
+</div>
+
+<!-- TOPBAR -->
+<header class="bar">
+  <a href="index.html" class="bar-brand">
+    <img src="./index_files/fotojfc.png" alt="J.F. Carpio"
+         class="jfc-mark"
+         style="-webkit-filter:grayscale(100%) contrast(1.1);filter:grayscale(100%) contrast(1.1);border-radius:50%;object-fit:cover;object-position:center top;"
+         width="28" height="28">
+    <span class="bar-name">jfcarpio.com</span>
+  </a>
+  <div class="bar-right">
+    <a href="index.html" class="bar-back">← Back</a>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+
+  <!-- Header -->
+  <div class="art-header">
+    <div class="art-badge">
+      <span class="art-badge-dot"></span>
+      Working Paper · March 2026 · English
+    </div>
+    <h1 class="art-title">The Hidden Cost of <span>Anti-Capitalist</span> Beliefs in the Workplace</h1>
+    <div class="art-meta">
+      <span class="art-meta-item"><strong>Author:</strong> Juan Fernando Carpio, Economist</span>
+      <span class="art-meta-item"><strong>Affiliation:</strong> jfcarpio.com</span>
+      <span class="art-meta-item"><strong>Type:</strong> Field Synthesis / MBA Working Paper</span>
+      <span class="art-meta-item"><strong>Date:</strong> March 2026</span>
+    </div>
+  </div>
+
+  <!-- Abstract -->
+  <div class="abstract-box">
+    <div class="abstract-label">Abstract</div>
+    <p class="abstract-text">Anti-capitalist beliefs — circulating unchallenged through informal communication channels and workplace conversation — impose measurable, quantifiable costs on private firms: lower accountability, weaker asset stewardship, loyalty that evaporates at the first moment of organizational stress, and internal crisis amplification. This paper synthesizes field evidence on belief transformation with empirical research on person-organization fit and East-West Germany labor outcomes to quantify what happens when employees operate on an incomplete economic ledger. The intervention described is not ideological. It is arithmetic.</p>
+  </div>
+
+  <!-- Body -->
+  <div class="art-body">
+
+    <!-- Section 1 -->
+    <div class="art-section">
+      <div class="section-label">§ 1 — Problem Statement</div>
+      <h2 class="art-h2">Your Employees Are Working From a Broken Economic Model. You Have Never Corrected It.</h2>
+      <p class="art-p">Every firm has a competitor it never thinks about: the narrative that reached its employees before the owner did. That narrative arrived without evidence, without nuance, and without opposition. It spread through messaging groups, break-room conversations, union halls. And it has been compounding, quietly, ever since.</p>
+      <p class="art-p">The direct cost of this is not a line item on any balance sheet. That is precisely why it persists.</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="art-section">
+      <div class="section-label">§ 2 — The Unchallenged Default</div>
+      <h2 class="art-h2">The Narrative Nobody Invited — and Nobody Contested</h2>
+      <p class="art-p">The beliefs in question are not fringe ideas. In much of the world, they form the default economic model absorbed by employees before they ever sign their first contract: the employer profits because of the employee's labor; the salary is the minimum the firm can get away with; the company captures surplus value that rightfully belongs to the worker; collective protection would serve the individual better than market exchange.</p>
+      <p class="art-p">These beliefs are not held by unusually ideological employees. They are held by ordinary people operating on an incomplete accounting of the employment relationship — one in which the employer's inputs are invisible and only the worker's are counted.</p>
+
+      <div class="pullquote">
+        <p class="pullquote-text">"The most expensive economic events are the ones nobody sees."</p>
+        <span class="pullquote-attr">— Frédéric Bastiat, Ce qu'on voit et ce qu'on ne voit pas, 1850</span>
+      </div>
+
+      <p class="art-p">Bastiat identified this class of problem a hundred and seventy years ago. The unseen transaction, the unrecorded cost, the consequence that never appears in the column marked "loss" — these are the domain of the inattentive manager as much as the bad economist. In 2026, that manager is paying for beliefs their employees formed before they were hired, using a framework no one in the firm has ever contested.</p>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="art-section">
+      <div class="section-label">§ 3 — Five Operating Channels</div>
+      <h2 class="art-h2">Five Ways This Shows Up in Your Operating Results</h2>
+      <div class="cost-list">
+        <div class="cost-item">
+          <span class="cost-num">01</span>
+          <p class="cost-body"><strong>The team does not understand the P&amp;L — and does not feel it should.</strong> When an employee believes the employer earns a great deal while paying little, they are operating on an accounting that omits capital cost, absorbed risk, and the guarantee of a fixed wage regardless of quarterly results. The behavioral consequence is predictable: low accountability, low asset care, low willingness to extend discretionary effort beyond the formal role.</p>
+        </div>
+        <div class="cost-item">
+          <span class="cost-num">02</span>
+          <p class="cost-body"><strong>Anti-capitalist narratives circulate without competition.</strong> "Exploitation," "surplus value," "the owner who earns without working" — these are active frames in the informal communication layer of most organizations. Their persistence is not a function of their accuracy. It is a function of the fact that no one with credibility has arrived first to contest them with numbers rather than ideology.</p>
+        </div>
+        <div class="cost-item">
+          <span class="cost-num">03</span>
+          <p class="cost-body"><strong>Crisis moments amplify the damage.</strong> In the valleys of any business — restructurings, cost-reduction cycles, liquidity pressure — a team operating on the "the owner wins, I lose" framework does not absorb the shock. It amplifies it. Salary-based loyalty, which was always conditional, reveals its conditionality exactly when the organization can least afford it.</p>
+        </div>
+        <div class="cost-item">
+          <span class="cost-num">04</span>
+          <p class="cost-body"><strong>Low accountability compounds silently.</strong> When employees do not understand that a poorly managed company can disappear — and their jobs with it — their incentives for efficiency and asset stewardship are systematically lower than they would be under accurate beliefs. This is not a character defect. It is a rational response to an incomplete model.</p>
+        </div>
+        <div class="cost-item">
+          <span class="cost-num">05</span>
+          <p class="cost-body"><strong>External political rhetoric finds no internal resistance.</strong> In many markets, hostile-to-private-enterprise discourse intensifies periodically. The employer who has not equipped their team with an economic framework is exposed when that pressure rises — because their employees have no counter-narrative of their own.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="art-section">
+      <div class="section-label">§ 4 — Correcting the Ledger</div>
+      <h2 class="art-h2">The Employment Contract Is Not What Marx Said It Was</h2>
+      <p class="art-p">The intervention this paper describes is not ideological. It does not ask employees to change their politics or affiliations. It asks them to run the complete ledger.</p>
+      <p class="art-p">George Reisman's analysis in <em>Capitalism</em> (1996) demonstrates what is often felt intuitively but never quantified: the wage an employee receives is not a portion of the value they generate that the employer retains. It is a guaranteed, risk-free advance on future production, paid before the results are known, by a party who has already absorbed the full capital cost, market risk, and organizational complexity required to make that wage possible. The employee does not pay for the equipment, the software, the client relationships built over years, the brand that brought the customer, or the insurance against a bad quarter. They receive a fixed sum regardless of outcome.</p>
+
+      <div class="pullquote">
+        <p class="pullquote-text">"The salary is not a share of production that the capitalist withholds. It is a creation of capitalism — it only exists because someone decided to absorb risk on behalf of others."</p>
+        <span class="pullquote-attr">— George Reisman, Capitalism, 1996</span>
+      </div>
+
+      <p class="art-p">Jean-Baptiste Say's complementary insight: in a market economy, what workers exchange is productivity for productivity. The firm does not extract from the employee — it multiplies them. What remains with the employer after wages is not the worker's rightful share; it is the return on the inputs the employer provided and the risk they absorbed.</p>
+      <p class="art-p">When this accounting is made visible — with the employee's own numbers, in real time — the result is not conversion. It is the disappearance of a specific category of resentment built on an incomplete calculation.</p>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="art-section">
+      <div class="section-label">§ 5 — Quantification</div>
+      <h2 class="art-h2">The Arithmetic of Misalignment: A Quantification Framework</h2>
+      <p class="art-p">The empirical foundation comes from two converging bodies of research.</p>
+      <p class="art-p">The first is German reunification. When East and West Germany merged in 1990, economists gained two nearly identical populations separated by four decades of ideological difference. Research by Fuchs-Schündeln and Schündeln (2005) found that each additional year of socialist-curriculum schooling was associated with a 1.5 to 2 percent reduction in hours worked and lower probability of market-economy educational attainment — effects persisting a generation after reunification. The beliefs formed in the classroom showed up in labor market behavior decades later.</p>
+      <p class="art-p">The second is the person-organization (P-O) fit literature. Employees whose values systematically conflict with their organization's operating logic engage in counterproductive work behaviors: reduced discretionary effort, slower information-sharing, passive resistance to change, higher voluntary turnover. Gupta, Nadkarni, and Bhatt (2018), studying S&amp;P 1500 firms, found that ideological mismatches correlate with lower return on assets and lower operating income per employee.</p>
+      <p class="art-p">The annual cost of ideological misalignment has two components:</p>
+
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Variable</th>
+              <th>Definition</th>
+              <th>Research Range</th>
+              <th>Example: 100 employees</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>N · Headcount</td>
+              <td>Total employees</td>
+              <td>Any</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>S̄ · Mean annual salary</td>
+              <td>Avg. salary</td>
+              <td>Context-dependent</td>
+              <td>$40,000</td>
+            </tr>
+            <tr>
+              <td>α · Productivity drag</td>
+              <td>Engagement gap from P-O misfit</td>
+              <td>0.15 – 0.23</td>
+              <td>0.18</td>
+            </tr>
+            <tr>
+              <td>τ · Annual turnover rate</td>
+              <td>Voluntary exits/year</td>
+              <td>0.12 – 0.30</td>
+              <td>0.20</td>
+            </tr>
+            <tr>
+              <td>β · Ideological turnover share</td>
+              <td>% of exits linked to values misfit</td>
+              <td>0.15 – 0.40</td>
+              <td>0.30</td>
+            </tr>
+            <tr>
+              <td>C_r · Replacement cost</td>
+              <td>Cost to replace one employee</td>
+              <td>1.5× – 2.0× S̄</td>
+              <td>$70,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="formula-box">
+        <div class="formula-label">Annual Cost Formula</div>
+        <div class="formula-expr">( N × S̄ × α ) + ( N × τ × β × C_r )</div>
+        <div class="formula-result">
+          Example result: $720,000 productivity drag + $420,000 turnover cost<br>
+          = <strong>$1,140,000 per year</strong> for a 100-person firm — before a single crisis event.
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="art-section">
+      <div class="section-label">§ 6 — Strategic Implications</div>
+      <h2 class="art-h2">What It Costs to Leave the Ledger Incomplete</h2>
+      <p class="art-p">The temptation is to treat this as a soft problem — cultural, attitudinal, too diffuse to address. That framing is itself a cost. The P-O fit research is unambiguous: misalignment compounds. The employee who holds the exploitation frame does not hold it neutrally. They hold it in every interaction with management, every request for extra effort, every moment of organizational stress.</p>
+      <p class="art-p">The loyalty that results from a paycheck is qualitatively different from the loyalty that results from understanding the economic logic of private enterprise. Salary-based loyalty evaporates precisely when the business most needs resilience. Conviction-based loyalty persists through difficulty, because the employee's model of the firm includes the possibility of hardship without interpreting it as evidence of exploitation.</p>
+      <p class="art-p">The employer who arrives first with an accurate economic account inoculates their team against the incomplete narrative. Once the incomplete narrative has been absorbed through a credible source, the cost of displacing it is significantly higher than the cost of preempting it. That window is not permanent.</p>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="art-section">
+      <div class="section-label">§ 7 — Belief Transformation</div>
+      <h2 class="art-h2">What Changes When the Ledger Is Complete</h2>
+      <p class="art-p">The transformation produced is specific and verifiable — not a change in politics, but a change in accounting:</p>
+
+      <div class="transform-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Inherited Belief</th>
+              <th>After the Complete Ledger</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>"The employer profits because of me"</td>
+              <td>"Both parties gain — voluntary, mutually beneficial exchange"</td>
+            </tr>
+            <tr>
+              <td>"My salary is the minimum they can get away with"</td>
+              <td>"My total package is worth far more than my pay stub shows"</td>
+            </tr>
+            <tr>
+              <td>"The firm captures my surplus value"</td>
+              <td>"The firm gives me productivity I could never generate alone"</td>
+            </tr>
+            <tr>
+              <td>"A state-managed economy would protect me better"</td>
+              <td>"The state consumes employment — it does not create it"</td>
+            </tr>
+            <tr>
+              <td>"Going independent would be fairer"</td>
+              <td>"Independence means absorbing 100% of the risk — the arithmetic rarely favours it"</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="art-p">Each row represents a belief formed not through malice or intellectual failure, but through incomplete information — the natural result of an accounting that everyone around the employee reinforced and no one in the firm contested.</p>
+      <p class="art-p">The behavioral consequences of this correction — higher accountability, stronger asset stewardship, reduced crisis amplification, longer voluntary tenure — are precisely those predicted by P-O fit theory when the values gap between employee and organization narrows.</p>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="art-section">
+      <div class="section-label">§ 8 — Intervention</div>
+      <h2 class="art-h2">Two Hours. No Ideology. Just the Numbers.</h2>
+      <p class="art-p">The implication of this research is not that employers should screen for economic beliefs. It is that there is a measurable return on helping employees build an accurate model of how the employment relationship actually works.</p>
+      <p class="art-p">Live workshop interventions that accomplish this — in which each participant calculates their own complete employment P&amp;L with their own numbers in real time — are not ideological events. They are economic education at the moment of maximum relevance: inside the firm, to the people whose decisions the information will affect.</p>
+
+      <div class="result-highlight">
+        <p>The cost of running this intervention is fixed and bounded. The cost of not running it accumulates without a counter in any ledger the firm currently maintains. <strong>That asymmetry is, in the end, the argument.</strong></p>
+      </div>
+    </div>
+
+    <!-- References -->
+    <div class="references-box">
+      <div class="references-label">References</div>
+      <div class="references-list">
+        Bastiat, F. (1850). <em>Ce qu'on voit et ce qu'on ne voit pas.</em><br>
+        Fuchs-Schündeln, N. &amp; Schündeln, M. (2005). <em>Quarterly Journal of Economics</em> 120(3).<br>
+        Gupta, A., Nadkarni, S., &amp; Bhatt, M. (2018). <em>Strategic Management Journal</em> 39(6).<br>
+        Kristof-Brown, A., et al. (2005). <em>Personnel Psychology</em> 58(2).<br>
+        Reisman, G. (1996). <em>Capitalism.</em> Jameson Books.<br>
+        Say, J.-B. (1803). <em>Traité d'économie politique.</em>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright-line">
+      © 2026 Juan Fernando Carpio · <a href="index.html" style="color:#E8A020;">jfcarpio.com</a> · Available for republication with attribution.
+    </div>
+
+  </div><!-- /art-body -->
+
+</div><!-- /article-wrap -->
+
+<!-- FOOTER -->
+<footer class="foot">
+  <a href="index.html" class="foot-copy" style="text-decoration:none;">© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador</a>
+  <nav class="foot-links">
+    <a href="index.html#workshops"><span class="foot-dot" style="background:#00B0C8;"></span>Workshops</a>
+    <a href="index.html#reportes"><span class="foot-dot" style="background:#3B7EE8;"></span>Reportes</a>
+    <a href="index.html#publicaciones"><span class="foot-dot" style="background:#E86040;"></span>Publicaciones</a>
+    <a href="blog.html"><span class="foot-dot" style="background:#E8A020;"></span>Blog</a>
+    <a href="index.html"><span class="foot-dot" style="background:#FFFFFF;"></span>Home</a>
+  </nav>
+</footer>
+
+<script>
+(function(){
+  var fill = document.getElementById('spFill');
+  if(!fill) return;
+  function onScroll(){
+    var d = document.documentElement;
+    var pct = d.scrollTop / (d.scrollHeight - d.clientHeight) * 100;
+    fill.style.width = Math.min(pct,100) + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+})();
+</script>
+</body>
+</html>
