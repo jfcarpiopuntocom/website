@@ -169,6 +169,40 @@ a { text-decoration:none; color:inherit; }
 .foot-dot { width:5px; height:5px; border-radius:50%; -webkit-flex-shrink:0; flex-shrink:0; }
 
 @media (prefers-reduced-motion: reduce) { *, *:before, *:after { -webkit-animation:none!important; animation:none!important; transition:none!important; } }
+
+@media (min-width:900px) {
+  .page-wrap { max-width:1060px; padding-left:6%; padding-right:6%; }
+  .page-header { padding:64px 0 44px; }
+  .page-title { font-size:72px; }
+
+  /* Two-column grid for paper lists within each section */
+  .pub-section {
+    display:-webkit-grid; display:grid;
+    grid-template-columns:1fr 1fr;
+    column-gap:52px;
+  }
+  /* Items that must span both columns */
+  .pub-section > .sec-header,
+  .pub-section > .featured-card,
+  .pub-section > .blog-toggle,
+  .pub-section > .blog-list,
+  .pub-section > p,
+  .pub-section > div:not(.paper-item) {
+    grid-column:1 / -1;
+  }
+  /* Spacer stub under section header to align baseline */
+  .sec-header { margin-bottom:16px; }
+
+  /* Lift solo items to full-width (placeholder row) */
+  .paper-item[style*="opacity:.65"] { grid-column:1 / -1; }
+
+  /* Academia link row spans full width too */
+  .paper-item:has(a[href*="academia.edu"]) { grid-column:1 / -1; }
+
+  .featured-card { margin-bottom:28px; }
+  .bar { padding:0 36px; }
+}
+
 @media (max-width:600px) {
   .bar { padding:0 16px; }
   .page-wrap { padding-left:5%; padding-right:5%; }
