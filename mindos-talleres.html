@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindOS aplicado al cambio de paradigma — J.F. Carpio</title>
+<meta name="description" content="Cómo el marco MindOS (Boundary · Behavior · Intellect · Decision) produce cambios reales en dos talleres corporativos: Dinero & Finanzas y Apreciación de la Empresa Privada. Por Juan Fernando Carpio.">
+<meta name="author" content="Juan Fernando Carpio">
+<meta name="theme-color" content="#060E1D">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jfcarpio.com/mindos-talleres.html">
+<meta property="og:title" content="MindOS aplicado al cambio de paradigma — J.F. Carpio">
+<meta property="og:description" content="Cómo el marco MindOS produce cambios reales en dos talleres corporativos: Dinero & Finanzas y Apreciación de la Empresa Privada.">
+<meta property="og:image" content="https://jfcarpio.com/og-jfcarpio.png">
+<meta property="og:locale" content="es_EC">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@jfcarpio">
+<meta name="twitter:image" content="https://jfcarpio.com/og-jfcarpio.png">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23060E1D'/><text y='22' x='4' font-family='Arial' font-weight='900' font-size='16' fill='%231D5BBF'>JFC</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════════════════════════════════════
+   jfcarpio.com — Artículo · v1.0 (mismo estilo que Working Paper)
+══════════════════════════════════════════════════════ */
+*, *:before, *:after {
+  -webkit-box-sizing:border-box; box-sizing:border-box;
+  margin:0; padding:0;
+}
+html { background:#060E1D; scroll-behavior:smooth; }
+body {
+  font-family:'Lora',Georgia,serif;
+  background:#060E1D; color:#FFFFFF;
+  font-size:16px; line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+a { text-decoration:none; color:inherit; }
+button { border:none; background:none; font:inherit; cursor:pointer; }
+
+/* ── SCROLL PROGRESS ── */
+.scroll-progress {
+  position:fixed; top:0; left:0; right:0; height:2px;
+  background:rgba(255,255,255,.07); z-index:900;
+}
+.scroll-progress-fill {
+  height:100%; width:0;
+  background:linear-gradient(90deg,#E8A020,#E86040);
+  transition:width .1s linear;
+}
+
+/* ── TOPBAR ── */
+.bar {
+  position:fixed; top:2px; left:0; right:0; z-index:800;
+  background:rgba(6,14,29,.97);
+  -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+  display:-webkit-flex; display:flex;
+  -webkit-align-items:center; align-items:center;
+  -webkit-justify-content:space-between; justify-content:space-between;
+  padding:0 28px; height:50px;
+}
+.bar-brand {
+  display:-webkit-flex; display:flex;
+  -webkit-align-items:center; align-items:center;
+  gap:10px; text-decoration:none;
+}
+.jfc-mark {
+  width:28px; height:28px; -webkit-flex-shrink:0; flex-shrink:0;
+}
+.bar-name {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; font-weight:700; color:#FFFFFF;
+  letter-spacing:.16em; text-transform:uppercase;
+}
+.bar-right {
+  display:-webkit-flex; display:flex;
+  -webkit-align-items:center; align-items:center;
+  gap:12px;
+}
+.bar-back {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; font-weight:700; color:#FFFFFF;
+  letter-spacing:.14em; text-transform:uppercase;
+  border:1px solid rgba(255,255,255,.18);
+  padding:5px 12px;
+  transition:border-color .15s, color .15s;
+}
+.bar-back:hover { border-color:rgba(255,255,255,.5); color:#E8A020; }
+
+/* ── ANIMATIONS ── */
+@-webkit-keyframes fadeUp { from{opacity:0;-webkit-transform:translateY(14px)} to{opacity:1;-webkit-transform:translateY(0)} }
+@keyframes         fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+@-webkit-keyframes fadeIn  { from{opacity:0} to{opacity:1} }
+@keyframes         fadeIn  { from{opacity:0} to{opacity:1} }
+
+/* ── BACKGROUND BLOBS ── */
+.blobs {
+  position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:0;
+}
+.bl {
+  position:absolute; border-radius:50%;
+  -webkit-filter:blur(90px); filter:blur(90px);
+  opacity:.13;
+}
+.bl1 { width:520px; height:520px; background:#1D5BBF; top:-120px; right:-80px; }
+.bl2 { width:380px; height:380px; background:#0A9060; bottom:10%; left:-60px; }
+.bl3 { width:260px; height:260px; background:#E8A020; top:45%; right:8%; opacity:.07; }
+
+/* ── ARTICLE WRAP ── */
+.article-wrap {
+  position:relative; z-index:1;
+  max-width:740px; margin:0 auto;
+  padding:100px 28px 80px;
+}
+
+/* ── KICKER ── */
+.art-kicker {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; font-weight:700; color:#E8A020;
+  letter-spacing:.22em; text-transform:uppercase;
+  margin-bottom:18px;
+  -webkit-animation:fadeIn .6s ease both;
+  animation:fadeIn .6s ease both;
+}
+
+/* ── ARTICLE HEADER ── */
+.art-header {
+  border-bottom:1px solid rgba(255,255,255,.1);
+  padding-bottom:32px; margin-bottom:32px;
+  -webkit-animation:fadeUp .7s ease both;
+  animation:fadeUp .7s ease both;
+}
+.art-title {
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:36px; font-weight:900; line-height:1.1;
+  color:#FFFFFF; letter-spacing:-.01em;
+  margin-bottom:20px;
+}
+.art-title span { color:#E8A020; }
+.art-meta {
+  display:-webkit-flex; display:flex;
+  -webkit-flex-wrap:wrap; flex-wrap:wrap;
+  gap:6px 20px;
+}
+.art-meta-item {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; color:#CCCCCC; letter-spacing:.08em;
+}
+.art-meta-item strong { color:#FFFFFF; }
+
+/* ── ABSTRACT ── */
+.abstract-box {
+  background:rgba(232,160,32,.06);
+  border-left:3px solid #E8A020;
+  padding:20px 24px; margin-bottom:40px;
+  -webkit-animation:fadeUp .8s .1s ease both;
+  animation:fadeUp .8s .1s ease both;
+}
+.abstract-label {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:9px; font-weight:700; color:#E8A020;
+  letter-spacing:.22em; text-transform:uppercase;
+  margin-bottom:10px;
+}
+.abstract-text {
+  font-size:14px; line-height:1.7; color:#CCCCCC;
+}
+
+/* ── BODY ── */
+.art-body {
+  -webkit-animation:fadeUp .8s .15s ease both;
+  animation:fadeUp .8s .15s ease both;
+}
+.art-section { margin-top:52px; }
+.art-section:first-child { margin-top:40px; }
+
+.section-label {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:9px; font-weight:700; color:#E8A020;
+  letter-spacing:.2em; text-transform:uppercase;
+  margin-bottom:12px; display:block;
+}
+.section-label::after {
+  content:''; display:block;
+  width:32px; height:1px;
+  background:#E8A020; margin-top:6px; opacity:.4;
+}
+
+.art-h2 {
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:26px; font-weight:900; line-height:1.15;
+  color:#FFFFFF; margin-bottom:16px; letter-spacing:-.01em;
+}
+
+.art-p {
+  font-size:16px; line-height:1.8; color:#CCCCCC;
+  margin-bottom:18px;
+}
+.art-p:last-child { margin-bottom:0; }
+
+/* ── PULLQUOTE ── */
+.pullquote {
+  border-left:3px solid rgba(255,255,255,.15);
+  padding:16px 24px; margin:28px 0;
+  background:rgba(255,255,255,.02);
+}
+.pullquote-text {
+  font-size:17px; font-style:italic; line-height:1.65;
+  color:#FFFFFF; margin-bottom:8px;
+}
+.pullquote-attr {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; color:#999999; letter-spacing:.08em;
+}
+
+/* ── FRAMEWORK BOX ── */
+.framework-box {
+  background:rgba(29,91,191,.08);
+  border:1px solid rgba(29,91,191,.2);
+  border-radius:2px; padding:20px 24px;
+  margin:28px 0;
+}
+.framework-label {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:9px; font-weight:700; color:#3B7EE8;
+  letter-spacing:.2em; text-transform:uppercase;
+  margin-bottom:12px;
+}
+.framework-steps {
+  display:-webkit-flex; display:flex;
+  -webkit-flex-wrap:wrap; flex-wrap:wrap;
+  gap:8px;
+}
+.fw-step {
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:13px; font-weight:700; color:#FFFFFF;
+  background:rgba(59,126,232,.15);
+  border:1px solid rgba(59,126,232,.25);
+  padding:5px 14px; letter-spacing:.08em; text-transform:uppercase;
+}
+.fw-step span { color:#3B7EE8; margin-right:6px; }
+
+/* ── WORKSHOP SECTION CARDS ── */
+.workshop-card {
+  border-top:2px solid rgba(0,176,200,.3);
+  padding-top:28px; margin-top:40px;
+}
+.workshop-badge {
+  display:inline-block;
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:9px; font-weight:700; color:#00B0C8;
+  letter-spacing:.18em; text-transform:uppercase;
+  border:1px solid rgba(0,176,200,.35);
+  padding:4px 12px; margin-bottom:14px;
+}
+.workshop-card.ep { border-top-color:rgba(232,160,32,.3); }
+.workshop-card.ep .workshop-badge { color:#E8A020; border-color:rgba(232,160,32,.35); }
+
+/* ── LAYER LIST ── */
+.layer-list { margin:20px 0 0; }
+.layer-item {
+  display:-webkit-flex; display:flex;
+  gap:16px; padding:14px 0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.layer-item:last-child { border-bottom:none; }
+.layer-tag {
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:11px; font-weight:900; color:#3B7EE8;
+  letter-spacing:.1em; text-transform:uppercase;
+  min-width:78px; padding-top:2px;
+  -webkit-flex-shrink:0; flex-shrink:0;
+}
+.layer-item.ep .layer-tag { color:#E8A020; }
+.layer-body { font-size:15px; line-height:1.7; color:#CCCCCC; }
+.layer-body strong { color:#FFFFFF; }
+
+/* ── RESULT HIGHLIGHT ── */
+.result-highlight {
+  background:rgba(10,144,96,.07);
+  border-left:3px solid #0A9060;
+  padding:18px 22px; margin:28px 0;
+  font-size:15px; line-height:1.7; color:#CCCCCC;
+}
+.result-highlight strong { color:#FFFFFF; }
+
+/* ── REFERENCES ── */
+.references-box {
+  margin-top:52px; padding-top:28px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.references-label {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:9px; font-weight:700; color:#999999;
+  letter-spacing:.2em; text-transform:uppercase;
+  margin-bottom:12px;
+}
+.references-list {
+  font-size:12px; line-height:2; color:#777777;
+}
+.references-list em { color:#999999; }
+
+/* ── COPYRIGHT ── */
+.copyright-line {
+  margin-top:28px;
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; color:#555555; letter-spacing:.06em;
+}
+
+/* ── FOOTER ── */
+.foot {
+  position:relative; z-index:1;
+  display:-webkit-flex; display:flex;
+  -webkit-align-items:center; align-items:center;
+  -webkit-justify-content:space-between; justify-content:space-between;
+  -webkit-flex-wrap:wrap; flex-wrap:wrap;
+  gap:12px;
+  padding:20px 28px;
+  border-top:1px solid rgba(255,255,255,.06);
+  margin-top:60px;
+}
+.foot-copy {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; color:#555555; letter-spacing:.08em;
+  transition:color .14s;
+}
+.foot-copy:hover { color:#E8A020; }
+.foot-links {
+  display:-webkit-flex; display:flex;
+  gap:20px; -webkit-flex-wrap:wrap; flex-wrap:wrap;
+}
+.foot-links a {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; color:#555555; letter-spacing:.1em;
+  text-transform:uppercase;
+  display:-webkit-flex; display:flex;
+  -webkit-align-items:center; align-items:center;
+  gap:6px; transition:color .15s;
+}
+.foot-links a:hover { color:#FFFFFF; }
+.foot-dot { width:6px; height:6px; border-radius:50%; display:inline-block; }
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .article-wrap { padding:80px 18px 60px; }
+  .art-title { font-size:28px; }
+  .art-h2 { font-size:22px; }
+  .bar { padding:0 18px; }
+  .framework-steps { gap:6px; }
+}
+@media(min-width:900px){
+  .art-title { font-size:42px; letter-spacing:-.02em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *:before, *:after { animation:none !important; transition:none !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="scroll-progress"><div class="scroll-progress-fill" id="spFill"></div></div>
+
+<!-- TOPBAR -->
+<header class="bar">
+  <a href="index.html" class="bar-brand">
+    <img src="./fotojfc.png" alt="J.F. Carpio" class="jfc-mark"
+         style="-webkit-filter:grayscale(100%) contrast(1.1);filter:grayscale(100%) contrast(1.1);border-radius:50%;object-fit:cover;object-position:center top;"
+         width="28" height="28">
+    <span class="bar-name">jfcarpio.com</span>
+  </a>
+  <div class="bar-right">
+    <a href="publicaciones.html" class="bar-back">← Publicaciones</a>
+  </div>
+</header>
+
+<!-- BACKGROUND -->
+<div class="blobs" aria-hidden="true">
+  <div class="bl bl1"></div>
+  <div class="bl bl2"></div>
+  <div class="bl bl3"></div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+
+  <div class="art-kicker">Talleres Corporativos · Metodología · 2026</div>
+
+  <div class="art-header">
+    <h1 class="art-title">MindOS aplicado al <span>cambio de paradigma</span>: los dos talleres</h1>
+    <div class="art-meta">
+      <span class="art-meta-item"><strong>Autor:</strong> Juan Fernando Carpio, Economista</span>
+      <span class="art-meta-item"><strong>Afiliación:</strong> jfcarpio.com</span>
+      <span class="art-meta-item"><strong>Tipo:</strong> Nota metodológica</span>
+      <span class="art-meta-item"><strong>Fecha:</strong> Marzo 2026</span>
+    </div>
+  </div>
+
+  <!-- Abstract -->
+  <div class="abstract-box">
+    <div class="abstract-label">Resumen</div>
+    <p class="abstract-text">La mayoría de programas de capacitación empresarial fracasan por la misma razón: atacan el comportamiento sin tocar el sistema operativo que lo genera. Este artículo describe cómo el marco MindOS del Dr. Paul Dobranski — Boundary · Behavior · Intellect · Decision — se aplica en secuencia en dos talleres corporativos distintos: uno sobre dinero y finanzas personales, otro sobre la apreciación de la empresa privada. El cambio producido no es actitudinal. Es estructural.</p>
+  </div>
+
+  <!-- Body -->
+  <div class="art-body">
+
+    <!-- Section 1 -->
+    <div class="art-section">
+      <div class="section-label">§ 1 — El problema de fondo</div>
+      <h2 class="art-h2">Por qué la capacitación tradicional no cambia nada</h2>
+      <p class="art-p">Enseñar habilidades sobre creencias que no cambian es trabajo perdido. El participante aprende una técnica nueva, la practica dos semanas, y luego el sistema operativo anterior recupera el control. No por falta de voluntad — por falta de intervención en la capa correcta.</p>
+      <p class="art-p">El marco MindOS opera en cuatro capas, en una secuencia específica. El orden importa: no se puede modificar una Decisión sin haber intervenido primero en el Intelecto que la justifica, ni el Intelecto sin haber examinado los Comportamientos que lo revelan, ni los Comportamientos sin haber redibujado el Límite que define qué es propio y qué es ajeno en la vida del participante.</p>
+
+      <div class="framework-box">
+        <div class="framework-label">Marco MindOS — Dr. Paul Dobranski</div>
+        <div class="framework-steps">
+          <div class="fw-step"><span>①</span>Boundary</div>
+          <div class="fw-step"><span>②</span>Behavior</div>
+          <div class="fw-step"><span>③</span>Intellect</div>
+          <div class="fw-step"><span>④</span>Decision</div>
+        </div>
+      </div>
+
+      <p class="art-p">Los dos talleres que se describen a continuación aplican esta secuencia al mismo sistema operativo — el de un empleado o proveedor latinoamericano — pero a dos dominios distintos del mismo: las finanzas personales y la relación con la empresa privada.</p>
+    </div>
+
+    <!-- Section 2 — Taller 1 -->
+    <div class="art-section">
+      <div class="section-label">§ 2 — Primer taller</div>
+      <h2 class="art-h2">Dinero &amp; Finanzas Personales · 2 horas</h2>
+      <p class="art-p">El participante llega con un sistema operativo financiero heredado — creencias sobre el dinero formadas antes de su primer sueldo, reforzadas por el entorno familiar y nunca examinadas en serio. Ese sistema operativo genera comportamientos predecibles: gasto por encima del ingreso, deuda de consumo normalizada, ausencia de activos reales, estrés financiero crónico que se transfiere al ambiente de trabajo.</p>
+
+      <div class="workshop-card">
+        <span class="workshop-badge">Taller 1 · 2h · Dinero &amp; Finanzas</span>
+        <div class="layer-list">
+          <div class="layer-item">
+            <div class="layer-tag">Boundary</div>
+            <div class="layer-body"><strong>Trazar el mapa real.</strong> El primer movimiento no es confrontacional — es cartográfico. Se traza la línea entre lo que el participante sabe y lo que simplemente asumía. ¿Es la deuda siempre mala? ¿Es ahorrar suficiente? ¿Qué es un activo real? El boundary work produce un diagnóstico honesto antes de cualquier prescripción.</div>
+          </div>
+          <div class="layer-item">
+            <div class="layer-tag">Behavior</div>
+            <div class="layer-body"><strong>Hacer legibles los patrones.</strong> Con el mapa visible, los comportamientos financieros se vuelven legibles: el ciclo de gasto-deuda-estrés, las decisiones postergadas, el uso del crédito como extensión del ingreso. No como vicios morales — como consecuencias lógicas de un sistema operativo específico que nadie le entregó al participante con instrucciones.</div>
+          </div>
+          <div class="layer-item">
+            <div class="layer-tag">Intellect</div>
+            <div class="layer-body"><strong>Entregar las herramientas.</strong> El balance personal simplificado, el cálculo del costo real de la deuda de consumo, la distinción entre ingreso activo y pasivo, la lógica del activo que trabaja mientras el empleado duerme. Estas herramientas solo tienen tracción porque el boundary y el behavior ya fueron trabajados — de lo contrario son información sin sistema operativo que las use.</div>
+          </div>
+          <div class="layer-item">
+            <div class="layer-tag">Decision</div>
+            <div class="layer-body"><strong>Compromisos concretos con fecha.</strong> El taller cierra con dos o tres decisiones específicas por participante — no metas abstractas, sino acciones con fecha y número. El nuevo sistema operativo no se instala en abstracto. Se instala en una decisión real que el participante tomará en los próximos siete días.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3 — Taller 2 -->
+    <div class="art-section">
+      <div class="section-label">§ 3 — Segundo taller</div>
+      <h2 class="art-h2">Apreciación de la Empresa Privada · 3 horas</h2>
+      <p class="art-p">Este taller opera sobre un sistema operativo más profundo: la forma en que el participante — empleado o proveedor — entiende su relación con la empresa que lo contrata. El sistema operativo heredado, en la mayoría de casos, es un frame win-lose: el empleador gana porque el empleado pierde. Ese frame llega antes que el contrato, se refuerza en el entorno y nunca es examinado con aritmética real.</p>
+
+      <div class="pullquote">
+        <p class="pullquote-text">"El intercambio voluntario es estructuralmente win-win. Ambas partes valoran más lo que reciben que lo que entregan. Eso no es un argumento moral — es la condición lógica que hace posible que el intercambio ocurra."</p>
+        <span class="pullquote-attr">— Carl Menger, Principios de Economía, 1871</span>
+      </div>
+
+      <p class="art-p">La tesis de Menger redefine el punto de partida del taller: el win-lose no es una descripción de la realidad del mercado — es un frame incompleto aplicado a una realidad que es estructuralmente win-win. Ese es el primer límite que se redibuja.</p>
+
+      <div class="workshop-card ep">
+        <span class="workshop-badge">Taller 2 · 3h · Empresa Privada</span>
+        <div class="layer-list">
+          <div class="layer-item ep">
+            <div class="layer-tag">Boundary</div>
+            <div class="layer-body"><strong>Del win-lose al win-win.</strong> Se dibuja la línea entre lo que el participante heredó como "cómo funciona la empresa" y lo que Menger demostró: que el comercio y el empleo existen precisamente porque ambas partes ganan. El límite que se redibuja no es político — es aritmético. ¿Cuánto ganaría este participante siendo completamente independiente, sin la infraestructura, los clientes, la marca y el riesgo absorbido por el empleador?</div>
+          </div>
+          <div class="layer-item ep">
+            <div class="layer-tag">Behavior</div>
+            <div class="layer-body"><strong>Ver el frame win-lose en acción.</strong> El frame heredado genera comportamientos visibles: el esfuerzo discrecional retenido, el activo de la empresa tratado como ajeno, la información que no se comparte, la lealtad que desaparece en el primer momento de tensión. El taller hace estos comportamientos visibles — no como defectos de carácter, sino como consecuencias lógicas de operar con un modelo incompleto de la relación laboral.</div>
+          </div>
+          <div class="layer-item ep">
+            <div class="layer-tag">Intellect</div>
+            <div class="layer-body"><strong>El ledger completo.</strong> Cada participante construye su propio P&amp;L de empleo real: el salario como anticipo garantizado sobre producción futura, el capital de riesgo absorbido por el empleador antes de que existiera el puesto, la productividad multiplicada por la infraestructura de la empresa que un trabajador independiente no podría generar solo. Reisman y Say proporcionan la aritmética. El participante la aplica a sus propios números, en tiempo real.</div>
+          </div>
+          <div class="layer-item ep">
+            <div class="layer-tag">Decision</div>
+            <div class="layer-body"><strong>Un frame diferente genera decisiones diferentes.</strong> El taller cierra con compromisos concretos derivados del nuevo modelo — no de una consigna motivacional. El empleado que entiende que la empresa privada es un mecanismo win-win toma decisiones distintas sobre cómo cuida los activos, cómo comparte información, cómo responde ante la adversidad organizacional. Eso es lo que cambia.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4 — La diferencia entre los dos -->
+    <div class="art-section">
+      <div class="section-label">§ 4 — Arquitectura de los talleres</div>
+      <h2 class="art-h2">La diferencia entre los dos no es de tema — es de profundidad</h2>
+      <p class="art-p">El primer taller toca creencias sobre el dinero. El segundo toca creencias sobre la naturaleza del intercambio humano. Ambos siguen el mismo orden — Boundary, Behavior, Intellect, Decision — porque ese orden es el único que produce cambios que persisten más allá de la semana siguiente al taller.</p>
+      <p class="art-p">En ambos casos, el participante es empleado o proveedor de la empresa que contrata el taller. En ambos casos, el resultado no es entusiasmo temporal sino un frame diferente que genera decisiones diferentes de forma permanente. La diferencia entre los dos es que el primero opera en el dominio personal del participante y el segundo en el dominio de su relación con la organización.</p>
+
+      <div class="result-highlight">
+        <p>Los programas de capacitación que atacan el comportamiento sin tocar el sistema operativo producen cambios que duran días. Los que intervienen en el orden correcto — Boundary primero, Decision al final — producen cambios que duran años. <strong>Esa es la apuesta de estos talleres.</strong></p>
+      </div>
+    </div>
+
+    <!-- References -->
+    <div class="references-box">
+      <div class="references-label">Referencias</div>
+      <div class="references-list">
+        Dobranski, P. <em>MindOS: The Operating System of Human Nature.</em> Mind OS Mastery.<br>
+        Menger, C. (1871). <em>Grundsätze der Volkswirtschaftslehre</em> [Principios de Economía]. Wilhelm Braumüller.<br>
+        Reisman, G. (1996). <em>Capitalism.</em> Jameson Books.<br>
+        Say, J.-B. (1803). <em>Traité d'économie politique.</em>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright-line">
+      © 2026 Juan Fernando Carpio · <a href="index.html" style="color:#E8A020;">jfcarpio.com</a> · Disponible para republicación con atribución.
+    </div>
+
+  </div><!-- /art-body -->
+
+</div><!-- /article-wrap -->
+
+<!-- FOOTER -->
+<footer class="foot">
+  <a href="index.html" class="foot-copy" style="text-decoration:none;">© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador</a>
+  <nav class="foot-links">
+    <a href="index.html#workshops"><span class="foot-dot" style="background:#00B0C8;"></span>Workshops</a>
+    <a href="index.html#reportes"><span class="foot-dot" style="background:#3B7EE8;"></span>Reportes</a>
+    <a href="publicaciones.html"><span class="foot-dot" style="background:#E86040;"></span>Publicaciones</a>
+    <a href="blog.html"><span class="foot-dot" style="background:#E8A020;"></span>Blog</a>
+    <a href="index.html"><span class="foot-dot" style="background:#FFFFFF;"></span>Home</a>
+  </nav>
+</footer>
+
+<script>
+(function(){
+  var fill = document.getElementById('spFill');
+  if(!fill) return;
+  function onScroll(){
+    var d = document.documentElement;
+    var pct = d.scrollTop / (d.scrollHeight - d.clientHeight) * 100;
+    fill.style.width = Math.min(pct,100) + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+})();
+</script>
+</body>
+</html>
