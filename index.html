@@ -2767,9 +2767,11 @@ var T={
   },
   en:{
     kick:'Economic environment · Business economics · Enterprise',
-    h1_l1:'Expanding a business in Latin America',
+    h1_l1:'Expanding a business in <span style="color:#E86040">Latin America</span>',
     h1_l2:'is hard. A hostile environment can make it much harder.',
-    h1_l3:'Here you\'ll find tools to tackle both.',
+    h1_l3:'Here you\'ll find <span style="color:#E8A020">tools</span> to tackle both.',
+    connector:'Resources for your business',
+    bh_sub:'Start with what you need most', bh_hint:'5 sections →',
     ov2_t:'Reports',       ov2_sub:'Benchmarks and sector analysis',
     ov3_t:'Workshops',     ov3_sub:'In-person and online training',
     ov4_t:'Blog',          ov4_sub:'History, ideas and economic context',
@@ -2844,9 +2846,8 @@ function setLang(l){
   var els=document.querySelectorAll('[data-t]');
   for(var i=0;i<els.length;i++){
     var k=els[i].getAttribute('data-t');
-    if(T[l][k]!==undefined && els[i].children.length===0){
-      if(T[l][k].indexOf('<br>')!==-1){ els[i].innerHTML=T[l][k]; }
-      else { els[i].textContent=T[l][k]; }
+    if(T[l][k]!==undefined){
+      els[i].innerHTML=T[l][k];
     }
   }
   var phs=document.querySelectorAll('[data-t-placeholder]');
