@@ -1,6 +1,6 @@
-// jfcarpio.com · Cloudflare Worker v2
+// jfcarpio.com · Cloudflare Worker v3
 // www→apex · security headers · real CSP · smart cache
-// Proxy mode: resolveOverride bypasses Cloudflare routing → no loop
+// Subrequests to same zone skip the Worker (CF loop prevention) — no resolveOverride needed
 
 const SEC = {
   "X-Frame-Options":           "SAMEORIGIN",
@@ -21,31 +21,25 @@ const CSP =
   "frame-ancestors 'self'; " +
   "upgrade-insecure-requests";
 
-// GitHub Pages anycast IP — connect directly to skip Cloudflare routing
-const GH_IP = "185.199.108.153";
-
 export default {
   async fetch(request) {
     const url = new URL(request.url);
 
-    // 1. Canonical: www → apex (matches <link rel="canonical">)
+    // 1. Canonical: www → apex
     if (url.hostname.startsWith("www.")) {
       url.hostname = url.hostname.slice(4);
       return Response.redirect(url.toString(), 301);
     }
 
-    // 2. Proxy to GitHub Pages via direct IP (no loop: bypasses Cloudflare routing)
+    // 2. Proxy to GitHub Pages origin (subrequest bypasses this Worker — no loop)
     const origin = "https://www.jfcarpio.com" + url.pathname + url.search;
-    const res = await fetch(origin, {
-      method:  request.method,
-      cf:      { resolveOverride: GH_IP },
-    });
+    const res = await fetch(origin, { method: request.method });
 
     // 3. Security headers on every response
     const h = new Headers(res.headers);
     for (const [k, v] of Object.entries(SEC)) h.set(k, v);
 
-    // 4. Content-aware cache + CSP only on HTML
+    // 4. HTML: real CSP + no cache. Static assets: 1yr immutable
     const ct = res.headers.get("Content-Type") ?? "";
     if (ct.includes("text/html")) {
       h.set("Content-Security-Policy", CSP);
