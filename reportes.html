@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reportes — J.F. Carpio · Análisis Macroeconómico</title>
+<meta name="description" content="Reportes macroeconómicos, sectoriales y de riesgo regulatorio para la empresa privada latinoamericana. Acceso privado. J.F. Carpio, economista.">
+<meta name="author" content="Juan Fernando Carpio">
+<meta name="theme-color" content="#060E1D">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jfcarpio.com/reportes.html">
+<meta property="og:title" content="Reportes — J.F. Carpio · Análisis Macroeconómico">
+<meta property="og:description" content="Reportes macroeconómicos, sectoriales y de riesgo regulatorio para la empresa privada latinoamericana. J.F. Carpio, economista.">
+<meta property="og:image" content="https://jfcarpio.com/og-jfcarpio.png">
+<meta property="og:locale" content="es_EC">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@jfcarpio">
+<meta name="twitter:image" content="https://jfcarpio.com/og-jfcarpio.png">
+
+<link rel="canonical" href="https://jfcarpio.com/reportes.html">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23060E1D'/><text y='22' x='4' font-family='Arial' font-weight='900' font-size='16' fill='%231D5BBF'>JFC</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+*, *:before, *:after { -webkit-box-sizing:border-box; box-sizing:border-box; margin:0; padding:0; }
+html { background:#060E1D; scroll-behavior:smooth; }
+body {
+  font-family:'Lora',Georgia,serif;
+  background:#060E1D; color:#FFFFFF;
+  font-size:16px; line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+a { text-decoration:none; color:inherit; }
+
+/* ── SCROLL PROGRESS ── */
+.scroll-progress { position:fixed; top:0; left:0; right:0; height:2px; background:rgba(255,255,255,.07); z-index:900; }
+.scroll-progress-fill { height:100%; width:0; background:linear-gradient(90deg,#3B7EE8,#28ECAA); transition:width .1s linear; }
+
+/* ── TOPBAR ── */
+.bar {
+  position:fixed; top:2px; left:0; right:0; z-index:800;
+  background:rgba(6,14,29,.97);
+  -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+  display:-webkit-flex; display:flex;
+  -webkit-align-items:center; align-items:center;
+  -webkit-justify-content:space-between; justify-content:space-between;
+  padding:0 28px; height:50px;
+}
+.bar-brand { display:-webkit-flex; display:flex; -webkit-align-items:center; align-items:center; gap:10px; }
+.jfc-mark { width:28px; height:28px; -webkit-flex-shrink:0; flex-shrink:0; }
+.bar-name { font-family:'Space Mono','Courier New',monospace; font-size:10px; font-weight:700; color:#FFFFFF; letter-spacing:.16em; text-transform:uppercase; }
+.bar-back { font-family:'Space Mono','Courier New',monospace; font-size:10px; font-weight:700; color:#FFFFFF; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(255,255,255,.18); padding:5px 12px; transition:border-color .15s, color .15s; }
+.bar-back:hover { border-color:rgba(255,255,255,.5); color:#3B7EE8; }
+
+/* ── BACKGROUND BLOBS ── */
+.blobs { position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:0; }
+.bl { position:absolute; border-radius:50%; -webkit-filter:blur(90px); filter:blur(90px); }
+.bl1 { width:40vw; height:40vw; background:rgba(59,126,232,.09); top:-8%; right:-6%; }
+.bl2 { width:24vw; height:24vw; background:rgba(40,236,170,.05); bottom:10%; left:-4%; }
+.bl3 { width:18vw; height:18vw; background:rgba(232,160,32,.04); top:50%; right:15%; }
+
+/* ── ANIMATIONS ── */
+@-webkit-keyframes fadeUp { from{opacity:0;-webkit-transform:translateY(14px)} to{opacity:1;-webkit-transform:translateY(0)} }
+@keyframes         fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── PAGE WRAPPER ── */
+.page-wrap {
+  position:relative; z-index:1;
+  padding-top:72px; padding-bottom:80px;
+  min-height:100vh;
+  max-width:880px; margin:0 auto;
+  padding-left:7%; padding-right:7%;
+}
+
+/* ── PAGE HEADER ── */
+.page-header { padding:48px 0 36px; border-bottom:1px solid rgba(255,255,255,.08); -webkit-animation:fadeUp .5s .1s both; animation:fadeUp .5s .1s both; }
+.page-badge { font-family:'Space Mono','Courier New',monospace; font-size:10px; font-weight:700; color:#3B7EE8; letter-spacing:.36em; text-transform:uppercase; display:-webkit-flex; display:flex; -webkit-align-items:center; align-items:center; gap:10px; margin-bottom:20px; }
+.page-badge-dot { width:6px; height:6px; border-radius:50%; background:#3B7EE8; -webkit-flex-shrink:0; flex-shrink:0; }
+.page-title { font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:clamp(32px,6vw,60px); font-weight:900; line-height:1.02; text-transform:uppercase; letter-spacing:-.01em; color:#FFFFFF; margin-bottom:16px; }
+.page-title span { color:#3B7EE8; }
+.page-sub { font-family:'Lora',Georgia,serif; font-size:15px; color:#CCCCCC; line-height:1.7; max-width:560px; }
+
+/* ── SECTION BLOCKS ── */
+.pub-section { margin-top:52px; -webkit-animation:fadeUp .5s .2s both; animation:fadeUp .5s .2s both; }
+.pub-section + .pub-section { margin-top:48px; }
+.sec-header { display:-webkit-flex; display:flex; -webkit-align-items:baseline; align-items:baseline; gap:16px; margin-bottom:20px; padding-bottom:10px; border-bottom:1px solid rgba(255,255,255,.07); }
+.sec-label { font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:22px; font-weight:900; text-transform:uppercase; letter-spacing:.04em; color:#FFFFFF; }
+.sec-label span { color:#3B7EE8; }
+.sec-count { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#555555; letter-spacing:.2em; }
+
+/* ── FEATURED CARD ── */
+.featured-card {
+  background:linear-gradient(135deg,rgba(59,126,232,.10) 0%,rgba(40,236,170,.05) 100%);
+  border:1px solid rgba(59,126,232,.25);
+  padding:26px 30px; display:block;
+  transition:border-color .2s, background .2s; position:relative;
+  margin-bottom:32px;
+}
+.featured-card:hover { border-color:rgba(59,126,232,.5); background:linear-gradient(135deg,rgba(59,126,232,.15) 0%,rgba(40,236,170,.08) 100%); }
+.fc-badge { font-family:'Space Mono','Courier New',monospace; font-size:9px; font-weight:700; color:#3B7EE8; letter-spacing:.28em; text-transform:uppercase; margin-bottom:8px; }
+.fc-title { font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:clamp(17px,2.8vw,24px); font-weight:900; text-transform:uppercase; color:#FFFFFF; line-height:1.1; margin-bottom:10px; }
+.fc-desc { font-family:'Lora',Georgia,serif; font-size:13.5px; color:#CCCCCC; line-height:1.65; margin-bottom:14px; }
+.fc-meta { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:#888888; letter-spacing:.07em; }
+.fc-arrow { position:absolute; top:26px; right:28px; font-size:17px; color:#3B7EE8; opacity:.55; transition:opacity .2s, transform .2s; }
+.featured-card:hover .fc-arrow { opacity:1; transform:translate(3px,-3px); }
+
+/* ── REPORT ITEM ── */
+.paper-item {
+  padding:20px 0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  display:-webkit-flex; display:flex;
+  gap:18px;
+}
+.paper-item:last-child { border-bottom:none; }
+.paper-num { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:rgba(255,255,255,.18); letter-spacing:.06em; -webkit-flex-shrink:0; flex-shrink:0; width:28px; padding-top:3px; }
+.paper-body { -webkit-flex:1; flex:1; min-width:0; }
+.paper-title { font-family:'Lora',Georgia,serif; font-size:15px; font-weight:600; color:#FFFFFF; line-height:1.45; margin-bottom:7px; }
+.paper-desc { font-family:'Lora',Georgia,serif; font-size:13px; color:#CCCCCC; line-height:1.6; margin-bottom:9px; }
+.paper-meta { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#666666; letter-spacing:.1em; }
+.paper-tags { display:-webkit-flex; display:flex; -webkit-flex-wrap:wrap; flex-wrap:wrap; gap:5px; margin-top:8px; }
+.ptag { font-family:'Space Mono','Courier New',monospace; font-size:9px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; border:1px solid rgba(255,255,255,.08); padding:2px 7px; color:#888888; }
+.ptag-blue  { color:#3B7EE8; border-color:rgba(59,126,232,.22); }
+.ptag-green { color:#28ECAA; border-color:rgba(40,236,170,.18); }
+.ptag-gold  { color:#E8A020; border-color:rgba(232,160,32,.18); }
+.ptag-emp   { color:#E86040; border-color:rgba(232,96,64,.18); }
+
+/* ── ACCESS NOTE ── */
+.access-note {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:10px; color:#555555; letter-spacing:.12em;
+  border:1px solid rgba(255,255,255,.05);
+  padding:14px 18px; margin-top:24px;
+  line-height:1.7;
+}
+.access-note a { color:#3B7EE8; border-bottom:1px solid rgba(59,126,232,.3); }
+.access-note a:hover { color:#FFFFFF; border-bottom-color:rgba(255,255,255,.4); }
+
+/* ── FOOTER ── */
+.foot { background:rgba(6,14,29,.98); border-top:1px solid rgba(255,255,255,.06); padding:22px 28px; display:-webkit-flex; display:flex; -webkit-align-items:center; align-items:center; -webkit-justify-content:space-between; justify-content:space-between; -webkit-flex-wrap:wrap; flex-wrap:wrap; gap:12px; position:relative; z-index:10; }
+.foot-copy { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:#555555; letter-spacing:.1em; }
+.foot-links { display:-webkit-flex; display:flex; gap:18px; -webkit-flex-wrap:wrap; flex-wrap:wrap; }
+.foot-links a { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:#777777; letter-spacing:.1em; display:-webkit-flex; display:flex; -webkit-align-items:center; align-items:center; gap:6px; transition:color .15s; }
+.foot-links a:hover { color:#FFFFFF; }
+.foot-dot { width:5px; height:5px; border-radius:50%; -webkit-flex-shrink:0; flex-shrink:0; }
+
+@media (prefers-reduced-motion: reduce) { *, *:before, *:after { -webkit-animation:none!important; animation:none!important; transition:none!important; } }
+
+@media (min-width:900px) {
+  .page-wrap { max-width:1060px; padding-left:6%; padding-right:6%; }
+  .page-header { padding:64px 0 44px; }
+  .page-title { font-size:72px; }
+  .pub-section {
+    display:-webkit-grid; display:grid;
+    grid-template-columns:1fr 1fr;
+    column-gap:52px;
+  }
+  .pub-section > .sec-header,
+  .pub-section > .featured-card,
+  .pub-section > .access-note,
+  .pub-section > p {
+    grid-column:1 / -1;
+  }
+  .sec-header { margin-bottom:16px; }
+  .featured-card { margin-bottom:28px; }
+  .bar { padding:0 36px; }
+}
+
+@media (max-width:600px) {
+  .bar { padding:0 16px; }
+  .page-wrap { padding-left:5%; padding-right:5%; }
+  .featured-card { padding:18px; }
+  .fc-arrow { display:none; }
+  .paper-num { display:none; }
+  .foot { padding:18px 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="scroll-progress"><div class="scroll-progress-fill" id="spFill"></div></div>
+
+<div class="blobs" aria-hidden="true">
+  <div class="bl bl1"></div>
+  <div class="bl bl2"></div>
+  <div class="bl bl3"></div>
+</div>
+
+<!-- TOPBAR -->
+<header class="bar">
+  <a href="index.html" class="bar-brand">
+    <img src="https://jfcarpio.com/fotojfc.png" alt="J.F. Carpio"
+         class="jfc-mark"
+         style="-webkit-filter:grayscale(100%) contrast(1.1);filter:grayscale(100%) contrast(1.1);border-radius:50%;object-fit:cover;object-position:center top;"
+         width="28" height="28">
+    <span class="bar-name">J.F. Carpio</span>
+  </a>
+  <a href="index.html" class="bar-back">← Home</a>
+</header>
+
+<div class="page-wrap">
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <div class="page-badge"><span class="page-badge-dot"></span>02 — Inteligencia Económica Aplicada</div>
+    <h1 class="page-title">Repo<span>rtes</span></h1>
+    <p class="page-sub">Análisis macroeconómico, riesgo regulatorio y benchmarks empresariales para la empresa privada latinoamericana. Documentos de trabajo de acceso privado — para decisiones reales en contextos complejos.</p>
+  </div>
+
+  <!-- REPORTES MACROECONÓMICOS -->
+  <div class="pub-section">
+    <div class="sec-header">
+      <span class="sec-label">Análisis <span>Macro</span></span>
+      <span class="sec-count">Cuenca del Pacífico · 2025</span>
+    </div>
+
+    <!-- REPORTE DESTACADO 1 -->
+    <a href="#" class="featured-card">
+      <span class="fc-arrow">↗</span>
+      <div class="fc-badge">Reporte Macroeconómico · 2025 · Chile · Ecuador · Perú · Colombia</div>
+      <div class="fc-title">Cuenca del Pacífico: Diagnóstico Macroeconómico 2025</div>
+      <p class="fc-desc">Análisis comparativo de las cuatro economías principales de la cuenca del Pacífico latinoamericano. Crecimiento del PIB, inflación, posición fiscal, política monetaria y tipo de cambio. Riesgo regulatorio para la empresa privada, perspectivas de inversión y vectores de riesgo sistémico para 2025–2026. El marco analítico parte de la escuela austriaca del ciclo económico y la nueva economía institucional.</p>
+      <div class="fc-meta">Juan Fernando Carpio · jfcarpio.com · Acceso privado · Chile · Ecuador · Perú · Colombia</div>
+    </a>
+
+    <!-- REPORTE DESTACADO 2 — placeholder hasta el siguiente prompt -->
+    <div class="featured-card" style="border-color:rgba(59,126,232,.10); background:rgba(59,126,232,.03); opacity:.55; cursor:default;">
+      <div class="fc-badge" style="color:#444444; letter-spacing:.2em;">Próximo reporte — en preparación</div>
+      <div class="fc-title" style="color:#555555;">[ Segundo reporte ]</div>
+      <p class="fc-desc" style="color:#444444;">Próximamente disponible.</p>
+    </div>
+
+    <div class="access-note">
+      Acceso privado — los reportes se entregan en formato PDF o dashboard interactivo según el caso.<br>
+      Para solicitar acceso o encargar un análisis a medida: <a href="index.html#contacto">contacto directo</a> o <a href="mailto:staff@jfcarpio.com">staff@jfcarpio.com</a>
+    </div>
+  </div>
+
+  <!-- REPORTES SECTORIALES -->
+  <div class="pub-section">
+    <div class="sec-header">
+      <span class="sec-label">Análisis <span>Sectorial</span></span>
+      <span class="sec-count">Riesgo regulatorio · Benchmarks</span>
+    </div>
+
+    <div class="paper-item">
+      <span class="paper-num">01</span>
+      <div class="paper-body">
+        <div class="paper-title">Minerales Críticos en América Latina — Riesgo Regulatorio 2025</div>
+        <p class="paper-desc">Litio, cobre, níquel y tierras raras: la geografía política del nuevo mapa minero latinoamericano. Análisis de riesgo regulatorio por país, ciclos de nacionalización, y perspectivas de inversión privada bajo distintos escenarios de política energética y fiscal.</p>
+        <div class="paper-tags">
+          <span class="ptag ptag-blue">Minería</span>
+          <span class="ptag ptag-blue">Riesgo regulatorio</span>
+          <span class="ptag">LatAm</span>
+          <span class="ptag ptag-green">ENG / ESP</span>
+        </div>
+        <div class="paper-meta" style="margin-top:8px;">Juan Fernando Carpio · 2025 · Bilingüe · Acceso privado</div>
+      </div>
+    </div>
+
+    <div class="paper-item">
+      <span class="paper-num">02</span>
+      <div class="paper-body">
+        <div class="paper-title">Benchmarks MRR / CAC / Churn — Ecuador &amp; Latam</div>
+        <p class="paper-desc">Métricas de referencia para empresas de servicios recurrentes en Ecuador y Latinoamérica. Ingreso recurrente mensual, costo de adquisición de cliente y tasa de abandono: qué esperar, cómo diagnosticar y dónde están los outliers del mercado.</p>
+        <div class="paper-tags">
+          <span class="ptag ptag-green">SaaS · Servicios</span>
+          <span class="ptag ptag-blue">Benchmarks</span>
+          <span class="ptag">Ecuador · LatAm</span>
+          <span class="ptag ptag-gold">Growth OS</span>
+        </div>
+        <div class="paper-meta" style="margin-top:8px;">Juan Fernando Carpio · GrowthOS · Acceso privado</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENCARGA UN REPORTE -->
+  <div class="pub-section">
+    <div class="sec-header">
+      <span class="sec-label" style="color:#555555;">Análisis <span style="color:#444444;">a Medida</span></span>
+      <span class="sec-count">Encargos directos</span>
+    </div>
+    <div class="paper-item" style="opacity:.75;">
+      <span class="paper-num">→</span>
+      <div class="paper-body">
+        <div class="paper-title" style="color:#CCCCCC;">Reportes personalizados para tu empresa o sector</div>
+        <p class="paper-desc" style="color:#999999;">Análisis de entorno económico para decisiones específicas: entrada a un nuevo mercado, evaluación de riesgo país, benchmarking sectorial, o diagnóstico macroeconómico de un país de interés. Formato PDF ejecutivo o dashboard interactivo según el caso.</p>
+        <div class="paper-tags">
+          <span class="ptag">Encargo directo</span>
+          <span class="ptag ptag-blue">Análisis a medida</span>
+          <span class="ptag">Empresa privada</span>
+        </div>
+        <div class="paper-meta" style="margin-top:8px;"><a href="mailto:staff@jfcarpio.com" style="color:#3B7EE8;">staff@jfcarpio.com</a> · o desde el contacto en el home</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<!-- FOOTER -->
+<footer class="foot">
+  <a href="https://jfcarpio.com/" class="foot-copy" style="text-decoration:none; transition:color .14s;" onmouseover="this.style.color='#3B7EE8'" onmouseout="this.style.color=''">© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador</a>
+  <nav class="foot-links">
+    <a href="https://jfcarpiopuntocom.github.io/GrowthOS/index.html" target="_blank" rel="noopener"><span class="foot-dot" style="background:#0A9060;"></span>Dashboards</a>
+    <a href="reportes.html"><span class="foot-dot" style="background:#3B7EE8;"></span>Reportes</a>
+    <a href="https://www.jfcarpio.com/mindos-talleres.html"><span class="foot-dot" style="background:#9060E8;"></span>Workshops</a>
+    <a href="https://jfcarpio.com/blog.html"><span class="foot-dot" style="background:#E8A020;"></span>Blog</a>
+    <a href="publicaciones.html"><span class="foot-dot" style="background:#E86040;"></span>Publicaciones</a>
+  </nav>
+</footer>
+
+<script>
+// Scroll progress
+(function(){
+  var fill = document.getElementById('spFill');
+  if(!fill) return;
+  function upd(){
+    var s = document.documentElement.scrollTop || document.body.scrollTop;
+    var h = (document.documentElement.scrollHeight || document.body.scrollHeight) - window.innerHeight;
+    fill.style.width = (h > 0 ? Math.min(100, s/h*100) : 0) + '%';
+  }
+  window.addEventListener('scroll', upd, {passive:true});
+  upd();
+})();
+</script>
+</body>
+</html>
