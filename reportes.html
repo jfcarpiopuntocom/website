@@ -24,7 +24,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@700;900&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@700;900&display=swap"></noscript>
 
 <style>
 *, *:before, *:after { -webkit-box-sizing:border-box; box-sizing:border-box; margin:0; padding:0; }
@@ -199,7 +201,8 @@ a { text-decoration:none; color:inherit; }
     <img src="https://jfcarpio.com/fotojfc.png" alt="J.F. Carpio"
          class="jfc-mark"
          style="-webkit-filter:grayscale(100%) contrast(1.1);filter:grayscale(100%) contrast(1.1);border-radius:50%;object-fit:cover;object-position:center top;"
-         width="28" height="28">
+         width="28" height="28"
+         onerror="this.style.display='none'">
     <span class="bar-name">J.F. Carpio</span>
   </a>
   <a href="index.html" class="bar-back">← Home</a>
@@ -222,7 +225,7 @@ a { text-decoration:none; color:inherit; }
     </div>
 
     <!-- REPORTE DESTACADO 1 -->
-    <a href="#" class="featured-card">
+    <a href="index.html#contacto" class="featured-card">
       <span class="fc-arrow">↗</span>
       <div class="fc-badge">Reporte Macroeconómico · 2025 · Chile · Ecuador · Perú · Colombia</div>
       <div class="fc-title">Cuenca del Pacífico: Diagnóstico Macroeconómico 2025</div>
@@ -231,7 +234,7 @@ a { text-decoration:none; color:inherit; }
     </a>
 
     <!-- REPORTE DESTACADO 2 — Minerales Críticos -->
-    <a href="#" class="featured-card" style="margin-top:16px; border-color:rgba(40,236,170,.20); background:linear-gradient(135deg,rgba(40,236,170,.07) 0%,rgba(59,126,232,.07) 100%);">
+    <a href="index.html#contacto" class="featured-card" style="margin-top:16px; border-color:rgba(40,236,170,.20); background:linear-gradient(135deg,rgba(40,236,170,.07) 0%,rgba(59,126,232,.07) 100%);">
       <span class="fc-arrow" style="color:#28ECAA;">↗</span>
       <div class="fc-badge" style="color:#28ECAA; letter-spacing:.22em;">Reporte · 2025 · Bilingüe ENG / ESP · Acceso privado</div>
       <div class="fc-title">Navigating Risk: Regulatory &amp; Policy Outlook for Critical Minerals in Latin America</div>
