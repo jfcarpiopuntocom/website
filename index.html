@@ -1383,7 +1383,7 @@ button { border:none; background:none; font:inherit; }
         </button>
       </div>
       <div class="c-confirm" id="cConfirm" style="display:none;" bis_skin_checked="1">
-        <span data-t="wa_confirm">✓ WhatsApp abierto — si no cargó, escríbeme a <a href="mailto:jf@jfcarpio.com" style="color:#28ECAA">jf@jfcarpio.com</a></span>
+        <span data-t="wa_confirm">✓ WhatsApp abierto — si no cargó, escríbeme a <a href="mailto:staff@jfcarpio.com" style="color:#28ECAA">staff@jfcarpio.com</a></span>
       </div>
     </div>
   </div>
@@ -2401,7 +2401,7 @@ async function runQuery(){
     tx.textContent=data.content?.map(function(b){return b.text||'';}).join('')||(lang==='en'?'No response.':'Sin respuesta.');
     lbl.textContent='OUTPUT · JFC · GROWTH OS';
   }catch(e){
-    tx.textContent=lang==='en'?'Connection error. Write to me: jf@jfcarpio.com':'Error de conexión. Escríbeme: jf@jfcarpio.com';
+    tx.textContent=lang==='en'?'Connection error. Write to me: staff@jfcarpio.com':'Error de conexión. Escríbeme: staff@jfcarpio.com';
     lbl.textContent='ERROR';
   }finally{
     btn.disabled=false; spin.style.display='none';
