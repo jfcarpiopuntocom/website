@@ -538,7 +538,7 @@ button { border:none; background:none; font:inherit; }
   content:''; position:absolute; inset:0;
   background-image:url('network-bg.jpg');
   background-size:cover; background-position:center;
-  opacity:.08; pointer-events:none; z-index:0;
+  opacity:.13; pointer-events:none; z-index:0;
 }
 .copy-text { -webkit-box-flex:1; -webkit-flex:1; flex:1; min-width:260px; position:relative; z-index:1; }
 .copy-p {
@@ -604,7 +604,7 @@ button { border:none; background:none; font:inherit; }
   content:''; position:absolute; inset:0;
   background-image:url('network-bg.jpg');
   background-size:cover; background-position:center 60%;
-  opacity:.06; pointer-events:none; z-index:0;
+  opacity:.11; pointer-events:none; z-index:0;
 }
 .section-hd, .timeline { position:relative; z-index:1; }
 .section-hd {
@@ -689,7 +689,7 @@ button { border:none; background:none; font:inherit; }
   content:''; position:absolute; inset:0;
   background-image:url('network-intel.jpg');
   background-size:cover; background-position:center;
-  opacity:.05; pointer-events:none; z-index:0;
+  opacity:.10; pointer-events:none; z-index:0;
 }
 .contact-card { position:relative; z-index:1; }
 .contact-card {
@@ -877,9 +877,57 @@ button { border:none; background:none; font:inherit; }
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    FOOTER
 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── JFC BAND — parallax network separator ── */
+.jfc-band {
+  height:160px; position:relative; overflow:hidden;
+  background-image:url('network-intel.jpg');
+  background-size:cover; background-position:center 30%;
+  background-attachment:fixed;
+}
+.jfc-band::before {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(180deg,
+    rgba(6,14,29,.96) 0%,
+    rgba(6,14,29,.68) 35%,
+    rgba(6,14,29,.68) 65%,
+    rgba(6,14,29,.96) 100%);
+}
+.jfc-band-inner {
+  position:relative; z-index:1; height:100%;
+  display:flex; flex-direction:column;
+  align-items:flex-start; justify-content:center;
+  padding:0 7%;
+}
+.jfc-band-label {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:.82rem; letter-spacing:.22em;
+  color:#E86040; font-weight:700;
+  text-transform:uppercase; margin-bottom:.55rem;
+}
+.jfc-band-text {
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:clamp(1.1rem,2.6vw,1.8rem);
+  font-size:1.1rem;
+  font-weight:900; color:#FFFFFF;
+  letter-spacing:-.01em; line-height:1.2;
+}
+.jfc-band-text em { font-style:normal; color:#E8A020; }
+@media(min-width:320px){
+  .jfc-band-text { font-size:clamp(1.1rem,2.6vw,1.8rem); }
+}
+@media(max-width:600px){ .jfc-band { background-attachment:scroll; } }
+@media(prefers-reduced-motion:reduce){ .jfc-band { background-attachment:scroll; } }
+
 .foot {
   background:#060E1D; border-top:1px solid rgba(255,255,255,.07);
-  padding:22px 7%;
+  padding:22px 7%; position:relative; overflow:hidden;
+}
+.foot::before {
+  content:''; position:absolute; inset:0;
+  background-image:url('network-bg.jpg');
+  background-size:cover; background-position:center 70%;
+  opacity:.09; pointer-events:none;
+}
   display:-webkit-box; display:-webkit-flex; display:flex;
   -webkit-box-align:center; -webkit-align-items:center; align-items:center;
   -webkit-box-pack:justify; -webkit-justify-content:space-between; justify-content:space-between;
@@ -1361,6 +1409,14 @@ button { border:none; background:none; font:inherit; }
         <div class="tl-body" data-t="tl5_b" bis_skin_checked="1">M.E.E. en UFM Guatemala / Boston University. PhD en progreso, SMC University, Zug, Suiza. Tesis: plusvalía de Say, círculos concéntricos del mercado, barreras naturales vs. artificiales. La teoría austriaca del capital como herramienta de optimismo racional — no como adorno académico.</div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- JFC BAND -->
+<div class="jfc-band">
+  <div class="jfc-band-inner">
+    <div class="jfc-band-label">J.F. Carpio · Investigador económico y empresarial</div>
+    <div class="jfc-band-text">Optimismo racional · <em>Crecimiento económico</em> · Empresa privada</div>
   </div>
 </div>
 
