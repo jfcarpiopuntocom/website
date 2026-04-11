@@ -1,0 +1,29 @@
+media:
+  input: public/media
+  output: /media
+
+content:
+  - name: pages
+    label: Pages
+    type: collection
+    path: docs
+    fields:
+      - name: title
+        type: string
+      - name: body
+        type: rich-text
+
+  - name: site
+    label: Site Settings
+    type: file
+    path: src/config/site.json
+    fields:
+      - name: title
+        label: Website Title
+        type: string
+      - name: description
+        label: Website Description
+        type: string
+      - name: cover
+        label: Preview Image
+        type: image   
