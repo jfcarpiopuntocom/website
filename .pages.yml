@@ -1,29 +1,11 @@
-media:
-  input: public/media
-  output: /media
-
+media: ""
 content:
   - name: pages
     label: Pages
     type: collection
-    path: docs
+    path: C:\00 Projects\000 JFCarpio.com Website
     fields:
       - name: title
         type: string
       - name: body
-        type: rich-text
-
-  - name: site
-    label: Site Settings
-    type: file
-    path: src/config/site.json
-    fields:
-      - name: title
-        label: Website Title
-        type: string
-      - name: description
-        label: Website Description
-        type: string
-      - name: cover
-        label: Preview Image
-        type: image   
+        type: rich-text   
