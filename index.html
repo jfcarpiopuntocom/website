@@ -137,7 +137,7 @@ button { border:none; background:none; font:inherit; }
 }
 .bar-name {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; font-weight:700; color:#FFFFFF;
+  font-size:10px; font-weight:700; color:#FFFFFF;
   letter-spacing:.16em; text-transform:uppercase;
 }
 /* â”€â”€ LANG SWITCH â”€â”€ */
@@ -173,7 +173,7 @@ button { border:none; background:none; font:inherit; }
 }
 .ham-lbl {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; font-weight:700; color:#FFFFFF;
+  font-size:10px; font-weight:700; color:#FFFFFF;
   letter-spacing:.18em; text-transform:uppercase;
 }
 .hl {
@@ -199,13 +199,13 @@ button { border:none; background:none; font:inherit; }
 }
 .ov-lbl {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#FFFFFF; letter-spacing:.3em;
+  font-size:10px; color:#FFFFFF; letter-spacing:.3em;
   text-transform:uppercase; margin-bottom:28px; 
 }
 .ov-esc {
   position:absolute; bottom:32px; right:36px;
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#FFFFFF;
+  font-size:10px; color:#FFFFFF; 
   letter-spacing:.22em; text-transform:uppercase;
   border:1px solid rgba(255,255,255,.18);
   padding:4px 9px; pointer-events:none;
@@ -241,8 +241,8 @@ button { border:none; background:none; font:inherit; }
 .ov-a:hover .ov-t { color:var(--c); }
 .ov-sub { font-family:'Space Mono','Courier New',monospace; font-size:11px; color:#FFFFFF;  letter-spacing:.08em; display:none; }
 @media(min-width:560px){ .ov-sub { display:block; } }
-.ov-arr { margin-left:auto; font-size:20px; color:#FFFFFF; -webkit-transition:color .14s,-webkit-transform .18s; transition:color .14s,transform .18s; }
-.ov-a:hover .ov-arr { color:var(--c); -webkit-transform:translate(5px,-4px); transform:translate(5px,-4px); }
+.ov-arr { margin-left:auto; font-size:20px; color:#FFFFFF; opacity:.5; -webkit-transition:opacity .14s,-webkit-transform .18s; transition:opacity .14s,transform .18s; }
+.ov-a:hover .ov-arr { opacity:.9; color:var(--c); -webkit-transform:translate(5px,-4px); transform:translate(5px,-4px); }
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    HERO — v1.1 line reveal
@@ -348,7 +348,7 @@ button { border:none; background:none; font:inherit; }
 }
 .bh-hint {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#FFFFFF; letter-spacing:.14em;
+  font-size:10px; color:#FFFFFF; letter-spacing:.14em;
 }
 
 /* Grid */
@@ -376,7 +376,7 @@ button { border:none; background:none; font:inherit; }
   -webkit-transition:background .22s,opacity .5s,-webkit-transform .5s; transition:background .22s,opacity .5s,transform .5s;
 }
 .pan.vis { opacity:1; -webkit-transform:translateY(0); transform:translateY(0); }
-.pan:hover { background:rgba(255,255,255,.035); box-shadow:inset 0 0 30px rgba(255,255,255,.02), 0 4px 24px rgba(0,0,0,.15); }
+.pan:hover { background:rgba(255,255,255,.035); }
 
 /* Left color border */
 .pan::before {
@@ -443,9 +443,10 @@ button { border:none; background:none; font:inherit; }
 .pan:hover .pan-title { color:var(--pc); }
 .pan-desc {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:13px; color:#FFFFFF;
+  font-size:13px; color:#CCCCCC;
   letter-spacing:.04em; line-height:1.6;
 }
+.pan:hover .pan-desc { opacity:1; }
 .pan-bot {
   margin-top:16px;
   display:-webkit-box; display:-webkit-flex; display:flex;
@@ -461,11 +462,11 @@ button { border:none; background:none; font:inherit; }
   text-transform:uppercase; padding:3px 8px; border:1px solid;
 }
 .pan-arr {
-  font-size:17px; color:#FFFFFF;
-  -webkit-transition:color .14s,-webkit-transform .18s;
-  transition:color .14s,transform .18s;
+  font-size:17px; color:#FFFFFF; opacity:.5;
+  -webkit-transition:opacity .14s,-webkit-transform .18s;
+  transition:opacity .14s,transform .18s;
 }
-.pan:hover .pan-arr { color:var(--pc); -webkit-transform:translate(4px,-4px); transform:translate(4px,-4px); }
+.pan:hover .pan-arr { opacity:.9; color:var(--pc); -webkit-transform:translate(4px,-4px); transform:translate(4px,-4px); }
 
 /* v1.4 — content previews inside panels */
 .pan-items { margin-top:10px; border-top:1px solid rgba(255,255,255,.08); padding-top:10px; }
@@ -473,7 +474,7 @@ button { border:none; background:none; font:inherit; }
   display:block; padding:5px 0;
   border-bottom:1px solid rgba(255,255,255,.05);
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#FFFFFF;
+  font-size:10px; color:#FFFFFF;
   letter-spacing:.06em; line-height:1.4;
   -webkit-transition:opacity .14s,padding-left .14s; transition:opacity .14s,padding-left .14s;
 }
@@ -508,14 +509,6 @@ button { border:none; background:none; font:inherit; }
 .proof-item + .proof-item {
   border-left:1px solid rgba(255,255,255,.1);
 }
-.proof-item {
-  opacity:0; -webkit-transform:translateY(10px); transform:translateY(10px);
-  -webkit-transition:opacity .5s ease, -webkit-transform .5s ease; transition:opacity .5s ease, transform .5s ease;
-}
-.proof-item:nth-child(1) { -webkit-transition-delay:0s; transition-delay:0s; }
-.proof-item:nth-child(2) { -webkit-transition-delay:.12s; transition-delay:.12s; }
-.proof-item:nth-child(3) { -webkit-transition-delay:.24s; transition-delay:.24s; }
-.proof-strip.in .proof-item { opacity:1; -webkit-transform:translateY(0); transform:translateY(0); }
 @media(max-width:600px){
   .proof-item { padding:14px 20px; border-left:none; border-top:1px solid rgba(255,255,255,.07); }
   .proof-item:first-child { border-top:none; }
@@ -584,8 +577,8 @@ button { border:none; background:none; font:inherit; }
   -webkit-transition:-webkit-filter .3s; transition:filter .3s;
 }
 .photo-frame:hover img {
-  -webkit-filter:grayscale(30%) sepia(15%) contrast(1.05);
-  filter:grayscale(30%) sepia(15%) contrast(1.05);
+  -webkit-filter:grayscale(80%) contrast(1.05);
+  filter:grayscale(80%) contrast(1.05);
 }
 /* Overlay scan effect */
 .photo-frame::after {
@@ -596,7 +589,7 @@ button { border:none; background:none; font:inherit; }
 }
 .photo-caption {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#FFFFFF;
+  font-size:10px; color:#FFFFFF;
   letter-spacing:.16em; text-transform:uppercase;
   margin-top:10px; text-align:center;
 }
@@ -668,10 +661,6 @@ button { border:none; background:none; font:inherit; }
   width:8px; height:8px; border-radius:50%;
   background:#060E1D; border:1px solid rgba(255,255,255,.3);
 }
-.tl-row:first-child .tl-year::after {
-  background:#E8A020; border-color:#E8A020;
-  -webkit-animation:pulseDot 2.5s infinite; animation:pulseDot 2.5s infinite;
-}
 .tl-content { -webkit-box-flex:1; -webkit-flex:1; flex:1; padding-top:0; }
 .tl-title {
   font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
@@ -680,7 +669,7 @@ button { border:none; background:none; font:inherit; }
 }
 .tl-body {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:13px; color:#FFFFFF; letter-spacing:.03em; line-height:1.55;
+  font-size:13px; color:#CCCCCC; letter-spacing:.03em; line-height:1.55;
 }
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -742,7 +731,7 @@ button { border:none; background:none; font:inherit; }
 }
 .c-chip {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#FFFFFF;
+  font-size:10px; color:#FFFFFF;
   border:1px solid rgba(255,255,255,.25);
   background:transparent; padding:7px 14px; cursor:pointer;
   letter-spacing:.1em;
@@ -806,13 +795,13 @@ button { border:none; background:none; font:inherit; }
 .c-btn-draft:hover { background:#F5C040; border-color:#F5C040; }
 .c-scarcity {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#E8A020;
+  font-size:10px; color:#E8A020;
   letter-spacing:.1em; line-height:1.6;
   margin-bottom:10px;
 }
 .c-char-row {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#FFFFFF;
+  font-size:10px; color:#FFFFFF;
   letter-spacing:.1em; text-align:right;
   padding:4px 2px 0;
   -webkit-transition:color .15s; transition:color .15s;
@@ -856,7 +845,7 @@ button { border:none; background:none; font:inherit; }
 }
 .nl-sub {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:13px; color:#FFFFFF; letter-spacing:.06em; line-height:1.5;
+  font-size:13px; color:#CCCCCC; letter-spacing:.06em; line-height:1.5;
 }
 .nl-form {
   display:-webkit-box; display:-webkit-flex; display:flex;
@@ -883,7 +872,7 @@ button { border:none; background:none; font:inherit; }
 .nl-submit:hover { background:#E8A020; border-color:#E8A020; }
 .nl-freq {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#FFFFFF;
+  font-size:10px; color:#FFFFFF;
   letter-spacing:.1em; line-height:1.5; margin-top:6px;
 }
 .nl-ok { display:none; font-family:'Space Mono','Courier New',monospace; font-size:11px; color:#0A9060; letter-spacing:.14em; text-transform:uppercase; padding:11px 0; }
@@ -949,12 +938,12 @@ button { border:none; background:none; font:inherit; }
 }
 .foot-copy {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#FFFFFF; letter-spacing:.12em;
+  font-size:10px; color:#FFFFFF; letter-spacing:.12em;
 }
 .foot-links { display:-webkit-box; display:-webkit-flex; display:flex; }
 .foot-links a {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#FFFFFF;
+  font-size:10px; color:#FFFFFF;
   letter-spacing:.12em; padding:2px 14px;
   border-left:1px solid rgba(255,255,255,.1);
   -webkit-transition:opacity .14s; transition:opacity .14s;
@@ -1011,7 +1000,7 @@ button { border:none; background:none; font:inherit; }
 @keyframes         thankYou { 0%{transform:scale(1)} 50%{transform:scale(1.04)} 100%{transform:scale(1)} }
 .nl-freq {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#FFFFFF;
+  font-size:10px; color:#FFFFFF;
   letter-spacing:.1em; line-height:1.5; margin-top:6px;
 }
 .nl-ok { -webkit-animation:thankYou .4s ease; animation:thankYou .4s ease; }
@@ -1120,7 +1109,7 @@ button { border:none; background:none; font:inherit; }
   .hs-lbl {
     display:block;
     font-family:'Space Mono','Courier New',monospace;
-    font-size:11px; color:#FFFFFF;
+    font-size:11px; color:#CCCCCC;
     letter-spacing:.16em; text-transform:uppercase; margin-top:5px;
   }
   /* Hide standalone proof strip — stats now live inside the hero */
@@ -1240,8 +1229,8 @@ button { border:none; background:none; font:inherit; }
         <p class="pan-desc" data-t="p1_desc">Si tu negocio está en un momento crítico, empieza aquí.</p>
       </div>
       <div class="pan-items" bis_skin_checked="1">
-        <span class="pan-item"><span class="pan-item-tag" style="color:#E8A020;">$47</span>Growth OS Vol. 1 — GROW (0–6 meses)</span>
         <span class="pan-item"><span class="pan-item-tag" style="color:#0A9060;">FREE</span>Growth OS Vol. 2 — CROSS (6–24 meses)</span>
+        <span class="pan-item"><span class="pan-item-tag" style="color:#E8A020;">$47</span>Growth OS Vol. 1 — GROW (0–6 meses)</span>
         <span class="pan-item"><span class="pan-item-tag" style="color:#E8A020;">PRO</span>Growth OS Vol. 3 — SCALE/SELL (24M+)</span>
       </div>
       <div class="pan-bot" bis_skin_checked="1">
@@ -1482,7 +1471,7 @@ button { border:none; background:none; font:inherit; }
         </button>
       </div>
       <div class="c-confirm" id="cConfirm" style="display:none;" bis_skin_checked="1">
-        <span data-t="wa_confirm">✓ WhatsApp abierto — si no cargó, escríbeme a <a href="/cdn-cgi/l/email-protection#91e2e5f0f7f7d1fbf7f2f0e3e1f8febff2fefc" style="color:#28ECAA"><span class="__cf_email__" data-cfemail="fb888f9a9d9dbb919d989a898b9294d5989496">[email&#160;protected]</span></a></span>
+        <span data-t="wa_confirm">✓ WhatsApp abierto — si no cargó, escríbeme a <a href="/cdn-cgi/l/email-protection#bccfc8dddadafcd6dadfddceccd5d392dfd3d1" style="color:#28ECAA"><span class="__cf_email__" data-cfemail="d2a1a6b3b4b492b8b4b1b3a0a2bbbdfcb1bdbf">[email&#160;protected]</span></a></span>
       </div>
     </div>
   </div>
@@ -2560,7 +2549,7 @@ document.getElementById('tIn').addEventListener('keydown',function(e){
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    LOCAL QUERY FORMATION ENGINE — v1.130
    Zero API · Zero dependencies · Works offline.
-   Keyword scoring > contextual WhatsApp message.
+   Keyword scoring â†’ contextual WhatsApp message.
 â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 var QE={
   cats:{
@@ -2767,7 +2756,7 @@ var T={
     h1_l2:'es difícil. Un entorno hostil puede complicarlo aún más.',
     h1_l3a:'Aquí encontrarás ', h1_l3b:'herramientas', h1_l3c:' para enfrentar exitosamente ambas cosas.',
     connector:'Recursos para tu negocio',
-    bh_sub:’Empieza por lo que más necesitas’, bh_hint:’5 secciones’,
+    bh_sub:'Empieza por lo que más necesitas', bh_hint:'5 secciones â†’',
     ov_lbl:'jfcarpio.com — Navegar',
     ov1_t:'Dashboards',    ov1_sub:'Diagnóstico inmediato · Growth OS',
     ov2_t:'Reportes',      ov2_sub:'Benchmarks y análisis sectoriales',
@@ -2806,11 +2795,11 @@ var T={
     contact_eye:'Consulta directa · WhatsApp',
     contact_title:'Pregunta algo concreto',
     contact_sub:'Sobre tu negocio, el entorno, una métrica, una decisión.',
-    wa_btn:’Escribir ahora’,
-    wa_btn_s:’WhatsApp’,
+    wa_btn:'Escribir ahora â†’',
+    wa_btn_s:'WhatsApp â†’',
     wa_send:'WhatsApp',
     wa_draft:'Redactar pregunta',
-    wa_confirm:'WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
+    wa_confirm:'âœ“ WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
     c_char_of:'/300',
     nl_freq:'Frecuencia irregular — cuando hay algo que vale. Baja cuando quieras.',
     c_helper:'¿No sabes bien cómo empezar? Escribe lo que tengas — sobre tu negocio, el entorno económico, un workshop, un reporte, o simplemente para hablar. El segundo botón te ayuda a redactarlo.',
@@ -2842,19 +2831,20 @@ var T={
     h1_l2:'is hard. A hostile environment can make it much harder.',
     h1_l3a:'Here you\'ll find ', h1_l3b:'tools', h1_l3c:' to tackle both.',
     connector:'Resources for your business',
-    bh_sub:’Start with what you need most’, bh_hint:’5 sections’,
+    bh_sub:'Start with what you need most', bh_hint:'5 sections â†’',
     ov2_t:'Reports',       ov2_sub:'Benchmarks and sector analysis',
     ov3_t:'Workshops',     ov3_sub:'In-person and online training',
     ov4_t:'Blog',          ov4_sub:'History, ideas and economic context',
     ov5_t:'Publications',  ov5_sub:'Books, papers and academic columns',
-    p1_num:'01 — Immediate action',    p1_title:'marks. Private-access reports for real decisions.', p2_tag:'6 reports',
+    p1_num:'01 — Immediate action',    p1_title:'Dashboards',
+    p1_desc:'If your business is at a critical juncture, start here.', p1_tag:'Growth OS',
+    p2_num:'02 — Understanding context', p2_title:'Reports',
+    p2_desc:'Macroeconomic analysis, regulatory risk and business benchmarks. Private-access reports for real decisions.', p2_tag:'6 reports',
     p3_num:'03 — Live work', p3_title:'Workshops',
     p3_desc:'Two live workshops. Real paradigm shifts — one on money, one on private enterprise — using the MindOS framework.', p3_tag:'Corporate',
     p4_num:'04 — Regular reading', p4_title:'Blog',
     p4_desc:'Economic history, ideas and context — how certain ideas — bad ones — really do change everything.', p4_tag:'Eleutheros',
-    p5_num:'05 — Public and academic', p5_title:'Publications',
-    p5_desc:'Books, papers and columns. The formal foundation behind every tool.', p5_tag:'Academic',
-    cp1:'The Latin American business owner faces two simultaneous battles: building a business that works, and operating in an environment that often works against them — regulations that strangle, taxes that discourage, market signals distorted by State intervention.',
+    p5_num:'05 —iness that works, and operating in an environment that often works against them — regulations that strangle, taxes that discourage, market signals distorted by State intervention.',
     cp1b:'Rational optimism does not ignore that. It analyzes it, measures it, and finds the path forward anyway.',
     cp2:'This site exists at the intersection of two objectives: defending private enterprise as the real engine of progress, and equipping business owners with analytical tools that normally only economists and large consulting firms possess. Dashboards that diagnose. Reports that contextualize. Workshops where you work with real data, not hypothetical cases.',
     cp3a:'Economic growth is not an accident.',
@@ -2876,11 +2866,11 @@ var T={
     contact_eye:'Direct consultation · WhatsApp',
     contact_title:'Ask something specific',
     contact_sub:'About your business, the environment, a metric, a decision.',
-    wa_btn:’Write now’,
-    wa_btn_s:’WhatsApp’,
+    wa_btn:'Write now â†’',
+    wa_btn_s:'WhatsApp â†’',
     wa_send:'WhatsApp',
     wa_draft:'Redactar pregunta',
-    wa_confirm:'WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
+    wa_confirm:'âœ“ WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
     c_char_of:'/300',
     nl_freq:'Frecuencia irregular — cuando hay algo que vale. Baja cuando quieras.',
     c_helper:'Not sure how to start? Write whatever you have — about your business, the economic environment, a workshop, a report, or just to talk. The second button helps you draft it.',
