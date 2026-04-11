@@ -1139,7 +1139,7 @@ button { border:none; background:none; font:inherit; }
       <svg width="16" height="12" viewBox="0 0 18 13" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="border-radius:1px;flex-shrink:0"><rect width="18" height="13" fill="#c60b1e"></rect><rect y="3" width="18" height="7" fill="#ffc400"></rect></svg> ES
     </button>
     <button class="lang-btn" id="btn-en" onclick="setLang(&#39;en&#39;)" aria-pressed="false">
-      <svg width="16" height="12" viewBox="0 0 18 13" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="border-radius:1px;flex-shrink:0"><rect width="18" height="13" fill="#B22234"></rect><rect y="1" width="18" height="1" fill="#fff"></rect><rect y="3" width="18" height="1" fill="#fff"></rect><rect y="5" width="18" height="1" fill="#fff"></rect><rect y="7" width="18" height="1" fill="#fff"></rect><rect y="9" width="18" height="1" fill="#fff"></rect><rect y="11" width="18" height="1" fill="#fff"></rect><rect width="7" height="7" fill="#3C3B6E"></rect><text x="1.2" y="2" fill="#fff" font-size="2.2" font-family="sans-serif">★</text><text x="3.5" y="2" fill="#fff" font-size="2.2" font-family="sans-serif">★</text><text x="5.8" y="2" fill="#fff" font-size="2.2" font-family="sans-serif">★</text><text x="2.3" y="4" fill="#fff" font-size="2.2" font-family="sans-serif">★</text><text x="4.6" y="4" fill="#fff" font-size="2.2" font-family="sans-serif">★</text><text x="1.2" y="6" fill="#fff" font-size="2.2" font-family="sans-serif">★</text><text x="3.5" y="6" fill="#fff" font-size="2.2" font-family="sans-serif">★</text><text x="5.8" y="6" fill="#fff" font-size="2.2" font-family="sans-serif">★</text></svg> EN
+      <svg width="16" height="12" viewBox="0 0 18 13" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="border-radius:1px;flex-shrink:0"><rect width="18" height="13" fill="#B22234"></rect><rect y="1" width="18" height="1" fill="#fff"></rect><rect y="3" width="18" height="1" fill="#fff"></rect><rect y="5" width="18" height="1" fill="#fff"></rect><rect y="7" width="18" height="1" fill="#fff"></rect><rect y="9" width="18" height="1" fill="#fff"></rect><rect y="11" width="18" height="1" fill="#fff"></rect><rect width="7" height="7" fill="#3C3B6E"></rect><text x="1.2" y="2" fill="#fff" font-size="2.2" font-family="sans-serif">â˜…</text><text x="3.5" y="2" fill="#fff" font-size="2.2" font-family="sans-serif">â˜…</text><text x="5.8" y="2" fill="#fff" font-size="2.2" font-family="sans-serif">â˜…</text><text x="2.3" y="4" fill="#fff" font-size="2.2" font-family="sans-serif">â˜…</text><text x="4.6" y="4" fill="#fff" font-size="2.2" font-family="sans-serif">â˜…</text><text x="1.2" y="6" fill="#fff" font-size="2.2" font-family="sans-serif">â˜…</text><text x="3.5" y="6" fill="#fff" font-size="2.2" font-family="sans-serif">â˜…</text><text x="5.8" y="6" fill="#fff" font-size="2.2" font-family="sans-serif">â˜…</text></svg> EN
     </button>
   </div>
 </header>
@@ -1471,7 +1471,7 @@ button { border:none; background:none; font:inherit; }
         </button>
       </div>
       <div class="c-confirm" id="cConfirm" style="display:none;" bis_skin_checked="1">
-        <span data-t="wa_confirm">✓ WhatsApp abierto — si no cargó, escríbeme a <a href="/cdn-cgi/l/email-protection#067572676060466c60656774766f692865696b" style="color:#28ECAA"><span class="__cf_email__" data-cfemail="83f0f7e2e5e5c3e9e5e0e2f1f3eaecade0ecee">[email&#160;protected]</span></a></span>
+        <span data-t="wa_confirm">✓ WhatsApp abierto — si no cargó, escríbeme a <a href="/cdn-cgi/l/email-protection#384b4c595e5e78525e5b594a485157165b5755" style="color:#28ECAA"><span class="__cf_email__" data-cfemail="394a4d585f5f79535f5a584b495056175a5654">[email&#160;protected]</span></a></span>
       </div>
     </div>
   </div>
@@ -2863,8 +2863,7 @@ var T={
     tl4_t:'Author in the tradition of Economics with institutions and enterprise',
     tl4_b:'Author of "10 Lessons of Economics". Translation and dissemination of continental European economics (especially the Austrian school) in Spanish. Columnist in Ecuadorian press. Economic growth as a cause — not a side effect of other agendas.',
     tl5_t:'The formation: the solid theory in service of real causes',
-    tl5_b:'M.E.E. at UFM Guatemala / Boston University. PhD in progress, SMC University, Zug, Switzerland. Thesis topics: Say\'s surplus value, concentric market circles, natural vs. artificial barriers. Austrian capital theory as a tool for rational optimism — not academic ornament.',
-    term_lbl:'Direct consultation', term_title_a:'Got a ', term_title_b:'question', term_title_c:'?',
+    tl5_b:'M.E.E. at UFM Guatemala / Boston University. PhD :'Direct consultation', term_title_a:'Got a ', term_title_b:'question', term_title_c:'?',
     contact_eye:'Direct consultation · WhatsApp',
     contact_title:'Ask something specific',
     contact_sub:'About your business, the environment, a metric, a decision.',
@@ -2919,4 +2918,16 @@ function setLang(l){
   var be=document.getElementById('btn-es'), bn=document.getElementById('btn-en');
   if(be){be.className='lang-btn'+(l==='es'?' lang-active':'');be.setAttribute('aria-pressed',String(l==='es'));}
   if(bn){bn.className='lang-btn'+(l==='en'?' lang-active':'');bn.setAttribute('aria-pressed',String(l==='en'));}
-  document.docum
+  document.documentElement.setAttribute('lang',l);
+  try{localStorage.setItem('jfc_lang',l);}catch(e){}
+}
+
+
+/* Restore on load */
+(function(){
+  try{var s=localStorage.getItem('jfc_lang');if(s&&T[s])setLang(s);}catch(e){}
+})();
+</script>
+
+
+</body></html>
