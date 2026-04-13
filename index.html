@@ -1,80 +1,72 @@
-<!DOCTYPE html>
-<!-- saved from url=(0053)https://jfcarpio.com/ -->
-<html lang="es" prefix="og: https://ogp.me/ns#">
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Juan Fernando Carpio — Economía con instituciones y empresas</title>
-<meta name="description" content="Investigador económico y empresarial. Defensor del crecimiento económico y la empresa privada latinoamericana. Reportes, dashboards y talleres desde el optimismo racional.">
-<meta name="author" content="Juan Fernando Carpio">
-<meta name="theme-color" content="#060E1D">
-
-<!-- OG / v1.5 -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://jfcarpio.com/">
-<meta property="og:title" content="J.F. Carpio — Autor e investigador económico y empresarial · Dashboards · Reportes · Workshops">
-<meta property="og:description" content="Análisis de entorno económico, economía empresarial y herramientas para la empresa privada latinoamericana. Reportes, dashboards y workshops por J.F. Carpio.">
-<meta property="og:image" content="https://jfcarpio.com/og-jfcarpio.png">
-<meta property="og:locale" content="es_EC">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@jfcarpio">
-<meta name="twitter:image" content="https://jfcarpio.com/og-jfcarpio.png">
-
-<!-- Canonical -->
-<link rel="canonical" href="https://jfcarpio.com/">
-
-<!-- Security meta -->
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-
-<!-- Font preload -->
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet"></noscript>
-
-<!-- Favicon SVG / v1.5 -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 32 32&#39;&gt;&lt;rect width=&#39;32&#39; height=&#39;32&#39; fill=&#39;%23060E1D&#39;/&gt;&lt;text y=&#39;22&#39; x=&#39;4&#39; font-family=&#39;Arial&#39; font-weight=&#39;900&#39; font-size=&#39;16&#39; fill=&#39;%231D5BBF&#39;&gt;JFC&lt;/text&gt;&lt;/svg&gt;">
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link rel="preconnect" href="https://api.anthropic.com/">
-<link rel="dns-prefetch" href="https://api.anthropic.com/">
-<!-- Schema / v1.5 -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Person",
-  "name":"Juan Fernando Carpio",
-  "url":"https://jfcarpio.com",
-  "jobTitle":"Investigador económico y empresarial",
-  "description":"Estudioso de la escuela austriaca. Analista de entorno económico-empresarial. Defensor de la empresa privada.",
-  "sameAs":[
-    "https://www.linkedin.com/in/jfcarpio/",
-    "https://mises.org/profile/juan-fernando-carpio",
-    "https://twitter.com/jfcarpio"
-  ],
-  "knowsAbout":["Economía de la Escuela Austriaca","Empresa Privada","Análisis de Mercado","Emprendimiento","Growth OS"],
-  "alumniOf":[
-    {"@type":"CollegeOrUniversity","name":"Universidad San Francisco de Quito"},
-    {"@type":"CollegeOrUniversity","name":"UFM Guatemala — Boston University"},
-    {"@type":"CollegeOrUniversity","name":"SMC University, Zug"}
-  ],
-  "address":{"@type":"PostalAddress","addressLocality":"Quito","addressCountry":"EC"}
-}
-</script>
-
-<!-- GA4 placeholder / v1.12 -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
-
 <style>
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   jfcarpio.com · v1.115
-   REGLA ABSOLUTA: JAMÁS gris en texto sobre fondo oscuro.
-   Solo #FFFFFF, colores vivos o negro sobre blanco.
-   Mobile-first · Webkit prefixes · Safari 6+
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/*
+================================================================================
+  jfcarpio.com -- MASTER STYLE BLOCK
+  v1.130 · Last major refactor: 2026-04-13 · Author: JFC + Claude Sonnet 4.6
+================================================================================
+
+  ABSOLUTE RULES -- DO NOT CHANGE WITHOUT JFC EXPLICIT APPROVAL:
+  1. NO grey/rgba/opacity on ANY text. Primary: #FFFFFF. Secondary: #CCCCCC min.
+     Accent colors: #E86040 (orange), #E8A020 (gold), #28ECAA (green), #3B7EE8 (blue)
+     Background: #060E1D. Never change these palette values.
+  2. Mobile-first: base styles = 320px screen. Enhance UP with min-width queries.
+  3. font-size minimum: .82rem for any visible text. NEVER below this. Not for labels,
+     tags, eyebrows, badges, nav items, footer, disclaimers -- nothing.
+  4. No opacity on text elements -- EVER. Hierarchy = font-size + font-weight + color.
+  5. Touch targets: 44px minimum.
+
+  REVEAL SYSTEM -- js-rv PROGRESSIVE ENHANCEMENT (refactored 2026-04-13):
+  HOW IT WORKS:
+  - Content is visible by default (opacity:1). No JS = no problem.
+  - JS adds class 'js-rv' to <html> element at the VERY TOP of the main <script>.
+  - CSS .js-rv .reveal / .js-rv .tl-row / .js-rv .proof-item start at opacity:0.
+  - scroll check() function adds '.in' or '.vis' classes to trigger fade-in transitions.
+  CRITICAL -- NEVER CHANGE THESE OR PAGE CONTENT GOES PERMANENTLY INVISIBLE:
+  - Never add opacity:0 to .reveal elements via inline style or bare CSS class.
+    Only .js-rv .reveal { opacity:0 } is correct (scoped, safe).
+  - Never remove "document.documentElement.className+=' js-rv'" from the script.
+    That line gates ALL animation hiding. Removing it = blank page sections forever.
+  - Never add JS that sets revEl.style.opacity='0' on .reveal elements at runtime.
+    That was the old broken pattern (v1.13). It is gone. Do not re-add it.
+
+  LANGUAGE SYSTEM -- data-t bilingual i18n (ES/EN):
+  HOW IT WORKS:
+  - Every translatable element has data-t="key" attribute in HTML.
+  - var T = { es:{...}, en:{...} } holds all strings in the <script> block.
+  - setLang(l) iterates all [data-t] elements and swaps text. Called on button click
+    and on page load from localStorage ('jfc_lang').
+  CRITICAL -- NEVER BREAK THESE:
+  - T.es and T.en MUST have the same set of keys. Missing key in T.en = that element
+    stays in Spanish when user clicks EN. Audit both objects after any string change.
+  - Never rename a data-t key in HTML without updating BOTH T.es and T.en.
+  - data-t-placeholder is a separate attribute for <textarea> placeholder text.
+  - Default language = 'es'. The lang buttons call setLang('es') / setLang('en').
+
+  PARALLAX BAND (.jfc-band):
+  - Position: AFTER .proof-strip, BEFORE .copy-section. Mid-page editorial statement.
+    NOT at the bottom. Repositioned 2026-04-13 from end of timeline to mid-page.
+  - background-attachment:fixed = parallax. Disabled on mobile (scroll fallback).
+  - background-image: 'network-intel.jpg' -- file must exist in repo root.
+  - .jfc-band::before = asymmetric gradient overlay (rgba dark left, open right).
+  - .jfc-band-inner::before = 4px #E86040 left accent bar (vertical rule).
+
+  PAGE STRUCTURE (top to bottom -- maintain this order):
+  1. NAV (.nav) -- fixed top bar, hamburger menu
+  2. HERO (.hero) -- headline, lang switch, scroll cue
+  3. BENTO GRID (.bento-wrap) -- 5 service panels (.pan)
+  4. PROOF STRIP (.proof-strip) -- 3 social proof numbers
+  5. JFC BAND (.jfc-band) -- parallax editorial statement
+  6. COPY + PHOTO (.copy-section) -- long-form manifesto + JFC photo
+  7. TIMELINE (.about-section) -- career trajectory (.tl-row)
+  8. CONTACT / TERMINAL (.contact-section#terminal) -- WhatsApp + AI query
+  9. NEWSLETTER (.nl-section) -- Gumroad mailing list CTA
+  10. FOOTER (.footer)
+
+  FOREIGN CSS (ignore, do not edit):
+  - Lines approx 1520+: injected by browser extensions (night_shift, vacp-*, data-v-*)
+  - These appear/disappear per browser. They are not part of the source. Ignore them.
+================================================================================
+*/
 *, *:before, *:after {
   -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;
   margin:0; padding:0;
@@ -2371,6 +2363,40 @@ Range input: thumbs
 .app-container[data-v-c823ca38]{width:100vw;height:100vh;position:fixed;top:0px;left:0px;z-index:2147483647;display:flex;align-items:center;justify-content:center;font-family:'Didact Gothic', sans-serif}.fade-enter-active[data-v-c823ca38],.fade-leave-active[data-v-c823ca38]{transition:all 0.2s ease-out}.fade-enter-active[data-v-c823ca38] .app-palette-modal,.fade-leave-active[data-v-c823ca38] .app-palette-modal{transition:all 0.2s ease-out}.fade-enter[data-v-c823ca38] .app-palette-modal,.fade-leave-to[data-v-c823ca38] .app-palette-modal{transition:all 0.2s ease-out;transform:translateY(-20px);opacity:0}
 
 </style></div></template></div><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/*
+================================================================================
+  jfcarpio.com -- MAIN SCRIPT BLOCK
+  v1.130 · 2026-04-13 · JFC + Claude Sonnet 4.6
+================================================================================
+
+  REVEAL SYSTEM (js-rv):
+  - THIS LINE IS CRITICAL. It adds 'js-rv' to <html> immediately.
+  - Without it: .js-rv .reveal / .tl-row / .proof-item CSS never fires.
+    Result: ALL animated content stays at opacity:0 = BLANK PAGE SECTIONS.
+  - Must stay as the FIRST executable line in this script block.
+  - The check() function below adds '.in' (reveals) and '.vis' (timeline rows).
+
+  LANGUAGE SYSTEM (T object + setLang):
+  - var T = { es:{...}, en:{...} } -- all translatable strings.
+  - setLang(l) swaps all [data-t] elements. Persists to localStorage 'jfc_lang'.
+  - T.es and T.en MUST have matching key sets. Missing key in T.en = stays Spanish.
+  - To add a string: add data-t="mykey" in HTML, add mykey:'...' in BOTH T.es and T.en.
+
+  WHATSAPP BUTTONS:
+  - openWA() -- sends textarea content to JFC's WhatsApp (number obfuscated in JS).
+  - openWAWorkshops() -- pre-filled workshop inquiry message.
+  - draftAndSend() -- runs QE.draft() keyword scorer, fills textarea, then calls openWA().
+  - QE (Query Engine) -- keyword scoring engine that suggests the best message template.
+    Categories: dashboard / workshop / reporte / entorno / precio / publicacion / general.
+
+  SCROLL REVEAL (check function):
+  - Runs on scroll, resize, and setTimeout(350ms) on load.
+  - .pan elements get class 'vis' when top < windowHeight-30.
+  - .reveal elements get class 'in' when top < windowHeight-40.
+  - .tl-row elements get class 'vis' with staggered transitionDelay.
+  - countUp() fires once per panel when first visible (data-target attribute).
+================================================================================
+*/
 document.documentElement.className+=' js-rv';
 /* â”€â”€ MENU â”€â”€ */
 function toggleMenu(){
@@ -2851,6 +2877,8 @@ var T={
     h1_l3a:'Here you\'ll find ', h1_l3b:'tools', h1_l3c:' to tackle both.',
     connector:'Resources for your business',
     bh_sub:’Start with what you need most’, bh_hint:’5 sections’,
+    ov1_t:'Dashboards',    ov1_sub:'Immediate diagnosis · Growth OS',
+    ov_lbl:'jfcarpio.com — Navigate',
     ov2_t:'Reports',       ov2_sub:'Benchmarks and sector analysis',
     ov3_t:'Workshops',     ov3_sub:'In-person and online training',
     ov4_t:'Blog',          ov4_sub:'History, ideas and economic context',
