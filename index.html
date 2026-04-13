@@ -137,7 +137,7 @@ button { border:none; background:none; font:inherit; }
 }
 .bar-name {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; font-weight:700; color:#FFFFFF;
+  font-size:.82rem; font-weight:700; color:#FFFFFF;
   letter-spacing:.16em; text-transform:uppercase;
 }
 /* â”€â”€ LANG SWITCH â”€â”€ */
@@ -173,7 +173,7 @@ button { border:none; background:none; font:inherit; }
 }
 .ham-lbl {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; font-weight:700; color:#FFFFFF;
+  font-size:.82rem; font-weight:700; color:#FFFFFF;
   letter-spacing:.18em; text-transform:uppercase;
 }
 .hl {
@@ -199,13 +199,13 @@ button { border:none; background:none; font:inherit; }
 }
 .ov-lbl {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; color:#FFFFFF; letter-spacing:.3em;
+  font-size:.82rem; color:#FFFFFF; letter-spacing:.3em;
   text-transform:uppercase; margin-bottom:28px; 
 }
 .ov-esc {
   position:absolute; bottom:32px; right:36px;
   font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; color:#FFFFFF; 
+  font-size:.82rem; color:#FFFFFF;
   letter-spacing:.22em; text-transform:uppercase;
   border:1px solid rgba(255,255,255,.18);
   padding:4px 9px; pointer-events:none;
@@ -241,8 +241,8 @@ button { border:none; background:none; font:inherit; }
 .ov-a:hover .ov-t { color:var(--c); }
 .ov-sub { font-family:'Space Mono','Courier New',monospace; font-size:11px; color:#FFFFFF;  letter-spacing:.08em; display:none; }
 @media(min-width:560px){ .ov-sub { display:block; } }
-.ov-arr { margin-left:auto; font-size:20px; color:#FFFFFF; opacity:.5; -webkit-transition:opacity .14s,-webkit-transform .18s; transition:opacity .14s,transform .18s; }
-.ov-a:hover .ov-arr { opacity:.9; color:var(--c); -webkit-transform:translate(5px,-4px); transform:translate(5px,-4px); }
+.ov-arr { margin-left:auto; font-size:20px; color:#FFFFFF; -webkit-transition:color .14s,-webkit-transform .18s; transition:color .14s,transform .18s; }
+.ov-a:hover .ov-arr { color:var(--c); -webkit-transform:translate(5px,-4px); transform:translate(5px,-4px); }
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    HERO — v1.1 line reveal
@@ -348,7 +348,7 @@ button { border:none; background:none; font:inherit; }
 }
 .bh-hint {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; color:#FFFFFF; letter-spacing:.14em;
+  font-size:.82rem; color:#FFFFFF; letter-spacing:.14em;
 }
 
 /* Grid */
@@ -376,7 +376,7 @@ button { border:none; background:none; font:inherit; }
   -webkit-transition:background .22s,opacity .5s,-webkit-transform .5s; transition:background .22s,opacity .5s,transform .5s;
 }
 .pan.vis { opacity:1; -webkit-transform:translateY(0); transform:translateY(0); }
-.pan:hover { background:rgba(255,255,255,.035); }
+.pan:hover { background:rgba(255,255,255,.035); box-shadow:inset 0 0 30px rgba(255,255,255,.02), 0 4px 24px rgba(0,0,0,.15); }
 
 /* Left color border */
 .pan::before {
@@ -443,10 +443,9 @@ button { border:none; background:none; font:inherit; }
 .pan:hover .pan-title { color:var(--pc); }
 .pan-desc {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:13px; color:#CCCCCC;
+  font-size:13px; color:#FFFFFF;
   letter-spacing:.04em; line-height:1.6;
 }
-.pan:hover .pan-desc { opacity:1; }
 .pan-bot {
   margin-top:16px;
   display:-webkit-box; display:-webkit-flex; display:flex;
@@ -462,11 +461,11 @@ button { border:none; background:none; font:inherit; }
   text-transform:uppercase; padding:3px 8px; border:1px solid;
 }
 .pan-arr {
-  font-size:17px; color:#FFFFFF; opacity:.5;
-  -webkit-transition:opacity .14s,-webkit-transform .18s;
-  transition:opacity .14s,transform .18s;
+  font-size:17px; color:#FFFFFF;
+  -webkit-transition:color .14s,-webkit-transform .18s;
+  transition:color .14s,transform .18s;
 }
-.pan:hover .pan-arr { opacity:.9; color:var(--pc); -webkit-transform:translate(4px,-4px); transform:translate(4px,-4px); }
+.pan:hover .pan-arr { color:var(--pc); -webkit-transform:translate(4px,-4px); transform:translate(4px,-4px); }
 
 /* v1.4 — content previews inside panels */
 .pan-items { margin-top:10px; border-top:1px solid rgba(255,255,255,.08); padding-top:10px; }
@@ -474,7 +473,7 @@ button { border:none; background:none; font:inherit; }
   display:block; padding:5px 0;
   border-bottom:1px solid rgba(255,255,255,.05);
   font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; color:#FFFFFF;
+  font-size:.82rem; color:#FFFFFF;
   letter-spacing:.06em; line-height:1.4;
   -webkit-transition:opacity .14s,padding-left .14s; transition:opacity .14s,padding-left .14s;
 }
@@ -509,6 +508,14 @@ button { border:none; background:none; font:inherit; }
 .proof-item + .proof-item {
   border-left:1px solid rgba(255,255,255,.1);
 }
+.proof-item {
+  opacity:0; -webkit-transform:translateY(10px); transform:translateY(10px);
+  -webkit-transition:opacity .5s ease, -webkit-transform .5s ease; transition:opacity .5s ease, transform .5s ease;
+}
+.proof-item:nth-child(1) { -webkit-transition-delay:0s; transition-delay:0s; }
+.proof-item:nth-child(2) { -webkit-transition-delay:.12s; transition-delay:.12s; }
+.proof-item:nth-child(3) { -webkit-transition-delay:.24s; transition-delay:.24s; }
+.proof-strip.in .proof-item { opacity:1; -webkit-transform:translateY(0); transform:translateY(0); }
 @media(max-width:600px){
   .proof-item { padding:14px 20px; border-left:none; border-top:1px solid rgba(255,255,255,.07); }
   .proof-item:first-child { border-top:none; }
@@ -577,8 +584,8 @@ button { border:none; background:none; font:inherit; }
   -webkit-transition:-webkit-filter .3s; transition:filter .3s;
 }
 .photo-frame:hover img {
-  -webkit-filter:grayscale(80%) contrast(1.05);
-  filter:grayscale(80%) contrast(1.05);
+  -webkit-filter:grayscale(30%) sepia(15%) contrast(1.05);
+  filter:grayscale(30%) sepia(15%) contrast(1.05);
 }
 /* Overlay scan effect */
 .photo-frame::after {
@@ -589,7 +596,7 @@ button { border:none; background:none; font:inherit; }
 }
 .photo-caption {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; color:#FFFFFF;
+  font-size:.82rem; color:#FFFFFF;
   letter-spacing:.16em; text-transform:uppercase;
   margin-top:10px; text-align:center;
 }
@@ -661,6 +668,10 @@ button { border:none; background:none; font:inherit; }
   width:8px; height:8px; border-radius:50%;
   background:#060E1D; border:1px solid rgba(255,255,255,.3);
 }
+.tl-row:first-child .tl-year::after {
+  background:#E8A020; border-color:#E8A020;
+  -webkit-animation:pulseDot 2.5s infinite; animation:pulseDot 2.5s infinite;
+}
 .tl-content { -webkit-box-flex:1; -webkit-flex:1; flex:1; padding-top:0; }
 .tl-title {
   font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
@@ -669,7 +680,7 @@ button { border:none; background:none; font:inherit; }
 }
 .tl-body {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:13px; color:#CCCCCC; letter-spacing:.03em; line-height:1.55;
+  font-size:13px; color:#FFFFFF; letter-spacing:.03em; line-height:1.55;
 }
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -731,7 +742,7 @@ button { border:none; background:none; font:inherit; }
 }
 .c-chip {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; color:#FFFFFF;
+  font-size:.82rem; color:#FFFFFF;
   border:1px solid rgba(255,255,255,.25);
   background:transparent; padding:7px 14px; cursor:pointer;
   letter-spacing:.1em;
@@ -795,13 +806,13 @@ button { border:none; background:none; font:inherit; }
 .c-btn-draft:hover { background:#F5C040; border-color:#F5C040; }
 .c-scarcity {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; color:#E8A020;
+  font-size:.82rem; color:#E8A020;
   letter-spacing:.1em; line-height:1.6;
   margin-bottom:10px;
 }
 .c-char-row {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; color:#FFFFFF;
+  font-size:.82rem; color:#FFFFFF;
   letter-spacing:.1em; text-align:right;
   padding:4px 2px 0;
   -webkit-transition:color .15s; transition:color .15s;
@@ -845,7 +856,7 @@ button { border:none; background:none; font:inherit; }
 }
 .nl-sub {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:13px; color:#CCCCCC; letter-spacing:.06em; line-height:1.5;
+  font-size:13px; color:#FFFFFF; letter-spacing:.06em; line-height:1.5;
 }
 .nl-form {
   display:-webkit-box; display:-webkit-flex; display:flex;
@@ -872,7 +883,7 @@ button { border:none; background:none; font:inherit; }
 .nl-submit:hover { background:#E8A020; border-color:#E8A020; }
 .nl-freq {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; color:#FFFFFF;
+  font-size:.82rem; color:#FFFFFF;
   letter-spacing:.1em; line-height:1.5; margin-top:6px;
 }
 .nl-ok { display:none; font-family:'Space Mono','Courier New',monospace; font-size:11px; color:#0A9060; letter-spacing:.14em; text-transform:uppercase; padding:11px 0; }
@@ -938,12 +949,12 @@ button { border:none; background:none; font:inherit; }
 }
 .foot-copy {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; color:#FFFFFF; letter-spacing:.12em;
+  font-size:.82rem; color:#FFFFFF; letter-spacing:.12em;
 }
 .foot-links { display:-webkit-box; display:-webkit-flex; display:flex; }
 .foot-links a {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; color:#FFFFFF;
+  font-size:.82rem; color:#FFFFFF;
   letter-spacing:.12em; padding:2px 14px;
   border-left:1px solid rgba(255,255,255,.1);
   -webkit-transition:opacity .14s; transition:opacity .14s;
@@ -1000,7 +1011,7 @@ button { border:none; background:none; font:inherit; }
 @keyframes         thankYou { 0%{transform:scale(1)} 50%{transform:scale(1.04)} 100%{transform:scale(1)} }
 .nl-freq {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:10px; color:#FFFFFF;
+  font-size:.82rem; color:#FFFFFF;
   letter-spacing:.1em; line-height:1.5; margin-top:6px;
 }
 .nl-ok { -webkit-animation:thankYou .4s ease; animation:thankYou .4s ease; }
@@ -1109,7 +1120,7 @@ button { border:none; background:none; font:inherit; }
   .hs-lbl {
     display:block;
     font-family:'Space Mono','Courier New',monospace;
-    font-size:11px; color:#CCCCCC;
+    font-size:11px; color:#FFFFFF;
     letter-spacing:.16em; text-transform:uppercase; margin-top:5px;
   }
   /* Hide standalone proof strip — stats now live inside the hero */
@@ -1229,8 +1240,8 @@ button { border:none; background:none; font:inherit; }
         <p class="pan-desc" data-t="p1_desc">Si tu negocio está en un momento crítico, empieza aquí.</p>
       </div>
       <div class="pan-items" bis_skin_checked="1">
-        <span class="pan-item"><span class="pan-item-tag" style="color:#0A9060;">FREE</span>Growth OS Vol. 2 — CROSS (6–24 meses)</span>
         <span class="pan-item"><span class="pan-item-tag" style="color:#E8A020;">$47</span>Growth OS Vol. 1 — GROW (0–6 meses)</span>
+        <span class="pan-item"><span class="pan-item-tag" style="color:#0A9060;">FREE</span>Growth OS Vol. 2 — CROSS (6–24 meses)</span>
         <span class="pan-item"><span class="pan-item-tag" style="color:#E8A020;">PRO</span>Growth OS Vol. 3 — SCALE/SELL (24M+)</span>
       </div>
       <div class="pan-bot" bis_skin_checked="1">
@@ -2549,7 +2560,7 @@ document.getElementById('tIn').addEventListener('keydown',function(e){
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    LOCAL QUERY FORMATION ENGINE — v1.130
    Zero API · Zero dependencies · Works offline.
-   Keyword scoring â†’ contextual WhatsApp message.
+   Keyword scoring > contextual WhatsApp message.
 â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 var QE={
   cats:{
@@ -2756,7 +2767,7 @@ var T={
     h1_l2:'es difícil. Un entorno hostil puede complicarlo aún más.',
     h1_l3a:'Aquí encontrarás ', h1_l3b:'herramientas', h1_l3c:' para enfrentar exitosamente ambas cosas.',
     connector:'Recursos para tu negocio',
-    bh_sub:'Empieza por lo que más necesitas', bh_hint:'5 secciones â†’',
+    bh_sub:’Empieza por lo que más necesitas’, bh_hint:’5 secciones’,
     ov_lbl:'jfcarpio.com — Navegar',
     ov1_t:'Dashboards',    ov1_sub:'Diagnóstico inmediato · Growth OS',
     ov2_t:'Reportes',      ov2_sub:'Benchmarks y análisis sectoriales',
@@ -2795,11 +2806,11 @@ var T={
     contact_eye:'Consulta directa · WhatsApp',
     contact_title:'Pregunta algo concreto',
     contact_sub:'Sobre tu negocio, el entorno, una métrica, una decisión.',
-    wa_btn:'Escribir ahora â†’',
-    wa_btn_s:'WhatsApp â†’',
+    wa_btn:’Escribir ahora’,
+    wa_btn_s:’WhatsApp’,
     wa_send:'WhatsApp',
     wa_draft:'Redactar pregunta',
-    wa_confirm:'âœ“ WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
+    wa_confirm:'WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
     c_char_of:'/300',
     nl_freq:'Frecuencia irregular — cuando hay algo que vale. Baja cuando quieras.',
     c_helper:'¿No sabes bien cómo empezar? Escribe lo que tengas — sobre tu negocio, el entorno económico, un workshop, un reporte, o simplemente para hablar. El segundo botón te ayuda a redactarlo.',
@@ -2831,7 +2842,7 @@ var T={
     h1_l2:'is hard. A hostile environment can make it much harder.',
     h1_l3a:'Here you\'ll find ', h1_l3b:'tools', h1_l3c:' to tackle both.',
     connector:'Resources for your business',
-    bh_sub:'Start with what you need most', bh_hint:'5 sections â†’',
+    bh_sub:’Start with what you need most’, bh_hint:’5 sections’,
     ov2_t:'Reports',       ov2_sub:'Benchmarks and sector analysis',
     ov3_t:'Workshops',     ov3_sub:'In-person and online training',
     ov4_t:'Blog',          ov4_sub:'History, ideas and economic context',
@@ -2866,11 +2877,11 @@ var T={
     contact_eye:'Direct consultation · WhatsApp',
     contact_title:'Ask something specific',
     contact_sub:'About your business, the environment, a metric, a decision.',
-    wa_btn:'Write now â†’',
-    wa_btn_s:'WhatsApp â†’',
+    wa_btn:’Write now’,
+    wa_btn_s:’WhatsApp’,
     wa_send:'WhatsApp',
     wa_draft:'Redactar pregunta',
-    wa_confirm:'âœ“ WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
+    wa_confirm:'WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
     c_char_of:'/300',
     nl_freq:'Frecuencia irregular — cuando hay algo que vale. Baja cuando quieras.',
     c_helper:'Not sure how to start? Write whatever you have — about your business, the economic environment, a workshop, a report, or just to talk. The second button helps you draft it.',
