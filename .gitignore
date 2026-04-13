@@ -10,6 +10,7 @@ index_20*.html
 *_20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]_*.html
 *BACKUP*.html
 *.BACKUP*.html
+*.BACKUP*html
 
 # Local tooling
 entities.json
