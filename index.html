@@ -508,14 +508,14 @@ button { border:none; background:none; font:inherit; }
 .proof-item + .proof-item {
   border-left:1px solid rgba(255,255,255,.1);
 }
-.proof-item {
+.js-rv .proof-item {
   opacity:0; -webkit-transform:translateY(10px); transform:translateY(10px);
   -webkit-transition:opacity .5s ease, -webkit-transform .5s ease; transition:opacity .5s ease, transform .5s ease;
 }
 .proof-item:nth-child(1) { -webkit-transition-delay:0s; transition-delay:0s; }
 .proof-item:nth-child(2) { -webkit-transition-delay:.12s; transition-delay:.12s; }
 .proof-item:nth-child(3) { -webkit-transition-delay:.24s; transition-delay:.24s; }
-.proof-strip.in .proof-item { opacity:1; -webkit-transform:translateY(0); transform:translateY(0); }
+.js-rv .proof-strip.in .proof-item { opacity:1; -webkit-transform:translateY(0); transform:translateY(0); }
 @media(max-width:600px){
   .proof-item { padding:14px 20px; border-left:none; border-top:1px solid rgba(255,255,255,.07); }
   .proof-item:first-child { border-top:none; }
@@ -650,11 +650,10 @@ button { border:none; background:none; font:inherit; }
   display:-webkit-box; display:-webkit-flex; display:flex;
   gap:32px; padding:16px 0;
   border-bottom:1px solid rgba(255,255,255,.05);
-  position:relative; opacity:0;
-  -webkit-transform:translateX(-10px); transform:translateX(-10px);
-  -webkit-transition:opacity .5s,-webkit-transform .5s; transition:opacity .5s,transform .5s;
+  position:relative;
 }
-.tl-row.vis { opacity:1; -webkit-transform:translateX(0); transform:translateX(0); }
+.js-rv .tl-row { opacity:0; -webkit-transform:translateX(-10px); transform:translateX(-10px); -webkit-transition:opacity .5s,-webkit-transform .5s; transition:opacity .5s,transform .5s; }
+.js-rv .tl-row.vis { opacity:1; -webkit-transform:translateX(0); transform:translateX(0); }
 .tl-row:last-child { border-bottom:none; }
 .tl-year {
   font-family:'Space Mono','Courier New',monospace;
@@ -892,6 +891,16 @@ button { border:none; background:none; font:inherit; }
    FOOTER
 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 /* ── JFC BAND — parallax editorial statement ── */
+/* js-rv progressive reveal */
+.js-rv .reveal {
+  opacity:0;
+  -webkit-transform:translateY(12px); transform:translateY(12px);
+  -webkit-transition:opacity .55s ease,-webkit-transform .55s ease; transition:opacity .55s ease,transform .55s ease;
+}
+.js-rv .reveal.in {
+  opacity:1;
+  -webkit-transform:translateY(0); transform:translateY(0);
+}
 .jfc-band {
   min-height:360px;
   position:relative; overflow:hidden;
@@ -1356,7 +1365,7 @@ button { border:none; background:none; font:inherit; }
 </div>
 
 <!-- v1.21 SOCIAL PROOF STRIP -->
-<div class="proof-strip reveal" style="opacity: 0; transform: translateY(12px); transition: opacity 0.55s, transform 0.55s;" bis_skin_checked="1">
+<div class="proof-strip reveal" bis_skin_checked="1">
   <div class="proof-item" bis_skin_checked="1">
     <span class="proof-num">33<span class="proof-plus">+</span></span>
     <span class="proof-lbl" data-t="proof1">clientes directos</span>
@@ -1381,7 +1390,7 @@ button { border:none; background:none; font:inherit; }
 
 <!-- COPY + PHOTO — v1.3 -->
 <div class="copy-section" bis_skin_checked="1">
-  <div class="copy-text reveal" style="opacity: 0; transform: translateY(12px); transition: opacity 0.55s, transform 0.55s;" bis_skin_checked="1">
+  <div class="copy-text reveal" bis_skin_checked="1">
     <p class="copy-p" data-t="cp1">
       El empresario privado latinoamericano enfrenta dos batallas simultáneas: construir un negocio que funcione, y operar en un entorno que con frecuencia no le favorece — regulaciones que asfixian, impuestos que desincentivan, señales distorsionadas por la intervención del Estado.
       <strong data-t="cp1b">El optimismo racional no ignora eso. Lo analiza, lo mide y encuentra el camino de todas formas.</strong>
@@ -1397,7 +1406,7 @@ button { border:none; background:none; font:inherit; }
   </div>
 
   <!-- v1.3 — Photo placeholder -->
-  <div class="copy-photo reveal" style="opacity: 0; transform: translateY(12px); transition: opacity 0.55s, transform 0.55s;" bis_skin_checked="1">
+  <div class="copy-photo reveal" bis_skin_checked="1">
     <div class="photo-frame" bis_skin_checked="1">
       <img src="./fotojfc.png" alt="Juan Fernando Carpio — Autor, Quito Ecuador" width="220" height="280" loading="lazy" onerror="this.parentNode.style.minHeight=&#39;280px&#39;;this.style.display=&#39;none&#39;;">
     </div>
@@ -1456,7 +1465,7 @@ button { border:none; background:none; font:inherit; }
     <span class="section-hd-lbl" data-t="term_lbl">Consulta directa</span>
     <span class="section-hd-title"><span data-t="term_title_a">¿Tienes una </span><span style="color:#E86040" data-t="term_title_b">pregunta</span><span data-t="term_title_c">?</span></span>
   </div>
-  <div class="contact-card reveal" style="opacity: 0; transform: translateY(12px); transition: opacity 0.55s, transform 0.55s;" bis_skin_checked="1">
+  <div class="contact-card reveal" bis_skin_checked="1">
 
     <!-- Body: chips + textarea + two action buttons -->
     <div class="contact-head-simple" bis_skin_checked="1">
@@ -1500,7 +1509,7 @@ button { border:none; background:none; font:inherit; }
 </div>
 
 <!-- LISTA DE CORREOS — Gumroad -->
-<div class="nl-section reveal" style="opacity: 0; transform: translateY(12px); transition: opacity 0.55s, transform 0.55s;" bis_skin_checked="1">
+<div class="nl-section reveal" bis_skin_checked="1">
   <div class="nl-copy" bis_skin_checked="1">
     <h3 class="nl-title" data-t="nl_title">Lista de correos</h3>
     <p class="nl-sub" data-t="nl_sub">Ideas, herramientas y análisis de entorno para negocios.<br>Sin spam. Sólo lo que quieres leer.</p>
@@ -2362,6 +2371,7 @@ Range input: thumbs
 .app-container[data-v-c823ca38]{width:100vw;height:100vh;position:fixed;top:0px;left:0px;z-index:2147483647;display:flex;align-items:center;justify-content:center;font-family:'Didact Gothic', sans-serif}.fade-enter-active[data-v-c823ca38],.fade-leave-active[data-v-c823ca38]{transition:all 0.2s ease-out}.fade-enter-active[data-v-c823ca38] .app-palette-modal,.fade-leave-active[data-v-c823ca38] .app-palette-modal{transition:all 0.2s ease-out}.fade-enter[data-v-c823ca38] .app-palette-modal,.fade-leave-to[data-v-c823ca38] .app-palette-modal{transition:all 0.2s ease-out;transform:translateY(-20px);opacity:0}
 
 </style></div></template></div><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.documentElement.className+=' js-rv';
 /* â”€â”€ MENU â”€â”€ */
 function toggleMenu(){
   var ov=document.getElementById('ov'),h=document.getElementById('ham');
@@ -2444,19 +2454,6 @@ function countUp(el,target,dur){
   }
   setTimeout(check,350);
 
-  /* v1.13 — reveal inline styles */
-  var revEls=document.querySelectorAll?document.querySelectorAll('.reveal'):[];
-  for(var r=0;r<revEls.length;r++){
-    revEls[r].style.opacity='0';
-    revEls[r].style.webkitTransform='translateY(12px)';
-    revEls[r].style.transform='translateY(12px)';
-    revEls[r].style.webkitTransition='opacity .55s ease,-webkit-transform .55s ease';
-    revEls[r].style.transition='opacity .55s ease,transform .55s ease';
-  }
-  /* Override when .in added */
-  var style=document.createElement('style');
-  style.textContent='.reveal.in{opacity:1!important;-webkit-transform:translateY(0)!important;transform:translateY(0)!important}';
-  document.head.appendChild(style);
 })();
 
 /* â”€â”€ v1.7 TERMINAL AI â”€â”€ */
