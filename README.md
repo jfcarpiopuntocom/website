@@ -1,2 +1,0 @@
-# website
-www.jfcarpio.com
