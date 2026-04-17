@@ -407,6 +407,12 @@ button { border:none; background:none; font:inherit; }
   font-family:'Space Mono','Courier New',monospace;
   font-size:.82rem; font-weight:700; color:#E86040;
   letter-spacing:.22em; text-transform:uppercase;
+  display:-webkit-inline-box; display:-webkit-inline-flex; display:inline-flex;
+  -webkit-box-align:center; -webkit-align-items:center; align-items:center; gap:10px;
+}
+.bh-sub::before {
+  content:''; display:inline-block;
+  width:24px; height:2px; background:#E86040; -webkit-flex-shrink:0; flex-shrink:0;
 }
 .bh-hint {
   font-family:'Space Mono','Courier New',monospace;
@@ -584,7 +590,7 @@ button { border:none; background:none; font:inherit; }
 }
 .proof-num {
   font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
-  font-size:36px; font-weight:900; color:#FFFFFF;
+  font-size:40px; font-weight:900; color:#E8A020;
   letter-spacing:.02em; line-height:1;
 }
 .proof-plus {
@@ -690,6 +696,12 @@ button { border:none; background:none; font:inherit; }
   font-family:'Space Mono','Courier New',monospace;
   font-size:.82rem; font-weight:700; color:#E86040;
   letter-spacing:.22em; text-transform:uppercase;
+  display:-webkit-inline-box; display:-webkit-inline-flex; display:inline-flex;
+  -webkit-box-align:center; -webkit-align-items:center; align-items:center; gap:10px;
+}
+.section-hd-lbl::before {
+  content:''; display:inline-block;
+  width:24px; height:2px; background:#E86040; -webkit-flex-shrink:0; flex-shrink:0;
 }
 .section-hd-title {
   font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
@@ -785,6 +797,12 @@ button { border:none; background:none; font:inherit; }
   font-family:'Space Mono','Courier New',monospace;
   font-size:.82rem; font-weight:700; color:#E8A020;
   letter-spacing:.22em; text-transform:uppercase; margin-bottom:8px;
+  display:-webkit-inline-box; display:-webkit-inline-flex; display:inline-flex;
+  -webkit-box-align:center; -webkit-align-items:center; align-items:center; gap:10px;
+}
+.contact-eyebrow::before {
+  content:''; display:inline-block;
+  width:24px; height:2px; background:#E8A020; -webkit-flex-shrink:0; flex-shrink:0;
 }
 .contact-title {
   font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
@@ -902,6 +920,7 @@ button { border:none; background:none; font:inherit; }
 .nl-section {
   margin:0 7% 72px;
   border:1px solid rgba(255,255,255,.1);
+  border-left:3px solid #E8A020;
   background:rgba(255,255,255,.02);
   padding:36px 40px;
   display:-webkit-box; display:-webkit-flex; display:flex;
@@ -1131,7 +1150,7 @@ button { border:none; background:none; font:inherit; }
 }
 .proof-num {
   font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
-  font-size:36px; font-weight:900; color:#FFFFFF;
+  font-size:40px; font-weight:900; color:#E8A020;
   letter-spacing:.02em; line-height:1;
 }
 .proof-plus {
@@ -1242,7 +1261,7 @@ button { border:none; background:none; font:inherit; }
   <p class="ov-lbl" data-t="ov_lbl">jfcarpio.com — Navegar</p>
   <span class="ov-esc">ESC</span>
   <nav class="ov-nav">
-    <a href="https://jfcarpiopuntocom.github.io/GrowthOS/index.html" target="_blank" rel="noopener" class="ov-a" onclick="closeMenu()" style="--c:#0A9060;">
+    <a href="/visorgerencial/" target="_blank" rel="noopener" class="ov-a" onclick="closeMenu()" style="--c:#0A9060;">
       <span class="ov-n">01</span><span class="ov-t" data-t="ov1_t">Dashboards</span>
       <span class="ov-sub" data-t="ov1_sub">Diagnóstico inmediato · Growth OS</span><span class="ov-active-dot"></span><span class="ov-arr">↗</span>
     </a>
@@ -1310,7 +1329,7 @@ button { border:none; background:none; font:inherit; }
   <div class="bento" bis_skin_checked="1">
 
     <!-- 01 DASHBOARDS — v1.4 content items, v1.2 dot-grid texture -->
-    <a href="https://jfcarpiopuntocom.github.io/GrowthOS/index.html" id="dashboards" target="_blank" rel="noopener" class="pan has-cover pan-a vis" style="--pc: #0A9060; --ptex: radial-gradient(rgba(10,144,96,.06) 1px,transparent 1px); background-size: 18px 18px; transition-delay: 0s; transform: perspective(600px) rotateY(-1.83534deg) rotateX(-1.91179deg) scale(1.01);">
+    <a href="/visorgerencial/" id="dashboards" target="_blank" rel="noopener" class="pan has-cover pan-a vis" style="--pc: #0A9060; --ptex: radial-gradient(rgba(10,144,96,.06) 1px,transparent 1px); background-size: 18px 18px; transition-delay: 0s; transform: perspective(600px) rotateY(-1.83534deg) rotateX(-1.91179deg) scale(1.01);">
       <img class="pan-cover" src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1200" referrerpolicy="no-referrer" alt="Business data charts" loading="lazy">
       <div class="pan-gl" bis_skin_checked="1">D</div>
       <div bis_skin_checked="1">
@@ -1586,7 +1605,7 @@ button { border:none; background:none; font:inherit; }
 <footer class="foot">
   <a href="https://jfcarpio.com/" class="foot-copy" data-t="foot_copy" style="text-decoration:none;-webkit-transition:color .14s;transition:color .14s;" onmouseover="this.style.color=&#39;#E8A020&#39;" onmouseout="this.style.color=&#39;&#39;">© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador</a>
   <nav class="foot-links">
-    <a href="https://jfcarpiopuntocom.github.io/GrowthOS/index.html" target="_blank" rel="noopener"><span class="foot-dot" style="background:#0A9060;"></span>Dashboards</a>
+    <a href="/visorgerencial/" target="_blank" rel="noopener"><span class="foot-dot" style="background:#0A9060;"></span>Dashboards</a>
     <a href="https://jfcarpio.com/#reportes"><span class="foot-dot" style="background:#3B7EE8;"></span>Reportes</a>
     <a href="#" onclick="openWAWorkshops(event)"><span class="foot-dot" style="background:#00B0C8;"></span>Workshops</a>
     <a href="blog.html"><span class="foot-dot" style="background:#E8A020;"></span>Blog</a>
