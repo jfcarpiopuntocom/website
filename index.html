@@ -319,6 +319,10 @@ button { border:none; background:none; font:inherit; }
   background-size:cover;
   background-position:center 35%;
 }
+.hero::before {
+  content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
 .blobs { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
 .bl {
   position:absolute; border-radius:50%;
@@ -1525,12 +1529,18 @@ button { border:none; background:none; font:inherit; }
         <div class="tl-body" data-t="tl1_b" bis_skin_checked="1">Del primer MRR al exit, tableros de control para evitar la quiebra temprana de los negocios. Herramientas que diagnostican, no que decoran. La síntesis práctica de dos décadas de economía aplicada a la empresa.</div>
       </div>
     </div>
+    <div class="tl-photo reveal" style="margin:32px 0;border-radius:6px;overflow:hidden;max-width:600px;">
+      <img src="https://images.pexels.com/photos/3862612/pexels-photo-3862612.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Modern workspace architecture" loading="lazy" style="width:100%;height:280px;object-fit:cover;">
+    </div>
     <div class="tl-row" bis_skin_checked="1">
       <span class="tl-year">2018</span>
       <div class="tl-content" bis_skin_checked="1">
         <div class="tl-title" data-t="tl2_t" bis_skin_checked="1">Consultoría independiente — porque las ideas deben sobrevivir el contacto con la realidad</div>
         <div class="tl-body" data-t="tl2_b" bis_skin_checked="1">33+ clientes directos. ROIs del 10–40% en mercados emergentes. Keynote en Forum da Liberdade, Porto Alegre — el mayor evento de libertad económica de América del Sur, 3.000 asistentes. Si defiendes una idea, tienes que poder aplicarla.</div>
       </div>
+    </div>
+    <div class="tl-photo reveal" style="margin:32px 0;border-radius:6px;overflow:hidden;max-width:600px;">
+      <img src="https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nature landscape valley" loading="lazy" style="width:100%;height:280px;object-fit:cover;">
     </div>
     <div class="tl-row" bis_skin_checked="1">
       <span class="tl-year">2006</span>
@@ -1539,6 +1549,9 @@ button { border:none; background:none; font:inherit; }
         <div class="tl-body" data-t="tl3_b" bis_skin_checked="1">4.800+ estudiantes. Fundó el primer subdepartamento de Economía Austriaca e Institucional del Ecuador. Diseñó una síntesis propia — Economía con instituciones y empresas — para Principios de Economía (ECN100, USFQ). Asesoró y colaboró en la creación del Instituto de Economía de la USFQ y su revista académica Polemika y sus eventos.</div>
       </div>
     </div>
+    <div class="tl-photo reveal" style="margin:32px 0;border-radius:6px;overflow:hidden;max-width:600px;">
+      <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Library books knowledge" loading="lazy" style="width:100%;height:280px;object-fit:cover;">
+    </div>
     <div class="tl-row" bis_skin_checked="1">
       <span class="tl-year">Mises</span>
       <div class="tl-content" bis_skin_checked="1">
@@ -1546,12 +1559,18 @@ button { border:none; background:none; font:inherit; }
         <div class="tl-body" data-t="tl4_b" bis_skin_checked="1">Autor de "10 Lecciones de Economía". Traducción y difusión de economía de las escuelas continentales europeas (especialmente la austriaca) en español. Columnista en prensa ecuatoriana. El crecimiento económico como causa — no como resultado colateral de otras agendas.</div>
       </div>
     </div>
+    <div class="tl-photo reveal" style="margin:32px 0;border-radius:6px;overflow:hidden;max-width:600px;">
+      <img src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Alpine mountains Switzerland architecture" loading="lazy" style="width:100%;height:280px;object-fit:cover;">
+    </div>
     <div class="tl-row" bis_skin_checked="1">
       <span class="tl-year">UFM</span>
       <div class="tl-content" bis_skin_checked="1">
         <div class="tl-title" data-t="tl5_t" bis_skin_checked="1">La formación: la teoría sólida al servicio de causas reales</div>
         <div class="tl-body" data-t="tl5_b" bis_skin_checked="1">M.E.E. en UFM Guatemala / Boston University. PhD en progreso, SMC University, Zug, Suiza. Tesis: plusvalía de Say, círculos concéntricos del mercado, barreras naturales vs. artificiales. La teoría austriaca del capital como herramienta de optimismo racional — no como adorno académico.</div>
       </div>
+    </div>
+    <div class="tl-photo reveal" style="margin:32px 0;border-radius:6px;overflow:hidden;max-width:600px;">
+      <img src="https://images.pexels.com/photos/4974914/pexels-photo-4974914.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mountain landscape learning growth" loading="lazy" style="width:100%;height:280px;object-fit:cover;">
     </div>
   </div>
 </div>
@@ -2503,6 +2522,60 @@ Range input: thumbs
 ================================================================================
 */
 document.documentElement.className+=' js-rv';
+/* â”€â”€ PARTICLE CONSTELLATION CANVAS â”€â”€ */
+(function(){
+  var canvas=document.getElementById('heroCanvas');
+  if(!canvas) return;
+  var ctx=canvas.getContext('2d');
+  var W, H, particles=[];
+  var DPR=Math.min(window.devicePixelRatio||1, 2);
+  function resize(){
+    var hero=document.querySelector('.hero');
+    W=hero.offsetWidth; H=hero.offsetHeight;
+    canvas.width=W*DPR; canvas.height=H*DPR;
+    canvas.style.width=W+'px'; canvas.style.height=H+'px';
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+  }
+  function make(){
+    return {
+      x: Math.random()*W, y: Math.random()*H,
+      r: Math.random()*1.2+.3,
+      vx: (Math.random()-.5)*.22, vy: (Math.random()-.5)*.22,
+      alpha: Math.random()*.5+.15
+    };
+  }
+  function init(){ resize(); particles=Array.from({length:90}, make); }
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    particles.forEach(function(p){
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+      ctx.fillStyle='rgba(245,184,0,'+p.alpha+')';
+      ctx.fill();
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=W; if(p.x>W)p.x=0;
+      if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+    });
+    for(var i=0;i<particles.length;i++){
+      for(var j=i+1;j<particles.length;j++){
+        var dx=particles[i].x-particles[j].x;
+        var dy=particles[i].y-particles[j].y;
+        var dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<110){
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle='rgba(245,184,0,'+(0.07*(1-dist/110))+')';
+          ctx.lineWidth=0.6; ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize', resize);
+  init();
+  draw();
+})();
 /* â”€â”€ MENU â”€â”€ */
 function toggleMenu(){
   var ov=document.getElementById('ov'),h=document.getElementById('ham');
