@@ -14,7 +14,8 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23060E1D'/><text y='22' x='4' font-family='Arial' font-weight='900' font-size='16' fill='%231D5BBF'>JFC</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,900;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,900;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,900;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"></noscript>
 
 <style>
 /* ══ RESET & BASE ══ */
@@ -198,7 +199,8 @@ img{max-width:100%;display:block;}
 <body>
 
 <!-- TOPBAR -->
-<header class="bar">
+<a href="#main-content" class="skip-link">Ir al contenido</a>
+<header class="bar" role="banner">
   <a href="index.html" class="bar-brand">
     <img src="https://jfcarpiopuntocom.github.io/website/fotojfc.png"
          alt="J.F. Carpio"
@@ -242,6 +244,7 @@ img{max-width:100%;display:block;}
 </div>
 
 <div class="page-body">
+<main id="main-content" role="main">
 
 <!-- ══ BASTIAT QUOTE HERO ══ -->
 <section class="quote-hero">
@@ -397,9 +400,10 @@ img{max-width:100%;display:block;}
 </div>
 
 <!-- ══ FOOTER ══ -->
-<footer class="foot">
+</main><!-- /main-content -->
+<footer class="foot" role="contentinfo">
   <a href="index.html" class="foot-copy" style="text-decoration:none;-webkit-transition:color .14s;transition:color .14s;" onmouseover="this.style.color='#E8A020'" onmouseout="this.style.color=''">© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador</a>
-  <nav class="foot-links">
+  <nav class="foot-links" aria-label="Navegacion secundaria">
     <a href="https://jfcarpiopuntocom.github.io/GrowthOS/index.html" target="_blank" rel="noopener"><span class="foot-dot" style="background:#0A9060;"></span>Dashboards</a>
     <a href="index.html#reportes"><span class="foot-dot" style="background:#3B7EE8;"></span>Reportes</a>
     <a href="index.html#workshops"><span class="foot-dot" style="background:#00B0C8;"></span>Workshops</a>
