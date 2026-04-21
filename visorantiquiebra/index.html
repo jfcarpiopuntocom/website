@@ -323,7 +323,7 @@ body{
 @keyframes fadeUp {from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 @keyframes blink  {0%,100%{opacity:1}50%{opacity:.25}}
 @keyframes pring  {0%{transform:scale(1);opacity:.5}100%{transform:scale(2.4);opacity:0}}
-8%{opacity:.25}92%{opacity:.25}100%{transform:translateY(1100%);opacity:0}}
+@keyframes scan   {0%{transform:translateY(-100%);opacity:0}8%{opacity:.25}92%{opacity:.25}100%{transform:translateY(1100%);opacity:0}}
 @keyframes fillbar{from{width:0}to{width:var(--w)}}
 @keyframes countup{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:scale(1)}}
 
@@ -1911,7 +1911,7 @@ main{max-width:1440px;margin:0 auto;padding:16px 20px 80px}
   border-bottom:1.5px solid #E8A020; border-right:1.5px solid #E8A020;
 }
 
-
+/* v1.2 Global grid + scanline */
 body { position:relative; }
 body::before {
   content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
@@ -1932,10 +1932,26 @@ body::after {
 }
 
 /* v1.3 HUD status bar (fixed top-left) */
-
-
- 50%{opacity:1} }
+.jfc-hud-status {
+  position:fixed; top:10px; left:14px; z-index:99998;
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:11px; font-weight:700; letter-spacing:.12em;
+  color:#E8A020; background:rgba(6,14,29,.88);
+  border:1px solid rgba(232,160,32,.32);
+  padding:5px 10px; display:flex; align-items:center; gap:8px;
+  text-transform:uppercase;
+  -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+}
+.jfc-hud-status .jfc-hud-dot {
+  width:6px; height:6px; border-radius:50%;
+  background:#0A9060; flex-shrink:0;
+  animation: jfcHudPulse 2s infinite;
+}
+@keyframes jfcHudPulse { 0%,100%{opacity:.5} 50%{opacity:1} }
 @media (max-width:700px) {
+  .jfc-hud-status { font-size:10px; padding:4px 8px; gap:6px; top:6px; left:6px; }
+  .jfc-hud-status .jfc-hud-extra,
+  .jfc-hud-status .jfc-hud-sep-extra { display:none; }
 }
 
 /* v1.3 Section coordinates (before each sec## id) */
