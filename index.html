@@ -39,9 +39,10 @@
 <!-- Favicon SVG / v1.5 -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 32 32&#39;&gt;&lt;rect width=&#39;32&#39; height=&#39;32&#39; fill=&#39;%23060E1D&#39;/&gt;&lt;text y=&#39;22&#39; x=&#39;4&#39; font-family=&#39;Arial&#39; font-weight=&#39;900&#39; font-size=&#39;16&#39; fill=&#39;%231D5BBF&#39;&gt;JFC&lt;/text&gt;&lt;/svg&gt;">
 
-<!-- Fonts -->
+<!-- Fonts — preconnect + Lora woff2 preload (render-critical body font) -->
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="preload" as="font" type="font/woff2" crossorigin="" href="https://fonts.gstatic.com/s/lora/v35/0QI6MX1D_JOxE7fSZGA.woff2">
 <link rel="preconnect" href="https://api.anthropic.com/">
 <link rel="dns-prefetch" href="https://api.anthropic.com/">
 <!-- Schema / v1.5 -->
@@ -75,7 +76,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.134 · Last major refactor: 2026-04-24 · Author: JFC + Claude Sonnet 4.6
+  v1.135 · Last major refactor: 2026-04-24 · Author: JFC + Claude Sonnet 4.6
 ================================================================================
 
   ABSOLUTE RULES -- DO NOT CHANGE WITHOUT JFC EXPLICIT APPROVAL:
