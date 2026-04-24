@@ -30,7 +30,8 @@
 <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 
 <!-- LCP image preload -->
-<link rel="preload" as="image" href="network-pacific.jpg">
+<link rel="preload" as="image" href="network-pacific.webp" type="image/webp">
+<link rel="preload" as="image" href="network-pacific.jpg" media="not all and (min-resolution:0dpi)">
 <!-- Font preload -->
 <link rel="stylesheet" href="./Juan Fernando Carpio — Economía con instituciones y empresas_files/css2" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet"></noscript>
@@ -74,7 +75,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.130 · Last major refactor: 2026-04-13 · Author: JFC + Claude Sonnet 4.6
+  v1.132 · Last major refactor: 2026-04-24 · Author: JFC + Claude Sonnet 4.6
 ================================================================================
 
   ABSOLUTE RULES -- DO NOT CHANGE WITHOUT JFC EXPLICIT APPROVAL:
@@ -1279,7 +1280,7 @@ button { border:none; background:none; font:inherit; }
 <a href="#main-content" class="skip-link">Ir al contenido</a>
 <header class="bar" role="banner">
   <a href="https://jfcarpio.com/" class="bar-brand">
-    <img src="./fotojfc.png" alt="J.F. Carpio" class="jfc-mark" style="-webkit-filter:grayscale(100%) contrast(1.1);filter:grayscale(100%) contrast(1.1);border-radius:50%;object-fit:cover;object-position:center top;" width="28" height="28">
+    <picture><source srcset="./fotojfc.webp" type="image/webp"><img src="./fotojfc.png" alt="J.F. Carpio" class="jfc-mark" style="-webkit-filter:grayscale(100%) contrast(1.1);filter:grayscale(100%) contrast(1.1);border-radius:50%;object-fit:cover;object-position:center top;" width="28" height="28"></picture>
     <span class="bar-name">jfcarpio.com</span>
   </a>
   <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Menú">
@@ -1531,7 +1532,7 @@ button { border:none; background:none; font:inherit; }
   <!-- v1.3 — Photo placeholder -->
   <div class="copy-photo reveal in" bis_skin_checked="1">
     <div class="photo-frame" bis_skin_checked="1">
-      <img src="./fotojfc.png" alt="Juan Fernando Carpio — Autor, Quito Ecuador" width="220" height="280" loading="lazy" onerror="this.parentNode.style.minHeight=&#39;280px&#39;;this.style.display=&#39;none&#39;;">
+      <picture><source srcset="./fotojfc.webp" type="image/webp"><img src="./fotojfc.png" alt="Juan Fernando Carpio — Autor, Quito Ecuador" width="220" height="280" loading="lazy" onerror="this.parentNode.style.minHeight=&#39;280px&#39;;this.style.display=&#39;none&#39;;"></picture>
     </div>
     <p class="photo-caption">J.F. Carpio · @jfcarpio</p>
   </div>
