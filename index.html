@@ -75,7 +75,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.133 · Last major refactor: 2026-04-24 · Author: JFC + Claude Sonnet 4.6
+  v1.134 · Last major refactor: 2026-04-24 · Author: JFC + Claude Sonnet 4.6
 ================================================================================
 
   ABSOLUTE RULES -- DO NOT CHANGE WITHOUT JFC EXPLICIT APPROVAL:
@@ -1283,7 +1283,7 @@ button { border:none; background:none; font:inherit; }
     <picture><source srcset="./fotojfc.webp" type="image/webp"><img src="./fotojfc.png" alt="J.F. Carpio" class="jfc-mark" style="-webkit-filter:grayscale(100%) contrast(1.1);filter:grayscale(100%) contrast(1.1);border-radius:50%;object-fit:cover;object-position:center top;" width="28" height="28"></picture>
     <span class="bar-name">jfcarpio.com</span>
   </a>
-  <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Menú">
+  <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Menú" aria-expanded="false" aria-controls="overlay-menu">
     <span class="ham-lines"><span class="hl"></span><span class="hl"></span><span class="hl"></span></span>
     <span class="ham-lbl" data-t="ham_lbl">MENÚ</span>
   </button>
@@ -1298,7 +1298,7 @@ button { border:none; background:none; font:inherit; }
 </header>
 
 <!-- OVERLAY MENU -->
-<div class="ov" id="ov" bis_skin_checked="1">
+<div class="ov" id="overlay-menu" bis_skin_checked="1" role="dialog" aria-modal="true" aria-label="Menú de navegación">
   <p class="ov-lbl" data-t="ov_lbl">jfcarpio.com — Navegar</p>
   <span class="ov-esc">ESC</span>
   <nav class="ov-nav" aria-label="Menu principal">
@@ -1616,11 +1616,11 @@ button { border:none; background:none; font:inherit; }
       <div class="c-char-row" bis_skin_checked="1"><span id="cChar">0</span><span data-t="c_char_of">/300</span></div>
 
       <div class="c-two-btns" bis_skin_checked="1">
-        <button class="c-btn-wa c-btn-direct" onclick="openWA()" data-t="wa_send">
+        <button class="c-btn-wa c-btn-direct" onclick="openWA()" data-t="wa_send" aria-label="Enviar mensaje por WhatsApp">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.112 1.523 5.847L.057 23.886c-.083.35.22.666.571.583l6.214-1.432A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.805 9.805 0 01-5.045-1.393l-.361-.215-3.741.862.938-3.634-.236-.374A9.789 9.789 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"></path></svg>
           <span data-t="wa_send">WhatsApp</span>
         </button>
-        <button class="c-btn-draft" onclick="draftAndSend()" id="draftBtn" data-t="wa_draft">
+        <button class="c-btn-draft" onclick="draftAndSend()" id="draftBtn" data-t="wa_draft" aria-label="Redactar pregunta con IA">
           <span id="draftSpinner" style="display:none;width:10px;height:10px;border:1.5px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;-webkit-animation:spin .6s linear infinite;animation:spin .6s linear infinite;"></span>
           <span data-t="wa_draft" id="draftLabel">Redactar pregunta</span>
         </button>
@@ -2588,18 +2588,18 @@ document.documentElement.className+=' js-rv';
 })();
 /* â”€â”€ MENU â”€â”€ */
 function toggleMenu(){
-  var ov=document.getElementById('ov'),h=document.getElementById('ham');
+  var ov=document.getElementById('overlay-menu'),h=document.getElementById('ham');
   var open=ov.className.indexOf('open')!==-1;
-  if(open){ov.className='ov';h.className='ham';document.body.style.overflow='';}
+  if(open){ov.className='ov';h.className='ham';h.setAttribute('aria-expanded','false');document.body.style.overflow='';}
   else{
-    ov.className='ov open';h.className='ham open';document.body.style.overflow='hidden';
+    ov.className='ov open';h.className='ham open';h.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';
     var items=ov.querySelectorAll('.ov-a');
     for(var i=0;i<items.length;i++) items[i].className='ov-a in';
   }
 }
 function closeMenu(){
-  document.getElementById('ov').className='ov';
-  document.getElementById('ham').className='ham';
+  document.getElementById('overlay-menu').className='ov';
+  var h=document.getElementById('ham');h.className='ham';h.setAttribute('aria-expanded','false');
   document.body.style.overflow='';
 }
 document.addEventListener('keydown',function(e){
