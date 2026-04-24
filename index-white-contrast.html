@@ -5,7 +5,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Juan Fernando Carpio — Economía con instituciones y empresas</title>
-<meta name="description" content="Investigador económico y empresarial. Defensor del crecimiento económico y la empresa privada latinoamericana. Reportes, dashboards y talleres desde el optimismo racional.">
+<meta name="description" content="Análisis de entorno económico para empresas de la Cuenca del Pacífico — Ecuador, Colombia, Perú, Chile. Reportes, dashboards y talleres con J.F. Carpio, economista empresarial.">
 <meta name="author" content="Juan Fernando Carpio">
 <meta name="theme-color" content="#FFFFFF">
 
@@ -74,7 +74,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.136 (WHITE B) · Last major refactor: 2026-04-24 · Author: JFC + Claude Opus 4.7
+  v1.137 (WHITE C) · Last major refactor: 2026-04-24 · Author: JFC + Claude Sonnet 4.6
   White theme redesign — removed all dark image backgrounds and gradients,
   editorial typography-driven layout, subtle shadow hover states on bento grid.
 ================================================================================
@@ -323,7 +323,15 @@ button { border:none; background:none; font:inherit; }
   padding:80px 7% 56px;
   position:relative; overflow:hidden;
   border-bottom:1px solid rgba(232,160,32,.35);
-  background:#FFFFFF;
+  background:
+    linear-gradient(170deg,
+      rgba(255,255,255,.95) 0%,
+      rgba(255,255,255,.80) 38%,
+      rgba(255,255,255,.88) 68%,
+      rgba(255,255,255,.97) 100%),
+    url('https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-size:cover;
+  background-position:center 35%;
 }
 .hero::before {
   content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
@@ -340,9 +348,9 @@ button { border:none; background:none; font:inherit; }
   position:absolute; border-radius:50%;
   -webkit-filter:blur(80px); filter:blur(80px);
 }
-.bl1 { width:38vw; height:38vw; background:rgba(232,96,64,.08); top:-10%; right:-8%; }
-.bl2 { width:22vw; height:22vw; background:rgba(29,91,191,.06); bottom:-4%; left:-4%; }
-.bl3 { width:16vw; height:16vw; background:rgba(232,160,32,.05);  top:40%;  left:42%; }
+.bl1 { width:38vw; height:38vw; background:rgba(232,96,64,.13); top:-10%; right:-8%; }
+.bl2 { width:22vw; height:22vw; background:rgba(29,91,191,.09); bottom:-4%; left:-4%; }
+.bl3 { width:16vw; height:16vw; background:rgba(232,160,32,.09);  top:40%;  left:42%; }
 
 .hero-in { position:relative; z-index:2; max-width:880px; margin:0 auto; }
 
