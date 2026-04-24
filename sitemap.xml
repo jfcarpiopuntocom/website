@@ -1,33 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- HOME -->
   <url>
     <loc>https://jfcarpio.com/</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/"/>
   </url>
+
+  <!-- BLOG -->
   <url>
-    <loc>https://jfcarpio.com/publicaciones.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <loc>https://jfcarpio.com/blog/</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/blog/"/>
+  </url>
+
+  <!-- PUBLICACIONES -->
+  <url>
+    <loc>https://jfcarpio.com/publicaciones/</loc>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/publicaciones/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/publicaciones/"/>
   </url>
+
+  <!-- VISOR GERENCIAL -->
   <url>
-    <loc>https://jfcarpio.com/working-paper-hidden-cost.html</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jfcarpio.com/mindos-talleres.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <loc>https://jfcarpio.com/visorgerencial/</loc>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/visorgerencial/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/visorgerencial/"/>
   </url>
+
+  <!-- VISOR DE MARKETING -->
   <url>
-    <loc>https://jfcarpio.com/guia-indicadores-marketing.html</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://jfcarpio.com/visordemarketing/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/visordemarketing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/visordemarketing/"/>
   </url>
+
+  <!-- VISOR ANTI-QUIEBRA -->
+  <url>
+    <loc>https://jfcarpio.com/visorantiquiebra/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/visorantiquiebra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/visorantiquiebra/"/>
+  </url>
+
 </urlset>
