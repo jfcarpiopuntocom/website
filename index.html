@@ -74,9 +74,9 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.143 (WHITE E++ Clean) · Last major refactor: 2026-04-26 · Author: JFC + Claude Haiku 4.5
-  Removed flashy proof strip — metrics integrated subtly into timeline (14 years,
-  33+ clients, 3 working papers, doctoral work). Clean, humble, unbreakable.
+  v1.146 (Award-Winning Minimal) · Last major refactor: 2026-04-26 · Author: JFC + Claude Haiku 4.5
+  Killed all emoji. Elegant vertical timeline connector, minimal dots, professional
+  typography (Lora + Barlow Condensed). Academic, prestigious, unbreakable.
 ================================================================================
 
   ABSOLUTE RULES -- DO NOT CHANGE WITHOUT JFC EXPLICIT APPROVAL:
@@ -737,40 +737,40 @@ button { border:none; background:none; font:inherit; }
   left:88px; top:8px; bottom:8px; width:1px;
   background:rgba(0,0,0,.1);
 }
+/* Vertical timeline connector */
+.timeline { position:relative; padding-left:28px; }
+.timeline::before {
+  content:''; position:absolute; left:0; top:0; bottom:0;
+  width:1px; background:linear-gradient(180deg, #E8A020 0%, #E8A020 20%, rgba(232,160,32,.2) 100%);
+}
 .tl-row {
   display:-webkit-box; display:-webkit-flex; display:flex;
-  gap:32px; padding:16px 0;
-  border-bottom:1px solid rgba(0,0,0,.08);
-  position:relative;
+  gap:28px; padding:20px 0; margin-bottom:8px;
+  border-bottom:none; position:relative;
 }
 .js-rv .tl-row { opacity:0; -webkit-transform:translateX(-10px); transform:translateX(-10px); -webkit-transition:opacity .5s,-webkit-transform .5s; transition:opacity .5s,transform .5s; }
 .js-rv .tl-row.vis { opacity:1; -webkit-transform:translateX(0); transform:translateX(0); }
-.tl-row:last-child { border-bottom:none; }
+.tl-row::before {
+  content:''; position:absolute; left:-14px; top:28px;
+  width:8px; height:8px; border-radius:50%;
+  background:#E8A020; border:2px solid #FFFFFF;
+  box-shadow:0 0 0 1px rgba(232,160,32,.3);
+}
+.tl-row:first-child::before { background:#E86040; box-shadow:0 0 0 1px #E86040; }
 .tl-year {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; font-weight:700; color:#E8A020;
-  letter-spacing:.1em; min-width:72px; padding-top:2px;
-  text-align:right; position:relative;
+  font-size:clamp(.82rem, 1.2vw, .95rem); font-weight:700; color:#E8A020;
+  letter-spacing:.12em; min-width:68px; text-align:right; flex-shrink:0;
 }
-.tl-year::after {
-  content:''; position:absolute;
-  right:-20px; top:7px;
-  width:8px; height:8px; border-radius:50%;
-  background:#FFFFFF; border:1px solid rgba(0,0,0,.3);
-}
-.tl-row:first-child .tl-year::after {
-  background:#E8A020; border-color:#E8A020;
-  -webkit-animation:pulseDot 2.5s infinite; animation:pulseDot 2.5s infinite;
-}
-.tl-content { -webkit-box-flex:1; -webkit-flex:1; flex:1; padding-top:0; padding-left:18px; }
+.tl-content { -webkit-box-flex:1; -webkit-flex:1; flex:1; padding-top:0; }
 .tl-title {
   font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
-  font-size:16px; font-weight:700; text-transform:uppercase;
-  color:#000000; letter-spacing:.04em; margin-bottom:3px;
+  font-size:clamp(15px, 2vw, 18px); font-weight:800; text-transform:uppercase;
+  color:#000000; letter-spacing:.08em; margin-bottom:6px; line-height:1.2;
 }
 .tl-body {
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:13px; color:#000000; letter-spacing:.03em; line-height:1.55;
+  font-family:'Lora',Georgia,serif; font-size:clamp(13px, 1.4vw, 14px);
+  color:#333333; letter-spacing:-.01em; line-height:1.7;
 }
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
