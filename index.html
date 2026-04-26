@@ -713,8 +713,8 @@ button { border:none; background:none; font:inherit; }
 .menger-background {
   position:absolute; inset:0;
   width:100%; height:100%;
-  object-fit:contain; object-position:center bottom;
-  opacity:.65; pointer-events:none;
+  object-fit:cover; object-position:center;
+  opacity:.8; pointer-events:none;
   z-index:0;
 }
 .about-section::before {
@@ -1903,6 +1903,8 @@ button { border:none; background:none; font:inherit; }
 
 <!-- v1.6 — ABOUT / TIMELINE -->
 <div class="about-section" bis_skin_checked="1">
+  <img class="menger-background" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Carl_Menger.jpg/440px-Carl_Menger.jpg" alt="">
+
   <span class="section-ghost" id="sectionGhost" aria-hidden="true">20</span>
   <div class="section-hd" bis_skin_checked="1">
     <span class="section-hd-lbl" data-t="tl_lbl">Trayectoria</span>
