@@ -789,7 +789,7 @@ button { border:none; background:none; font:inherit; }
 }
 /* HERO: Carl Menger — Central Thematic Axis */
 .menger-hero {
-  margin-top:80px; padding:120px 32px;
+  margin-top:80px; padding:100px 32px;
   text-align:center;
   border-top:2px solid rgba(232,160,32,.15);
   border-bottom:2px solid rgba(232,160,32,.15);
@@ -801,27 +801,51 @@ button { border:none; background:none; font:inherit; }
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:60px;
+  gap:50px;
 }
-.menger-hero-silhouette {
-  width:clamp(180px, 20vw, 300px); height:auto;
-  opacity:.95;
-  filter:drop-shadow(0 8px 24px rgba(0,0,0,.08));
-  transition:all .4s cubic-bezier(.34,.1,.68,.55);
-  animation:heroFloat .6s ease-out;
+.menger-hero-integrated {
+  width:100%; max-width:clamp(500px, 90vw, 900px);
+  height:auto;
+  aspect-ratio:900/600;
+  opacity:0;
+  animation:heroSvgFadeIn .8s ease-out .1s forwards;
+  filter:drop-shadow(0 12px 32px rgba(0,0,0,.08));
 }
-.menger-hero:hover .menger-hero-silhouette {
-  opacity:1;
-  filter:drop-shadow(0 12px 32px rgba(232,160,32,.2));
-  transform:scale(1.03);
+.menger-hero:hover .menger-hero-integrated {
+  filter:drop-shadow(0 16px 40px rgba(232,160,32,.15));
 }
+.axis-connector {
+  opacity:0;
+  animation:axisDrawStagger 1.2s ease-out forwards;
+  stroke-linecap:round;
+}
+.axis-connector:nth-of-type(1) { animation-delay:.2s; }
+.axis-connector:nth-of-type(2) { animation-delay:.35s; }
+.axis-connector:nth-of-type(3) { animation-delay:.5s; }
+
+.menger-silhouette-group {
+  animation:silhouetteScale .8s cubic-bezier(.34,.1,.68,.55) .1s both;
+}
+.axis-text {
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:clamp(14px, 2vw, 24px);
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  opacity:0;
+  animation:axisTextFadeIn .6s ease-out forwards;
+}
+.research-text { fill:#3B7EE8; animation-delay:.6s; }
+.teaching-text { fill:#28ECAA; animation-delay:.75s; }
+.technical-text { fill:#E86040; animation-delay:.6s; }
+
 .menger-hero-name {
   font-family:'Space Mono','Courier New',monospace;
   font-size:clamp(1.8rem, 5vw, 2.8rem);
   font-weight:900; letter-spacing:.12em;
   color:#000000; margin:0;
   text-transform:uppercase;
-  animation:heroFadeInDown .8s ease-out .2s both;
+  animation:heroFadeInDown .8s ease-out .7s both;
 }
 .menger-hero-title {
   font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
@@ -829,63 +853,24 @@ button { border:none; background:none; font:inherit; }
   font-weight:700; letter-spacing:.06em;
   color:#E8A020; margin:0;
   text-transform:uppercase;
-  animation:heroFadeInUp .8s ease-out .4s both;
+  animation:heroFadeInUp .8s ease-out .85s both;
 }
-/* Three axes radiating */
-.menger-axes {
-  position:relative;
-  width:100%; max-width:900px;
-  height:clamp(200px, 40vw, 400px);
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:clamp(20px, 4vw, 60px);
-  align-items:center;
-  justify-items:center;
-}
-.menger-axis {
-  position:relative;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  min-height:140px;
-  animation:heroAxisPulse .8s ease-out .6s both;
-}
-.menger-axis::before {
-  content:'';
-  position:absolute;
-  top:50%; left:50%;
-  width:clamp(60px, 10vw, 120px);
-  height:clamp(60px, 10vw, 120px);
-  background:radial-gradient(circle, rgba(232,160,32,.08) 0%, transparent 70%);
-  border-radius:50%;
-  transform:translate(-50%, -50%);
-}
-.menger-axis.research::before {
-  background:radial-gradient(circle, rgba(59,126,232,.08) 0%, transparent 70%);
-}
-.menger-axis.teaching::before {
-  background:radial-gradient(circle, rgba(40,236,170,.08) 0%, transparent 70%);
-}
-.menger-axis.technical::before {
-  background:radial-gradient(circle, rgba(232,96,64,.08) 0%, transparent 70%);
-}
-.axis-label {
-  position:relative;
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:clamp(.85rem, 1.8vw, 1.1rem);
-  font-weight:700; letter-spacing:.1em;
-  color:#000000;
-  text-transform:uppercase;
-  z-index:2;
-}
-.menger-axis.research .axis-label { color:#3B7EE8; }
-.menger-axis.teaching .axis-label { color:#28ECAA; }
-.menger-axis.technical .axis-label { color:#E86040; }
 
-@keyframes heroFloat {
-  from { opacity:0; transform:scale(.85) translateY(20px); }
-  to { opacity:.95; transform:scale(1) translateY(0); }
+@keyframes heroSvgFadeIn {
+  from { opacity:0; transform:scale(.9); }
+  to { opacity:1; transform:scale(1); }
+}
+@keyframes silhouetteScale {
+  from { opacity:0; transform:scale(.85); }
+  to { opacity:1; transform:scale(1); }
+}
+@keyframes axisDrawStagger {
+  from { stroke-width:1; opacity:0; }
+  to { stroke-width:3; opacity:.6; }
+}
+@keyframes axisTextFadeIn {
+  from { opacity:0; transform:scale(.8); }
+  to { opacity:1; transform:scale(1); }
 }
 @keyframes heroFadeInDown {
   from { opacity:0; transform:translateY(-20px); }
@@ -894,10 +879,6 @@ button { border:none; background:none; font:inherit; }
 @keyframes heroFadeInUp {
   from { opacity:0; transform:translateY(20px); }
   to { opacity:1; transform:translateY(0); }
-}
-@keyframes heroAxisPulse {
-  from { opacity:0; transform:scale(.8); }
-  to { opacity:1; transform:scale(1); }
 }
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -2015,25 +1996,48 @@ button { border:none; background:none; font:inherit; }
   <!-- HERO: Carl Menger — Eje temático central -->
   <div class="menger-hero reveal in" bis_skin_checked="1">
     <div class="menger-hero-content">
-      <!-- Central portrait -->
-      <img class="menger-hero-silhouette" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Carl_Menger.jpg/440px-Carl_Menger.jpg" alt="Carl Menger — Austrian economist and founder of the Austrian School" loading="lazy">
+      <!-- Integrated SVG: Menger silhouette + radiating axes -->
+      <svg class="menger-hero-integrated" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg" aria-label="Carl Menger — thematic axis">
+        <defs>
+          <linearGradient id="research-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#3B7EE8;stop-opacity:0" />
+            <stop offset="50%" style="stop-color:#3B7EE8;stop-opacity:.3" />
+            <stop offset="100%" style="stop-color:#3B7EE8;stop-opacity:0" />
+          </linearGradient>
+          <linearGradient id="teaching-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#28ECAA;stop-opacity:0" />
+            <stop offset="50%" style="stop-color:#28ECAA;stop-opacity:.3" />
+            <stop offset="100%" style="stop-color:#28ECAA;stop-opacity:0" />
+          </linearGradient>
+          <linearGradient id="technical-glow" x1="100%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#E86040;stop-opacity:0" />
+            <stop offset="50%" style="stop-color:#E86040;stop-opacity:.3" />
+            <stop offset="100%" style="stop-color:#E86040;stop-opacity:0" />
+          </linearGradient>
+        </defs>
 
-      <!-- Name + Title -->
+        <!-- Radiating axes as subtle connectors -->
+        <line class="axis-connector" x1="500" y1="300" x2="150" y2="150" stroke="url(#research-glow)" stroke-width="3" stroke-linecap="round" />
+        <line class="axis-connector" x1="500" y1="300" x2="500" y2="50" stroke="url(#teaching-glow)" stroke-width="3" stroke-linecap="round" />
+        <line class="axis-connector" x1="500" y1="300" x2="850" y2="150" stroke="url(#technical-glow)" stroke-width="3" stroke-linecap="round" />
+
+        <!-- Central silhouette (Menger) -->
+        <g class="menger-silhouette-group">
+          <!-- Subtle background glow -->
+          <circle cx="500" cy="300" r="140" fill="rgba(232,160,32,.04)" />
+          <!-- Bearded profile silhouette -->
+          <path fill="#000000" d="M 500 180 C 560 180 610 200 625 240 L 625 260 C 640 255 655 258 660 270 C 663 278 658 288 645 292 C 650 305 652 330 645 348 C 638 365 620 380 600 388 L 600 480 C 600 520 575 550 500 560 C 425 550 400 520 400 480 L 400 388 C 380 380 362 365 355 348 C 348 330 350 305 355 292 C 342 288 337 278 340 270 C 345 258 360 255 375 260 L 375 240 C 390 200 440 180 500 180 Z M 440 290 C 436 294 433 298 433 308 C 433 328 442 358 460 378 L 460 480 C 460 510 478 540 500 548 C 522 540 540 510 540 480 L 540 378 C 558 358 567 328 567 308 C 567 298 564 294 560 290 C 554 294 548 298 535 300 L 465 300 C 452 298 446 294 440 290 Z M 500 205 C 458 205 425 238 425 280 C 425 285 425 292 427 298 L 573 298 C 575 292 575 285 575 280 C 575 238 542 205 500 205 Z"/>
+        </g>
+
+        <!-- Axis labels (positioned at line ends) -->
+        <text class="axis-text research-text" x="80" y="120" text-anchor="middle" dominant-baseline="middle">RESEARCH</text>
+        <text class="axis-text teaching-text" x="500" y="10" text-anchor="middle" dominant-baseline="middle">ENSEÑANZA</text>
+        <text class="axis-text technical-text" x="920" y="120" text-anchor="middle" dominant-baseline="middle">TÉCNICOS</text>
+      </svg>
+
+      <!-- Name + Title below SVG -->
       <h2 class="menger-hero-name">CARL MENGER</h2>
       <p class="menger-hero-title">Eje Temático</p>
-
-      <!-- Three pillars radiating -->
-      <div class="menger-axes">
-        <div class="menger-axis research">
-          <span class="axis-label">RESEARCH</span>
-        </div>
-        <div class="menger-axis teaching">
-          <span class="axis-label">ENSEÑANZA</span>
-        </div>
-        <div class="menger-axis technical">
-          <span class="axis-label">TÉCNICOS</span>
-        </div>
-      </div>
     </div>
   </div>
 </div>
