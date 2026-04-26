@@ -74,9 +74,9 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.150 (Carl Menger Attribution) · Last major refactor: 2026-04-26 · Author: JFC + Claude Haiku 4.5
-  Added Carl Menger silhouette beneath timeline. Austrian school founder attribution
-  prevents visitor confusion. Elegant bearded profile with responsive design.
+  v1.150 (Carl Menger Hero Visual) · Last major refactor: 2026-04-26 · Author: JFC + Claude Haiku 4.5
+  Epic hero visual: Carl Menger as thematic axis (research · enseñanza · técnicos).
+  300px silhouette. Radiating three-pillar grid. Animations + color-coded axes.
 ================================================================================
 
   ABSOLUTE RULES -- DO NOT CHANGE WITHOUT JFC EXPLICIT APPROVAL:
@@ -787,32 +787,117 @@ button { border:none; background:none; font:inherit; }
   font-family:'Lora',Georgia,serif; font-size:clamp(13px, 1.4vw, 14px);
   color:#333333; letter-spacing:-.01em; line-height:1.7;
 }
-.menger-tribute {
-  margin-top:48px; padding:40px 0 0 0;
+/* HERO: Carl Menger — Central Thematic Axis */
+.menger-hero {
+  margin-top:80px; padding:120px 32px;
   text-align:center;
-  border-top:1px solid rgba(0,0,0,.08);
+  border-top:2px solid rgba(232,160,32,.15);
+  border-bottom:2px solid rgba(232,160,32,.15);
+  background:linear-gradient(180deg, #FFFFFF 0%, rgba(232,160,32,.02) 100%);
 }
-.menger-silhouette-wrapper {
-  display:flex; justify-content:center; margin-bottom:20px;
+.menger-hero-content {
+  position:relative;
+  max-width:1300px; margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:60px;
 }
-.menger-silhouette {
-  width:clamp(80px, 12vw, 140px); height:auto;
-  max-width:140px; opacity:.85;
-  transition:opacity .3s ease;
+.menger-hero-silhouette {
+  width:clamp(180px, 20vw, 300px); height:auto;
+  opacity:.95;
+  filter:drop-shadow(0 8px 24px rgba(0,0,0,.08));
+  transition:all .4s cubic-bezier(.34,.1,.68,.55);
+  animation:heroFloat .6s ease-out;
 }
-.menger-tribute:hover .menger-silhouette {
+.menger-hero:hover .menger-hero-silhouette {
   opacity:1;
+  filter:drop-shadow(0 12px 32px rgba(232,160,32,.2));
+  transform:scale(1.03);
 }
-.menger-name {
+.menger-hero-name {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:clamp(.82rem, 1.1vw, .95rem); font-weight:700;
-  color:#000000; letter-spacing:.08em;
-  margin:0 0 6px 0; text-transform:uppercase;
+  font-size:clamp(1.8rem, 5vw, 2.8rem);
+  font-weight:900; letter-spacing:.12em;
+  color:#000000; margin:0;
+  text-transform:uppercase;
+  animation:heroFadeInDown .8s ease-out .2s both;
 }
-.menger-subtitle {
-  font-family:'Lora',Georgia,serif; font-size:clamp(.82rem, 1vw, .9rem);
-  color:#666666; letter-spacing:-.01em;
-  margin:0; font-style:italic;
+.menger-hero-title {
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:clamp(.95rem, 2.2vw, 1.6rem);
+  font-weight:700; letter-spacing:.06em;
+  color:#E8A020; margin:0;
+  text-transform:uppercase;
+  animation:heroFadeInUp .8s ease-out .4s both;
+}
+/* Three axes radiating */
+.menger-axes {
+  position:relative;
+  width:100%; max-width:900px;
+  height:clamp(200px, 40vw, 400px);
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:clamp(20px, 4vw, 60px);
+  align-items:center;
+  justify-items:center;
+}
+.menger-axis {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:140px;
+  animation:heroAxisPulse .8s ease-out .6s both;
+}
+.menger-axis::before {
+  content:'';
+  position:absolute;
+  top:50%; left:50%;
+  width:clamp(60px, 10vw, 120px);
+  height:clamp(60px, 10vw, 120px);
+  background:radial-gradient(circle, rgba(232,160,32,.08) 0%, transparent 70%);
+  border-radius:50%;
+  transform:translate(-50%, -50%);
+}
+.menger-axis.research::before {
+  background:radial-gradient(circle, rgba(59,126,232,.08) 0%, transparent 70%);
+}
+.menger-axis.teaching::before {
+  background:radial-gradient(circle, rgba(40,236,170,.08) 0%, transparent 70%);
+}
+.menger-axis.technical::before {
+  background:radial-gradient(circle, rgba(232,96,64,.08) 0%, transparent 70%);
+}
+.axis-label {
+  position:relative;
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:clamp(.85rem, 1.8vw, 1.1rem);
+  font-weight:700; letter-spacing:.1em;
+  color:#000000;
+  text-transform:uppercase;
+  z-index:2;
+}
+.menger-axis.research .axis-label { color:#3B7EE8; }
+.menger-axis.teaching .axis-label { color:#28ECAA; }
+.menger-axis.technical .axis-label { color:#E86040; }
+
+@keyframes heroFloat {
+  from { opacity:0; transform:scale(.85) translateY(20px); }
+  to { opacity:.95; transform:scale(1) translateY(0); }
+}
+@keyframes heroFadeInDown {
+  from { opacity:0; transform:translateY(-20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@keyframes heroFadeInUp {
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@keyframes heroAxisPulse {
+  from { opacity:0; transform:scale(.8); }
+  to { opacity:1; transform:scale(1); }
 }
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -1927,16 +2012,31 @@ button { border:none; background:none; font:inherit; }
       </div>
     </div>
   </div>
-  <!-- Carl Menger — Attribution silhouette -->
-  <div class="menger-tribute reveal in" bis_skin_checked="1">
-    <div class="menger-silhouette-wrapper">
-      <svg class="menger-silhouette" viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg" aria-label="Carl Menger — Austrian economist">
-        <!-- Bearded profile silhouette facing left, historical style -->
+  <!-- HERO: Carl Menger — Eje temático central -->
+  <div class="menger-hero reveal in" bis_skin_checked="1">
+    <div class="menger-hero-content">
+      <!-- Central silhouette -->
+      <svg class="menger-hero-silhouette" viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg" aria-label="Carl Menger — Austrian economist">
         <path fill="#000000" d="M 50 15 C 62 15 72 24 74 36 L 74 42 C 77 41 80 42 81 45 C 82 47 80 50 77 51 C 78 55 78 62 76 66 C 74 70 70 74 65 76 L 65 95 C 65 108 57 118 50 120 C 43 118 35 108 35 95 L 35 76 C 30 74 26 70 24 66 C 22 62 22 55 23 51 C 20 50 18 47 19 45 C 20 42 23 41 26 42 L 26 36 C 28 24 38 15 50 15 Z M 40 50 C 39 51 38 52 38 54 C 38 59 40 65 44 69 L 44 95 C 44 104 47 112 50 114 C 53 112 56 104 56 95 L 56 69 C 60 65 62 59 62 54 C 62 52 61 51 60 50 C 58 51 56 52 53 52 L 47 52 C 44 52 42 51 40 50 Z M 50 26 C 43 26 38 31 38 38 C 38 39 38 41 39 42 L 61 42 C 62 41 62 39 62 38 C 62 31 57 26 50 26 Z"/>
       </svg>
+
+      <!-- Name + Title -->
+      <h2 class="menger-hero-name">CARL MENGER</h2>
+      <p class="menger-hero-title">Eje Temático</p>
+
+      <!-- Three pillars radiating -->
+      <div class="menger-axes">
+        <div class="menger-axis research">
+          <span class="axis-label">RESEARCH</span>
+        </div>
+        <div class="menger-axis teaching">
+          <span class="axis-label">ENSEÑANZA</span>
+        </div>
+        <div class="menger-axis technical">
+          <span class="axis-label">TÉCNICOS</span>
+        </div>
+      </div>
     </div>
-    <p class="menger-name">Carl Menger</p>
-    <p class="menger-subtitle">Fundador de la Escuela Austriaca</p>
   </div>
 </div>
 
