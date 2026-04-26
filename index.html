@@ -74,9 +74,9 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.146 (Award-Winning Minimal) · Last major refactor: 2026-04-26 · Author: JFC + Claude Haiku 4.5
-  Killed all emoji. Elegant vertical timeline connector, minimal dots, professional
-  typography (Lora + Barlow Condensed). Academic, prestigious, unbreakable.
+  v1.149 (Matt Ridley Optimism + Pulsing Glow) · Last major refactor: 2026-04-26 · Author: JFC + Claude Haiku 4.5
+  Rational optimism: cooperation, exchange, cultural evolution (Matt Ridley). Restored
+  pulsing glow dots (high-tech animation). Award-winning vibrant + professional.
 ================================================================================
 
   ABSOLUTE RULES -- DO NOT CHANGE WITHOUT JFC EXPLICIT APPROVAL:
@@ -174,6 +174,14 @@ button { border:none; background:none; font:inherit; }
 @keyframes         slideL  { from{opacity:0;transform:translateX(-28px)} to{opacity:1;transform:translateX(0)} }
 @-webkit-keyframes pulseDot{ 0%,100%{opacity:.5} 50%{opacity:1} }
 @keyframes         pulseDot{ 0%,100%{opacity:.5} 50%{opacity:1} }
+@-webkit-keyframes pulseGlow {
+  0%,100%{ opacity:0.4; -webkit-transform:scale(1); transform:scale(1); box-shadow:0 0 0 0 rgba(232,160,32,.6); }
+  50%{ opacity:0.8; -webkit-transform:scale(1.1); transform:scale(1.1); box-shadow:0 0 0 6px rgba(232,160,32,.2); }
+}
+@keyframes pulseGlow {
+  0%,100%{ opacity:0.4; transform:scale(1); box-shadow:0 0 0 0 rgba(232,160,32,.6); }
+  50%{ opacity:0.8; transform:scale(1.1); box-shadow:0 0 0 6px rgba(232,160,32,.2); }
+}
 
 /* v1.1 — Line reveal: each .ln clips upward */
 @-webkit-keyframes lineUp {
@@ -214,6 +222,13 @@ button { border:none; background:none; font:inherit; }
 }
 /* â”€â”€ LANG SWITCH â”€â”€ */
 .lang-sw { display:-webkit-box; display:-webkit-flex; display:flex; -webkit-box-align:center; -webkit-align-items:center; align-items:center; gap:4px; }
+/* â”€â”€ PULSING GLOW DOTS â”€â”€ */
+.ov-active-dot, .pan-dot {
+  display:inline-block; width:8px; height:8px; border-radius:50%;
+  background:#E8A020; margin:0 4px;
+  -webkit-animation:pulseGlow 2.4s ease-in-out infinite;
+  animation:pulseGlow 2.4s ease-in-out infinite;
+}
 .lang-btn {
   display:-webkit-box; display:-webkit-flex; display:flex;
   -webkit-box-align:center; -webkit-align-items:center; align-items:center;
@@ -1581,23 +1596,23 @@ button { border:none; background:none; font:inherit; }
   <nav class="ov-nav" aria-label="Menu principal">
     <a href="https://www.jfcarpio.com/visorgerencial/" target="_blank" rel="noopener" class="ov-a" onclick="closeMenu()" style="--c:#0A9060;">
       <span class="ov-n">01</span><span class="ov-t" data-t="ov1_t">Dashboards</span>
-      <span class="ov-sub" data-t="ov1_sub">Diagnóstico inmediato · Growth OS</span>
+      <span class="ov-sub" data-t="ov1_sub">Diagnóstico inmediato · Growth OS</span><span class="ov-active-dot"></span>
     </a>
     <a href="/#reportes" class="ov-a" onclick="closeMenu()" style="--c:#3B7EE8;">
       <span class="ov-n">02</span><span class="ov-t" data-t="ov2_t">Reportes</span>
-      <span class="ov-sub" data-t="ov2_sub">Benchmarks y análisis sectoriales</span>
+      <span class="ov-sub" data-t="ov2_sub">Benchmarks y análisis sectoriales</span><span class="ov-active-dot"></span>
     </a>
     <a href="https://www.jfcarpio.com/#" class="ov-a" onclick="closeMenu();openWAWorkshops(event);" style="--c:#00B0C8;">
       <span class="ov-n">03</span><span class="ov-t" data-t="ov3_t">Workshops</span>
-      <span class="ov-sub" data-t="ov3_sub">Formación presencial y online</span>
+      <span class="ov-sub" data-t="ov3_sub">Formación presencial y online</span><span class="ov-active-dot"></span>
     </a>
     <a href="/blog/" class="ov-a" onclick="closeMenu()" style="--c:#E8A020;">
       <span class="ov-n">04</span><span class="ov-t" data-t="ov4_t">Blog</span>
-      <span class="ov-sub" data-t="ov4_sub">Historia, ideas y entorno económico</span>
+      <span class="ov-sub" data-t="ov4_sub">Historia, ideas y entorno económico</span><span class="ov-active-dot"></span>
     </a>
     <a href="/publicaciones/" class="ov-a" onclick="closeMenu()" style="--c:#E86040;">
       <span class="ov-n">05</span><span class="ov-t" data-t="ov5_t">Publicaciones</span>
-      <span class="ov-sub" data-t="ov5_sub">Libros, papers y columnas académicas</span>
+      <span class="ov-sub" data-t="ov5_sub">Libros, papers y columnas académicas</span><span class="ov-active-dot"></span>
     </a>
   </nav>
 </div>
@@ -1667,7 +1682,7 @@ button { border:none; background:none; font:inherit; }
         <span class="pan-item"><span class="pan-item-tag" style="color:#E8A020;">PRO</span>Growth OS Vol. 3 — SCALE/SELL (24M+)</span>
       </div>
       <div class="pan-bot" bis_skin_checked="1">
-        <span class="pan-tag" style="color:#0A9060;border-color:rgba(10,144,96,.4);" data-t="p1_tag">Growth OS</span>
+        <span class="pan-tag" style="color:#0A9060;border-color:rgba(10,144,96,.4);" data-t="p1_tag"><span class="pan-dot"></span>Growth OS</span>
         
       </div>
     </a>
@@ -1690,7 +1705,7 @@ button { border:none; background:none; font:inherit; }
         <span class="pan-item"><span class="pan-item-tag" style="color:#3B7EE8;">GOS</span>Benchmarks MRR / CAC / Churn — Ecuador &amp; Latam</span>
       </div>
       <div class="pan-bot" bis_skin_checked="1">
-        <span class="pan-tag" style="color:#3B7EE8;border-color:rgba(59,126,232,.4);" data-t="p2_tag">6 reportes</span>
+        <span class="pan-tag" style="color:#3B7EE8;border-color:rgba(59,126,232,.4);" data-t="p2_tag"><span class="pan-dot"></span>6 reportes</span>
         
       </div>
     </a>
@@ -1712,7 +1727,7 @@ button { border:none; background:none; font:inherit; }
         <span class="pan-item"><span class="pan-item-tag" style="color:#00B0C8;">3h</span>Empresa Privada — de win-lose a win-win · Carl Menger · MindOS</span>
       </div>
       <div class="pan-bot" bis_skin_checked="1">
-        <span class="pan-tag" style="color:#00B0C8;border-color:rgba(0,176,200,.4);" data-t="p3_tag">Corporativo</span>
+        <span class="pan-tag" style="color:#00B0C8;border-color:rgba(0,176,200,.4);" data-t="p3_tag"><span class="pan-dot"></span>Corporativo</span>
         
       </div>
     </a>
@@ -1735,7 +1750,7 @@ button { border:none; background:none; font:inherit; }
         <span class="pan-item"><span class="pan-item-tag" style="color:#E8A020;">Oct 25</span>Argentina 1853–1930: el único país latinoamericano que fue capitalista</span>
       </div>
       <div class="pan-bot" bis_skin_checked="1">
-        <span class="pan-tag" style="color:#E8A020;border-color:rgba(232,160,32,.4);" data-t="p4_tag">Eleutheros</span>
+        <span class="pan-tag" style="color:#E8A020;border-color:rgba(232,160,32,.4);" data-t="p4_tag"><span class="pan-dot"></span>Eleutheros</span>
         
       </div>
     </a>
@@ -1758,7 +1773,7 @@ button { border:none; background:none; font:inherit; }
         <span class="pan-item"><span class="pan-item-tag" style="color:#E86040;">Radio</span>Presentador de programas de economía</span>
       </div>
       <div class="pan-bot" bis_skin_checked="1">
-        <span class="pan-tag" style="color:#E86040;border-color:rgba(232,96,64,.4);" data-t="p5_tag">Académico</span>
+        <span class="pan-tag" style="color:#E86040;border-color:rgba(232,96,64,.4);" data-t="p5_tag"><span class="pan-dot"></span>Académico</span>
         
       </div>
     </a>
@@ -1811,7 +1826,7 @@ button { border:none; background:none; font:inherit; }
 <div class="jfc-band" bis_skin_checked="1">
   <div class="jfc-band-inner" bis_skin_checked="1">
     <div class="jfc-band-label" bis_skin_checked="1">J.F. Carpio · Investigador económico y empresarial</div>
-    <div class="jfc-band-text" bis_skin_checked="1">Optimismo racional · <em>Crecimiento económico</em> · Empresa privada</div>
+    <div class="jfc-band-text" bis_skin_checked="1">Optimismo racional · <em>Cooperación y intercambio</em> · Evolución cultural</div>
   </div>
 </div>
 
@@ -3325,7 +3340,7 @@ var T={
     tl3_t:'14 años formando estudiantes universitarios con una mucho mejor comprensión del mercado y la empresa',
     tl3_b:'Fundó el primer subdepartamento de Economía Austriaca e Institucional del Ecuador. Diseñó una síntesis propia — Economía con instituciones y empresas — para Principios de Economía (ECN100, USFQ). Asesoró y colaboró en la creación del Instituto de Economía de la USFQ y su revista académica Polemika.',
     tl4_t:'Autor en la línea de la Economía con instituciones y empresas',
-    tl4_b:'Autor de "10 Lecciones de Economía". Traducción y difusión de economía de las escuelas continentales europeas (especialmente la austriaca) en español. Columnista en prensa ecuatoriana. El crecimiento económico como causa — no como resultado colateral de otras agendas.',
+    tl4_b:'Autor de "10 Lecciones de Economía". Traductor y difusor de economía austriaca en español para el mundo hispanohablante. Columnista. Optimista racional al estilo de Matt Ridley: la cooperación, el intercambio y la evolución cultural crean prosperidad mejor que la burocracia. Eso es lo que analizo.',
     tl5_t:'La formación: la teoría sólida al servicio de causas reales',
     tl5_b:'M.E.E. en UFM Guatemala / Boston University. Trabajo de doctorado en evolución institucional Mengerian (3 working papers). La teoría austriaca del capital como herramienta de optimismo racional — no como adorno académico.',
     term_lbl:'Consulta directa', term_title_a:'¿Tienes una ', term_title_b:'pregunta', term_title_c:'?',
@@ -3400,7 +3415,7 @@ var T={
     tl3_t:'14 years training university students with a much better understanding of markets and enterprise',
     tl3_b:'Founded Ecuador\'s first Austrian and Institutional Economics sub-department. Designed an original synthesis — Economics with institutions and enterprise — for Principios de Economía (ECN100, USFQ). Advised and collaborated in the creation of the USFQ Institute of Economics and its academic journal Polemika.',
     tl4_t:'Author in the tradition of Economics with institutions and enterprise',
-    tl4_b:'Author of "10 Lessons of Economics". Translation and dissemination of continental European economics (especially the Austrian school) in Spanish. Columnist in Ecuadorian press. Economic growth as a cause — not a side effect of other agendas.',
+    tl4_b:'Author of "10 Lessons of Economics". Translator and disseminator of Austrian economics to the Spanish-speaking world. Columnist. Rational optimist in the Matt Ridley tradition: cooperation, exchange, and cultural evolution create prosperity better than bureaucracy. That\'s what I analyze.',
     tl5_t:'The formation: the solid theory in service of real causes',
     tl5_b:'M.E.E. at UFM Guatemala / Boston University. Doctoral work in Mengerian institutional evolution (3 working papers). Austrian capital theory as a tool for rational optimism — not academic ornament.',
     term_lbl:'Direct consultation', term_title_a:'Got a ', term_title_b:'question', term_title_c:'?',
