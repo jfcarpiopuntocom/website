@@ -390,6 +390,19 @@ button { border:none; background:none; font:inherit; }
 .hero-cta-sec:hover{border-color:#E8A020;color:#E8A020;}
 @media(max-width:600px){.hero-ctas{-webkit-flex-direction:column;flex-direction:column;}.hero-cta,.hero-cta-sec{-webkit-justify-content:center;justify-content:center;text-align:center;}}
 @media(prefers-reduced-motion:reduce){.hero-cta,.hero-cta-sec{-webkit-transition:none;transition:none;}}
+/* v1.140 — 3 options strip */
+.options-strip{padding:40px 7%;background:#060E1D;border-bottom:1px solid rgba(255,255,255,.08);}
+.options-hd{margin-bottom:28px;}
+.options-eyebrow{display:block;font-family:'Space Mono','Courier New',monospace;font-size:13px;color:#E8A020;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;}
+.options-title{display:block;font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:clamp(24px,3vw,36px);font-weight:700;color:#FFFFFF;}
+.options-cards{display:-webkit-flex;display:flex;gap:12px;flex-wrap:wrap;}
+.opt-card{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;gap:14px;-webkit-flex:1 1 220px;flex:1 1 220px;min-height:64px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:16px 20px;text-decoration:none;-webkit-transition:border-color .15s,background .15s;transition:border-color .15s,background .15s;}
+.opt-card:hover{border-color:#E86040;background:rgba(232,96,64,.07);}
+.opt-num{font-family:'Space Mono','Courier New',monospace;font-size:13px;color:#E8A020;font-weight:700;min-width:24px;}
+.opt-heading{font-family:'Lora',Georgia,serif;font-size:16px;color:#FFFFFF;font-weight:600;-webkit-flex:1;flex:1;}
+.opt-arrow{font-size:16px;color:#E86040;font-weight:700;}
+@media(max-width:580px){.options-cards{-webkit-flex-direction:column;flex-direction:column;}.opt-card{-webkit-flex:none;flex:none;}}
+@media(prefers-reduced-motion:reduce){.opt-card{-webkit-transition:none;transition:none;}}
 /* v1.1 — fluid connector line between hero and bento */
 .connector {
   position:relative; height:48px;
@@ -1666,6 +1679,31 @@ button { border:none; background:none; font:inherit; }
   <div class="connector-line" bis_skin_checked="1"></div>
 </div>
 
+<!-- 3 OPTIONS STRIP — v1.140 -->
+<div class="options-strip">
+  <div class="options-hd">
+    <span class="options-eyebrow" data-t="opt_eyebrow">Tres opciones sugeridas</span>
+    <span class="options-title" data-t="opt_title">¿Por dónde empezar?</span>
+  </div>
+  <div class="options-cards">
+    <a class="opt-card" href="https://www.jfcarpio.com/visorantiquiebra/" target="_blank" rel="noopener">
+      <span class="opt-num">01</span>
+      <span class="opt-heading" data-t="opt1_h">Diagnostica tu negocio</span>
+      <span class="opt-arrow">→</span>
+    </a>
+    <a class="opt-card" href="https://brilla-group.com/reportes" target="_blank" rel="noopener">
+      <span class="opt-num">02</span>
+      <span class="opt-heading" data-t="opt2_h">Entiende tu entorno</span>
+      <span class="opt-arrow">→</span>
+    </a>
+    <a class="opt-card" href="#" onclick="openWAWorkshops(event);return false;">
+      <span class="opt-num">03</span>
+      <span class="opt-heading" data-t="opt3_h">Capacita a tus colaboradores</span>
+      <span class="opt-arrow">→</span>
+    </a>
+  </div>
+</div>
+
 <!-- BENTO -->
 <div class="bento-wrap" bis_skin_checked="1">
   <div class="bento-hd" bis_skin_checked="1">
@@ -1990,7 +2028,7 @@ como herramienta de optimismo racional — no como adorno académico.</div>
 /*
 ================================================================================
   jfcarpio.com -- MAIN SCRIPT BLOCK
-  v1.139 · 2026-04-28 · JFC + Claude Sonnet 4.6
+  v1.140 · 2026-04-28 · JFC + Claude Sonnet 4.6
 ================================================================================
 
   REVEAL SYSTEM (js-rv):
@@ -2507,6 +2545,11 @@ var T={
     cp4:'Eso es lo que resuelve este sitio. Dashboards que diagnostican la salud real del negocio. Reportes que traducen el entorno macroeconómico a decisiones concretas. Dos talleres para tus colaboradores, basados en MindOS: uno sobre dinero y finanzas personales, otro sobre apreciación de la empresa privada. Son independientes, pero profundamente complementarios. Resultados respectivos: menos estrés financiero y mejor productividad; y más lealtad interna hacia la empresa, con gente que cuida los espacios, las herramientas y la marca como si fueran suyos.',
     cp5:'Todo en español, todo en inglés, para empresarios hispanohablantes y bilingues donde quiera que estén. La herramienta más actualizada se llama Growth OS. Empieza ahí.',
     proof1:'clientes directos', proof2:'think pieces sobre desarrollo institucional', proof3:'años en el campo', proof4:'ROI en mercados emergentes',
+    opt_eyebrow:'Tres opciones sugeridas',
+    opt_title:'¿Por dónde empezar?',
+    opt1_h:'Diagnostica tu negocio',
+    opt2_h:'Entiende tu entorno',
+    opt3_h:'Capacita a tus colaboradores',
     byline:'Economía con instituciones y empresas',
     tl_lbl:'Trayectoria', tl_title_a:'Dos temas persistentes: ', tl_title_b:'crecimiento económico y optimismo racional',
     tl1_t:'Growth OS — cuatro dashboards, un sistema completo',
@@ -2586,6 +2629,11 @@ var T={
     cp4:'That's what this site solves. Dashboards that diagnose the real health of the business. Reports that translate the macroeconomic environment into concrete decisions. Two workshops for your team, based on MindOS: one on money and personal finance, another on appreciation of private enterprise. Independent but deeply complementary. Respective results: less financial stress and better productivity; and greater internal loyalty, with people who care for spaces, tools, and brand as if they were their own.',
     cp5:'Everything in Spanish, everything in English, for Spanish-speaking and bilingual entrepreneurs wherever they are. The most up-to-date tool is called Growth OS. Start there.',
     proof1:'direct clients', proof2:'research on Mengerian institutions', proof3:'years in the field', proof4:'ROI in emerging markets',
+    opt_eyebrow:'Three suggested paths',
+    opt_title:'Where to start?',
+    opt1_h:'Diagnose your business',
+    opt2_h:'Understand your environment',
+    opt3_h:'Train your team',
     cp_or:'They operate in a region and cultural space where the State changes the rules mid-game. Where taxes are high and bureaucratic hurdles even higher. Where regulations strangle instead of support. Where irresponsible government debt and spending create the short-termism that destroys any medium-term plan. And yet, they build. And yet, they grow.',
     byline:'Economics with institutions and enterprise',
     tl_lbl:'Track record', tl_title_a:'Two persistent themes: ', tl_title_b:'economic growth and rational optimism',
