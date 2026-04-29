@@ -816,6 +816,19 @@ button { border:none; background:none; font:inherit; }
 .about-section .tl-row{border-bottom-color:rgba(255,255,255,.07);}
 .about-section .timeline::before{background:rgba(255,255,255,.12);}
 .about-section .tl-year::after{background:#060E1D;border-color:rgba(255,255,255,.3);}
+.tes-strip{padding:64px 7%;background:#F5F4F2;border-top:1px solid rgba(0,0,0,.07);border-bottom:1px solid rgba(0,0,0,.07);}
+.tes-hd{margin-bottom:40px;}
+.tes-eyebrow{display:block;font-family:'Space Mono','Courier New',monospace;font-size:13px;color:#E86040;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;}
+.tes-title{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:700;color:#000000;}
+.tes-cards{display:-webkit-flex;display:flex;gap:24px;-webkit-flex-wrap:wrap;flex-wrap:wrap;}
+.tes-card{-webkit-flex:1 1 260px;flex:1 1 260px;display:-webkit-flex;display:flex;flex-direction:column;gap:16px;padding:28px 24px;background:#FFFFFF;border:1px solid rgba(0,0,0,.08);}
+.tes-q{font-family:'Lora',Georgia,serif;font-size:16px;color:#000000;line-height:1.7;font-style:italic;}
+.tes-q::before{content:'C';}
+.tes-q::after{content:'D';}
+.tes-attr{font-family:'Space Mono','Courier New',monospace;font-size:13px;color:#333333;letter-spacing:.05em;margin-top:auto;}
+.tes-name{display:block;font-weight:700;color:#000000;}
+.tes-role{display:block;color:#555555;}
+@media(max-width:640px){.tes-cards{-webkit-flex-direction:column;flex-direction:column;}.tes-card{-webkit-flex:none;flex:none;}}
 .contact-head-simple {
   padding:28px 32px 20px;
   border-bottom:1px solid rgba(0,0,0,.06);
@@ -1883,6 +1896,37 @@ privada — con el marco MindOS.</p>
   </div>
 </div>
 
+<!-- TESTIMONIALS — v1.142 -->
+<div class="tes-strip">
+  <div class="tes-hd">
+    <span class="tes-eyebrow" data-t="tes_eye">Lo que dicen clientes reales</span>
+    <span class="tes-title" data-t="tes_title">Resultados en contextos distintos</span>
+  </div>
+  <div class="tes-cards">
+    <div class="tes-card">
+      <p class="tes-q" data-t="t1_q">Bastante didáctico, información precisa y organizada.</p>
+      <div class="tes-attr">
+        <span class="tes-name" data-t="t1_name">Juan Pablo Z.</span>
+        <span class="tes-role" data-t="t1_role">Diseñador multimedia · Quito</span>
+      </div>
+    </div>
+    <div class="tes-card">
+      <p class="tes-q" data-t="t2_q">Fácil, sin complicaciones. Real. Y 100% lo que necesitábamos para poder aterrizar todo y lograr que no sea solo un sueño.</p>
+      <div class="tes-attr">
+        <span class="tes-name" data-t="t2_name">Leonela Loor</span>
+        <span class="tes-role" data-t="t2_role">Empresaria ecommerce · Orlando, FL</span>
+      </div>
+    </div>
+    <div class="tes-card">
+      <p class="tes-q" data-t="t3_q">Fue una guía excelente para armar mi sistema de branding, comunicación de valor y reclutamiento de jóvenes futbolistas.</p>
+      <div class="tes-attr">
+        <span class="tes-name" data-t="t3_name">Esteban F.</span>
+        <span class="tes-role" data-t="t3_role">Headhunter de fútbol · Imbabura</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- CONTACT CARD -->
 <div class="contact-section" id="terminal" bis_skin_checked="1">
   <div class="section-hd" bis_skin_checked="1">
@@ -2036,7 +2080,7 @@ como herramienta de optimismo racional — no como adorno académico.</div>
 /*
 ================================================================================
   jfcarpio.com -- MAIN SCRIPT BLOCK
-  v1.141 · 2026-04-28 · JFC + Claude Sonnet 4.6
+  v1.142 · 2026-04-28 · JFC + Claude Sonnet 4.6
 ================================================================================
 
   REVEAL SYSTEM (js-rv):
@@ -2558,6 +2602,17 @@ var T={
     opt1_h:'Diagnostica tu negocio',
     opt2_h:'Entiende tu entorno',
     opt3_h:'Capacita a tus colaboradores',
+    tes_eye:'Lo que dicen clientes reales',
+    tes_title:'Resultados en contextos distintos',
+    t1_q:'Bastante didáctico, información precisa y organizada.',
+    t1_name:'Juan Pablo Z.',
+    t1_role:'Diseñador multimedia · Quito',
+    t2_q:'Fácil, sin complicaciones. Real. Y 100% lo que necesitábamos para poder aterrizar todo y lograr que no sea solo un sueño.',
+    t2_name:'Leonela Loor',
+    t2_role:'Empresaria ecommerce · Orlando, FL',
+    t3_q:'Fue una guía excelente para armar mi sistema de branding, comunicación de valor y reclutamiento de jóvenes futbolistas.',
+    t3_name:'Esteban F.',
+    t3_role:'Headhunter de fútbol · Imbabura',
     byline:'Economía con instituciones y empresas',
     tl_lbl:'Trayectoria', tl_title_a:'Dos temas persistentes: ', tl_title_b:'crecimiento económico y optimismo racional',
     tl1_t:'Growth OS — cuatro dashboards, un sistema completo',
@@ -2642,6 +2697,17 @@ var T={
     opt1_h:'Diagnose your business',
     opt2_h:'Understand your environment',
     opt3_h:'Train your team',
+    tes_eye:'What real clients say',
+    tes_title:'Results across different contexts',
+    t1_q:'Very didactic, precise and organized information.',
+    t1_name:'Juan Pablo Z.',
+    t1_role:'Multimedia designer · Quito',
+    t2_q:'Easy, no complications. Real. And 100% what we needed to land everything and make sure it was not just a dream.',
+    t2_name:'Leonela Loor',
+    t2_role:'Ecommerce entrepreneur · Orlando, FL',
+    t3_q:'An excellent guide for building my branding system, value communication, and recruitment of young soccer players.',
+    t3_name:'Esteban F.',
+    t3_role:'Soccer headhunter · Imbabura',
     cp_or:'They operate in a region and cultural space where the State changes the rules mid-game. Where taxes are high and bureaucratic hurdles even higher. Where regulations strangle instead of support. Where irresponsible government debt and spending create the short-termism that destroys any medium-term plan. And yet, they build. And yet, they grow.',
     byline:'Economics with institutions and enterprise',
     tl_lbl:'Track record', tl_title_a:'Two persistent themes: ', tl_title_b:'economic growth and rational optimism',
