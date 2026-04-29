@@ -322,7 +322,15 @@ button { border:none; background:none; font:inherit; }
   padding:80px 7% 56px;
   position:relative; overflow:hidden;
   border-bottom:1px solid rgba(232,160,32,.35);
-  background:#060E1D;
+  background:
+    linear-gradient(170deg,
+      rgba(255,255,255,.95) 0%,
+      rgba(255,255,255,.80) 38%,
+      rgba(255,255,255,.88) 68%,
+      rgba(255,255,255,.97) 100%),
+    url('https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-size:cover;
+  background-position:center 35%;
 }
 .hero::before {
   content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
@@ -378,8 +386,8 @@ button { border:none; background:none; font:inherit; }
 .hero-ctas{display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;gap:12px;margin-top:28px;}
 .hero-cta{display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;min-height:44px;background:#E86040;color:#FFFFFF;font-family:'Space Mono','Courier New',monospace;font-size:13px;font-weight:700;letter-spacing:.04em;padding:11px 22px;border-radius:3px;text-decoration:none;-webkit-transition:background .15s,-webkit-transform .15s;transition:background .15s,transform .15s;}
 .hero-cta:hover{background:#d04f30;-webkit-transform:translateY(-1px);transform:translateY(-1px);}
-.hero-cta-sec{display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;min-height:44px;color:#FFFFFF;font-family:'Space Mono','Courier New',monospace;font-size:13px;font-weight:700;letter-spacing:.04em;padding:11px 22px;border:1.5px solid rgba(255,255,255,.35);border-radius:3px;text-decoration:none;-webkit-transition:border-color .15s,color .15s;transition:border-color .15s,color .15s;}
-.hero-cta-sec:hover{border-color:#E8A020;color:#E8A020;}
+.hero-cta-sec{display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;min-height:44px;color:#060E1D;font-family:'Space Mono','Courier New',monospace;font-size:13px;font-weight:700;letter-spacing:.04em;padding:11px 22px;border:1.5px solid rgba(6,14,29,.4);border-radius:3px;text-decoration:none;-webkit-transition:border-color .15s,color .15s;transition:border-color .15s,color .15s;}
+.hero-cta-sec:hover{border-color:#E86040;color:#E86040;}
 @media(max-width:600px){.hero-ctas{-webkit-flex-direction:column;flex-direction:column;}.hero-cta,.hero-cta-sec{-webkit-justify-content:center;justify-content:center;text-align:center;}}
 @media(prefers-reduced-motion:reduce){.hero-cta,.hero-cta-sec{-webkit-transition:none;transition:none;}}
 /* v1.140 — 3 options strip */
