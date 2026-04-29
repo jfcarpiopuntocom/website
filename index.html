@@ -383,6 +383,13 @@ button { border:none; background:none; font:inherit; }
 .lw:nth-child(2) .li { -webkit-animation-delay:.30s; animation-delay:.30s; font-style:italic; color:#000000; }
 .lw:nth-child(3) .li { -webkit-animation-delay:.42s; animation-delay:.42s; font-style:normal; color:#000000; font-weight:600; }
 
+.hero-ctas{display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;gap:12px;margin-top:28px;}
+.hero-cta{display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;min-height:44px;background:#E86040;color:#FFFFFF;font-family:'Space Mono','Courier New',monospace;font-size:13px;font-weight:700;letter-spacing:.04em;padding:11px 22px;border-radius:3px;text-decoration:none;-webkit-transition:background .15s,-webkit-transform .15s;transition:background .15s,transform .15s;}
+.hero-cta:hover{background:#d04f30;-webkit-transform:translateY(-1px);transform:translateY(-1px);}
+.hero-cta-sec{display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;min-height:44px;color:#FFFFFF;font-family:'Space Mono','Courier New',monospace;font-size:13px;font-weight:700;letter-spacing:.04em;padding:11px 22px;border:1.5px solid rgba(255,255,255,.35);border-radius:3px;text-decoration:none;-webkit-transition:border-color .15s,color .15s;transition:border-color .15s,color .15s;}
+.hero-cta-sec:hover{border-color:#E8A020;color:#E8A020;}
+@media(max-width:600px){.hero-ctas{-webkit-flex-direction:column;flex-direction:column;}.hero-cta,.hero-cta-sec{-webkit-justify-content:center;justify-content:center;text-align:center;}}
+@media(prefers-reduced-motion:reduce){.hero-cta,.hero-cta-sec{-webkit-transition:none;transition:none;}}
 /* v1.1 — fluid connector line between hero and bento */
 .connector {
   position:relative; height:48px;
@@ -1626,6 +1633,10 @@ button { border:none; background:none; font:inherit; }
         <span class="lw"><span class="li" data-t="h1_l2">enfrenta dos batallas simultáneas: construir el negocio, y sobrevivir el entorno que lo complica.</span></span>
         <span class="lw"><span class="li"><strong><span data-t="h1_l3a">Aquí encontrarás </span><span style="color:#E8A020" data-t="h1_l3b">herramientas</span><span data-t="h1_l3c"> para enfrentar exitosamente ambas cosas.</span></strong></span></span>
       </h1>
+      <div class="hero-ctas">
+        <a href="#dashboards" class="hero-cta" data-t="cta_primary">Diagnostica tu negocio — Growth OS · $47 →</a>
+        <a href="#" onclick="openWA();return false;" class="hero-cta-sec" data-t="cta_sec">¿Decisión urgente? Escríbeme →</a>
+      </div>
     </div>
     <aside class="hero-aside" aria-hidden="true">
       <div class="hs-item" bis_skin_checked="1">
@@ -1824,6 +1835,7 @@ que con frecuencia no le favorece — regulaciones que asfixian, impuestos
 Estado.
       <strong data-t="cp1b">El optimismo racional no ignora eso. Lo analiza, lo mide y encuentra el camino de todas formas.</strong>
     </p>
+    <p class="copy-p" data-t="cp_or">No es optimismo de brochure. El optimismo racional parte de un dato empírico: los períodos de mayor libertad de intercambio produjeron los mayores saltos de prosperidad, incluso atravesando regulaciones, crisis y entornos hostiles. Para el empresario, eso significa una cosa concreta: el entorno adverso no es el final del análisis, es el principio. Quien lo lee mejor que sus competidores, encuentra el camino.</p>
     <p class="copy-p" data-t="cp2">Este sitio existe en la intersección 
 de dos objetivos: defender la empresa privada como el motor real del 
 progreso, y equipar al dueño de negocio con las herramientas de análisis
@@ -1997,7 +2009,7 @@ ayuda a redactarlo.</p>
 /*
 ================================================================================
   jfcarpio.com -- MAIN SCRIPT BLOCK
-  v1.130 · 2026-04-13 · JFC + Claude Sonnet 4.6
+  v1.137 · 2026-04-28 · JFC + Claude Sonnet 4.6
 ================================================================================
 
   REVEAL SYSTEM (js-rv):
@@ -2485,6 +2497,8 @@ var T={
     h1_l1a:'La expansión de un negocio en ', h1_l1b:'Latinoamérica',
     h1_l2:'enfrenta dos batallas simultáneas: construir el negocio, y sobrevivir el entorno que lo complica.',
     h1_l3a:'Aquí encontrarás ', h1_l3b:'herramientas', h1_l3c:' para enfrentar exitosamente ambas cosas.',
+    cta_primary:'Diagnostica tu negocio — Growth OS · $47 →',
+    cta_sec:'¿Decisión urgente? Escríbeme →',
     connector:'Recursos para tu negocio',
     bh_sub:'Empieza por lo que más necesitas', bh_hint:'5 secciones',
     ov_lbl:'jfcarpio.com — Navegar',
@@ -2505,6 +2519,7 @@ var T={
     p5_desc:'Libros, papers y columnas. El respaldo formal detrás de cada herramienta.', p5_tag:'Académico',
     cp1:'El empresario privado latinoamericano enfrenta dos batallas simultáneas: construir un negocio que funcione, y operar en un entorno que con frecuencia no le favorece — regulaciones que asfixian, impuestos que desincentivan, señales distorsionadas por la intervención del Estado.',
     cp1b:'El optimismo racional no ignora eso. Lo analiza, lo mide y encuentra el camino de todas formas.',
+    cp_or:'No es optimismo de brochure. El optimismo racional parte de un dato empírico: los períodos de mayor libertad de intercambio produjeron los mayores saltos de prosperidad, incluso atravesando regulaciones, crisis y entornos hostiles. Para el empresario, eso significa una cosa concreta: el entorno adverso no es el final del análisis, es el principio. Quien lo lee mejor que sus competidores, encuentra el camino.',
     cp2:'Este sitio existe en la intersección de dos objetivos: defender la empresa privada como el motor real del progreso, y equipar al dueño de negocio con las herramientas de análisis que normalmente solo tienen los economistas y los grandes despachos. Dashboards que diagnostican. Reportes que contextualizan. Talleres donde se trabaja con datos reales, no con casos hipotéticos.',
     cp3a:'',
     cp3b:'Es el resultado de instituciones que protegen la propiedad, mercados que coordinan sin coerción y empresas que arriesgan capital. Todo lo que publico aquí apunta a eso.',
@@ -2527,7 +2542,7 @@ var T={
     contact_sub:'Sobre tu negocio, el entorno, una métrica, una decisión.',
     wa_btn:'Escribir ahora',
     wa_btn_s:'WhatsApp',
-    wa_send:'WhatsApp',
+    wa_send:'Agenda una revisión de tus indicadores menos conocidos — 15 min, sin costo →',
     wa_draft:'Redactar pregunta',
     wa_confirm:'WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
     c_char_of:'/300',
@@ -2560,6 +2575,8 @@ var T={
     h1_l1a:'Expanding a business in ', h1_l1b:'Latin America',
     h1_l2:'faces two simultaneous battles: building the business, and surviving an environment that works against it.',
     h1_l3a:'Here you\'ll find ', h1_l3b:'tools', h1_l3c:' to tackle both.',
+    cta_primary:'Diagnose your business — Growth OS · $47 →',
+    cta_sec:'Urgent decision? Write to me →',
     connector:'Resources for your business',
     bh_sub:'Start with what you need most', bh_hint:'5 sections',
     ov1_t:'Dashboards',    ov1_sub:'Immediate diagnosis · Growth OS',
@@ -2584,6 +2601,7 @@ var T={
     cp3a:'Economic growth is not an accident.',
     cp3b:'It is the result of institutions that protect property, markets that coordinate without coercion, and enterprises that risk capital. Everything I publish here points toward that.',
     proof1:'direct clients', proof2:'research on Mengerian institutions', proof3:'years in the field', proof4:'ROI in emerging markets',
+    cp_or:'This isn't brochure optimism. Rational optimism starts from an empirical fact: the periods of greatest freedom of exchange produced the greatest leaps in prosperity, even through regulations, crises, and hostile environments. For the business owner, that means one concrete thing: an adverse environment is not the end of the analysis — it's the beginning. Whoever reads it better than their competitors finds the path.',
     byline:'Economics with institutions and enterprise',
     tl_lbl:'Track record', tl_title_a:'Two persistent themes: ', tl_title_b:'economic growth and rational optimism',
     tl1_t:'Growth OS — four dashboards, one complete system',
@@ -2602,7 +2620,7 @@ var T={
     contact_sub:'About your business, the environment, a metric, a decision.',
     wa_btn:'Write now',
     wa_btn_s:'WhatsApp',
-    wa_send:'WhatsApp',
+    wa_send:'Book a 15-min metrics review — no cost →',
     wa_draft:'Redactar pregunta',
     wa_confirm:'WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
     c_char_of:'/300',
