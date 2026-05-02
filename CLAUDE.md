@@ -55,6 +55,13 @@ Branch for feature work: `claude/high-contrast-white-design-VK5kk`. Base: `main`
 - Pexels CDN → `https://images.pexels.com/...` (unchanged)
 - **Pre-flight check:** After any git pull, grep for `src="[^h]` to catch relative/corrupted paths before editing
 
+### Browser-Saved HTML Files (CATASTROPHIC — FORBIDDEN — NEVER COMMIT)
+- **NEVER commit `index.html` if it was saved via browser "Save Page As"** — browsers append chrome-extension tags and URL-encoded directory names like `Juan%20Fernando...files/`
+- **Signature of browser-save:** contains `chrome-extension://`, `<!-- saved from url=`, URL-encoded paths, or multiple `<!DOCTYPE` declarations
+- **Prevention:** After any git pull, ALWAYS run: `grep -c "<!DOCTYPE" index.html` — should return exactly **1**, never more
+- **If found:** Kill the session. Do NOT edit. Revert to last clean commit. This is a landing page — any corruption breaks the entire site.
+- If you see multiple DOCTYPEs, duplication has occurred. DO NOT attempt to fix by editing. Revert immediately: `git reset --hard HEAD~1`
+
 ### i18n
 - Every translatable element: `data-t="key"` attribute
 - Strings: `var T = { es:{...}, en:{...} }` — both objects must have identical keys
