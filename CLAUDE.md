@@ -48,6 +48,13 @@ Branch for feature work: `claude/high-contrast-white-design-VK5kk`. Base: `main`
 - Only `.js-rv .reveal { opacity:0 }` is safe — never set `opacity:0` on `.reveal` bare
 - Never re-add inline `revEl.style.opacity='0'` pattern
 
+### Image Paths (CRITICAL — must always be absolute URLs)
+- `fotojfc.png` → `https://jfcarpio.com/fotojfc.png` (NEVER URL-encoded filenames)
+- `network-*.jpg` → `https://jfcarpio.com/network-*.jpg`
+- `og-*.png` → `https://jfcarpio.com/og-*.png`
+- Pexels CDN → `https://images.pexels.com/...` (unchanged)
+- **Pre-flight check:** After any git pull, grep for `src="[^h]` to catch relative/corrupted paths before editing
+
 ### i18n
 - Every translatable element: `data-t="key"` attribute
 - Strings: `var T = { es:{...}, en:{...} }` — both objects must have identical keys
