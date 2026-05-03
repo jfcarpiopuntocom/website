@@ -52,8 +52,21 @@ Branch for feature work: `claude/high-contrast-white-design-VK5kk`. Base: `main`
 - `fotojfc.png` → `https://jfcarpio.com/fotojfc.png` (NEVER URL-encoded filenames)
 - `network-*.jpg` → `https://jfcarpio.com/network-*.jpg`
 - `og-*.png` → `https://jfcarpio.com/og-*.png`
-- Pexels CDN → `https://images.pexels.com/...` (unchanged)
-- **Pre-flight check:** After any git pull, grep for `src="[^h]` to catch relative/corrupted paths before editing
+- Pexels CSS backgrounds → `https://images.pexels.com/photos/XXXXXX/pexels-photo-XXXXXX.jpeg?auto=compress&cs=tinysrgb&w=1600`
+- Pexels pan-cover img tags (5 section cards) — canonical URLs, DO NOT TOUCH:
+  - photo 590022  → `https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800`
+  - photo 1108101 → `https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800`
+  - photo 1181396 → `https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=800`
+  - photo 256541  → `https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&w=800`
+  - photo 29713916 → `https://images.pexels.com/photos/29713916/pexels-photo-29713916.jpeg?auto=compress&cs=tinysrgb&w=800`
+
+**PRE-FLIGHT — run BOTH after every git pull, before touching anything:**
+```bash
+grep -c "<!DOCTYPE" index.html          # must be exactly 1
+grep -c 'Juan%20Fernando' index.html    # must be exactly 0
+grep -c 'src="[^h]' index.html          # must be exactly 0 (catches relative/local paths)
+```
+If any check fails: STOP. Do not edit. Revert with `git reset --hard HEAD~1`.
 
 ### Browser-Saved HTML Files (CATASTROPHIC — FORBIDDEN — NEVER COMMIT)
 - **NEVER commit `index.html` if it was saved via browser "Save Page As"** — browsers append chrome-extension tags and URL-encoded directory names like `Juan%20Fernando...files/`
