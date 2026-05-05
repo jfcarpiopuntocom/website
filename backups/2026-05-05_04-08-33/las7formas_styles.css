@@ -1,5 +1,5 @@
 /* ============================================================
-   7 formas — La Escuela del Dinero · v1.4 · 2026-05-05
+   7 formas — La Escuela del Dinero · v1.3 · 2026-05-05
    Editorial confessional · cream, ink, oxblood
    Mobile-first, forces light, Safari-safe
    ============================================================ */
@@ -84,34 +84,6 @@ img { max-width: 100%; display: block; }
   display: block; height: 100%; width: 0%;
   background: var(--oxblood);
   transition: width 0.08s linear;
-}
-
-/* ============================ Skip link ============================ */
-.skip-link {
-  position: absolute;
-  top: 0;
-  left: 16px;
-  z-index: 60;
-  transform: translateY(-140%);
-  background: var(--ink);
-  color: var(--paper);
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 9px 12px;
-  border: 1px solid rgba(243,236,223,0.32);
-  transition: transform 0.18s ease;
-}
-.skip-link:focus,
-.skip-link:focus-visible {
-  transform: translateY(10px);
-  outline: 2px solid var(--gold);
-  outline-offset: 2px;
-}
-main:focus {
-  outline: none;
 }
 
 /* ============================ Masthead ============================ */
