@@ -1,5 +1,5 @@
 /* ============================================================
-   7 formas — La Escuela del Dinero · v1.3 · 2026-05-05
+   7 formas — La Escuela del Dinero · v1.2 · 2026-05-05
    Editorial confessional · cream, ink, oxblood
    Mobile-first, forces light, Safari-safe
    ============================================================ */
@@ -1315,11 +1315,11 @@ img { max-width: 100%; display: block; }
   border-bottom-color: var(--ink);
 }
 .foot__advisory {
-  max-width: 460px;
+  max-width: 760px;
   margin: 28px 0 0;
   padding-top: 18px;
   border-top: 1px solid rgba(201,189,165,0.72);
-  opacity: 0.68;
+  opacity: 0.72;
 }
 .foot__advisory figcaption {
   display: flex;
