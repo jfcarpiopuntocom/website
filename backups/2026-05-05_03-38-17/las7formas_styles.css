@@ -1272,43 +1272,6 @@ img { max-width: 100%; display: block; }
   margin: 0 0 12px;
   max-width: 62ch;
 }
-.foot__mission {
-  max-width: 68ch;
-  margin: 24px 0 18px;
-  padding: 18px 0;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-}
-.foot__mission p {
-  margin: 0;
-}
-.foot__mission p + p {
-  margin-top: 10px;
-}
-.foot__mission strong {
-  color: var(--ink);
-  font-weight: 600;
-}
-.foot__social {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 18px;
-  margin: 0 0 22px;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.foot__social a {
-  color: var(--oxblood);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-}
-.foot__social a:hover {
-  color: var(--ink);
-  border-bottom-color: var(--ink);
-}
 .foot__line--mute {
   color: var(--ink-mute);
   font-size: 12.5px;
