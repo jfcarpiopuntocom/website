@@ -1,5 +1,5 @@
 /* ============================================================
-   7 formas — La Escuela del Dinero · v1.151 · 2026-05-06
+   7 formas — La Escuela del Dinero · v1.149 · 2026-05-06
    Editorial confessional · cream, ink, oxblood
    Mobile-first, forces light, Safari-safe
    ============================================================ */
@@ -1479,19 +1479,6 @@ main:focus {
   margin: 24px 0 0;
   padding-top: 18px;
   border-top: 1px solid var(--rule);
-}
-
-/* ============================ Inline editorial cross-links ============================ */
-.inline-link {
-  color: var(--oxblood);
-  border-bottom: 1px solid var(--oxblood);
-  padding-bottom: 1px;
-  transition: color .15s ease, border-color .15s ease;
-}
-.inline-link:hover,
-.inline-link:focus-visible {
-  color: var(--ink);
-  border-bottom-color: var(--ink);
 }
 
 /* ============================ WhatsApp floating button ============================ */
