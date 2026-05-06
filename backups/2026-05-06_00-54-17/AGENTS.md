@@ -1,5 +1,5 @@
 # AGENTS.md — jfcarpio.com
-v1.146 · 2026-05-06 · Author: JFC + Codex
+v1.144 · 2026-05-06 · Author: JFC + Codex
 
 ---
 
@@ -101,7 +101,7 @@ If any check fails: STOP. Do not edit. Revert with `git reset --hard HEAD~1`.
 
 ## Versioning
 
-Current: **v1.146**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
+Current: **v1.144**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
 
 ---
 

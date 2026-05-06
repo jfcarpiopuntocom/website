@@ -38,7 +38,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@600;700;900&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -77,7 +77,7 @@
 </script>
 
 <style>
-/* jfcarpio.com/talleres v1.146 - 2026-05-06 */
+/* jfcarpio.com/talleres v1.144 - 2026-05-06 */
 /* ─── ROOT — light only, anti iOS auto-dark ─── */
 :root {
   color-scheme: light only;
@@ -90,26 +90,17 @@
   --green: #28ECAA;
   --rule: rgba(255,255,255,.10);
   --card: #0B1729;
-  --muted: #CCCCCC;
-  --serif: "Fraunces", "Instrument Serif", Georgia, "Times New Roman", serif;
-  --display: "Instrument Serif", "Fraunces", Georgia, serif;
-  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
-html {
-  background: var(--bg);
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
+html { background: var(--bg); scroll-behavior: smooth; }
 
 body {
   background: var(--bg) !important;
   color: var(--ink) !important;
   -webkit-text-fill-color: var(--ink) !important;
-  font-family: var(--serif);
+  font-family: 'Lora', Georgia, serif;
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -148,7 +139,7 @@ a { text-decoration: none; color: inherit; }
   border-bottom: 1px solid var(--rule);
   padding: 14px 22px;
   display: flex; align-items: center; justify-content: space-between;
-  font-family: var(--mono);
+  font-family: 'Space Mono', monospace;
   font-size: 13px;
   letter-spacing: .08em;
 }
@@ -174,29 +165,21 @@ a { text-decoration: none; color: inherit; }
 
 /* ─── WRAP ─── */
 .wrap {
-  width: 100%;
-  max-width: 1120px;
+  max-width: 760px;
   margin: 0 auto;
-  padding: 0 24px 80px;
+  padding: 0 22px 80px;
 }
 
 /* ─── HERO ─── */
-.hero {
-  width: 100%;
-  max-width: 840px;
-  padding: 56px 0 40px;
-}
+.hero { padding: 56px 0 40px; }
 
 .eyebrow {
   display: inline-block;
-  max-width: 100%;
-  font-family: var(--sans);
+  font-family: 'Space Mono', monospace;
   font-size: 13px;
-  font-weight: 600;
-  line-height: 1.35;
+  font-weight: 700;
   letter-spacing: .22em;
   text-transform: uppercase;
-  overflow-wrap: anywhere;
   color: var(--green) !important;
   -webkit-text-fill-color: var(--green) !important;
   border: 1px solid var(--green);
@@ -206,44 +189,34 @@ a { text-decoration: none; color: inherit; }
 }
 
 .h1 {
-  font-family: var(--display);
-  font-size: 31px;
-  line-height: 1.02;
-  font-weight: 400;
-  letter-spacing: 0;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 30px;
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: -.01em;
   color: var(--ink) !important;
   -webkit-text-fill-color: var(--ink) !important;
   margin-bottom: 24px;
   font-style: italic;
-  max-width: 100%;
-  overflow-wrap: break-word;
-  hyphens: auto;
-}
-.h1 span,
-.h1 em {
-  display: block;
 }
 .h1 em {
   color: var(--orange) !important;
   -webkit-text-fill-color: var(--orange) !important;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .lede {
-  font-family: var(--serif);
-  font-size: 17px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 18px;
   line-height: 1.55;
   color: var(--ink) !important;
   -webkit-text-fill-color: var(--ink) !important;
   margin-bottom: 22px;
-  max-width: 100%;
-  overflow-wrap: break-word;
-  hyphens: auto;
 }
 
 .byline {
-  font-family: var(--mono);
+  font-family: 'Space Mono', monospace;
   font-size: 13px;
   letter-spacing: .14em;
   color: var(--ink-2) !important;
@@ -261,17 +234,13 @@ a { text-decoration: none; color: inherit; }
 /* ─── VISUAL GRID ─── */
 .visual-grid {
   display: grid;
-  gap: 16px;
-  margin: 0 0 64px;
-  min-width: 0;
-  max-width: 100%;
+  gap: 14px;
+  margin: 0 0 56px;
 }
 .visual-grid figure {
   position: relative;
   overflow: hidden;
-  min-width: 0;
-  max-width: 100%;
-  min-height: 240px;
+  min-height: 210px;
   aspect-ratio: 4 / 3;
   border: 1px solid var(--rule);
   border-radius: 4px;
@@ -279,14 +248,7 @@ a { text-decoration: none; color: inherit; }
     linear-gradient(135deg, rgba(232,96,64,.28), rgba(40,236,170,.16)),
     var(--card);
 }
-.visual-grid .visual-lead { min-height: 360px; }
-.visual-grid figure::after {
-  content: "";
-  position: absolute;
-  inset: 32% 0 0;
-  background: linear-gradient(180deg, rgba(6,14,29,0), rgba(6,14,29,.88));
-  pointer-events: none;
-}
+.visual-grid figure:first-child { aspect-ratio: 16 / 10; }
 .visual-grid img {
   display: block;
   width: 100%;
@@ -296,69 +258,24 @@ a { text-decoration: none; color: inherit; }
 }
 .visual-grid figcaption {
   position: absolute;
-  z-index: 1;
-  left: clamp(14px, 3vw, 24px);
-  right: clamp(14px, 3vw, 24px);
-  bottom: clamp(14px, 3vw, 22px);
-  display: grid;
-  gap: 5px;
-  max-width: 620px;
-  font-family: var(--display);
-  line-height: 1.2;
-  letter-spacing: 0;
-  text-transform: none;
-  background: linear-gradient(90deg, rgba(6,14,29,.94), rgba(6,14,29,.74));
-  border-left: 3px solid var(--orange);
-  box-shadow: 0 18px 40px rgba(0,0,0,.26);
-  padding: 12px 14px;
-  backdrop-filter: blur(10px);
-  overflow-wrap: break-word;
-}
-.visual-kicker {
-  font-family: var(--sans);
-  font-size: .82rem;
-  line-height: 1.2;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--green) !important;
-  -webkit-text-fill-color: var(--green) !important;
-}
-.visual-grid figcaption strong {
-  font-family: var(--display);
-  font-size: 1.65rem;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-}
-.visual-copy {
-  font-family: var(--mono);
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  font-family: 'Space Mono', monospace;
   font-size: .82rem;
   line-height: 1.35;
-  color: var(--muted) !important;
-  -webkit-text-fill-color: var(--muted) !important;
-  overflow-wrap: anywhere;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  background: rgba(6,14,29,.82);
+  border-left: 2px solid var(--orange);
+  padding: 8px 10px;
 }
 .visual-grid figure:nth-child(2) figcaption,
 .visual-grid figure:nth-child(4) figcaption {
   border-left-color: var(--green);
 }
-.visual-grid figure:nth-child(2) .visual-kicker,
-.visual-grid figure:nth-child(4) .visual-kicker {
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-}
-
-.visual-workshop img,
-.visual-enterprise img,
-.visual-virtual img { object-position: center 35%; }
 
 /* ─── TESIS ─── */
-.tesis {
-  max-width: 780px;
-}
 .tesis p {
   font-size: 17px;
   line-height: 1.75;
@@ -378,58 +295,6 @@ a { text-decoration: none; color: inherit; }
   font-style: italic;
 }
 
-/* ─── PROGRAM MEDIA ─── */
-.program-media {
-  display: grid;
-  gap: 12px;
-  margin: 0 0 26px;
-  min-width: 0;
-  max-width: 100%;
-}
-.program-media figure {
-  position: relative;
-  overflow: hidden;
-  min-width: 0;
-  max-width: 100%;
-  min-height: 190px;
-  aspect-ratio: 16 / 10;
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  background: var(--bg);
-}
-.program-media img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(.95) contrast(1.03);
-}
-.program-media figure::after {
-  content: "";
-  position: absolute;
-  inset: 45% 0 0;
-  background: linear-gradient(180deg, rgba(6,14,29,0), rgba(6,14,29,.82));
-}
-.program-media figcaption {
-  position: absolute;
-  z-index: 1;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  font-family: var(--mono);
-  font-size: .82rem;
-  line-height: 1.35;
-  letter-spacing: .06em;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  background: rgba(6,14,29,.82);
-  border-left: 2px solid var(--orange);
-  padding: 8px 10px;
-}
-.ventana.ep .program-media figcaption {
-  border-left-color: var(--green);
-}
-
 /* ─── VENTANA (taller card) ─── */
 .ventana {
   background: var(--card);
@@ -441,7 +306,7 @@ a { text-decoration: none; color: inherit; }
 .ventana.ep { border-left-color: var(--green); }
 
 .ventana-label {
-  font-family: var(--sans);
+  font-family: 'Space Mono', monospace;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: .14em;
@@ -457,15 +322,14 @@ a { text-decoration: none; color: inherit; }
 }
 
 .h2 {
-  font-family: var(--display);
-  font-size: 34px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.05;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
   color: var(--ink) !important;
   -webkit-text-fill-color: var(--ink) !important;
   margin-bottom: 14px;
-  letter-spacing: 0;
+  letter-spacing: -.005em;
 }
 
 .ventana-lede {
@@ -487,7 +351,7 @@ a { text-decoration: none; color: inherit; }
 }
 .layers li:last-child { border-bottom: 1px solid var(--rule); }
 .layer-tag {
-  font-family: var(--mono);
+  font-family: 'Space Mono', monospace;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: .12em;
@@ -511,7 +375,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .format {
-  font-family: var(--mono);
+  font-family: 'Space Mono', monospace;
   font-size: 13px;
   line-height: 1.7;
   letter-spacing: .04em;
@@ -534,7 +398,7 @@ a { text-decoration: none; color: inherit; }
 .ensayo-link {
   display: inline-flex; align-items: center; gap: 8px;
   min-height: 44px;
-  font-family: var(--sans);
+  font-family: 'Space Mono', monospace;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: .12em;
@@ -560,18 +424,17 @@ a { text-decoration: none; color: inherit; }
   padding: 36px 0;
 }
 .stat-num {
-  font-family: var(--display);
-  font-size: 72px;
-  font-style: italic;
-  font-weight: 400;
+  font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 900;
   line-height: 1;
-  letter-spacing: 0;
+  letter-spacing: -.02em;
   color: var(--orange) !important;
   -webkit-text-fill-color: var(--orange) !important;
   margin-bottom: 10px;
 }
 .stat-desc {
-  font-family: var(--serif);
+  font-family: 'Lora', Georgia, serif;
   font-size: 16px;
   line-height: 1.5;
   color: var(--ink) !important;
@@ -579,7 +442,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 10px;
 }
 .stat-src {
-  font-family: var(--mono);
+  font-family: 'Space Mono', monospace;
   font-size: 13px;
   letter-spacing: .06em;
   line-height: 1.5;
@@ -597,17 +460,16 @@ a { text-decoration: none; color: inherit; }
   border-left: 3px solid var(--orange);
   padding: 18px 22px;
   margin: 32px 0;
-  font-family: var(--display);
   font-style: italic;
-  font-size: 26px;
-  line-height: 1.24;
+  font-size: 17px;
+  line-height: 1.55;
   color: var(--ink) !important;
   -webkit-text-fill-color: var(--ink) !important;
 }
 .pull-attr {
   display: block;
   margin-top: 10px;
-  font-family: var(--mono);
+  font-family: 'Space Mono', monospace;
   font-size: 13px;
   font-style: normal;
   letter-spacing: .08em;
@@ -617,7 +479,6 @@ a { text-decoration: none; color: inherit; }
 
 /* ─── BIO ─── */
 .bio p {
-  max-width: 780px;
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 8px;
@@ -632,7 +493,6 @@ a { text-decoration: none; color: inherit; }
 
 /* ─── CTA ─── */
 .cta {
-  max-width: 900px;
   background: var(--card);
   border: 1px solid var(--rule);
   border-radius: 4px;
@@ -640,7 +500,7 @@ a { text-decoration: none; color: inherit; }
   text-align: left;
 }
 .cta-eyebrow {
-  font-family: var(--sans);
+  font-family: 'Space Mono', monospace;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: .22em;
@@ -651,10 +511,9 @@ a { text-decoration: none; color: inherit; }
   display: block;
 }
 .cta p {
-  font-family: var(--display);
-  font-size: 28px;
-  font-style: italic;
-  line-height: 1.18;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 19px;
+  line-height: 1.5;
   margin-bottom: 24px;
   color: var(--ink) !important;
   -webkit-text-fill-color: var(--ink) !important;
@@ -667,7 +526,7 @@ a { text-decoration: none; color: inherit; }
   background: var(--orange);
   color: #FFFFFF !important;
   -webkit-text-fill-color: #FFFFFF !important;
-  font-family: var(--sans);
+  font-family: 'Space Mono', monospace;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: .08em;
@@ -691,7 +550,7 @@ a { text-decoration: none; color: inherit; }
   padding: 28px 22px;
   display: flex; flex-wrap: wrap; gap: 18px;
   align-items: center; justify-content: space-between;
-  font-family: var(--mono);
+  font-family: 'Space Mono', monospace;
   font-size: 13px;
   letter-spacing: .08em;
   color: var(--ink-2) !important;
@@ -708,111 +567,31 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ─── RESPONSIVE — progressive enhancement ─── */
-@media (max-width: 599px) {
-  .wrap {
-    width: calc(100vw - 56px);
-    max-width: calc(100vw - 56px);
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
 @media (min-width: 600px) {
   .wrap { padding: 0 36px 100px; }
   .hero { padding: 80px 0 56px; }
-  .h1 { font-size: 64px; }
+  .h1 { font-size: 40px; }
   .lede { font-size: 20px; }
-  .h2 { font-size: 44px; }
+  .h2 { font-size: 28px; }
   .ventana { padding: 36px 32px; }
   .visual-grid {
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 145px;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-    margin-bottom: 76px;
+    margin-bottom: 64px;
   }
-  .visual-grid figure {
-    min-height: 0;
-    aspect-ratio: auto;
-  }
-  .visual-lead {
-    grid-column: 1 / span 7;
-    grid-row: span 3;
-  }
-  .visual-insight {
-    grid-column: 8 / span 5;
-    grid-row: span 2;
-  }
-  .visual-numbers {
-    grid-column: 8 / span 5;
-    grid-row: span 1;
-  }
-  .visual-workshop {
-    grid-column: 1 / span 4;
-    grid-row: span 2;
-  }
-  .visual-enterprise {
-    grid-column: 5 / span 4;
-    grid-row: span 2;
-  }
-  .visual-virtual {
-    grid-column: 9 / span 4;
-    grid-row: span 2;
-  }
-  .visual-grid figcaption {
-    max-width: min(560px, calc(100% - 28px));
-  }
-  .visual-lead figcaption strong {
-    font-size: 2.35rem;
-  }
-  .visual-workshop figcaption,
-  .visual-enterprise figcaption,
-  .visual-virtual figcaption {
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    padding: 10px 12px;
-  }
-  .visual-workshop .visual-copy,
-  .visual-enterprise .visual-copy,
-  .visual-virtual .visual-copy {
-    display: none;
-  }
-  .program-media {
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
-    align-items: stretch;
-  }
-  .program-media figure:first-child {
-    min-height: 250px;
-  }
-  .program-media figure:last-child {
-    min-height: 250px;
+  .visual-grid figure:first-child {
+    grid-column: span 2;
+    aspect-ratio: 16 / 8;
   }
   .layers li { grid-template-columns: 130px 1fr; gap: 16px; padding: 18px 0; }
   .cta { padding: 44px 36px; }
-  .cta p { font-size: 36px; }
+  .cta p { font-size: 21px; }
   .stats { grid-template-columns: repeat(3, 1fr); gap: 36px; padding: 44px 0; }
-  .stat-num { font-size: 86px; }
+  .stat-num { font-size: 64px; }
 }
 
 @media (min-width: 900px) {
-  .h1 { font-size: 84px; }
-  .h2 { font-size: 52px; }
-  .visual-grid { grid-auto-rows: 166px; }
-  .ventana {
-    display: grid;
-    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
-    column-gap: 34px;
-    align-items: start;
-  }
-  .ventana-label,
-  .ventana .h2,
-  .ventana-lede,
-  .program-media,
-  .ensayo-link {
-    grid-column: 1 / -1;
-  }
-  .layers { grid-column: 1 / -1; }
-  .format { grid-column: span 1; }
+  .h1 { font-size: 46px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -867,41 +646,28 @@ a { text-decoration: none; color: inherit; }
   <!-- ─── HERO ─── -->
   <section class="hero">
     <span class="eyebrow">Talleres corporativos de cambio rápido</span>
-    <h1 class="h1">
-      <span>Si tu última capacitación</span>
-      <span>corporativa no cambió nada,</span>
-      <span>no es culpa del proveedor.</span>
-      <em>Operó en el nivel equivocado del cerebro.</em>
-    </h1>
+    <h1 class="h1">Si tu última capacitación corporativa no cambió nada, no es la culpa del proveedor. <em>Operó en el nivel equivocado del cerebro.</em></h1>
     <p class="lede">Notas sobre por qué casi toda capacitación produce satisfacción de aula sin movimiento real — y un marco neurológico (MindOS, Dr. Paul Dobranski) que sí lo produce. Dos talleres de dos horas, gemelos e independientes, diseñados para entrega virtual a equipos hispanohablantes y bilingües; formato físico in-house disponible para programas especiales bajo cotización.</p>
     <p class="byline">J.F. Carpio · Economista · 2026</p>
   </section>
 
   <!-- ─── VISUALES ─── -->
   <section class="visual-grid" aria-label="Talleres corporativos y decisiones empresariales">
-    <figure class="visual-lead">
-      <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1400" width="1400" height="933" loading="eager" decoding="async" alt="Acuerdo profesional al cierre de una conversación ejecutiva">
-      <figcaption><span class="visual-kicker">Cambio observable</span><strong>Que el lunes se note.</strong><span class="visual-copy">La meta no es gustar. Es decidir distinto.</span></figcaption>
+    <figure>
+      <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1400" width="1400" height="933" loading="eager" decoding="async" alt="Equipo ejecutivo trabajando en una mesa de decisión">
+      <figcaption>Decisiones reales, no satisfacción de aula</figcaption>
     </figure>
-    <figure class="visual-insight">
-      <img src="https://images.pexels.com/photos/4226122/pexels-photo-4226122.jpeg?auto=compress&cs=tinysrgb&w=1000" width="1000" height="667" loading="lazy" decoding="async" alt="Profesional concentrada en una sesión virtual de trabajo">
-      <figcaption><span class="visual-kicker">Bienestar financiero</span><strong>El dinero ocupa espacio mental.</strong><span class="visual-copy">Menos ansiedad privada. Más atención disponible para trabajar.</span></figcaption>
-    </figure>
-    <figure class="visual-numbers">
-      <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Gráficos y datos financieros sobre una mesa de trabajo">
-      <figcaption><span class="visual-kicker">Números propios</span><strong>No es motivación. Es aritmética.</strong><span class="visual-copy">Lo ve en sus propios números.</span></figcaption>
-    </figure>
-    <figure class="visual-workshop">
+    <figure>
       <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Participantes revisando notas durante una sesión de trabajo">
-      <figcaption><span class="visual-kicker">Taller, no charla</span><strong>Trabajo en vivo.</strong><span class="visual-copy">Diagnóstico, números y decisiones con fecha.</span></figcaption>
+      <figcaption>Dinero personal: comportamiento antes que consigna</figcaption>
     </figure>
-    <figure class="visual-enterprise">
+    <figure>
+      <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Gráficos y datos financieros sobre una mesa de trabajo">
+      <figcaption>Aritmética aplicada a decisiones concretas</figcaption>
+    </figure>
+    <figure>
       <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Facilitador guiando una conversación empresarial">
-      <figcaption><span class="visual-kicker">Empresa privada</span><strong>Vista desde adentro.</strong><span class="visual-copy">Del relato heredado a la creación real de valor.</span></figcaption>
-    </figure>
-    <figure class="visual-virtual">
-      <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Equipo corporativo colaborando en una mesa con computadoras">
-      <figcaption><span class="visual-kicker">Virtual o in-house</span><strong>Diseñado para equipos reales.</strong><span class="visual-copy">Hispanohablantes, bilingües y organizaciones distribuidas.</span></figcaption>
+      <figcaption>Empresa privada: cambiar el marco mental</figcaption>
     </figure>
   </section>
 
@@ -941,17 +707,6 @@ a { text-decoration: none; color: inherit; }
     <h2 class="h2">Dinero &amp; Finanzas Personales</h2>
     <p class="ventana-lede">El participante llega con un sistema operativo financiero heredado: creencias formadas antes de su primer sueldo y nunca examinadas en serio.</p>
 
-    <div class="program-media" aria-label="Dinero y finanzas personales en el taller">
-      <figure>
-        <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=1000" width="1000" height="667" loading="lazy" decoding="async" alt="Datos financieros y gráficos de desempeño sobre una pantalla">
-        <figcaption>El problema deja de ser una sensación y se vuelve un mapa.</figcaption>
-      </figure>
-      <figure>
-        <img src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Persona revisando números personales con una libreta">
-        <figcaption>Cada decisión queda ligada a fecha, monto y comportamiento.</figcaption>
-      </figure>
-    </div>
-
     <ol class="layers">
       <li>
         <span class="layer-tag">Boundary</span>
@@ -984,17 +739,6 @@ a { text-decoration: none; color: inherit; }
     <span class="ventana-label">Taller 2 · 2 horas · Independiente</span>
     <h2 class="h2">Apreciación de la Empresa Privada</h2>
     <p class="ventana-lede">El sistema operativo heredado, en la mayoría de casos, es un frame win-lose: el empleador gana porque el empleado pierde. Llega antes que el contrato. Nunca se examina con aritmética real.</p>
-
-    <div class="program-media" aria-label="Apreciación de la empresa privada en el taller">
-      <figure>
-        <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=1000" width="1000" height="667" loading="lazy" decoding="async" alt="Equipo empresarial trabajando junto a una pizarra">
-        <figcaption>Del resentimiento abstracto al ledger completo de creación de valor.</figcaption>
-      </figure>
-      <figure>
-        <img src="https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Profesionales colaborando alrededor de una mesa de trabajo">
-        <figcaption>La cooperación deja de sonar bonita y se vuelve visible.</figcaption>
-      </figure>
-    </div>
 
     <ol class="layers">
       <li>
