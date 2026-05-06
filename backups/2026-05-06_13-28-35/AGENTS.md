@@ -1,5 +1,5 @@
 # AGENTS.md — jfcarpio.com
-v1.153 · 2026-05-06 · Author: JFC + Codex
+v1.149 · 2026-05-06 · Author: JFC + Codex
 
 ---
 
@@ -99,28 +99,9 @@ If any check fails: STOP. Do not edit. Revert with `git reset --hard HEAD~1`.
 
 ---
 
-## Deslop / Anti-AI-Slop Copy Rules
-
-Sources checked 2026-05-06: Google Search Central helpful content + generative-AI guidance, FTC Endorsement Guides, plus internal editorial/UX heuristics for web copy.
-
-- Treat AI output as unvetted source material. Verify every fact, statistic, quote, attribution, image caption, and named framework before publishing.
-- Never invent quotes. If paraphrasing a thinker, label it as a contemporary summary or interpretation.
-- Every serious claim needs at least one anchor: first-hand JFC experience, a named source, a concrete number, a buyer situation, or a visible example.
-- Remove generic AI cadence: "In today's fast-paced world", "unlock your potential", "game-changing", "transformative solutions", "comprehensive", "seamless", "empower", and similar plastic language.
-- Replace abstract nouns with observed behavior: what the buyer sees Monday morning, what changes in a meeting, what number appears, what decision is made.
-- Keep a clear human point of view. JFC copy should sound like a specific economist-instructor with taste, judgment, humor, and stakes, not a neutral brochure.
-- One paragraph, one job. If a paragraph only sounds polished but adds no proof, tension, contrast, mechanism, or next step, cut or rewrite it.
-- Make pages scannable without becoming thin: strong headings, short paragraphs, captions that carry meaning, and mobile images only when they add information.
-- Do not over-disclose AI use in sales copy unless needed, but do preserve accountability: author, expertise, sources, dates, and contact path must be clear.
-- Final pass question: would JFC proudly say this sentence to a real CEO, family, or classroom, out loud, without sounding fake?
-- Testimonials may be anonymized or composite only when they summarize real client/student reactions from real workshops or programs. Do not invent a persona, company, metric, or outcome. If a quote merges several people, keep it internally marked as a real composite/synthesis and avoid naming a specific person unless JFC has permission.
-- For US/global funnels, FTC-safe testimonial rule: endorsements must be truthful, not misleading, and not imply typical results unless JFC can substantiate those results or clearly explain what a buyer can generally expect.
-
----
-
 ## Versioning
 
-Current: **v1.153**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
+Current: **v1.149**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
 
 ---
 

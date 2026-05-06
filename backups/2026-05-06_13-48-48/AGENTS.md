@@ -1,5 +1,5 @@
 # AGENTS.md — jfcarpio.com
-v1.153 · 2026-05-06 · Author: JFC + Codex
+v1.149 · 2026-05-06 · Author: JFC + Codex
 
 ---
 
@@ -101,7 +101,7 @@ If any check fails: STOP. Do not edit. Revert with `git reset --hard HEAD~1`.
 
 ## Deslop / Anti-AI-Slop Copy Rules
 
-Sources checked 2026-05-06: Google Search Central helpful content + generative-AI guidance, FTC Endorsement Guides, plus internal editorial/UX heuristics for web copy.
+Sources checked 2026-05-06: Google Search Central helpful content + gen-AI guidance, AP generative-AI standards, NN/g web writing and mobile-image guidance.
 
 - Treat AI output as unvetted source material. Verify every fact, statistic, quote, attribution, image caption, and named framework before publishing.
 - Never invent quotes. If paraphrasing a thinker, label it as a contemporary summary or interpretation.
@@ -120,7 +120,7 @@ Sources checked 2026-05-06: Google Search Central helpful content + generative-A
 
 ## Versioning
 
-Current: **v1.153**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
+Current: **v1.149**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
 
 ---
 
