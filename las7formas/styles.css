@@ -1445,11 +1445,10 @@ main:focus {
   border-bottom-color: var(--ink);
 }
 .foot__advisory {
-  max-width: 460px;
+  max-width: 575px;
   margin: 28px 0 0;
   padding-top: 18px;
   border-top: 1px solid rgba(201,189,165,0.72);
-  opacity: 0.68;
 }
 .foot__advisory figcaption {
   display: flex;
@@ -1470,7 +1469,6 @@ main:focus {
 .foot__advisory img {
   width: 100%;
   border: 1px solid rgba(27,23,20,0.14);
-  filter: saturate(0.88) contrast(0.94);
 }
 .foot__sig {
   font-family: var(--mono);
