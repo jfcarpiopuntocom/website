@@ -1,5 +1,5 @@
 # AGENTS.md — jfcarpio.com
-v1.139 · 2026-05-05 · Author: JFC + Codex
+v1.131 · 2026-04-24 · Author: JFC + Codex
 
 ---
 
@@ -55,10 +55,6 @@ Branch for feature work: `Codex/high-contrast-white-design-VK5kk`. Base: `main`.
 - Touch targets: 44px minimum
 - Content max-width: 1300px
 
-### Las7formas Curriculum Bullets (CRITICAL)
-- The timestamped video bullets in `las7formas/index.html` inside `<ul class="curr__list" id="currList">` are JFC-approved source copy.
-- Never edit, reorder, paraphrase, retimestamp, or "improve" those `data-video`, `.curr__txt`, or `.curr__ts` entries unless JFC explicitly asks for that exact block in the same turn.
-
 ### Animation (CRITICAL — breaking these hides content permanently)
 - Reveal gate: `document.documentElement.className+=' js-rv'` must stay in script
 - Only `.js-rv .reveal { opacity:0 }` is safe — never set `opacity:0` on `.reveal` bare
@@ -100,7 +96,7 @@ If any check fails: STOP. Do not edit. Revert with `git reset --hard HEAD~1`.
 
 ## Versioning
 
-Current: **v1.139**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
+Current: **v1.131**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
 
 ---
 

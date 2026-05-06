@@ -806,11 +806,10 @@ main:focus {
   .authors { grid-template-columns: 1fr 1fr; }
 }
 
-.author { display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
+.author { display: flex; flex-direction: column; gap: 22px; }
 .author__portrait {
   position: relative;
-  width: min(100%, 260px);
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 5;
   background: var(--paper-deep);
   overflow: hidden;
 }
@@ -821,7 +820,7 @@ main:focus {
   filter: contrast(0.92) saturate(0.4) sepia(0.25);
 }
 .author__portrait--wide {
-  aspect-ratio: 1;
+  aspect-ratio: 16 / 9;
 }
 .author__portrait--wide img {
   object-position: center center;
