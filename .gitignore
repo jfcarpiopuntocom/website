@@ -12,6 +12,9 @@ index_20*.html
 *.BACKUP*.html
 *.BACKUP*html
 
+# Codex session backups
+codex-backups/
+
 # Local tooling
 entities.json
 fix_encoding.py
