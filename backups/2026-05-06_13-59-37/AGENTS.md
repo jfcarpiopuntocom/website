@@ -1,5 +1,5 @@
 # AGENTS.md — jfcarpio.com
-v1.154 · 2026-05-06 · Author: JFC + Codex
+v1.153 · 2026-05-06 · Author: JFC + Codex
 
 ---
 
@@ -120,7 +120,7 @@ Sources checked 2026-05-06: Google Search Central helpful content + generative-A
 
 ## Versioning
 
-Current: **v1.154**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
+Current: **v1.153**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
 
 ---
 

@@ -1,5 +1,5 @@
 /* ============================================================
-   7 formas — La Escuela del Dinero · v1.154 · 2026-05-06
+   7 formas — La Escuela del Dinero · v1.149 · 2026-05-06
    Editorial confessional · cream, ink, oxblood
    Mobile-first, forces light, Safari-safe
    ============================================================ */
@@ -322,74 +322,6 @@ main:focus {
 .band:hover > img { transform: scale(1.02); }
 .band--hero > img { height: clamp(280px, 50vh, 560px); }
 .band--med > img { height: clamp(200px, 32vh, 360px); }
-
-.band--quad {
-  min-height: clamp(260px, 42vh, 460px);
-  background:
-    radial-gradient(ellipse at center, rgba(122, 31, 26, 0.16), transparent 58%),
-    var(--paper-deep);
-}
-.band__quad {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
-  background: var(--ink);
-}
-.band__tile {
-  min-width: 0;
-  min-height: 0;
-  background-color: var(--paper-deep);
-  background-size: cover;
-  background-position: center;
-  filter: contrast(0.94) saturate(0.52) sepia(0.22) brightness(0.82);
-  transform: scale(1.01);
-  transition: transform 1.4s ease, filter 1.4s ease;
-}
-.band--quad:hover .band__tile {
-  transform: scale(1.035);
-  filter: contrast(0.98) saturate(0.58) sepia(0.2) brightness(0.88);
-}
-.band__tile--analysis {
-  background-image:
-    linear-gradient(rgba(27,23,20,0.08), rgba(27,23,20,0.18)),
-    url("https://jfcarpio.com/las7formas/img/pexels-590016-w1800.jpg");
-  background-position: center 52%;
-}
-.band__tile--saving {
-  background-image:
-    linear-gradient(rgba(27,23,20,0.08), rgba(27,23,20,0.2)),
-    url("https://jfcarpio.com/las7formas/img/pexels-3943723-w1800.jpg");
-  background-position: center 58%;
-}
-.band__tile--cash {
-  background-image:
-    linear-gradient(rgba(27,23,20,0.1), rgba(27,23,20,0.22)),
-    url("https://jfcarpio.com/las7formas/img/pexels-164527-w1800.jpg");
-  background-position: center 50%;
-}
-.band__tile--documents {
-  background-image:
-    linear-gradient(rgba(27,23,20,0.08), rgba(27,23,20,0.24)),
-    url("https://jfcarpio.com/las7formas/img/pexels-8927648-w1800.jpg");
-  background-position: center 58%;
-}
-
-@media (min-width: 760px) {
-  .band--quad { min-height: clamp(300px, 42vh, 500px); }
-  .band__quad {
-    grid-template-columns: 1.2fr 0.9fr 0.9fr;
-    grid-template-rows: repeat(2, 1fr);
-  }
-  .band__tile--analysis {
-    grid-row: 1 / span 2;
-    background-position: center 50%;
-  }
-  .band__tile--documents {
-    grid-column: 2 / span 2;
-  }
-}
 
 /* ============================ World context ============================ */
 .section--world {
@@ -1513,7 +1445,7 @@ main:focus {
   border-bottom-color: var(--ink);
 }
 .foot__advisory {
-  max-width: 430px;
+  max-width: 575px;
   margin: 28px 0 0;
   padding-top: 18px;
   border-top: 1px solid rgba(201,189,165,0.72);
@@ -1536,11 +1468,7 @@ main:focus {
 }
 .foot__advisory img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 1042 / 475;
-  object-fit: contain;
   border: 1px solid rgba(27,23,20,0.14);
-  background: #1b1b1b;
 }
 .foot__sig {
   font-family: var(--mono);
@@ -1551,19 +1479,6 @@ main:focus {
   margin: 24px 0 0;
   padding-top: 18px;
   border-top: 1px solid var(--rule);
-}
-
-/* ============================ Inline editorial cross-links ============================ */
-.inline-link {
-  color: var(--oxblood);
-  border-bottom: 1px solid var(--oxblood);
-  padding-bottom: 1px;
-  transition: color .15s ease, border-color .15s ease;
-}
-.inline-link:hover,
-.inline-link:focus-visible {
-  color: var(--ink);
-  border-bottom-color: var(--ink);
 }
 
 /* ============================ WhatsApp floating button ============================ */
