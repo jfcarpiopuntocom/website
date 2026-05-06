@@ -1,5 +1,5 @@
 /* ============================================================
-   7 formas — La Escuela del Dinero · v1.142 · 2026-05-05
+   7 formas — La Escuela del Dinero · v1.141 · 2026-05-05
    Editorial confessional · cream, ink, oxblood
    Mobile-first, forces light, Safari-safe
    ============================================================ */
@@ -679,9 +679,6 @@ main:focus {
   position: relative;
   height: clamp(380px, 70vh, 600px);
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 50% 44%, rgba(122, 31, 26, 0.22), transparent 54%),
-    linear-gradient(135deg, #241a16 0%, #6f5f4d 48%, #1b1714 100%);
 }
 .bleed--quote img {
   position: absolute; inset: 0;
@@ -689,54 +686,9 @@ main:focus {
   object-fit: cover;
   filter: contrast(0.9) saturate(0.4) sepia(0.3) brightness(0.55);
 }
-.bleed__composite {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
-  background:
-    linear-gradient(135deg, rgba(27, 23, 20, 0.9), rgba(122, 31, 26, 0.5)),
-    repeating-linear-gradient(45deg, rgba(243, 236, 223, 0.06) 0 1px, transparent 1px 14px);
-}
-.bleed__tile {
-  min-width: 0;
-  min-height: 0;
-  background-color: #3b3028;
-  background-position: center;
-  background-size: cover;
-  filter: contrast(0.92) saturate(0.46) sepia(0.28) brightness(0.58);
-  transform: scale(1.01);
-}
-.bleed__tile--1 {
-  background-image:
-    linear-gradient(rgba(27, 23, 20, 0.12), rgba(27, 23, 20, 0.2)),
-    url("https://images.pexels.com/photos/7735783/pexels-photo-7735783.jpeg?auto=compress&cs=tinysrgb&w=900");
-  background-position: center 42%;
-}
-.bleed__tile--2 {
-  background-image:
-    linear-gradient(rgba(27, 23, 20, 0.08), rgba(27, 23, 20, 0.22)),
-    url("https://images.pexels.com/photos/6964105/pexels-photo-6964105.jpeg?auto=compress&cs=tinysrgb&w=900");
-  background-position: center 48%;
-}
-.bleed__tile--3 {
-  background-image:
-    linear-gradient(rgba(27, 23, 20, 0.12), rgba(27, 23, 20, 0.24)),
-    url("https://images.pexels.com/photos/6964363/pexels-photo-6964363.jpeg?auto=compress&cs=tinysrgb&w=900");
-  background-position: center 54%;
-}
-.bleed__tile--4 {
-  background-image:
-    linear-gradient(rgba(27, 23, 20, 0.1), rgba(27, 23, 20, 0.24)),
-    url("https://images.pexels.com/photos/6963033/pexels-photo-6963033.jpeg?auto=compress&cs=tinysrgb&w=900");
-  background-position: center 50%;
-}
 .bleed__veil {
   position: absolute; inset: 0;
-  background:
-    linear-gradient(90deg, rgba(27, 23, 20, 0.86) 0%, rgba(27, 23, 20, 0.58) 48%, rgba(27, 23, 20, 0.8) 100%),
-    radial-gradient(ellipse at center, rgba(122, 31, 26, 0.14) 0%, rgba(27,23,20,0.76) 100%);
+  background: radial-gradient(ellipse at center, rgba(27,23,20,0.3) 0%, rgba(27,23,20,0.75) 100%);
 }
 .bleed__inner {
   position: absolute; inset: 0;
@@ -1596,7 +1548,7 @@ main:focus {
 
 /* iOS: prevent over-shrinking and ensure cover behavior */
 @supports (-webkit-touch-callout: none) {
-  .bleed > img, .pullquote img, .bleed--quote img, .bleed__composite { transform: translateZ(0); }
+  .bleed > img, .pullquote img, .bleed--quote img { transform: translateZ(0); }
 }
 
 /* ============================================================
