@@ -711,25 +711,25 @@ main:focus {
 .bleed__tile--1 {
   background-image:
     linear-gradient(rgba(27, 23, 20, 0.12), rgba(27, 23, 20, 0.2)),
-    url("https://images.pexels.com/photos/7735783/pexels-photo-7735783.jpeg?auto=compress&cs=tinysrgb&w=900");
+    url("https://images.pexels.com/photos/4968392/pexels-photo-4968392.jpeg?auto=compress&cs=tinysrgb&w=900");
   background-position: center 42%;
 }
 .bleed__tile--2 {
   background-image:
     linear-gradient(rgba(27, 23, 20, 0.08), rgba(27, 23, 20, 0.22)),
-    url("https://images.pexels.com/photos/6964105/pexels-photo-6964105.jpeg?auto=compress&cs=tinysrgb&w=900");
+    url("https://images.pexels.com/photos/5900182/pexels-photo-5900182.jpeg?auto=compress&cs=tinysrgb&w=900");
   background-position: center 48%;
 }
 .bleed__tile--3 {
   background-image:
     linear-gradient(rgba(27, 23, 20, 0.12), rgba(27, 23, 20, 0.24)),
-    url("https://images.pexels.com/photos/6964363/pexels-photo-6964363.jpeg?auto=compress&cs=tinysrgb&w=900");
+    url("https://images.pexels.com/photos/7735718/pexels-photo-7735718.jpeg?auto=compress&cs=tinysrgb&w=900");
   background-position: center 54%;
 }
 .bleed__tile--4 {
   background-image:
     linear-gradient(rgba(27, 23, 20, 0.1), rgba(27, 23, 20, 0.24)),
-    url("https://images.pexels.com/photos/6963033/pexels-photo-6963033.jpeg?auto=compress&cs=tinysrgb&w=900");
+    url("https://images.pexels.com/photos/6963927/pexels-photo-6963927.jpeg?auto=compress&cs=tinysrgb&w=900");
   background-position: center 50%;
 }
 .bleed__veil {
