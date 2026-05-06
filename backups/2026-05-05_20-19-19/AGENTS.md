@@ -1,5 +1,5 @@
 # AGENTS.md — jfcarpio.com
-v1.141 · 2026-05-05 · Author: JFC + Codex
+v1.139 · 2026-05-05 · Author: JFC + Codex
 
 ---
 
@@ -23,7 +23,6 @@ Branch for feature work: `Codex/high-contrast-white-design-VK5kk`. Base: `main`.
 - Before every file change, create timestamped backups to the second.
 - Before every `git pull`, create timestamped backups to the second of relevant working files and any modified files.
 - Before every `git push`, create timestamped backups to the second of all files being pushed.
-- When JFC or another tool/agent changes GitHub, the newest pulled state is authoritative. Always back up, pull, pre-flight, and read the latest code before judging or editing.
 - After JFC approves changes, default to completing the full loop: backup, stage specific files, commit, and push so the site is live. Only pause before pushing if there is a real blocker, destructive ambiguity, failing pre-flight, or JFC explicitly asks not to push.
 - Backup directories/files may accumulate locally and in GitHub. Do not delete or "clean up" them unless JFC explicitly asks.
 - Required local backup location: `backups/YYYY-MM-DD_HH-mm-ss/` inside the project root.
@@ -101,7 +100,7 @@ If any check fails: STOP. Do not edit. Revert with `git reset --hard HEAD~1`.
 
 ## Versioning
 
-Current: **v1.141**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
+Current: **v1.139**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
 
 ---
 

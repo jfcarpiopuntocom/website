@@ -1,12 +1,12 @@
-# AGENTS.md — jfcarpio.com
-v1.141 · 2026-05-05 · Author: JFC + Codex
+# CLAUDE.md — jfcarpio.com
+v1.131 · 2026-04-24 · Author: JFC + Claude
 
 ---
 
 ## Project
 
 Static website + Cloudflare Workers deployed at jfcarpio.com.
-Branch for feature work: `Codex/high-contrast-white-design-VK5kk`. Base: `main`.
+Branch for feature work: `claude/high-contrast-white-design-VK5kk`. Base: `main`.
 
 **Key files:**
 - `index.html` — Dark theme homepage (current production)
@@ -15,19 +15,6 @@ Branch for feature work: `Codex/high-contrast-white-design-VK5kk`. Base: `main`.
 - `network-*.jpg`, `fotojfc.png`, `og-jfcarpio.png` — Assets
 
 **Timestamped backups are intentional and must never be removed.**
-
----
-
-## Backup Protocol
-
-- Before every file change, create timestamped backups to the second.
-- Before every `git pull`, create timestamped backups to the second of relevant working files and any modified files.
-- Before every `git push`, create timestamped backups to the second of all files being pushed.
-- When JFC or another tool/agent changes GitHub, the newest pulled state is authoritative. Always back up, pull, pre-flight, and read the latest code before judging or editing.
-- After JFC approves changes, default to completing the full loop: backup, stage specific files, commit, and push so the site is live. Only pause before pushing if there is a real blocker, destructive ambiguity, failing pre-flight, or JFC explicitly asks not to push.
-- Backup directories/files may accumulate locally and in GitHub. Do not delete or "clean up" them unless JFC explicitly asks.
-- Required local backup location: `backups/YYYY-MM-DD_HH-mm-ss/` inside the project root.
-- For `las7formas`, back up at least `las7formas/index.html`, `las7formas/styles.css`, `las7formas/app.js`, and any image/assets touched in that change.
 
 ---
 
@@ -55,10 +42,6 @@ Branch for feature work: `Codex/high-contrast-white-design-VK5kk`. Base: `main`.
 - Mobile-first: base styles target 320px, enhance up with `min-width`
 - Touch targets: 44px minimum
 - Content max-width: 1300px
-
-### Las7formas Curriculum Bullets (CRITICAL)
-- The timestamped video bullets in `las7formas/index.html` inside `<ul class="curr__list" id="currList">` are JFC-approved source copy.
-- Never edit, reorder, paraphrase, retimestamp, or "improve" those `data-video`, `.curr__txt`, or `.curr__ts` entries unless JFC explicitly asks for that exact block in the same turn.
 
 ### Animation (CRITICAL — breaking these hides content permanently)
 - Reveal gate: `document.documentElement.className+=' js-rv'` must stay in script
@@ -101,7 +84,7 @@ If any check fails: STOP. Do not edit. Revert with `git reset --hard HEAD~1`.
 
 ## Versioning
 
-Current: **v1.141**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
+Current: **v1.131**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
 
 ---
 
@@ -121,15 +104,16 @@ vX.XXX: Short description of what changed
 - Why bullet
 - Why bullet
 
-https://Codex.ai/code/session_[ID]
+https://claude.ai/code/session_[ID]
 ```
 
 ---
 
-## Workflow rules for Codex
+## Workflow rules for Claude
 
 1. **Propose before acting.** Present the plan, wait for JFC approval, then execute.
 2. **JFC's word is final** unless a request is genuinely technically impossible.
 3. **No unsolicited refactoring.** Only change what was asked.
 4. **No removing backups.** Timestamped files are intentional safety nets.
 5. **Commit after each version bump**, not in bulk.
+6. **Scope promise is a hard contract.** When a plan lists specific files to be touched, ONLY those files may be touched — no exceptions, even if additional files are functionally necessary. If a file outside the stated scope needs to change, STOP. Do not touch it. Tell JFC, get explicit approval, then proceed. Violating a stated scope after JFC approved the plan is the same as acting without approval.
