@@ -103,7 +103,7 @@
 </script>
 
 <style>
-/* jfcarpio.com/workshops v1.153 - 2026-05-06 */
+/* jfcarpio.com/workshops v1.159 - 2026-05-07 */
 /* ─── ROOT — light only, anti iOS auto-dark ─── */
 :root {
   color-scheme: light only;
@@ -825,6 +825,8 @@ a { text-decoration: none; color: inherit; }
     min-height: 250px;
   }
   .layers li { grid-template-columns: 130px 1fr; gap: 16px; padding: 18px 0; }
+  .bio-flex { grid-template-columns: 96px 1fr; gap: 24px; }
+  .speaker-bar { grid-template-columns: repeat(3, 1fr); gap: 28px; }
   .cta { padding: 44px 36px; }
   .cta p { font-size: 36px; }
   .stats { grid-template-columns: repeat(3, 1fr); gap: 36px; padding: 44px 0; }
@@ -849,6 +851,236 @@ a { text-decoration: none; color: inherit; }
   }
   .layers { grid-column: 1 / -1; }
   .format { grid-column: span 1; }
+}
+
+/* ─── PAIN HOOK ─── */
+.pain-hook {
+  background: var(--card);
+  border-left: 3px solid var(--orange);
+  border-radius: 4px;
+  padding: 24px 22px;
+  margin: 32px 0 0;
+  max-width: 780px;
+}
+.pain-hook-lead {
+  font-family: var(--display);
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.22;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 14px;
+}
+.pain-signals {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+}
+.pain-signals li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  padding: 5px 0 5px 22px;
+  position: relative;
+}
+.pain-signals li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--orange) !important;
+  -webkit-text-fill-color: var(--orange) !important;
+  font-style: normal;
+}
+.pain-hook-out {
+  font-family: var(--mono);
+  font-size: .86rem;
+  letter-spacing: .04em;
+  line-height: 1.6;
+  color: var(--muted) !important;
+  -webkit-text-fill-color: var(--muted) !important;
+}
+
+/* ─── SOCIAL PROOF ─── */
+.social-proof { max-width: 860px; }
+.social-proof > .eyebrow { margin-bottom: 18px; }
+.social-proof > .h2 { margin-bottom: 0; }
+.speaker-bar {
+  display: grid;
+  gap: 20px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 28px 0;
+  margin-top: 20px;
+}
+.speaker-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+}
+.speaker-num {
+  font-family: var(--display);
+  font-size: 2.8rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--green) !important;
+  -webkit-text-fill-color: var(--green) !important;
+  min-width: 72px;
+}
+.speaker-desc {
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  padding-top: 6px;
+}
+.speaker-desc em {
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  font-style: italic;
+}
+
+/* ─── BIO WITH PHOTO ─── */
+.bio-flex {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.bio-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--orange);
+  display: block;
+}
+
+/* ─── PRICING RACK ─── */
+.pricing-rack {
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+.price-anchor {
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.price-anchor-label {
+  font-family: var(--mono);
+  font-size: .82rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted) !important;
+  -webkit-text-fill-color: var(--muted) !important;
+}
+.price-anchor-val {
+  font-family: var(--display);
+  font-size: 28px;
+  font-style: italic;
+  color: var(--muted) !important;
+  -webkit-text-fill-color: var(--muted) !important;
+  text-decoration: line-through;
+}
+.price-anchor-desc {
+  font-family: var(--serif);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted) !important;
+  -webkit-text-fill-color: var(--muted) !important;
+}
+.price-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.price-opt {
+  padding: 16px 18px;
+  border-right: 1px solid var(--rule);
+}
+.price-opt:last-child { border-right: none; }
+.price-opt-name {
+  display: block;
+  font-family: var(--mono);
+  font-size: .82rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted) !important;
+  -webkit-text-fill-color: var(--muted) !important;
+  margin-bottom: 6px;
+}
+.price-opt-val {
+  display: block;
+  font-family: var(--display);
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 6px;
+}
+.price-opt.featured .price-opt-val {
+  color: var(--orange) !important;
+  -webkit-text-fill-color: var(--orange) !important;
+}
+.price-opt-desc {
+  display: block;
+  font-family: var(--serif);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted) !important;
+  -webkit-text-fill-color: var(--muted) !important;
+}
+.price-guarantee {
+  font-family: var(--mono);
+  font-size: .86rem;
+  letter-spacing: .03em;
+  line-height: 1.55;
+  color: var(--green) !important;
+  -webkit-text-fill-color: var(--green) !important;
+  border-top: 1px solid var(--rule);
+  padding: 12px 18px;
+  margin: 0;
+}
+
+/* ─── CTA BUTTONS ─── */
+.cta-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.cta-btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 48px;
+  background: transparent;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 12px 22px;
+  border-radius: 3px;
+  border: 1px solid var(--rule);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.cta-btn-secondary:hover { border-color: var(--ink); transform: translateY(-1px); }
+.cta-btn-secondary::after {
+  content: '→';
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -886,6 +1118,16 @@ a { text-decoration: none; color: inherit; }
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
   }
+  .speaker-num { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+  .price-anchor-label, .price-anchor-val, .price-anchor-desc,
+  .price-opt-name, .price-opt-desc, .pain-hook-out {
+    color: var(--muted) !important;
+    -webkit-text-fill-color: var(--muted) !important;
+  }
+  .price-opt.featured .price-opt-val { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+  .price-guarantee { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+  .cta-btn-secondary { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+  .cta-btn-secondary::after { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
 }
 </style>
 </head>
@@ -912,6 +1154,18 @@ a { text-decoration: none; color: inherit; }
     <p class="lede">The problem is not that the team did not listen. The training entered through the wrong layer: information placed on top of intact beliefs. These are two separate workshops with two different problems and two different returns: one strengthens the participant's financial life; the other changes how they read private enterprise, salary, risk and capital.</p>
     <p class="byline">J.F. Carpio · Economic and business researcher · 2026</p>
   </section>
+
+  <!-- ─── SIGNALS — path for executives unaware of the problem ─── -->
+  <div class="pain-hook" role="note" aria-label="Signs the problem is already present">
+    <p class="pain-hook-lead">Does your team have the problem without having named it yet?</p>
+    <ul class="pain-signals">
+      <li>Visible effort does not translate into concrete results.</li>
+      <li>Paychecks arrive, but family financial decisions keep getting postponed.</li>
+      <li>People comply, but do not take care of what is not their own.</li>
+      <li>Post-training enthusiasm lasts two weeks and then everything goes back to normal.</li>
+    </ul>
+    <p class="pain-hook-out">If any of these sentences clicks, the problem is in the layer underneath, not in the visible behavior. That is exactly what these workshops address.</p>
+  </div>
 
   <!-- ─── MODULE MAP ─── -->
   <section class="module-map" aria-label="Two standalone workshops with separate returns">
@@ -1074,11 +1328,49 @@ a { text-decoration: none; color: inherit; }
 
   <hr class="rule">
 
+  <!-- ─── SOCIAL PROOF ─── -->
+  <section class="social-proof" aria-label="Client and audience experiences">
+    <span class="eyebrow">Who has been through here</span>
+    <h2 class="h2">Three instances. <em>One consistent pattern.</em></h2>
+
+    <blockquote class="pull" style="border-left-color:var(--green)">
+      "Very good experience. People gave me very positive feedback. The audio logo became much clearer: we had it as an idea, but it wasn't clear yet. Works well for brokers, insurers and almost any business with an active sales operation."
+      <span class="pull-attr">— Fernando Hallo · Top-50 insurance broker, Quito · Ecuador · 2024</span>
+    </blockquote>
+
+    <blockquote class="pull">
+      "500 people trained in one morning on emotional stress management using neuroscience techniques."
+      <span class="pull-attr">— Corporate training evaluation · Mutualista Pichincha · Coord.: Arianna Cevallos · Quito, 2017</span>
+    </blockquote>
+
+    <div class="speaker-bar" aria-label="International speaker track record">
+      <div class="speaker-item">
+        <span class="speaker-num">3,000</span>
+        <span class="speaker-desc">attendees · <em>Forum da Liberdade</em> · Porto Alegre, Brazil · 2014</span>
+      </div>
+      <div class="speaker-item">
+        <span class="speaker-num">PFS</span>
+        <span class="speaker-desc">Invited speaker · <em>Property &amp; Freedom Society</em> · Bodrum, Turkey · 2021</span>
+      </div>
+      <div class="speaker-item">
+        <span class="speaker-num">4,800+</span>
+        <span class="speaker-desc">students over 14 years as Economics professor · USFQ · Quito</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
   <!-- ─── BIO ─── -->
   <section class="bio">
-    <p><strong>Juan Fernando Carpio.</strong> Economic and business researcher in the Austrian-school tradition applied to private enterprise and institutions. Quito, Ecuador.</p>
-    <p>Corporate trainer and invited speaker with training experience in three Ecuadorian cities, Brazil and Turkey. Academic author and consultant on private enterprise, money, capital and institutions.</p>
-    <p>More at <a href="/">jfcarpio.com</a> · Publications, reports and dashboards.</p>
+    <div class="bio-flex">
+      <img src="https://jfcarpio.com/fotojfc.png" alt="Juan Fernando Carpio" class="bio-photo" width="96" height="96" loading="lazy">
+      <div class="bio-text">
+        <p><strong>Juan Fernando Carpio.</strong> Researcher and trainer in small and mid-size businesses as an independent consultant. Former Economics professor at USFQ (4,800+ students over 14 years). Quito, Ecuador.</p>
+        <p>Corporate trainer and invited speaker with experience in three Ecuadorian cities, Brazil and Turkey. Author of <em>10 Lecciones de Economía</em> and consultant on private enterprise, money, capital and institutions.</p>
+        <p>More at <a href="/">jfcarpio.com</a> · Publications, reports and dashboards.</p>
+      </div>
+    </div>
   </section>
 
   <hr class="rule">
@@ -1087,7 +1379,30 @@ a { text-decoration: none; color: inherit; }
   <section class="cta">
     <span class="cta-eyebrow">If you want to talk</span>
     <p>If this touches a real conversation inside your company, let's discuss which module has the better ROI now: personal and family finance, appreciation of private enterprise, or a sequence with both.</p>
-    <button class="cta-btn" type="button" data-wa>Let's talk on WhatsApp</button>
+    <div class="pricing-rack">
+      <div class="price-anchor">
+        <span class="price-anchor-label">Comparable corporate consulting</span>
+        <span class="price-anchor-val">$3,000+</span>
+        <span class="price-anchor-desc">typical cost of a day with a speaker or specialist consultant on similar topics</span>
+      </div>
+      <div class="price-options">
+        <div class="price-opt">
+          <span class="price-opt-name">One module</span>
+          <span class="price-opt-val">$1,200</span>
+          <span class="price-opt-desc">2 hours · Module A or B · corporate group</span>
+        </div>
+        <div class="price-opt featured">
+          <span class="price-opt-name">Both modules</span>
+          <span class="price-opt-val">$1,800</span>
+          <span class="price-opt-desc">4 hours · Modules A + B · corporate group</span>
+        </div>
+      </div>
+      <div class="price-guarantee">Guarantee: if no observable change is seen in the team, the second session is at no cost.</div>
+    </div>
+    <div class="cta-btns">
+      <button class="cta-btn" type="button" data-wa>Let's talk on WhatsApp</button>
+      <a href="https://calendly.com/jfcarpio/5minutos" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">Book 5 minutes</a>
+    </div>
     <noscript><p><a href="mailto:jf@jfcarpio.com?subject=Corporate%20workshops">Email me about corporate workshops</a></p></noscript>
   </section>
 
