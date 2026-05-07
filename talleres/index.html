@@ -233,7 +233,7 @@ a { text-decoration: none; color: inherit; }
 
 .h1 {
   font-family: var(--display);
-  font-size: 31px;
+  font-size: 29px;
   line-height: 1.02;
   font-weight: 400;
   letter-spacing: 0;
@@ -242,8 +242,10 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 24px;
   font-style: italic;
   max-width: 100%;
-  overflow-wrap: break-word;
-  hyphens: auto;
+  overflow-wrap: normal;
+  word-break: normal;
+  -webkit-hyphens: none;
+  hyphens: none;
 }
 .h1 span,
 .h1 em {
