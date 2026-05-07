@@ -299,7 +299,7 @@ a { text-decoration: none; color: inherit; }
   overflow: hidden;
   min-width: 0;
   max-width: 100%;
-  min-height: 240px;
+  min-height: 0;
   aspect-ratio: 4 / 3;
   border: 1px solid var(--rule);
   border-radius: 4px;
@@ -307,40 +307,19 @@ a { text-decoration: none; color: inherit; }
     linear-gradient(135deg, rgba(232,96,64,.28), rgba(40,236,170,.16)),
     var(--card);
 }
-.visual-grid .visual-lead { min-height: 360px; }
+.visual-grid .visual-lead { aspect-ratio: 4 / 5; }
 .visual-grid figure::after {
-  content: "";
-  position: absolute;
-  inset: 32% 0 0;
-  background: linear-gradient(180deg, rgba(6,14,29,0), rgba(6,14,29,.88));
-  pointer-events: none;
+  display: none;
 }
 .visual-grid img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(.92) contrast(1.04);
+  filter: none;
 }
 .visual-grid figcaption {
-  position: absolute;
-  z-index: 1;
-  left: clamp(14px, 3vw, 24px);
-  right: clamp(14px, 3vw, 24px);
-  bottom: clamp(14px, 3vw, 22px);
-  display: grid;
-  gap: 5px;
-  max-width: 620px;
-  font-family: var(--display);
-  line-height: 1.2;
-  letter-spacing: 0;
-  text-transform: none;
-  background: linear-gradient(90deg, rgba(6,14,29,.94), rgba(6,14,29,.74));
-  border-left: 3px solid var(--orange);
-  box-shadow: 0 18px 40px rgba(0,0,0,.26);
-  padding: 12px 14px;
-  backdrop-filter: blur(10px);
-  overflow-wrap: break-word;
+  display: none;
 }
 .visual-kicker {
   font-family: var(--sans);
@@ -419,8 +398,8 @@ a { text-decoration: none; color: inherit; }
   overflow: hidden;
   min-width: 0;
   max-width: 100%;
-  min-height: 190px;
-  aspect-ratio: 16 / 10;
+  min-height: 0;
+  aspect-ratio: 4 / 3;
   border: 1px solid var(--rule);
   border-radius: 4px;
   background: var(--bg);
@@ -430,29 +409,13 @@ a { text-decoration: none; color: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(.95) contrast(1.03);
+  filter: none;
 }
 .program-media figure::after {
-  content: "";
-  position: absolute;
-  inset: 45% 0 0;
-  background: linear-gradient(180deg, rgba(6,14,29,0), rgba(6,14,29,.82));
+  display: none;
 }
 .program-media figcaption {
-  position: absolute;
-  z-index: 1;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  font-family: var(--mono);
-  font-size: .82rem;
-  line-height: 1.35;
-  letter-spacing: .06em;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  background: rgba(6,14,29,.82);
-  border-left: 2px solid var(--orange);
-  padding: 8px 10px;
+  display: none;
 }
 .ventana.ep .program-media figcaption {
   border-left-color: var(--green);
@@ -925,34 +888,34 @@ a { text-decoration: none; color: inherit; }
       <span>no es culpa del proveedor.</span>
       <em>Operó en el nivel equivocado del cerebro.</em>
     </h1>
-    <p class="lede">Notas sobre por qué casi toda capacitación produce satisfacción de aula sin movimiento real — y un marco neurológico (MindOS, Dr. Paul Dobranski) que sí lo produce. Dos talleres de dos horas, gemelos e independientes, diseñados para entrega virtual a equipos hispanohablantes y bilingües; formato físico in-house disponible para programas especiales bajo cotización.</p>
-    <p class="byline">J.F. Carpio · Economista · 2026</p>
+    <p class="lede">El problema no es que el equipo no escuchó. Es que la capacitación entró por la capa equivocada: información encima de creencias intactas. Aquí el recorrido es táctico: detectar el marco heredado, hacerlo visible en conducta, darle aritmética real y cerrar con decisiones que se ejecutan en siete días.</p>
+    <p class="byline">J.F. Carpio · Investigador empresarial y económico · 2026</p>
   </section>
 
   <!-- ─── VISUALES ─── -->
   <section class="visual-grid" aria-label="Talleres corporativos y decisiones empresariales">
     <figure class="visual-lead">
-      <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1400" srcset="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1400 1400w" sizes="(min-width: 900px) 42vw, (min-width: 600px) 58vw, 100vw" width="1400" height="933" loading="eager" fetchpriority="high" decoding="async" alt="Acuerdo profesional al cierre de una conversación ejecutiva">
+      <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400" srcset="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w, https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=2200 2200w" sizes="(min-width: 900px) 42vw, (min-width: 600px) 58vw, 100vw" width="1400" height="933" loading="eager" fetchpriority="high" decoding="async" alt="Acuerdo profesional al cierre de una conversación ejecutiva">
       <figcaption><span class="visual-kicker">No más teatro</span><strong>Que el próximo lunes cambie una decisión.</strong><span class="visual-copy">Si el aula no llega al trabajo, fue entretenimiento caro.</span></figcaption>
     </figure>
     <figure class="visual-insight">
-      <img src="https://images.pexels.com/photos/4226122/pexels-photo-4226122.jpeg?auto=compress&cs=tinysrgb&w=1000" srcset="https://images.pexels.com/photos/4226122/pexels-photo-4226122.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/4226122/pexels-photo-4226122.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/4226122/pexels-photo-4226122.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(min-width: 900px) 34vw, (min-width: 600px) 42vw, 100vw" width="1000" height="667" loading="lazy" decoding="async" alt="Profesional concentrada en una sesión virtual de trabajo">
+      <img src="https://images.pexels.com/photos/4226122/pexels-photo-4226122.jpeg?auto=compress&cs=tinysrgb&q=90&w=1000" srcset="https://images.pexels.com/photos/4226122/pexels-photo-4226122.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/4226122/pexels-photo-4226122.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w, https://images.pexels.com/photos/4226122/pexels-photo-4226122.jpeg?auto=compress&cs=tinysrgb&q=90&w=1800 1800w" sizes="(min-width: 900px) 34vw, (min-width: 600px) 42vw, 100vw" width="1000" height="667" loading="lazy" decoding="async" alt="Profesional concentrada en una sesión virtual de trabajo">
       <figcaption><span class="visual-kicker">Fuga invisible</span><strong>La ansiedad trabaja de 9 a 5.</strong><span class="visual-copy">Se nota en atención, rotación y criterio.</span></figcaption>
     </figure>
     <figure class="visual-numbers">
-      <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(min-width: 900px) 34vw, (min-width: 600px) 42vw, 100vw" width="900" height="600" loading="lazy" decoding="async" alt="Gráficos y datos financieros sobre una mesa de trabajo">
+      <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" srcset="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w, https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&q=90&w=1800 1800w" sizes="(min-width: 900px) 34vw, (min-width: 600px) 42vw, 100vw" width="900" height="600" loading="lazy" decoding="async" alt="Gráficos y datos financieros sobre una mesa de trabajo">
       <figcaption><span class="visual-kicker">Aritmética propia</span><strong>La calculadora vence a la consigna.</strong><span class="visual-copy">Cuando lo ve en sus números, deja de ser consejo.</span></figcaption>
     </figure>
     <figure class="visual-workshop">
-      <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(min-width: 900px) 28vw, (min-width: 600px) 33vw, 100vw" width="900" height="600" loading="lazy" decoding="async" alt="Participantes revisando notas durante una sesión de trabajo">
+      <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" srcset="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w, https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&q=90&w=1800 1800w" sizes="(min-width: 900px) 28vw, (min-width: 600px) 33vw, 100vw" width="900" height="600" loading="lazy" decoding="async" alt="Participantes revisando notas durante una sesión de trabajo">
       <figcaption><span class="visual-kicker">Taller real</span><strong>No miran slides: hacen el diagnóstico.</strong><span class="visual-copy">Mapa, número, decisión y fecha.</span></figcaption>
     </figure>
     <figure class="visual-enterprise">
-      <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(min-width: 900px) 28vw, (min-width: 600px) 33vw, 100vw" width="900" height="600" loading="lazy" decoding="async" alt="Facilitador guiando una conversación empresarial">
+      <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" srcset="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w, https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&q=90&w=1800 1800w" sizes="(min-width: 900px) 28vw, (min-width: 600px) 33vw, 100vw" width="900" height="600" loading="lazy" decoding="async" alt="Facilitador guiando una conversación empresarial">
       <figcaption><span class="visual-kicker">Empresa privada</span><strong>De “ellos” a entender el sistema.</strong><span class="visual-copy">Capital, riesgo, productividad y cooperación en un solo cuadro.</span></figcaption>
     </figure>
     <figure class="visual-virtual">
-      <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(min-width: 900px) 28vw, (min-width: 600px) 33vw, 100vw" width="900" height="600" loading="lazy" decoding="async" alt="Equipo corporativo colaborando en una mesa con computadoras">
+      <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" srcset="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w, https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&q=90&w=1800 1800w" sizes="(min-width: 900px) 28vw, (min-width: 600px) 33vw, 100vw" width="900" height="600" loading="lazy" decoding="async" alt="Equipo corporativo colaborando en una mesa con computadoras">
       <figcaption><span class="visual-kicker">Virtual o in-house</span><strong>Dos horas, sin relleno.</strong><span class="visual-copy">Equipos distribuidos, conversación precisa, decisiones observables.</span></figcaption>
     </figure>
   </section>
@@ -996,11 +959,11 @@ a { text-decoration: none; color: inherit; }
 
     <div class="program-media" aria-label="Dinero y finanzas personales en el taller">
       <figure>
-        <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=1000" srcset="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(min-width: 600px) 50vw, 100vw" width="1000" height="667" loading="lazy" decoding="async" alt="Datos financieros y gráficos de desempeño sobre una pantalla">
+        <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=1000" srcset="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w, https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=1800 1800w" sizes="(min-width: 600px) 50vw, 100vw" width="1000" height="667" loading="lazy" decoding="async" alt="Datos financieros y gráficos de desempeño sobre una pantalla">
         <figcaption>Primero aparece el mapa: dónde se escapa el dinero y dónde se decide mal.</figcaption>
       </figure>
       <figure>
-        <img src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(min-width: 600px) 40vw, 100vw" width="900" height="600" loading="lazy" decoding="async" alt="Persona revisando números personales con una libreta">
+        <img src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" srcset="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w, https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&q=90&w=1800 1800w" sizes="(min-width: 600px) 40vw, 100vw" width="900" height="600" loading="lazy" decoding="async" alt="Persona revisando números personales con una libreta">
         <figcaption>El cierre no es inspiración: es una acción con fecha.</figcaption>
       </figure>
     </div>
@@ -1040,11 +1003,11 @@ a { text-decoration: none; color: inherit; }
 
     <div class="program-media" aria-label="Apreciación de la empresa privada en el taller">
       <figure>
-        <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=1000" srcset="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(min-width: 600px) 50vw, 100vw" width="1000" height="667" loading="lazy" decoding="async" alt="Equipo empresarial trabajando junto a una pizarra">
+        <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=1000" srcset="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w, https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=1800 1800w" sizes="(min-width: 600px) 50vw, 100vw" width="1000" height="667" loading="lazy" decoding="async" alt="Equipo empresarial trabajando junto a una pizarra">
         <figcaption>No motivación empresarial: riesgo, capital y productividad puestos sobre la mesa.</figcaption>
       </figure>
       <figure>
-        <img src="https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(min-width: 600px) 40vw, 100vw" width="900" height="600" loading="lazy" decoding="async" alt="Profesionales colaborando alrededor de una mesa de trabajo">
+        <img src="https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" srcset="https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w, https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&q=90&w=1800 1800w" sizes="(min-width: 600px) 40vw, 100vw" width="900" height="600" loading="lazy" decoding="async" alt="Profesionales colaborando alrededor de una mesa de trabajo">
         <figcaption>La cooperación se vuelve concreta cuando el ledger está completo.</figcaption>
       </figure>
     </div>
@@ -1089,7 +1052,7 @@ a { text-decoration: none; color: inherit; }
 
   <!-- ─── BIO ─── -->
   <section class="bio">
-    <p><strong>Juan Fernando Carpio.</strong> Economista. Investigador en la tradición de la escuela austriaca aplicada a empresa privada e instituciones. Quito, Ecuador.</p>
+    <p><strong>Juan Fernando Carpio.</strong> Investigador empresarial y económico en la tradición de la escuela austriaca aplicada a empresa privada e instituciones. Quito, Ecuador.</p>
     <p>Autor académico y consultor para empresas medianas y grandes en Ecuador, Perú, Colombia y Chile.</p>
     <p>Más en <a href="/">jfcarpio.com</a> · Publicaciones, reportes y dashboards.</p>
   </section>
