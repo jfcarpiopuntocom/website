@@ -2252,6 +2252,22 @@ main:focus {
   -webkit-text-fill-color: #7a1f1a;
 }
 
+/* v1.160 — Aggregate social proof line above testimonios */
+.testim__lead {
+  margin: 0 0 var(--d-stack);
+  font-family: var(--display);
+  font-size: clamp(18px, 2.6vw, 22px);
+  line-height: 1.5;
+  color: #36302a;
+  color: var(--ink-soft);
+  -webkit-text-fill-color: #36302a;
+}
+.testim__lead em {
+  font-style: italic;
+  color: #7a1f1a;
+  -webkit-text-fill-color: #7a1f1a;
+}
+
 /* v1.165 — Post-click timeline (replaces single-line ticket__postclick) */
 .postclick-timeline {
   margin: 14px 0 0;
@@ -2334,7 +2350,8 @@ main:focus {
   .couples__body,
   .authoritybar__line,
   .ticket__lossline,
-  .postclick-timeline__list li { color: #36302a !important; -webkit-text-fill-color: #36302a !important; }
+  .postclick-timeline__list li,
+  .testim__lead { color: #36302a !important; -webkit-text-fill-color: #36302a !important; }
   .mechs__name,
   .price-reality__eyebrow,
   .price-reality__list strong,
@@ -2351,7 +2368,8 @@ main:focus {
   .authoritybar__dot,
   .ticket__lossline em,
   .postclick-timeline__label,
-  .postclick-timeline__time { color: #7a1f1a !important; -webkit-text-fill-color: #7a1f1a !important; }
+  .postclick-timeline__time,
+  .testim__lead em { color: #7a1f1a !important; -webkit-text-fill-color: #7a1f1a !important; }
   .freestep__note,
   .ticket__postclick,
   .quiz__intro,
