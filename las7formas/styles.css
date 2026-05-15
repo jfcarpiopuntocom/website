@@ -2252,6 +2252,40 @@ main:focus {
   -webkit-text-fill-color: #7a1f1a;
 }
 
+/* v1.168 — Hero urgency line ("primer cambio semana 1") */
+.hero__urgency {
+  margin: 0 0 var(--d-stack);
+  font-family: var(--sans);
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.5;
+  color: #36302a;
+  color: var(--ink-soft);
+  -webkit-text-fill-color: #36302a;
+  letter-spacing: 0.005em;
+}
+.hero__urgency em {
+  font-style: italic;
+  color: #7a1f1a;
+  -webkit-text-fill-color: #7a1f1a;
+}
+
+/* v1.168 — Ticket lastpay micro-line (anchored to recent paycheck) */
+.ticket__lastpay {
+  margin: 12px 0 0;
+  font-family: var(--serif);
+  font-size: clamp(14px, 2.1vw, 15px);
+  line-height: 1.55;
+  text-align: center;
+  color: #6e6357;
+  color: var(--ink-mute);
+  -webkit-text-fill-color: #6e6357;
+}
+.ticket__lastpay em {
+  font-style: italic;
+  color: #36302a;
+  -webkit-text-fill-color: #36302a;
+}
+
 /* v1.160 — Aggregate social proof line above testimonios */
 .testim__lead {
   margin: 0 0 var(--d-stack);
@@ -2351,7 +2385,9 @@ main:focus {
   .authoritybar__line,
   .ticket__lossline,
   .postclick-timeline__list li,
-  .testim__lead { color: #36302a !important; -webkit-text-fill-color: #36302a !important; }
+  .testim__lead,
+  .hero__urgency,
+  .ticket__lastpay em { color: #36302a !important; -webkit-text-fill-color: #36302a !important; }
   .mechs__name,
   .price-reality__eyebrow,
   .price-reality__list strong,
@@ -2369,10 +2405,12 @@ main:focus {
   .ticket__lossline em,
   .postclick-timeline__label,
   .postclick-timeline__time,
-  .testim__lead em { color: #7a1f1a !important; -webkit-text-fill-color: #7a1f1a !important; }
+  .testim__lead em,
+  .hero__urgency em { color: #7a1f1a !important; -webkit-text-fill-color: #7a1f1a !important; }
   .freestep__note,
   .ticket__postclick,
   .quiz__intro,
   .forme__col--no .forme__h,
-  .postclick-timeline__foot { color: #6e6357 !important; -webkit-text-fill-color: #6e6357 !important; }
+  .postclick-timeline__foot,
+  .ticket__lastpay { color: #6e6357 !important; -webkit-text-fill-color: #6e6357 !important; }
 }

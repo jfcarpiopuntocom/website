@@ -93,10 +93,10 @@
     0: 'Lee el catálogo abajo. Vas a reconocer al menos dos en cuestión de minutos.',
     1: 'Una basta para perder años. Cerrarla cambia el siguiente sueldo.',
     2: 'Dos al mismo tiempo es el patrón más común. El método las cierra en paralelo.',
-    3: 'Eres el lector exacto para el curso. Tres fugas activas son el punto de inflexión.',
-    4: 'Cuatro. Tu sueldo está saliendo por cuatro grietas distintas. Cerrarlas no es opcional.',
-    5: 'Cinco. La buena noticia: las cinco se cierran con el mismo marco.',
-    6: 'Seis de siete. No es disciplina lo que te falta, es el sistema.',
+    3: 'Eres el lector exacto para el curso. Tres fugas activas son el punto de inflexión — cada mes que siguen abiertas, sale dinero por tres lados a la vez.',
+    4: 'Cuatro. Tu sueldo está saliendo por cuatro grietas distintas. Cada nómina que entra repite el mismo circuito.',
+    5: 'Cinco. La buena noticia: las cinco se cierran con el mismo marco — pero cada mes que pasa es otro mes operando con las cinco abiertas.',
+    6: 'Seis de siete. No es disciplina lo que te falta, es el sistema. Cada quincena cuenta.',
     7: 'Las siete. Honestidad poco común. Empieza por el video 1 y avanza una fuga por semana.'
   };
   if (fugaChecks.length && quizCount && quizResult && quizVerdict) {
