@@ -84,6 +84,32 @@
   // only enable on viewports likely to handle it; mobile too
   window.addEventListener('scroll', onScroll, { passive: true });
 
+  // ----- Quiz score (v1.156) -----
+  var fugaChecks = document.querySelectorAll('.fuga-check');
+  var quizCount = document.querySelector('.quiz__count');
+  var quizResult = document.querySelector('.quiz__result');
+  var quizVerdict = document.querySelector('.quiz__verdict');
+  var verdicts = {
+    0: 'Lee el catálogo abajo. Vas a reconocer al menos dos en cuestión de minutos.',
+    1: 'Una basta para perder años. Cerrarla cambia el siguiente sueldo.',
+    2: 'Dos al mismo tiempo es el patrón más común. El método las cierra en paralelo.',
+    3: 'Eres el lector exacto para el curso. Tres fugas activas son el punto de inflexión.',
+    4: 'Cuatro. Tu sueldo está saliendo por cuatro grietas distintas. Cerrarlas no es opcional.',
+    5: 'Cinco. La buena noticia: las cinco se cierran con el mismo marco.',
+    6: 'Seis de siete. No es disciplina lo que te falta, es el sistema.',
+    7: 'Las siete. Honestidad poco común. Empieza por el video 1 y avanza una fuga por semana.'
+  };
+  if (fugaChecks.length && quizCount && quizResult && quizVerdict) {
+    fugaChecks.forEach(function (cb) {
+      cb.addEventListener('change', function () {
+        var c = document.querySelectorAll('.fuga-check:checked').length;
+        quizCount.textContent = c;
+        quizResult.setAttribute('data-score', c);
+        quizVerdict.textContent = verdicts[c];
+      });
+    });
+  }
+
   // ----- Smooth-scroll for the hero anchor -----
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener('click', function (e) {

@@ -1,5 +1,5 @@
 /* ============================================================
-   7 formas — La Escuela del Dinero · v1.154 · 2026-05-06
+   7 formas — La Escuela del Dinero · v1.165 · 2026-05-15
    Editorial confessional · cream, ink, oxblood
    Mobile-first, forces light, Safari-safe
    ============================================================ */
@@ -1985,6 +1985,331 @@ main:focus {
 }
 
 /* ============================================================
+   v1.156-v1.165 Round 2 — Cialdini / Schwartz / Hormozi / Fogg / JTBD
+   All new classes carry explicit color + -webkit-text-fill-color
+   to survive iOS Safari + WhatsApp dark mode preview.
+   ============================================================ */
+
+/* v1.158 — Schwartz bridge ("hay un sistema") */
+.bridge {
+  max-width: var(--col-max);
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 48px) clamp(20px, 5vw, 32px);
+  text-align: center;
+}
+.bridge__line {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(18px, 2.7vw, 22px);
+  line-height: 1.5;
+  color: #36302a;
+  color: var(--ink-soft);
+  -webkit-text-fill-color: #36302a;
+}
+.bridge__line em {
+  font-style: italic;
+  color: #7a1f1a;
+  -webkit-text-fill-color: #7a1f1a;
+}
+
+/* v1.156 — Quiz de auto-identificación */
+.section--quiz { background: var(--paper-deep); }
+.quiz__intro {
+  font-family: var(--sans);
+  font-size: clamp(14px, 2vw, 15px);
+  color: #6e6357;
+  color: var(--ink-mute);
+  -webkit-text-fill-color: #6e6357;
+  margin: 0 0 18px;
+}
+.quiz__list {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.quiz__list li {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 12px 14px;
+}
+.quiz__list label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: clamp(14px, 2.1vw, 15px);
+  line-height: 1.5;
+  color: #36302a;
+  color: var(--ink-soft);
+  -webkit-text-fill-color: #36302a;
+  min-height: 44px;
+}
+.fuga-check {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: #7a1f1a;
+  margin-top: 2px;
+}
+.quiz__result {
+  margin: 0;
+  padding: 16px 18px;
+  background: var(--paper);
+  border-left: 3px solid var(--oxblood);
+  font-family: var(--serif);
+  font-size: clamp(16px, 2.3vw, 18px);
+  line-height: 1.55;
+  color: #36302a;
+  color: var(--ink-soft);
+  -webkit-text-fill-color: #36302a;
+}
+.quiz__count {
+  font-family: var(--display);
+  font-size: 1.4em;
+  color: #7a1f1a;
+  color: var(--oxblood);
+  -webkit-text-fill-color: #7a1f1a;
+  font-weight: 700;
+}
+.quiz__verdict {
+  display: block;
+  margin-top: 6px;
+  font-style: italic;
+  color: #36302a;
+  -webkit-text-fill-color: #36302a;
+}
+
+/* v1.164 — ¿Es para mí? */
+.forme {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: var(--d-stack);
+}
+@media (min-width: 720px) {
+  .forme { grid-template-columns: 1fr 1fr; gap: 24px; }
+}
+.forme__col {
+  background: var(--paper-deep);
+  border-radius: 3px;
+  padding: 22px 22px 18px;
+  border-top: 3px solid var(--rule);
+}
+.forme__col--yes { border-top-color: var(--oxblood); }
+.forme__col--no  { border-top-color: var(--ink-mute); }
+.forme__h {
+  margin: 0 0 12px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-size: clamp(13px, 1.8vw, 13px);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7a1f1a;
+  color: var(--oxblood);
+  -webkit-text-fill-color: #7a1f1a;
+  font-weight: 700;
+}
+.forme__col--no .forme__h {
+  color: #6e6357;
+  color: var(--ink-mute);
+  -webkit-text-fill-color: #6e6357;
+}
+.forme__col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.forme__col li {
+  position: relative;
+  padding-left: 18px;
+  font-family: var(--sans);
+  font-size: clamp(14px, 2.1vw, 15px);
+  line-height: 1.55;
+  color: #36302a;
+  color: var(--ink-soft);
+  -webkit-text-fill-color: #36302a;
+}
+.forme__col li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  background: var(--oxblood);
+  transform: rotate(45deg);
+}
+.forme__col--no li::before { background: var(--ink-mute); }
+
+/* v1.157 — Lo que NO requiere */
+.notrequire {
+  list-style: none;
+  margin: var(--d-stack) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.notrequire li {
+  position: relative;
+  padding-left: 22px;
+  font-family: var(--serif);
+  font-size: clamp(16px, 2.3vw, 18px);
+  line-height: 1.55;
+  color: #36302a;
+  color: var(--ink-soft);
+  -webkit-text-fill-color: #36302a;
+}
+.notrequire li::before {
+  content: "×";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--display);
+  font-size: 1.3em;
+  color: #7a1f1a;
+  color: var(--oxblood);
+  -webkit-text-fill-color: #7a1f1a;
+  line-height: 1;
+}
+.notrequire strong {
+  font-family: var(--sans);
+  font-weight: 700;
+  color: #7a1f1a;
+  color: var(--oxblood);
+  -webkit-text-fill-color: #7a1f1a;
+}
+
+/* v1.162 — Job pareja */
+.couples__body {
+  margin: var(--d-stack) 0 0;
+  font-family: var(--serif);
+  font-size: clamp(17px, 2.4vw, 19px);
+  line-height: 1.65;
+  color: #36302a;
+  color: var(--ink-soft);
+  -webkit-text-fill-color: #36302a;
+}
+.couples__body em {
+  font-style: italic;
+  color: #7a1f1a;
+  -webkit-text-fill-color: #7a1f1a;
+}
+
+/* v1.159 — Authority proof bar */
+.authoritybar {
+  max-width: var(--col-wide);
+  margin: 0 auto;
+  padding: 20px clamp(20px, 5vw, 32px);
+  text-align: center;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.authoritybar__line {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-size: clamp(13px, 1.8vw, 14px);
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+  color: #36302a;
+  color: var(--ink-soft);
+  -webkit-text-fill-color: #36302a;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0 14px;
+}
+.authoritybar__dot {
+  color: #7a1f1a;
+  -webkit-text-fill-color: #7a1f1a;
+  font-weight: 700;
+}
+
+/* v1.163 — Loss aversion line before CTA */
+.ticket__lossline {
+  margin: 16px 0 18px;
+  font-family: var(--serif);
+  font-size: clamp(15px, 2.2vw, 17px);
+  line-height: 1.55;
+  text-align: center;
+  color: #36302a;
+  color: var(--ink-soft);
+  -webkit-text-fill-color: #36302a;
+}
+.ticket__lossline em {
+  font-style: italic;
+  color: #7a1f1a;
+  -webkit-text-fill-color: #7a1f1a;
+}
+
+/* v1.165 — Post-click timeline (replaces single-line ticket__postclick) */
+.postclick-timeline {
+  margin: 14px 0 0;
+  padding: 16px 18px;
+  background: var(--paper-deep);
+  border-radius: 3px;
+}
+.postclick-timeline__label {
+  margin: 0 0 12px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-size: clamp(13px, 1.8vw, 13px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7a1f1a;
+  color: var(--oxblood);
+  -webkit-text-fill-color: #7a1f1a;
+  text-align: center;
+}
+.postclick-timeline__list {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.postclick-timeline__list li {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  font-family: var(--sans);
+  font-size: clamp(14px, 2.1vw, 15px);
+  line-height: 1.5;
+  color: #36302a;
+  color: var(--ink-soft);
+  -webkit-text-fill-color: #36302a;
+}
+.postclick-timeline__time {
+  font-family: var(--mono);
+  font-weight: 700;
+  color: #7a1f1a;
+  color: var(--oxblood);
+  -webkit-text-fill-color: #7a1f1a;
+  min-width: 42px;
+}
+.postclick-timeline__foot {
+  margin: 10px 0 0;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-size: clamp(13px, 1.8vw, 13px);
+  text-align: center;
+  color: #6e6357;
+  color: var(--ink-mute);
+  -webkit-text-fill-color: #6e6357;
+}
+
+/* ============================================================
    iOS Safari + WhatsApp dark mode overrides — ALL classes
    ============================================================ */
 @media (prefers-color-scheme: dark) {
@@ -1999,7 +2324,17 @@ main:focus {
   .confess__bridge,
   .transform__cost,
   .freestep__body,
-  .price-reality__stack li { color: #36302a !important; -webkit-text-fill-color: #36302a !important; }
+  .price-reality__stack li,
+  .bridge__line,
+  .quiz__list label,
+  .quiz__result,
+  .quiz__verdict,
+  .forme__col li,
+  .notrequire li,
+  .couples__body,
+  .authoritybar__line,
+  .ticket__lossline,
+  .postclick-timeline__list li { color: #36302a !important; -webkit-text-fill-color: #36302a !important; }
   .mechs__name,
   .price-reality__eyebrow,
   .price-reality__list strong,
@@ -2007,7 +2342,19 @@ main:focus {
   .confess__bridge em,
   .testim__result,
   .freestep__body strong,
-  .price-reality__stack li strong { color: #7a1f1a !important; -webkit-text-fill-color: #7a1f1a !important; }
+  .price-reality__stack li strong,
+  .bridge__line em,
+  .quiz__count,
+  .forme__col--yes .forme__h,
+  .notrequire strong,
+  .couples__body em,
+  .authoritybar__dot,
+  .ticket__lossline em,
+  .postclick-timeline__label,
+  .postclick-timeline__time { color: #7a1f1a !important; -webkit-text-fill-color: #7a1f1a !important; }
   .freestep__note,
-  .ticket__postclick { color: #6e6357 !important; -webkit-text-fill-color: #6e6357 !important; }
+  .ticket__postclick,
+  .quiz__intro,
+  .forme__col--no .forme__h,
+  .postclick-timeline__foot { color: #6e6357 !important; -webkit-text-fill-color: #6e6357 !important; }
 }
