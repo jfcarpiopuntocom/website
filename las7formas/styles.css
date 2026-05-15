@@ -1985,9 +1985,17 @@ main:focus {
 }
 
 /* ============================================================
-   v1.156-v1.165 Round 2 — Cialdini / Schwartz / Hormozi / Fogg / JTBD
+   v1.156-v1.168 Round 2 — Cialdini / Schwartz / Hormozi / Fogg / JTBD
    All new classes carry explicit color + -webkit-text-fill-color
    to survive iOS Safari + WhatsApp dark mode preview.
+
+   The triple-color pattern below is intentional verbosity:
+     color: #hex;                   ← fallback for pre-2015 browsers
+     color: var(--token);           ← modern browsers (custom property)
+     -webkit-text-fill-color: #hex; ← iOS Safari dark-mode override
+   This page is shared via WhatsApp on iPhones running iOS 12-17.
+   DO NOT refactor to a single line — each declaration neutralizes a
+   distinct rendering edge case. See feedback_ios_safari_whatsapp_legibility.md.
    ============================================================ */
 
 /* v1.158 — Schwartz bridge ("hay un sistema") */
@@ -2014,6 +2022,30 @@ main:focus {
 
 /* v1.156 — Quiz de auto-identificación */
 .section--quiz { background: var(--paper-deep); }
+.quiz__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.quiz__legend {
+  display: block;
+  width: 100%;
+  font-family: var(--display);
+  font-size: clamp(28px, 6vw, 44px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #1b1714;
+  color: var(--ink);
+  -webkit-text-fill-color: #1b1714;
+  margin: 0 0 14px;
+  padding: 0;
+}
+.quiz__legend em {
+  font-style: italic;
+  color: #7a1f1a;
+  -webkit-text-fill-color: #7a1f1a;
+}
 .quiz__intro {
   font-family: var(--sans);
   font-size: clamp(14px, 2vw, 15px);
@@ -2252,23 +2284,6 @@ main:focus {
   -webkit-text-fill-color: #7a1f1a;
 }
 
-/* v1.168 — Hero urgency line ("primer cambio semana 1") */
-.hero__urgency {
-  margin: 0 0 var(--d-stack);
-  font-family: var(--sans);
-  font-size: clamp(14px, 2vw, 16px);
-  line-height: 1.5;
-  color: #36302a;
-  color: var(--ink-soft);
-  -webkit-text-fill-color: #36302a;
-  letter-spacing: 0.005em;
-}
-.hero__urgency em {
-  font-style: italic;
-  color: #7a1f1a;
-  -webkit-text-fill-color: #7a1f1a;
-}
-
 /* v1.168 — Ticket lastpay micro-line (anchored to recent paycheck) */
 .ticket__lastpay {
   margin: 12px 0 0;
@@ -2386,8 +2401,8 @@ main:focus {
   .ticket__lossline,
   .postclick-timeline__list li,
   .testim__lead,
-  .hero__urgency,
   .ticket__lastpay em { color: #36302a !important; -webkit-text-fill-color: #36302a !important; }
+  .quiz__legend { color: #1b1714 !important; -webkit-text-fill-color: #1b1714 !important; }
   .mechs__name,
   .price-reality__eyebrow,
   .price-reality__list strong,
@@ -2406,7 +2421,7 @@ main:focus {
   .postclick-timeline__label,
   .postclick-timeline__time,
   .testim__lead em,
-  .hero__urgency em { color: #7a1f1a !important; -webkit-text-fill-color: #7a1f1a !important; }
+  .quiz__legend em { color: #7a1f1a !important; -webkit-text-fill-color: #7a1f1a !important; }
   .freestep__note,
   .ticket__postclick,
   .quiz__intro,
