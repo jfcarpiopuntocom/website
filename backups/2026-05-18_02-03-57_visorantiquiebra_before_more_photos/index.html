@@ -1428,37 +1428,16 @@ footer.foot-moment::after{
 
 /* Real-business photo band */
 .photo-band{background:var(--paper-2);border-bottom:1px solid var(--ink);padding:34px 0}
-.photo-band-expanded{padding:44px 0}
-.photo-mosaic{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:1.15fr .85fr .85fr;grid-auto-rows:210px;gap:18px}
-.photo-card{position:relative;overflow:hidden;border:1px solid var(--ink);background:var(--ink);color:#fff;min-height:0}
-.photo-card.tall{grid-row:span 2}
-.photo-card.wide{grid-column:span 2}
-.photo-card img,.photo-split img,.state-photo img,.pioneer-photo img,.kit-photo-panel img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.96) contrast(1.04)}
-.photo-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,14,29,0) 30%,rgba(6,14,29,.88) 100%)}
+.photo-band-grid{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:1.1fr .95fr .95fr;gap:18px}
+.photo-card{position:relative;min-height:300px;overflow:hidden;border:1px solid var(--ink);background:var(--ink);color:#fff}
+.photo-card:first-child{min-height:360px}
+.photo-card img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.95) contrast(1.04)}
+.photo-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,14,29,0) 35%,rgba(6,14,29,.82) 100%)}
 .photo-caption{position:absolute;left:18px;right:18px;bottom:18px;z-index:2}
 .photo-caption .pc-k{display:block;font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber-3);margin-bottom:7px}
-.photo-caption p{margin:0;font-family:var(--body);font-size:18px;line-height:1.35;color:#fff;max-width:30ch;text-shadow:0 1px 2px rgba(0,0,0,.25)}
-.photo-card.tall .photo-caption p{font-size:22px}
-.reframe-side{display:grid;gap:18px}
-.photo-split,.state-photo,.pioneer-photo,.kit-photo-panel{border:1px solid var(--ink);overflow:hidden;background:var(--ink)}
-.photo-split{height:320px}
-.state-photo{height:170px;margin:-30px -26px 8px;border-left:0;border-right:0;border-top:0}
-.pioneer-side{display:grid;gap:18px}
-.pioneer-photo{height:300px}
-.kit-side{position:sticky;top:80px;display:grid;gap:18px}
-.kit-side .kit-card{position:static}
-.kit-photo-panel{height:260px;border-color:rgba(255,255,255,.18)}
-@media(max-width:880px){
-  .photo-band{padding:18px 0}.photo-band-expanded{padding:24px 0}
-  .photo-mosaic{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-right:18px}
-  .photo-card,.photo-card.tall,.photo-card.wide{min-width:82vw;min-height:310px;scroll-snap-align:start;grid-row:auto;grid-column:auto}
-  .photo-card.tall .photo-caption p{font-size:20px}
-  .reframe-side{gap:14px}
-  .photo-split{height:280px}
-  .state-photo{height:190px;margin:-30px -26px 8px}
-  .pioneer-photo{height:280px}
-  .kit-side{position:static}
-}
+.photo-caption p{margin:0;font-family:var(--body);font-size:18px;line-height:1.35;color:#fff;max-width:28ch}
+.photo-card:first-child .photo-caption p{font-size:22px}
+@media(max-width:880px){.photo-band{padding:18px 0}.photo-band-grid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-right:18px}.photo-card{min-width:82vw;min-height:310px;scroll-snap-align:start}.photo-card:first-child{min-height:310px}}
 </style>
 </head>
 <body>
@@ -1575,48 +1554,27 @@ footer.foot-moment::after{
   </div>
 </aside>
 <!-- Real-business photo band · Pexels CDN -->
-<section class="photo-band photo-band-expanded" id="negocio-real" aria-label="Negocios reales bajo presión">
-  <div class="photo-mosaic">
-    <figure class="photo-card tall">
-      <img src="https://images.pexels.com/photos/4173268/pexels-photo-4173268.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1500&fit=crop" alt="Dueña de negocio revisando su laptop en un restaurante" loading="lazy" decoding="async">
+<section class="photo-band" id="negocio-real" aria-label="Negocios reales bajo presión">
+  <div class="photo-band-grid">
+    <figure class="photo-card">
+      <img src="https://images.pexels.com/photos/4173268/pexels-photo-4173268.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1500&fit=crop" alt="Dueña de negocio revisando su laptop en un restaurante" loading="lazy">
       <figcaption class="photo-caption">
         <span class="pc-k">Lo que pasa entre pedidos</span>
-        <p>El número importa cuando aterriza en la vida real: pedidos, cobros, turnos, proveedores y decisiones de hoy.</p>
+        <p>La pregunta no vive en el Excel. Vive en la operación diaria, cuando todavía hay que atender, cobrar y decidir.</p>
       </figcaption>
     </figure>
     <figure class="photo-card">
-      <img src="https://images.pexels.com/photos/4339799/pexels-photo-4339799.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Personas revisando números y trabajo en una mesa" loading="lazy" decoding="async">
+      <img src="https://images.pexels.com/photos/4339799/pexels-photo-4339799.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Personas revisando números y trabajo en una mesa" loading="lazy">
       <figcaption class="photo-caption">
         <span class="pc-k">Sistema antes que intuición</span>
         <p>El Visor junta señales que normalmente se miran separadas y tarde.</p>
       </figcaption>
     </figure>
     <figure class="photo-card">
-      <img src="https://images.pexels.com/photos/6694951/pexels-photo-6694951.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Persona contando dinero y revisando papeles de caja" loading="lazy" decoding="async">
+      <img src="https://images.pexels.com/photos/6694951/pexels-photo-6694951.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Persona contando dinero y revisando papeles de caja" loading="lazy">
       <figcaption class="photo-caption">
         <span class="pc-k">Caja sin teatro</span>
         <p>Cuánto entra, cuánto sale, qué cobro cambia el mes y qué decisión no puede esperar.</p>
-      </figcaption>
-    </figure>
-    <figure class="photo-card">
-      <img src="https://images.pexels.com/photos/7680736/pexels-photo-7680736.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Recibos y calculadora sobre una mesa de trabajo" loading="lazy" decoding="async">
-      <figcaption class="photo-caption">
-        <span class="pc-k">Gastos visibles</span>
-        <p>Lo que no se mide se vuelve opinión. Lo que se pone en la mesa empieza a obedecer.</p>
-      </figcaption>
-    </figure>
-    <figure class="photo-card">
-      <img src="https://images.pexels.com/photos/10178868/pexels-photo-10178868.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Cocina pequeña de restaurante en plena operación" loading="lazy" decoding="async">
-      <figcaption class="photo-caption">
-        <span class="pc-k">Operación real</span>
-        <p>El tablero no reemplaza el oficio. Lo ordena para que el oficio no se coma al negocio.</p>
-      </figcaption>
-    </figure>
-    <figure class="photo-card wide">
-      <img src="https://images.pexels.com/photos/7545333/pexels-photo-7545333.jpeg?auto=compress&cs=tinysrgb&w=1400&h=700&fit=crop" alt="Papeles de negocio y recibos revisados a mano" loading="lazy" decoding="async">
-      <figcaption class="photo-caption">
-        <span class="pc-k">Claridad antes de urgencia</span>
-        <p>Runway, cobros, retención, canales y fundador en una sola lectura.</p>
       </figcaption>
     </figure>
   </div>
@@ -1676,13 +1634,8 @@ footer.foot-moment::after{
           <li><span><strong>Repetibilidad:</strong> un mes bueno no es un sistema, es un evento.</span></li>
         </ul>
       </div>
-      <div class="reframe-side rv">
-        <div class="reframe-quote">
-          Crecer desordenadamente <span class="accent">no es lo mismo</span> que crecer con claridad y control.
-        </div>
-        <figure class="photo-split" aria-label="Trabajo real de una dueña de negocio">
-          <img src="https://images.pexels.com/photos/4049790/pexels-photo-4049790.jpeg?auto=compress&cs=tinysrgb&w=1100&h=850&fit=crop" alt="Emprendedora trabajando con una laptop en su negocio" loading="lazy" decoding="async">
-        </figure>
+      <div class="reframe-quote rv">
+        Crecer desordenadamente <span class="accent">no es lo mismo</span> que crecer con claridad y dominio.
       </div>
     </div>
   </div>
@@ -1707,9 +1660,6 @@ footer.foot-moment::after{
 
     <div class="states rv-stagger">
       <article class="state b rv" aria-labelledby="st-1">
-        <figure class="state-photo">
-          <img src="https://images.pexels.com/photos/5366662/pexels-photo-5366662.jpeg?auto=compress&cs=tinysrgb&w=900&h=520&fit=crop" alt="Restaurante atendiendo clientes durante el servicio" loading="lazy" decoding="async">
-        </figure>
         <span class="state-tag"><span class="dot"></span>Ganando estabilidad</span>
         <h3 id="st-1">El sistema sostiene el crecimiento.</h3>
         <p class="state-body">El negocio empieza a operar sin que el fundador tenga que estar en cada decisión. La caja respira, los clientes vuelven, los procesos críticos están documentados.</p>
@@ -1723,9 +1673,6 @@ footer.foot-moment::after{
       </article>
 
       <article class="state a rv" aria-labelledby="st-2">
-        <figure class="state-photo">
-          <img src="https://images.pexels.com/photos/7680683/pexels-photo-7680683.jpeg?auto=compress&cs=tinysrgb&w=900&h=520&fit=crop" alt="Documentos de gastos revisados con calculadora" loading="lazy" decoding="async">
-        </figure>
         <span class="state-tag"><span class="dot"></span>Acumulando daños internos</span>
         <h3 id="st-2">Las ventas crecen — el motor se desgasta.</h3>
         <p class="state-body">El P&amp;L se ve bien, los reportes son optimistas. Pero por debajo, los cobros se alargan, los canales no tienen margen claro y el proceso crítico sigue en la cabeza de una sola persona.</p>
@@ -1739,9 +1686,6 @@ footer.foot-moment::after{
       </article>
 
       <article class="state r rv" aria-labelledby="st-3">
-        <figure class="state-photo">
-          <img src="https://images.pexels.com/photos/4050444/pexels-photo-4050444.jpeg?auto=compress&cs=tinysrgb&w=900&h=520&fit=crop" alt="Persona pensativa frente a una laptop revisando decisiones" loading="lazy" decoding="async">
-        </figure>
         <span class="state-tag"><span class="dot"></span>Sobreviviendo sin darse cuenta</span>
         <h3 id="st-3">La caja cubre semanas, no meses.</h3>
         <p class="state-body">El negocio existe, factura, tiene clientes. Por eso parece real. Pero la operación entera depende de que tú estés todos los días, y la caja decide cada semana si llega a la siguiente.</p>
@@ -1894,15 +1838,10 @@ footer.foot-moment::after{
         <p class="lede">Una dueña de un restaurante en un lugar turístico icónico, en el mes 10 de vida del negocio, usó el Visor para poner todas las señales dispersas sobre la misma mesa. El negocio vendía. Tenía clientes. Tenía equipo. No estaba bien y tampoco estaba mal: estaba acumulando daños internos sin saberlo, mientras la caja se erosionaba en silencio.</p>
         <p class="lede" style="margin-top:14px">El valor del caso no es la exposición. Es el coraje: <strong style="color:var(--ink)">decidir tener claridad antes de que el negocio la obligue a decidir por ella.</strong> El reporte completo se quedó entre la dueña y JFC. Lo único que queda aquí, con su permiso, es la frase que abrió la sesión.</p>
       </div>
-      <div class="pioneer-side rv">
-        <figure class="pioneer-photo">
-          <img src="https://images.pexels.com/photos/36763311/pexels-photo-36763311.jpeg?auto=compress&cs=tinysrgb&w=1100&h=760&fit=crop" alt="Dueño de negocio atendiendo llamadas y revisando una laptop" loading="lazy" decoding="async">
-        </figure>
-        <figure class="pioneer-card">
-          <blockquote class="pioneer-quote">La meta se sigue alejando.</blockquote>
-          <figcaption class="pioneer-attr">— Dueña de un restaurante en una plaza turística icónica · mes 10 del valle · primera en abrir el Visor</figcaption>
-        </figure>
-      </div>
+      <figure class="pioneer-card rv">
+        <blockquote class="pioneer-quote">La meta se sigue alejando.</blockquote>
+        <figcaption class="pioneer-attr">— Dueña de un restaurante en una plaza turística icónica · mes 10 del valle · primera en abrir el Visor</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -2084,19 +2023,14 @@ footer.foot-moment::after{
           <li>Lectura de rojos · guía corta</li>
         </ul>
       </div>
-      <div class="kit-side rv">
-        <figure class="kit-photo-panel">
-          <img src="https://images.pexels.com/photos/7680692/pexels-photo-7680692.jpeg?auto=compress&cs=tinysrgb&w=1100&h=760&fit=crop" alt="Calculadora, documentos y plantillas de caja sobre una mesa" loading="lazy" decoding="async">
-        </figure>
-        <aside class="kit-card">
-          <span class="tag">Kit Antiquiebra 360</span>
-          <p class="name">Plantillas + plan operativo</p>
-          <p class="desc">Todo lo que el Visor te pidió, ya en formato editable. Sin armar la hoja en Excel a las once de la noche.</p>
-          <p class="price"><span class="cur">$</span>100</p>
-          <p class="price-note">Pago único · acceso permanente · actualizaciones incluidas</p>
-          <a href="#diagnostico" class="btn">Primero abrir el Visor</a>
-        </aside>
-      </div>
+      <aside class="kit-card rv">
+        <span class="tag">Kit Antiquiebra 360</span>
+        <p class="name">Plantillas + plan operativo</p>
+        <p class="desc">Todo lo que el Visor te pidió, ya en formato editable. Sin armar la hoja en Excel a las once de la noche.</p>
+        <p class="price"><span class="cur">$</span>100</p>
+        <p class="price-note">Pago único · acceso permanente · actualizaciones incluidas</p>
+        <a href="#diagnostico" class="btn">Primero abrir el Visor</a>
+      </aside>
     </div>
   </div>
 </section>
@@ -2199,7 +2133,7 @@ footer.foot-moment::after{
 <!-- ════ FOOTER · editorial moment ════ -->
 <footer class="foot-moment" role="contentinfo">
   <div class="foot-statement">
-    <p class="fs-line">Crecer <em>desordenadamente</em> no es lo mismo que crecer con claridad y control.</p>
+    <p class="fs-line">Crecer <em>desordenadamente</em> no es lo mismo que crecer con claridad y dominio.</p>
     <div class="fs-meta">
       <img src="https://jfcarpio.com/visorantiquiebra/assets/growthos-logo-slogan.png" alt="Growth OS — sistema operativo para negocios en expansión" loading="lazy">
       <p>Volumen 2 del sistema operativo Growth OS — diseñado para nuevos negocios entre los meses 6 y 24 de vida. El Visor Antiquiebra es la herramienta de diagnóstico mensual del volumen.</p>
