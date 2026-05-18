@@ -15,7 +15,6 @@
     var pct = Math.max(0, Math.min(100, (scrollTop / height) * 100));
     if (bar) bar.style.width = pct + '%';
   }
-  window.addEventListener('scroll', updateProgress, { passive: true });
   window.addEventListener('resize', updateProgress);
   updateProgress();
 
@@ -72,7 +71,7 @@
   // ----- Hero parallax-ish on scroll (subtle, mobile-safe) -----
   var heroTitle = document.querySelector('.hero__title');
   var lastY = 0;
-  function onScroll() {
+  function updateParallax() {
     if (!heroTitle) return;
     var y = window.pageYOffset || 0;
     if (Math.abs(y - lastY) < 1) return;
@@ -81,8 +80,6 @@
       heroTitle.style.transform = 'translateY(' + (y * 0.08) + 'px)';
     }
   }
-  // only enable on viewports likely to handle it; mobile too
-  window.addEventListener('scroll', onScroll, { passive: true });
 
   // ----- Quiz score (v1.156) -----
   var fugaChecks = document.querySelectorAll('.fuga-check');
@@ -110,10 +107,12 @@
     });
   }
 
-  // ----- Sticky mini-CTA (mobile only, scroll-triggered) — v1.172 -----
+  // ----- Sticky mini-CTA (mobile only, scroll-triggered) — v1.172/v1.173 -----
+  var STICKY_KEY = 'las7formas_sticky_dismissed';
   var stickyCta = document.getElementById('stickyCta');
   var stickyCtaClose = document.getElementById('stickyCtaClose');
   var stickyDismissed = false;
+  try { stickyDismissed = !!(window.localStorage && localStorage.getItem(STICKY_KEY) === '1'); } catch (e) { /* private mode */ }
   function isMobile() { return window.innerWidth < 720; }
   function updateStickyCta() {
     if (!stickyCta || stickyDismissed) return;
@@ -130,13 +129,30 @@
   if (stickyCtaClose) {
     stickyCtaClose.addEventListener('click', function () {
       stickyDismissed = true;
+      try { window.localStorage && localStorage.setItem(STICKY_KEY, '1'); } catch (e) { /* private mode */ }
       stickyCta.classList.remove('is-visible');
       stickyCta.setAttribute('aria-hidden', 'true');
     });
   }
-  window.addEventListener('scroll', updateStickyCta, { passive: true });
   window.addEventListener('resize', updateStickyCta);
   updateStickyCta();
+
+  // ----- rAF-throttled master scroll handler (v1.173) -----
+  // Coalesces progress + parallax + sticky CTA into one per-frame update.
+  // Replaces 3 separate scroll listeners. Each handler keeps its own
+  // early-exit logic for cheap skip on no-op frames.
+  var rafTicking = false;
+  function onScrollRaf() {
+    if (rafTicking) return;
+    rafTicking = true;
+    window.requestAnimationFrame(function () {
+      updateProgress();
+      updateParallax();
+      updateStickyCta();
+      rafTicking = false;
+    });
+  }
+  window.addEventListener('scroll', onScrollRaf, { passive: true });
 
   // ----- Smooth-scroll for the hero anchor -----
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
