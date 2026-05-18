@@ -45,12 +45,12 @@
 
 <!-- ══════════ FAVICON ══════════ -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23060E1D'/%3E%3Crect x='5' y='13' width='22' height='6' rx='1' fill='%23E8A020'/%3E%3Crect x='8' y='14.5' width='16' height='3' fill='%23060E1D'/%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="https://jfcarpio.com/visorantiquiebra/assets/VisorXMen.png">
+<link rel="apple-touch-icon" href="./assets/VisorXMen.png">
 
 <!-- ══════════ FONTS ══════════ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="https://jfcarpio.com/visorantiquiebra/assets/VisorXMen.png" fetchpriority="high">
+<link rel="preload" as="image" href="./assets/VisorXMen.png" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
 <!-- ══════════ JSON-LD · ORGANIZATION ══════════ -->
@@ -60,7 +60,7 @@
   "@type":"Organization",
   "name":"J.F. Carpio",
   "url":"https://jfcarpio.com/",
-  "logo":"https://jfcarpio.com/visorantiquiebra/assets/growthos-logo-blue.png",
+  "logo":"https://jfcarpio.com/visorantiquiebra/assets/Logo%20GrowthOS.png",
   "sameAs":["https://twitter.com/jfcarpio"],
   "founder":{"@type":"Person","name":"J.F. Carpio"}
 }
@@ -102,7 +102,7 @@
   "@type":"Product",
   "name":"Kit Antiquiebra 360",
   "description":"Plantillas operativas para implementar lo que el Visor detecta: hojas de caja, matriz de canales, guiones de WhatsApp, RACI, planes de 7 y 30 días.",
-  "image":"https://jfcarpio.com/visorantiquiebra/assets/growthos-logo-blue.png",
+  "image":"https://jfcarpio.com/visorantiquiebra/assets/Logo%20GrowthOS.png",
   "brand":{"@type":"Brand","name":"J.F. Carpio"},
   "offers":{
     "@type":"Offer",
@@ -229,18 +229,7 @@ body{
 }
 .bar-name{font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;letter-spacing:.18em;text-transform:uppercase}
 .bar-name b{color:var(--amber-3)}
-.site-nav{
-  display:flex;align-items:center;gap:18px;
-  margin-left:18px;margin-right:auto;
-}
-.site-nav a{
-  font-family:var(--mono);font-size:10px;font-weight:700;
-  letter-spacing:.12em;text-transform:uppercase;color:#F2F2F2;
-  padding:6px 0;border-bottom:1px solid transparent;
-  transition:color .15s,border-color .15s;
-}
-.site-nav a:hover{color:var(--amber-3);border-bottom-color:var(--amber-3)}
-.bar-right{display:flex;align-items:center;gap:14px;margin-left:auto}
+.bar-right{display:flex;align-items:center;gap:14px}
 .bar-cta{
   display:inline-flex;align-items:center;gap:8px;
   padding:9px 16px;
@@ -254,7 +243,6 @@ body{
 .bar-cta:hover{background:var(--amber-3);box-shadow:0 0 0 3px rgba(232,160,32,.25)}
 .bar-cta::after{content:"→";font-size:13px;transition:transform .18s}
 .bar-cta:hover::after{transform:translateX(3px)}
-.bar-cta-short{display:none}
 .lang-sw{display:flex;align-items:center;gap:4px}
 .lang-btn{
   display:inline-flex;align-items:center;gap:5px;
@@ -268,16 +256,13 @@ body{
 }
 .lang-btn:hover:not(.active){background:rgba(255,255,255,.16);color:#fff}
 .lang-btn.active{background:#fff;color:#060E1D;border-color:#fff}
-@media(max-width:1080px){.site-nav{display:none}}
 @media(max-width:680px){
   .bar{padding:0 14px;height:52px}
   .bar-name{display:none}
   .bar-right{gap:8px}
-  .bar-cta{padding:8px 12px;font-size:10px;letter-spacing:.1em;max-width:none;white-space:nowrap;overflow:hidden}
-  .bar-cta-full{display:none}
-  .bar-cta-short{display:inline}
+  .bar-cta{padding:8px 12px;font-size:0;letter-spacing:0;max-width:none;white-space:nowrap;overflow:hidden}
+  .bar-cta::before{content:"Abrir";font-size:10px;letter-spacing:.1em}
   .bar-cta::after{display:none}
-  .lang-sw{display:none}
   .lang-btn{padding:4px 7px}
   .lang-btn .lng{display:none}
 }
@@ -1365,7 +1350,7 @@ footer.foot-moment .fs-line{
 }
 footer.foot-moment .fs-line em{font-family:var(--body);font-style:italic;text-transform:none;color:var(--amber-3);font-weight:500;letter-spacing:-.01em}
 footer.foot-moment .fs-meta{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
-footer.foot-moment .fs-meta img{max-width:240px;width:100%;height:auto;border:1px solid rgba(255,255,255,.14);background:#000;box-shadow:0 18px 42px rgba(0,0,0,.32)}
+footer.foot-moment .fs-meta img{max-width:200px;width:100%;height:auto;filter:brightness(0) invert(1)}
 footer.foot-moment .fs-meta p{font-family:var(--body);font-size:15px;color:#F2F2F2;line-height:1.55;max-width:36ch}
 footer.foot-moment .foot-cols{
   display:grid;grid-template-columns:repeat(4,1fr);gap:0;
@@ -1425,19 +1410,6 @@ footer.foot-moment::after{
 
 .section.alt{padding:88px 0}
 @media(max-width:880px){.section,.section.alt{padding:54px 0}}
-
-/* Real-business photo band */
-.photo-band{background:var(--paper-2);border-bottom:1px solid var(--ink);padding:34px 0}
-.photo-band-grid{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:1.1fr .95fr .95fr;gap:18px}
-.photo-card{position:relative;min-height:300px;overflow:hidden;border:1px solid var(--ink);background:var(--ink);color:#fff}
-.photo-card:first-child{min-height:360px}
-.photo-card img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.95) contrast(1.04)}
-.photo-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,14,29,0) 35%,rgba(6,14,29,.82) 100%)}
-.photo-caption{position:absolute;left:18px;right:18px;bottom:18px;z-index:2}
-.photo-caption .pc-k{display:block;font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber-3);margin-bottom:7px}
-.photo-caption p{margin:0;font-family:var(--body);font-size:18px;line-height:1.35;color:#fff;max-width:28ch}
-.photo-card:first-child .photo-caption p{font-size:22px}
-@media(max-width:880px){.photo-band{padding:18px 0}.photo-band-grid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-right:18px}.photo-card{min-width:82vw;min-height:310px;scroll-snap-align:start}.photo-card:first-child{min-height:310px}}
 </style>
 </head>
 <body>
@@ -1445,15 +1417,9 @@ footer.foot-moment::after{
 <!-- ════ TOPBAR ════ -->
 <header class="bar" role="banner">
   <a href="https://jfcarpio.com/" class="bar-brand" aria-label="Volver a jfcarpio.com">
-    <img class="jfc-avatar" src="https://jfcarpio.com/visorantiquiebra/assets/jfc-avatar.jpg" alt="J.F. Carpio" width="32" height="32" loading="eager">
+    <img class="jfc-avatar" src="./assets/jfc-avatar.jpg" alt="J.F. Carpio" width="32" height="32" loading="eager">
     <span class="bar-name">jfcarpio.com · <b>Visor Antiquiebra</b></span>
   </a>
-  <nav class="site-nav" aria-label="Navegación principal de J.F. Carpio">
-    <a href="https://jfcarpio.com/">Inicio</a>
-    <a href="https://jfcarpio.com/las7formas/">Las 7 formas</a>
-    <a href="https://jfcarpio.com/talleres/">Talleres</a>
-    <a href="https://jfcarpio.com/blog.html">Blog</a>
-  </nav>
   <div class="bar-right">
     <nav class="lang-sw" aria-label="Idioma">
       <button class="lang-btn active" aria-pressed="true">
@@ -1465,7 +1431,7 @@ footer.foot-moment::after{
         <span class="lng">EN</span>
       </button>
     </nav>
-    <a href="#diagnostico" class="bar-cta"><span class="bar-cta-full">Abrir el diagnóstico</span><span class="bar-cta-short">Abrir</span></a>
+    <a href="#diagnostico" class="bar-cta">Abrir el diagnóstico</a>
   </div>
 </header>
 
@@ -1482,7 +1448,7 @@ footer.foot-moment::after{
 
   <figure class="hero-poster" aria-hidden="true">
     <div class="hero-poster-img-wrap" data-parallax="0.06">
-      <img class="hero-poster-img" src="https://jfcarpio.com/visorantiquiebra/assets/VisorXMen.png" alt="Visor Antiquiebra — emblema del diagnóstico" width="1024" height="1024" fetchpriority="high">
+      <img class="hero-poster-img" src="./assets/VisorXMen.png" alt="Visor Antiquiebra — emblema del diagnóstico" width="1024" height="1024" fetchpriority="high">
     </div>
     <div class="poster-side">
       <div class="poster-mark">
@@ -1553,32 +1519,6 @@ footer.foot-moment::after{
     </div>
   </div>
 </aside>
-<!-- Real-business photo band · Pexels CDN -->
-<section class="photo-band" id="negocio-real" aria-label="Negocios reales bajo presión">
-  <div class="photo-band-grid">
-    <figure class="photo-card">
-      <img src="https://images.pexels.com/photos/4173268/pexels-photo-4173268.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1500&fit=crop" alt="Dueña de negocio revisando su laptop en un restaurante" loading="lazy">
-      <figcaption class="photo-caption">
-        <span class="pc-k">Lo que pasa entre pedidos</span>
-        <p>La pregunta no vive en el Excel. Vive en la operación diaria, cuando todavía hay que atender, cobrar y decidir.</p>
-      </figcaption>
-    </figure>
-    <figure class="photo-card">
-      <img src="https://images.pexels.com/photos/4339799/pexels-photo-4339799.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Personas revisando números y trabajo en una mesa" loading="lazy">
-      <figcaption class="photo-caption">
-        <span class="pc-k">Sistema antes que intuición</span>
-        <p>El Visor junta señales que normalmente se miran separadas y tarde.</p>
-      </figcaption>
-    </figure>
-    <figure class="photo-card">
-      <img src="https://images.pexels.com/photos/6694951/pexels-photo-6694951.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Persona contando dinero y revisando papeles de caja" loading="lazy">
-      <figcaption class="photo-caption">
-        <span class="pc-k">Caja sin teatro</span>
-        <p>Cuánto entra, cuánto sale, qué cobro cambia el mes y qué decisión no puede esperar.</p>
-      </figcaption>
-    </figure>
-  </div>
-</section>
 
 <!-- ════════════════════════════════════
      PROBLEM AGITATION — Schwartz P-A-S
@@ -2135,7 +2075,7 @@ footer.foot-moment::after{
   <div class="foot-statement">
     <p class="fs-line">Crecer <em>desordenadamente</em> no es lo mismo que crecer con claridad y dominio.</p>
     <div class="fs-meta">
-      <img src="https://jfcarpio.com/visorantiquiebra/assets/growthos-logo-slogan.png" alt="Growth OS — sistema operativo para negocios en expansión" loading="lazy">
+      <img src="./assets/Logo GrowthOS Con Slogan.png" alt="Growth OS — sistema operativo para negocios en expansión" loading="lazy">
       <p>Volumen 2 del sistema operativo Growth OS — diseñado para nuevos negocios entre los meses 6 y 24 de vida. El Visor Antiquiebra es la herramienta de diagnóstico mensual del volumen.</p>
     </div>
   </div>
