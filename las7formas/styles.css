@@ -1418,10 +1418,24 @@ main:focus {
   color: var(--ink);
   margin: 0 0 18px;
 }
+.ps__close {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(22px, 3.4vw, 30px);
+  line-height: 1.35;
+  color: #7a1f1a;
+  color: var(--oxblood);
+  -webkit-text-fill-color: #7a1f1a;
+  margin: 12px 0 24px;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--rule);
+}
 .ps__sign {
   font-family: var(--mono);
   font-size: 13px;
-  color: rgba(27,23,20,0.7);
+  color: #6e6357;
+  color: var(--ink-mute);
+  -webkit-text-fill-color: #6e6357;
   margin: 0;
 }
 
@@ -2428,5 +2442,88 @@ main:focus {
   .quiz__intro,
   .forme__col--no .forme__h,
   .postclick-timeline__foot,
-  .ticket__lastpay { color: #6e6357 !important; -webkit-text-fill-color: #6e6357 !important; }
+  .ticket__lastpay,
+  .ps__sign { color: #6e6357 !important; -webkit-text-fill-color: #6e6357 !important; }
+  .ps__close { color: #7a1f1a !important; -webkit-text-fill-color: #7a1f1a !important; }
+}
+
+/* ============================================================
+   v1.172 — Sticky mini-CTA (mobile only, scroll-triggered)
+   ============================================================ */
+.sticky-cta {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 60;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  background: #7a1f1a;
+  background: var(--oxblood);
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(120%);
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 4px 4px 4px 0;
+}
+.sticky-cta.is-visible {
+  transform: translateY(0);
+}
+@media (max-width: 719px) {
+  .sticky-cta { display: flex; }
+}
+.sticky-cta__btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 56px;
+  padding: 10px 14px;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 1.2;
+}
+.sticky-cta__price {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  opacity: 1;
+}
+.sticky-cta__close {
+  flex-shrink: 0;
+  width: 40px;
+  height: 56px;
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  font-family: var(--sans);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+.sticky-cta__close:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: -4px;
+}
+
+/* iOS Safari + WhatsApp dark mode override for sticky CTA */
+@media (prefers-color-scheme: dark) {
+  .sticky-cta__btn,
+  .sticky-cta__price,
+  .sticky-cta__close { color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; }
 }

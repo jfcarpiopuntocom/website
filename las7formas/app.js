@@ -90,7 +90,7 @@
   var quizResult = document.querySelector('.quiz__result');
   var quizVerdict = document.querySelector('.quiz__verdict');
   var verdicts = {
-    0: 'Lee el catálogo abajo. Vas a reconocer al menos dos en cuestión de minutos.',
+    0: 'Cero marcadas significa o que ya cerraste las 7, o que aún no las nombraste. Lee el catálogo abajo: vas a reconocer al menos dos antes de llegar a la mitad.',
     1: 'Una basta para perder años. Cerrarla cambia el siguiente sueldo.',
     2: 'Dos al mismo tiempo es el patrón más común. El método las cierra en paralelo.',
     3: 'Eres el lector exacto para el curso. Tres fugas activas son el punto de inflexión: cada mes que siguen abiertas, sale dinero por tres lados a la vez.',
@@ -109,6 +109,34 @@
       });
     });
   }
+
+  // ----- Sticky mini-CTA (mobile only, scroll-triggered) — v1.172 -----
+  var stickyCta = document.getElementById('stickyCta');
+  var stickyCtaClose = document.getElementById('stickyCtaClose');
+  var stickyDismissed = false;
+  function isMobile() { return window.innerWidth < 720; }
+  function updateStickyCta() {
+    if (!stickyCta || stickyDismissed) return;
+    var y = window.pageYOffset || 0;
+    var shouldShow = isMobile() && y > 800;
+    if (shouldShow && !stickyCta.classList.contains('is-visible')) {
+      stickyCta.classList.add('is-visible');
+      stickyCta.setAttribute('aria-hidden', 'false');
+    } else if (!shouldShow && stickyCta.classList.contains('is-visible')) {
+      stickyCta.classList.remove('is-visible');
+      stickyCta.setAttribute('aria-hidden', 'true');
+    }
+  }
+  if (stickyCtaClose) {
+    stickyCtaClose.addEventListener('click', function () {
+      stickyDismissed = true;
+      stickyCta.classList.remove('is-visible');
+      stickyCta.setAttribute('aria-hidden', 'true');
+    });
+  }
+  window.addEventListener('scroll', updateStickyCta, { passive: true });
+  window.addEventListener('resize', updateStickyCta);
+  updateStickyCta();
 
   // ----- Smooth-scroll for the hero anchor -----
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
