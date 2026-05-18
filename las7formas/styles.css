@@ -1228,10 +1228,11 @@ main:focus {
   position: relative;
 }
 .transform__col li::before {
-  content: "—";
+  content: "·";
   position: absolute;
   left: 0;
   color: var(--oxblood);
+  font-weight: 700;
 }
 .transform__h {
   font-family: var(--display);
