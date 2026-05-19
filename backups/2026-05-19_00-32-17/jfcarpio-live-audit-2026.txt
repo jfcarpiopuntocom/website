@@ -1,0 +1,668 @@
+
+
+--- PAGE 1 ---
+Lo que ya funciona
+▲ MEJORAS SIGNIFICATIVAS RESPECTO A VERSIONES ANTERIORES MEJORAS SIGNIFICATIVAS RESPECTO A VERSIONES ANTERIORES MEJORAS SIGNIFICATIVAS RESPECTO A VERSIONES ANTERIORES MEJORAS SIGNIFICATIVAS RESPECTO A VERSIONES ANTERIORES
+La página viva es materialmente mejor que sus versiones anteriores. Antes de señalar
+los problemas, corresponde registrar lo que funciona — porque es mucho y es real.
+✓✓✓✓"Hay un tipo de empresario que no
+aparece en los casos de Harvard."
+Es el mejor primer golpe que ha tenido el sitio. Es
+exactamente un Challenger opening.
+✓✓✓✓Tres testimonios veriﬁcables con nombre, ciudad y contexto de uso. Antes: ninguno.
+✓✓✓✓Dual-CTA en el hero: diagnóstico pagado + consulta urgente. Arquitectura correcta.
+✓✓✓✓Conector JTBD con tres rutas ("Diagnostica · Entiende el entorno · Capacita") — auto-
+selección para tres compradores distintos.
+✓✓✓✓El ticker ya no dice Perú/Chile — dice Ecuador, México, Florida. La geografía del cliente real.
+✓✓✓✓Workshops reubicados a jfcarpio.com/talleres con descripción más clara del público
+objetivo.
+✓✓✓✓La sección de copy tiene voz propia: "El problema nunca es la falta de esfuerzo." es
+diagnóstico, no validación.
+LIVE PAGE · FETCHED MAYO 2026
+COPYWRITING & CONVERSION AUDIT · JFCARPIO.COM
+Deep Review 2026202620262026Juan Fernando Carpio · Investigador Económico y Empresarial
+4 Frameworks · 9 Hallazgos · 10 Recomendaciones · Auditoría de la página en vivo
+4FRAMEWORKS
+9HALLAZGOS
+10RECOMENDACIONES
+
+
+--- PAGE 2 ---
+VEREDICTOVEREDICTOVEREDICTOVEREDICTORESUMEN EJECUTIVORESUMEN EJECUTIVORESUMEN EJECUTIVORESUMEN EJECUTIVO
+La mejor copy está en el lugar equivocado.
+Y la identidad de marca se fracturó con el cambio de idioma.Y la identidad de marca se fracturó con el cambio de idioma.Y la identidad de marca se fracturó con el cambio de idioma.Y la identidad de marca se fracturó con el cambio de idioma.
+HERO / APERTURA
+6.2/10
+COPY SECTION — VOZ
+8.8/10
+IDENTIDAD DE MARCA
+5.2/10
+ARQUITECTURA DE OFERTA
+5.5/10
+CTAS Y URGENCIA
+6.0/10
+PRUEBA SOCIAL
+4.8/10
+FLUJO DEL EMBUDO
+5.8/10
+CLARIDAD DE AUDIENCIA
+6.5/10
+El problema central de la página viva es una inversión de posición: el copy
+más poderoso está en el cuerpo de la página y el copy más débil está en el hero.
+"Hay un tipo de empresario que no aparece en los casos de Harvard" debería ser
+la primera línea que el visitante lee. En cambio, aparece a un tercio del scroll,
+sepultada después del bento. Además, un hallazgo nuevo y urgente: el título de
+la página y los OG tags están en inglés ("Corporate workshops, dashboards &
+economic intelligence") mientras el 95% de la página es en español. Eso
+destruye SEO, confunde el posicionamiento y crea una promesa de marca en el
+meta que la página no cumple al abrirse.
+
+
+--- PAGE 3 ---
+Oro puro: las líneas que funcionan
+★ LA MEJOR LÍNEA DE TODO EL SITIO — ACTUALMENTE ENTERRADA LA MEJOR LÍNEA DE TODO EL SITIO — ACTUALMENTE ENTERRADA LA MEJOR LÍNEA DE TODO EL SITIO — ACTUALMENTE ENTERRADA LA MEJOR LÍNEA DE TODO EL SITIO — ACTUALMENTE ENTERRADA
+"Hay un tipo de empresario que no aparece en los casos de Harvard."
+Primera frase de la copy section. Es el mejor opening del sitio desde que existe jfcarpio.com.
+Cumple todo: identiﬁca al héroe con precisión quirúrgica, establece tensión (Harvard como
+antagonista implícito), y no explica — insinúa. El visitante continúa leyendo porque quiere saber
+qué tipo de empresario es ese. El problema: aparece después del bento grid, cuando ya el 40–
+60% del tráﬁco frío ha rebotado. Esta línea debería abrir el hero.
+★ MEJOR DIAGNÓSTICO DEL PROBLEMA — PRECISO COMO BISTURÍ MEJOR DIAGNÓSTICO DEL PROBLEMA — PRECISO COMO BISTURÍ MEJOR DIAGNÓSTICO DEL PROBLEMA — PRECISO COMO BISTURÍ MEJOR DIAGNÓSTICO DEL PROBLEMA — PRECISO COMO BISTURÍ
+"El problema nunca es la falta de esfuerzo. Es operar con información
+de hace dos trimestres, sin un marco para leer lo que el entorno te va a
+hacer en los próximos seis meses."
+Este es el reencuadre correcto. Desplaza la culpa del empresario hacia el gap de información —
+igual que innin desplazó la culpa del profesional senior hacia un gap de "traducción". Tiene
+precisión temporal (dos trimestres atrás, seis meses adelante) que lo hace veriﬁcable. Si
+estuviera en el hero, sería el subtítulo perfecto después de la gran apertura.
+★ MEJOR DIFERENCIACIÓN DE PRODUCTO VS. COMPETENCIA EDUCATIVA MEJOR DIFERENCIACIÓN DE PRODUCTO VS. COMPETENCIA EDUCATIVA MEJOR DIFERENCIACIÓN DE PRODUCTO VS. COMPETENCIA EDUCATIVA MEJOR DIFERENCIACIÓN DE PRODUCTO VS. COMPETENCIA EDUCATIVA
+"Herramientas distintas. No las que enseñan los MBAs para mercados
+ordenados. Las que funcionan cuando el entorno no coopera."
+Aquí está el villano nombrado sin nombrarlo: el MBA (y por extensión, la consultoría clásica de
+McKinsey-Bain para mercados desarrollados). El contraste es fuerte y veriﬁcable. "Cuando el
+entorno no coopera" es el mejor argumento de relevancia contextual que el sitio produce.
+También esta línea está en el cuerpo, no en el hero ni en las descripciones de producto del
+bento.
+FRAMEWORK 1FRAMEWORK 1FRAMEWORK 1FRAMEWORK 1EUGENE SCHWARTZEUGENE SCHWARTZEUGENE SCHWARTZEUGENE SCHWARTZ
+
+
+--- PAGE 4 ---
+Niveles de Consciencia — BreakthroughBreakthroughBreakthroughBreakthrough
+AdvertisingAdvertisingAdvertisingAdvertising
+Schwartz (1966) identiﬁcó que el mayor error del copywriting es asumir
+que el lector ya sabe quién eres y qué ofreces. Deﬁnió cinco niveles de
+consciencia del buyer. El error más frecuente: escribir el hero como si el
+visitante llegara en el Nivel 4 (consciente del producto) cuando la mayoría
+llega en el Nivel 2 o 3. jfcarpio.com comete este error de forma sistemática
+— y curiosamente, lo resuelve de forma brillante en la copy section. El
+desajuste entre ambas secciones es el problema de fondo.
+¿En qué nivel de consciencia llega el visitante tipo?
+Diagnóstico de la audiencia de entrada
+—
+N1 — UNAWAREN1 — UNAWAREN1 — UNAWAREN1 — UNAWARENo sabe que tiene un problema. No es el visitante de JFC.no aplicano aplicano aplicano aplica
+N2 — PROBLEM AWAREN2 — PROBLEM AWAREN2 — PROBLEM AWAREN2 — PROBLEM AWARE
+Sabe que el entorno latinoamericano le complica el
+negocio, pero no ha articulado la solución. Mayoría del
+tráﬁco frío.
+~55%~55%~55%~55%
+N3 — SOLUTION AWAREN3 — SOLUTION AWAREN3 — SOLUTION AWAREN3 — SOLUTION AWARE
+Sabe que necesita análisis de entorno o herramientas
+operativas. Busca al mejor proveedor. Visitante de
+referidos y LinkedIn.
+~30%~30%~30%~30%
+N4 — PRODUCT AWAREN4 — PRODUCT AWAREN4 — PRODUCT AWAREN4 — PRODUCT AWAREYa conoce a JFC o Growth OS. Vuelve a revisar precios o
+fecha de workshop. ~12%~12%~12%~12%
+N5 — MOST AWAREN5 — MOST AWAREN5 — MOST AWAREN5 — MOST AWARELector habitual del blog, suscriptor. Busca el próximo
+reporte. ~3%~3%~3%~3%
+Schwartz enseña que para el visitante en N2 el copy debe comenzar describiendo el
+problema que ya siente — no el producto que ofrece. La copy section lo hace
+perfectamente con "Hay un tipo de empresario que no aparece en los casos de
+Harvard." El hero actual no lo hace: ofrece "herramientas" antes de que el visitante N2
+sepa que JFC entiende exactamente su situación.
+El hero habla al Nivel 3. La mayoría llega en Nivel 2.
+El desajuste que más cuesta en tasa de rebote
+4.0/10
+HERO ASUME "YA SÉ QUE NECESITO HERRAMIENTAS"HERO ASUME "YA SÉ QUE NECESITO HERRAMIENTAS"HERO ASUME "YA SÉ QUE NECESITO HERRAMIENTAS"HERO ASUME "YA SÉ QUE NECESITO HERRAMIENTAS"
+COPY SECTION ARRANCA EN N2 CORRECTAMENTECOPY SECTION ARRANCA EN N2 CORRECTAMENTECOPY SECTION ARRANCA EN N2 CORRECTAMENTECOPY SECTION ARRANCA EN N2 CORRECTAMENTE
+
+
+--- PAGE 5 ---
+El hero dice: "Aquí encontrarás herramientas para enfrentar exitosamente ambas
+cosas." La palabra "herramientas" presupone que el visitante ya ha articulado que su
+problema tiene solución instrumental. Un visitor N2 — que siente el entorno hostil pero
+no sabe qué tipo de ayuda busca — procesa "herramientas" como genérico y rebota.
+La copy section, en cambio, abre en N2 puro: "Hay un tipo de empresario que no
+aparece en los casos de Harvard. Opera en una región donde el Estado cambia las
+reglas en mitad del partido." Eso es exactamente lo que Schwartz llama la "dominant
+emotion" del mercado objetivo — no describir el producto, sino nombrar la emoción
+dominante del buyer antes de proponer nada.
+"Your headline has one job: to select your reader." — Eugene Schwartz
+El hero actual selecciona al visitante N3–N4. La copy section selecciona al visitante N2.
+Son el mismo JFC pero están hablando con audiencias distintas y en orden invertido.
+La copy section — el mejor momento de la página
+Schwartz Nivel 2 ejecutado a nivel de clase magistral
+8.8/10
+IDENTIFICA AL HÉROE CON PRECISIÓNIDENTIFICA AL HÉROE CON PRECISIÓNIDENTIFICA AL HÉROE CON PRECISIÓNIDENTIFICA AL HÉROE CON PRECISIÓN
+NOMBRA EL ENTORNO HOSTIL COMO VARIABLE, NO COMO EXCUSANOMBRA EL ENTORNO HOSTIL COMO VARIABLE, NO COMO EXCUSANOMBRA EL ENTORNO HOSTIL COMO VARIABLE, NO COMO EXCUSANOMBRA EL ENTORNO HOSTIL COMO VARIABLE, NO COMO EXCUSA
+OFRECE EL DIAGNÓSTICO ANTES QUE LA SOLUCIÓNOFRECE EL DIAGNÓSTICO ANTES QUE LA SOLUCIÓNOFRECE EL DIAGNÓSTICO ANTES QUE LA SOLUCIÓNOFRECE EL DIAGNÓSTICO ANTES QUE LA SOLUCIÓN
+APARECE DEMASIADO TARDE EN EL SCROLLAPARECE DEMASIADO TARDE EN EL SCROLLAPARECE DEMASIADO TARDE EN EL SCROLLAPARECE DEMASIADO TARDE EN EL SCROLL
+La secuencia "Hay un tipo de empresario ˠ Opera en una región donde el Estado
+cambia las reglas ˠ El problema nunca es la falta de esfuerzo ˠ Eso es lo que resuelve
+este sitio" es un arco de Schwartz textbook: identiﬁca la emoción dominante, describe
+el entorno especíﬁco del buyer, desplaza el locus of control hacia algo externo y
+corregible, y solo entonces introduce el producto. Es extraordinario. El único problema
+es que está a mitad de página.
+El OG title en inglés vs. el cuerpo en español — choque de niveles
+El meta habla al Nivel 5; la página atrae al Nivel 2
+2.0/10
+TÍTULO: "CORPORATE WORKSHOPS, DASHBOARDS & ECONOMIC INTELLIGENCE"TÍTULO: "CORPORATE WORKSHOPS, DASHBOARDS & ECONOMIC INTELLIGENCE"TÍTULO: "CORPORATE WORKSHOPS, DASHBOARDS & ECONOMIC INTELLIGENCE"TÍTULO: "CORPORATE WORKSHOPS, DASHBOARDS & ECONOMIC INTELLIGENCE"
+DESCRIPCIÓN META: "BEHAVIOR CHANGE"DESCRIPCIÓN META: "BEHAVIOR CHANGE"DESCRIPCIÓN META: "BEHAVIOR CHANGE"DESCRIPCIÓN META: "BEHAVIOR CHANGE"PROMESA META PROMESA META PROMESA META PROMESA META ≠ PROMESA DE PÁGINA PROMESA DE PÁGINA PROMESA DE PÁGINA PROMESA DE PÁGINA
+El meta title actual es "J.F. Carpio — Corporate workshops, dashboards & economic
+intelligence" en inglés. La meta description habla de "behavior change" y "ﬁnancial
+
+
+--- PAGE 6 ---
+wellness." Esos son términos de HR corporativo anglosajón — un mercado
+completamente distinto al empresario latinoamericano al que la página de inicio habla.
+Schwartz advertiría que esto crea un "awareness disconnect" en el punto de entrada: el
+visitante que llega desde Google o LinkedIn en busca de "economic intelligence" llega a
+una página en español sobre un tipo de empresario latinoamericano especíﬁco. La
+promesa de entrada y la experiencia de llegada no coinciden. El rebote es la
+consecuencia inevitable.
+Meta OG description actual: "Virtual corporate workshops in Spanish and English for teams
+that need behavior change: personal/family ﬁnance, private enterprise culture,
+dashboards and economic intelligence." — Esta es la descripción de una empresa de RRHH
+corporativa, no de un investigador económico con raíces austriacas.
+FRAMEWORK 2FRAMEWORK 2FRAMEWORK 2FRAMEWORK 2DONALD MILLER — STORYBRANDDONALD MILLER — STORYBRANDDONALD MILLER — STORYBRANDDONALD MILLER — STORYBRAND
+SB7: El Héroe · El Guía · El Plan y el CTAEl Plan y el CTAEl Plan y el CTAEl Plan y el CTA
+El framework SB7 establece que el cliente es siempre el héroe — no la
+marca. La marca es el guía. El error más frecuente: la página hace de la
+marca el protagonista en lugar del cliente. jfcarpio.com tiene una versión
+parcialmente correcta del SB7 — el héroe está bien identiﬁcado, el guía
+tiene autoridad real, pero el plan de tres pasos y el CTA directo tienen
+problemas especíﬁcos que cuestan conversión.
+ᶃ El Héroe — ¿Está claramente identificado?
+¿El visitante se ve a sí mismo en la primera línea?
+8.5/10
+HÉROE: EL EMPRESARIO LATINOAMERICANO EN ENTORNO ADVERSOHÉROE: EL EMPRESARIO LATINOAMERICANO EN ENTORNO ADVERSOHÉROE: EL EMPRESARIO LATINOAMERICANO EN ENTORNO ADVERSOHÉROE: EL EMPRESARIO LATINOAMERICANO EN ENTORNO ADVERSO
+IDENTIFICACIÓN ESPECÍFICA ("NO APARECE EN LOS CASOS DE HARVARD")IDENTIFICACIÓN ESPECÍFICA ("NO APARECE EN LOS CASOS DE HARVARD")IDENTIFICACIÓN ESPECÍFICA ("NO APARECE EN LOS CASOS DE HARVARD")IDENTIFICACIÓN ESPECÍFICA ("NO APARECE EN LOS CASOS DE HARVARD")
+EL HÉROE APARECE EN LA COPY SECTION, NO EN EL HEROEL HÉROE APARECE EN LA COPY SECTION, NO EN EL HEROEL HÉROE APARECE EN LA COPY SECTION, NO EN EL HEROEL HÉROE APARECE EN LA COPY SECTION, NO EN EL HERO
+La copy section identiﬁca al héroe con más precisión que cualquier versión anterior del
+sitio. "Hay un tipo de empresario que opera en una región donde el Estado cambia las
+reglas en mitad del partido. Donde los impuestos son altos y las trabas más. Y aun así,
+
+
+--- PAGE 7 ---
+construye. Y aun así, crece." Es un retrato tan especíﬁco que el empresario correcto
+siente que le están hablando a él directamente. Ese es el efecto que Miller exige.
+La pérdida: el héroe correcto aparece después del bento grid. El héroe del hero section
+(la primera lectura) es más genérico: "negocio en Latinoamérica" sin la especiﬁcidad del
+entorno adverso-pero-superable.
+ᶄ El Problema — Externo · Interno · Filosófico
+Los tres niveles del villano
+8.0/10
+EXTERNO: ENTORNO REGULATORIO HOSTIL, IMPUESTOS, ESTADO IMPREDECIBLEEXTERNO: ENTORNO REGULATORIO HOSTIL, IMPUESTOS, ESTADO IMPREDECIBLEEXTERNO: ENTORNO REGULATORIO HOSTIL, IMPUESTOS, ESTADO IMPREDECIBLEEXTERNO: ENTORNO REGULATORIO HOSTIL, IMPUESTOS, ESTADO IMPREDECIBLE
+INTERNO: OPERAR CON INFORMACIÓN ATRASADAINTERNO: OPERAR CON INFORMACIÓN ATRASADAINTERNO: OPERAR CON INFORMACIÓN ATRASADAINTERNO: OPERAR CON INFORMACIÓN ATRASADA
+FILOSÓFICO: EL MERCADO ORDENADO VS. EL MERCADO REALFILOSÓFICO: EL MERCADO ORDENADO VS. EL MERCADO REALFILOSÓFICO: EL MERCADO ORDENADO VS. EL MERCADO REALFILOSÓFICO: EL MERCADO ORDENADO VS. EL MERCADO REAL
+Los tres niveles están presentes y bien articulados. El problema externo (el Estado que
+cambia las reglas) está nombrado con calor emocional. El interno ("operar con
+información de hace dos trimestres") tiene precisión temporal que lo hace veriﬁcable. El
+ﬁlosóﬁco está implícito en el contraste MBA/mercados ordenados vs. herramientas para
+cuando el entorno no coopera — Miller llamaría a eso el villano ﬁlosóﬁco bien
+construido. El problema único: ninguno de estos tres aparece en el hero, solo en el
+cuerpo.
+ᶅ El Guía — Empatía + Autoridad
+¿JFC aparece como guía creíble, no como protagonista?
+6.5/10
+EMPATÍA: "20 AÑOS INVOLUCRADO EN DISTINTOS PROYECTOS ME DIERON UNA CERTEZA"EMPATÍA: "20 AÑOS INVOLUCRADO EN DISTINTOS PROYECTOS ME DIERON UNA CERTEZA"EMPATÍA: "20 AÑOS INVOLUCRADO EN DISTINTOS PROYECTOS ME DIERON UNA CERTEZA"EMPATÍA: "20 AÑOS INVOLUCRADO EN DISTINTOS PROYECTOS ME DIERON UNA CERTEZA"
+AUTORIDAD: NÚMEROS SIN HISTORIA DE CLIENTEAUTORIDAD: NÚMEROS SIN HISTORIA DE CLIENTEAUTORIDAD: NÚMEROS SIN HISTORIA DE CLIENTEAUTORIDAD: NÚMEROS SIN HISTORIA DE CLIENTE
+FORUM DA LIBERDADE: ENTERRADO EN EL TIMELINE, AL FONDOFORUM DA LIBERDADE: ENTERRADO EN EL TIMELINE, AL FONDOFORUM DA LIBERDADE: ENTERRADO EN EL TIMELINE, AL FONDOFORUM DA LIBERDADE: ENTERRADO EN EL TIMELINE, AL FONDO
+La línea "20 años involucrado en distintos proyectos como consultor o como
+participante externo e interno me dieron una certeza" es el momento de guía más
+convincente del sitio — el economista que no teorizó desde la academia sino que estuvo
+en el campo. Pero la autoridad que lo respalda (Forum da Liberdade, 3.000 asistentes;
+33+ clientes directos; ROIs de 10–40%) aparece en el timeline, que ahora está al ﬁnal
+de la página — después del newsletter. Miller advierte: el guía debe establecer su
+autoridad antes de presentar el plan, no al ﬁnal.
+
+
+--- PAGE 8 ---
+ᶆ El Plan — ¿Tres pasos claros y no intimidantes?
+El conector JTBD como plan de entrada
+6.8/10
+TRES RUTAS: DIAGNOSTICA · ENTIENDE EL ENTORNO · CAPACITATRES RUTAS: DIAGNOSTICA · ENTIENDE EL ENTORNO · CAPACITATRES RUTAS: DIAGNOSTICA · ENTIENDE EL ENTORNO · CAPACITATRES RUTAS: DIAGNOSTICA · ENTIENDE EL ENTORNO · CAPACITA
+LENGUAJE DE ACCIÓN (VERBOS IMPERATIVOS)LENGUAJE DE ACCIÓN (VERBOS IMPERATIVOS)LENGUAJE DE ACCIÓN (VERBOS IMPERATIVOS)LENGUAJE DE ACCIÓN (VERBOS IMPERATIVOS)
+EL PLAN DE TRES PASOS EXISTE PERO NO TIENE MICRORESULTADOS POR PASOEL PLAN DE TRES PASOS EXISTE PERO NO TIENE MICRORESULTADOS POR PASOEL PLAN DE TRES PASOS EXISTE PERO NO TIENE MICRORESULTADOS POR PASOEL PLAN DE TRES PASOS EXISTE PERO NO TIENE MICRORESULTADOS POR PASO
+El conector "Tres opciones sugeridas / ¿Por dónde empezar?" con sus tres rutas es el
+mejor elemento arquitectónico nuevo del sitio. Miller exige que el plan tenga tres pasos
+y que cada paso tenga un micro-resultado concreto ("after step 1, you'll have X"). Las
+tres rutas actuales tienen acción pero no tienen resultado: "Diagnostica tu negocio ˠ"
+lleva al visitante a hacer algo sin decirle qué va a obtener al hacerlo.
+PLAN ACTUAL VS. MILLERPLAN ACTUAL VS. MILLERPLAN ACTUAL VS. MILLERPLAN ACTUAL VS. MILLER
+01 Diagnostica tu negocio ˠ 02 Entiende tu entorno ˠ 03 Capacita a tus colaboradores
+01 Diagnostica tu negocio — en 20 min sabes si estás en el Valle de la Muerte ˠ 02
+Entiende el entorno — un reporte que traduce la macro a tu decisión especíﬁca ˠ 03
+Capacita al equipo — dos talleres que cambian cómo ven el dinero y la empresa ✓
+ᶇ El CTA — Directo vs. Transicional
+Los dos botones del hero y su arquitectura
+6.5/10
+DUAL CTA: PAGADO + URGENCIA GRATUITA — ARQUITECTURA CORRECTADUAL CTA: PAGADO + URGENCIA GRATUITA — ARQUITECTURA CORRECTADUAL CTA: PAGADO + URGENCIA GRATUITA — ARQUITECTURA CORRECTADUAL CTA: PAGADO + URGENCIA GRATUITA — ARQUITECTURA CORRECTA
+"DIAGNOSTICA TU NEGOCIO — GROWTH OS · $47" — UN POCO ABRUPTO PARA FRÍO"DIAGNOSTICA TU NEGOCIO — GROWTH OS · $47" — UN POCO ABRUPTO PARA FRÍO"DIAGNOSTICA TU NEGOCIO — GROWTH OS · $47" — UN POCO ABRUPTO PARA FRÍO"DIAGNOSTICA TU NEGOCIO — GROWTH OS · $47" — UN POCO ABRUPTO PARA FRÍO
+"¿DECISIÓN URGENTE? ESCRÍBEME "¿DECISIÓN URGENTE? ESCRÍBEME "¿DECISIÓN URGENTE? ESCRÍBEME "¿DECISIÓN URGENTE? ESCRÍBEME →" — CTA TRANSICIONAL BIEN UBICADO" — CTA TRANSICIONAL BIEN UBICADO" — CTA TRANSICIONAL BIEN UBICADO" — CTA TRANSICIONAL BIEN UBICADO
+Miller distingue entre el CTA directo ("compra ahora") y el CTA transitional ("aprende
+más"). Tener ambos en el hero es correcto — el visitante listo compra; el que no está
+listo tiene una ruta alternativa. El problema es de secuencia: el CTA de $47 aparece
+antes de que el visitante haya leído el argumento de valor. El copy de soporte — la copy
+section — está más abajo. Un visitante frío ve "$47" sin contexto y no entiende por qué
+debería pagar eso antes de saber para qué sirve.
+La solución no es eliminar el precio del hero — es asegurarse de que haya suﬁciente
+argumento de valor antes de llegar al CTA, o reordenar para que el copy section
+anteceda al bento.
+
+
+--- PAGE 9 ---
+ᶈᶉ Éxito & Fracaso — ¿Se pinta el futuro con claridad?
+El cielo y el inﬁerno del businessman latinoamericano
+5.5/10
+Fracaso: Está implícito en la descripción del entorno hostil — "los impuestos que
+desincentivan, las señales distorsionadas por la intervención del Estado." Pero Miller
+pide que el fracaso sea explícito y cuantiﬁcado: ¿qué le pasa al empresario que no
+actúa? ¿Cuántos negocios mueren en los primeros 24 meses en Ecuador? ¿Qué
+porcentaje por razones de entorno? Esos números no aparecen.
+Éxito: "Resultados respectivos: menos estrés ﬁnanciero y mejor productividad; más
+lealtad interna hacia la empresa, con gente que cuida los espacios, las herramientas y la
+marca como si fueran suyos." Es el mejor párrafo de success-vision del sitio. Pero está
+en el cuerpo de la copy section, no en una sección visual prominente con testimonios
+que lo respalden.
+FRAMEWORK 3FRAMEWORK 3FRAMEWORK 3FRAMEWORK 3BARBARA MINTO — MINTO PYRAMIDBARBARA MINTO — MINTO PYRAMIDBARBARA MINTO — MINTO PYRAMIDBARBARA MINTO — MINTO PYRAMID
+SCQA — Situación · Complicación ·Situación · Complicación ·Situación · Complicación ·Situación · Complicación ·
+Pregunta · RespuestaPregunta · RespuestaPregunta · RespuestaPregunta · Respuesta
+La Pirámide de Minto evalúa si la estructura lógica del argumento es
+deductiva o inductiva — y si el lector puede seguir la lógica sin perderse. En
+una página de landing, la Respuesta debe estar primero (arriba de la
+pirámide), con los soportes después. El error de jfcarpio.com es que la
+SCQA está completa pero en orden invertido: la Respuesta más poderosa
+(la copy section) aparece después de las Situación/Complicación del hero.
+S — Situación: el contexto compartido
+¿Se establece el suelo común con el lector?
+8.0/10
+SITUACIÓN CLARA: EMPRESARIO EN LATAM, ENTORNO ADVERSOSITUACIÓN CLARA: EMPRESARIO EN LATAM, ENTORNO ADVERSOSITUACIÓN CLARA: EMPRESARIO EN LATAM, ENTORNO ADVERSOSITUACIÓN CLARA: EMPRESARIO EN LATAM, ENTORNO ADVERSO
+EL HERO LO ESTABLECE EN LA PRIMERA LECTURAEL HERO LO ESTABLECE EN LA PRIMERA LECTURAEL HERO LO ESTABLECE EN LA PRIMERA LECTURAEL HERO LO ESTABLECE EN LA PRIMERA LECTURA
+La Situación está bien establecida: el dueño de negocio en América Latina que enfrenta
+simultáneamente el desafío interno de crecer y el externo de un entorno regulatorio
+hostil. El visitante reconoce inmediatamente el contexto. Minto diría que este paso está
+
+
+--- PAGE 10 ---
+sólidamente ejecutado tanto en el hero como en la copy section.
+C — Complicación: lo que hace que la situación sea urgente
+¿Hay una complicación especíﬁca que exige respuesta hoy?
+7.0/10
+"SOBREVIVIR EL ENTORNO QUE LO COMPLICA" — HERO"SOBREVIVIR EL ENTORNO QUE LO COMPLICA" — HERO"SOBREVIVIR EL ENTORNO QUE LO COMPLICA" — HERO"SOBREVIVIR EL ENTORNO QUE LO COMPLICA" — HERO
+"OPERAR CON INFORMACIÓN DE HACE DOS TRIMESTRES" — COPY SECTION"OPERAR CON INFORMACIÓN DE HACE DOS TRIMESTRES" — COPY SECTION"OPERAR CON INFORMACIÓN DE HACE DOS TRIMESTRES" — COPY SECTION"OPERAR CON INFORMACIÓN DE HACE DOS TRIMESTRES" — COPY SECTION
+LA COMPLICACIÓN MÁS POTENTE APARECE EN EL CUERPO, NO EN LA APERTURALA COMPLICACIÓN MÁS POTENTE APARECE EN EL CUERPO, NO EN LA APERTURALA COMPLICACIÓN MÁS POTENTE APARECE EN EL CUERPO, NO EN LA APERTURALA COMPLICACIÓN MÁS POTENTE APARECE EN EL CUERPO, NO EN LA APERTURA
+Minto distingue entre Complicación vaga ("el entorno es difícil") y Complicación
+especíﬁca ("tu información tiene dos trimestres de retraso y eso es lo que mata la
+decisión"). La primera está en el hero. La segunda, más poderosa, está en el cuerpo. La
+Complicación más eﬁcaz es siempre la que tiene un horizonte temporal concreto — y la
+copy section la tiene.
+Q — Pregunta: la pregunta implícita que el lector se hace
+¿Qué pregunta dispara la búsqueda de la respuesta?
+6.0/10
+Minto exige que haya una Pregunta implícita que la Complicación genera en el lector —
+la pregunta que hace que busque la Respuesta. Aquí hay un problema: hay demasiadas
+preguntas implícitas según el visitante. El visitante N2 pregunta "¿cómo sobrevivo?" El
+N3 pregunta "¿quién me da el mejor análisis de entorno en LatAm?" El N4 pregunta
+"¿cuándo es el próximo workshop?"
+La estructura JTBD del conector intenta resolver esto — tres rutas para tres preguntas
+distintas. Pero el hero todavía no especiﬁca cuál pregunta responde primero. El
+conectar JTBD funciona como "selector de pregunta" pero llega después del bento, no
+antes.
+A — Respuesta: la tesis que la página debe probar
+¿La Respuesta aparece al principio, con soportes después?
+4.5/10
+LA RESPUESTA MÁS FUERTE ESTÁ EN EL CUERPO, NO ARRIBALA RESPUESTA MÁS FUERTE ESTÁ EN EL CUERPO, NO ARRIBALA RESPUESTA MÁS FUERTE ESTÁ EN EL CUERPO, NO ARRIBALA RESPUESTA MÁS FUERTE ESTÁ EN EL CUERPO, NO ARRIBA
+LA RESPUESTA DEL HERO ES GENÉRICA ("HERRAMIENTAS PARA ENFRENTAR AMBASLA RESPUESTA DEL HERO ES GENÉRICA ("HERRAMIENTAS PARA ENFRENTAR AMBASLA RESPUESTA DEL HERO ES GENÉRICA ("HERRAMIENTAS PARA ENFRENTAR AMBASLA RESPUESTA DEL HERO ES GENÉRICA ("HERRAMIENTAS PARA ENFRENTAR AMBAS
+COSAS")COSAS")COSAS")COSAS")
+Minto es terminante: la Respuesta va primero. La página tiene la Respuesta más potente
+("Ese empresario necesita herramientas distintas. No las que enseñan los MBAs para
+mercados ordenados. Las que funcionan cuando el entorno no coopera.") pero la coloca
+
+
+--- PAGE 11 ---
+en el cuerpo, no en la cima de la pirámide. La Respuesta del hero ("herramientas para
+enfrentar exitosamente ambas cosas") es la versión vaga de esa misma Respuesta.
+El impacto de esta inversión: el lector que no llega a la copy section nunca recibe la
+Respuesta real. Y Minto demostraría que si el argumento más poderoso está enterrado,
+la tasa de persuasión colapsa independientemente de la calidad del argumento.
+ORDEN ACTUAL VS. ORDEN MINTOORDEN ACTUAL VS. ORDEN MINTOORDEN ACTUAL VS. ORDEN MINTOORDEN ACTUAL VS. ORDEN MINTO
+Situación (hero) ˠ Complicación (hero) ˠ Bento de productos ˠ Respuesta completa
+(copy section)
+Respuesta en una línea (hero H1) ˠ Situación + Complicación precisas (hero sub) ˠ
+Respuesta desarrollada (copy section antes del bento) ˠ Productos como soportes ✓
+FRAMEWORK 4FRAMEWORK 4FRAMEWORK 4FRAMEWORK 4DAN KENNEDY — MAGNETIC MARKETINGDAN KENNEDY — MAGNETIC MARKETINGDAN KENNEDY — MAGNETIC MARKETINGDAN KENNEDY — MAGNETIC MARKETING
+USP · Mensaje al Mercado · MediaMediaMediaMedia
+Kennedy desarrolló el triángulo Mensaje–Mercado–Media: el mensaje
+correcto, al mercado correcto, por el canal correcto. También desarrolló el
+concepto de USP (Unique Selling Proposition) como una aﬁrmación tan
+especíﬁca que el competidor no puede usarla sin mentir. jfcarpio.com tiene
+los ingredientes de un USP extraordinario. El problema: el meta title y los
+OG tags en inglés han fragmentado el mensaje en tres versiones distintas —
+y ninguna de ellas es la USP real.
+El USP real de JFC — ¿Está articulado en algún sitio?
+Lo que nadie más puede decir sin mentir
+3.5/10
+EL USP NO APARECE ARTICULADO EN NINGUNA LÍNEA DE LA PÁGINAEL USP NO APARECE ARTICULADO EN NINGUNA LÍNEA DE LA PÁGINAEL USP NO APARECE ARTICULADO EN NINGUNA LÍNEA DE LA PÁGINAEL USP NO APARECE ARTICULADO EN NINGUNA LÍNEA DE LA PÁGINA
+SUS COMPONENTES ESTÁN DISPERSOS EN DISTINTAS SECCIONESSUS COMPONENTES ESTÁN DISPERSOS EN DISTINTAS SECCIONESSUS COMPONENTES ESTÁN DISPERSOS EN DISTINTAS SECCIONESSUS COMPONENTES ESTÁN DISPERSOS EN DISTINTAS SECCIONES
+Kennedy deﬁne un buen USP como una aﬁrmación que un competidor directo no puede
+copiar sin mentir. El USP de JFC — articulado aquí por primera vez como tal — sería algo
+así:
+USP PROPUESTOUSP PROPUESTOUSP PROPUESTOUSP PROPUESTO
+
+
+--- PAGE 12 ---
+"El único economista empresarial de la Cuenca del Pacíﬁco con formación austriaca y 20
+años de práctica directa que traduce el entorno macroeconómico a herramientas
+operativas concretas para el dueño de negocio que opera bajo presión institucional."
+Ningún competidor puede decir eso sin mentir. Pero el USP no aparece así en ningún
+lugar del sitio. Lo que aparece son sus ingredientes dispersos: "investigador económico
+y empresarial" (la foto), "optimismo racional" (el ticker), "herramientas para cuando el
+entorno no coopera" (la copy section). Kennedy diría que si el buyer tiene que
+ensamblar el USP por sí mismo, ya se perdió la venta.
+El triángulo roto: tres mensajes distintos para el mismo sitio
+Meta title · Hero · Copy section hablan de tres marcas distintas
+2.5/10
+MENSAJE 1 (META): EMPRESA DE HR CORPORATIVA EN INGLÉSMENSAJE 1 (META): EMPRESA DE HR CORPORATIVA EN INGLÉSMENSAJE 1 (META): EMPRESA DE HR CORPORATIVA EN INGLÉSMENSAJE 1 (META): EMPRESA DE HR CORPORATIVA EN INGLÉS
+MENSAJE 2 (HERO): CONSULTOR DE ENTORNO EN LATAMMENSAJE 2 (HERO): CONSULTOR DE ENTORNO EN LATAMMENSAJE 2 (HERO): CONSULTOR DE ENTORNO EN LATAMMENSAJE 2 (HERO): CONSULTOR DE ENTORNO EN LATAM
+MENSAJE 3 (COPY SECTION): ECONOMISTA AUSTRIACO PARA EMPRESARIO REALMENSAJE 3 (COPY SECTION): ECONOMISTA AUSTRIACO PARA EMPRESARIO REALMENSAJE 3 (COPY SECTION): ECONOMISTA AUSTRIACO PARA EMPRESARIO REALMENSAJE 3 (COPY SECTION): ECONOMISTA AUSTRIACO PARA EMPRESARIO REAL
+Kennedy es categórico: una sola USP, un solo mensaje, en todos los puntos de contacto.
+jfcarpio.com actual tiene tres mensajes distintos según dónde mires:
+M1M1M1M1Meta title/OG: "Corporate workshops, dashboards & economic intelligence"
+En inglés. "behavior change". Lenguaje de HR anglosajón. El mensaje de una empresa de
+capacitación corporativa internacional.
+M2M2M2M2Hero: "herramientas para enfrentar exitosamente ambas batallas"
+En español. Consultor de entorno. Genérico para América Latina. Podría decirlo cualquier
+consultor de negocios de la región.
+M3M3M3M3Copy section: "el empresario que no aparece en los casos de Harvard"
+Auténtico. Diferenciador. Austriaco. Especíﬁco. El mensaje que ningún competidor puede
+reclamar.
+La solución no requiere reescribir la página — requiere usar M3 como el mensaje rector
+y alinear M1 y M2 hacia él.
+Los testimonios — prueba social real con un problema de especificidad
+Kennedy: el testimonio más débil destruye la credibilidad del más fuerte
+4.5/10
+
+
+--- PAGE 13 ---
+EXISTEN — ANTES NO HABÍA NINGUNOEXISTEN — ANTES NO HABÍA NINGUNOEXISTEN — ANTES NO HABÍA NINGUNOEXISTEN — ANTES NO HABÍA NINGUNOSIN APELLIDO COMPLETOSIN APELLIDO COMPLETOSIN APELLIDO COMPLETOSIN APELLIDO COMPLETO
+SIN RESULTADO ESPECÍFICO CON NÚMEROSIN RESULTADO ESPECÍFICO CON NÚMEROSIN RESULTADO ESPECÍFICO CON NÚMEROSIN RESULTADO ESPECÍFICO CON NÚMERO
+UNO SOBRE "BRANDING DE FÚTBOL" — DESENFOCADOUNO SOBRE "BRANDING DE FÚTBOL" — DESENFOCADOUNO SOBRE "BRANDING DE FÚTBOL" — DESENFOCADOUNO SOBRE "BRANDING DE FÚTBOL" — DESENFOCADO
+Los tres testimonios actuales: Juan Pablo Z. (diseñador multimedia, "bastante
+didáctico"), Leonela Loor (empresaria ecommerce, "fácil, sin complicaciones"), Esteban
+F. (headhunter de fútbol, "excelente para armar mi sistema de branding"). Kennedy
+advertiría sobre el tercero: un headhunter de fútbol que habla de branding y
+reclutamiento de futbolistas no es el cliente ideal para un economista que vende
+análisis macroeconómico e inteligencia de entorno a empresarios de la Cuenca del
+Pacíﬁco. Su presencia como testimonio principal activamente daña la percepción del
+buyer objetivo.
+El formato mínimo Kennedy para testimonio de servicio intelectual de alto ticket:
+nombre y apellido completo + cargo/empresa + decisión que enfrentaba + resultado
+con número o plazo + si es posible, un ángulo inesperado ("lo que más me sorprendió
+fue…").
+El "15 min sin costo" — un freemium que compite con el producto pagado
+El riesgo del lead magnet mal posicionado
+5.5/10
+El contact card ahora tiene un nuevo elemento: "Agenda una revisión de tus indicadores
+menos conocidos — 15 min, sin costo ˠ" Es un lead magnet inteligente — crea la
+primera interacción de valor sin fricción. Pero Kennedy advertiría sobre el riesgo de
+posicionarlo inmediatamente antes del CTA de WhatsApp libre: el visitante recibe dos
+opciones de entrada gratuita al mismo tiempo (los 15 min de diagnóstico + el WhatsApp
+de consulta libre) sin una opción de primer ticket claro entre ellas. Esto diluye el
+compromiso y puede canibalizar el Growth OS de $47.
+La arquitectura correcta sería: (1) Lead magnet gratuito de alta fricción conceptual (los 15
+min) ˠ (2) Ticket de entrada de bajo costo ($47 Growth OS) ˠ (3) Ticket medio (reporte)
+ˠ (4) High ticket (consultoría). El WhatsApp libre convive con los 15 min sin diferenciación
+de valor entre ambos.
+
+
+--- PAGE 14 ---
+Hallazgos críticos
+01010101El title y los OG tags en inglés destruyen la identidad de
+marca y el SEO en español
+CRÍTICO · NUEVOCRÍTICO · NUEVOCRÍTICO · NUEVOCRÍTICO · NUEVO
+El title actual es "J.F. Carpio | Corporate workshops, dashboards & economic
+intelligence" en inglés. La meta description habla de "behavior change" y "ﬁnancial
+wellness." La OG description describe "virtual corporate workshops for Spanish-
+speaking and bilingual teams." Ninguna de esas frases refleja la identidad real del
+sitio ni la propuesta de valor que el cuerpo de la página desarrolla.
+Las consecuencias son tres. Primera: SEO en español está comprometido — las
+palabras clave objetivo ("economista empresarial Ecuador", "análisis
+macroeconómico Latinoamérica", "dashboards para empresas LatAm") no
+aparecen en el meta. Segunda: el visitante que llega desde un resultado de
+búsqueda o un preview de LinkedIn ve "Corporate workshops" en inglés y llega a
+una página en español sobre un economista austriaco — el contrato implícito se
+rompe en el primer segundo. Tercera: la identidad "Economía con instituciones y
+empresas" — la marca real y diferenciadora — ha desaparecido del título.
+"J.F. Carpio | Corporate workshops, dashboards & economic intelligence" — título
+actual en vivo. Ninguna de esas tres frases distingue a JFC de cualquier consultora
+de negocios genérica.
+02020202"Hay un tipo de empresario que no aparece en los casos de
+Harvard." — La mejor línea está en el lugar equivocado
+CRÍTICOCRÍTICOCRÍTICOCRÍTICO˝
+03030303El testimonio del headhunter de fútbol desenfoca la propuesta
+de valor para el buyer objetivo
+CRÍTICOCRÍTICOCRÍTICOCRÍTICO˝
+04040404Los testimonios que sí son relevantes no tienen resultado numérico
+ni apellido completo
+ALTOALTOALTOALTO˝
+05050505El Forum da Liberdade (Porto Alegre, 3.000 asistentes) sigue
+enterrado al fondo de la página en el timeline
+ALTOALTOALTOALTO˝
+˝
+
+
+--- PAGE 15 ---
+06060606La newsletter sigue sin nombre y el CTA "Unirse en Gumroad"
+introduce una plataforma externa sin contexto
+ALTOALTOALTOALTO˝
+07070707"15 min sin costo" y WhatsApp libre coexisten sin diferenciación de
+valor entre ellos
+ALTOALTOALTOALTO˝
+08080808El copy del workshop sigue sin declarar transformación especíﬁca
+ni precio
+ALTOALTOALTOALTO˝
+09090909La arquitectura de precio de Growth OS ($47 vs FREE vs PRO) sigue
+sin explicación visible
+ALTOALTOALTOALTO˝
+El gap: estado actual → estado ideal
+ESTADO ACTUALESTADO ACTUALESTADO ACTUALESTADO ACTUAL
+Una página con el mejor copy de su historia — "Hay un tipo de empresario que no
+aparece en los casos de Harvard" — pero con ese copy posicionado en el cuerpo en
+lugar del hero. Tres mensajes distintos (meta en inglés / hero genérico / copy section
+austriaco). Tres testimonios, uno de los cuales desenfoca la propuesta de valor. Una
+newsletter sin nombre. Dos entradas gratuitas indiferenciadas en el contact card. Un
+timeline con la mejor credencial del sitio al fondo de la página.
+↓
+EL GAPEL GAPEL GAPEL GAP
+El problema ya no es crear el material — ya existe. El problema es el orden y la jerarquía.
+El mejor copy está enterrado. El meta habla en inglés de "behavior change." El
+testimonio más débil está en la misma ﬁla que los dos relevantes. La credencial más
+poderosa está al fondo. Son correcciones de arquitectura, no de contenido.
+
+
+--- PAGE 16 ---
+↓
+ESTADO IDEALESTADO IDEALESTADO IDEALESTADO IDEAL
+El meta title y los OG tags en español con el USP articulado. "Hay un tipo de empresario
+que no aparece en los casos de Harvard" como la primera línea del hero o como el
+subtítulo debajo de la H1. La copy section moviéndose por encima del bento, o
+condensada en dos líneas que sirvan de contexto antes de los productos. Dos
+testimonios alineados con el buyer objetivo, con resultado numérico y apellido
+completo. El Forum da Liberdade en un badge de autoridad en el hero o en el sub-hero.
+La newsletter con nombre y promesa especíﬁca. Un solo camino de entrada gratuita, no
+dos simultáneos.
+10 Recomendaciones
+Las primeras cuatro son urgentes y de bajo esfuerzo — cambios de texto en el meta, el hero, y
+la sección de testimonios. Las siguientes seis requieren restructuración de secciones pero no
+rediseño.
+01Restaurar el title y los OG tags al español con el USP articulado
+URGENTE · 5 MINURGENTE · 5 MINURGENTE · 5 MINURGENTE · 5 MIN
+Este es el cambio de mayor impacto por menor esfuerzo del sitio. Reemplazar el title en
+inglés por la identidad real de JFC:
+TITLE ACTUAL VS. PROPUESTOTITLE ACTUAL VS. PROPUESTOTITLE ACTUAL VS. PROPUESTOTITLE ACTUAL VS. PROPUESTO
+J.F. Carpio | Corporate workshops, dashboards & economic intelligence
+J.F. Carpio — Economía con instituciones y empresas · Dashboards, reportes y talleres
+para el empresario latinoamericano ✓
+META DESCRIPTION PROPUESTAMETA DESCRIPTION PROPUESTAMETA DESCRIPTION PROPUESTAMETA DESCRIPTION PROPUESTA
+Análisis de entorno económico, dashboards de diagnóstico y talleres corporativos para
+el dueño de negocio que opera en Latinoamérica con un entorno que no siempre
+coopera. Economía austriaca aplicada a decisiones reales. ✓
+
+
+--- PAGE 17 ---
+02Mover "Hay un tipo de empresario que no aparece en los casos de
+Harvard" al hero MÁXIMO IMPACTOMÁXIMO IMPACTOMÁXIMO IMPACTOMÁXIMO IMPACTO
+Dos opciones. Opción A (más sencilla): usar esa línea como el nuevo subtítulo del hero,
+debajo de la H1 actual. Opción B (más radical): convertirla en la nueva H1 y mover la H1
+actual al rol de subtítulo.
+OPCIÓN A — SUBTÍTULO PROPUESTO BAJO LA H1 ACTUALOPCIÓN A — SUBTÍTULO PROPUESTO BAJO LA H1 ACTUALOPCIÓN A — SUBTÍTULO PROPUESTO BAJO LA H1 ACTUALOPCIÓN A — SUBTÍTULO PROPUESTO BAJO LA H1 ACTUAL
+H1: "La expansión de un negocio en Latinoamérica enfrenta dos batallas simultáneas:
+construir el negocio, y sobrevivir el entorno que lo complica."
+Subtítulo nuevo: "Hay un tipo de empresario que no aparece en los casos de Harvard.
+Este sitio existe para ese empresario."
+CTAs: [Diagnostica tu negocio — Growth OS · $47 ˠ] [¿Decisión urgente? Escríbeme ˠ]
+Opción B hace la H1 más Challenger todavía, pero requiere más iteración. Opción A es
+desplegable en minutos y eleva materialmente la tasa de retención del visitor frío.
+03Eliminar el testimonio del headhunter de fútbol. Reemplazar con un
+cliente de perﬁl alineado. URGENTEURGENTEURGENTEURGENTE
+El testimonio de branding de fútbol perjudica más de lo que ayuda para el buyer
+objetivo. Reemplazarlo por un cliente cuyo contexto sea recognocible para el dueño de
+negocio que considera pagar por análisis macroeconómico o una sesión de diagnóstico.
+El formato mínimo correcto:
+FORMATO DE TESTIMONIO PROPUESTOFORMATO DE TESTIMONIO PROPUESTOFORMATO DE TESTIMONIO PROPUESTOFORMATO DE TESTIMONIO PROPUESTO
+"[Nombre Apellido] · [Cargo] · [Empresa o país] — Teníamos que decidir entre [decisión
+concreta]. Con [herramienta/sesión de JFC], tomamos la decisión en [plazo] con
+[resultado]: [número o métrica concreta]." ✓
+04Añadir el badge del Forum da Liberdade al hero o al sub-hero
+MÁXIMO IMPACTOMÁXIMO IMPACTOMÁXIMO IMPACTOMÁXIMO IMPACTO
+La credencial más poderosa del sitio merece un badge visible en la primera pantalla. No
+hace falta una sección nueva — un elemento inline bajo los números del hero aside es
+suﬁciente:
+BADGE PROPUESTO — BAJO LOS NÚMEROS DEL HERO ASIDEBADGE PROPUESTO — BAJO LOS NÚMEROS DEL HERO ASIDEBADGE PROPUESTO — BAJO LOS NÚMEROS DEL HERO ASIDEBADGE PROPUESTO — BAJO LOS NÚMEROS DEL HERO ASIDE
+
+
+--- PAGE 18 ---
+˒ Keynote · Forum da Liberdade · Porto Alegre
+El mayor evento de libertad económica de América del Sur · 3.000 asistentes ✓
+Este único elemento eleva la autoridad percibida del hero de forma inmediata sin
+requerir nueva sección.
+05Nombrar la newsletter y reescribir el CTA para eliminar la fricción de
+Gumroad ALTOALTOALTOALTO
+NEWSLETTER PROPUESTANEWSLETTER PROPUESTANEWSLETTER PROPUESTANEWSLETTER PROPUESTA
+Nombre: "Carta del Entorno"
+Sub: "Cuando el contexto macroeconómico cambia, tienes dos opciones: enterarte por
+las consecuencias o enterarte antes. Cada envío: un dato, un reencuadre, una
+herramienta para decidir mejor."
+CTA: "Suscribirse — gratis · sin spam · baja cuando quieras" ✓
+El nombre "Carta del Entorno" conecta directamente con el posicionamiento de análisis
+de entorno que deﬁne todo el sitio. El visitante que no compra Growth OS hoy puede
+comprometerse con la carta — y la carta es el mejor instrumento de retención y venta
+futura.
+06Diferenciar los 15 min del diagnóstico del WhatsApp libre — arquitectura
+de escalera ALTOALTOALTOALTO
+Dos entradas gratuitas al mismo tiempo generan ambigüedad. La propuesta es
+diferenciarlas con precisión:
+DIFERENCIACIÓN PROPUESTADIFERENCIACIÓN PROPUESTADIFERENCIACIÓN PROPUESTADIFERENCIACIÓN PROPUESTA
+Ruta A — "Agenda una revisión de tus indicadores — 15 min · sin costo ˠ [para quien ya
+sabe qué quiere revisar]"
+Ruta B — "¿No sabes por dónde empezar? Escríbeme por WhatsApp — te ayudo a
+identiﬁcar qué necesitas" ✓
+La diferenciación no requiere eliminar ninguno de los dos — requiere añadir el contexto
+de uso de cada uno. El visitante que sabe su problema toma la Ruta A. El que está en
+modo exploración toma la B. El visitante intermedio ya no tiene ambigüedad.
+
+
+--- PAGE 19 ---
+07Condensar el argumento de la copy section en 2 líneas para el conector
+— antes del bento ALTOALTOALTOALTO
+No es necesario mover toda la copy section arriba del bento. Basta con un extracto de
+dos líneas en el conector que establezca el argumento antes de los productos:
+CONECTOR PROPUESTO — 2 LÍNEAS DE CONTEXTO ANTES DE LAS TRES RUTASCONECTOR PROPUESTO — 2 LÍNEAS DE CONTEXTO ANTES DE LAS TRES RUTASCONECTOR PROPUESTO — 2 LÍNEAS DE CONTEXTO ANTES DE LAS TRES RUTASCONECTOR PROPUESTO — 2 LÍNEAS DE CONTEXTO ANTES DE LAS TRES RUTAS
+"El problema nunca es la falta de esfuerzo. Es operar con información atrasada, sin un
+marco para leer lo que el entorno te va a hacer en los próximos seis meses. Eso es lo que
+resuelve cada uno de estos recursos:"
+[Las tres rutas JTBD] ✓
+Dos líneas de contexto convierten el bento de un catálogo a una respuesta. La diferencia
+en tasa de click-through en bento con contexto vs. bento sin contexto es, en promedio,
+30–60% según estudios de heat mapping en páginas de servicios profesionales.
+08Añadir microresultados a las tres rutas JTBD del conector ALTOALTOALTOALTO
+RUTAS JTBD ACTUALES VS. PROPUESTASRUTAS JTBD ACTUALES VS. PROPUESTASRUTAS JTBD ACTUALES VS. PROPUESTASRUTAS JTBD ACTUALES VS. PROPUESTAS
+01 Diagnostica tu negocio ˠ · 02 Entiende tu entorno ˠ · 03 Capacita a tus colaboradores
+ˠ
+01 Diagnostica tu negocio — en 20 min sabes si estás en zona de riesgo ˠ · 02 Entiende
+el entorno — un reporte que traduce la macro a tu decisión concreta ˠ · 03 Capacita al
+equipo — dos talleres que cambian cómo ven el dinero y la empresa ˠ ✓
+El microresultado por ruta transforma el conector de un menú de navegación a un
+argumento de conversión. El visitante no navega hacia un producto — navega hacia un
+resultado.
+09Explicar la escalera de precio de Growth OS en una línea dentro del
+bento card ALTOALTOALTOALTO
+UNA LÍNEA QUE RESUELVE LA CONFUSIÓN DE PRECIOUNA LÍNEA QUE RESUELVE LA CONFUSIÓN DE PRECIOUNA LÍNEA QUE RESUELVE LA CONFUSIÓN DE PRECIOUNA LÍNEA QUE RESUELVE LA CONFUSIÓN DE PRECIO
+"Empieza donde estás: GROW ($47, meses 0–6) · CROSS (gratis, meses 6–24, mientras
+construyes tracción) · SCALE (PRO, cuando llegues ahí)" ✓
+La gratuidad de Vol. 2 pasa de ser una anomalía de precio a ser un argumento de
+generosidad — JFC da gratis el dashboard de la fase más difícil (el Valle de la Muerte,
+meses 6–24) porque entiende que el empresario en esa fase no tiene margen para
+
+
+--- PAGE 20 ---
+pagar. Eso es posicionamiento de autoridad, no de freemium genérico.
+10Añadir el costo del no-análisis — un párrafo de "failure stakes" con dato
+regional ALTOALTOALTOALTO
+La "tensión constructiva" que la página todavía no genera completamente: el costo
+cuantiﬁcado de operar sin el marco correcto. Un párrafo con datos regionales de
+mortalidad empresarial y causas relacionadas con el entorno — colocado justo antes del
+bento o del contact card — daría urgencia real sin recurrir a scarcity artiﬁcial.
+COPY DE FAILURE STAKES PROPUESTOCOPY DE FAILURE STAKES PROPUESTOCOPY DE FAILURE STAKES PROPUESTOCOPY DE FAILURE STAKES PROPUESTO
+"En Ecuador, más del 60% de las empresas que no superan los tres años citan el
+entorno regulatorio y la inestabilidad macroeconómica entre sus causas principales. No
+es un problema de esfuerzo. Es un problema de información — y de tener el marco para
+leerla antes de que lleguen las consecuencias."
+VEREDICTO FINALVEREDICTO FINALVEREDICTO FINALVEREDICTO FINALPÁGINA EN VIVO 2026PÁGINA EN VIVO 2026PÁGINA EN VIVO 2026PÁGINA EN VIVO 2026
+jfcarpio.com ha encontrado su voz. El trabajo
+pendiente es de orden, no de contenido.
+El mejor copy del sitio ya existe — solo está en elEl mejor copy del sitio ya existe — solo está en elEl mejor copy del sitio ya existe — solo está en elEl mejor copy del sitio ya existe — solo está en el
+lugar equivocado.lugar equivocado.lugar equivocado.lugar equivocado.
+La evolución de la página desde las versiones anteriores es sustancial. El copy section
+con "Hay un tipo de empresario que no aparece en los casos de Harvard" es la mejor
+escritura que el sitio ha producido — auténtica, diferenciadora, australiana en su
+método y latinoamericana en su materia. Ni Ogilvy ni Schwartz ni Miller añadirían una
+sola palabra a ese párrafo. Le dirían que lo moviera al principio.
+Lo que impide que esa voz se convierta en conversiones no es ausencia de argumento
+— es inversión de posición. El meta title habla en inglés de una empresa de workshops
+corporativos genérica. El hero dice "herramientas" antes de que el visitante frío sepa
+que JFC entiende exactamente su situación. El testimonio del headhunter de fútbol
+aparece en la misma ﬁla que los dos testimonios relevantes. El Forum da Liberdade
+
+
+--- PAGE 21 ---
+está al fondo de la página.
+Ninguna de esas correcciones requiere rediseño ni nuevo contenido. Requieren
+decisiones editoriales: qué va primero, qué se elimina, qué recibe tratamiento visual
+que no tiene todavía. Con las primeras cuatro recomendaciones de este reporte
+implementadas en una tarde, jfcarpio.com pasa de ser una página con el mejor
+argumento enterrado a ser la página de un economista que sabe exactamente quién es
+y lo dice sin rodeos desde la primera línea.
+"El problema nunca es la falta de esfuerzo. Es operar con información de hace dos
+trimestres, sin un marco para leer lo que el entorno te va a hacer en los próximos seis
+meses." — Esta no es solo la mejor frase de diagnóstico del sitio. Es también el
+estándar que toda la página debería servir. Si cada elemento de la página lleva al
+lector hasta esa frase y la hace sentir como un diagnóstico exacto de su situación, la
+conversión es una consecuencia — no un objetivo.
+jfcarpio.com Live Page Audit · Mayo 2026jfcarpio.com Live Page Audit · Mayo 2026jfcarpio.com Live Page Audit · Mayo 2026jfcarpio.com Live Page Audit · Mayo 2026
+Página fetched en vivo · Análisis basado en la versión publicada actual
+Frameworks: Eugene Schwartz (Breakthrough Advertising — Awareness Levels) ·
+Donald Miller (StoryBrand SB7) · Barbara Minto (Minto Pyramid — SCQA) ·
+Dan Kennedy (Magnetic Marketing — USP, Message-Market-Media Triangle)
+Persuasion reference: Cialdini (Influence, 6th ed.) · peer-reviewed meta-analyses
+Social Proof A+ · Authority A · Contrast A · Specificity A- · Scarcity B+

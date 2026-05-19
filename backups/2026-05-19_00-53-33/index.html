@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>J.F. Carpio — herramientas para el empresario latinoamericano que opera en un entorno difícil</title>
-<meta name="description" content="Dashboards, reportes de entorno y talleres corporativos para empresarios y equipos que necesitan decidir con mejores métricas, mejor contexto y menos humo.">
+<title>J.F. Carpio | Corporate workshops, dashboards & economic intelligence</title>
+<meta name="description" content="Virtual corporate workshops in Spanish and English for teams that need behavior change: personal/family finance, private enterprise culture, dashboards and economic intelligence by J.F. Carpio.">
 <meta name="author" content="Juan Fernando Carpio">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#FFFFFF">
@@ -13,8 +13,8 @@
 <!-- OG / v1.5 -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jfcarpio.com/">
-<meta property="og:title" content="J.F. Carpio — herramientas para el empresario latinoamericano">
-<meta property="og:description" content="Dashboards, reportes de entorno y talleres corporativos para decidir mejor cuando el entorno no coopera.">
+<meta property="og:title" content="J.F. Carpio — Corporate workshops, dashboards & economic intelligence">
+<meta property="og:description" content="Virtual corporate workshops for Spanish-speaking and bilingual teams: personal/family finance, private enterprise appreciation, dashboards and economic intelligence.">
 <meta property="og:image" content="https://jfcarpio.com/og-jfcarpio.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -23,8 +23,8 @@
 <meta property="og:site_name" content="J.F. Carpio">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@jfcarpio">
-<meta name="twitter:title" content="J.F. Carpio — herramientas para el empresario latinoamericano">
-<meta name="twitter:description" content="Dashboards, reportes de entorno y talleres corporativos para decidir mejor cuando el entorno no coopera.">
+<meta name="twitter:title" content="J.F. Carpio — Corporate workshops, dashboards & economic intelligence">
+<meta name="twitter:description" content="Virtual workshops in Spanish and English for behavior change, financial wellness and private enterprise culture.">
 <meta name="twitter:image" content="https://jfcarpio.com/og-jfcarpio.png">
 
 <!-- Canonical -->
@@ -134,7 +134,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.164 (Audit 2026 landing alignment) · Last major refactor: 2026-05-19 · Author: JFC + Codex
+  v1.144 (WHITE E+ SEO rescue) · Last major refactor: 2026-05-06 · Author: JFC + Codex
   WHITE E enhancements: added mix-blend-mode:screen to background images for
   beautiful, visible photography against white background (no more dingy appearance).
 ================================================================================
@@ -193,7 +193,7 @@
   6. COPY + PHOTO (.copy-section) -- long-form manifesto + JFC photo
   7. TIMELINE (.about-section) -- career trajectory (.tl-row)
   8. CONTACT / TERMINAL (.contact-section#terminal) -- WhatsApp + AI query
-  9. NEWSLETTER (.nl-section) -- Carta del Entorno WhatsApp signup
+  9. NEWSLETTER (.nl-section) -- Gumroad mailing list CTA
   10. FOOTER (.footer)
 
   FOREIGN CSS (ignore, do not edit):
@@ -316,14 +316,6 @@ button { border:none; background:none; font:inherit; }
 .ham.open .hl:nth-child(1) { -webkit-transform:translateY(6.5px) rotate(45deg); transform:translateY(6.5px) rotate(45deg); }
 .ham.open .hl:nth-child(2) { opacity:0; -webkit-transform:scaleX(0); transform:scaleX(0); }
 .ham.open .hl:nth-child(3) { -webkit-transform:translateY(-6.5px) rotate(-45deg); transform:translateY(-6.5px) rotate(-45deg); }
-
-@media(max-width:430px){
-  .bar{padding:0 10px;}
-  .bar-name{display:none;}
-  .ham{padding:8px 10px;}
-  .lang-btn{padding:4px 7px;}
-  .lang-sw{gap:2px;}
-}
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    OVERLAY MENU
@@ -452,49 +444,11 @@ button { border:none; background:none; font:inherit; }
 .lw:nth-child(2) .li { -webkit-animation-delay:.30s; animation-delay:.30s; font-style:italic; color:#000000; }
 .lw:nth-child(3) .li { -webkit-animation-delay:.42s; animation-delay:.42s; font-style:normal; color:#000000; font-weight:600; }
 
-.hero-sub{
-  font-family:'Lora',Georgia,serif;
-  font-size:clamp(1.02rem,2vw,1.34rem);
-  line-height:1.55;
-  color:#000000;
-  max-width:760px;
-  margin-top:22px;
-  padding-left:18px;
-  border-left:3px solid #E86040;
-  -webkit-animation:fadeUp .5s .48s both; animation:fadeUp .5s .48s both;
-}
 .hero-ctas{display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;gap:12px;margin-top:28px;}
-.hero-cta{display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;min-height:44px;background:#E86040;color:#FFFFFF;font-family:'Space Mono','Courier New',monospace;font-size:.82rem;font-weight:700;letter-spacing:.04em;padding:11px 22px;border-radius:3px;text-decoration:none;-webkit-transition:background .15s,-webkit-transform .15s;transition:background .15s,transform .15s;}
+.hero-cta{display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;min-height:44px;background:#E86040;color:#FFFFFF;font-family:'Space Mono','Courier New',monospace;font-size:13px;font-weight:700;letter-spacing:.04em;padding:11px 22px;border-radius:3px;text-decoration:none;-webkit-transition:background .15s,-webkit-transform .15s;transition:background .15s,transform .15s;}
 .hero-cta:hover{background:#d04f30;-webkit-transform:translateY(-1px);transform:translateY(-1px);}
-.hero-cta-sec{display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;min-height:44px;color:#060E1D;font-family:'Space Mono','Courier New',monospace;font-size:.82rem;font-weight:700;letter-spacing:.04em;padding:11px 22px;border:1.5px solid rgba(6,14,29,.4);border-radius:3px;text-decoration:none;-webkit-transition:border-color .15s,color .15s;transition:border-color .15s,color .15s;}
+.hero-cta-sec{display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;min-height:44px;color:#060E1D;font-family:'Space Mono','Courier New',monospace;font-size:13px;font-weight:700;letter-spacing:.04em;padding:11px 22px;border:1.5px solid rgba(6,14,29,.4);border-radius:3px;text-decoration:none;-webkit-transition:border-color .15s,color .15s;transition:border-color .15s,color .15s;}
 .hero-cta-sec:hover{border-color:#E86040;color:#E86040;}
-.hero-badge{
-  display:-webkit-inline-flex;display:inline-flex;
-  -webkit-align-items:flex-start;align-items:flex-start;
-  gap:12px;
-  margin-top:20px;
-  padding:12px 14px;
-  border:1px solid rgba(0,0,0,.16);
-  background:rgba(255,255,255,.88);
-  max-width:560px;
-}
-.hero-badge-mark{
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem;
-  font-weight:700;
-  color:#E86040;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  white-space:nowrap;
-}
-.hero-badge-copy{
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem;
-  color:#000000;
-  letter-spacing:.08em;
-  line-height:1.5;
-  text-transform:uppercase;
-}
 @media(max-width:600px){.hero-ctas{-webkit-flex-direction:column;flex-direction:column;}.hero-cta,.hero-cta-sec{-webkit-justify-content:center;justify-content:center;text-align:center;}}
 @media(prefers-reduced-motion:reduce){.hero-cta,.hero-cta-sec{-webkit-transition:none;transition:none;}}
 /* v1.140 — 3 options strip */
@@ -503,29 +457,13 @@ button { border:none; background:none; font:inherit; }
 .options-eyebrow{display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;gap:10px;font-family:'Space Mono','Courier New',monospace;font-size:.82rem;color:#28ECAA;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;}
 .options-eyebrow::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;background:#28ECAA;-webkit-flex-shrink:0;flex-shrink:0;}
 .options-title{font-family:'Lora',Georgia,serif;font-size:clamp(17px,2vw,22px);font-weight:700;color:#FFFFFF;letter-spacing:.01em;line-height:1.3;}
-.options-context{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:18px;
-  margin:-12px 0 28px;
-}
-.options-context p{
-  font-family:'Lora',Georgia,serif;
-  font-size:1rem;
-  line-height:1.7;
-  color:#F2F2F2;
-  max-width:58ch;
-}
 .options-cards{display:-webkit-flex;display:flex;gap:12px;flex-wrap:wrap;}
 .opt-card{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;gap:18px;-webkit-flex:1 1 220px;flex:1 1 220px;min-height:68px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);padding:18px 24px;text-decoration:none;-webkit-transition:border-color .18s,background .18s;transition:border-color .18s,background .18s;}
 .opt-card:hover{border-color:#28ECAA;background:rgba(40,236,170,.06);}
 .opt-num{font-family:'Space Mono','Courier New',monospace;font-size:.82rem;color:#28ECAA;font-weight:700;letter-spacing:.12em;min-width:26px;}
-.opt-stack{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;gap:5px;-webkit-flex:1;flex:1;}
-.opt-heading{font-family:'Lora',Georgia,serif;font-size:16px;color:#FFFFFF;font-weight:600;line-height:1.4;}
-.opt-micro{font-family:'Space Mono','Courier New',monospace;font-size:.82rem;color:#F2F2F2;letter-spacing:.06em;line-height:1.45;}
+.opt-heading{font-family:'Lora',Georgia,serif;font-size:16px;color:#FFFFFF;font-weight:600;-webkit-flex:1;flex:1;line-height:1.4;}
 .opt-arrow{font-size:18px;color:#28ECAA;font-weight:700;-webkit-transition:transform .18s;transition:transform .18s;}
 .opt-card:hover .opt-arrow{-webkit-transform:translateX(4px);transform:translateX(4px);}
-@media(max-width:760px){.options-context{grid-template-columns:1fr;}}
 @media(max-width:580px){.options-cards{-webkit-flex-direction:column;flex-direction:column;}.opt-card{-webkit-flex:none;flex:none;}}
 @media(prefers-reduced-motion:reduce){.opt-card{-webkit-transition:none;transition:none;}}
 /* v1.1 — fluid connector line between hero and bento */
@@ -680,20 +618,9 @@ button { border:none; background:none; font:inherit; }
 .pan:hover .pan-title { color:var(--pc); }
 .pan-desc {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#000000;
+  font-size:13px; color:#000000;
   letter-spacing:.04em; line-height:1.6;
 }
-.pan-ladder{
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem;
-  color:#000000;
-  letter-spacing:.05em;
-  line-height:1.55;
-  margin-top:10px;
-  padding-top:10px;
-  border-top:1px solid rgba(0,0,0,.08);
-}
-.pan-ladder b{color:#0A9060;}
 .pan-bot {
   margin-top:16px;
   display:-webkit-box; display:-webkit-flex; display:flex;
@@ -844,58 +771,10 @@ button { border:none; background:none; font:inherit; }
 }
 .photo-caption {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#F2F2F2;
+  font-size:.82rem; color:#CCCCCC;
   letter-spacing:.16em; text-transform:uppercase;
   margin-top:10px; text-align:center;
 }
-
-.stakes-section{
-  margin:0 auto;
-  padding:54px 7%;
-  max-width:1200px;
-  border-top:1px solid rgba(0,0,0,.08);
-  border-bottom:1px solid rgba(0,0,0,.08);
-  background:#FFFFFF;
-}
-.stakes-inner{
-  display:grid;
-  grid-template-columns:minmax(150px,240px) 1fr;
-  gap:28px;
-  -webkit-align-items:start;align-items:start;
-}
-.stakes-kicker{
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem;
-  font-weight:700;
-  color:#E86040;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-}
-.stakes-copy{
-  font-family:'Lora',Georgia,serif;
-  font-size:clamp(1.1rem,2.2vw,1.55rem);
-  line-height:1.55;
-  color:#000000;
-  max-width:880px;
-}
-.stakes-copy b{color:#E86040;}
-.stakes-sources{
-  margin-top:18px;
-  display:-webkit-flex;display:flex;
-  gap:10px;
-  -webkit-flex-wrap:wrap;flex-wrap:wrap;
-}
-.stakes-sources a{
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem;
-  color:#000000;
-  border:1px solid rgba(0,0,0,.18);
-  padding:7px 10px;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-}
-.stakes-sources a:hover{border-color:#E86040;color:#E86040;}
-@media(max-width:720px){.stakes-inner{grid-template-columns:1fr;gap:14px;}}
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    v1.6 — ABOUT / TIMELINE
@@ -981,7 +860,7 @@ button { border:none; background:none; font:inherit; }
 }
 .tl-body {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#000000; letter-spacing:.03em; line-height:1.55;
+  font-size:13px; color:#000000; letter-spacing:.03em; line-height:1.55;
 }
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -996,22 +875,22 @@ button { border:none; background:none; font:inherit; }
 .about-section .section-hd{border-bottom-color:rgba(255,255,255,.1);}
 .about-section .section-hd-title{color:#FFFFFF;}
 .about-section .tl-title{color:#FFFFFF;}
-.about-section .tl-body{color:#F2F2F2;}
+.about-section .tl-body{color:#CCCCCC;}
 .about-section .tl-row{border-bottom-color:rgba(255,255,255,.07);}
 .about-section .timeline::before{background:rgba(255,255,255,.12);}
 .about-section .tl-year::after{background:#060E1D;border-color:rgba(255,255,255,.3);}
 .tes-strip{padding:64px 7%;background:#F5F4F2;border-top:1px solid rgba(0,0,0,.07);border-bottom:1px solid rgba(0,0,0,.07);}
 .tes-hd{margin-bottom:40px;}
-.tes-eyebrow{display:block;font-family:'Space Mono','Courier New',monospace;font-size:.82rem;color:#E86040;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;}
+.tes-eyebrow{display:block;font-family:'Space Mono','Courier New',monospace;font-size:13px;color:#E86040;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;}
 .tes-title{font-family:'Lora',Georgia,serif;font-size:clamp(17px,2vw,22px);font-weight:700;color:#000000;line-height:1.3;}
 .tes-cards{display:-webkit-flex;display:flex;gap:24px;-webkit-flex-wrap:wrap;flex-wrap:wrap;}
 .tes-card{-webkit-flex:1 1 260px;flex:1 1 260px;display:-webkit-flex;display:flex;flex-direction:column;gap:16px;padding:28px 24px;background:#FFFFFF;border:1px solid rgba(0,0,0,.08);}
 .tes-q{font-family:'Lora',Georgia,serif;font-size:16px;color:#000000;line-height:1.7;font-style:italic;}
 .tes-q::before{content:'“';}
 .tes-q::after{content:'”';}
-.tes-attr{font-family:'Space Mono','Courier New',monospace;font-size:.82rem;color:#333333;letter-spacing:.05em;margin-top:auto;}
+.tes-attr{font-family:'Space Mono','Courier New',monospace;font-size:13px;color:#333333;letter-spacing:.05em;margin-top:auto;}
 .tes-name{display:block;font-weight:700;color:#000000;}
-.tes-role{display:block;color:#333333;}
+.tes-role{display:block;color:#555555;}
 @media(max-width:640px){.tes-cards{-webkit-flex-direction:column;flex-direction:column;}.tes-card{-webkit-flex:none;flex:none;}}
 .contact-head-simple {
   padding:28px 32px 20px;
@@ -1062,66 +941,10 @@ button { border:none; background:none; font:inherit; }
 }
 .contact-sub {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#000000; letter-spacing:.05em; line-height:1.6;
+  font-size:13px; color:#000000; letter-spacing:.05em; line-height:1.6;
 }
 
 .contact-body { padding:24px 32px 28px; }
-.contact-routes{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:14px;
-  margin-bottom:22px;
-}
-.route-card{
-  border:1px solid rgba(0,0,0,.12);
-  background:#FFFFFF;
-  padding:18px;
-  display:-webkit-box;display:-webkit-flex;display:flex;
-  -webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;
-  gap:10px;
-}
-.route-label{
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem;
-  font-weight:700;
-  color:#E86040;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-}
-.route-title{
-  font-family:'Lora',Georgia,serif;
-  font-size:1.08rem;
-  color:#000000;
-  line-height:1.35;
-  font-weight:700;
-}
-.route-desc{
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem;
-  color:#000000;
-  line-height:1.55;
-  letter-spacing:.05em;
-}
-.route-btn{
-  display:-webkit-inline-flex;display:inline-flex;
-  -webkit-align-items:center;align-items:center;
-  -webkit-justify-content:center;justify-content:center;
-  min-height:44px;
-  padding:11px 14px;
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem;
-  font-weight:700;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  cursor:pointer;
-  background:#E86040;
-  color:#FFFFFF;
-  border:1px solid #E86040;
-}
-.route-btn.alt{background:#FFFFFF;color:#000000;border-color:rgba(0,0,0,.25);}
-.route-btn:hover{background:#d04f30;border-color:#d04f30;}
-.route-btn.alt:hover{background:#060E1D;color:#FFFFFF;border-color:#060E1D;}
-@media(max-width:760px){.contact-routes{grid-template-columns:1fr;}}
 .c-chips {
   display:-webkit-box; display:-webkit-flex; display:flex;
   -webkit-flex-wrap:wrap; flex-wrap:wrap; gap:8px; margin-bottom:20px;
@@ -1151,7 +974,7 @@ button { border:none; background:none; font:inherit; }
   resize:none; min-height:72px; line-height:1.6;
   caret-color:#E8A020;
 }
-.c-textarea::placeholder { color:#333333;  font-style:italic; }
+.c-textarea::placeholder { color:#999999;  font-style:italic; }
 .c-actions {
   padding:10px;
   border-top:1px solid rgba(0,0,0,.06);
@@ -1206,7 +1029,7 @@ button { border:none; background:none; font:inherit; }
   -webkit-transition:color .15s; transition:color .15s;
 }
 .c-char-row.warn { color:#E86040; }
-.c-btn-draft:disabled { opacity:1; background:#D9D9D9; border-color:#D9D9D9; color:#000000; cursor:not-allowed; }
+.c-btn-draft:disabled { opacity:.4; }
 .c-confirm {
   margin-top:10px;
   font-family:'Space Mono','Courier New',monospace;
@@ -1245,7 +1068,7 @@ button { border:none; background:none; font:inherit; }
 }
 .nl-sub {
   font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem; color:#000000; letter-spacing:.06em; line-height:1.5;
+  font-size:13px; color:#000000; letter-spacing:.06em; line-height:1.5;
 }
 .nl-form {
   display:-webkit-box; display:-webkit-flex; display:flex;
@@ -1259,20 +1082,15 @@ button { border:none; background:none; font:inherit; }
   padding:11px 16px; outline:none;
   -webkit-transition:border-color .15s; transition:border-color .15s;
 }
-.nl-input::placeholder { color:#333333; opacity:1; }
+.nl-input::placeholder { color:#666666; opacity:1; }
 .nl-input:focus { border-color:rgba(0,0,0,.35); }
 .nl-submit {
-  display:-webkit-inline-flex;display:inline-flex;
-  -webkit-align-items:center;align-items:center;
-  -webkit-justify-content:center;justify-content:center;
-  min-height:44px;
   font-family:'Space Mono','Courier New',monospace;
   font-size:.82rem; font-weight:700; color:#000000;
   background:#FFFFFF; border:1px solid #FFFFFF;
   padding:11px 20px; letter-spacing:.14em; text-transform:uppercase;
   -webkit-transition:background .14s,color .14s; transition:background .14s,color .14s;
   white-space:nowrap;
-  cursor:pointer;
 }
 .nl-submit:hover { background:#E8A020; border-color:#E8A020; }
 .nl-freq {
@@ -1798,7 +1616,7 @@ button { border:none; background:none; font:inherit; }
   margin-bottom:12px !important;
 }
 .nl-sub { font-size:15px !important; color:#333333 !important; line-height:1.6 !important; }
-.nl-freq { font-size:.82rem !important; color:#333333 !important; margin-top:8px !important; }
+.nl-freq { font-size:13px !important; color:#555555 !important; margin-top:8px !important; }
 .nl-form { position:relative; z-index:1; align-self:center; }
 .nl-submit {
   font-family:'Space Mono','Courier New',monospace !important;
@@ -1829,9 +1647,9 @@ button { border:none; background:none; font:inherit; }
   background:linear-gradient(90deg, transparent 0%, #E8A020 30%, #E86040 70%, transparent 100%);
   pointer-events:none;
 }
-.foot-copy { color:#F2F2F2 !important; }
+.foot-copy { color:#999999 !important; }
 .foot-copy:hover { color:#E8A020 !important; }
-.foot-links a { color:#F2F2F2 !important; border-left-color:rgba(255,255,255,.28) !important; }
+.foot-links a { color:#999999 !important; border-left-color:rgba(255,255,255,.1) !important; }
 .foot-links a:hover { color:#E8A020 !important; }
 .foot-dot { opacity:.8; }
 </style>
@@ -1915,14 +1733,9 @@ button { border:none; background:none; font:inherit; }
         <span class="lw"><span class="li" data-t="h1_l2">enfrenta dos batallas simultáneas: construir el negocio, y sobrevivir el entorno que lo complica.</span></span>
         <span class="lw"><span class="li"><strong><span data-t="h1_l3a">Aquí encontrarás </span><span style="color:#E8A020" data-t="h1_l3b">herramientas</span><span data-t="h1_l3c"> para enfrentar exitosamente ambas cosas.</span></strong></span></span>
       </h1>
-      <p class="hero-sub" data-t="hero_sub">Hay un tipo de empresario que no aparece en los casos de Harvard. Este sitio existe para ese empresario.</p>
       <div class="hero-ctas">
         <a href="https://www.jfcarpio.com/visorantiquiebra/" class="hero-cta" target="_blank" rel="noopener" data-t="cta_primary">Diagnostica tu negocio — Growth OS · $47 →</a>
         <a href="#" onclick="openWA();return false;" class="hero-cta-sec" data-t="cta_sec">¿Decisión urgente? Escríbeme →</a>
-      </div>
-      <div class="hero-badge">
-        <span class="hero-badge-mark" data-t="badge_mark">Keynote</span>
-        <span class="hero-badge-copy" data-t="badge_copy">Forum da Liberdade · Porto Alegre · 3.000 asistentes</span>
       </div>
     </div>
     <aside class="hero-aside" aria-hidden="true">
@@ -1959,24 +1772,20 @@ button { border:none; background:none; font:inherit; }
     <span class="options-eyebrow" data-t="opt_eyebrow">Tres opciones sugeridas</span>
     <span class="options-title" data-t="opt_title">¿Por dónde empezar?</span>
   </div>
-  <div class="options-context">
-    <p data-t="opt_context_1">El problema no es falta de esfuerzo. Es operar con información vieja, métricas dispersas y un entorno que cambia antes de que el plan llegue a madurar.</p>
-    <p data-t="opt_context_2">Empieza por el punto de mayor presión: salud del negocio, lectura del entorno o formación del equipo.</p>
-  </div>
   <div class="options-cards">
     <a class="opt-card" href="https://www.jfcarpio.com/visorantiquiebra/" target="_blank" rel="noopener">
       <span class="opt-num">01</span>
-      <span class="opt-stack"><span class="opt-heading" data-t="opt1_h">Diagnostica tu negocio</span><span class="opt-micro" data-t="opt1_micro">en 20 min sabes si estás en zona de riesgo</span></span>
+      <span class="opt-heading" data-t="opt1_h">Diagnostica tu negocio</span>
       <span class="opt-arrow">→</span>
     </a>
     <a class="opt-card" href="https://brilla-group.com/reportes" target="_blank" rel="noopener">
       <span class="opt-num">02</span>
-      <span class="opt-stack"><span class="opt-heading" data-t="opt2_h">Entiende tu entorno</span><span class="opt-micro" data-t="opt2_micro">un reporte que traduce la macro a una decisión concreta</span></span>
+      <span class="opt-heading" data-t="opt2_h">Entiende tu entorno</span>
       <span class="opt-arrow">→</span>
     </a>
     <a class="opt-card" href="https://jfcarpio.com/talleres/">
       <span class="opt-num">03</span>
-      <span class="opt-stack"><span class="opt-heading" data-t="opt3_h">Capacita a tus colaboradores</span><span class="opt-micro" data-t="opt3_micro">dos talleres que cambian cómo ven el dinero y la empresa</span></span>
+      <span class="opt-heading" data-t="opt3_h">Capacita a tus colaboradores</span>
       <span class="opt-arrow">→</span>
     </a>
   </div>
@@ -2008,7 +1817,6 @@ button { border:none; background:none; font:inherit; }
         </div>
         <h3 class="pan-title" data-t="p1_title">Dashboards</h3>
         <p class="pan-desc" data-t="p1_desc">Si tu negocio está en un momento crítico, empieza aquí.</p>
-        <p class="pan-ladder" data-t="gos_ladder">Empieza donde estás: GROW ($47, meses 0–6) · CROSS (gratis, meses 6–24, mientras construyes tracción) · SCALE (PRO, cuando llegues ahí).</p>
       </div>
       <div class="pan-items">
         <span class="pan-item"><span class="pan-item-tag" style="color:#E8A020;">$47</span>Growth OS Vol. 1 — GROW (0–6 meses)</span>
@@ -2178,20 +1986,6 @@ herramienta más actualizada se llama Growth OS. Empieza ahí.</p>
   </div>
 </div>
 
-<!-- FAILURE STAKES — audit 2026, sourced -->
-<section class="stakes-section" aria-labelledby="stakes-title">
-  <div class="stakes-inner">
-    <p class="stakes-kicker" id="stakes-title" data-t="stakes_kicker">El costo de mirar tarde</p>
-    <div>
-      <p class="stakes-copy"><span data-t="stakes_t">En Ecuador, el INEC mostró que de cada 100 emprendimientos nacidos en 2015 solo 67 seguían activos al año siguiente. GEM Ecuador 2024 añade el contexto: apagones, inseguridad, regulación inestable y crédito limitado amenazan a los nuevos negocios. El costo no es abstracto: decidir tarde te deja leyendo el entorno cuando ya pegó en caja.</span></p>
-      <div class="stakes-sources" aria-label="Fuentes">
-        <a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Bibliotecas/Libros/Panorama_2018.pdf" target="_blank" rel="noopener" data-t="stakes_src_1">Fuente: INEC</a>
-        <a href="https://www.gemconsortium.org/news/the-entrepreneurial-landscape-in-ecuador%3A-navigating-uncertainty-amid-economic-and-social-challenges" target="_blank" rel="noopener" data-t="stakes_src_2">Fuente: GEM Ecuador</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- TESTIMONIALS — v1.142 -->
 <div class="tes-strip">
   <div class="tes-hd">
@@ -2213,6 +2007,13 @@ herramienta más actualizada se llama Growth OS. Empieza ahí.</p>
         <span class="tes-role" data-t="t2_role">Empresaria ecommerce · Orlando, FL</span>
       </div>
     </div>
+    <div class="tes-card">
+      <p class="tes-q" data-t="t3_q">Fue una guía excelente para armar mi sistema de branding, comunicación de valor y reclutamiento de jóvenes futbolistas.</p>
+      <div class="tes-attr">
+        <span class="tes-name" data-t="t3_name">Esteban F.</span>
+        <span class="tes-role" data-t="t3_role">Headhunter de fútbol · Imbabura</span>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -2231,20 +2032,6 @@ herramienta más actualizada se llama Growth OS. Empieza ahí.</p>
       <p class="contact-sub" data-t="contact_sub">Sobre tu negocio, el entorno, una métrica, una decisión.</p>
     </div>
     <div class="contact-body">
-      <div class="contact-routes">
-        <div class="route-card">
-          <span class="route-label" data-t="ruta_a_num">Ruta A · 15 min · sin costo</span>
-          <h4 class="route-title" data-t="ruta_a_title">Revisión rápida de indicadores</h4>
-          <p class="route-desc" data-t="ruta_a_desc">Trae los números que tienes a mano. En 15 minutos vemos qué mide lo correcto y qué puede estar ocultando lo importante.</p>
-          <button class="route-btn" onclick="bookReview()" data-t="ruta_a_btn">Agenda 15 min →</button>
-        </div>
-        <div class="route-card">
-          <span class="route-label" data-t="ruta_b_num">Ruta B · WhatsApp libre</span>
-          <h4 class="route-title" data-t="ruta_b_title">Todavía no sabes por dónde empezar</h4>
-          <p class="route-desc" data-t="ruta_b_desc">Escríbeme el contexto. Te ayudo a identificar si necesitas dashboard, reporte, taller o una conversación más directa.</p>
-          <button class="route-btn alt" onclick="openWA()" data-t="ruta_b_btn">Abrir WhatsApp →</button>
-        </div>
-      </div>
       <p class="c-helper" data-t="c_helper">¿No sabes bien cómo empezar?
  Escribe lo que tengas — sobre tu negocio, el entorno económico, un
 workshop, un reporte, o simplemente para hablar. El segundo botón te
@@ -2282,17 +2069,15 @@ ayuda a redactarlo.</p>
   </div>
 </div>
 
-<!-- CARTA DEL ENTORNO -->
+<!-- LISTA DE CORREOS — Gumroad -->
 <div class="nl-section reveal in">
   <div class="nl-copy">
-    <h3 class="nl-title" data-t="nl_title">Carta del Entorno</h3>
-    <p class="nl-sub" data-t="nl_sub">Una carta breve para empresarios que necesitan leer mejor el contexto antes de que el contexto les cobre factura.<br>Sin spam. Solo cuando hay algo que vale.</p>
+    <h3 class="nl-title" data-t="nl_title">Lista de correos</h3>
+    <p class="nl-sub" data-t="nl_sub">Ideas, herramientas y análisis de entorno para negocios.<br>Sin spam. Sólo lo que quieres leer.</p>
     <p class="nl-freq" data-t="nl_freq">Frecuencia irregular — cuando hay algo que vale. Baja cuando quieras.</p>
   </div>
   <div class="nl-form">
-    <input class="nl-input" id="nlEmail" type="email" inputmode="email" autocomplete="email" data-t-placeholder="nl_ph" placeholder="tu@email.com">
-    <button class="nl-submit" onclick="subscribeWA()" data-t="nl_btn">Suscribirse · gratis →</button>
-    <span class="nl-ok" id="nlOk" data-t="nl_ok">Listo — se abrió WhatsApp para confirmar tu correo.</span>
+    <a class="nl-submit" href="https://jfcarpio.gumroad.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;text-decoration:none;" data-t="nl_btn">Unirse en Gumroad</a>
   </div>
 </div>
 
@@ -2364,7 +2149,7 @@ académico.</div>
     <div class="photo-frame" style="width:180px;max-width:180px;">
       <img src="https://jfcarpio.com/fotojfc.png" alt="Juan Fernando Carpio" width="180" height="228" loading="lazy" onerror="this.parentNode.style.minHeight='228px';this.style.display='none';">
     </div>
-    <p class="photo-caption" style="color:#F2F2F2;">J.F. Carpio · @jfcarpio</p>
+    <p class="photo-caption" style="color:#CCCCCC;">J.F. Carpio · @jfcarpio</p>
   </div>
 </div>
 </main><!-- /main-content -->
@@ -2567,32 +2352,16 @@ function openWAWorkshops(e){
   window.location.href='https://jfcarpio.com/talleres/';
 }
 /* â”€â”€ WhatsApp — phone obfuscated, assembled only at click time â”€â”€ */
-function getWANumber(){
+function openWA(){
+  /* Number split into char-code arrays, never stored as string in source */
   var _h=[53,57,51],_t=[57,57,57,57,48,53,48,56,48];
-  return _h.concat(_t).map(function(c){return String.fromCharCode(c);}).join('');
-}
-function openWAMessage(msg){
-  var n=getWANumber();
+  var n=_h.concat(_t).map(function(c){return String.fromCharCode(c);}).join('');
+  var q=document.getElementById('tIn');
+  var msg=q&&q.value.trim()?q.value.trim():(T[lang].wa_default||'');
   var u='https://w\x61.me/'+n+'?text='+encodeURIComponent(msg);
   window.open(u,'_blank','noopener,noreferrer');
   var conf=document.getElementById('cConfirm');
   if(conf){conf.style.display='block';setTimeout(function(){conf.style.display='none';},6000);}
-}
-function openWA(){
-  var q=document.getElementById('tIn');
-  var msg=q&&q.value.trim()?q.value.trim():(T[lang].wa_default||'');
-  openWAMessage(msg);
-}
-function bookReview(){
-  openWAMessage(T[lang].ruta_a_msg||T[lang].wa_default||'');
-}
-function subscribeWA(){
-  var i=document.getElementById('nlEmail');
-  var email=i&&i.value.trim()?i.value.trim():'';
-  var msg=(T[lang].nl_msg||'')+(email?email:'[email]');
-  openWAMessage(msg);
-  var ok=document.getElementById('nlOk');
-  if(ok){ok.style.display='block';setTimeout(function(){ok.style.display='none';},7000);}
 }
 
 async function runQuery(){
@@ -2888,9 +2657,6 @@ var T={
     h1_l1a:'La expansión de un negocio en ', h1_l1b:'Latinoamérica',
     h1_l2:'enfrenta dos batallas simultáneas: construir el negocio, y sobrevivir el entorno que lo complica.',
     h1_l3a:'Aquí encontrarás ', h1_l3b:'herramientas', h1_l3c:' para enfrentar exitosamente ambas cosas.',
-    hero_sub:'Hay un tipo de empresario que no aparece en los casos de Harvard. Este sitio existe para ese empresario.',
-    badge_mark:'Keynote',
-    badge_copy:'Forum da Liberdade · Porto Alegre · 3.000 asistentes',
     cta_primary:'Diagnostica tu negocio — Growth OS · $47 →',
     cta_sec:'¿Decisión urgente? Escríbeme →',
     connector:'Recursos para tu negocio',
@@ -2922,19 +2688,9 @@ var T={
     proof1:'clientes directos', proof2:'estudiantes', proof3:'años en el campo', proof4:'ROI en mercados emergentes',
     opt_eyebrow:'Tres opciones sugeridas',
     opt_title:'¿Por dónde empezar?',
-    opt_context_1:'El problema no es falta de esfuerzo. Es operar con información vieja, métricas dispersas y un entorno que cambia antes de que el plan llegue a madurar.',
-    opt_context_2:'Empieza por el punto de mayor presión: salud del negocio, lectura del entorno o formación del equipo.',
     opt1_h:'Diagnostica tu negocio',
-    opt1_micro:'en 20 min sabes si estás en zona de riesgo',
     opt2_h:'Entiende tu entorno',
-    opt2_micro:'un reporte que traduce la macro a una decisión concreta',
     opt3_h:'Explora talleres corporativos',
-    opt3_micro:'dos talleres que cambian cómo ven el dinero y la empresa',
-    gos_ladder:'Empieza donde estás: GROW ($47, meses 0–6) · CROSS (gratis, meses 6–24, mientras construyes tracción) · SCALE (PRO, cuando llegues ahí).',
-    stakes_kicker:'El costo de mirar tarde',
-    stakes_t:'En Ecuador, el INEC mostró que de cada 100 emprendimientos nacidos en 2015 solo 67 seguían activos al año siguiente. GEM Ecuador 2024 añade el contexto: apagones, inseguridad, regulación inestable y crédito limitado amenazan a los nuevos negocios. El costo no es abstracto: decidir tarde te deja leyendo el entorno cuando ya pegó en caja.',
-    stakes_src_1:'Fuente: INEC',
-    stakes_src_2:'Fuente: GEM Ecuador',
     tes_eye:'Lo que dicen clientes reales',
     tes_title:'Resultados en distintos tipos de asesorías a PYMES',
     t1_q:'Bastante didáctico, información precisa y organizada.',
@@ -2943,6 +2699,9 @@ var T={
     t2_q:'Fácil, sin complicaciones. Real. Y 100% lo que necesitábamos para poder aterrizar todo y lograr que no sea solo un sueño.',
     t2_name:'Leonela Loor',
     t2_role:'Empresaria ecommerce · Orlando, FL',
+    t3_q:'Fue una guía excelente para armar mi sistema de branding, comunicación de valor y reclutamiento de jóvenes futbolistas.',
+    t3_name:'Esteban F.',
+    t3_role:'Headhunter de fútbol · Imbabura',
     byline:'Economía con instituciones y empresas',
     tl_lbl:'Trayectoria', tl_title_a:'Dos temas persistentes: ', tl_title_b:'crecimiento económico y optimismo racional',
     tl1_t:'Growth OS — cuatro dashboards, un sistema completo',
@@ -2959,20 +2718,11 @@ var T={
     contact_eye:'Consulta directa · WhatsApp',
     contact_title:'Pregunta algo concreto',
     contact_sub:'Sobre tu negocio, el entorno, una métrica, una decisión.',
-    ruta_a_num:'Ruta A · 15 min · sin costo',
-    ruta_a_title:'Revisión rápida de indicadores',
-    ruta_a_desc:'Trae los números que tienes a mano. En 15 minutos vemos qué mide lo correcto y qué puede estar ocultando lo importante.',
-    ruta_a_btn:'Agenda 15 min →',
-    ruta_a_msg:'Hola JFC, quiero agendar la revisión de 15 min de indicadores. Mi negocio es: [nombre, sector, etapa].',
-    ruta_b_num:'Ruta B · WhatsApp libre',
-    ruta_b_title:'Todavía no sabes por dónde empezar',
-    ruta_b_desc:'Escríbeme el contexto. Te ayudo a identificar si necesitas dashboard, reporte, taller o una conversación más directa.',
-    ruta_b_btn:'Abrir WhatsApp →',
     wa_btn:'Escribir ahora',
     wa_btn_s:'WhatsApp',
     wa_send:'Agenda una revisión de tus indicadores menos conocidos — 15 min, sin costo →',
-    wa_draft:'Draft question',
-    wa_confirm:'WhatsApp opened — if it did not load, write to jf@jfcarpio.com',
+    wa_draft:'Redactar pregunta',
+    wa_confirm:'WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
     c_char_of:'/300',
     nl_freq:'Frecuencia irregular — cuando hay algo que vale. Baja cuando quieras.',
     c_helper:'¿No sabes bien cómo empezar? Escribe lo que tengas — sobre tu negocio, el entorno económico, un workshop, un reporte, o simplemente para hablar. El segundo botón te ayuda a redactarlo.',
@@ -2992,12 +2742,9 @@ var T={
     ham_lbl:'MENÚ',
     c_scarcity:'Disponibilidad limitada — consulta si hay cupo para workshop este mes.',
     term_ph:'Describe tu situación en pocas palabras…', term_btn:'Ejecutar',
-    nl_title:'Carta del Entorno',
-    nl_sub:'Una carta breve para empresarios que necesitan leer mejor el contexto antes de que el contexto les cobre factura.<br>Sin spam. Solo cuando hay algo que vale.',
-    nl_btn:'Suscribirse · gratis →',
-    nl_ph:'tu@email.com',
-    nl_ok:'Listo — se abrió WhatsApp para confirmar tu correo.',
-    nl_msg:'Hola JFC, quiero suscribirme a la Carta del Entorno: ',
+    nl_title:'Lista de correos',
+    nl_sub:'Ideas, herramientas y análisis de entorno para negocios.<br>Sin spam. Solo lo que vale la pena leer.',
+    nl_btn:'Unirse en Gumroad',
     foot_copy:'© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador',
     sys_prompt:'Eres J.F. Carpio, autor e investigador económico ecuatoriano de la escuela austriaca, defensor de la empresa privada, analista de entorno económico-empresarial y creador del Growth OS. Tu marco: precios como computación social, crítica al intervencionismo, defensa del capital productivo. MindOS: Boundary/MRR, Behavior/CAC, Intellect/IDF+RACI, Decision/Semáforo. Responde con criterio económico sólido, sin motivación barata. UNA acción concreta al final. Máximo 4 párrafos. Responde en español.'
   },
@@ -3006,9 +2753,6 @@ var T={
     h1_l1a:'Expanding a business in ', h1_l1b:'Latin America',
     h1_l2:'faces two simultaneous battles: building the business, and surviving an environment that works against it.',
     h1_l3a:'Here you\'ll find ', h1_l3b:'tools', h1_l3c:' to tackle both.',
-    hero_sub:'There is a type of entrepreneur who does not appear in Harvard case studies. This site exists for that entrepreneur.',
-    badge_mark:'Keynote',
-    badge_copy:'Forum da Liberdade · Porto Alegre · 3,000 attendees',
     cta_primary:'Diagnose your business — Growth OS · $47 →',
     cta_sec:'Urgent decision? Write to me →',
     connector:'Resources for your business',
@@ -3039,19 +2783,9 @@ var T={
     proof1:'direct clients', proof2:'students', proof3:'years in the field', proof4:'ROI in emerging markets',
     opt_eyebrow:'Three suggested paths',
     opt_title:'Where to start?',
-    opt_context_1:'The problem is not lack of effort. It is operating with old information, scattered metrics and an environment that changes before the plan has time to mature.',
-    opt_context_2:'Start at the point of greatest pressure: business health, environment analysis or team training.',
     opt1_h:'Diagnose your business',
-    opt1_micro:'in 20 min you know if you are in the risk zone',
     opt2_h:'Understand your environment',
-    opt2_micro:'a report that translates macro into a concrete decision',
     opt3_h:'Explore corporate workshops',
-    opt3_micro:'two workshops that change how teams see money and enterprise',
-    gos_ladder:'Start where you are: GROW ($47, months 0–6) · CROSS (free, months 6–24, while building traction) · SCALE (PRO, when you get there).',
-    stakes_kicker:'The cost of reading late',
-    stakes_t:'In Ecuador, INEC showed that out of every 100 ventures born in 2015, only 67 were still active the following year. GEM Ecuador 2024 adds the context: power outages, insecurity, unstable regulation and limited credit threaten new ventures. The cost is not abstract: late decisions leave you reading the environment after it has already hit cash flow.',
-    stakes_src_1:'Source: INEC',
-    stakes_src_2:'Source: GEM Ecuador',
     tes_eye:'What real clients say',
     tes_title:'Results across different contexts',
     t1_q:'Very didactic, precise and organized information.',
@@ -3060,6 +2794,9 @@ var T={
     t2_q:'Easy, no complications. Real. And 100% what we needed to land everything and make sure it was not just a dream.',
     t2_name:'Leonela Loor',
     t2_role:'Ecommerce entrepreneur · Orlando, FL',
+    t3_q:'An excellent guide for building my branding system, value communication, and recruitment of young soccer players.',
+    t3_name:'Esteban F.',
+    t3_role:'Soccer headhunter · Imbabura',
     cp_or:'They operate in a region and cultural space where the State changes the rules mid-game. Where taxes are high and bureaucratic hurdles even higher. Where regulations strangle instead of support. Where irresponsible government debt and spending create the short-termism that destroys any medium-term plan. And yet, they build. And yet, they grow.',
     byline:'Economics with institutions and enterprise',
     tl_lbl:'Track record', tl_title_a:'Two persistent themes: ', tl_title_b:'economic growth and rational optimism',
@@ -3077,22 +2814,13 @@ var T={
     contact_eye:'Direct consultation · WhatsApp',
     contact_title:'Ask something specific',
     contact_sub:'About your business, the environment, a metric, a decision.',
-    ruta_a_num:'Path A · 15 min · no cost',
-    ruta_a_title:'Quick metrics review',
-    ruta_a_desc:'Bring the numbers you have at hand. In 15 minutes we check what measures the right thing and what may be hiding the important thing.',
-    ruta_a_btn:'Book 15 min →',
-    ruta_a_msg:'Hi JFC, I would like to book the 15-minute metrics review. My business is: [name, sector, stage].',
-    ruta_b_num:'Path B · Open WhatsApp',
-    ruta_b_title:'You still do not know where to start',
-    ruta_b_desc:'Send me the context. I help you identify whether you need a dashboard, report, workshop or a more direct conversation.',
-    ruta_b_btn:'Open WhatsApp →',
     wa_btn:'Write now',
     wa_btn_s:'WhatsApp',
     wa_send:'Book a 15-min metrics review — no cost →',
     wa_draft:'Redactar pregunta',
     wa_confirm:'WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
     c_char_of:'/300',
-    nl_freq:'Irregular frequency — only when there is something worth reading. Leave whenever you want.',
+    nl_freq:'Frecuencia irregular — cuando hay algo que vale. Baja cuando quieras.',
     c_helper:'Not sure how to start? Write whatever you have — about your business, the economic environment, a workshop, a report, or just to talk. The second button helps you draft it.',
     wa_follow:'Want to go deeper?',
     wa_default:'Hi, I came from jfcarpio.com and have a question.',
@@ -3110,12 +2838,9 @@ var T={
     ham_lbl:'MENU',
     c_scarcity:'Limited availability — ask about workshop spots for this month.',
     term_ph:'Describe your situation briefly…', term_btn:'Run',
-    nl_title:'Letter from the Environment',
-    nl_sub:'A short letter for entrepreneurs who need to read context before context sends the bill.<br>No spam. Only when there is something worth reading.',
-    nl_btn:'Subscribe · free →',
-    nl_ph:'you@email.com',
-    nl_ok:'Done — WhatsApp opened to confirm your email.',
-    nl_msg:'Hi JFC, I would like to subscribe to Letter from the Environment: ',
+    nl_title:'Mailing list',
+    nl_sub:'Ideas, tools and business environment analysis.<br>No spam. Only what\'s worth reading.',
+    nl_btn:'Join on Gumroad',
     foot_copy:'© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador',
     sys_prompt:'You are J.F. Carpio, an Ecuadorian economic and business researcher in the Austrian tradition, defender of private enterprise, business environment analyst and creator of Growth OS. You also work as a corporate trainer and invited speaker. Your framework: prices as social computation, critique of interventionism, defense of productive capital. MindOS: Boundary/MRR, Behavior/CAC, Intellect/IDF+RACI, Decision/Traffic Light. Answer with sound economic reasoning, no cheap motivation. Always end with ONE concrete action for this week. Maximum 4 paragraphs. Reply in English.'
   }
@@ -3127,7 +2852,7 @@ function setLang(l){
   var els=document.querySelectorAll('[data-t]');
   for(var i=0;i<els.length;i++){
     var k=els[i].getAttribute('data-t');
-    if(T[l][k]!==undefined && (els[i].children.length===0 || T[l][k].indexOf('<br>')!==-1)){
+    if(T[l][k]!==undefined && els[i].children.length===0){
       if(T[l][k].indexOf('<br>')!==-1){ els[i].innerHTML=T[l][k]; }
       else { els[i].textContent=T[l][k]; }
     }

@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="es" class="js-rv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ════════ META · ES + USP (Audit #1 · Mayo 2026) ════════ -->
+<title>J.F. Carpio — Economía con instituciones y empresas · Dashboards, reportes y talleres para el empresario latinoamericano</title>
+<meta name="description" content="Análisis de entorno económico, dashboards de diagnóstico y talleres corporativos para el dueño de negocio que opera en Latinoamérica con un entorno que no siempre coopera. Economía austriaca aplicada a decisiones reales.">
+<meta name="theme-color" content="#FDFCF9">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jfcarpio.com/">
+<meta property="og:title" content="J.F. Carpio — Economía con instituciones y empresas">
+<meta property="og:description" content="Dashboards, reportes y talleres para el empresario latinoamericano. Economía austriaca aplicada a decisiones reales.">
+<meta property="og:image" content="https://jfcarpio.com/og-jfcarpio.png">
+<meta property="og:locale" content="es_EC">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://jfcarpio.com/">
+<link rel="preload" as="image" href="network-pacific.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@500;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+/*
+================================================================================
+  jfcarpio.com — VARIATION B · ARCHIVE / RESEARCH TERMINAL
+  v3.0 (WHITE B · AUDIT 2026 APPLIED) · 2026-05-19
+  Estética: Swiss research monograph × broadsheet financiero.
+  Cream paper · deep ink · single sharp orange accent · hairline 12-col grid.
+  TEXTOS = 100% originales del index vivo (data-t keys conservadas).
+  AUDIT 2026: orden, jerarquía y CTAs corregidos. No se reescribió contenido.
+================================================================================
+*/
+*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}
+html{background:#FDFCF9;scroll-behavior:smooth}
+body{
+  font-family:'Lora',Georgia,serif;
+  background:#FDFCF9;color:#0A0A0A;
+  font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{border:none;background:none;font:inherit;color:inherit;cursor:pointer}
+img{display:block;max-width:100%}
+
+:root{
+  --ink:#0A0A0A;
+  --ink-2:#222;
+  --ink-3:#555;
+  --paper:#FDFCF9;
+  --paper-2:#F2EFE6;
+  --paper-3:#EAE5D6;
+  --rule:rgba(10,10,10,.14);
+  --rule-strong:rgba(10,10,10,.32);
+  --rule-soft:rgba(10,10,10,.06);
+  --orange:#D9451F;
+  --gold:#B88512;
+  --green:#0A7A52;
+  --blue:#2C5FB5;
+  --mono:'Space Mono','Courier New',monospace;
+  --serif:'Lora',Georgia,serif;
+  --display:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+}
+
+body::before{
+  content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  opacity:.08;mix-blend-mode:multiply;
+}
+
+.js-rv .reveal{opacity:0;transform:translateY(14px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js-rv .reveal.in{opacity:1;transform:translateY(0)}
+.js-rv .rev-line{opacity:0;transform:translateY(100%);display:inline-block;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js-rv .rev-line.in{opacity:1;transform:translateY(0)}
+
+.grid-bg{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  max-width:1360px;margin:0 auto;padding:0 4vw;
+  display:grid;grid-template-columns:repeat(12,1fr);gap:0;height:100%;
+}
+.grid-bg span{border-left:1px solid var(--rule-soft);height:100%}
+.grid-bg span:last-child{border-right:1px solid var(--rule-soft)}
+@media(max-width:900px){.grid-bg{display:none}}
+
+/* MASTHEAD */
+.mast{position:fixed;top:0;left:0;right:0;z-index:800;background:rgba(253,252,249,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.mast-in{max-width:1360px;margin:0 auto;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;height:56px;gap:16px}
+.mast-l{display:flex;align-items:center;gap:14px;min-width:0}
+.mast-folio{font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
+.mast-folio .dot{color:var(--orange)}
+.mast-rule{flex:0 0 40px;height:1px;background:var(--ink);opacity:.4}
+.mast-byline{font-family:var(--mono);font-size:.78rem;color:var(--ink-3);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mast-r{display:flex;align-items:center;gap:10px}
+.lang-sw{display:flex;align-items:center;border:1px solid var(--ink);height:30px}
+.lang-btn{font-family:var(--mono);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:0 10px;height:100%;min-width:44px;display:flex;align-items:center;justify-content:center;color:var(--ink);background:var(--paper);transition:all .15s}
+.lang-btn+.lang-btn{border-left:1px solid var(--ink)}
+.lang-btn.lang-active{background:var(--ink);color:var(--paper)}
+.lang-btn:not(.lang-active):hover{background:var(--paper-2)}
+.ham{display:flex;align-items:center;gap:10px;height:30px;padding:0 12px;border:1px solid var(--ink);background:var(--paper);font-family:var(--mono);font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;min-width:44px;transition:background .15s}
+.ham:hover{background:var(--ink);color:var(--paper)}
+.ham-lines{display:flex;flex-direction:column;gap:3px}
+.hl{width:16px;height:1.5px;background:currentColor;transition:transform .22s}
+.ham.open .hl:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
+.ham.open .hl:nth-child(2){opacity:0}
+.ham.open .hl:nth-child(3){transform:translateY(-4.5px) rotate(-45deg)}
+@media(max-width:640px){.mast-byline,.mast-rule{display:none}}
+
+.ov{position:fixed;inset:0;background:var(--paper);z-index:700;display:none;padding:80px 4vw 40px;overflow-y:auto}
+.ov.open{display:block;animation:fadeIn .25s ease both}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.ov-lbl{font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3);padding-bottom:14px;border-bottom:1px solid var(--rule);max-width:1360px;margin:0 auto 32px}
+.ov-nav{max-width:1360px;margin:0 auto;display:flex;flex-direction:column}
+.ov-a{display:grid;grid-template-columns:56px 1fr auto;gap:20px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--rule);transition:padding .2s ease,background .2s ease}
+.ov-a:hover{padding-left:14px;background:linear-gradient(90deg,var(--paper-2),transparent 40%)}
+.ov-n{font-family:var(--mono);font-size:.82rem;font-weight:700;color:var(--orange);letter-spacing:.1em;padding-top:8px}
+.ov-body{min-width:0}
+.ov-t{font-family:var(--display);font-weight:800;font-size:clamp(28px,4.5vw,56px);letter-spacing:-.01em;line-height:1;color:var(--ink);display:block}
+.ov-sub{font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-3);margin-top:6px;display:block}
+.ov-arr{font-family:var(--mono);font-size:1.1rem;color:var(--ink-3)}
+.ov-a:hover .ov-arr{color:var(--orange);transform:translateX(4px);transition:transform .2s,color .2s}
+.ov-esc{position:fixed;bottom:24px;right:24px;font-family:var(--mono);font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);padding:8px 14px;border:1px solid var(--ink);cursor:pointer;background:var(--paper)}
+
+/* ════════════ HERO ════════════ */
+.hero{position:relative;padding-top:56px;background:var(--paper);border-bottom:1px solid var(--ink)}
+.hero-folio{max-width:1360px;margin:0 auto;padding:20px 4vw 12px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--rule)}
+.hero-folio-l{font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink)}
+.hero-folio-l .fbar{color:var(--orange);margin:0 8px}
+.hero-folio-r{font-family:var(--mono);font-size:.78rem;color:var(--ink-3);letter-spacing:.14em;text-transform:uppercase;display:none}
+@media(min-width:720px){.hero-folio-r{display:inline}}
+
+.hero-stage{position:relative;max-width:1360px;margin:0 auto;padding:0 4vw;display:grid;grid-template-columns:1fr;gap:0;overflow:hidden}
+.hero-plate{position:relative;margin:28px -4vw 0;height:clamp(260px,42vh,420px);overflow:hidden;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.hero-plate img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;filter:grayscale(1) contrast(1.15) brightness(.95)}
+.hero-plate::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,252,249,.1) 0%,rgba(253,252,249,.35) 60%,rgba(253,252,249,.88) 100%);mix-blend-mode:lighten}
+.hero-plate::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(217,69,31,.08),transparent 60%),repeating-linear-gradient(0deg,rgba(10,10,10,.04) 0 1px,transparent 1px 3px);mix-blend-mode:multiply}
+.hero-plate-credit{position:absolute;bottom:14px;right:18px;z-index:2;font-family:var(--mono);font-size:.78rem;color:var(--ink-2);letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;background:rgba(253,252,249,.82);border:1px solid var(--rule)}
+.hero-plate-credit span.dot{color:var(--orange);margin-right:6px}
+
+.hero-body{position:relative;z-index:2;padding:44px 0 56px;display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:1000px){
+  .hero-stage{grid-template-columns:7fr 5fr;gap:48px;align-items:stretch}
+  .hero-plate{margin-top:32px;margin-bottom:32px;height:auto;min-height:620px;grid-column:2;margin-right:-4vw}
+  .hero-body{grid-column:1;padding:56px 0 64px}
+}
+
+.hero-kick{display:flex;align-items:center;gap:14px;margin-bottom:18px;font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2)}
+.hero-kick .kd{display:inline-block;width:28px;height:1px;background:var(--orange)}
+
+.hero-h1{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4.8vw,68px);line-height:1.04;letter-spacing:-.02em;color:var(--ink);margin-bottom:28px}
+.hero-h1 .lw{display:block;overflow:hidden;padding:.02em 0}
+.hero-h1 .accent-orange{color:var(--orange)}
+.hero-h1 .accent-gold{color:var(--gold);font-weight:700}
+.hero-h1 strong{font-weight:700;font-style:normal;color:var(--ink)}
+
+/* AUDIT #2 · subtítulo Harvard debajo de H1 */
+.hero-sub{
+  font-family:var(--serif);font-style:italic;font-weight:500;
+  font-size:clamp(18px,1.55vw,24px);line-height:1.4;letter-spacing:-.005em;
+  color:var(--ink);margin-bottom:30px;
+  padding-left:18px;border-left:3px solid var(--orange);
+  max-width:42ch;
+}
+
+/* AUDIT #2 · dual CTA hero */
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px}
+.hero-cta-pri{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:.88rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:16px 24px;background:var(--orange);color:var(--paper);
+  border:1px solid var(--orange);
+  transition:transform .18s,background .18s;
+  min-height:52px;
+}
+.hero-cta-pri:hover{background:#B83A1A;border-color:#B83A1A;transform:translate(-2px,-2px)}
+.hero-cta-sec{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:.88rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:16px 22px;background:transparent;color:var(--ink);
+  border:1px solid var(--ink);
+  transition:transform .18s,background .18s;
+  min-height:52px;
+}
+.hero-cta-sec:hover{background:var(--ink);color:var(--paper);transform:translate(-2px,-2px)}
+
+.hero-stats{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--ink);margin-top:6px;column-gap:0}
+@media(min-width:640px){.hero-stats{grid-template-columns:repeat(4,1fr)}}
+.hs-item{padding:18px 14px 14px 0;display:flex;flex-direction:column;gap:4px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.hs-item:nth-child(2n){border-right:none}
+@media(min-width:640px){
+  .hs-item{border-bottom:none}
+  .hs-item:nth-child(2n){border-right:1px solid var(--rule)}
+  .hs-item:last-child{border-right:none}
+}
+.hs-num{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.6vw,46px);line-height:1;letter-spacing:-.02em;color:var(--ink)}
+.hs-sup{font-size:.55em;vertical-align:top;color:var(--orange);margin-left:2px}
+.hs-lbl{font-family:var(--mono);font-size:.82rem;color:var(--ink-3);letter-spacing:.1em;text-transform:uppercase;line-height:1.3}
+
+/* AUDIT #4 · Forum da Liberdade authority badge */
+.hero-badge{
+  margin-top:22px;padding:14px 18px;
+  display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;
+  border:1px solid var(--ink);
+  background:linear-gradient(135deg,rgba(217,69,31,.06),rgba(184,133,18,.04));
+}
+.hero-badge .mark{
+  font-family:var(--mono);font-size:.78rem;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--orange);
+  padding:3px 8px;border:1px solid var(--orange);align-self:start;white-space:nowrap;
+}
+.hero-badge .body{display:flex;flex-direction:column;gap:2px}
+.hero-badge .t{font-family:var(--display);font-weight:800;font-size:clamp(18px,1.6vw,22px);line-height:1.1;letter-spacing:-.005em;color:var(--ink);text-transform:uppercase}
+.hero-badge .s{font-family:var(--mono);font-size:.78rem;color:var(--ink-3);letter-spacing:.08em;text-transform:uppercase;line-height:1.45}
+
+.hero-cue{display:flex;align-items:center;gap:10px;margin-top:30px;font-family:var(--mono);font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+.hero-cue .cd{display:inline-block;width:1px;height:24px;background:var(--ink);animation:cueDrop 2.2s ease-in-out infinite}
+@keyframes cueDrop{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(6px);opacity:1}}
+
+/* ════════ CONNECTOR · AUDIT #7 + #8 — 2 líneas de contexto + 3 rutas con micro-resultado ════════ */
+.connector{
+  max-width:1360px;margin:0 auto;padding:48px 4vw 36px;border-bottom:1px solid var(--rule);
+  display:grid;grid-template-columns:1fr;gap:32px;align-items:end;
+}
+@media(min-width:900px){.connector{grid-template-columns:4fr 8fr;gap:64px}}
+.conn-context{
+  font-family:var(--serif);font-size:clamp(17px,1.3vw,21px);line-height:1.55;color:var(--ink);
+  font-style:italic;font-weight:500;
+  padding-left:18px;border-left:3px solid var(--orange);
+}
+.conn-context b{color:var(--orange);font-weight:600;font-style:normal}
+.conn-routes{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--ink)}
+@media(min-width:680px){.conn-routes{grid-template-columns:repeat(3,1fr);border-top:none}}
+.conn-route{
+  padding:20px 18px 20px 0;
+  display:grid;grid-template-columns:auto 1fr;gap:14px;
+  border-bottom:1px solid var(--rule);
+  position:relative;align-items:start;
+  transition:padding .25s,background .25s;
+}
+.conn-route:hover{padding-left:8px;background:linear-gradient(90deg,var(--paper-2),transparent 50%)}
+@media(min-width:680px){
+  .conn-route{border-bottom:none;border-right:1px solid var(--rule);padding:0 18px 0 0;grid-template-columns:auto 1fr;align-self:stretch}
+  .conn-route:last-child{border-right:none}
+  .conn-route:hover{padding-left:10px}
+}
+.conn-route::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--orange);transform:scaleY(0);transform-origin:top;transition:transform .3s}
+.conn-route:hover::before{transform:scaleY(1)}
+.cn-n{font-family:var(--mono);font-size:.82rem;font-weight:700;color:var(--orange);letter-spacing:.12em}
+.cn-body{display:flex;flex-direction:column;gap:6px}
+.cn-h{font-family:var(--display);font-weight:800;font-size:clamp(20px,1.7vw,26px);line-height:1.05;letter-spacing:-.005em;color:var(--ink);text-transform:uppercase}
+.cn-micro{font-family:var(--mono);font-size:.82rem;color:var(--ink-3);letter-spacing:.04em;line-height:1.5}
+
+/* SECTION CHROME */
+.sec{position:relative;padding:88px 4vw 96px;max-width:1360px;margin:0 auto}
+.sec-hd{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:baseline;padding-bottom:20px;margin-bottom:44px;border-bottom:1px solid var(--ink)}
+.sec-num{font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
+.sec-title{font-family:var(--display);font-weight:800;font-size:clamp(26px,3.4vw,44px);line-height:1;letter-spacing:-.015em;color:var(--ink)}
+.sec-title .accent{color:var(--orange)}
+.sec-meta{font-family:var(--mono);font-size:.82rem;color:var(--ink-3);letter-spacing:.14em;text-transform:uppercase;text-align:right}
+@media(max-width:520px){
+  .sec{padding:64px 5vw 72px}
+  .sec-hd{grid-template-columns:auto 1fr;gap:12px}
+  .sec-meta{display:none}
+}
+
+/* ════════ § 01 · INDEX / BENTO ════════ */
+.idx{display:grid;gap:0;grid-template-columns:1fr;border-top:1px solid var(--ink)}
+.idx-row{display:grid;grid-template-columns:88px 1fr;border-bottom:1px solid var(--rule);padding:28px 0;position:relative;transition:background .3s ease,padding-left .3s ease}
+.idx-row:hover{background:var(--paper-2);padding-left:14px}
+.idx-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent,var(--orange));transform:scaleY(0);transform-origin:top;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.idx-row:hover::before{transform:scaleY(1)}
+.idx-n{font-family:var(--mono);font-size:.82rem;font-weight:700;color:var(--accent,var(--orange));letter-spacing:.14em;padding-top:6px}
+.idx-main{display:grid;grid-template-columns:1fr;gap:14px}
+.idx-head{display:flex;flex-direction:column;gap:4px}
+.idx-eyebrow{font-family:var(--mono);font-size:.82rem;color:var(--ink-3);letter-spacing:.16em;text-transform:uppercase}
+.idx-title{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.8vw,52px);line-height:1;letter-spacing:-.01em;color:var(--ink);display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.idx-title .arr{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--ink);font-family:var(--mono);font-size:1rem;color:var(--ink);transition:background .2s,color .2s,transform .2s}
+.idx-row:hover .idx-title .arr{background:var(--ink);color:var(--paper);transform:translate(4px,-4px)}
+.idx-desc{font-family:var(--serif);font-size:1.02rem;line-height:1.55;color:var(--ink-2);max-width:62ch}
+.idx-ladder{
+  font-family:var(--mono);font-size:.82rem;line-height:1.6;color:var(--ink-2);
+  letter-spacing:.02em;padding-top:8px;border-top:1px dashed var(--rule);
+}
+.idx-ladder b{color:var(--accent,var(--orange));font-weight:700}
+.idx-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:8px;margin-top:2px}
+.idx-tag{font-family:var(--mono);font-size:.82rem;font-weight:700;color:var(--accent,var(--orange));letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--accent,var(--orange))}
+@media(max-width:640px){
+  .idx-row{grid-template-columns:1fr;padding:24px 0}
+  .idx-n{padding-top:0;margin-bottom:8px}
+  .idx-title{font-size:clamp(26px,7vw,36px)}
+}
+
+/* AUDIT #10 · failure stakes */
+.stakes{
+  max-width:1360px;margin:0 auto;padding:0 4vw 80px;
+}
+.stakes-card{
+  border-top:2px solid var(--orange);border-bottom:1px solid var(--ink);
+  padding:32px 0 28px;
+  display:grid;grid-template-columns:1fr;gap:16px;
+}
+@media(min-width:900px){.stakes-card{grid-template-columns:auto 1fr;gap:48px;align-items:start}}
+.stakes-eye{
+  font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--orange);
+  display:flex;align-items:center;gap:10px;
+}
+.stakes-eye::before{content:'';width:24px;height:2px;background:var(--orange)}
+.stakes-t{font-family:var(--serif);font-size:clamp(20px,1.8vw,28px);line-height:1.4;color:var(--ink);font-weight:500;font-style:italic;text-wrap:pretty}
+.stakes-t b{color:var(--orange);font-weight:700;font-style:normal}
+
+/* PROOF STRIP */
+.proof{max-width:1360px;margin:0 auto;padding:40px 4vw;display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+@media(min-width:680px){.proof{grid-template-columns:repeat(4,1fr)}}
+.pf-item{padding:8px 20px 8px 0;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);display:flex;flex-direction:column;gap:6px}
+.pf-item:nth-child(2n){border-right:none}
+@media(min-width:680px){
+  .pf-item{border-bottom:none}
+  .pf-item:nth-child(2n){border-right:1px solid var(--rule)}
+  .pf-item:last-child{border-right:none}
+}
+.pf-num{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.6vw,46px);line-height:1;letter-spacing:-.02em;color:var(--ink)}
+.pf-sup{font-size:.55em;vertical-align:top;color:var(--orange)}
+.pf-lbl{font-family:var(--mono);font-size:.82rem;color:var(--ink-3);letter-spacing:.14em;text-transform:uppercase}
+
+/* § 02 · BAND */
+.band{position:relative;min-height:min(72vh,560px);background-image:url('network-intel.webp');background-size:cover;background-position:center 55%;background-attachment:fixed;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);overflow:hidden}
+@media(max-width:900px){.band{background-attachment:scroll}}
+.band::before{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(253,252,249,.96) 0%,rgba(253,252,249,.88) 38%,rgba(253,252,249,.45) 70%,rgba(253,252,249,.15) 100%)}
+.band::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(253,252,249,.3),transparent 40%)}
+.band-in{position:relative;z-index:2;max-width:1360px;margin:0 auto;padding:96px 4vw;display:grid;grid-template-columns:1fr;gap:40px}
+@media(min-width:1000px){.band-in{grid-template-columns:7fr 5fr;gap:80px}}
+.band-kick{display:flex;align-items:center;gap:14px;font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);margin-bottom:20px}
+.band-kick .kd{width:40px;height:1px;background:var(--orange)}
+.band-h{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3.8vw,54px);line-height:1.12;letter-spacing:-.02em;color:var(--ink);text-wrap:pretty}
+.band-h .accent{color:var(--orange);font-style:italic}
+.band-ruler{border-left:2px solid var(--ink);padding-left:22px;display:flex;flex-direction:column;gap:22px}
+.band-ruler p{font-family:var(--serif);font-size:1.02rem;line-height:1.65;color:var(--ink-2)}
+.band-ruler .sig{font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+
+/* § 03 · MANIFESTO + PORTRAIT */
+.manifesto{display:grid;grid-template-columns:1fr;gap:40px}
+@media(min-width:900px){.manifesto{grid-template-columns:5fr 7fr;gap:64px}}
+.portrait{position:relative}
+.portrait-frame{position:relative;aspect-ratio:4/5;max-width:380px;background:var(--paper-2);border:1px solid var(--ink);box-shadow:12px 12px 0 var(--ink)}
+.portrait-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(1) contrast(1.08)}
+.portrait-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(10,10,10,.08));mix-blend-mode:multiply}
+.portrait-cap{font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);margin-top:18px;padding-top:12px;border-top:1px solid var(--ink);max-width:380px;display:flex;justify-content:space-between;gap:12px}
+.portrait-cap span:last-child{color:var(--ink-3)}
+.manifesto-body{display:flex;flex-direction:column;gap:22px}
+.manifesto-body p{font-family:var(--serif);font-size:1.05rem;line-height:1.75;color:var(--ink-2);text-wrap:pretty}
+.manifesto-body .lede{font-family:var(--serif);font-size:clamp(22px,2.2vw,32px);line-height:1.3;font-style:italic;font-weight:500;color:var(--ink);letter-spacing:-.01em}
+.dropcap::first-letter{font-family:var(--display);font-weight:800;font-size:4.2em;float:left;line-height:.85;padding:4px 10px 0 0;color:var(--orange)}
+.copy-byline{font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);padding-top:18px;border-top:1px solid var(--rule);margin-top:8px}
+.copy-byline strong{color:var(--orange);margin-right:6px}
+
+/* ════════ TESTIMONIALS · AUDIT #3 (sin fútbol) ════════ */
+.tes{
+  max-width:1360px;margin:0 auto;padding:0 4vw 96px;
+}
+.tes-hd{
+  display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:baseline;
+  padding-bottom:20px;margin-bottom:36px;border-bottom:1px solid var(--ink);
+}
+.tes-hd .num{font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
+.tes-hd .t{font-family:var(--display);font-weight:800;font-size:clamp(26px,3.4vw,44px);line-height:1;letter-spacing:-.015em;color:var(--ink)}
+.tes-hd .eye{font-family:var(--mono);font-size:.82rem;color:var(--ink-3);letter-spacing:.14em;text-transform:uppercase;text-align:right}
+@media(max-width:520px){.tes-hd{grid-template-columns:auto 1fr}.tes-hd .eye{display:none}}
+.tes-grid{display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:760px){.tes-grid{grid-template-columns:1fr 1fr}}
+.tes-card{
+  padding:32px 32px 32px 0;
+  border-bottom:1px solid var(--rule);
+  display:flex;flex-direction:column;gap:18px;
+  position:relative;
+}
+.tes-card:last-child{border-bottom:none}
+@media(min-width:760px){
+  .tes-card{padding:32px 36px;border-bottom:none;border-right:1px solid var(--rule)}
+  .tes-card:last-child{border-right:none}
+  .tes-card:first-child{padding-left:0}
+}
+.tes-card::before{
+  content:'\201C';position:absolute;top:6px;left:-2px;
+  font-family:var(--serif);font-style:italic;font-size:84px;line-height:.7;
+  color:var(--orange);opacity:.35;
+}
+@media(min-width:760px){.tes-card:first-child::before{left:-4px}}
+.tes-q{
+  font-family:var(--serif);font-size:clamp(18px,1.45vw,22px);line-height:1.55;
+  color:var(--ink);font-style:italic;font-weight:400;text-wrap:pretty;
+}
+.tes-attr{display:flex;flex-direction:column;gap:2px;padding-top:14px;border-top:1px solid var(--rule)}
+.tes-name{font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:-.005em;color:var(--ink);text-transform:uppercase}
+.tes-role{font-family:var(--mono);font-size:.82rem;color:var(--ink-3);letter-spacing:.1em;text-transform:uppercase}
+
+/* § 04 · TIMELINE */
+.log{display:grid;grid-template-columns:1fr;border-top:1px solid var(--ink)}
+.log-row{display:grid;grid-template-columns:96px 1fr;gap:24px;padding:26px 0;border-bottom:1px solid var(--rule);align-items:baseline;transition:background .25s,padding-left .25s}
+.log-row:hover{background:var(--paper-2);padding-left:10px}
+.log-n{font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.12em;color:var(--orange);padding-top:6px}
+.log-body{display:flex;flex-direction:column;gap:8px}
+.log-title{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.4vw,32px);line-height:1.1;letter-spacing:-.01em;color:var(--ink)}
+.log-b{font-family:var(--serif);font-size:1rem;line-height:1.6;color:var(--ink-2);max-width:70ch;text-wrap:pretty}
+@media(max-width:640px){
+  .log-row{grid-template-columns:1fr;gap:6px;padding:22px 0}
+  .log-n{padding-top:0}
+}
+
+/* ════════ § 05 · DOS RUTAS DE CONTACTO · AUDIT #6 ════════ */
+.term{background:var(--ink);color:var(--paper);padding:80px 4vw;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);position:relative;overflow:hidden}
+.term::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0 1px,transparent 1px 3px);pointer-events:none}
+.term-in{max-width:1360px;margin:0 auto;position:relative;z-index:2}
+.term-hd{display:flex;align-items:baseline;gap:16px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.2);margin-bottom:44px;flex-wrap:wrap}
+.term-hd .n{font-family:var(--mono);font-size:.82rem;font-weight:700;color:var(--orange);letter-spacing:.2em}
+.term-hd .lbl{font-family:var(--mono);font-size:.82rem;font-weight:700;color:#CFCBC0;letter-spacing:.2em;text-transform:uppercase}
+.term-hd .t{font-family:var(--display);font-weight:800;font-size:clamp(28px,3.4vw,44px);letter-spacing:-.01em;color:var(--paper)}
+.term-hd .t .accent{color:var(--orange)}
+
+.routes{display:grid;grid-template-columns:1fr;gap:0;border:1px solid rgba(255,255,255,.18)}
+@media(min-width:900px){.routes{grid-template-columns:1fr 1fr}}
+.route{
+  padding:32px 32px 36px;
+  display:flex;flex-direction:column;gap:14px;
+  border-bottom:1px solid rgba(255,255,255,.18);
+  position:relative;
+}
+.route:last-child{border-bottom:none}
+@media(min-width:900px){
+  .route{border-bottom:none;border-right:1px solid rgba(255,255,255,.18)}
+  .route:last-child{border-right:none}
+}
+.route .num{
+  font-family:var(--mono);font-size:.82rem;font-weight:700;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--orange);
+}
+.route .h{
+  font-family:var(--display);font-weight:800;font-size:clamp(24px,2.4vw,34px);
+  line-height:1.05;letter-spacing:-.005em;color:var(--paper);text-transform:uppercase;
+}
+.route .for{
+  font-family:var(--mono);font-size:.82rem;color:#A8A398;letter-spacing:.1em;
+  text-transform:uppercase;line-height:1.45;
+}
+.route .desc{font-family:var(--serif);font-size:1rem;line-height:1.6;color:#CFCBC0;text-wrap:pretty}
+.route-btn{
+  display:inline-flex;align-items:center;gap:10px;align-self:flex-start;
+  font-family:var(--mono);font-size:.82rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:14px 22px;background:var(--orange);color:var(--paper);
+  border:1px solid var(--orange);cursor:pointer;min-height:52px;
+  transition:transform .18s,background .18s;
+  margin-top:6px;
+}
+.route-btn:hover{background:#B83A1A;border-color:#B83A1A;transform:translate(-2px,-2px)}
+.route-btn.alt{background:transparent;color:var(--paper);border-color:rgba(255,255,255,.45)}
+.route-btn.alt:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+
+.term-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.chip{font-family:var(--mono);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 11px;border:1px solid rgba(255,255,255,.22);background:transparent;color:#CFCBC0;cursor:pointer;transition:all .18s;min-height:32px}
+.chip:hover{border-color:var(--orange);color:var(--orange)}
+.term-ta{
+  width:100%;background:transparent;color:var(--paper);
+  font-family:var(--mono);font-size:.92rem;padding:14px;
+  border:1px solid rgba(255,255,255,.22);outline:none;
+  min-height:80px;resize:vertical;line-height:1.5;margin-top:8px;
+}
+.term-ta::placeholder{color:#777}
+.term-ta:focus{border-color:var(--orange)}
+.term-scarcity{font-family:var(--mono);font-size:.78rem;color:#A8A398;letter-spacing:.1em;margin-top:6px}
+
+/* ════════ NEWSLETTER — CARTA DEL ENTORNO · AUDIT #5 ════════ */
+.nl{max-width:1360px;margin:0 auto;padding:88px 4vw}
+.nl-card{
+  border:1px solid var(--ink);padding:48px;background:var(--paper-2);
+  display:grid;grid-template-columns:1fr;gap:28px;position:relative;overflow:hidden;
+}
+@media(min-width:820px){.nl-card{grid-template-columns:3fr 2fr;align-items:center;gap:56px;padding:56px}}
+.nl-card::before{
+  content:'';position:absolute;top:0;left:0;width:6px;height:100%;background:var(--orange);
+}
+.nl-eye{font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.nl-title{font-family:var(--display);font-weight:800;font-size:clamp(34px,3.6vw,52px);line-height:.95;letter-spacing:-.015em;color:var(--ink);margin-bottom:14px;text-transform:uppercase}
+.nl-sub{font-family:var(--serif);font-size:1.02rem;line-height:1.6;color:var(--ink-2);margin-bottom:14px;text-wrap:pretty}
+.nl-sub i{font-style:italic;color:var(--ink)}
+.nl-freq{font-family:var(--mono);font-size:.82rem;color:var(--ink-3);letter-spacing:.1em}
+.nl-form{display:flex;flex-direction:column;gap:10px}
+.nl-input{
+  font-family:var(--mono);font-size:.95rem;padding:14px 16px;
+  border:1px solid var(--rule-strong);background:var(--paper);color:var(--ink);
+  outline:none;min-height:52px;
+}
+.nl-input::placeholder{color:#888}
+.nl-input:focus{border-color:var(--orange)}
+.nl-btn{
+  font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  padding:16px 22px;background:var(--ink);color:var(--paper);min-height:52px;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  transition:background .2s,transform .2s;cursor:pointer;border:1px solid var(--ink);
+}
+.nl-btn:hover{background:var(--orange);border-color:var(--orange);transform:translate(-2px,-2px)}
+
+/* FOOTER */
+.foot{background:var(--paper);padding:64px 4vw 40px;border-top:1px solid var(--ink)}
+.foot-in{max-width:1360px;margin:0 auto}
+.foot-top{display:grid;grid-template-columns:1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid var(--rule)}
+@media(min-width:760px){.foot-top{grid-template-columns:2fr 1fr 1fr}}
+.foot-col h4{font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
+.foot-col a{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:.95rem;color:var(--ink-2);padding:6px 0;transition:color .15s,padding-left .15s}
+.foot-col a:hover{color:var(--orange);padding-left:4px}
+.foot-dot{width:8px;height:8px;display:inline-block;flex-shrink:0}
+.foot-mark{font-family:var(--display);font-weight:800;font-size:clamp(40px,5vw,64px);line-height:.9;letter-spacing:-.02em;color:var(--ink);margin-bottom:10px}
+.foot-mark .dot{color:var(--orange)}
+.foot-byline{font-family:var(--serif);font-style:italic;font-size:.95rem;line-height:1.55;color:var(--ink-3);max-width:34ch}
+.foot-bot{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;padding-top:24px;font-family:var(--mono);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+
+@media print{body::before,.grid-bg,.mast,.ov{display:none}.band{background-attachment:scroll}}
+</style>
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<!-- MASTHEAD -->
+<header class="mast" role="banner">
+  <div class="mast-in">
+    <div class="mast-l">
+      <a href="/" class="mast-folio" aria-label="Inicio">J.F. Carpio <span class="dot">§</span> jfcarpio.com</a>
+      <span class="mast-rule" aria-hidden="true"></span>
+      <span class="mast-byline" data-t="byline">Economía con instituciones y empresas</span>
+    </div>
+    <div class="mast-r">
+      <div class="lang-sw" role="group" aria-label="Language">
+        <button class="lang-btn lang-active" id="btn-es" onclick="setLang('es')" aria-pressed="true">ES</button>
+        <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+      </div>
+      <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Menú">
+        <span class="ham-lines"><span class="hl"></span><span class="hl"></span><span class="hl"></span></span>
+        <span data-t="ham_lbl">MENÚ</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="ov" id="ov" aria-hidden="true">
+  <p class="ov-lbl" data-t="ov_lbl">jfcarpio.com — Navegar</p>
+  <nav class="ov-nav" aria-label="Menú principal">
+    <a href="https://www.jfcarpio.com/visorgerencial/" target="_blank" rel="noopener" class="ov-a" onclick="closeMenu()">
+      <span class="ov-n">§ 01</span>
+      <span class="ov-body"><span class="ov-t" data-t="ov1_t">Dashboards</span><span class="ov-sub" data-t="ov1_sub">Diagnóstico inmediato · Growth OS</span></span>
+      <span class="ov-arr">↗</span>
+    </a>
+    <a href="#reportes" class="ov-a" onclick="closeMenu()">
+      <span class="ov-n">§ 02</span>
+      <span class="ov-body"><span class="ov-t" data-t="ov2_t">Reportes</span><span class="ov-sub" data-t="ov2_sub">Benchmarks y análisis sectoriales</span></span>
+      <span class="ov-arr">↗</span>
+    </a>
+    <a href="https://jfcarpio.com/talleres/" class="ov-a" onclick="closeMenu()">
+      <span class="ov-n">§ 03</span>
+      <span class="ov-body"><span class="ov-t" data-t="ov3_t">Workshops</span><span class="ov-sub" data-t="ov3_sub">Virtual y in-house</span></span>
+      <span class="ov-arr">↗</span>
+    </a>
+    <a href="/blog/" class="ov-a" onclick="closeMenu()">
+      <span class="ov-n">§ 04</span>
+      <span class="ov-body"><span class="ov-t" data-t="ov4_t">Blog</span><span class="ov-sub" data-t="ov4_sub">Historia, ideas y entorno económico</span></span>
+      <span class="ov-arr">↗</span>
+    </a>
+    <a href="/publicaciones/" class="ov-a" onclick="closeMenu()">
+      <span class="ov-n">§ 05</span>
+      <span class="ov-body"><span class="ov-t" data-t="ov5_t">Publicaciones</span><span class="ov-sub" data-t="ov5_sub">Libros, papers y columnas académicas</span></span>
+      <span class="ov-arr">↗</span>
+    </a>
+  </nav>
+  <span class="ov-esc" onclick="closeMenu()">ESC</span>
+</div>
+
+<main id="main">
+
+<!-- ════════ HERO ════════ -->
+<section class="hero">
+  <div class="hero-folio">
+    <div class="hero-folio-l">
+      <span>ES · EC</span><span class="fbar">│</span><span data-t="byline">Economía con instituciones y empresas</span>
+    </div>
+    <div class="hero-folio-r">Quito · 2026</div>
+  </div>
+
+  <div class="hero-stage">
+    <div class="hero-body">
+      <p class="hero-kick reveal"><span class="kd"></span><span data-t="kick">Economía aplicada · Empresa privada · América Latina</span></p>
+
+      <h1 class="hero-h1">
+        <span class="lw"><span class="rev-line"><span data-t="h1_l1a">La expansión de un negocio en </span><span class="accent-orange" data-t="h1_l1b">Latinoamérica</span></span></span>
+        <span class="lw"><span class="rev-line" data-t="h1_l2">enfrenta dos batallas simultáneas: construir el negocio, y sobrevivir el entorno que lo complica.</span></span>
+        <span class="lw"><span class="rev-line"><strong><span data-t="h1_l3a">Aquí encontrarás </span><span class="accent-gold" data-t="h1_l3b">herramientas</span><span data-t="h1_l3c"> para enfrentar exitosamente ambas cosas.</span></strong></span></span>
+      </h1>
+
+      <!-- AUDIT #2 · Harvard subtitle -->
+      <p class="hero-sub reveal" data-t="hero_sub">Hay un tipo de empresario que no aparece en los casos de Harvard. Este sitio existe para ese empresario.</p>
+
+      <!-- AUDIT #2 · dual CTA -->
+      <div class="hero-ctas reveal">
+        <a href="https://www.jfcarpio.com/visorantiquiebra/" class="hero-cta-pri" target="_blank" rel="noopener" data-t="cta_primary">Diagnostica tu negocio — Growth OS · $47 →</a>
+        <a href="#terminal" class="hero-cta-sec" onclick="document.getElementById('terminal').scrollIntoView({behavior:'smooth'});return false;" data-t="cta_sec">¿Decisión urgente? Escríbeme →</a>
+      </div>
+
+      <div class="hero-stats reveal">
+        <div class="hs-item">
+          <span class="hs-num">33<span class="hs-sup">+</span></span>
+          <span class="hs-lbl" data-t="proof1">clientes directos</span>
+        </div>
+        <div class="hs-item">
+          <span class="hs-num">4.800</span>
+          <span class="hs-lbl" data-t="proof2">estudiantes</span>
+        </div>
+        <div class="hs-item">
+          <span class="hs-num">20<span class="hs-sup">+</span></span>
+          <span class="hs-lbl" data-t="proof3">años en el campo</span>
+        </div>
+        <div class="hs-item">
+          <span class="hs-num">10–40%</span>
+          <span class="hs-lbl" data-t="proof4">ROI en mercados emergentes</span>
+        </div>
+      </div>
+
+      <!-- AUDIT #4 · Forum da Liberdade badge -->
+      <div class="hero-badge reveal">
+        <span class="mark" data-t="badge_mark">Keynote · 2024</span>
+        <div class="body">
+          <span class="t" data-t="badge_t">Forum da Liberdade · Porto Alegre</span>
+          <span class="s" data-t="badge_s">El mayor evento de libertad económica de América del Sur · 3.000 asistentes</span>
+        </div>
+      </div>
+
+      <div class="hero-cue"><span class="cd"></span><span>↓</span></div>
+    </div>
+
+    <figure class="hero-plate reveal">
+      <img src="network-pacific.webp" alt="Pacífico · cordillera" loading="eager" width="1600" height="1000">
+      <figcaption class="hero-plate-credit"><span class="dot">●</span><span data-t="plate_credit">Quito</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ════════ CONNECTOR · AUDIT #7 + #8 ════════ -->
+<div class="connector">
+  <p class="conn-context reveal" data-t="conn_context">El problema nunca es la falta de esfuerzo. Es operar con información atrasada, sin un marco para leer lo que el entorno te va a hacer en los próximos seis meses. <b>Eso es lo que resuelve cada uno de estos recursos.</b></p>
+
+  <div class="conn-routes reveal">
+    <a href="https://www.jfcarpio.com/visorantiquiebra/" target="_blank" rel="noopener" class="conn-route">
+      <span class="cn-n">01</span>
+      <span class="cn-body">
+        <span class="cn-h" data-t="opt1_h">Diagnostica tu negocio</span>
+        <span class="cn-micro" data-t="opt1_micro">en 20 min sabes si estás en zona de riesgo</span>
+      </span>
+    </a>
+    <a href="#reportes" class="conn-route">
+      <span class="cn-n">02</span>
+      <span class="cn-body">
+        <span class="cn-h" data-t="opt2_h">Entiende tu entorno</span>
+        <span class="cn-micro" data-t="opt2_micro">un reporte que traduce la macro a tu decisión concreta</span>
+      </span>
+    </a>
+    <a href="https://jfcarpio.com/talleres/" class="conn-route">
+      <span class="cn-n">03</span>
+      <span class="cn-body">
+        <span class="cn-h" data-t="opt3_h">Explora talleres corporativos</span>
+        <span class="cn-micro" data-t="opt3_micro">dos talleres que cambian cómo ven el dinero y la empresa</span>
+      </span>
+    </a>
+  </div>
+</div>
+
+<!-- ════════ § 01 · ÍNDICE / BENTO ════════ -->
+<section class="sec" id="indice">
+  <header class="sec-hd reveal">
+    <span class="sec-num">§ 01</span>
+    <h2 class="sec-title"><span data-t="bh_sub">Empieza por lo que más necesitas</span></h2>
+    <span class="sec-meta" data-t="bh_hint">5 secciones</span>
+  </header>
+
+  <div class="idx">
+    <a href="https://www.jfcarpio.com/visorgerencial/" id="dashboards" target="_blank" rel="noopener" class="idx-row reveal" style="--accent:#0A7A52">
+      <span class="idx-n">§ 01.01</span>
+      <div class="idx-main">
+        <div class="idx-head">
+          <span class="idx-eyebrow" data-t="p1_num">01 — Acción inmediata</span>
+          <h3 class="idx-title"><span data-t="p1_title">Dashboards</span><span class="arr">↗</span></h3>
+        </div>
+        <p class="idx-desc" data-t="p1_desc">Si tu negocio está en un momento crítico, empieza aquí.</p>
+        <!-- AUDIT #9 · Growth OS price ladder -->
+        <p class="idx-ladder" data-t="gos_ladder">Empieza donde estás: <b>GROW</b> ($47, meses 0–6) · <b>CROSS</b> (gratis, meses 6–24, mientras construyes tracción) · <b>SCALE</b> (PRO, cuando llegues ahí).</p>
+        <div class="idx-foot"><span class="idx-tag" data-t="p1_tag">Growth OS</span></div>
+      </div>
+    </a>
+
+    <a href="https://brilla-group.com/reportes.html" id="reportes" target="_blank" rel="noopener" class="idx-row reveal" style="--accent:#2C5FB5">
+      <span class="idx-n">§ 01.02</span>
+      <div class="idx-main">
+        <div class="idx-head">
+          <span class="idx-eyebrow" data-t="p2_num">02 — Entender el contexto</span>
+          <h3 class="idx-title"><span data-t="p2_title">Reportes</span><span class="arr">↗</span></h3>
+        </div>
+        <p class="idx-desc" data-t="p2_desc">Análisis macroeconómico, riesgo regulatorio y benchmarks empresariales. Acceso privado para decisiones reales.</p>
+        <div class="idx-foot"><span class="idx-tag" data-t="p2_tag">6 reportes</span></div>
+      </div>
+    </a>
+
+    <a href="https://jfcarpio.com/talleres/" id="workshops" class="idx-row reveal" style="--accent:#008694">
+      <span class="idx-n">§ 01.03</span>
+      <div class="idx-main">
+        <div class="idx-head">
+          <span class="idx-eyebrow" data-t="p3_num">03 — Talleres corporativos virtuales</span>
+          <h3 class="idx-title"><span data-t="p3_title">Talleres corporativos</span><span class="arr">↗</span></h3>
+        </div>
+        <p class="idx-desc" data-t="p3_desc">Dos talleres virtuales independientes para equipos hispanohablantes y bilingües: finanzas personales y familiares; apreciación de la empresa privada. Programas in-house disponibles por cotización.</p>
+        <div class="idx-foot"><span class="idx-tag" data-t="p3_tag">Virtual / In-house</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/" id="blog" class="idx-row reveal" style="--accent:#B88512">
+      <span class="idx-n">§ 01.04</span>
+      <div class="idx-main">
+        <div class="idx-head">
+          <span class="idx-eyebrow" data-t="p4_num">04 — Lectura frecuente</span>
+          <h3 class="idx-title"><span data-t="p4_title">Blog</span><span class="arr">↗</span></h3>
+        </div>
+        <p class="idx-desc" data-t="p4_desc">Historia económica, ideas y contexto — cómo las creencias determinan resultados, también en tu empresa.</p>
+        <div class="idx-foot"><span class="idx-tag" data-t="p4_tag">Eleutheros</span></div>
+      </div>
+    </a>
+
+    <a href="/publicaciones/" id="publicaciones" class="idx-row reveal" style="--accent:#D9451F">
+      <span class="idx-n">§ 01.05</span>
+      <div class="idx-main">
+        <div class="idx-head">
+          <span class="idx-eyebrow" data-t="p5_num">05 — Divulgación y académicos</span>
+          <h3 class="idx-title"><span data-t="p5_title">Publicaciones</span><span class="arr">↗</span></h3>
+        </div>
+        <p class="idx-desc" data-t="p5_desc">Libros, papers y columnas. El respaldo formal detrás de cada herramienta.</p>
+        <div class="idx-foot"><span class="idx-tag" data-t="p5_tag">Académico</span></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ════════ AUDIT #10 · FAILURE STAKES ════════ -->
+<div class="stakes">
+  <div class="stakes-card reveal">
+    <span class="stakes-eye" data-t="stakes_eye">El costo del no-análisis</span>
+    <p class="stakes-t" data-t="stakes_t">En Ecuador, <b>más del 60% de las empresas que no superan los tres años</b> citan el entorno regulatorio y la inestabilidad macroeconómica entre sus causas principales. No es un problema de esfuerzo. Es un problema de información — y de tener el marco para leerla antes de que lleguen las consecuencias.</p>
+  </div>
+</div>
+
+<!-- PROOF STRIP -->
+<div class="proof reveal">
+  <div class="pf-item">
+    <span class="pf-num">33<span class="pf-sup">+</span></span>
+    <span class="pf-lbl" data-t="proof1">clientes directos</span>
+  </div>
+  <div class="pf-item">
+    <span class="pf-num">4.800</span>
+    <span class="pf-lbl" data-t="proof2">estudiantes</span>
+  </div>
+  <div class="pf-item">
+    <span class="pf-num">20<span class="pf-sup">+</span></span>
+    <span class="pf-lbl" data-t="proof3">años en el campo</span>
+  </div>
+  <div class="pf-item">
+    <span class="pf-num">10–40%</span>
+    <span class="pf-lbl" data-t="proof4">ROI en mercados emergentes</span>
+  </div>
+</div>
+
+<!-- ════════ § 02 · PARALLAX BAND ════════ -->
+<section class="band" id="band">
+  <div class="band-in">
+    <div class="reveal">
+      <p class="band-kick"><span class="kd"></span><span>§ 02 · Editorial</span></p>
+      <h2 class="band-h" data-t="cp_or">Opera en una región y espacio cultural donde el Estado cambia las reglas en mitad del partido. Donde los impuestos son altos y las trabas más. Donde las reglas asfixian en vez de apoyar. Donde la deuda y el gasto irresponsable de los gobiernos generan el cortoplacismo que destruye cualquier plan a mediano plazo. Y aun así, construye. Y aun así, crece.</h2>
+    </div>
+    <aside class="band-ruler reveal">
+      <p data-t="cp2">Ese empresario necesita herramientas distintas. No las que enseñan los MBAs para mercados ordenados. Las que funcionan cuando el entorno no coopera.</p>
+      <span class="sig"><strong style="color:var(--orange)">J.F.C.</strong> · <span data-t="byline">Economía con instituciones y empresas</span></span>
+    </aside>
+  </div>
+</section>
+
+<!-- ════════ § 03 · MANIFESTO + PORTRAIT ════════ -->
+<section class="sec" id="about">
+  <header class="sec-hd reveal">
+    <span class="sec-num">§ 03</span>
+    <h2 class="sec-title"><span data-t="tl_title_a">Dos temas persistentes: </span><span class="accent" data-t="tl_title_b">crecimiento económico y optimismo racional</span></h2>
+    <span class="sec-meta" data-t="tl_lbl">Trayectoria</span>
+  </header>
+
+  <div class="manifesto">
+    <div class="portrait reveal">
+      <div class="portrait-frame">
+        <img src="fotojfc.webp" alt="Juan Fernando Carpio — Autor, Quito Ecuador" loading="lazy" width="380" height="475">
+      </div>
+      <div class="portrait-cap">
+        <span>J.F. Carpio</span>
+        <span>@jfcarpio</span>
+      </div>
+    </div>
+
+    <div class="manifesto-body reveal">
+      <p class="lede" data-t="cp1">Hay un tipo de empresario que no aparece en los casos de Harvard.</p>
+      <p class="dropcap" data-t="cp_or">Opera en una región y espacio cultural donde el Estado cambia las reglas en mitad del partido. Donde los impuestos son altos y las trabas más. Donde las reglas asfixian en vez de apoyar. Donde la deuda y el gasto irresponsable de los gobiernos generan el cortoplacismo que destruye cualquier plan a mediano plazo. Y aun así, construye. Y aun así, crece.</p>
+      <p data-t="cp2">Ese empresario necesita herramientas distintas. No las que enseñan los MBAs para mercados ordenados. Las que funcionan cuando el entorno no coopera.</p>
+      <p data-t="cp3b">20 años involucrado en distintos proyectos como consultor o como participante externo e interno me dieron una certeza: el problema nunca es la falta de esfuerzo. Es operar con información de hace dos trimestres, sin un marco para leer lo que el entorno te va a hacer en los próximos seis meses.</p>
+      <p data-t="cp4">Eso es lo que resuelve este sitio. Dashboards que diagnostican la salud real del negocio. Reportes que traducen el entorno macroeconómico a decisiones concretas. Dos talleres corporativos virtuales para equipos hispanohablantes y bilingües: uno sobre dinero y finanzas personales y familiares, otro sobre apreciación de la empresa privada. También disponibles en formato físico in-house para grupos dentro de programas especiales, bajo cotización. Son independientes, pero profundamente complementarios. Resultados respectivos: menos estrés financiero y mejor productividad; y más lealtad interna hacia la empresa, con gente que cuida los espacios, las herramientas y la marca como si fueran suyos.</p>
+      <p data-t="cp5">Todo en español, todo en inglés, para empresarios, directivos y equipos hispanohablantes o bilingües en Estados Unidos, Canadá, España y otros mercados donde una mala decisión cuesta caro. La herramienta más actualizada se llama Growth OS. Empieza ahí.</p>
+      <p class="copy-byline"><strong>J. F. Carpio</strong> — <span data-t="byline">Economía con instituciones y empresas</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ TESTIMONIOS · AUDIT #3 (sin Esteban / fútbol) ════════ -->
+<div class="tes">
+  <header class="tes-hd reveal">
+    <span class="num">§ 03·b</span>
+    <h2 class="t" data-t="tes_title">Resultados en distintos tipos de asesorías a PYMES</h2>
+    <span class="eye" data-t="tes_eye">Lo que dicen clientes reales</span>
+  </header>
+  <div class="tes-grid">
+    <div class="tes-card reveal">
+      <p class="tes-q" data-t="t1_q">Bastante didáctico, información precisa y organizada.</p>
+      <div class="tes-attr">
+        <span class="tes-name" data-t="t1_name">Juan Pablo Z.</span>
+        <span class="tes-role" data-t="t1_role">Diseñador multimedia · Quito</span>
+      </div>
+    </div>
+    <div class="tes-card reveal">
+      <p class="tes-q" data-t="t2_q">Fácil, sin complicaciones. Real. Y 100% lo que necesitábamos para poder aterrizar todo y lograr que no sea solo un sueño.</p>
+      <div class="tes-attr">
+        <span class="tes-name" data-t="t2_name">Leonela Loor</span>
+        <span class="tes-role" data-t="t2_role">Empresaria ecommerce · Orlando, FL</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ § 04 · TIMELINE ════════ -->
+<section class="sec" id="log">
+  <header class="sec-hd reveal">
+    <span class="sec-num">§ 04</span>
+    <h2 class="sec-title" data-t="tl_lbl">Trayectoria</h2>
+    <span class="sec-meta">Registro · 2004 — 2026</span>
+  </header>
+
+  <div class="log">
+    <div class="log-row reveal">
+      <span class="log-n">§ 04.01</span>
+      <div class="log-body">
+        <h3 class="log-title" data-t="tl1_t">Growth OS — cuatro dashboards, un sistema completo</h3>
+        <p class="log-b" data-t="tl1_b">Del primer MRR al exit. Herramientas que evitan la quiebra temprana de nuevos negocios. La síntesis práctica de dos décadas de economía aplicada a la empresa.</p>
+      </div>
+    </div>
+    <div class="log-row reveal">
+      <span class="log-n">§ 04.02</span>
+      <div class="log-body">
+        <h3 class="log-title" data-t="tl2_t">Consultoría independiente</h3>
+        <p class="log-b" data-t="tl2_b">33+ clientes directos. ROIs del 10–40% en mercados emergentes. Keynote en Forum da Liberdade, Porto Alegre — el mayor evento de libertad económica de América del Sur, 3.000 asistentes. El capitalismo popular e incluyente como leit motif.</p>
+      </div>
+    </div>
+    <div class="log-row reveal">
+      <span class="log-n">§ 04.03</span>
+      <div class="log-body">
+        <h3 class="log-title" data-t="tl3_t">14 años formando estudiantes universitarios con una mucho mejor comprensión del mercado y la empresa</h3>
+        <p class="log-b" data-t="tl3_b">Fundó el primer subdepartamento de Economía Austriaca e Institucional del Ecuador. Diseñó una síntesis propia — Economía con instituciones y empresas — para Principios de Economía (ECN100, USFQ). Asesoró y colaboró en la creación del Instituto de Economía de la USFQ y su revista académica Polemika.</p>
+      </div>
+    </div>
+    <div class="log-row reveal">
+      <span class="log-n">§ 04.04</span>
+      <div class="log-body">
+        <h3 class="log-title" data-t="tl4_t">Autor en la línea de la Economía con instituciones y empresas</h3>
+        <p class="log-b" data-t="tl4_b">Autor de "10 Lecciones de Economía". Traducción y difusión de economía de las escuelas continentales europeas (especialmente la austriaca) en español. Columnista en prensa ecuatoriana.</p>
+      </div>
+    </div>
+    <div class="log-row reveal">
+      <span class="log-n">§ 04.05</span>
+      <div class="log-body">
+        <h3 class="log-title" data-t="tl5_t">La formación: la teoría sólida al servicio de causas reales</h3>
+        <p class="log-b" data-t="tl5_b">M.E.E. en UFM Guatemala / Boston University. Trabajo de doctorado en evolución institucional Mengerian (3 working papers). La teoría austriaca del capital como herramienta de optimismo racional — no como adorno académico.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ § 05 · TERMINAL · DOS RUTAS DIFERENCIADAS · AUDIT #6 ════════ -->
+<section class="term" id="terminal">
+  <div class="term-in">
+    <header class="term-hd reveal">
+      <span class="n">§ 05</span>
+      <span class="lbl" data-t="term_lbl">Consulta directa</span>
+      <h2 class="t"><span data-t="term_title_a">¿Tienes una </span><span class="accent" data-t="term_title_b">pregunta</span><span data-t="term_title_c">?</span></h2>
+    </header>
+
+    <div class="routes reveal">
+      <!-- RUTA A: 15 min, sin costo -->
+      <div class="route">
+        <span class="num" data-t="ruta_a_num">Ruta A · 15 min · sin costo</span>
+        <h3 class="h" data-t="ruta_a_h">Agenda una revisión de tus indicadores</h3>
+        <span class="for" data-t="ruta_a_for">— para quien ya sabe qué quiere revisar</span>
+        <p class="desc" data-t="ruta_a_desc">Trae los números que tienes a mano. En 15 minutos te digo qué está midiendo lo correcto y qué te está ocultando lo importante.</p>
+        <button class="route-btn" onclick="bookReview()" data-t="ruta_a_btn">Agenda 15 min →</button>
+      </div>
+
+      <!-- RUTA B: WhatsApp libre -->
+      <div class="route">
+        <span class="num" data-t="ruta_b_num">Ruta B · WhatsApp</span>
+        <h3 class="h" data-t="ruta_b_h">¿No sabes por dónde empezar?</h3>
+        <span class="for" data-t="ruta_b_for">— para quien está en modo exploración</span>
+        <p class="desc" data-t="ruta_b_desc">Escríbeme por WhatsApp — te ayudo a identificar qué necesitas antes de comprometerte con nada.</p>
+
+        <div class="term-chips">
+          <button class="chip" onclick="useChip('q1_full')" data-t="q1">MRR en caída</button>
+          <button class="chip" onclick="useChip('q2_full')" data-t="q2">CAC alto</button>
+          <button class="chip" onclick="useChip('q3_full')" data-t="q3">IDF</button>
+          <button class="chip" onclick="useChip('q4_full')" data-t="q4">Entorno hostil</button>
+          <button class="chip" onclick="useChip('q5_full')" data-t="q5">Expandir o aguantar</button>
+          <button class="chip" onclick="useChip('q6_full')" data-t="q6">No sé por dónde empezar</button>
+          <button class="chip" onclick="useChip('q7_full')" data-t="q7">Quiero hablar con JFC</button>
+        </div>
+
+        <textarea class="term-ta" id="ai-query" placeholder="Describe tu situación en pocas palabras…" data-t-placeholder="term_ph" maxlength="300"></textarea>
+        <p class="term-scarcity" data-t="c_scarcity">Disponibilidad limitada — consulta si hay cupo para workshop este mes.</p>
+        <button class="route-btn alt" onclick="sendWA()" data-t="ruta_b_btn">Abrir WhatsApp →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ NEWSLETTER · CARTA DEL ENTORNO · AUDIT #5 ════════ -->
+<section class="nl">
+  <div class="nl-card reveal">
+    <div>
+      <p class="nl-eye" data-t="nl_eye">Newsletter mensual · gratis</p>
+      <h3 class="nl-title" data-t="nl_title">Carta del Entorno</h3>
+      <p class="nl-sub" data-t="nl_sub">Cuando el contexto macroeconómico cambia, tienes dos opciones: enterarte por las consecuencias, o enterarte antes. <i>Cada envío: un dato, un reencuadre, una herramienta para decidir mejor.</i></p>
+      <p class="nl-freq" data-t="nl_freq">Frecuencia irregular — cuando hay algo que vale. Baja cuando quieras.</p>
+    </div>
+    <form class="nl-form" onsubmit="subscribe(event)">
+      <input type="email" class="nl-input" placeholder="tu@email.com" data-t-placeholder="nl_ph" required>
+      <button type="submit" class="nl-btn" data-t="nl_btn">Suscribirse · gratis →</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="foot" role="contentinfo">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-col">
+        <div class="foot-mark">J.F.C<span class="dot">.</span></div>
+        <p class="foot-byline" data-t="byline">Economía con instituciones y empresas</p>
+      </div>
+      <div class="foot-col">
+        <h4 data-t="foot_h_res">Recursos</h4>
+        <a href="https://www.jfcarpio.com/visorgerencial/" target="_blank" rel="noopener"><span class="foot-dot" style="background:#0A7A52"></span><span data-t="p1_title">Dashboards</span></a>
+        <a href="https://brilla-group.com/reportes.html" target="_blank" rel="noopener"><span class="foot-dot" style="background:#2C5FB5"></span><span data-t="p2_title">Reportes</span></a>
+        <a href="https://jfcarpio.com/talleres/"><span class="foot-dot" style="background:#008694"></span><span data-t="p3_title">Talleres corporativos</span></a>
+        <a href="/blog/"><span class="foot-dot" style="background:#B88512"></span><span data-t="p4_title">Blog</span></a>
+        <a href="/publicaciones/"><span class="foot-dot" style="background:#D9451F"></span><span data-t="p5_title">Publicaciones</span></a>
+      </div>
+      <div class="foot-col">
+        <h4 data-t="foot_h_can">Canales</h4>
+        <a href="https://www.linkedin.com/in/jfcarpio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://mises.org/profile/juan-fernando-carpio" target="_blank" rel="noopener">Mises Institute</a>
+        <a href="https://twitter.com/jfcarpio" target="_blank" rel="noopener">Twitter / X</a>
+        <a href="mailto:staff@jfcarpio.com">staff@jfcarpio.com</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <a href="https://jfcarpio.com/" data-t="foot_copy" style="color:inherit">© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador</a>
+      <span data-t="foot_col_v">DASHBOARDS · PACE MONO</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════ SCRIPTS ════════════════════════ -->
+<script>
+document.documentElement.classList.add('js-rv');
+
+/* ──────── T (TODOS los textos originales del index vivo + claves nuevas del audit) ──────── */
+var lang='es';
+var T={
+  es:{
+    /* Marca / nav */
+    byline:'Economía con instituciones y empresas',
+    ham_lbl:'MENÚ',
+    ov_lbl:'jfcarpio.com — Navegar',
+    ov1_t:'Dashboards',    ov1_sub:'Diagnóstico inmediato · Growth OS',
+    ov2_t:'Reportes',      ov2_sub:'Benchmarks y análisis sectoriales',
+    ov3_t:'Workshops',     ov3_sub:'Virtual y in-house',
+    ov4_t:'Blog',          ov4_sub:'Historia, ideas y entorno económico',
+    ov5_t:'Publicaciones', ov5_sub:'Libros, papers y columnas académicas',
+
+    /* Hero */
+    kick:'Economía aplicada · Empresa privada · América Latina',
+    h1_l1a:'La expansión de un negocio en ', h1_l1b:'Latinoamérica',
+    h1_l2:'enfrenta dos batallas simultáneas: construir el negocio, y sobrevivir el entorno que lo complica.',
+    h1_l3a:'Aquí encontrarás ', h1_l3b:'herramientas', h1_l3c:' para enfrentar exitosamente ambas cosas.',
+    /* NUEVO · AUDIT #2 */
+    hero_sub:'Hay un tipo de empresario que no aparece en los casos de Harvard. Este sitio existe para ese empresario.',
+    cta_primary:'Diagnostica tu negocio — Growth OS · $47 →',
+    cta_sec:'¿Decisión urgente? Escríbeme →',
+    /* NUEVO · AUDIT #4 */
+    badge_mark:'Keynote · 2024',
+    badge_t:'Forum da Liberdade · Porto Alegre',
+    badge_s:'El mayor evento de libertad económica de América del Sur · 3.000 asistentes',
+    plate_credit:'Quito',
+
+    /* Proof (preservado, + 4to del index actual) */
+    proof1:'clientes directos', proof2:'estudiantes', proof3:'años en el campo',
+    proof4:'ROI en mercados emergentes',
+
+    /* Connector (audit #7 + #8) */
+    conn_context:'El problema nunca es la falta de esfuerzo. Es operar con información atrasada, sin un marco para leer lo que el entorno te va a hacer en los próximos seis meses. <b>Eso es lo que resuelve cada uno de estos recursos.</b>',
+    opt1_h:'Diagnostica tu negocio',
+    opt1_micro:'en 20 min sabes si estás en zona de riesgo',
+    opt2_h:'Entiende tu entorno',
+    opt2_micro:'un reporte que traduce la macro a tu decisión concreta',
+    opt3_h:'Explora talleres corporativos',
+    opt3_micro:'dos talleres que cambian cómo ven el dinero y la empresa',
+
+    /* § 01 Bento (preservado) */
+    bh_sub:'Empieza por lo que más necesitas', bh_hint:'5 secciones',
+    p1_num:'01 — Acción inmediata', p1_title:'Dashboards',
+    p1_desc:'Si tu negocio está en un momento crítico, empieza aquí.', p1_tag:'Growth OS',
+    /* NUEVO · AUDIT #9 */
+    gos_ladder:'Empieza donde estás: <b>GROW</b> ($47, meses 0–6) · <b>CROSS</b> (gratis, meses 6–24, mientras construyes tracción) · <b>SCALE</b> (PRO, cuando llegues ahí).',
+    p2_num:'02 — Entender el contexto', p2_title:'Reportes',
+    p2_desc:'Análisis macroeconómico, riesgo regulatorio y benchmarks empresariales. Acceso privado para decisiones reales.', p2_tag:'6 reportes',
+    p3_num:'03 — Talleres corporativos virtuales', p3_title:'Talleres corporativos',
+    p3_desc:'Dos talleres virtuales independientes para equipos hispanohablantes y bilingües: finanzas personales y familiares; apreciación de la empresa privada. Programas in-house disponibles por cotización.', p3_tag:'Virtual / In-house',
+    p4_num:'04 — Lectura frecuente', p4_title:'Blog',
+    p4_desc:'Historia económica, ideas y contexto — cómo las creencias determinan resultados, también en tu empresa.', p4_tag:'Eleutheros',
+    p5_num:'05 — Divulgación y académicos', p5_title:'Publicaciones',
+    p5_desc:'Libros, papers y columnas. El respaldo formal detrás de cada herramienta.', p5_tag:'Académico',
+
+    /* Stakes · AUDIT #10 */
+    stakes_eye:'El costo del no-análisis',
+    stakes_t:'En Ecuador, <b>más del 60% de las empresas que no superan los tres años</b> citan el entorno regulatorio y la inestabilidad macroeconómica entre sus causas principales. No es un problema de esfuerzo. Es un problema de información — y de tener el marco para leerla antes de que lleguen las consecuencias.',
+
+    /* Copy section (preservado completo) */
+    cp1:'Hay un tipo de empresario que no aparece en los casos de Harvard.',
+    cp_or:'Opera en una región y espacio cultural donde el Estado cambia las reglas en mitad del partido. Donde los impuestos son altos y las trabas más. Donde las reglas asfixian en vez de apoyar. Donde la deuda y el gasto irresponsable de los gobiernos generan el cortoplacismo que destruye cualquier plan a mediano plazo. Y aun así, construye. Y aun así, crece.',
+    cp2:'Ese empresario necesita herramientas distintas. No las que enseñan los MBAs para mercados ordenados. Las que funcionan cuando el entorno no coopera.',
+    cp3b:'20 años involucrado en distintos proyectos como consultor o como participante externo e interno me dieron una certeza: el problema nunca es la falta de esfuerzo. Es operar con información de hace dos trimestres, sin un marco para leer lo que el entorno te va a hacer en los próximos seis meses.',
+    cp4:'Eso es lo que resuelve este sitio. Dashboards que diagnostican la salud real del negocio. Reportes que traducen el entorno macroeconómico a decisiones concretas. Dos talleres corporativos virtuales para equipos hispanohablantes y bilingües: uno sobre dinero y finanzas personales y familiares, otro sobre apreciación de la empresa privada. También disponibles en formato físico in-house para grupos dentro de programas especiales, bajo cotización. Son independientes, pero profundamente complementarios. Resultados respectivos: menos estrés financiero y mejor productividad; y más lealtad interna hacia la empresa, con gente que cuida los espacios, las herramientas y la marca como si fueran suyos.',
+    cp5:'Todo en español, todo en inglés, para empresarios, directivos y equipos hispanohablantes o bilingües en Estados Unidos, Canadá, España y otros mercados donde una mala decisión cuesta caro. La herramienta más actualizada se llama Growth OS. Empieza ahí.',
+
+    /* Testimonios (sin Esteban / AUDIT #3) */
+    tes_eye:'Lo que dicen clientes reales',
+    tes_title:'Resultados en distintos tipos de asesorías a PYMES',
+    t1_q:'Bastante didáctico, información precisa y organizada.',
+    t1_name:'Juan Pablo Z.',
+    t1_role:'Diseñador multimedia · Quito',
+    t2_q:'Fácil, sin complicaciones. Real. Y 100% lo que necesitábamos para poder aterrizar todo y lograr que no sea solo un sueño.',
+    t2_name:'Leonela Loor',
+    t2_role:'Empresaria ecommerce · Orlando, FL',
+
+    /* Timeline */
+    tl_lbl:'Trayectoria', tl_title_a:'Dos temas persistentes: ', tl_title_b:'crecimiento económico y optimismo racional',
+    tl1_t:'Growth OS — cuatro dashboards, un sistema completo',
+    tl1_b:'Del primer MRR al exit. Herramientas que evitan la quiebra temprana de nuevos negocios. La síntesis práctica de dos décadas de economía aplicada a la empresa.',
+    tl2_t:'Consultoría independiente',
+    tl2_b:'33+ clientes directos. ROIs del 10–40% en mercados emergentes. Keynote en Forum da Liberdade, Porto Alegre — el mayor evento de libertad económica de América del Sur, 3.000 asistentes. El capitalismo popular e incluyente como leit motif.',
+    tl3_t:'14 años formando estudiantes universitarios con una mucho mejor comprensión del mercado y la empresa',
+    tl3_b:'Fundó el primer subdepartamento de Economía Austriaca e Institucional del Ecuador. Diseñó una síntesis propia — Economía con instituciones y empresas — para Principios de Economía (ECN100, USFQ). Asesoró y colaboró en la creación del Instituto de Economía de la USFQ y su revista académica Polemika.',
+    tl4_t:'Autor en la línea de la Economía con instituciones y empresas',
+    tl4_b:'Autor de "10 Lecciones de Economía". Traducción y difusión de economía de las escuelas continentales europeas (especialmente la austriaca) en español. Columnista en prensa ecuatoriana.',
+    tl5_t:'La formación: la teoría sólida al servicio de causas reales',
+    tl5_b:'M.E.E. en UFM Guatemala / Boston University. Trabajo de doctorado en evolución institucional Mengerian (3 working papers). La teoría austriaca del capital como herramienta de optimismo racional — no como adorno académico.',
+
+    /* Terminal — dos rutas diferenciadas · AUDIT #6 */
+    term_lbl:'Consulta directa', term_title_a:'¿Tienes una ', term_title_b:'pregunta', term_title_c:'?',
+    ruta_a_num:'Ruta A · 15 min · sin costo',
+    ruta_a_h:'Agenda una revisión de tus indicadores',
+    ruta_a_for:'— para quien ya sabe qué quiere revisar',
+    ruta_a_desc:'Trae los números que tienes a mano. En 15 minutos te digo qué está midiendo lo correcto y qué te está ocultando lo importante.',
+    ruta_a_btn:'Agenda 15 min →',
+    ruta_b_num:'Ruta B · WhatsApp',
+    ruta_b_h:'¿No sabes por dónde empezar?',
+    ruta_b_for:'— para quien está en modo exploración',
+    ruta_b_desc:'Escríbeme por WhatsApp — te ayudo a identificar qué necesitas antes de comprometerte con nada.',
+    ruta_b_btn:'Abrir WhatsApp →',
+    c_scarcity:'Disponibilidad limitada — consulta si hay cupo para workshop este mes.',
+    term_ph:'Describe tu situación en pocas palabras…',
+    q1:'MRR en caída',        q1_full:'Mi MRR cayó 3 meses seguidos. ¿Por dónde empiezo?',
+    q2:'CAC alto',            q2_full:'¿Cómo sé si mi CAC es demasiado alto para mi modelo?',
+    q3:'IDF',                 q3_full:'¿Qué es el IDF y cómo lo bajo en mi negocio?',
+    q4:'Entorno hostil',      q4_full:'Las regulaciones me están asfixiando. ¿Qué hago?',
+    q5:'Expandir o aguantar', q5_full:'¿Cuándo expandir y cuándo aguantar?',
+    q6:'No sé por dónde empezar', q6_full:'No sé bien por dónde empezar con mi negocio. ¿Qué recomiendas?',
+    q7:'Quiero hablar con JFC', q7_full:'Hola JFC, vengo de jfcarpio.com y me gustaría hablar contigo directamente.',
+    wa_default:'Hola, vengo de jfcarpio.com y tengo una consulta.',
+
+    /* Newsletter — Carta del Entorno · AUDIT #5 */
+    nl_eye:'Newsletter mensual · gratis',
+    nl_title:'Carta del Entorno',
+    nl_sub:'Cuando el contexto macroeconómico cambia, tienes dos opciones: enterarte por las consecuencias, o enterarte antes. <i>Cada envío: un dato, un reencuadre, una herramienta para decidir mejor.</i>',
+    nl_freq:'Frecuencia irregular — cuando hay algo que vale. Baja cuando quieras.',
+    nl_ph:'tu@email.com',
+    nl_btn:'Suscribirse · gratis →',
+
+    /* Footer */
+    foot_h_res:'Recursos',
+    foot_h_can:'Canales',
+    foot_copy:'© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador',
+    foot_col_v:'DASHBOARDS · PACE MONO'
+  },
+
+  en:{
+    byline:'Economics with institutions and enterprise',
+    ham_lbl:'MENU',
+    ov_lbl:'jfcarpio.com — Navigate',
+    ov1_t:'Dashboards',    ov1_sub:'Immediate diagnosis · Growth OS',
+    ov2_t:'Reports',       ov2_sub:'Benchmarks and sector analysis',
+    ov3_t:'Workshops',     ov3_sub:'Virtual and in-house',
+    ov4_t:'Blog',          ov4_sub:'History, ideas and economic context',
+    ov5_t:'Publications',  ov5_sub:'Books, papers and academic columns',
+
+    kick:'Economic environment · Business economics · Enterprise',
+    h1_l1a:'Expanding a business in ', h1_l1b:'Latin America',
+    h1_l2:'faces two simultaneous battles: building the business, and surviving an environment that works against it.',
+    h1_l3a:'Here you\'ll find ', h1_l3b:'tools', h1_l3c:' to tackle both.',
+    hero_sub:'There is a type of entrepreneur who does not appear in Harvard case studies. This site exists for that entrepreneur.',
+    cta_primary:'Diagnose your business — Growth OS · $47 →',
+    cta_sec:'Urgent decision? Write to me →',
+    badge_mark:'Keynote · 2024',
+    badge_t:'Forum da Liberdade · Porto Alegre',
+    badge_s:'The largest economic-freedom event in South America · 3,000 attendees',
+    plate_credit:'Quito',
+
+    proof1:'direct clients', proof2:'students', proof3:'years in the field',
+    proof4:'ROI in emerging markets',
+
+    conn_context:'The problem is never lack of effort. It is operating with stale information, without a framework to read what the environment will do in the next six months. <b>That is exactly what each of these resources solves.</b>',
+    opt1_h:'Diagnose your business',
+    opt1_micro:'in 20 min you know if you\'re in the risk zone',
+    opt2_h:'Understand your environment',
+    opt2_micro:'a report that translates macro into your specific decision',
+    opt3_h:'Explore corporate workshops',
+    opt3_micro:'two workshops that change how teams see money and enterprise',
+
+    bh_sub:'Start with what you need most', bh_hint:'5 sections',
+    p1_num:'01 — Immediate action', p1_title:'Dashboards',
+    p1_desc:'If your business is at a critical juncture, start here.', p1_tag:'Growth OS',
+    gos_ladder:'Start where you are: <b>GROW</b> ($47, months 0–6) · <b>CROSS</b> (free, months 6–24, while building traction) · <b>SCALE</b> (PRO, when you get there).',
+    p2_num:'02 — Understanding context', p2_title:'Reports',
+    p2_desc:'Macroeconomic analysis, regulatory risk and business benchmarks. Private-access reports for real decisions.', p2_tag:'6 reports',
+    p3_num:'03 — Corporate workshops', p3_title:'Corporate workshops',
+    p3_desc:'Two virtual workshops for Spanish-speaking and bilingual teams: personal/family finance and private-enterprise appreciation. Separate modules, separate ROI. In-house programs available by quote.', p3_tag:'Virtual / In-house',
+    p4_num:'04 — Regular reading', p4_title:'Blog',
+    p4_desc:'Economic history, ideas and context — how certain ideas — bad ones — really do change everything.', p4_tag:'Eleutheros',
+    p5_num:'05 — Public and academic', p5_title:'Publications',
+    p5_desc:'Books, papers and columns. The formal foundation behind every tool.', p5_tag:'Academic',
+
+    stakes_eye:'The cost of no analysis',
+    stakes_t:'In Ecuador, <b>more than 60% of businesses that do not survive three years</b> cite the regulatory environment and macroeconomic instability among their main causes. It\'s not an effort problem. It\'s an information problem — and a problem of having the framework to read it before consequences arrive.',
+
+    cp1:'There is a type of entrepreneur who does not appear in Harvard case studies.',
+    cp_or:'They operate in a region and cultural space where the State changes the rules mid-game. Where taxes are high and bureaucratic hurdles even higher. Where regulations strangle instead of support. Where irresponsible government debt and spending create the short-termism that destroys any medium-term plan. And yet, they build. And yet, they grow.',
+    cp2:'That entrepreneur needs different tools. Not the ones MBAs teach for orderly markets. The ones that work when the environment does not cooperate.',
+    cp3b:'20 years involved in different projects as a consultant and as an external and internal participant gave me one certainty: the problem is never lack of effort. Operating with information two quarters old, without a framework to read what the environment will do in the next six months.',
+    cp4:'This is what this site solves. Dashboards that diagnose the real health of the business. Reports that translate the macroeconomic environment into concrete decisions. Two virtual corporate workshops for Spanish-speaking and bilingual teams: one on money and personal/family finance, another on appreciation of private enterprise. Also available as physical in-house workshops for special group programs by quote. Independent but deeply complementary. Respective results: less financial stress and better productivity; and greater internal loyalty, with people who care for spaces, tools, and brand as if they were their own.',
+    cp5:'Everything in Spanish, everything in English, for founders, executives and bilingual teams in the United States, Canada, Spain and other higher-income markets where one bad decision is expensive. The most up-to-date tool is called Growth OS. Start there.',
+
+    tes_eye:'What real clients say',
+    tes_title:'Results across different contexts',
+    t1_q:'Very didactic, precise and organized information.',
+    t1_name:'Juan Pablo Z.',
+    t1_role:'Multimedia designer · Quito',
+    t2_q:'Easy, no complications. Real. And 100% what we needed to land everything and make sure it was not just a dream.',
+    t2_name:'Leonela Loor',
+    t2_role:'Ecommerce entrepreneur · Orlando, FL',
+
+    tl_lbl:'Track record', tl_title_a:'Two persistent themes: ', tl_title_b:'economic growth and rational optimism',
+    tl1_t:'Growth OS — four dashboards, one complete system',
+    tl1_b:'From the first MRR to exit. Tools that prevent early business failure. The practical synthesis of two decades of applied economics.',
+    tl2_t:'Independent consulting',
+    tl2_b:'33+ direct clients. 10–40% ROIs in emerging markets. Keynote at Forum da Liberdade, Porto Alegre — the largest economic freedom event in South America, 3,000 attendees. If you defend an idea, you must be able to apply it.',
+    tl3_t:'14 years training university students with a much better understanding of markets and enterprise',
+    tl3_b:'Founded Ecuador\'s first Austrian and Institutional Economics sub-department. Designed an original synthesis — Economics with institutions and enterprise — for Principios de Economía (ECN100, USFQ). Advised and collaborated in the creation of the USFQ Institute of Economics and its academic journal Polemika.',
+    tl4_t:'Author in the tradition of Economics with institutions and enterprise',
+    tl4_b:'Author of "10 Lessons of Economics". Translation and dissemination of continental European economics (especially the Austrian school) in Spanish. Columnist in Ecuadorian press.',
+    tl5_t:'The formation: solid theory in service of real causes',
+    tl5_b:'M.E.E. at UFM Guatemala / Boston University. Doctoral work in Mengerian institutional evolution (3 working papers). Austrian capital theory as a tool for rational optimism — not academic ornament.',
+
+    term_lbl:'Direct consultation', term_title_a:'Got a ', term_title_b:'question', term_title_c:'?',
+    ruta_a_num:'Path A · 15 min · no cost',
+    ruta_a_h:'Book a metrics review',
+    ruta_a_for:'— for those who already know what they want to review',
+    ruta_a_desc:'Bring the numbers you have at hand. In 15 minutes I tell you what is measuring the right thing and what is hiding the important thing.',
+    ruta_a_btn:'Book 15 min →',
+    ruta_b_num:'Path B · WhatsApp',
+    ruta_b_h:'Not sure where to start?',
+    ruta_b_for:'— for those in exploration mode',
+    ruta_b_desc:'Write to me on WhatsApp — I help you identify what you need before committing to anything.',
+    ruta_b_btn:'Open WhatsApp →',
+    c_scarcity:'Limited availability — ask about workshop spots for this month.',
+    term_ph:'Describe your situation briefly…',
+    q1:'MRR declining',        q1_full:'My MRR dropped 3 months in a row. Where do I start?',
+    q2:'High CAC',             q2_full:'How do I know if my CAC is too high for my model?',
+    q3:'IDF',                  q3_full:'What is the IDF and how do I reduce it in my business?',
+    q4:'Hostile environment',  q4_full:'Regulations are suffocating my business. What do I do?',
+    q5:'Expand or hold',       q5_full:'When should I expand and when should I hold?',
+    q6:"Don't know where to start", q6_full:"I'm not sure where to start with my business. What do you recommend?",
+    q7:'Talk to JFC',          q7_full:'Hi JFC, I came from jfcarpio.com and would like to speak with you directly.',
+    wa_default:'Hi, I came from jfcarpio.com and have a question.',
+
+    nl_eye:'Monthly newsletter · free',
+    nl_title:'Letter from the Environment',
+    nl_sub:'When the macroeconomic context changes, you have two options: find out from the consequences, or find out beforehand. <i>Each issue: one data point, one reframe, one tool to decide better.</i>',
+    nl_freq:'Irregular frequency — whenever something is worthwhile. Unsubscribe anytime.',
+    nl_ph:'you@email.com',
+    nl_btn:'Subscribe · free →',
+
+    foot_h_res:'Resources',
+    foot_h_can:'Channels',
+    foot_copy:'© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador',
+    foot_col_v:'DASHBOARDS · PACE MONO'
+  }
+};
+
+function setLang(l){
+  if(!T[l]) return;
+  lang=l;
+  var els=document.querySelectorAll('[data-t]');
+  for(var i=0;i<els.length;i++){
+    var k=els[i].getAttribute('data-t');
+    if(T[l][k]!==undefined && els[i].children.length===0){
+      els[i].innerHTML=T[l][k];
+    }
+  }
+  var phs=document.querySelectorAll('[data-t-placeholder]');
+  for(var j=0;j<phs.length;j++){
+    var pk=phs[j].getAttribute('data-t-placeholder');
+    if(T[l][pk]) phs[j].setAttribute('placeholder',T[l][pk]);
+  }
+  var be=document.getElementById('btn-es'), bn=document.getElementById('btn-en');
+  if(be){be.className='lang-btn'+(l==='es'?' lang-active':'');be.setAttribute('aria-pressed',String(l==='es'));}
+  if(bn){bn.className='lang-btn'+(l==='en'?' lang-active':'');bn.setAttribute('aria-pressed',String(l==='en'));}
+  document.documentElement.setAttribute('lang',l);
+  try{localStorage.setItem('jfc_lang',l);}catch(e){}
+}
+(function(){try{var s=localStorage.getItem('jfc_lang');if(s&&T[s])setLang(s);}catch(e){}})();
+
+/* MENU */
+function toggleMenu(){
+  var ov=document.getElementById('ov'),ham=document.getElementById('ham');
+  var open=ov.classList.toggle('open');ham.classList.toggle('open',open);
+  ov.setAttribute('aria-hidden',!open);
+  document.body.style.overflow=open?'hidden':'';
+}
+function closeMenu(){
+  var ov=document.getElementById('ov'),ham=document.getElementById('ham');
+  ov.classList.remove('open');ham.classList.remove('open');
+  ov.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+
+/* REVEAL */
+(function(){
+  var els=document.querySelectorAll('.reveal, .rev-line');
+  if(!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e,i){
+      if(e.isIntersecting){
+        var el=e.target;
+        setTimeout(function(){el.classList.add('in');},i*50);
+        io.unobserve(el);
+      }
+    });
+  },{threshold:.14,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+})();
+(function(){
+  var lines=document.querySelectorAll('.hero-h1 .rev-line');
+  lines.forEach(function(l,i){
+    l.style.transitionDelay=(120+i*140)+'ms';
+    setTimeout(function(){l.classList.add('in');},60+i*140);
+  });
+})();
+
+/* WHATSAPP + helpers */
+var WA_NUMBER='593998765432';
+function waURL(msg){return 'https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(msg);}
+function useChip(k){
+  var q=T[lang][k]||'';
+  var ta=document.getElementById('ai-query');
+  if(ta){ta.value=q;ta.focus();}
+}
+function sendWA(){
+  var q=(document.getElementById('ai-query').value||'').trim();
+  if(!q){ q=T[lang].wa_default||'Hola.'; }
+  window.open(waURL(q),'_blank','noopener');
+}
+function bookReview(){
+  var msg=lang==='en'
+    ? 'Hi JFC, I\'d like to book a 15-min metrics review. My business: [name, sector, stage].'
+    : 'Hola JFC, quiero agendar la revisión de 15 min de indicadores. Mi negocio: [nombre, sector, etapa].';
+  window.open(waURL(msg),'_blank','noopener');
+}
+function subscribe(e){
+  e.preventDefault();
+  var i=e.target.querySelector('input');
+  var msg=lang==='en'
+    ? 'Hi JFC, I\'d like to subscribe to Carta del Entorno: '+i.value
+    : 'Hola JFC, quiero suscribirme a la Carta del Entorno: '+i.value;
+  window.open(waURL(msg),'_blank','noopener');
+  i.value='';
+}
+</script>
+</body>
+</html>
