@@ -134,7 +134,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.165 (Award editorial polish) · Last major refactor: 2026-05-19 · Author: JFC + Codex
+  v1.164 (Audit 2026 landing alignment) · Last major refactor: 2026-05-19 · Author: JFC + Codex
   WHITE E enhancements: added mix-blend-mode:screen to background images for
   beautiful, visible photography against white background (no more dingy appearance).
 ================================================================================
@@ -222,29 +222,6 @@ body::before {
 }
 a  { text-decoration:none; color:inherit; }
 button { border:none; background:none; font:inherit; }
-.skip-link {
-  position:fixed;
-  top:8px;
-  left:8px;
-  z-index:10000;
-  padding:10px 12px;
-  background:#060E1D;
-  color:#FFFFFF;
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem;
-  font-weight:700;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  border:2px solid #E8A020;
-  -webkit-transform:translateY(-140%);
-  transform:translateY(-140%);
-  -webkit-transition:-webkit-transform .14s ease;
-  transition:transform .14s ease;
-}
-.skip-link:focus {
-  -webkit-transform:translateY(0);
-  transform:translateY(0);
-}
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    ANIMATIONS
@@ -411,7 +388,7 @@ button { border:none; background:none; font:inherit; }
    HERO — v1.1 line reveal
 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hero {
-  padding:74px 7% 52px;
+  padding:80px 7% 56px;
   position:relative; overflow:hidden;
   border-bottom:1px solid rgba(232,160,32,.35);
   background:
@@ -519,16 +496,6 @@ button { border:none; background:none; font:inherit; }
   text-transform:uppercase;
 }
 @media(max-width:600px){.hero-ctas{-webkit-flex-direction:column;flex-direction:column;}.hero-cta,.hero-cta-sec{-webkit-justify-content:center;justify-content:center;text-align:center;}}
-@media(max-width:600px){
-  .hero{padding:64px 7% 38px;background-position:center top;}
-  .hero-kick{letter-spacing:.16em;margin-bottom:10px;line-height:1.65;}
-  .hero-h1{font-size:clamp(1.45rem,7.25vw,1.98rem);line-height:1.15;letter-spacing:0;}
-  .hero-sub{font-size:.95rem;line-height:1.55;margin-top:16px;padding-left:13px;}
-  .hero-ctas{gap:10px;margin-top:20px;}
-  .hero-cta,.hero-cta-sec{padding:10px 14px;line-height:1.35;}
-  .hero-badge{display:grid;grid-template-columns:1fr;gap:6px;width:100%;margin-top:16px;}
-  .hero-badge-copy{letter-spacing:.06em;}
-}
 @media(prefers-reduced-motion:reduce){.hero-cta,.hero-cta-sec{-webkit-transition:none;transition:none;}}
 /* v1.140 — 3 options strip */
 .options-strip{padding:52px 7% 48px;background:#060E1D;border-bottom:1px solid rgba(255,255,255,.08);}
@@ -601,17 +568,9 @@ button { border:none; background:none; font:inherit; }
   display:-webkit-box; display:-webkit-flex; display:flex;
   -webkit-box-align:baseline; -webkit-align-items:baseline; align-items:baseline;
   -webkit-box-pack:justify; -webkit-justify-content:space-between; justify-content:space-between;
-  padding:52px 0 22px;
+  padding-bottom:14px;
   border-bottom:1px solid rgba(0,0,0,.07);
   -webkit-flex-wrap:wrap; flex-wrap:wrap; gap:8px;
-}
-.bento-deck{
-  font-family:'Lora',Georgia,serif;
-  font-size:clamp(1.2rem,2.2vw,1.9rem);
-  line-height:1.35;
-  color:#000000;
-  max-width:760px;
-  margin-top:12px;
 }
 .bh-sub {
   font-family:'Space Mono','Courier New',monospace;
@@ -633,21 +592,19 @@ button { border:none; background:none; font:inherit; }
 .bento {
   display:-webkit-box; display:-webkit-flex; display:flex;
   -webkit-flex-wrap:wrap; flex-wrap:wrap;
-  border:1px solid rgba(0,0,0,.12); border-top:none;
+  border:1px solid rgba(0,0,0,.07); border-top:none;
   overflow:hidden;
-  background:#FFFFFF;
-  box-shadow:0 24px 80px rgba(0,0,0,.08);
 }
 
 .pan {
   position:relative; overflow:hidden;
-  padding:30px 26px 24px;
+  padding:26px 24px 22px;
   text-decoration:none; color:#000000;
   scroll-margin-top:62px;
   display:-webkit-box; display:-webkit-flex; display:flex;
   -webkit-box-orient:vertical; -webkit-flex-direction:column; flex-direction:column;
   -webkit-box-pack:justify; -webkit-justify-content:space-between; justify-content:space-between;
-  min-height:230px;
+  min-height:180px;
   border-right:1px solid rgba(0,0,0,.07);
   border-bottom:1px solid rgba(0,0,0,.07);
   -webkit-transition:background .22s ease; transition:background .22s ease;
@@ -679,11 +636,11 @@ button { border:none; background:none; font:inherit; }
 /* Sizes */
 @media(min-width:540px){ .pan { width:50%; } }
 @media(min-width:860px){
-  .pan-a { width:42%; min-height:420px; }
-  .pan-b { width:34%; min-height:420px; }
-  .pan-c { width:24%; min-height:420px; }
-  .pan-d { width:55%; min-height:320px; }
-  .pan-e { width:45%; min-height:320px; }
+  .pan-a { width:35%; min-height:162px; }
+  .pan-b { width:35%; min-height:162px; }
+  .pan-c { width:30%; min-height:162px; }
+  .pan-d { width:55%; min-height:155px; }
+  .pan-e { width:45%; min-height:155px; }
   .hero { padding-top:80px; padding-bottom:52px; }
   .hero-h1 { font-size:clamp(18px,1.9vw,25px); }
 }
@@ -692,8 +649,8 @@ button { border:none; background:none; font:inherit; }
 .pan-gl {
   position:absolute; right:-4px; bottom:-14px;
   font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
-  font-size:clamp(110px,12vw,190px); font-weight:900; line-height:1;
-  color:rgba(15,23,38,.08);
+  font-size:100px; font-weight:900; line-height:1;
+  color:#0F1726;
   letter-spacing:-.05em; pointer-events:none;
   -webkit-user-select:none; user-select:none;
 }
@@ -714,10 +671,9 @@ button { border:none; background:none; font:inherit; }
   font-size:24px; font-weight:900; line-height:1;
 }
 .pan-title {
-  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
-  font-size:clamp(32px,4vw,58px); font-weight:900;
-  letter-spacing:.01em; line-height:.94;
-  text-transform:uppercase;
+  font-family:'Lora',Georgia,serif;
+  font-size:clamp(20px,2.5vw,28px); font-weight:700;
+  letter-spacing:.01em; line-height:1.2;
   color:#000000; margin-bottom:7px;
   -webkit-transition:color .18s; transition:color .18s;
 }
@@ -744,9 +700,9 @@ button { border:none; background:none; font:inherit; }
   -webkit-box-align:center; -webkit-align-items:center; align-items:center;
   -webkit-box-pack:justify; -webkit-justify-content:space-between; justify-content:space-between;
 }
-.pan-cover{display:block;width:calc(100% + 52px);margin:-30px -26px 18px -26px;height:clamp(150px,19vw,230px);object-fit:cover;opacity:.9;-webkit-transition:opacity .3s,filter .3s;transition:opacity .3s,filter .3s;filter:saturate(.95) contrast(1.03);}
+.pan-cover{display:block;width:calc(100% + 48px);margin:-24px -24px 14px -24px;height:130px;object-fit:cover;opacity:.7;-webkit-transition:opacity .3s;transition:opacity .3s;}
 .pan.has-cover{padding-top:0;overflow:hidden;}
-.pan:hover .pan-cover{opacity:1;filter:saturate(1.05) contrast(1.06);}
+.pan:hover .pan-cover{opacity:1;}
 .pan-tag {
   font-family:'Space Mono','Courier New',monospace;
   font-size:.82rem; font-weight:700; letter-spacing:.16em;
@@ -895,62 +851,34 @@ button { border:none; background:none; font:inherit; }
 
 .stakes-section{
   margin:0 auto;
-  padding:70px 7%;
-  max-width:none;
-  border-top:1px solid rgba(255,255,255,.16);
-  border-bottom:1px solid rgba(255,255,255,.16);
-  background:
-    linear-gradient(135deg,rgba(232,96,64,.18),transparent 42%),
-    #060E1D;
-  position:relative;
-  overflow:hidden;
-}
-.stakes-section::after{
-  content:'';
-  position:absolute;
-  inset:18px;
-  border:1px solid rgba(255,255,255,.18);
-  pointer-events:none;
+  padding:54px 7%;
+  max-width:1200px;
+  border-top:1px solid rgba(0,0,0,.08);
+  border-bottom:1px solid rgba(0,0,0,.08);
+  background:#FFFFFF;
 }
 .stakes-inner{
   display:grid;
-  grid-template-columns:minmax(170px,280px) minmax(0,900px);
-  gap:34px;
+  grid-template-columns:minmax(150px,240px) 1fr;
+  gap:28px;
   -webkit-align-items:start;align-items:start;
-  max-width:1200px;
-  margin:0 auto;
-  position:relative;
-  z-index:1;
-}
-.stakes-marker{
-  display:-webkit-box;display:-webkit-flex;display:flex;
-  -webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;
-  gap:12px;
 }
 .stakes-kicker{
   font-family:'Space Mono','Courier New',monospace;
   font-size:.82rem;
   font-weight:700;
-  color:#E8A020;
+  color:#E86040;
   letter-spacing:.18em;
   text-transform:uppercase;
 }
-.stakes-signal{
-  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
-  font-size:clamp(4rem,10vw,8rem);
-  line-height:.82;
-  color:#FFFFFF;
-  font-weight:900;
-  letter-spacing:0;
-}
 .stakes-copy{
   font-family:'Lora',Georgia,serif;
-  font-size:clamp(1.2rem,2.4vw,1.8rem);
+  font-size:clamp(1.1rem,2.2vw,1.55rem);
   line-height:1.55;
-  color:#FFFFFF;
+  color:#000000;
   max-width:880px;
 }
-.stakes-copy b{color:#E8A020;}
+.stakes-copy b{color:#E86040;}
 .stakes-sources{
   margin-top:18px;
   display:-webkit-flex;display:flex;
@@ -960,14 +888,14 @@ button { border:none; background:none; font:inherit; }
 .stakes-sources a{
   font-family:'Space Mono','Courier New',monospace;
   font-size:.82rem;
-  color:#F2F2F2;
-  border:1px solid rgba(255,255,255,.28);
+  color:#000000;
+  border:1px solid rgba(0,0,0,.18);
   padding:7px 10px;
   text-transform:uppercase;
   letter-spacing:.08em;
 }
-.stakes-sources a:hover{border-color:#E8A020;color:#FFFFFF;}
-@media(max-width:720px){.stakes-section{padding:58px 7%;}.stakes-inner{grid-template-columns:1fr;gap:18px;}.stakes-section::after{inset:12px;}}
+.stakes-sources a:hover{border-color:#E86040;color:#E86040;}
+@media(max-width:720px){.stakes-inner{grid-template-columns:1fr;gap:14px;}}
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    v1.6 — ABOUT / TIMELINE
@@ -1593,10 +1521,10 @@ button { border:none; background:none; font:inherit; }
     -webkit-flex-direction:column; flex-direction:column;
     -webkit-justify-content:center; justify-content:center;
     -webkit-flex-shrink:0; flex-shrink:0;
-    width:300px; padding-left:56px; gap:0;
+    width:230px; padding-left:72px; gap:0;
   }
   .hs-item {
-    padding:24px 0;
+    padding:22px 0;
     border-bottom:1px solid rgba(0,0,0,.06);
   }
   .hs-item:first-child { padding-top:0; }
@@ -1613,14 +1541,6 @@ button { border:none; background:none; font:inherit; }
     font-family:'Space Mono','Courier New',monospace;
     font-size:.82rem; color:#000000;
     letter-spacing:.16em; text-transform:uppercase; margin-top:5px;
-  }
-  .hs-note {
-    display:block;
-    font-family:'Lora',Georgia,serif;
-    font-size:.95rem;
-    color:#000000;
-    line-height:1.45;
-    margin-top:8px;
   }
   /* Hide standalone proof strip — stats now live inside the hero */
   .proof-strip { display:none; }
@@ -1785,25 +1705,6 @@ button { border:none; background:none; font:inherit; }
   animation:borderPulse 3s ease-in-out infinite;
 }
 
-/* v1.165 editorial polish */
-@media(min-width:860px){
-  .bento-wrap{
-    padding-top:0 !important;
-    padding-bottom:84px !important;
-  }
-  .bento-hd{
-    align-items:flex-end !important;
-  }
-}
-@media(max-width:859px){
-  .bento-wrap{padding-bottom:42px;}
-  .bento-hd{padding-top:40px;}
-  .bento-deck{font-size:1.1rem;}
-  .pan{min-height:0;}
-  .pan-title{font-size:clamp(30px,10vw,42px);}
-  .pan-cover{height:160px;}
-}
-
 /* SECTION NUMBERS: large ghost decorators */
 .about-section { position:relative; }
 .about-section::before {
@@ -1948,98 +1849,6 @@ button { border:none; background:none; font:inherit; }
 }
 .bento.spl::after{opacity:1;}
 @media(max-width:859px){.bento::after{display:none;}}
-
-/* v1.165 contrast polish: brand accents stay vivid as accents, text stays readable */
-.hero-kick,
-.connector-lbl,
-.bh-sub,
-.tes-eyebrow,
-.section-hd-kicker,
-.hero-badge-mark {
-  color:#B73318 !important;
-}
-.hero-h1 [style*="#E86040"],
-.section-hd-title [style*="#E86040"],
-.jfc-band-text [style*="#E86040"] {
-  color:#B73318 !important;
-}
-.hero-h1 [style*="#E8A020"],
-.jfc-band-text em {
-  color:#755000 !important;
-}
-.hero-cta,
-.nl-submit,
-.route-btn {
-  background:#B73318 !important;
-  border-color:#B73318 !important;
-  color:#FFFFFF !important;
-}
-.hero-cta:hover,
-.nl-submit:hover,
-.route-btn:hover {
-  background:#92240F !important;
-  border-color:#92240F !important;
-}
-.hero-cta-sec:hover {
-  color:#B73318 !important;
-  border-color:#B73318 !important;
-}
-.pan-a { --pc:#08764E !important; }
-.pan-b { --pc:#255FB8 !important; }
-.pan-c { --pc:#007A8A !important; }
-.pan-d { --pc:#755000 !important; }
-.pan-e { --pc:#B73318 !important; }
-.pan-a .pan-item-tag,
-.pan-a .pan-cnt,
-.pan-a .pan-tag,
-.pan-a .pan-ladder b { color:#08764E !important; }
-.pan-b .pan-item-tag,
-.pan-b .pan-cnt,
-.pan-b .pan-tag { color:#255FB8 !important; }
-.pan-c .pan-item-tag,
-.pan-c .pan-cnt,
-.pan-c .pan-tag { color:#007A8A !important; }
-.pan-d .pan-item-tag,
-.pan-d .pan-cnt,
-.pan-d .pan-tag { color:#755000 !important; }
-.pan-e .pan-item-tag,
-.pan-e .pan-cnt,
-.pan-e .pan-tag { color:#B73318 !important; }
-.pan-tag { border-color:currentColor !important; }
-.foot {
-  display:-webkit-box !important;
-  display:-webkit-flex !important;
-  display:flex !important;
-  -webkit-box-align:center !important;
-  -webkit-align-items:center !important;
-  align-items:center !important;
-  -webkit-box-pack:justify !important;
-  -webkit-justify-content:space-between !important;
-  justify-content:space-between !important;
-  -webkit-flex-wrap:wrap !important;
-  flex-wrap:wrap !important;
-  gap:14px 24px !important;
-}
-.foot-links {
-  -webkit-flex-wrap:wrap !important;
-  flex-wrap:wrap !important;
-  gap:8px 0 !important;
-}
-@media(max-width:680px){
-  .foot {
-    -webkit-box-align:start !important;
-    -webkit-align-items:flex-start !important;
-    align-items:flex-start !important;
-  }
-  .foot-links {
-    width:100% !important;
-    gap:10px 14px !important;
-  }
-  .foot-links a {
-    border-left:none !important;
-    padding:2px 0 !important;
-  }
-}
 </style>
 </head>
 <body style="">
@@ -2120,22 +1929,18 @@ button { border:none; background:none; font:inherit; }
       <div class="hs-item">
         <span class="hs-num">33<span class="hs-sup">+</span></span>
         <span class="hs-lbl" data-t="proof1">clientes directos</span>
-        <span class="hs-note" data-t="proof1_note">Trabajo aplicado con empresas reales, no teoría de vitrina.</span>
       </div>
       <div class="hs-item">
         <span class="hs-num">4.800</span>
         <span class="hs-lbl" data-t="proof2">estudiantes</span>
-        <span class="hs-note" data-t="proof2_note">Años traduciendo economía difícil a decisiones entendibles.</span>
       </div>
       <div class="hs-item">
         <span class="hs-num">20<span class="hs-sup">+</span></span>
         <span class="hs-lbl" data-t="proof3">años en el campo</span>
-        <span class="hs-note" data-t="proof3_note">Investigación, consultoría, formación y empresa privada.</span>
       </div>
       <div class="hs-item">
         <span class="hs-num">10–40%</span>
         <span class="hs-lbl" data-t="proof4">ROI en mercados emergentes</span>
-        <span class="hs-note" data-t="proof4_note">El punto es que el análisis sobreviva contacto con caja.</span>
       </div>
     </aside>
   </div>
@@ -2180,10 +1985,7 @@ button { border:none; background:none; font:inherit; }
 <!-- BENTO -->
 <div class="bento-wrap">
   <div class="bento-hd">
-    <div>
-      <span class="bh-sub" data-t="bh_sub">Empieza por lo que más necesitas</span>
-      <p class="bento-deck" data-t="bento_deck">Cinco puertas de entrada, una misma promesa: que el entorno deje de sorprenderte tarde.</p>
-    </div>
+    <span class="bh-sub" data-t="bh_sub">Empieza por lo que más necesitas</span>
     <span class="bh-hint" data-t="bh_hint">5 secciones</span>
   </div>
   <div class="bento" style="--bx: 1042.3666687011719px; --by: 11px;">
@@ -2379,10 +2181,7 @@ herramienta más actualizada se llama Growth OS. Empieza ahí.</p>
 <!-- FAILURE STAKES — audit 2026, sourced -->
 <section class="stakes-section" aria-labelledby="stakes-title">
   <div class="stakes-inner">
-    <div class="stakes-marker">
-      <p class="stakes-kicker" id="stakes-title" data-t="stakes_kicker">El costo de mirar tarde</p>
-      <span class="stakes-signal" data-t="stakes_signal">67/100</span>
-    </div>
+    <p class="stakes-kicker" id="stakes-title" data-t="stakes_kicker">El costo de mirar tarde</p>
     <div>
       <p class="stakes-copy"><span data-t="stakes_t">En Ecuador, el INEC mostró que de cada 100 emprendimientos nacidos en 2015 solo 67 seguían activos al año siguiente. GEM Ecuador 2024 añade el contexto: apagones, inseguridad, regulación inestable y crédito limitado amenazan a los nuevos negocios. El costo no es abstracto: decidir tarde te deja leyendo el entorno cuando ya pegó en caja.</span></p>
       <div class="stakes-sources" aria-label="Fuentes">
@@ -3121,10 +2920,6 @@ var T={
     cp4:'Eso es lo que resuelve este sitio. Dashboards que diagnostican la salud real del negocio. Reportes que traducen el entorno macroeconómico a decisiones concretas. Dos talleres corporativos virtuales para equipos hispanohablantes y bilingües: uno sobre dinero y finanzas personales y familiares, otro sobre apreciación de la empresa privada. También disponibles en formato físico in-house para grupos dentro de programas especiales, bajo cotización. Son independientes, pero profundamente complementarios. Resultados respectivos: menos estrés financiero y mejor productividad; y más lealtad interna hacia la empresa, con gente que cuida los espacios, las herramientas y la marca como si fueran suyos.',
     cp5:'Todo en español, todo en inglés, para empresarios, directivos y equipos hispanohablantes o bilingües en Estados Unidos, Canadá, España y otros mercados donde una mala decisión cuesta caro. La herramienta más actualizada se llama Growth OS. Empieza ahí.',
     proof1:'clientes directos', proof2:'estudiantes', proof3:'años en el campo', proof4:'ROI en mercados emergentes',
-    proof1_note:'Trabajo aplicado con empresas reales, no teoría de vitrina.',
-    proof2_note:'Años traduciendo economía difícil a decisiones entendibles.',
-    proof3_note:'Investigación, consultoría, formación y empresa privada.',
-    proof4_note:'El punto es que el análisis sobreviva contacto con caja.',
     opt_eyebrow:'Tres opciones sugeridas',
     opt_title:'¿Por dónde empezar?',
     opt_context_1:'El problema no es falta de esfuerzo. Es operar con información vieja, métricas dispersas y un entorno que cambia antes de que el plan llegue a madurar.',
@@ -3136,9 +2931,7 @@ var T={
     opt3_h:'Explora talleres corporativos',
     opt3_micro:'dos talleres que cambian cómo ven el dinero y la empresa',
     gos_ladder:'Empieza donde estás: GROW ($47, meses 0–6) · CROSS (gratis, meses 6–24, mientras construyes tracción) · SCALE (PRO, cuando llegues ahí).',
-    bento_deck:'Cinco puertas de entrada, una misma promesa: que el entorno deje de sorprenderte tarde.',
     stakes_kicker:'El costo de mirar tarde',
-    stakes_signal:'67/100',
     stakes_t:'En Ecuador, el INEC mostró que de cada 100 emprendimientos nacidos en 2015 solo 67 seguían activos al año siguiente. GEM Ecuador 2024 añade el contexto: apagones, inseguridad, regulación inestable y crédito limitado amenazan a los nuevos negocios. El costo no es abstracto: decidir tarde te deja leyendo el entorno cuando ya pegó en caja.',
     stakes_src_1:'Fuente: INEC',
     stakes_src_2:'Fuente: GEM Ecuador',
@@ -3244,10 +3037,6 @@ var T={
     cp4:'This is what this site solves. Dashboards that diagnose the real health of the business. Reports that translate the macroeconomic environment into concrete decisions. Two virtual corporate workshops for Spanish-speaking and bilingual teams: one on money and personal/family finance, another on appreciation of private enterprise. Also available as physical in-house workshops for special group programs by quote. Independent but deeply complementary. Respective results: less financial stress and better productivity; and greater internal loyalty, with people who care for spaces, tools, and brand as if they were their own.',
     cp5:'Everything in Spanish, everything in English, for founders, executives and bilingual teams in the United States, Canada, Spain and other higher-income markets where one bad decision is expensive. The most up-to-date tool is called Growth OS. Start there.',
     proof1:'direct clients', proof2:'students', proof3:'years in the field', proof4:'ROI in emerging markets',
-    proof1_note:'Applied work with real companies, not display-case theory.',
-    proof2_note:'Years translating difficult economics into understandable decisions.',
-    proof3_note:'Research, consulting, training and private enterprise.',
-    proof4_note:'The point is for analysis to survive contact with cash flow.',
     opt_eyebrow:'Three suggested paths',
     opt_title:'Where to start?',
     opt_context_1:'The problem is not lack of effort. It is operating with old information, scattered metrics and an environment that changes before the plan has time to mature.',
@@ -3259,9 +3048,7 @@ var T={
     opt3_h:'Explore corporate workshops',
     opt3_micro:'two workshops that change how teams see money and enterprise',
     gos_ladder:'Start where you are: GROW ($47, months 0–6) · CROSS (free, months 6–24, while building traction) · SCALE (PRO, when you get there).',
-    bento_deck:'Five entry points, one promise: the environment should stop surprising you late.',
     stakes_kicker:'The cost of reading late',
-    stakes_signal:'67/100',
     stakes_t:'In Ecuador, INEC showed that out of every 100 ventures born in 2015, only 67 were still active the following year. GEM Ecuador 2024 adds the context: power outages, insecurity, unstable regulation and limited credit threaten new ventures. The cost is not abstract: late decisions leave you reading the environment after it has already hit cash flow.',
     stakes_src_1:'Source: INEC',
     stakes_src_2:'Source: GEM Ecuador',
