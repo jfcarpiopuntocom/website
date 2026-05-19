@@ -1,5 +1,5 @@
 # AGENTS.md — jfcarpio.com
-v1.167 · 2026-05-19 · Author: JFC + Codex
+v1.166 · 2026-05-19 · Author: JFC + Codex
 
 ---
 
@@ -72,8 +72,6 @@ Branch for feature work: `Codex/high-contrast-white-design-VK5kk`. Base: `main`.
 - JFC explicitly rejected these as bad directions for the main landing: reducing the hero's atmospheric identity, simplifying the H1 accent strategy just for restraint, and removing micro-ornaments broadly.
 - Approved micro-directions for the main landing: make the proof stats more sober and narrative, and make the bento less like oversized product cards and more like an editorial index.
 - When the page feels "atorrante", first improve the stats and bento hierarchy before touching hero identity, headline emphasis, or overall ornamental language.
-- Never put success-counter proof stats in the hero of the main landing. JFC hates that pattern. Put those figures near the trajectory/timeline where they read as accumulated work across decades.
-- Main timeline title approved by JFC: `Una trayectoria en defensa de la sociedad civil y la empresa privada`.
 
 ### Las7formas Curriculum Bullets (CRITICAL)
 - The timestamped video bullets in `las7formas/index.html` inside `<ul class="curr__list" id="currList">` are JFC-approved source copy.
@@ -139,7 +137,7 @@ Sources checked 2026-05-06: Google Search Central helpful content + generative-A
 
 ## Versioning
 
-Current: **v1.167**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
+Current: **v1.166**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
 
 ---
 

@@ -134,7 +134,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.167 (Move proof into trajectory) · Last major refactor: 2026-05-19 · Author: JFC + Codex
+  v1.166 (Stats and bento restraint) · Last major refactor: 2026-05-19 · Author: JFC + Codex
   WHITE E enhancements: added mix-blend-mode:screen to background images for
   beautiful, visible photography against white background (no more dingy appearance).
 ================================================================================
@@ -2183,120 +2183,6 @@ button { border:none; background:none; font:inherit; }
     font-size:clamp(1.9rem,8vw,2.6rem) !important;
   }
 }
-
-/* v1.167: no success counter in the hero; proof belongs with trajectory */
-@media(min-width:1100px){
-  .hero-guide {
-    width:310px !important;
-    padding-left:42px !important;
-    -webkit-justify-content:center !important;
-    justify-content:center !important;
-  }
-}
-.hero-guide-k {
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem;
-  font-weight:700;
-  color:#B73318;
-  letter-spacing:.16em;
-  line-height:1.5;
-  text-transform:uppercase;
-}
-.hero-guide-title {
-  font-family:'Lora',Georgia,serif;
-  font-size:clamp(1.35rem,2vw,1.8rem);
-  line-height:1.25;
-  color:#000000;
-  margin:14px 0 20px;
-}
-.guide-list {
-  display:grid;
-  gap:12px;
-}
-.guide-step {
-  display:grid;
-  grid-template-columns:30px 1fr;
-  gap:12px;
-  padding:12px 0;
-  border-top:1px solid rgba(0,0,0,.08);
-}
-.guide-num {
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem;
-  font-weight:700;
-  color:#755000;
-}
-.guide-copy {
-  display:grid;
-  gap:2px;
-}
-.guide-copy strong {
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem;
-  color:#000000;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-.guide-copy span {
-  font-family:'Lora',Georgia,serif;
-  font-size:.94rem;
-  color:#000000;
-  line-height:1.45;
-}
-.timeline-proof {
-  position:relative;
-  z-index:1;
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:0;
-  margin:-12px 0 30px;
-  border:1px solid rgba(255,255,255,.14);
-  border-left:none;
-  border-right:none;
-}
-.timeline-proof-item {
-  padding:18px 20px;
-  border-right:1px solid rgba(255,255,255,.12);
-}
-.timeline-proof-item:last-child { border-right:none; }
-.timeline-proof-num {
-  display:block;
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:clamp(1.6rem,3vw,2.35rem);
-  font-weight:700;
-  color:#FFFFFF;
-  letter-spacing:-.04em;
-  line-height:1;
-}
-.timeline-proof-label {
-  display:block;
-  font-family:'Space Mono','Courier New',monospace;
-  font-size:.82rem;
-  color:#E8A020;
-  letter-spacing:.14em;
-  line-height:1.45;
-  text-transform:uppercase;
-  margin-top:8px;
-}
-.timeline-proof-note {
-  display:block;
-  font-family:'Lora',Georgia,serif;
-  font-size:.9rem;
-  color:#F2F2F2;
-  line-height:1.45;
-  margin-top:6px;
-}
-@media(max-width:760px){
-  .timeline-proof {
-    grid-template-columns:1fr;
-    margin-top:-18px;
-  }
-  .timeline-proof-item {
-    border-right:none;
-    border-bottom:1px solid rgba(255,255,255,.12);
-  }
-  .timeline-proof-item:last-child { border-bottom:none; }
-}
 </style>
 </head>
 <body style="">
@@ -2373,22 +2259,26 @@ button { border:none; background:none; font:inherit; }
         <span class="hero-badge-copy" data-t="badge_copy">Forum da Liberdade · Porto Alegre · 3.000 asistentes</span>
       </div>
     </div>
-    <aside class="hero-aside hero-guide">
-      <p class="hero-guide-k" data-t="guide_k">No empieces por admirar una biografía.</p>
-      <h2 class="hero-guide-title" data-t="guide_t">Empieza por una decisión pendiente.</h2>
-      <div class="guide-list">
-        <div class="guide-step">
-          <span class="guide-num">01</span>
-          <p class="guide-copy"><strong data-t="guide_1_t">Si falta caja</strong><span data-t="guide_1_b">usa un dashboard.</span></p>
-        </div>
-        <div class="guide-step">
-          <span class="guide-num">02</span>
-          <p class="guide-copy"><strong data-t="guide_2_t">Si el entorno cambió</strong><span data-t="guide_2_b">lee un reporte.</span></p>
-        </div>
-        <div class="guide-step">
-          <span class="guide-num">03</span>
-          <p class="guide-copy"><strong data-t="guide_3_t">Si el equipo no entiende</strong><span data-t="guide_3_b">arma un taller.</span></p>
-        </div>
+    <aside class="hero-aside" aria-hidden="true">
+      <div class="hs-item">
+        <span class="hs-num">33<span class="hs-sup">+</span></span>
+        <span class="hs-lbl" data-t="proof1">clientes directos</span>
+        <span class="hs-note" data-t="proof1_note">Trabajo aplicado con empresas reales, no teoría de vitrina.</span>
+      </div>
+      <div class="hs-item">
+        <span class="hs-num">4.800</span>
+        <span class="hs-lbl" data-t="proof2">estudiantes</span>
+        <span class="hs-note" data-t="proof2_note">Años traduciendo economía difícil a decisiones entendibles.</span>
+      </div>
+      <div class="hs-item">
+        <span class="hs-num">20<span class="hs-sup">+</span></span>
+        <span class="hs-lbl" data-t="proof3">años en el campo</span>
+        <span class="hs-note" data-t="proof3_note">Investigación, consultoría, formación y empresa privada.</span>
+      </div>
+      <div class="hs-item">
+        <span class="hs-num">10–40%</span>
+        <span class="hs-lbl" data-t="proof4">ROI en mercados emergentes</span>
+        <span class="hs-note" data-t="proof4_note">El punto es que el análisis sobreviva contacto con caja.</span>
       </div>
     </aside>
   </div>
@@ -2756,29 +2646,7 @@ ayuda a redactarlo.</p>
   <span class="section-ghost" id="sectionGhost" aria-hidden="true">2026</span>
   <div class="section-hd">
     <span class="section-hd-lbl" data-t="tl_lbl">Trayectoria</span>
-    <span class="section-hd-title" data-t="tl_title">Una trayectoria en defensa de la sociedad civil y la empresa privada</span>
-  </div>
-  <div class="timeline-proof" aria-label="Cifras acumuladas de trayectoria">
-    <div class="timeline-proof-item">
-      <span class="timeline-proof-num">33+</span>
-      <span class="timeline-proof-label" data-t="proof1">clientes directos</span>
-      <span class="timeline-proof-note" data-t="proof1_note">Trabajo aplicado con empresas reales, no teoría de vitrina.</span>
-    </div>
-    <div class="timeline-proof-item">
-      <span class="timeline-proof-num">4.800</span>
-      <span class="timeline-proof-label" data-t="proof2">estudiantes</span>
-      <span class="timeline-proof-note" data-t="proof2_note">Años traduciendo economía difícil a decisiones entendibles.</span>
-    </div>
-    <div class="timeline-proof-item">
-      <span class="timeline-proof-num">20+</span>
-      <span class="timeline-proof-label" data-t="proof3">años en el campo</span>
-      <span class="timeline-proof-note" data-t="proof3_note">Investigación, consultoría, formación y empresa privada.</span>
-    </div>
-    <div class="timeline-proof-item">
-      <span class="timeline-proof-num">10–40%</span>
-      <span class="timeline-proof-label" data-t="proof4">ROI en mercados emergentes</span>
-      <span class="timeline-proof-note" data-t="proof4_note">El punto es que el análisis sobreviva contacto con caja.</span>
-    </div>
+    <span class="section-hd-title"><span data-t="tl_title_a">Dos temas persistentes: </span><span style="color:#E86040" data-t="tl_title_b">crecimiento económico y optimismo racional</span></span>
   </div>
   <div class="timeline" style="--tl-p: 0.000;">
     <div class="tl-row vis" style="transition-delay: 0s;">
@@ -3395,14 +3263,6 @@ var T={
     cp3b:'20 años involucrado en distintos proyectos como consultor o como participante externo e interno me dieron una certeza: el problema nunca es la falta de esfuerzo. Es operar con información de hace dos trimestres, sin un marco para leer lo que el entorno te va a hacer en los próximos seis meses.',
     cp4:'Eso es lo que resuelve este sitio. Dashboards que diagnostican la salud real del negocio. Reportes que traducen el entorno macroeconómico a decisiones concretas. Dos talleres corporativos virtuales para equipos hispanohablantes y bilingües: uno sobre dinero y finanzas personales y familiares, otro sobre apreciación de la empresa privada. También disponibles en formato físico in-house para grupos dentro de programas especiales, bajo cotización. Son independientes, pero profundamente complementarios. Resultados respectivos: menos estrés financiero y mejor productividad; y más lealtad interna hacia la empresa, con gente que cuida los espacios, las herramientas y la marca como si fueran suyos.',
     cp5:'Todo en español, todo en inglés, para empresarios, directivos y equipos hispanohablantes o bilingües en Estados Unidos, Canadá, España y otros mercados donde una mala decisión cuesta caro. La herramienta más actualizada se llama Growth OS. Empieza ahí.',
-    guide_k:'No empieces por admirar una biografía.',
-    guide_t:'Empieza por una decisión pendiente.',
-    guide_1_t:'Si falta caja',
-    guide_1_b:'usa un dashboard.',
-    guide_2_t:'Si el entorno cambió',
-    guide_2_b:'lee un reporte.',
-    guide_3_t:'Si el equipo no entiende',
-    guide_3_b:'arma un taller.',
     proof1:'clientes directos', proof2:'estudiantes', proof3:'años en el campo', proof4:'ROI en mercados emergentes',
     proof1_note:'Trabajo aplicado con empresas reales, no teoría de vitrina.',
     proof2_note:'Años traduciendo economía difícil a decisiones entendibles.',
@@ -3434,7 +3294,7 @@ var T={
     t2_name:'Leonela Loor',
     t2_role:'Empresaria ecommerce · Orlando, FL',
     byline:'Economía con instituciones y empresas',
-    tl_lbl:'Trayectoria', tl_title:'Una trayectoria en defensa de la sociedad civil y la empresa privada', tl_title_a:'Dos temas persistentes: ', tl_title_b:'crecimiento económico y optimismo racional',
+    tl_lbl:'Trayectoria', tl_title_a:'Dos temas persistentes: ', tl_title_b:'crecimiento económico y optimismo racional',
     tl1_t:'Growth OS — cuatro dashboards, un sistema completo',
     tl1_b:'Del primer MRR al exit. Herramientas que evitan la quiebra temprana de nuevos negocios. La síntesis práctica de dos décadas de economía aplicada a la empresa.',
     tl2_t:'Consultoría independiente — ',
@@ -3526,14 +3386,6 @@ var T={
     cp3b:'20 years involved in different projects as a consultant and as an external and internal participant gave me one certainty: the problem is never lack of effort. Operating with information two quarters old, without a framework to read what the environment will do in the next six months.',
     cp4:'This is what this site solves. Dashboards that diagnose the real health of the business. Reports that translate the macroeconomic environment into concrete decisions. Two virtual corporate workshops for Spanish-speaking and bilingual teams: one on money and personal/family finance, another on appreciation of private enterprise. Also available as physical in-house workshops for special group programs by quote. Independent but deeply complementary. Respective results: less financial stress and better productivity; and greater internal loyalty, with people who care for spaces, tools, and brand as if they were their own.',
     cp5:'Everything in Spanish, everything in English, for founders, executives and bilingual teams in the United States, Canada, Spain and other higher-income markets where one bad decision is expensive. The most up-to-date tool is called Growth OS. Start there.',
-    guide_k:'Do not start by admiring a biography.',
-    guide_t:'Start with a pending decision.',
-    guide_1_t:'If cash is tight',
-    guide_1_b:'use a dashboard.',
-    guide_2_t:'If the environment changed',
-    guide_2_b:'read a report.',
-    guide_3_t:'If the team does not understand',
-    guide_3_b:'build a workshop.',
     proof1:'direct clients', proof2:'students', proof3:'years in the field', proof4:'ROI in emerging markets',
     proof1_note:'Applied work with real companies, not display-case theory.',
     proof2_note:'Years translating difficult economics into understandable decisions.',
@@ -3566,7 +3418,7 @@ var T={
     t2_role:'Ecommerce entrepreneur · Orlando, FL',
     cp_or:'They operate in a region and cultural space where the State changes the rules mid-game. Where taxes are high and bureaucratic hurdles even higher. Where regulations strangle instead of support. Where irresponsible government debt and spending create the short-termism that destroys any medium-term plan. And yet, they build. And yet, they grow.',
     byline:'Economics with institutions and enterprise',
-    tl_lbl:'Track record', tl_title:'A career defending civil society and private enterprise', tl_title_a:'Two persistent themes: ', tl_title_b:'economic growth and rational optimism',
+    tl_lbl:'Track record', tl_title_a:'Two persistent themes: ', tl_title_b:'economic growth and rational optimism',
     tl1_t:'Growth OS — four dashboards, one complete system',
     tl1_b:'From the first MRR to exit. Tools that prevent early business failure. The practical synthesis of two decades of applied economics.',
     tl2_t:'Independent consulting — because ideas must survive contact with reality',
