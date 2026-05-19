@@ -134,7 +134,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.165 (Award editorial polish) · Last major refactor: 2026-05-19 · Author: JFC + Codex
+  v1.166 (Stats and bento restraint) · Last major refactor: 2026-05-19 · Author: JFC + Codex
   WHITE E enhancements: added mix-blend-mode:screen to background images for
   beautiful, visible photography against white background (no more dingy appearance).
 ================================================================================
@@ -2038,6 +2038,149 @@ button { border:none; background:none; font:inherit; }
   .foot-links a {
     border-left:none !important;
     padding:2px 0 !important;
+  }
+}
+
+/* v1.166: proof reads as margin evidence; bento reads as editorial index */
+@media(min-width:1100px){
+  .hero-in {
+    padding-right:54px !important;
+  }
+  .hero-aside {
+    width:252px !important;
+    padding-left:34px !important;
+  }
+  .hs-item {
+    padding:16px 0 !important;
+    border-bottom-color:rgba(0,0,0,.08) !important;
+  }
+  .hs-num {
+    font-family:'Space Mono','Courier New',monospace !important;
+    font-size:clamp(1.7rem,2.25vw,2.15rem) !important;
+    font-weight:700 !important;
+    letter-spacing:-.04em !important;
+  }
+  .hs-sup {
+    font-size:.95rem !important;
+  }
+  .hs-lbl {
+    margin-top:6px !important;
+    letter-spacing:.18em !important;
+  }
+  .hs-note {
+    font-size:.88rem !important;
+    line-height:1.48 !important;
+    margin-top:6px !important;
+  }
+}
+.bento {
+  box-shadow:none !important;
+  border-color:rgba(0,0,0,.16) !important;
+}
+@media(min-width:860px){
+  .bento-wrap {
+    padding-bottom:64px !important;
+  }
+  .bento-hd {
+    padding-top:38px !important;
+    padding-bottom:18px !important;
+  }
+  .bento-deck {
+    font-size:clamp(1.05rem,1.65vw,1.45rem) !important;
+    max-width:680px !important;
+  }
+  .pan {
+    padding:22px 22px 20px !important;
+    min-height:250px !important;
+    background:#FFFFFF !important;
+  }
+  .pan-a,
+  .pan-b,
+  .pan-c {
+    min-height:310px !important;
+  }
+  .pan-d,
+  .pan-e {
+    min-height:280px !important;
+  }
+  .pan-cover {
+    height:clamp(96px,11vw,138px) !important;
+    margin:-22px -22px 16px -22px !important;
+    width:calc(100% + 44px) !important;
+  }
+  .pan-title {
+    font-size:clamp(2rem,3vw,3.15rem) !important;
+    line-height:.98 !important;
+  }
+  .pan-gl {
+    font-size:clamp(86px,8vw,126px) !important;
+  }
+  .pan:hover {
+    box-shadow:0 8px 28px rgba(0,0,0,.07) !important;
+  }
+  .bento {
+    display:block !important;
+  }
+  .pan,
+  .pan-a,
+  .pan-b,
+  .pan-c,
+  .pan-d,
+  .pan-e {
+    width:100% !important;
+    min-height:0 !important;
+  }
+  .pan {
+    display:grid !important;
+    grid-template-columns:minmax(150px,220px) minmax(0,1fr) minmax(120px,auto) !important;
+    gap:18px 24px !important;
+    -webkit-box-align:start !important;
+    -webkit-align-items:start !important;
+    align-items:start !important;
+    border-right:none !important;
+  }
+  .pan-cover {
+    grid-column:1 !important;
+    grid-row:1 / span 3 !important;
+    width:100% !important;
+    height:124px !important;
+    margin:0 !important;
+  }
+  .pan > div:not(.pan-gl) {
+    min-width:0 !important;
+  }
+  .pan-items {
+    margin-top:0 !important;
+  }
+  .pan-bot {
+    -webkit-box-pack:end !important;
+    -webkit-justify-content:flex-end !important;
+    justify-content:flex-end !important;
+    align-self:start !important;
+  }
+  .pan-desc,
+  .pan-ladder {
+    max-width:760px !important;
+  }
+  .pan-gl {
+    right:18px !important;
+    bottom:-18px !important;
+  }
+}
+@media(max-width:859px){
+  .bento {
+    box-shadow:none !important;
+  }
+  .pan {
+    padding:22px 20px 20px !important;
+  }
+  .pan-cover {
+    height:128px !important;
+    margin:-22px -20px 14px -20px !important;
+    width:calc(100% + 40px) !important;
+  }
+  .pan-title {
+    font-size:clamp(1.9rem,8vw,2.6rem) !important;
   }
 }
 </style>
