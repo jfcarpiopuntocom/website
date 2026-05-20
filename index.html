@@ -134,7 +134,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.170 (Fix bento overlap and deslop copy) · Last major refactor: 2026-05-19 · Author: JFC + Codex
+  v1.171 (Editorial decision map and manifesto pacing) · Last major refactor: 2026-05-20 · Author: JFC + Codex
   WHITE E enhancements: added mix-blend-mode:screen to background images for
   beautiful, visible photography against white background (no more dingy appearance).
 ================================================================================
@@ -2337,6 +2337,232 @@ button { border:none; background:none; font:inherit; }
     z-index:1 !important;
   }
 }
+
+/* v1.171: award-level editorial decision map and manifesto pacing */
+.options-strip {
+  position:relative !important;
+  overflow:hidden !important;
+  padding:68px 7% 62px !important;
+  background:#060E1D !important;
+  border-bottom:1px solid rgba(255,255,255,.16) !important;
+}
+.options-strip::before {
+  content:'' !important;
+  position:absolute !important;
+  inset:0 !important;
+  pointer-events:none !important;
+  background:
+    linear-gradient(120deg,rgba(232,96,64,.18),transparent 34%),
+    linear-gradient(0deg,rgba(255,255,255,.04) 1px,transparent 1px) !important;
+  background-size:auto,100% 28px !important;
+}
+.options-strip::after {
+  content:'01 / 02 / 03' !important;
+  position:absolute !important;
+  right:7% !important;
+  bottom:-10px !important;
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif !important;
+  font-size:clamp(4.8rem,11vw,10.5rem) !important;
+  font-weight:900 !important;
+  line-height:.78 !important;
+  letter-spacing:.02em !important;
+  color:rgba(255,255,255,.045) !important;
+  pointer-events:none !important;
+}
+.options-hd,
+.options-context,
+.options-cards,
+.decision-statement {
+  position:relative !important;
+  z-index:1 !important;
+  max-width:1180px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.options-hd {
+  align-items:flex-end !important;
+  margin-bottom:30px !important;
+  padding-bottom:24px !important;
+  border-bottom:1px solid rgba(255,255,255,.18) !important;
+}
+.options-eyebrow {
+  color:#28ECAA !important;
+}
+.options-title {
+  max-width:520px !important;
+  text-align:right !important;
+  font-size:clamp(1.4rem,2.8vw,2.65rem) !important;
+  line-height:1.08 !important;
+  color:#FFFFFF !important;
+}
+.options-context {
+  grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr) !important;
+  gap:34px !important;
+  margin-top:0 !important;
+  margin-bottom:28px !important;
+}
+.options-context p {
+  color:#FFFFFF !important;
+  font-size:clamp(1.08rem,1.5vw,1.35rem) !important;
+  line-height:1.62 !important;
+  max-width:62ch !important;
+}
+.options-context p + p {
+  font-family:'Space Mono','Courier New',monospace !important;
+  font-size:.9rem !important;
+  line-height:1.68 !important;
+  color:#F2F2F2 !important;
+  padding:18px 0 0 22px !important;
+  border-left:3px solid #E8A020 !important;
+  letter-spacing:.03em !important;
+}
+.decision-statement {
+  display:grid !important;
+  grid-template-columns:190px minmax(0,1fr) !important;
+  gap:24px !important;
+  align-items:center !important;
+  padding:20px 0 !important;
+  border-top:1px solid rgba(255,255,255,.16) !important;
+  border-bottom:1px solid rgba(255,255,255,.16) !important;
+  margin-bottom:18px !important;
+}
+.decision-rule {
+  font-family:'Space Mono','Courier New',monospace !important;
+  font-size:.82rem !important;
+  color:#E8A020 !important;
+  font-weight:700 !important;
+  letter-spacing:.2em !important;
+  text-transform:uppercase !important;
+}
+.decision-line {
+  font-family:'Lora',Georgia,serif !important;
+  font-size:clamp(1.35rem,2.3vw,2.25rem) !important;
+  line-height:1.22 !important;
+  color:#FFFFFF !important;
+  font-weight:700 !important;
+}
+.options-cards {
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:0 !important;
+  border:1px solid rgba(255,255,255,.16) !important;
+  border-top:none !important;
+}
+.opt-card {
+  min-height:132px !important;
+  align-items:flex-start !important;
+  gap:16px !important;
+  background:rgba(255,255,255,.025) !important;
+  border:none !important;
+  border-right:1px solid rgba(255,255,255,.14) !important;
+  padding:24px 22px !important;
+}
+.opt-card:last-child { border-right:none !important; }
+.opt-heading {
+  font-size:clamp(1.08rem,1.35vw,1.35rem) !important;
+  line-height:1.25 !important;
+}
+.opt-micro {
+  color:#F2F2F2 !important;
+  line-height:1.5 !important;
+}
+.opt-arrow {
+  margin-left:auto !important;
+}
+.copy-section {
+  max-width:none !important;
+  padding:92px 7% !important;
+  border-top:none !important;
+  background:#FFFFFF !important;
+}
+.copy-section::before {
+  opacity:.18 !important;
+}
+.copy-text {
+  position:relative !important;
+  z-index:1 !important;
+  max-width:1120px !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-columns:minmax(260px,.88fr) minmax(0,1.12fr) !important;
+  gap:18px 58px !important;
+  align-items:start !important;
+}
+.copy-text .copy-p {
+  font-size:clamp(1.02rem,1.2vw,1.16rem) !important;
+  line-height:1.72 !important;
+  margin:0 !important;
+  color:#000000 !important;
+}
+.copy-text .copy-p[data-t="cp1"] {
+  grid-row:1 / span 3 !important;
+  font-size:clamp(2rem,4.4vw,4.4rem) !important;
+  line-height:1.02 !important;
+  font-weight:700 !important;
+  letter-spacing:0 !important;
+  padding-left:24px !important;
+  border-left:5px solid #E86040 !important;
+}
+.copy-text .copy-p[data-t="cp_or"],
+.copy-text .copy-p[data-t="cp2"],
+.copy-text .copy-p[data-t="cp3b"],
+.copy-text .copy-p[data-t="cp4"],
+.copy-text .copy-p[data-t="cp5"],
+.copy-byline {
+  grid-column:2 !important;
+}
+.copy-byline {
+  margin-top:12px !important;
+}
+@media(max-width:859px){
+  .options-strip {
+    padding:50px 7% 46px !important;
+  }
+  .options-strip::after {
+    right:5% !important;
+    font-size:clamp(3.3rem,18vw,5.8rem) !important;
+  }
+  .options-title {
+    text-align:left !important;
+  }
+  .options-context,
+  .decision-statement,
+  .options-cards,
+  .copy-text {
+    grid-template-columns:1fr !important;
+  }
+  .decision-statement {
+    gap:10px !important;
+  }
+  .options-cards {
+    border-top:1px solid rgba(255,255,255,.16) !important;
+  }
+  .opt-card {
+    min-height:0 !important;
+    border-right:none !important;
+    border-bottom:1px solid rgba(255,255,255,.14) !important;
+  }
+  .opt-card:last-child { border-bottom:none !important; }
+  .copy-section {
+    padding:62px 7% !important;
+  }
+  .copy-text {
+    gap:20px !important;
+  }
+  .copy-text .copy-p[data-t="cp1"],
+  .copy-text .copy-p[data-t="cp_or"],
+  .copy-text .copy-p[data-t="cp2"],
+  .copy-text .copy-p[data-t="cp3b"],
+  .copy-text .copy-p[data-t="cp4"],
+  .copy-text .copy-p[data-t="cp5"],
+  .copy-byline {
+    grid-column:1 !important;
+  }
+  .copy-text .copy-p[data-t="cp1"] {
+    grid-row:auto !important;
+    padding-left:18px !important;
+  }
+}
 </style>
 </head>
 <body style="">
@@ -2378,8 +2604,8 @@ button { border:none; background:none; font:inherit; }
       <span class="ov-n">02</span><span class="ov-t" data-t="ov2_t">Reportes</span>
       <span class="ov-sub" data-t="ov2_sub">Benchmarks y análisis sectoriales</span><span class="ov-active-dot"></span>    </a>
     <a href="https://jfcarpio.com/talleres/" class="ov-a in" onclick="closeMenu()" style="--c:#00B0C8;">
-      <span class="ov-n">03</span><span class="ov-t" data-t="ov3_t">Workshops</span>
-      <span class="ov-sub" data-t="ov3_sub">Formación presencial y online</span><span class="ov-active-dot"></span>    </a>
+      <span class="ov-n">03</span><span class="ov-t" data-t="ov3_t">Talleres</span>
+      <span class="ov-sub" data-t="ov3_sub">Virtuales e in-house</span><span class="ov-active-dot"></span>    </a>
     <a href="https://jfcarpio.com/blog/" class="ov-a in" onclick="closeMenu()" style="--c:#E8A020;">
       <span class="ov-n">04</span><span class="ov-t" data-t="ov4_t">Blog</span>
       <span class="ov-sub" data-t="ov4_sub">Historia, ideas y entorno económico</span><span class="ov-active-dot"></span>    </a>
@@ -2444,12 +2670,16 @@ button { border:none; background:none; font:inherit; }
 <!-- 3 OPTIONS STRIP — v1.140 -->
 <div class="options-strip">
   <div class="options-hd">
-    <span class="options-eyebrow" data-t="opt_eyebrow">Tres opciones sugeridas</span>
-    <span class="options-title" data-t="opt_title">¿Por dónde empezar?</span>
+    <span class="options-eyebrow" data-t="opt_eyebrow">Mapa de decisión</span>
+    <span class="options-title" data-t="opt_title">Primero presión. Después herramienta.</span>
   </div>
   <div class="options-context">
-    <p data-t="opt_context_1">El problema no es falta de esfuerzo. Es operar con información vieja, métricas dispersas y un entorno que cambia antes de que el plan llegue a madurar.</p>
-    <p data-t="opt_context_2">Empieza por el punto de mayor presión: salud del negocio, lectura del entorno o formación del equipo.</p>
+    <p data-t="opt_context_1">Si estás mirando la página entera, probablemente no necesitas más opciones. Necesitas separar el síntoma caro del ruido.</p>
+    <p data-t="opt_context_2">Escoge el punto donde la presión ya se nota: caja, entorno o equipo. Lo demás puede esperar.</p>
+  </div>
+  <div class="decision-statement">
+    <span class="decision-rule" data-t="decision_rule">Regla editorial</span>
+    <strong class="decision-line" data-t="decision_line">Esta web no está ordenada por productos. Está ordenada por decisiones.</strong>
   </div>
   <div class="options-cards">
     <a class="opt-card" href="https://www.jfcarpio.com/visorantiquiebra/" target="_blank" rel="noopener">
@@ -2464,7 +2694,7 @@ button { border:none; background:none; font:inherit; }
     </a>
     <a class="opt-card" href="https://jfcarpio.com/talleres/">
       <span class="opt-num">03</span>
-      <span class="opt-stack"><span class="opt-heading" data-t="opt3_h">Capacita a tus colaboradores</span><span class="opt-micro" data-t="opt3_micro">dos talleres que cambian cómo ven el dinero y la empresa</span></span>
+      <span class="opt-stack"><span class="opt-heading" data-t="opt3_h">Explora talleres corporativos</span><span class="opt-micro" data-t="opt3_micro">dos talleres que cambian cómo ven el dinero y la empresa</span></span>
       <span class="opt-arrow">→</span>
     </a>
   </div>
@@ -2637,28 +2867,23 @@ button { border:none; background:none; font:inherit; }
 <div class="copy-section">
   <div class="copy-text reveal in">
     <p class="copy-p" data-t="cp1">Hay un tipo de empresario que no aparece en los casos de Harvard.</p>
-    <p class="copy-p" data-t="cp_or">Opera en una región y espacio
-cultural donde el Estado cambia las reglas en mitad del partido. Donde
-los impuestos son altos y las trabas más. Donde las reglas asfixian en
-vez de apoyar. Donde la deuda y el gasto irresponsable de los gobiernos
-generan el cortoplacismo que destruye cualquier plan a mediano plazo. Y
-aun así, construye. Y aun así, crece.</p>
+    <p class="copy-p" data-t="cp_or">Opera donde el Estado cambia las reglas
+en mitad del partido, los impuestos muerden, el crédito se estrecha y el
+plan de mediano plazo compite contra el ruido de la semana. Y aun así,
+construye.</p>
     <p class="copy-p" data-t="cp2">Ese empresario necesita herramientas
 distintas. No las que enseñan los MBAs para mercados ordenados. Las que
 funcionan cuando el entorno no coopera.</p>
-    <p class="copy-p" data-t="cp3b">20 años involucrado en distintos
-proyectos como consultor o como participante externo e interno me dieron
- una certeza: el problema nunca es la falta de esfuerzo. Es operar con
-información de hace dos trimestres, sin un marco para leer lo que el
-entorno te va a hacer en los próximos seis meses.</p>
+    <p class="copy-p" data-t="cp3b">20 años en proyectos como consultor,
+participante externo e interno me dejaron una certeza: el problema rara vez
+es falta de esfuerzo. Es operar con información vieja y sin un marco para
+leer los próximos seis meses.</p>
     <p class="copy-p" data-t="cp4">Eso es lo que resuelve este sitio.
 Dashboards que diagnostican la salud real del negocio. Reportes que
 traducen el entorno macroeconómico a decisiones concretas. Dos talleres
-corporativos virtuales para equipos hispanohablantes y bilingües: uno sobre
-dinero y finanzas personales y familiares, otro sobre apreciación de la
-empresa privada. También disponibles en formato físico in-house para grupos
-dentro de programas especiales, bajo cotización. Pueden tomarse por separado;
-juntos ordenan dinero personal, productividad y cultura empresarial.</p>
+corporativos virtuales para equipos hispanohablantes y bilingües: dinero y
+finanzas personales; apreciación de la empresa privada. También disponibles
+en formato físico in-house para programas especiales, bajo cotización.</p>
     <p class="copy-p" data-t="cp5">Todo en español, todo en inglés, para
 empresarios, directivos y equipos hispanohablantes o bilingües en Estados
 Unidos, Canadá, España y otros mercados donde una mala decisión cuesta caro.
@@ -3419,11 +3644,11 @@ var T={
     p5_desc:'Libros, papers y columnas. El respaldo formal detrás de cada herramienta.', p5_tag:'Académico',
     cp1:'Hay un tipo de empresario que no aparece en los casos de Harvard.',
     cp1b:'',
-    cp_or:'Opera en una región y espacio cultural donde el Estado cambia las reglas en mitad del partido. Donde los impuestos son altos y las trabas más. Donde las reglas asfixian en vez de apoyar. Donde la deuda y el gasto irresponsable de los gobiernos generan el cortoplacismo que destruye cualquier plan a mediano plazo. Y aun así, construye. Y aun así, crece.',
+    cp_or:'Opera donde el Estado cambia las reglas en mitad del partido, los impuestos muerden, el crédito se estrecha y el plan de mediano plazo compite contra el ruido de la semana. Y aun así, construye.',
     cp2:'Ese empresario necesita herramientas distintas. No las que enseñan los MBAs para mercados ordenados. Las que funcionan cuando el entorno no coopera.',
     cp3a:'',
-    cp3b:'20 años involucrado en distintos proyectos como consultor o como participante externo e interno me dieron una certeza: el problema nunca es la falta de esfuerzo. Es operar con información de hace dos trimestres, sin un marco para leer lo que el entorno te va a hacer en los próximos seis meses.',
-    cp4:'Eso es lo que resuelve este sitio. Dashboards que diagnostican la salud real del negocio. Reportes que traducen el entorno macroeconómico a decisiones concretas. Dos talleres corporativos virtuales para equipos hispanohablantes y bilingües: uno sobre dinero y finanzas personales y familiares, otro sobre apreciación de la empresa privada. También disponibles en formato físico in-house para grupos dentro de programas especiales, bajo cotización. Pueden tomarse por separado; juntos ordenan dinero personal, productividad y cultura empresarial.',
+    cp3b:'20 años en proyectos como consultor, participante externo e interno me dejaron una certeza: el problema rara vez es falta de esfuerzo. Es operar con información vieja y sin un marco para leer los próximos seis meses.',
+    cp4:'Eso es lo que resuelve este sitio. Dashboards que diagnostican la salud real del negocio. Reportes que traducen el entorno macroeconómico a decisiones concretas. Dos talleres corporativos virtuales para equipos hispanohablantes y bilingües: dinero y finanzas personales; apreciación de la empresa privada. También disponibles en formato físico in-house para programas especiales, bajo cotización.',
     cp5:'Todo en español, todo en inglés, para empresarios, directivos y equipos hispanohablantes o bilingües en Estados Unidos, Canadá, España y otros mercados donde una mala decisión cuesta caro. La primera herramienta operativa es Growth OS. Empieza ahí.',
     guide_k:'No empieces por admirar una biografía.',
     guide_t:'Elige según el problema que ya tienes encima.',
@@ -3438,10 +3663,12 @@ var T={
     proof2_note:'Años traduciendo economía difícil a decisiones entendibles.',
     proof3_note:'Investigación, consultoría, formación y empresa privada.',
     proof4_note:'Rangos observados en proyectos específicos; no promesa de resultado típico.',
-    opt_eyebrow:'Tres opciones sugeridas',
-    opt_title:'¿Por dónde empezar?',
-    opt_context_1:'El problema no es falta de esfuerzo. Es operar con información vieja, métricas dispersas y un entorno que cambia antes de que el plan llegue a madurar.',
-    opt_context_2:'Empieza por el punto de mayor presión: salud del negocio, lectura del entorno o formación del equipo.',
+    opt_eyebrow:'Mapa de decisión',
+    opt_title:'Primero presión. Después herramienta.',
+    opt_context_1:'Si estás mirando la página entera, probablemente no necesitas más opciones. Necesitas separar el síntoma caro del ruido.',
+    opt_context_2:'Escoge el punto donde la presión ya se nota: caja, entorno o equipo. Lo demás puede esperar.',
+    decision_rule:'Regla editorial',
+    decision_line:'Esta web no está ordenada por productos. Está ordenada por decisiones.',
     opt1_h:'Diagnostica tu negocio',
     opt1_micro:'en 20 min sabes si estás en zona de riesgo',
     opt2_h:'Entiende tu entorno',
@@ -3550,8 +3777,8 @@ var T={
     cp1b:'',
     cp2:'That entrepreneur needs different tools. Not the ones MBAs teach for orderly markets. The ones that work when the environment does not cooperate.',
     cp3a:'',
-    cp3b:'20 years involved in different projects as a consultant and as an external and internal participant gave me one certainty: the problem is never lack of effort. Operating with information two quarters old, without a framework to read what the environment will do in the next six months.',
-    cp4:'This is what this site solves. Dashboards that diagnose the real health of the business. Reports that translate the macroeconomic environment into concrete decisions. Two virtual corporate workshops for Spanish-speaking and bilingual teams: one on money and personal/family finance, another on appreciation of private enterprise. Also available as physical in-house workshops for special group programs by quote. They can be taken separately; together they organize personal money, productivity and business culture.',
+    cp3b:'20 years across projects as a consultant, external participant and internal participant left me one certainty: the problem is rarely lack of effort. It is operating with old information and without a framework for reading the next six months.',
+    cp4:'This is what this site solves. Dashboards that diagnose the real health of the business. Reports that translate the macroeconomic environment into concrete decisions. Two virtual corporate workshops for Spanish-speaking and bilingual teams: money and personal finance; appreciation of private enterprise. Physical in-house formats are also available for special programs by quote.',
     cp5:'Everything in Spanish, everything in English, for founders, executives and bilingual teams in the United States, Canada, Spain and other higher-income markets where one bad decision is expensive. The first operating tool is Growth OS. Start there.',
     guide_k:'Do not start by admiring a biography.',
     guide_t:'Choose based on the problem already in front of you.',
@@ -3566,10 +3793,12 @@ var T={
     proof2_note:'Years translating difficult economics into understandable decisions.',
     proof3_note:'Research, consulting, training and private enterprise.',
     proof4_note:'Ranges observed in specific projects; not a typical-results promise.',
-    opt_eyebrow:'Three suggested paths',
-    opt_title:'Where to start?',
-    opt_context_1:'The problem is not lack of effort. It is operating with old information, scattered metrics and an environment that changes before the plan has time to mature.',
-    opt_context_2:'Start at the point of greatest pressure: business health, environment analysis or team training.',
+    opt_eyebrow:'Decision map',
+    opt_title:'Pressure first. Tool second.',
+    opt_context_1:'If you are scanning the whole page, you probably do not need more options. You need to separate the expensive symptom from the noise.',
+    opt_context_2:'Choose the point where pressure is already visible: cash, environment or team. Everything else can wait.',
+    decision_rule:'Editorial rule',
+    decision_line:'This website is not organized by products. It is organized by decisions.',
     opt1_h:'Diagnose your business',
     opt1_micro:'in 20 min you know if you are in the risk zone',
     opt2_h:'Understand your environment',
@@ -3591,7 +3820,7 @@ var T={
     t2_q:'Easy, no complications. Real. And 100% what we needed to land everything and make sure it was not just a dream.',
     t2_name:'Leonela Loor',
     t2_role:'Ecommerce entrepreneur · Orlando, FL',
-    cp_or:'They operate in a region and cultural space where the State changes the rules mid-game. Where taxes are high and bureaucratic hurdles even higher. Where regulations strangle instead of support. Where irresponsible government debt and spending create the short-termism that destroys any medium-term plan. And yet, they build. And yet, they grow.',
+    cp_or:'They operate where the State changes the rules mid-game, taxes bite, credit tightens and the medium-term plan competes with the noise of the week. And yet, they build.',
     byline:'Economics with institutions and enterprise',
     tl_lbl:'Track record', tl_title:'A career defending civil society and private enterprise', tl_title_a:'Two persistent themes: ', tl_title_b:'economic growth and rational optimism',
     tl1_t:'Growth OS — four dashboards, one complete system',
