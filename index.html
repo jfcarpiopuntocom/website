@@ -134,7 +134,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.167 (Move proof into trajectory) · Last major refactor: 2026-05-19 · Author: JFC + Codex
+  v1.168 (Connect Gumroad email list) · Last major refactor: 2026-05-19 · Author: JFC + Codex
   WHITE E enhancements: added mix-blend-mode:screen to background images for
   beautiful, visible photography against white background (no more dingy appearance).
 ================================================================================
@@ -193,7 +193,7 @@
   6. COPY + PHOTO (.copy-section) -- long-form manifesto + JFC photo
   7. TIMELINE (.about-section) -- career trajectory (.tl-row)
   8. CONTACT / TERMINAL (.contact-section#terminal) -- WhatsApp + AI query
-  9. NEWSLETTER (.nl-section) -- Carta del Entorno WhatsApp signup
+  9. NEWSLETTER (.nl-section) -- Lista de correos de jfcarpio.com (Gumroad)
   10. FOOTER (.footer)
 
   FOREIGN CSS (ignore, do not edit):
@@ -2736,17 +2736,15 @@ ayuda a redactarlo.</p>
   </div>
 </div>
 
-<!-- CARTA DEL ENTORNO -->
+<!-- LISTA DE CORREOS DE JFCARPIO.COM -->
 <div class="nl-section reveal in">
   <div class="nl-copy">
-    <h3 class="nl-title" data-t="nl_title">Carta del Entorno</h3>
-    <p class="nl-sub" data-t="nl_sub">Una carta breve para empresarios que necesitan leer mejor el contexto antes de que el contexto les cobre factura.<br>Sin spam. Solo cuando hay algo que vale.</p>
-    <p class="nl-freq" data-t="nl_freq">Frecuencia irregular — cuando hay algo que vale. Baja cuando quieras.</p>
+    <h3 class="nl-title" data-t="nl_title">Lista de correos de jfcarpio.com</h3>
+    <p class="nl-sub" data-t="nl_sub">Actualizaciones, ensayos, herramientas y avisos de nuevos recursos de jfcarpio.com.<br>Plataforma: Gumroad.</p>
+    <p class="nl-freq" data-t="nl_freq">Frecuencia irregular. Solo cuando hay algo que vale. Baja cuando quieras desde Gumroad.</p>
   </div>
   <div class="nl-form">
-    <input class="nl-input" id="nlEmail" type="email" inputmode="email" autocomplete="email" data-t-placeholder="nl_ph" placeholder="tu@email.com">
-    <button class="nl-submit" onclick="subscribeWA()" data-t="nl_btn">Suscribirse · gratis →</button>
-    <span class="nl-ok" id="nlOk" data-t="nl_ok">Listo — se abrió WhatsApp para confirmar tu correo.</span>
+    <a class="nl-submit" href="https://jfcarpio.gumroad.com/" target="_blank" rel="noopener" data-t="nl_btn">Ir a Gumroad →</a>
   </div>
 </div>
 
@@ -3061,14 +3059,6 @@ function openWA(){
 }
 function bookReview(){
   openWAMessage(T[lang].ruta_a_msg||T[lang].wa_default||'');
-}
-function subscribeWA(){
-  var i=document.getElementById('nlEmail');
-  var email=i&&i.value.trim()?i.value.trim():'';
-  var msg=(T[lang].nl_msg||'')+(email?email:'[email]');
-  openWAMessage(msg);
-  var ok=document.getElementById('nlOk');
-  if(ok){ok.style.display='block';setTimeout(function(){ok.style.display='none';},7000);}
 }
 
 async function runQuery(){
@@ -3464,7 +3454,7 @@ var T={
     wa_draft:'Draft question',
     wa_confirm:'WhatsApp opened — if it did not load, write to jf@jfcarpio.com',
     c_char_of:'/300',
-    nl_freq:'Frecuencia irregular — cuando hay algo que vale. Baja cuando quieras.',
+    nl_freq:'Frecuencia irregular. Solo cuando hay algo que vale. Baja cuando quieras desde Gumroad.',
     c_helper:'¿No sabes bien cómo empezar? Escribe lo que tengas — sobre tu negocio, el entorno económico, un workshop, un reporte, o simplemente para hablar. El segundo botón te ayuda a redactarlo.',
     wa_follow:'¿Quieres profundizar?',
     wa_default:'Hola, vengo de jfcarpio.com y tengo una consulta.',
@@ -3482,12 +3472,9 @@ var T={
     ham_lbl:'MENÚ',
     c_scarcity:'Disponibilidad limitada — consulta si hay cupo para workshop este mes.',
     term_ph:'Describe tu situación en pocas palabras…', term_btn:'Ejecutar',
-    nl_title:'Carta del Entorno',
-    nl_sub:'Una carta breve para empresarios que necesitan leer mejor el contexto antes de que el contexto les cobre factura.<br>Sin spam. Solo cuando hay algo que vale.',
-    nl_btn:'Suscribirse · gratis →',
-    nl_ph:'tu@email.com',
-    nl_ok:'Listo — se abrió WhatsApp para confirmar tu correo.',
-    nl_msg:'Hola JFC, quiero suscribirme a la Carta del Entorno: ',
+    nl_title:'Lista de correos de jfcarpio.com',
+    nl_sub:'Actualizaciones, ensayos, herramientas y avisos de nuevos recursos de jfcarpio.com.<br>Plataforma: Gumroad.',
+    nl_btn:'Ir a Gumroad →',
     foot_copy:'© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador',
     sys_prompt:'Eres J.F. Carpio, autor e investigador económico ecuatoriano de la escuela austriaca, defensor de la empresa privada, analista de entorno económico-empresarial y creador del Growth OS. Tu marco: precios como computación social, crítica al intervencionismo, defensa del capital productivo. MindOS: Boundary/MRR, Behavior/CAC, Intellect/IDF+RACI, Decision/Semáforo. Responde con criterio económico sólido, sin motivación barata. UNA acción concreta al final. Máximo 4 párrafos. Responde en español.'
   },
@@ -3596,7 +3583,7 @@ var T={
     wa_draft:'Redactar pregunta',
     wa_confirm:'WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
     c_char_of:'/300',
-    nl_freq:'Irregular frequency — only when there is something worth reading. Leave whenever you want.',
+    nl_freq:'Irregular frequency. Only when there is something worth sending. Unsubscribe anytime from Gumroad.',
     c_helper:'Not sure how to start? Write whatever you have — about your business, the economic environment, a workshop, a report, or just to talk. The second button helps you draft it.',
     wa_follow:'Want to go deeper?',
     wa_default:'Hi, I came from jfcarpio.com and have a question.',
@@ -3614,12 +3601,9 @@ var T={
     ham_lbl:'MENU',
     c_scarcity:'Limited availability — ask about workshop spots for this month.',
     term_ph:'Describe your situation briefly…', term_btn:'Run',
-    nl_title:'Letter from the Environment',
-    nl_sub:'A short letter for entrepreneurs who need to read context before context sends the bill.<br>No spam. Only when there is something worth reading.',
-    nl_btn:'Subscribe · free →',
-    nl_ph:'you@email.com',
-    nl_ok:'Done — WhatsApp opened to confirm your email.',
-    nl_msg:'Hi JFC, I would like to subscribe to Letter from the Environment: ',
+    nl_title:'jfcarpio.com email list',
+    nl_sub:'Updates, essays, tools and notices about new jfcarpio.com resources.<br>Platform: Gumroad.',
+    nl_btn:'Go to Gumroad →',
     foot_copy:'© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador',
     sys_prompt:'You are J.F. Carpio, an Ecuadorian economic and business researcher in the Austrian tradition, defender of private enterprise, business environment analyst and creator of Growth OS. You also work as a corporate trainer and invited speaker. Your framework: prices as social computation, critique of interventionism, defense of productive capital. MindOS: Boundary/MRR, Behavior/CAC, Intellect/IDF+RACI, Decision/Traffic Light. Answer with sound economic reasoning, no cheap motivation. Always end with ONE concrete action for this week. Maximum 4 paragraphs. Reply in English.'
   }
