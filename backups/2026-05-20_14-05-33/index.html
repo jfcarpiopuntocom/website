@@ -134,7 +134,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.172 (Deslop Spanish editorial register) · Last major refactor: 2026-05-20 · Author: JFC + Codex
+  v1.171 (Editorial decision map and manifesto pacing) · Last major refactor: 2026-05-20 · Author: JFC + Codex
   WHITE E enhancements: added mix-blend-mode:screen to background images for
   beautiful, visible photography against white background (no more dingy appearance).
 ================================================================================
@@ -2338,7 +2338,7 @@ button { border:none; background:none; font:inherit; }
   }
 }
 
-/* v1.172: award-level editorial decision map and manifesto pacing */
+/* v1.171: award-level editorial decision map and manifesto pacing */
 .options-strip {
   position:relative !important;
   overflow:hidden !important;
@@ -2607,8 +2607,8 @@ button { border:none; background:none; font:inherit; }
       <span class="ov-n">03</span><span class="ov-t" data-t="ov3_t">Talleres</span>
       <span class="ov-sub" data-t="ov3_sub">Virtuales e in-house</span><span class="ov-active-dot"></span>    </a>
     <a href="https://jfcarpio.com/blog/" class="ov-a in" onclick="closeMenu()" style="--c:#E8A020;">
-      <span class="ov-n">04</span><span class="ov-t" data-t="ov4_t">Artículos</span>
-      <span class="ov-sub" data-t="ov4_sub">Ensayos de economía, instituciones e historia</span><span class="ov-active-dot"></span>    </a>
+      <span class="ov-n">04</span><span class="ov-t" data-t="ov4_t">Blog</span>
+      <span class="ov-sub" data-t="ov4_sub">Historia, ideas y entorno económico</span><span class="ov-active-dot"></span>    </a>
     <a href="https://jfcarpio.com/publicaciones/" class="ov-a in" onclick="closeMenu()" style="--c:#E86040;">
       <span class="ov-n">05</span><span class="ov-t" data-t="ov5_t">Publicaciones</span>
       <span class="ov-sub" data-t="ov5_sub">Libros, papers y columnas académicas</span><span class="ov-active-dot"></span>    </a>
@@ -2629,7 +2629,7 @@ button { border:none; background:none; font:inherit; }
         <span class="lw"><span class="li" data-t="h1_l2">enfrenta dos batallas simultáneas: construir el negocio, y sobrevivir el entorno que lo complica.</span></span>
         <span class="lw"><span class="li"><strong><span data-t="h1_l3a">Aquí encontrarás </span><span style="color:#E8A020" data-t="h1_l3b">herramientas</span><span data-t="h1_l3c"> para enfrentar ambas cosas con mejor criterio.</span></strong></span></span>
       </h1>
-      <p class="hero-sub" data-t="hero_sub">Para empresarios que operan donde las reglas, el crédito y la política pesan tanto como el producto.</p>
+      <p class="hero-sub" data-t="hero_sub">Hay un tipo de empresario que no aparece en los casos de Harvard. Este sitio existe para ese empresario.</p>
       <div class="hero-ctas">
         <a href="https://www.jfcarpio.com/visorantiquiebra/" class="hero-cta" target="_blank" rel="noopener" data-t="cta_primary">Empezar por diagnóstico del negocio →</a>
         <a href="#" onclick="openWA();return false;" class="hero-cta-sec" data-t="cta_sec">¿Decisión urgente? Escríbeme →</a>
@@ -2674,12 +2674,12 @@ button { border:none; background:none; font:inherit; }
     <span class="options-title" data-t="opt_title">Primero presión. Después herramienta.</span>
   </div>
   <div class="options-context">
-    <p data-t="opt_context_1">La pregunta no es qué comprar primero, sino qué decisión está peor informada. Una empresa puede sobrevivir a un mes difícil; difícilmente sobrevive a varios meses interpretados con malos datos.</p>
-    <p data-t="opt_context_2">Empieza por el frente donde ya hay costo: caja, entorno o equipo. La elegancia viene después del diagnóstico.</p>
+    <p data-t="opt_context_1">Si estás mirando la página entera, probablemente no necesitas más opciones. Necesitas separar el síntoma caro del ruido.</p>
+    <p data-t="opt_context_2">Escoge el punto donde la presión ya se nota: caja, entorno o equipo. Lo demás puede esperar.</p>
   </div>
   <div class="decision-statement">
     <span class="decision-rule" data-t="decision_rule">Regla editorial</span>
-    <strong class="decision-line" data-t="decision_line">No está ordenada como catálogo. Está ordenada como una lectura aplicada de problemas empresariales.</strong>
+    <strong class="decision-line" data-t="decision_line">Esta web no está ordenada por productos. Está ordenada por decisiones.</strong>
   </div>
   <div class="options-cards">
     <a class="opt-card" href="https://www.jfcarpio.com/visorantiquiebra/" target="_blank" rel="noopener">
@@ -2705,7 +2705,7 @@ button { border:none; background:none; font:inherit; }
   <div class="bento-hd">
     <div>
       <span class="bh-sub" data-t="bh_sub">Empieza por lo que más necesitas</span>
-      <p class="bento-deck" data-t="bento_deck">Cinco entradas para leer caja, entorno, equipo, artículos y respaldo formal.</p>
+      <p class="bento-deck" data-t="bento_deck">Cinco entradas. Úsalas según el problema: caja, entorno, equipo, lectura o respaldo formal.</p>
     </div>
     <span class="bh-hint" data-t="bh_hint">5 secciones</span>
   </div>
@@ -2787,15 +2787,15 @@ button { border:none; background:none; font:inherit; }
 
     <!-- 04 BLOG — cross-hatch texture -->
     <a href="https://jfcarpio.com/blog/" id="blog" class="pan has-cover pan-d vis" style="--pc: #E8A020; --ptex: radial-gradient(rgba(232,160,32,.05) 1.5px,transparent 1.5px); background-size: 24px 24px; transition-delay: 0.18s; transform: perspective(600px) rotateY(0deg) rotateX(0deg) scale(1);">
-      <img class="pan-cover" src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&w=800" referrerpolicy="no-referrer" alt="Artículos Eleutheros — historia económica" loading="lazy">
+      <img class="pan-cover" src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&w=800" referrerpolicy="no-referrer" alt="Blog Eleutheros — historia económica" loading="lazy">
       <div class="pan-gl">B</div>
       <div>
         <div class="pan-top">
-          <span class="pan-num" data-t="p4_num">04 — Artículos y ensayos</span>
+          <span class="pan-num" data-t="p4_num">04 — Lectura frecuente</span>
           <span class="pan-cnt" style="color:#E8A020;" data-target="48">48</span>
         </div>
-        <h3 class="pan-title" data-t="p4_title">Artículos</h3>
-        <p class="pan-desc" data-t="p4_desc">Ensayos de economía, instituciones e historia empresarial para leer mejor el entorno ecuatoriano y latinoamericano.</p>
+        <h3 class="pan-title" data-t="p4_title">Blog</h3>
+        <p class="pan-desc" data-t="p4_desc">Historia económica, ideas y contexto — cómo las creencias determinan resultados, también en tu empresa.</p>
       </div>
       <div class="pan-items">
         <span class="pan-item"><span class="pan-item-tag" style="color:#E8A020;">Dic 25</span>Litio, Cobre y Poder — 5 lecciones que redefinen el mapa minero de América Latina</span>
@@ -2866,26 +2866,28 @@ button { border:none; background:none; font:inherit; }
 <!-- COPY + PHOTO — v1.3 -->
 <div class="copy-section">
   <div class="copy-text reveal in">
-    <p class="copy-p" data-t="cp1">Hay un empresario latinoamericano que rara vez aparece en los casos de Harvard.</p>
+    <p class="copy-p" data-t="cp1">Hay un tipo de empresario que no aparece en los casos de Harvard.</p>
     <p class="copy-p" data-t="cp_or">Opera donde el Estado cambia las reglas
-en mitad del partido, el crédito se vuelve prudente tarde, los impuestos
-pesan antes de que llegue la utilidad y la política acorta el horizonte de
-inversión. Ese empresario no necesita entusiasmo. Necesita criterio.</p>
-    <p class="copy-p" data-t="cp2">Por eso este sitio no empieza con una
-biografía. Empieza con problemas observables: caja, incentivos, coordinación,
-entorno institucional y decisiones que no conviene aplazar.</p>
-    <p class="copy-p" data-t="cp3b">Después de dos décadas entre consultoría,
-docencia, investigación y empresa privada, la conclusión se volvió bastante
-simple: muchas organizaciones no fracasan por falta de energía, sino por
-leer tarde la información que ya estaba disponible.</p>
-    <p class="copy-p" data-t="cp4">Aquí esa lectura se vuelve práctica:
-dashboards para diagnosticar la salud del negocio; reportes para traducir
-macroeconomía y regulación a decisiones; talleres para que el equipo entienda
-dinero, empresa privada y cooperación productiva.</p>
-    <p class="copy-p" data-t="cp5">El punto de partida es Ecuador. El público
-es más amplio: empresarios, directivos y equipos hispanohablantes o bilingües
-que necesitan decidir con mejor criterio en mercados donde equivocarse cuesta
-caro. La primera herramienta operativa es Growth OS.</p>
+en mitad del partido, los impuestos muerden, el crédito se estrecha y el
+plan de mediano plazo compite contra el ruido de la semana. Y aun así,
+construye.</p>
+    <p class="copy-p" data-t="cp2">Ese empresario necesita herramientas
+distintas. No las que enseñan los MBAs para mercados ordenados. Las que
+funcionan cuando el entorno no coopera.</p>
+    <p class="copy-p" data-t="cp3b">20 años en proyectos como consultor,
+participante externo e interno me dejaron una certeza: el problema rara vez
+es falta de esfuerzo. Es operar con información vieja y sin un marco para
+leer los próximos seis meses.</p>
+    <p class="copy-p" data-t="cp4">Eso es lo que resuelve este sitio.
+Dashboards que diagnostican la salud real del negocio. Reportes que
+traducen el entorno macroeconómico a decisiones concretas. Dos talleres
+corporativos virtuales para equipos hispanohablantes y bilingües: dinero y
+finanzas personales; apreciación de la empresa privada. También disponibles
+en formato físico in-house para programas especiales, bajo cotización.</p>
+    <p class="copy-p" data-t="cp5">Todo en español, todo en inglés, para
+empresarios, directivos y equipos hispanohablantes o bilingües en Estados
+Unidos, Canadá, España y otros mercados donde una mala decisión cuesta caro.
+La primera herramienta operativa es Growth OS. Empieza ahí.</p>
     <p class="copy-byline">
       <strong>J. F. Carpio</strong> — <span data-t="byline">Economía con instituciones y empresas</span>
     </p>
@@ -2900,7 +2902,7 @@ caro. La primera herramienta operativa es Growth OS.</p>
       <span class="stakes-signal" data-t="stakes_signal">67/100</span>
     </div>
     <div>
-      <p class="stakes-copy"><span data-t="stakes_t">El dato importa porque disciplina la intuición. En Ecuador, el INEC mostró que de cada 100 emprendimientos nacidos en 2015 solo 67 seguían activos al año siguiente. GEM Ecuador 2024 añade el contexto reciente: apagones, inseguridad, regulación inestable y crédito limitado. Decidir tarde no es un defecto estético; es leer el entorno cuando ya apareció en la caja.</span></p>
+      <p class="stakes-copy"><span data-t="stakes_t">En Ecuador, el INEC mostró que de cada 100 emprendimientos nacidos en 2015 solo 67 seguían activos al año siguiente. GEM Ecuador 2024 añade el contexto: apagones, inseguridad, regulación inestable y crédito limitado amenazan a los nuevos negocios. El costo no es abstracto: decidir tarde te deja leyendo el entorno cuando ya pegó en caja.</span></p>
       <div class="stakes-sources" aria-label="Fuentes">
         <a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Bibliotecas/Libros/Panorama_2018.pdf" target="_blank" rel="noopener" data-t="stakes_src_1">Fuente: INEC</a>
         <a href="https://www.gemconsortium.org/news/the-entrepreneurial-landscape-in-ecuador%3A-navigating-uncertainty-amid-economic-and-social-challenges" target="_blank" rel="noopener" data-t="stakes_src_2">Fuente: GEM Ecuador</a>
@@ -2913,7 +2915,7 @@ caro. La primera herramienta operativa es Growth OS.</p>
 <div class="tes-strip">
   <div class="tes-hd">
     <span class="tes-eyebrow" data-t="tes_eye">Lo que dicen clientes reales</span>
-    <span class="tes-title" data-t="tes_title">Lecturas de clientes reales, no promesas de resultado</span>
+    <span class="tes-title" data-t="tes_title">Resultados en distintos tipos de asesorías a PYMES</span>
   </div>
   <div class="tes-cards">
     <div class="tes-card">
@@ -3047,27 +3049,26 @@ ayuda a redactarlo.</p>
       <div class="tl-content">
         <div class="tl-title" data-t="tl1_t">Growth OS — cuatro dashboards, un sistema completo</div>
         <div class="tl-body" data-t="tl1_b">Del
-primer MRR al exit. Herramientas para que una empresa joven detecte
-temprano sus restricciones reales. La síntesis práctica de dos décadas
-de economía aplicada a la empresa.</div>
+primer MRR al exit. Herramientas que evitan la quiebra temprana de
+nuevos negocios. La síntesis práctica de dos décadas de economía
+aplicada a la empresa.</div>
       </div>
     </div>
     <div class="tl-row vis" style="transition-delay: 0.08s;">
       <span class="tl-year">2018</span>
       <div class="tl-content">
-        <div class="tl-title" data-t="tl2_t">Consultoría independiente — ideas sometidas a operación</div>
+        <div class="tl-title" data-t="tl2_t">Consultoría independiente — </div>
         <div class="tl-body" data-t="tl2_b">33+
-clientes directos. En proyectos específicos se observaron ROIs del
-10–40% en mercados emergentes; no es una promesa de resultado típico.
-Keynote en Forum da Liberdade, Porto Alegre, ante 3.000 asistentes. La
-defensa de la empresa privada también debe poder medirse en decisiones
-concretas.</div>
+clientes directos. ROIs del 10–40% en mercados emergentes. Keynote en
+Forum da Liberdade, Porto Alegre — el mayor evento de libertad económica
+ de América del Sur, 3.000 asistentes. El capitalismo popular e
+incluyente como leit motif.</div>
       </div>
     </div>
     <div class="tl-row vis" style="transition-delay: 0.16s;">
       <span class="tl-year">2006</span>
       <div class="tl-content">
-        <div class="tl-title" data-t="tl3_t">14 años formando estudiantes universitarios en economía, mercado y empresa</div>
+        <div class="tl-title" data-t="tl3_t">14 años formando estudiantes universitarios con una mucho mejor comprensión del mercado y la empresa</div>
         <div class="tl-body" data-t="tl3_b">Fundó
 el primer subdepartamento de Economía Austriaca e Institucional del
 Ecuador. Diseñó una síntesis propia — Economía con instituciones y
@@ -3079,21 +3080,22 @@ revista académica Polemika.</div>
     <div class="tl-row vis" style="transition-delay: 0.24s;">
       <span class="tl-year">Mises</span>
       <div class="tl-content">
-        <div class="tl-title" data-t="tl4_t">Autor, articulista y traductor de economía institucional y empresarial</div>
+        <div class="tl-title" data-t="tl4_t">Autor en la línea de la Economía con instituciones y empresas</div>
         <div class="tl-body" data-t="tl4_b">Autor
-de "10 Lecciones de Economía". Traducción y difusión en español de
-economía continental europea, con especial atención a la escuela
-austriaca. Columnista en prensa ecuatoriana.</div>
+de "10 Lecciones de Economía". Traducción y difusión de economía de las
+escuelas continentales europeas (especialmente la austriaca) en español.
+ Columnista en prensa ecuatoriana. </div>
       </div>
     </div>
     <div class="tl-row vis" style="transition-delay: 0.32s;">
       <span class="tl-year">UFM</span>
       <div class="tl-content">
-        <div class="tl-title" data-t="tl5_t">Formación teórica al servicio de problemas reales</div>
+        <div class="tl-title" data-t="tl5_t">La formación: la teoría sólida al servicio de causas reales</div>
         <div class="tl-body" data-t="tl5_b">M.E.E.
 en UFM Guatemala / Boston University. Trabajo de doctorado en evolución
-institucional mengeriana (3 working papers). La teoría austriaca del
-capital como instrumento para entender coordinación, inversión y tiempo.</div>
+institucional Mengerian (3 working papers). La teoría austriaca del
+capital como herramienta de optimismo racional — no como adorno
+académico.</div>
       </div>
     </div>
   </div>
@@ -3113,7 +3115,7 @@ capital como instrumento para entender coordinación, inversión y tiempo.</div>
     <a href="https://www.jfcarpio.com/visorgerencial/" target="_blank" rel="noopener"><span class="foot-dot" style="background:#0A9060;"></span>Dashboards</a>
     <a href="https://jfcarpio.com/#reportes"><span class="foot-dot" style="background:#3B7EE8;"></span>Reportes</a>
     <a href="https://jfcarpio.com/talleres/"><span class="foot-dot" style="background:#00B0C8;"></span>Workshops</a>
-    <a href="https://jfcarpio.com/blog/"><span class="foot-dot" style="background:#E8A020;"></span>Artículos</a>
+    <a href="https://jfcarpio.com/blog/"><span class="foot-dot" style="background:#E8A020;"></span>Blog</a>
     <a href="https://jfcarpio.com/publicaciones/"><span class="foot-dot" style="background:#E86040;"></span>Publicaciones</a>
   </nav>
 </footer>
@@ -3617,7 +3619,7 @@ var T={
     h1_l1a:'La expansión de un negocio en ', h1_l1b:'Latinoamérica',
     h1_l2:'enfrenta dos batallas simultáneas: construir el negocio, y sobrevivir el entorno que lo complica.',
     h1_l3a:'Aquí encontrarás ', h1_l3b:'herramientas', h1_l3c:' para enfrentar ambas cosas con mejor criterio.',
-    hero_sub:'Para empresarios que operan donde las reglas, el crédito y la política pesan tanto como el producto.',
+    hero_sub:'Hay un tipo de empresario que no aparece en los casos de Harvard. Este sitio existe para ese empresario.',
     badge_mark:'Keynote',
     badge_copy:'Forum da Liberdade · Porto Alegre · 3.000 asistentes',
     cta_primary:'Empezar por diagnóstico del negocio →',
@@ -3628,7 +3630,7 @@ var T={
     ov1_t:'Dashboards',    ov1_sub:'Diagnóstico inmediato · Growth OS',
     ov2_t:'Reportes',      ov2_sub:'Benchmarks y análisis sectoriales',
     ov3_t:'Talleres',      ov3_sub:'Virtuales e in-house',
-    ov4_t:'Artículos',     ov4_sub:'Ensayos de economía, instituciones e historia',
+    ov4_t:'Blog',          ov4_sub:'Historia, ideas y entorno económico',
     ov5_t:'Publicaciones', ov5_sub:'Libros, papers y columnas académicas',
     p1_num:'01 — Acción inmediata',   p1_title:'Dashboards',
     p1_desc:'Si tu negocio está en un momento crítico, empieza aquí.', p1_tag:'Growth OS',
@@ -3636,18 +3638,18 @@ var T={
     p2_desc:'Análisis macroeconómico, riesgo regulatorio y benchmarks empresariales para leer el entorno antes de decidir.', p2_tag:'6 reportes',
     p3_num:'03 — Talleres corporativos virtuales', p3_title:'Talleres corporativos',
     p3_desc:'Dos talleres virtuales independientes para equipos hispanohablantes y bilingües: finanzas personales y familiares; apreciación de la empresa privada. Programas in-house disponibles por cotización.', p3_tag:'Virtual / In-house',
-    p4_num:'04 — Artículos y ensayos', p4_title:'Artículos',
-    p4_desc:'Ensayos de economía, instituciones e historia empresarial para leer mejor el entorno ecuatoriano y latinoamericano.', p4_tag:'Eleutheros',
+    p4_num:'04 — Lectura frecuente', p4_title:'Blog',
+    p4_desc:'Historia económica, ideas y contexto — cómo las creencias determinan resultados, también en tu empresa.', p4_tag:'Eleutheros',
     p5_num:'05 — Divulgación y académicos', p5_title:'Publicaciones',
     p5_desc:'Libros, papers y columnas. El respaldo formal detrás de cada herramienta.', p5_tag:'Académico',
-    cp1:'Hay un empresario latinoamericano que rara vez aparece en los casos de Harvard.',
+    cp1:'Hay un tipo de empresario que no aparece en los casos de Harvard.',
     cp1b:'',
-    cp_or:'Opera donde el Estado cambia las reglas en mitad del partido, el crédito se vuelve prudente tarde, los impuestos pesan antes de que llegue la utilidad y la política acorta el horizonte de inversión. Ese empresario no necesita entusiasmo. Necesita criterio.',
-    cp2:'Por eso este sitio no empieza con una biografía. Empieza con problemas observables: caja, incentivos, coordinación, entorno institucional y decisiones que no conviene aplazar.',
+    cp_or:'Opera donde el Estado cambia las reglas en mitad del partido, los impuestos muerden, el crédito se estrecha y el plan de mediano plazo compite contra el ruido de la semana. Y aun así, construye.',
+    cp2:'Ese empresario necesita herramientas distintas. No las que enseñan los MBAs para mercados ordenados. Las que funcionan cuando el entorno no coopera.',
     cp3a:'',
-    cp3b:'Después de dos décadas entre consultoría, docencia, investigación y empresa privada, la conclusión se volvió bastante simple: muchas organizaciones no fracasan por falta de energía, sino por leer tarde la información que ya estaba disponible.',
-    cp4:'Aquí esa lectura se vuelve práctica: dashboards para diagnosticar la salud del negocio; reportes para traducir macroeconomía y regulación a decisiones; talleres para que el equipo entienda dinero, empresa privada y cooperación productiva.',
-    cp5:'El punto de partida es Ecuador. El público es más amplio: empresarios, directivos y equipos hispanohablantes o bilingües que necesitan decidir con mejor criterio en mercados donde equivocarse cuesta caro. La primera herramienta operativa es Growth OS.',
+    cp3b:'20 años en proyectos como consultor, participante externo e interno me dejaron una certeza: el problema rara vez es falta de esfuerzo. Es operar con información vieja y sin un marco para leer los próximos seis meses.',
+    cp4:'Eso es lo que resuelve este sitio. Dashboards que diagnostican la salud real del negocio. Reportes que traducen el entorno macroeconómico a decisiones concretas. Dos talleres corporativos virtuales para equipos hispanohablantes y bilingües: dinero y finanzas personales; apreciación de la empresa privada. También disponibles en formato físico in-house para programas especiales, bajo cotización.',
+    cp5:'Todo en español, todo en inglés, para empresarios, directivos y equipos hispanohablantes o bilingües en Estados Unidos, Canadá, España y otros mercados donde una mala decisión cuesta caro. La primera herramienta operativa es Growth OS. Empieza ahí.',
     guide_k:'No empieces por admirar una biografía.',
     guide_t:'Elige según el problema que ya tienes encima.',
     guide_1_t:'Si falta caja',
@@ -3663,10 +3665,10 @@ var T={
     proof4_note:'Rangos observados en proyectos específicos; no promesa de resultado típico.',
     opt_eyebrow:'Mapa de decisión',
     opt_title:'Primero presión. Después herramienta.',
-    opt_context_1:'La pregunta no es qué comprar primero, sino qué decisión está peor informada. Una empresa puede sobrevivir a un mes difícil; difícilmente sobrevive a varios meses interpretados con malos datos.',
-    opt_context_2:'Empieza por el frente donde ya hay costo: caja, entorno o equipo. La elegancia viene después del diagnóstico.',
+    opt_context_1:'Si estás mirando la página entera, probablemente no necesitas más opciones. Necesitas separar el síntoma caro del ruido.',
+    opt_context_2:'Escoge el punto donde la presión ya se nota: caja, entorno o equipo. Lo demás puede esperar.',
     decision_rule:'Regla editorial',
-    decision_line:'No está ordenada como catálogo. Está ordenada como una lectura aplicada de problemas empresariales.',
+    decision_line:'Esta web no está ordenada por productos. Está ordenada por decisiones.',
     opt1_h:'Diagnostica tu negocio',
     opt1_micro:'en 20 min sabes si estás en zona de riesgo',
     opt2_h:'Entiende tu entorno',
@@ -3674,14 +3676,14 @@ var T={
     opt3_h:'Explora talleres corporativos',
     opt3_micro:'dos talleres que cambian cómo ven el dinero y la empresa',
     gos_ladder:'Empieza donde estás: GROW ($47, meses 0–6) · CROSS (gratis, meses 6–24, mientras construyes tracción) · SCALE (PRO, cuando llegues ahí).',
-    bento_deck:'Cinco entradas para leer caja, entorno, equipo, artículos y respaldo formal.',
+    bento_deck:'Cinco entradas. Úsalas según el problema: caja, entorno, equipo, lectura o respaldo formal.',
     stakes_kicker:'El costo de mirar tarde',
     stakes_signal:'67/100',
-    stakes_t:'El dato importa porque disciplina la intuición. En Ecuador, el INEC mostró que de cada 100 emprendimientos nacidos en 2015 solo 67 seguían activos al año siguiente. GEM Ecuador 2024 añade el contexto reciente: apagones, inseguridad, regulación inestable y crédito limitado. Decidir tarde no es un defecto estético; es leer el entorno cuando ya apareció en la caja.',
+    stakes_t:'En Ecuador, el INEC mostró que de cada 100 emprendimientos nacidos en 2015 solo 67 seguían activos al año siguiente. GEM Ecuador 2024 añade el contexto: apagones, inseguridad, regulación inestable y crédito limitado amenazan a los nuevos negocios. El costo no es abstracto: decidir tarde te deja leyendo el entorno cuando ya pegó en caja.',
     stakes_src_1:'Fuente: INEC',
     stakes_src_2:'Fuente: GEM Ecuador',
     tes_eye:'Lo que dicen clientes reales',
-    tes_title:'Lecturas de clientes reales, no promesas de resultado',
+    tes_title:'Resultados en distintos tipos de asesorías a PYMES',
     t1_q:'Bastante didáctico, información precisa y organizada.',
     t1_name:'Juan Pablo Z.',
     t1_role:'Diseñador multimedia · Quito',
@@ -3691,15 +3693,15 @@ var T={
     byline:'Economía con instituciones y empresas',
     tl_lbl:'Trayectoria', tl_title:'Una trayectoria en defensa de la sociedad civil y la empresa privada', tl_title_a:'Dos temas persistentes: ', tl_title_b:'crecimiento económico y optimismo racional',
     tl1_t:'Growth OS — cuatro dashboards, un sistema completo',
-    tl1_b:'Del primer MRR al exit. Herramientas para que una empresa joven detecte temprano sus restricciones reales. La síntesis práctica de dos décadas de economía aplicada a la empresa.',
-    tl2_t:'Consultoría independiente — ideas sometidas a operación',
-    tl2_b:'33+ clientes directos. En proyectos específicos se observaron ROIs del 10–40% en mercados emergentes; no es una promesa de resultado típico. Keynote en Forum da Liberdade, Porto Alegre, ante 3.000 asistentes. La defensa de la empresa privada también debe poder medirse en decisiones concretas.',
-    tl3_t:'14 años formando estudiantes universitarios en economía, mercado y empresa',
+    tl1_b:'Del primer MRR al exit. Herramientas que evitan la quiebra temprana de nuevos negocios. La síntesis práctica de dos décadas de economía aplicada a la empresa.',
+    tl2_t:'Consultoría independiente — ',
+    tl2_b:'33+ clientes directos. En proyectos específicos se observaron ROIs del 10–40% en mercados emergentes; no es una promesa de resultado típico. Keynote en Forum da Liberdade, Porto Alegre — el mayor evento de libertad económica de América del Sur, 3.000 asistentes. El capitalismo popular e incluyente como leit motif.',
+    tl3_t:'14 años formando estudiantes universitarios con una mucho mejor comprensión del mercado y la empresa',
     tl3_b:'Fundó el primer subdepartamento de Economía Austriaca e Institucional del Ecuador. Diseñó una síntesis propia — Economía con instituciones y empresas — para Principios de Economía (ECN100, USFQ). Asesoró y colaboró en la creación del Instituto de Economía de la USFQ y su revista académica Polemika.',
-    tl4_t:'Autor, articulista y traductor de economía institucional y empresarial',
-    tl4_b:'Autor de "10 Lecciones de Economía". Traducción y difusión en español de economía continental europea, con especial atención a la escuela austriaca. Columnista en prensa ecuatoriana.',
-    tl5_t:'Formación teórica al servicio de problemas reales',
-    tl5_b:'M.E.E. en UFM Guatemala / Boston University. Trabajo doctoral en evolución institucional mengeriana (3 working papers). La teoría austriaca del capital como instrumento para entender coordinación, inversión y tiempo.',
+    tl4_t:'Autor en la línea de la Economía con instituciones y empresas',
+    tl4_b:'Autor de "10 Lecciones de Economía". Traducción y difusión de economía de las escuelas continentales europeas (especialmente la austriaca) en español. Columnista en prensa ecuatoriana. ',
+    tl5_t:'La formación: la teoría sólida al servicio de causas reales',
+    tl5_b:'M.E.E. en UFM Guatemala / Boston University. Trabajo de doctorado en evolución institucional Mengerian (3 working papers). La teoría austriaca del capital como herramienta de optimismo racional — no como adorno académico.',
     term_lbl:'Consulta directa', term_title_a:'¿Tienes una ', term_title_b:'pregunta', term_title_c:'?',
     contact_eye:'Consulta directa · WhatsApp',
     contact_title:'Pregunta algo concreto',
@@ -3748,7 +3750,7 @@ var T={
     h1_l1a:'Expanding a business in ', h1_l1b:'Latin America',
     h1_l2:'faces two simultaneous battles: building the business, and surviving an environment that works against it.',
     h1_l3a:'Here you\'ll find ', h1_l3b:'tools', h1_l3c:' to face both with better judgment.',
-    hero_sub:'For entrepreneurs operating where rules, credit and politics matter as much as the product.',
+    hero_sub:'There is a type of entrepreneur who does not appear in Harvard case studies. This site exists for that entrepreneur.',
     badge_mark:'Keynote',
     badge_copy:'Forum da Liberdade · Porto Alegre · 3,000 attendees',
     cta_primary:'Start with a business diagnosis →',
@@ -3759,7 +3761,7 @@ var T={
     ov_lbl:'jfcarpio.com — Navigate',
     ov2_t:'Reports',       ov2_sub:'Benchmarks and sector analysis',
     ov3_t:'Workshops',     ov3_sub:'Virtual and in-house',
-    ov4_t:'Articles',      ov4_sub:'Essays on economics, institutions and history',
+    ov4_t:'Blog',          ov4_sub:'History, ideas and economic context',
     ov5_t:'Publications',  ov5_sub:'Books, papers and academic columns',
     p1_num:'01 — Immediate action',    p1_title:'Dashboards',
     p1_desc:'If your business is at a critical juncture, start here.', p1_tag:'Growth OS',
@@ -3767,17 +3769,17 @@ var T={
     p2_desc:'Macroeconomic analysis, regulatory risk and business benchmarks for reading the environment before deciding.', p2_tag:'6 reports',
     p3_num:'03 — Corporate workshops', p3_title:'Corporate workshops',
     p3_desc:'Two virtual workshops for Spanish-speaking and bilingual teams: personal/family finance and private enterprise appreciation. Separate modules, separate ROI. In-house programs available by quote.', p3_tag:'Virtual / In-house',
-    p4_num:'04 — Articles and essays', p4_title:'Articles',
-    p4_desc:'Essays on economics, institutions and business history for reading Ecuador and Latin America with better judgment.', p4_tag:'Eleutheros',
+    p4_num:'04 — Regular reading', p4_title:'Blog',
+    p4_desc:'Economic history, ideas and context — how certain ideas — bad ones — really do change everything.', p4_tag:'Eleutheros',
     p5_num:'05 — Public and academic', p5_title:'Publications',
     p5_desc:'Books, papers and columns. The formal foundation behind every tool.', p5_tag:'Academic',
-    cp1:'There is a Latin American entrepreneur who rarely appears in Harvard case studies.',
+    cp1:'There is a type of entrepreneur who does not appear in Harvard case studies.',
     cp1b:'',
-    cp2:'That is why this site does not begin with a biography. It begins with observable problems: cash, incentives, coordination, the institutional environment and decisions that should not be postponed.',
+    cp2:'That entrepreneur needs different tools. Not the ones MBAs teach for orderly markets. The ones that work when the environment does not cooperate.',
     cp3a:'',
-    cp3b:'After two decades across consulting, teaching, research and private enterprise, the conclusion became simple enough: many organizations do not fail for lack of energy, but for reading too late the information that was already available.',
-    cp4:'Here that reading becomes practical: dashboards to diagnose business health; reports to translate macroeconomics and regulation into decisions; workshops so teams understand money, private enterprise and productive cooperation.',
-    cp5:'The starting point is Ecuador. The audience is broader: founders, executives and Spanish-speaking or bilingual teams that need better judgment in markets where mistakes are expensive. The first operating tool is Growth OS.',
+    cp3b:'20 years across projects as a consultant, external participant and internal participant left me one certainty: the problem is rarely lack of effort. It is operating with old information and without a framework for reading the next six months.',
+    cp4:'This is what this site solves. Dashboards that diagnose the real health of the business. Reports that translate the macroeconomic environment into concrete decisions. Two virtual corporate workshops for Spanish-speaking and bilingual teams: money and personal finance; appreciation of private enterprise. Physical in-house formats are also available for special programs by quote.',
+    cp5:'Everything in Spanish, everything in English, for founders, executives and bilingual teams in the United States, Canada, Spain and other higher-income markets where one bad decision is expensive. The first operating tool is Growth OS. Start there.',
     guide_k:'Do not start by admiring a biography.',
     guide_t:'Choose based on the problem already in front of you.',
     guide_1_t:'If cash is tight',
@@ -3793,10 +3795,10 @@ var T={
     proof4_note:'Ranges observed in specific projects; not a typical-results promise.',
     opt_eyebrow:'Decision map',
     opt_title:'Pressure first. Tool second.',
-    opt_context_1:'The question is not what to buy first, but which decision is worst informed. A company can survive a difficult month; it rarely survives several months interpreted with bad data.',
-    opt_context_2:'Start where the cost is already visible: cash, environment or team. Elegance comes after diagnosis.',
+    opt_context_1:'If you are scanning the whole page, you probably do not need more options. You need to separate the expensive symptom from the noise.',
+    opt_context_2:'Choose the point where pressure is already visible: cash, environment or team. Everything else can wait.',
     decision_rule:'Editorial rule',
-    decision_line:'This is not organized like a catalog. It is organized as an applied reading of business problems.',
+    decision_line:'This website is not organized by products. It is organized by decisions.',
     opt1_h:'Diagnose your business',
     opt1_micro:'in 20 min you know if you are in the risk zone',
     opt2_h:'Understand your environment',
@@ -3804,10 +3806,10 @@ var T={
     opt3_h:'Explore corporate workshops',
     opt3_micro:'two workshops that change how teams see money and enterprise',
     gos_ladder:'Start where you are: GROW ($47, months 0–6) · CROSS (free, months 6–24, while building traction) · SCALE (PRO, when you get there).',
-    bento_deck:'Five entry points for reading cash, environment, team, articles and formal backing.',
+    bento_deck:'Five entry points. Use them by problem: cash, environment, team, reading or formal backing.',
     stakes_kicker:'The cost of reading late',
     stakes_signal:'67/100',
-    stakes_t:'The data matters because it disciplines intuition. In Ecuador, INEC showed that out of every 100 ventures born in 2015, only 67 were still active the following year. GEM Ecuador 2024 adds the recent context: power outages, insecurity, unstable regulation and limited credit. Deciding late is not an aesthetic flaw; it means reading the environment once it has already shown up in cash flow.',
+    stakes_t:'In Ecuador, INEC showed that out of every 100 ventures born in 2015, only 67 were still active the following year. GEM Ecuador 2024 adds the context: power outages, insecurity, unstable regulation and limited credit threaten new ventures. The cost is not abstract: late decisions leave you reading the environment after it has already hit cash flow.',
     stakes_src_1:'Source: INEC',
     stakes_src_2:'Source: GEM Ecuador',
     tes_eye:'What real clients say',
@@ -3818,19 +3820,19 @@ var T={
     t2_q:'Easy, no complications. Real. And 100% what we needed to land everything and make sure it was not just a dream.',
     t2_name:'Leonela Loor',
     t2_role:'Ecommerce entrepreneur · Orlando, FL',
-    cp_or:'They operate where the State changes the rules mid-game, credit becomes prudent too late, taxes weigh before profit arrives and politics shortens the investment horizon. That entrepreneur does not need enthusiasm. They need judgment.',
+    cp_or:'They operate where the State changes the rules mid-game, taxes bite, credit tightens and the medium-term plan competes with the noise of the week. And yet, they build.',
     byline:'Economics with institutions and enterprise',
     tl_lbl:'Track record', tl_title:'A career defending civil society and private enterprise', tl_title_a:'Two persistent themes: ', tl_title_b:'economic growth and rational optimism',
     tl1_t:'Growth OS — four dashboards, one complete system',
-    tl1_b:'From the first MRR to exit. Tools for helping young companies detect their real constraints early. The practical synthesis of two decades of applied economics.',
+    tl1_b:'From the first MRR to exit. Tools that prevent early business failure. The practical synthesis of two decades of applied economics.',
     tl2_t:'Independent consulting — because ideas must survive contact with reality',
-    tl2_b:'33+ direct clients. Specific projects showed 10–40% ROIs in emerging markets; this is not a typical-results promise. Keynote at Forum da Liberdade, Porto Alegre, before 3,000 attendees. The defense of private enterprise must also be measurable in concrete decisions.',
-    tl3_t:'14 years training university students in economics, markets and enterprise',
+    tl2_b:'33+ direct clients. Specific projects showed 10–40% ROIs in emerging markets; this is not a typical-results promise. Keynote at Forum da Liberdade, Porto Alegre — the largest economic freedom event in South America, 3,000 attendees. If you defend an idea, you must be able to apply it.',
+    tl3_t:'14 years training university students with a much better understanding of markets and enterprise',
     tl3_b:'Founded Ecuador\'s first Austrian and Institutional Economics sub-department. Designed an original synthesis — Economics with institutions and enterprise — for Principios de Economía (ECN100, USFQ). Advised and collaborated in the creation of the USFQ Institute of Economics and its academic journal Polemika.',
-    tl4_t:'Author, article writer and translator of institutional and business economics',
-    tl4_b:'Author of "10 Lessons of Economics". Translation and dissemination in Spanish of continental European economics, with special attention to the Austrian school. Columnist in Ecuadorian press.',
-    tl5_t:'Theoretical formation in service of real problems',
-    tl5_b:'M.E.E. at UFM Guatemala / Boston University. Doctoral work in Mengerian institutional evolution (3 working papers). Austrian capital theory as an instrument for understanding coordination, investment and time.',
+    tl4_t:'Author in the tradition of Economics with institutions and enterprise',
+    tl4_b:'Author of "10 Lessons of Economics". Translation and dissemination of continental European economics (especially the Austrian school) in Spanish. Columnist in Ecuadorian press. ',
+    tl5_t:'The formation: the solid theory in service of real causes',
+    tl5_b:'M.E.E. at UFM Guatemala / Boston University. Doctoral work in Mengerian institutional evolution (3 working papers). Austrian capital theory as a tool for rational optimism — not academic ornament.',
     term_lbl:'Direct consultation', term_title_a:'Got a ', term_title_b:'question', term_title_c:'?',
     contact_eye:'Direct consultation · WhatsApp',
     contact_title:'Ask something specific',
