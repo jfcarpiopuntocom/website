@@ -103,8 +103,8 @@
 </script>
 
 <style>
-/* jfcarpio.com/workshops v1.161 - 2026-05-19 */
-/* English mirror of talleres v1.161 */
+/* jfcarpio.com/workshops v1.163 - 2026-05-20 */
+/* English mirror of talleres v1.163 */
 /* ─── ROOT — light only, anti iOS auto-dark ─── */
 :root {
   color-scheme: light only;
@@ -760,6 +760,42 @@ a { text-decoration: none; color: inherit; }
   border: 1px dashed var(--orange); border-radius: 3px; padding: 12px 16px; margin-bottom: 22px;
 }
 
+/* ─── DIAGNÓSTICO / DIAGNOSIS ─── */
+.diag { max-width: 820px; background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--orange); border-radius: 4px; padding: 28px 24px; margin: 0; }
+.diag-lead { font-family: var(--display); font-size: 22px; font-style: italic; line-height: 1.22; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 18px; }
+.diag-items { list-style: none; padding: 0; margin: 0 0 20px; }
+.diag-items li { font-size: 15px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; padding: 8px 0 8px 28px; position: relative; border-top: 1px solid var(--rule); }
+.diag-items li:first-child { border-top: none; }
+.diag-items li::before { content: '☐'; position: absolute; left: 0; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; font-size: 14px; top: 9px; }
+.diag-score { font-family: var(--mono); font-size: .86rem; line-height: 1.7; letter-spacing: .03em; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; border-top: 1px dashed var(--rule); padding-top: 16px; }
+.diag-score strong { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.diag-score em { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; font-style: normal; }
+
+/* ─── WHAT CHANGES ─── */
+.que-cambia { max-width: 860px; }
+.que-cambia .h2 { margin-bottom: 6px; }
+.que-cambia-sub { font-family: var(--mono); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important; margin-bottom: 28px; display: block; }
+.cambios { display: grid; gap: 14px; }
+.cambio { background: var(--card); border: 1px solid var(--rule); border-radius: 4px; padding: 20px 22px; }
+.cambio-mod { font-family: var(--mono); font-size: .82rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; display: block; margin-bottom: 12px; }
+.cambio.ep .cambio-mod { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.cambio ul { list-style: none; padding: 0; margin: 0; }
+.cambio ul li { font-family: var(--serif); font-size: 15px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; padding: 5px 0 5px 20px; position: relative; }
+.cambio ul li::before { content: '→'; position: absolute; left: 0; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.cambio.ep ul li::before { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+@media (min-width: 600px) { .cambios { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ─── FAQ ─── */
+.faq { max-width: 820px; }
+.faq .eyebrow { margin-bottom: 18px; }
+.faq .h2 { margin-bottom: 0; }
+.faq-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.faq-item { border-top: 1px solid var(--rule); padding: 20px 0; }
+.faq-item:last-child { border-bottom: 1px solid var(--rule); }
+.faq-q { font-family: var(--display); font-size: 19px; font-style: italic; line-height: 1.3; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 10px; }
+.faq-a { font-family: var(--serif); font-size: 16px; line-height: 1.65; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.faq-a strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+
 /* ─── ANTI iOS AUTO-DARK ─── */
 @media (prefers-color-scheme: dark) {
   html, body { background: var(--bg) !important; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
@@ -777,8 +813,40 @@ a { text-decoration: none; color: inherit; }
   .mech-name, .mech-layers li span, .cta-math strong, .cta-scarcity { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
   .result-num, .cta-stack-label, .cta-stack li::before { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
   .mech p, .mech-epiphany, .result-body, .result-attr, .cta-math, .cta-math em, .cta-stack li, .cta-stack li em { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+  .diag-lead, .diag-items li, .diag-score, .faq-q, .faq-a, .faq-a strong, .cambio ul li, .que-cambia-sub { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+  .diag-items li::before, .diag-score strong, .cambio-mod, .cambio ul li::before { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+  .cambio.ep .cambio-mod, .cambio.ep ul li::before, .diag-score em { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Why does this training work when others haven't?",
+      "acceptedAnswer":{"@type":"Answer","text":"Because it intervenes at the right brain layer. Most programs teach new techniques on top of beliefs no one examined. The change lasts as long as the enthusiasm does. These workshops follow the sequence of Dr. Paul Dobransky's MindOS model: boundary and behavior first, then intellect and decision. Break the order and there's no lasting change."}
+    },
+    {
+      "@type":"Question",
+      "name":"Do I need to bring in both modules?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. Each module has its own ROI and can be brought in standalone. If the main issue is personal financial stress leaking into work, start with Module A. If the issue is low ownership or a tense relationship with the company, start with Module B. Taken in sequence, participants typically discover the same pattern operates in both domains."}
+    },
+    {
+      "@type":"Question",
+      "name":"How much does it cost and what's included?",
+      "acceptedAnswer":{"@type":"Answer","text":"One module: $1,890. Both modules: $3,200. Includes pre-workshop team diagnosis, 2-hour live workshop with exercises on real numbers, Q&A, curated follow-up material, and direct WhatsApp access to the facilitator for 30 days. Guarantee: if no observable change in the team, the second session is at no charge."}
+    },
+    {
+      "@type":"Question",
+      "name":"What is MindOS?",
+      "acceptedAnswer":{"@type":"Answer","text":"The model of psychiatrist Dr. Paul Dobransky on how the mind works. It describes four brain layers in order: boundary, behavior, intellect, and decision. A training that enters directly through the intellect — new information on top of intact beliefs — doesn't produce lasting change. The sequence matters."}
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -1015,6 +1083,33 @@ a { text-decoration: none; color: inherit; }
 
   <hr class="rule">
 
+  <!-- ─── WHAT CHANGES AFTER ─── -->
+  <section class="que-cambia" aria-label="Observable results after the workshop">
+    <span class="eyebrow">What changes after</span>
+    <h2 class="h2">Not enthusiasm. <em>Different behavior.</em></h2>
+    <span class="que-cambia-sub">Observable behaviors in the weeks following the workshop</span>
+    <div class="cambios">
+      <div class="cambio">
+        <span class="cambio-mod">Module A · Personal finance</span>
+        <ul>
+          <li>Stops using the card to cover the month. Has a minimum liquidity number and knows it.</li>
+          <li>Distinguishes productive debt from consumer debt before signing.</li>
+          <li>Saves first, spends what's left. Not the other way around.</li>
+        </ul>
+      </div>
+      <div class="cambio ep">
+        <span class="cambio-mod">Module B · Private enterprise</span>
+        <ul>
+          <li>Takes care of company assets as their own tools, because they understand they are.</li>
+          <li>Talks about profit and margin without resentment. Understands which part of the P&amp;L depends on them.</li>
+          <li>Discretionary effort goes up. Not from loyalty — from economic logic understood.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
   <!-- ─── SYNERGY ─── -->
   <section class="tesis">
     <blockquote class="pull">
@@ -1080,6 +1175,27 @@ a { text-decoration: none; color: inherit; }
 
   <hr class="rule">
 
+  <!-- ─── DIAGNOSIS ─── -->
+  <section class="diag" aria-label="Quick diagnosis: which module does your team need?">
+    <p class="diag-lead">Quick diagnosis: which module does your team need now?</p>
+    <ul class="diag-items">
+      <li>Someone on the team ends the month tight or in the red, and it affects their focus during work hours.</li>
+      <li>Salary increases don't solve the team's financial stress. People stay just as stretched.</li>
+      <li>Family decisions — debt, housing, children's education — surface as distractions during the workday.</li>
+      <li>People comply, but don't take care of what isn't directly theirs.</li>
+      <li>There's implicit distrust about what "the company makes" versus what "the employee takes home."</li>
+      <li>Discretionary effort is low: people do what's asked, not what would move the result.</li>
+      <li>Post-training enthusiasm didn't last more than three weeks after the last intervention.</li>
+    </ul>
+    <div class="diag-score">
+      <strong>1–2 signals:</strong> the problem is isolated. One module resolves it.<br>
+      <strong>3–5 signals:</strong> there's a pattern. Both modules in sequence have higher ROI.<br>
+      <em>6–7 signals:</em> the team's operating system needs full intervention. Let's talk this week.
+    </div>
+  </section>
+
+  <hr class="rule">
+
   <!-- ─── CTA ─── -->
   <section class="cta">
     <span class="cta-eyebrow">If you want to talk</span>
@@ -1119,6 +1235,32 @@ a { text-decoration: none; color: inherit; }
       <a href="https://calendly.com/jfcarpio/5minutos" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">Schedule 5 minutes</a>
     </div>
     <noscript><p><a href="mailto:jf@jfcarpio.com?subject=Corporate%20workshops">Email about corporate workshops</a></p></noscript>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ─── FAQ ─── -->
+  <section class="faq" aria-label="Frequently asked questions">
+    <span class="eyebrow">Frequently asked questions</span>
+    <h2 class="h2">What the manager <em>usually asks before deciding.</em></h2>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <p class="faq-q">Why does this training work when others haven't?</p>
+        <p class="faq-a">Because it intervenes at the <strong>right brain layer</strong>. Most programs teach new techniques on top of beliefs no one examined. The change lasts as long as the enthusiasm does. These workshops follow the sequence of Dr. Paul Dobransky's MindOS model: boundary and behavior first, then intellect and decision. Break the order and there's no lasting change.</p>
+      </li>
+      <li class="faq-item">
+        <p class="faq-q">Do I need to bring in both modules?</p>
+        <p class="faq-a">No. Each module has its own ROI and can be brought in standalone. If the main issue is personal financial stress leaking into work, start with Module A. If the issue is low ownership or a tense relationship with the company, start with Module B. Taken in sequence, participants typically discover the same pattern operates in both domains — which makes the second session considerably faster.</p>
+      </li>
+      <li class="faq-item">
+        <p class="faq-q">How much does it cost and what's included exactly?</p>
+        <p class="faq-a">One module: <strong>$1,890.</strong> Both modules: <strong>$3,200.</strong> Includes pre-workshop team diagnosis, 2-hour live workshop with exercises on real numbers, Q&amp;A, curated follow-up material, and direct WhatsApp access to the facilitator for 30 days. If no observable change in the team, the second session is at no charge.</p>
+      </li>
+      <li class="faq-item">
+        <p class="faq-q">What is MindOS?</p>
+        <p class="faq-a">The model of psychiatrist <strong>Dr. Paul Dobransky</strong> on how the mind works. It describes four brain layers in order: boundary, behavior, intellect, and decision. A training that enters directly through the intellect — new information on top of intact beliefs — doesn't produce lasting change. The sequence matters.</p>
+      </li>
+    </ul>
   </section>
 
 </main>
