@@ -134,7 +134,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.172 (Deslop Spanish editorial register) · Last major refactor: 2026-05-20 · Author: JFC + Codex
+  v1.173 (Remove text overlap in hero and timeline proof) · Last major refactor: 2026-05-20 · Author: JFC + Codex
   WHITE E enhancements: added mix-blend-mode:screen to background images for
   beautiful, visible photography against white background (no more dingy appearance).
 ================================================================================
@@ -2562,6 +2562,32 @@ button { border:none; background:none; font:inherit; }
     grid-row:auto !important;
     padding-left:18px !important;
   }
+}
+
+/* v1.173: overlap kill-switch; readability beats decorative motion */
+.hero-h1 {
+  overflow:visible !important;
+}
+.hero-h1 .lw {
+  overflow:visible !important;
+  display:block !important;
+  margin-bottom:.18em !important;
+}
+.hero-h1 .li {
+  -webkit-animation:none !important;
+  animation:none !important;
+  -webkit-transform:none !important;
+  transform:none !important;
+  opacity:1 !important;
+}
+#sectionGhost {
+  display:none !important;
+}
+.about-section .section-hd,
+.about-section .timeline-proof,
+.about-section .timeline {
+  position:relative !important;
+  z-index:2 !important;
 }
 </style>
 </head>
