@@ -1,5 +1,5 @@
 # AGENTS.md — jfcarpio.com
-v1.169 · 2026-05-19 · Author: JFC + Codex
+v1.168 · 2026-05-19 · Author: JFC + Codex
 
 ---
 
@@ -75,7 +75,6 @@ Branch for feature work: `Codex/high-contrast-white-design-VK5kk`. Base: `main`.
 - Never put success-counter proof stats in the hero of the main landing. JFC hates that pattern. Put those figures near the trajectory/timeline where they read as accumulated work across decades.
 - Main timeline title approved by JFC: `Una trayectoria en defensa de la sociedad civil y la empresa privada`.
 - Newsletter/list naming: use `Lista de correos de jfcarpio.com`, not `Carta del Entorno`. Platform: Gumroad. URL: `https://jfcarpio.gumroad.com/`.
-- Main hero CTA should not lead with price-first sales copy. Prefer decision/diagnosis language; keep price details inside the relevant product/card.
 
 ### Las7formas Curriculum Bullets (CRITICAL)
 - The timestamped video bullets in `las7formas/index.html` inside `<ul class="curr__list" id="currList">` are JFC-approved source copy.
@@ -141,7 +140,7 @@ Sources checked 2026-05-06: Google Search Central helpful content + generative-A
 
 ## Versioning
 
-Current: **v1.169**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
+Current: **v1.168**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
 
 ---
 
