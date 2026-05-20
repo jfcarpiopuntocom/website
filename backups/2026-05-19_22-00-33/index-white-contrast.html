@@ -134,7 +134,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.170 (Fix bento overlap and deslop copy) · Last major refactor: 2026-05-19 · Author: JFC + Codex
+  v1.169 (Clarify conversion copy) · Last major refactor: 2026-05-19 · Author: JFC + Codex
   WHITE E enhancements: added mix-blend-mode:screen to background images for
   beautiful, visible photography against white background (no more dingy appearance).
 ================================================================================
@@ -2297,46 +2297,6 @@ button { border:none; background:none; font:inherit; }
   }
   .timeline-proof-item:last-child { border-bottom:none; }
 }
-
-/* v1.170: lock bento card layout; no auto-placement or text collisions */
-@media(min-width:860px){
-  .pan {
-    grid-template-columns:minmax(150px,220px) minmax(0,1fr) minmax(132px,180px) !important;
-    grid-template-areas:
-      "cover main tag"
-      "cover items items" !important;
-    grid-auto-flow:row !important;
-  }
-  .pan-cover {
-    grid-area:cover !important;
-    align-self:start !important;
-  }
-  .pan > div:nth-of-type(2) {
-    grid-area:main !important;
-    min-width:0 !important;
-  }
-  .pan-items {
-    grid-area:items !important;
-    min-width:0 !important;
-    margin-top:2px !important;
-  }
-  .pan-bot {
-    grid-area:tag !important;
-    min-width:0 !important;
-    margin-top:0 !important;
-    justify-self:end !important;
-  }
-  .pan-gl {
-    z-index:0 !important;
-  }
-  .pan-cover,
-  .pan > div:nth-of-type(2),
-  .pan-items,
-  .pan-bot {
-    position:relative !important;
-    z-index:1 !important;
-  }
-}
 </style>
 </head>
 <body style="">
@@ -2401,7 +2361,7 @@ button { border:none; background:none; font:inherit; }
       <h1 class="hero-h1">
         <span class="lw"><span class="li"><span data-t="h1_l1a">La expansión de un negocio en </span><span style="color:#E86040" data-t="h1_l1b">Latinoamérica</span></span></span>
         <span class="lw"><span class="li" data-t="h1_l2">enfrenta dos batallas simultáneas: construir el negocio, y sobrevivir el entorno que lo complica.</span></span>
-        <span class="lw"><span class="li"><strong><span data-t="h1_l3a">Aquí encontrarás </span><span style="color:#E8A020" data-t="h1_l3b">herramientas</span><span data-t="h1_l3c"> para enfrentar ambas cosas con mejor criterio.</span></strong></span></span>
+        <span class="lw"><span class="li"><strong><span data-t="h1_l3a">Aquí encontrarás </span><span style="color:#E8A020" data-t="h1_l3b">herramientas</span><span data-t="h1_l3c"> para enfrentar exitosamente ambas cosas.</span></strong></span></span>
       </h1>
       <p class="hero-sub" data-t="hero_sub">Hay un tipo de empresario que no aparece en los casos de Harvard. Este sitio existe para ese empresario.</p>
       <div class="hero-ctas">
@@ -2521,7 +2481,7 @@ button { border:none; background:none; font:inherit; }
           <span class="pan-cnt" style="color:#3B7EE8;" data-target="7">7</span>
         </div>
         <h3 class="pan-title" data-t="p2_title">Reportes</h3>
-        <p class="pan-desc" data-t="p2_desc">Análisis macroeconómico, riesgo regulatorio y benchmarks empresariales para leer el entorno antes de decidir.</p>
+        <p class="pan-desc" data-t="p2_desc">Análisis macroeconómico, riesgo regulatorio y benchmarks empresariales. Acceso privado para decisiones reales.</p>
       </div>
       <div class="pan-items">
         <span class="pan-item"><span class="pan-item-tag" style="color:#3B7EE8;">2025 · ENG/SPA</span>Minerales Críticos en América Latina — Riesgo Regulatorio</span>
@@ -2654,15 +2614,15 @@ entorno te va a hacer en los próximos seis meses.</p>
     <p class="copy-p" data-t="cp4">Eso es lo que resuelve este sitio.
 Dashboards que diagnostican la salud real del negocio. Reportes que
 traducen el entorno macroeconómico a decisiones concretas. Dos talleres
-corporativos virtuales para equipos hispanohablantes y bilingües: uno sobre
-dinero y finanzas personales y familiares, otro sobre apreciación de la
-empresa privada. También disponibles en formato físico in-house para grupos
-dentro de programas especiales, bajo cotización. Pueden tomarse por separado;
-juntos ordenan dinero personal, productividad y cultura empresarial.</p>
+para tus colaboradores: uno sobre dinero y finanzas personales y familiares,
+otro sobre apreciación de la empresa privada. Son
+independientes, pero profundamente complementarios. Resultados
+respectivos: menos estrés financiero y mejor productividad; y más
+lealtad interna hacia la empresa, con gente que cuida los espacios, las
+herramientas y la marca como si fueran suyos.</p>
     <p class="copy-p" data-t="cp5">Todo en español, todo en inglés, para
-empresarios, directivos y equipos hispanohablantes o bilingües en Estados
-Unidos, Canadá, España y otros mercados donde una mala decisión cuesta caro.
-La primera herramienta operativa es Growth OS. Empieza ahí.</p>
+ empresarios hispanohablantes y bilingues donde quiera que estén. La
+herramienta más actualizada se llama Growth OS. Empieza ahí.</p>
     <p class="copy-byline">
       <strong>J. F. Carpio</strong> — <span data-t="byline">Economía con instituciones y empresas</span>
     </p>
@@ -3393,7 +3353,7 @@ var T={
     kick:'Economía aplicada · Empresa privada · América Latina',
     h1_l1a:'La expansión de un negocio en ', h1_l1b:'Latinoamérica',
     h1_l2:'enfrenta dos batallas simultáneas: construir el negocio, y sobrevivir el entorno que lo complica.',
-    h1_l3a:'Aquí encontrarás ', h1_l3b:'herramientas', h1_l3c:' para enfrentar ambas cosas con mejor criterio.',
+    h1_l3a:'Aquí encontrarás ', h1_l3b:'herramientas', h1_l3c:' para enfrentar exitosamente ambas cosas.',
     hero_sub:'Hay un tipo de empresario que no aparece en los casos de Harvard. Este sitio existe para ese empresario.',
     badge_mark:'Keynote',
     badge_copy:'Forum da Liberdade · Porto Alegre · 3.000 asistentes',
@@ -3410,7 +3370,7 @@ var T={
     p1_num:'01 — Acción inmediata',   p1_title:'Dashboards',
     p1_desc:'Si tu negocio está en un momento crítico, empieza aquí.', p1_tag:'Growth OS',
     p2_num:'02 — Entender el contexto', p2_title:'Reportes',
-    p2_desc:'Análisis macroeconómico, riesgo regulatorio y benchmarks empresariales para leer el entorno antes de decidir.', p2_tag:'6 reportes',
+    p2_desc:'Análisis macroeconómico, riesgo regulatorio y benchmarks empresariales. Acceso privado para decisiones reales.', p2_tag:'6 reportes',
     p3_num:'03 — Talleres corporativos virtuales', p3_title:'Talleres corporativos',
     p3_desc:'Dos talleres virtuales independientes para equipos hispanohablantes y bilingües: finanzas personales y familiares; apreciación de la empresa privada. Programas in-house disponibles por cotización.', p3_tag:'Virtual / In-house',
     p4_num:'04 — Lectura frecuente', p4_title:'Blog',
@@ -3423,8 +3383,8 @@ var T={
     cp2:'Ese empresario necesita herramientas distintas. No las que enseñan los MBAs para mercados ordenados. Las que funcionan cuando el entorno no coopera.',
     cp3a:'',
     cp3b:'20 años involucrado en distintos proyectos como consultor o como participante externo e interno me dieron una certeza: el problema nunca es la falta de esfuerzo. Es operar con información de hace dos trimestres, sin un marco para leer lo que el entorno te va a hacer en los próximos seis meses.',
-    cp4:'Eso es lo que resuelve este sitio. Dashboards que diagnostican la salud real del negocio. Reportes que traducen el entorno macroeconómico a decisiones concretas. Dos talleres corporativos virtuales para equipos hispanohablantes y bilingües: uno sobre dinero y finanzas personales y familiares, otro sobre apreciación de la empresa privada. También disponibles en formato físico in-house para grupos dentro de programas especiales, bajo cotización. Pueden tomarse por separado; juntos ordenan dinero personal, productividad y cultura empresarial.',
-    cp5:'Todo en español, todo en inglés, para empresarios, directivos y equipos hispanohablantes o bilingües en Estados Unidos, Canadá, España y otros mercados donde una mala decisión cuesta caro. La primera herramienta operativa es Growth OS. Empieza ahí.',
+    cp4:'Eso es lo que resuelve este sitio. Dashboards que diagnostican la salud real del negocio. Reportes que traducen el entorno macroeconómico a decisiones concretas. Dos talleres corporativos virtuales para equipos hispanohablantes y bilingües: uno sobre dinero y finanzas personales y familiares, otro sobre apreciación de la empresa privada. También disponibles en formato físico in-house para grupos dentro de programas especiales, bajo cotización. Son independientes, pero profundamente complementarios. Resultados respectivos: menos estrés financiero y mejor productividad; y más lealtad interna hacia la empresa, con gente que cuida los espacios, las herramientas y la marca como si fueran suyos.',
+    cp5:'Todo en español, todo en inglés, para empresarios, directivos y equipos hispanohablantes o bilingües en Estados Unidos, Canadá, España y otros mercados donde una mala decisión cuesta caro. La herramienta más actualizada se llama Growth OS. Empieza ahí.',
     guide_k:'No empieces por admirar una biografía.',
     guide_t:'Elige según el problema que ya tienes encima.',
     guide_1_t:'Si falta caja',
@@ -3522,7 +3482,7 @@ var T={
     kick:'Economic environment · Business economics · Enterprise',
     h1_l1a:'Expanding a business in ', h1_l1b:'Latin America',
     h1_l2:'faces two simultaneous battles: building the business, and surviving an environment that works against it.',
-    h1_l3a:'Here you\'ll find ', h1_l3b:'tools', h1_l3c:' to face both with better judgment.',
+    h1_l3a:'Here you\'ll find ', h1_l3b:'tools', h1_l3c:' to tackle both.',
     hero_sub:'There is a type of entrepreneur who does not appear in Harvard case studies. This site exists for that entrepreneur.',
     badge_mark:'Keynote',
     badge_copy:'Forum da Liberdade · Porto Alegre · 3,000 attendees',
@@ -3539,7 +3499,7 @@ var T={
     p1_num:'01 — Immediate action',    p1_title:'Dashboards',
     p1_desc:'If your business is at a critical juncture, start here.', p1_tag:'Growth OS',
     p2_num:'02 — Understanding context', p2_title:'Reports',
-    p2_desc:'Macroeconomic analysis, regulatory risk and business benchmarks for reading the environment before deciding.', p2_tag:'6 reports',
+    p2_desc:'Macroeconomic analysis, regulatory risk and business benchmarks. Private-access reports for real decisions.', p2_tag:'6 reports',
     p3_num:'03 — Corporate workshops', p3_title:'Corporate workshops',
     p3_desc:'Two virtual workshops for Spanish-speaking and bilingual teams: personal/family finance and private enterprise appreciation. Separate modules, separate ROI. In-house programs available by quote.', p3_tag:'Virtual / In-house',
     p4_num:'04 — Regular reading', p4_title:'Blog',
@@ -3551,8 +3511,8 @@ var T={
     cp2:'That entrepreneur needs different tools. Not the ones MBAs teach for orderly markets. The ones that work when the environment does not cooperate.',
     cp3a:'',
     cp3b:'20 years involved in different projects as a consultant and as an external and internal participant gave me one certainty: the problem is never lack of effort. Operating with information two quarters old, without a framework to read what the environment will do in the next six months.',
-    cp4:'This is what this site solves. Dashboards that diagnose the real health of the business. Reports that translate the macroeconomic environment into concrete decisions. Two virtual corporate workshops for Spanish-speaking and bilingual teams: one on money and personal/family finance, another on appreciation of private enterprise. Also available as physical in-house workshops for special group programs by quote. They can be taken separately; together they organize personal money, productivity and business culture.',
-    cp5:'Everything in Spanish, everything in English, for founders, executives and bilingual teams in the United States, Canada, Spain and other higher-income markets where one bad decision is expensive. The first operating tool is Growth OS. Start there.',
+    cp4:'This is what this site solves. Dashboards that diagnose the real health of the business. Reports that translate the macroeconomic environment into concrete decisions. Two virtual corporate workshops for Spanish-speaking and bilingual teams: one on money and personal/family finance, another on appreciation of private enterprise. Also available as physical in-house workshops for special group programs by quote. Independent but deeply complementary. Respective results: less financial stress and better productivity; and greater internal loyalty, with people who care for spaces, tools, and brand as if they were their own.',
+    cp5:'Everything in Spanish, everything in English, for founders, executives and bilingual teams in the United States, Canada, Spain and other higher-income markets where one bad decision is expensive. The most up-to-date tool is called Growth OS. Start there.',
     guide_k:'Do not start by admiring a biography.',
     guide_t:'Choose based on the problem already in front of you.',
     guide_1_t:'If cash is tight',
