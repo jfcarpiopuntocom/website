@@ -103,7 +103,9 @@
 </script>
 
 <style>
-/* jfcarpio.com/talleres v1.159 - 2026-05-07 */
+/* jfcarpio.com/talleres v1.161 - 2026-05-19 */
+/* v1.160: mecanismo MindOS arriba, epifanía 1a persona, result-callout +15%, stack+aritmética+escasez en CTA. Ver NOTAS DE DISEÑO en <main>. */
+/* v1.161: +5% académico — MindOS atribuido a Dr. Paul Dobransky; "capa" → "capa del cerebro" en todo el texto; tono menos slick, más contexto. */
 /* ─── ROOT — light only, anti iOS auto-dark ─── */
 :root {
   color-scheme: light only;
@@ -1104,6 +1106,78 @@ a { text-decoration: none; color: inherit; }
   }
 }
 
+/* ─── MECHANISM FLAG (v1.160) ─── */
+.mech { max-width: 820px; margin: 32px 0 0; }
+.mech .eyebrow { margin-bottom: 18px; }
+.mech .h2 { margin-bottom: 16px; }
+.mech-name { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; font-style: italic; }
+.mech p { font-size: 17px; line-height: 1.7; margin-bottom: 16px; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.mech-epiphany {
+  border-left: 3px solid var(--green);
+  padding: 4px 0 4px 18px;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.4;
+}
+.mech-layers { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; }
+.mech-layers li {
+  font-family: var(--mono); font-size: 13px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border: 1px solid var(--rule); border-left: 3px solid var(--orange);
+  border-radius: 3px; padding: 10px 14px;
+}
+.mech-layers li span { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; margin-right: 8px; }
+
+/* ─── RESULT CALLOUT (v1.160) ─── */
+.result-callout {
+  max-width: 820px;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--green);
+  border-radius: 4px;
+  padding: 26px 24px;
+  margin: 0;
+  display: grid; gap: 12px;
+}
+.result-num {
+  font-family: var(--display); font-style: italic; font-weight: 400;
+  font-size: 56px; line-height: 1;
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
+}
+.result-body { font-family: var(--serif); font-size: 18px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.result-attr { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+
+/* ─── CTA STACK + MATH + SCARCITY (v1.160) ─── */
+.cta-math {
+  font-family: var(--serif); font-size: 17px; line-height: 1.65; font-style: normal;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border-left: 3px solid var(--orange); padding-left: 16px; margin-bottom: 22px;
+}
+.cta-math strong { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.cta-math em { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.cta-stack-label {
+  font-family: var(--sans); font-size: 13px; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
+  display: block; margin-bottom: 12px;
+}
+.cta-stack { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 0; }
+.cta-stack li {
+  font-family: var(--serif); font-size: 17px; line-height: 1.5;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border-top: 1px solid var(--rule); padding: 12px 0 12px 26px; position: relative;
+}
+.cta-stack li:last-child { border-bottom: 1px solid var(--rule); }
+.cta-stack li::before { content: '✓'; position: absolute; left: 0; color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; font-weight: 700; }
+.cta-stack li em { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.cta-scarcity {
+  font-family: var(--mono); font-size: .9rem; line-height: 1.55; letter-spacing: .03em;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  border: 1px dashed var(--orange); border-radius: 3px; padding: 12px 16px; margin-bottom: 22px;
+}
+
 /* ─── ANTI iOS AUTO-DARK — repeat all text rules with !important ─── */
 @media (prefers-color-scheme: dark) {
   html, body { background: var(--bg) !important; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
@@ -1141,6 +1215,9 @@ a { text-decoration: none; color: inherit; }
   .price-guarantee { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
   .cta-btn-secondary { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
   .cta-btn-secondary::after { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+  .mech-name, .mech-layers li span, .cta-math strong, .cta-scarcity { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+  .result-num, .cta-stack-label, .cta-stack li::before { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+  .mech p, .mech-epiphany, .result-body, .result-attr, .cta-math, .cta-math em, .cta-stack li, .cta-stack li em { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
 }
 </style>
 </head>
@@ -1155,6 +1232,42 @@ a { text-decoration: none; color: inherit; }
 
 <main class="wrap">
 
+  <!--
+    ════════════════════════════════════════════════════════════════
+    NOTAS DE DISEÑO — v1.160 (2026-05-19) · solo visibles en código.
+    Para JFC y cualquier IA/editor futuro. NO romper esto:
+
+    1. MECANISMO NOMBRADO ("MindOS", .mech) va ARRIBA, antes del module-map.
+       Razón (Schwartz/Brunson): el comprador es Product-Aware; necesita el
+       mecanismo con nombre antes que el catálogo de módulos. Si lo bajas,
+       vuelve a parecer "otra capacitación más" y se pierde diferenciación.
+    2. .mech-epiphany es relato en primera persona de JFC. Es historia, no
+       dato. No volver bullet, no "mejorar" el tono, no quitar el "yo".
+    3. .result-callout (+15%) es CASO REAL provisto por JFC, sin nombre de
+       cliente por confidencialidad. NO inventar cifras, nombres ni
+       atribuciones. Doble función: prueba social + antídoto a la objeción
+       "esto suena filosófico para mi equipo operativo".
+    4. CTA: .cta-math (aritmética 180 h/mes) + .cta-stack (entregables) +
+       .cta-scarcity (3/mes). La GARANTÍA vive SOLO en .price-guarantee;
+       no duplicar en el stack. Calendly apunta a /5minutos a pedido de
+       JFC (él lo cambia a 20 luego). WhatsApp = CTA primario (LatAm).
+    5. LEGIBILIDAD: copy nuevo siempre --ink/--orange/--green, nunca
+       --muted; mínimo 17px. No tocar locks anti-dark iOS/WhatsApp
+       (:root light-only + @media prefers-color-scheme dark con !important).
+    6. VERBATIM (module-map h2): "Cada uno recompensa a la empresa por una
+       vía distinta." — bloqueada por JFC. No reescribir.
+
+    PENDIENTE (decisión JFC): lead magnet "Diagnóstico de 7 preguntas"
+    necesita destino (formulario+backend o página). No construido aún.
+
+    7. MindOS es el modelo del Dr. Paul Dobransky (psiquiatra). Atribuir
+       SIEMPRE a él. No presentarlo como coinage de JFC. Lo de JFC es
+       "Pacto del Capitalismo" y "Plusvalía de Say" (van en el Taller 2).
+    8. Mandato JFC: nunca escribir "capa" a secas. Siempre "capa del
+       cerebro". El modelo es neuro-conductual, no una metáfora suelta.
+    ════════════════════════════════════════════════════════════════
+  -->
+
   <!-- ─── HERO ─── -->
   <section class="hero">
     <span class="eyebrow">Talleres corporativos de cambio rápido</span>
@@ -1164,7 +1277,7 @@ a { text-decoration: none; color: inherit; }
       <span>no es culpa del proveedor.</span>
       <em>Operó en el nivel equivocado del cerebro.</em>
     </h1>
-    <p class="lede">El problema no es que el equipo no escuchó. Es que la capacitación entró por la capa equivocada: información encima de creencias intactas. Aquí hay dos talleres separados, con dos problemas distintos y dos retornos distintos: uno ordena la vida financiera del participante; el otro corrige la relación mental con la empresa privada.</p>
+    <p class="lede">El problema no es que el equipo no escuchó. Es que la capacitación entró por la capa del cerebro equivocada: información encima de creencias intactas. Aquí hay dos talleres separados, con dos problemas distintos y dos retornos distintos: uno ordena la vida financiera del participante; el otro corrige la relación mental con la empresa privada.</p>
     <p class="byline">J.F. Carpio · Investigador empresarial y económico · 2026</p>
   </section>
 
@@ -1177,14 +1290,28 @@ a { text-decoration: none; color: inherit; }
       <li>La gente cumple, pero no cuida lo que no es de su propiedad.</li>
       <li>El entusiasmo post-capacitación dura dos semanas y vuelve todo igual.</li>
     </ul>
-    <p class="pain-hook-out">Si alguna de estas frases hace clic, el problema está en la capa de debajo, no en la conducta visible. Eso es exactamente lo que trabajan estos talleres.</p>
+    <p class="pain-hook-out">Si alguna de estas frases hace clic, el problema está en una capa más honda del cerebro, no en la conducta visible. Eso es exactamente lo que trabajan estos talleres.</p>
   </div>
+
+  <!-- ─── MECANISMO NOMBRADO — MindOS arriba como bandera (v1.160) ─── -->
+  <section class="mech" aria-label="El mecanismo: MindOS">
+    <span class="eyebrow">El mecanismo</span>
+    <h2 class="h2"><span class="mech-name">MindOS</span> — el sistema operativo de la mente que decide si una capacitación cambia la conducta o se pierde a las pocas semanas.</h2>
+    <p>MindOS es el modelo del psiquiatra Dr. Paul Dobransky sobre cómo funciona la mente. Toda conducta corre sobre cuatro capas del cerebro, en orden: límite, conducta, intelecto y decisión. La capacitación corriente entra por el intelecto, información nueva, sobre un límite y unas creencias que nadie examinó. Por eso dura lo que dura el entusiasmo. La intervención sostenible respeta el orden de Dobransky: de la capa del cerebro más basal, donde vive lo emocional, a la más alta, donde se decide.</p>
+    <p class="mech-epiphany">Lo vi después de 14 años de aula y de capacitar equipos en tres países: la gente no fallaba por no saber. Fallaba porque la idea nueva aterrizaba sobre una creencia vieja que seguía intacta, sobre el dinero, sobre la empresa, sobre el salario. Cambié el orden de la intervención y el cambio empezó a quedarse.</p>
+    <ul class="mech-layers" aria-label="Las cuatro capas del cerebro en el modelo de Dobransky">
+      <li><span>1</span>Límite</li>
+      <li><span>2</span>Conducta</li>
+      <li><span>3</span>Intelecto</li>
+      <li><span>4</span>Decisión</li>
+    </ul>
+  </section>
 
   <!-- ─── MAPA DE MÓDULOS ─── -->
   <section class="module-map" aria-label="Dos talleres independientes con retornos separados">
     <div class="module-map-head">
       <span class="eyebrow">No es un paquete confuso</span>
-      <h2 class="h2">Son dos módulos independientes. <em>Cada uno paga por una vía distinta.</em></h2>
+      <h2 class="h2">Son dos módulos independientes. <em>Cada uno recompensa a la empresa por una vía distinta.</em></h2>
       <p>La empresa puede contratar uno, el otro, o ambos. El Taller 1 reduce fricción financiera personal que se filtra al trabajo. El Taller 2 cambia la lectura que el empleado hace de la empresa, del salario, del riesgo y del capital que lo rodea.</p>
     </div>
     <div class="module-cards">
@@ -1227,7 +1354,7 @@ a { text-decoration: none; color: inherit; }
 
   <!-- ─── TESIS ─── -->
   <section class="tesis">
-    <p>Casi todos los programas corporativos cometen el mismo error: enseñan habilidades nuevas sobre creencias que nunca se examinaron. El participante practica la técnica dos semanas, su entorno la castiga sutilmente, y el sistema operativo anterior recupera el control. No por falta de voluntad — <strong>por falta de intervención en la capa correcta.</strong></p>
+    <p>Casi todos los programas corporativos cometen el mismo error: enseñan habilidades nuevas sobre creencias que nunca se examinaron. El participante practica la técnica dos semanas, su entorno la castiga sutilmente, y el sistema operativo anterior recupera el control. No por falta de voluntad — <strong>por falta de intervención en la capa correcta del cerebro.</strong></p>
     <p>La secuencia correcta no empieza con teoría. Empieza con una grieta reconocible: “esto que hago todos los meses con mi dinero” o “esto que asumo todos los días sobre mi empresa”. Recién ahí tiene sentido introducir el marco: cuatro movimientos en orden — <strong>límite, conducta, intelecto y decisión.</strong> Si el orden se rompe, el cambio se vuelve discurso.</p>
     <p>Los dos talleres que siguen trabajan dos dominios donde esa grieta aparece rápido: el dinero personal y la empresa privada. Pueden tomarse por separado. Tomados juntos, el participante descubre algo más potente: el patrón que saboteaba una decisión financiera suele ser el mismo que saboteaba su relación con la empresa. Eso no se predica. Se hace visible.</p>
   </section>
@@ -1350,6 +1477,13 @@ a { text-decoration: none; color: inherit; }
     <a href="/mindos-talleres.html" class="ensayo-link">Leer el ensayo completo →</a>
   </section>
 
+  <!-- ─── RESULTADO OBSERVADO — antídoto a "suena filosófico" + prueba social (v1.160). Caso real de JFC, sin nombre de cliente. NO inventar. ─── -->
+  <section class="result-callout" aria-label="Resultado observado en un cliente">
+    <span class="result-num">+15%</span>
+    <p class="result-body">¿Suena filosófico? Un equipo comercial subió 15% sus resultados el semestre siguiente: menos desmotivación, menos distracción. La empresa creó bonos por desempeño porque, con el frame correcto, por fin tenían sentido.</p>
+    <span class="result-attr">Equipo comercial · cliente corporativo</span>
+  </section>
+
   <hr class="rule">
 
   <!-- ─── SINERGIA ─── -->
@@ -1414,6 +1548,15 @@ a { text-decoration: none; color: inherit; }
   <section class="cta">
     <span class="cta-eyebrow">Si quieres conversar</span>
     <p>Si esto toca una conversación real en tu empresa, conversemos qué módulo tiene mejor ROI ahora: finanzas personales y familiares, apreciación de la empresa privada, o una secuencia con ambos.</p>
+    <p class="cta-math">Un empleado pierde en promedio 3 horas por semana por estrés financiero personal (PwC, <em>Employee Financial Wellness Survey</em>). Quince personas, cuatro semanas: <strong>180 horas al mes</strong> saliendo de tu nómina. El Taller 1 cuesta menos que una semana de esas horas.</p>
+    <span class="cta-stack-label">Lo que recibe la empresa</span>
+    <ul class="cta-stack">
+      <li>Diagnóstico previo del equipo: encuesta breve antes de la sesión</li>
+      <li>Taller en vivo de 2 horas con ejercicios sobre números propios</li>
+      <li>Q&amp;A en vivo</li>
+      <li>Material curado posterior: lecturas, videos y <em>homework</em> quirúrgico</li>
+      <li>WhatsApp directo con el facilitador durante 30 días</li>
+    </ul>
     <div class="pricing-rack">
       <div class="price-anchor">
         <span class="price-anchor-label">Consultoría corporativa comparable</span>
@@ -1434,6 +1577,7 @@ a { text-decoration: none; color: inherit; }
       </div>
       <div class="price-guarantee">Garantía: si no hay cambio observable en el equipo, la segunda sesión es sin costo.</div>
     </div>
+    <p class="cta-scarcity">Reservo un máximo de 3 talleres corporativos al mes. El diagnóstico previo no se hace en serie.</p>
     <div class="cta-btns">
       <button class="cta-btn" type="button" data-wa>Conversemos por WhatsApp</button>
       <a href="https://calendly.com/jfcarpio/5minutos" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">Agendar 5 minutos</a>
