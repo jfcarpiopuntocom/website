@@ -1057,7 +1057,8 @@ h3{font-size:clamp(22px,3vw,30px);margin-bottom:12px}
 .stack-li .val{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--ink-3);text-align:right;white-space:nowrap}
 .stack-li .val s{color:var(--ink-3)}
 .stack-li .val b{display:block;font-family:var(--cond);font-size:18px;color:var(--amber);font-weight:800;letter-spacing:.02em;text-transform:uppercase}
-.stack-li.extra{background:linear-gradient(90deg,rgba(232,160,32,.08),transparent)}
+.stack-li.bonus{background:linear-gradient(90deg,rgba(232,160,32,.08),transparent)}
+.stack-li.bonus .nm::before{content:"BONUS · ";color:var(--amber);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.16em;margin-right:6px}
 .stack-total{background:var(--navy);color:#fff;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;border-top:3px solid var(--amber-2)}
 .stack-total .lab{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#F2F2F2}
 .stack-total .num{font-family:var(--cond);font-size:30px;font-weight:900;color:#fff;letter-spacing:.01em}
@@ -1213,13 +1214,19 @@ footer{background:#040912;color:#F2F2F2;padding:50px var(--gutter) 36px;border-t
   line-height:.85;color:var(--ink);
   letter-spacing:-.02em;font-variant-numeric:tabular-nums;
 }
-.stack-li.extra .nx{color:var(--red)}
+.stack-li.bonus .nx{color:var(--red)}
 .stack-li .pr{padding-top:6px}
 .stack-li .nm{font-size:21px;letter-spacing:0}
 .stack-li .val{padding-top:6px}
 .stack-li .val b{font-size:20px}
 
-.stack-li.extra{background:linear-gradient(90deg,rgba(214,41,26,.06),transparent 60%)}
+.stack-li.bonus{background:linear-gradient(90deg,rgba(214,41,26,.06),transparent 60%)}
+.stack-li.bonus .nm::before{
+  content:"BONUS";display:inline-block;
+  background:var(--red);color:#fff;
+  font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.18em;
+  padding:3px 7px;margin-right:10px;vertical-align:middle;
+}
 
 .stack-total{
   display:grid;grid-template-columns:80px 1fr auto;
@@ -1941,7 +1948,7 @@ footer.foot-moment::after{
   <div class="wrap">
     <p class="sl rv"><span class="sn">07</span> <span id="s07">Todo lo que entra por tu correo</span></p>
     <h2 class="rv" style="max-width:24ch">El Visor completo. Abierto. Sin candados, sin demos recortadas.</h2>
-    <p class="lede rv" style="max-width:62ch">No es teaser, no es trial, no es paywall escondido. En unos 45 minutos puedes ver lo que normalmente queda regado entre banco, facturas, WhatsApp, intuición y cansancio.</p>
+    <p class="lede rv" style="max-width:62ch">No es teaser, no es trial, no es paywall escondido. Es el diagnóstico que usarías cualquier primer lunes del mes — más cuatro recursos que normalmente se entregan en una consultoría pagada.</p>
 
     <div class="conversion-bridge rv-stagger" aria-label="Por qué abrir el Visor antes de seguir operando igual">
       <article class="bridge-card rv">
@@ -1963,80 +1970,80 @@ footer.foot-moment::after{
         <li class="stack-li">
           <span class="nx">01</span>
           <div class="pr">
-            <span class="nm">Vista completa de tu negocio</span>
-            <span class="ds">Ocho señales en una sola pantalla: caja, ingresos, retención, canales, cobros, fundador, procesos y runway.</span>
+            <span class="nm">Dashboard Visor Antiquiebra</span>
+            <span class="ds">Panel completo de las 8 señales. Sin candado. Datos editables. Persiste mes a mes.</span>
           </div>
           <span class="val"><s>$97</s><b>Incluido</b></span>
         </li>
         <li class="stack-li">
           <span class="nx">02</span>
           <div class="pr">
-            <span class="nm">Lectura de estabilidad, daños o supervivencia</span>
-            <span class="ds">El Visor no te dice “vas bien” o “vas mal”. Te muestra qué parte está firme, qué se está dañando y qué pide acción.</span>
+            <span class="nm">Análisis de las 8 señales</span>
+            <span class="ds">MRR, retención M+6, CAC payback, LTV:CAC por canal, ciclo de cobros, IDF, procesos, runway.</span>
           </div>
           <span class="val"><s>$48</s><b>Incluido</b></span>
         </li>
         <li class="stack-li">
           <span class="nx">03</span>
           <div class="pr">
-            <span class="nm">Cuántas semanas tienes realmente</span>
-            <span class="ds">Runway con caja disponible y runway incluyendo cobros cercanos. Dos lecturas distintas, una decisión más clara.</span>
+            <span class="nm">Cálculo dual de runway</span>
+            <span class="ds">Con y sin los cobros cercanos. Dos lecturas, una decisión, sin armar el Excel propio a las once de la noche.</span>
           </div>
           <span class="val"><s>$36</s><b>Incluido</b></span>
         </li>
         <li class="stack-li">
           <span class="nx">04</span>
           <div class="pr">
-            <span class="nm">Tus puntos rojos del mes</span>
-            <span class="ds">Rojo, ámbar o estable por señal. No para asustarte: para ordenar qué se mueve primero.</span>
+            <span class="nm">Semáforo de daños por señal</span>
+            <span class="ds">Rojo · ámbar · estable. Sin ambigüedad, sin “depende”, sin medio paso.</span>
           </div>
           <span class="val"><s>$24</s><b>Incluido</b></span>
         </li>
-        <li class="stack-li extra">
+        <li class="stack-li bonus">
           <span class="nx">05</span>
           <div class="pr">
-            <span class="nm">Calculadora SSS de supervivencia</span>
-            <span class="ds">Una lectura rápida para aterrizar caja, gasto mensual y margen de maniobra sin inventarte fórmulas.</span>
+            <span class="nm">SSS · Calculadora de Supervivencia</span>
+            <span class="ds">Herramienta complementaria: cuántas semanas reales aguanta el negocio. Acceso al volumen completo del Visor.</span>
           </div>
           <span class="val"><s>$36</s><b>Gratis</b></span>
         </li>
-        <li class="stack-li extra">
+        <li class="stack-li bonus">
           <span class="nx">06</span>
           <div class="pr">
-            <span class="nm">Guía para leer tus rojos</span>
-            <span class="ds">Qué significa cada señal, cuándo preocuparte y cuándo no sobrerreaccionar.</span>
+            <span class="nm">Guía mensual de lectura</span>
+            <span class="ds">Cómo interpretar tus rojos sin perderte en el ruido — el ritual del primer lunes del mes.</span>
           </div>
           <span class="val"><s>$24</s><b>Gratis</b></span>
         </li>
-        <li class="stack-li extra">
+        <li class="stack-li bonus">
           <span class="nx">07</span>
           <div class="pr">
             <span class="nm">Plan de 7 días</span>
-            <span class="ds">Una prioridad operativa para esta semana. No quince tareas. Una que sí puede mover algo antes del viernes.</span>
+            <span class="ds">Una sola prioridad de la semana, no quince. Lo que mueve la aguja antes del viernes.</span>
           </div>
           <span class="val"><s>$48</s><b>Gratis</b></span>
         </li>
-        <li class="stack-li extra">
+        <li class="stack-li bonus">
           <span class="nx">08</span>
           <div class="pr">
-            <span class="nm">Seguimiento para nuevos negocios</span>
-            <span class="ds">Una nota útil para seguir mirando con criterio: caja, cobros, canales, procesos y decisiones reales.</span>
+            <span class="nm">Newsletter de nuevos negocios</span>
+            <span class="ds">Una nota al mes, sin venta. Solo decisiones que un nuevo negocio real tomó esa semana, contadas con sus números reales.</span>
           </div>
           <span class="val"><s>$24</s><b>Gratis</b></span>
         </li>
         <li class="stack-total">
           <span class="tx">∑</span>
-          <span class="lab">Acceso completo al diagnóstico</span>
+          <span class="lab">Valor total combinado</span>
           <span class="num"><s>$337</s><b>$0</b></span>
         </li>
       </ol>
 
       <aside class="stack-side rv">
         <div class="stack-promise">
-          <span class="micro">Qué podrás ver en 45 minutos</span>
-          <h3>El punto no es llenar otro dashboard. Es salir con una prioridad.</h3>
-          <p>Primero pones los datos mínimos. Luego ves los rojos. Después miras si esos rojos vienen de caja, cobros, clientes, canales, procesos o dependencia del fundador.</p>
-          <p><strong style="color:var(--ink)">La promesa no es adivinar el futuro.</strong> Es dejar de operar con señales sueltas y cerrar la lectura con una pregunta concreta: qué conviene mover esta semana, antes de que el mes se vaya otra vez.</p>
+          <span class="micro">Mecanismo único · por qué funciona</span>
+          <h3>Otras herramientas miden una métrica. El Visor mira las ocho a la vez.</h3>
+          <p>Un calculador de runway te dice cuánto te queda en caja. Una hoja de retención te dice cuánto vuelve. Un dashboard de CAC te dice cuánto cuesta adquirir. Todos por separado.</p>
+          <p><strong style="color:var(--ink)">El Visor cruza las ocho señales en una sola lectura mensual</strong> — porque ninguna de ellas, sola, te dice si tu negocio cruza el valle. Y porque entre los meses 6 y 24, lo que rompe un negocio suele ser una <em>combinación</em>, no un factor único.</p>
           <div class="stack-cta">
             <a href="#diagnostico" class="btn btn-block"><span>Quiero abrirlo gratis</span></a>
             <span class="micro-note">Entrega inmediata · solo tu correo</span>
@@ -2054,17 +2061,17 @@ footer.foot-moment::after{
   <div class="wrap-narrow">
     <p class="sl rv"><span class="sn">08</span> <span id="s08">Abrir el Visor</span></p>
     <h2 class="rv" style="text-align:center;max-width:20ch;margin-left:auto;margin-right:auto">Deja tu correo y abre el Visor completo.</h2>
-    <p class="lede rv" style="text-align:center;margin:0 auto">No necesitas estar en crisis para abrir el Visor. A veces el mejor momento para mirar es justo cuando todavía parece que todo va bien.</p>
+    <p class="lede rv" style="text-align:center;margin:0 auto">Te envío el plan de 7 días y la guía corta para leer tus rojos sin perderte. Sin spam, sin secuencias de venta. Una entrega, abierta.</p>
 
     <div class="qualifier rv" aria-label="Para quién es el Visor Antiquiebra">
       <div class="q-head">
         <p class="micro">No es para todos</p>
-        <h3>Es para quien prefiere claridad antes que consuelo.</h3>
+        <h3>Es para quien quiere mirar el negocio sin maquillarlo.</h3>
       </div>
       <ul>
-        <li><strong>Sí es para ti</strong> si quieres saber qué parte del negocio aguanta, qué parte se está dañando y qué decisión no conviene patear otro mes.</li>
-        <li><strong>No es para ti</strong> si buscas motivación, frases bonitas o una lectura que confirme que todo está bien sin mirar caja, cobros y clientes que vuelven.</li>
-        <li><strong>También sirve si vas bien</strong>: a veces el crecimiento es real, pero viene con desorden acumulado por dentro.</li>
+        <li><strong>Sí es para ti</strong> si prefieres ver la caja, los cobros, la retención y los canales antes de que el mes te obligue.</li>
+        <li><strong>No es para ti</strong> si buscas motivación, frases bonitas o una excusa para no mirar números incómodos.</li>
+        <li><strong>También sirve si vas bien</strong>: crecer desordenadamente no es lo mismo que crecer con claridad y control.</li>
       </ul>
     </div>
 
