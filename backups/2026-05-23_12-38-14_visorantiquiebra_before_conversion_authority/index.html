@@ -82,7 +82,7 @@
   "@context":"https://schema.org",
   "@type":"Product",
   "name":"Visor Antiquiebra",
-  "description":"Diagnóstico gratuito de supervivencia para negocios entre los meses 6 y 24 — 8 señales, semáforo de daños y plan de 7 días.",
+  "description":"Diagnóstico gratuito de supervivencia para negocios entre los meses 6 y 24 — 8 señales, semáforo de riesgo y plan de 7 días.",
   "image":"https://jfcarpio.com/visorantiquiebra/assets/VisorXMen.png",
   "brand":{"@type":"Brand","name":"J.F. Carpio"},
   "category":"Business Diagnostic Tool",
@@ -1037,12 +1037,7 @@ h3{font-size:clamp(22px,3vw,30px);margin-bottom:12px}
 .pioneer-quote{font-family:var(--body);font-style:italic;font-size:clamp(22px,2.4vw,30px);line-height:1.32;color:var(--ink);margin-bottom:18px}
 .pioneer-quote::before{content:"“"}.pioneer-quote::after{content:"”"}
 .pioneer-attr{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
-.authority-proof{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.proof-point{background:#fff;border:1px solid var(--rule);padding:16px 16px;border-left:4px solid var(--amber-2)}
-.proof-point .k{display:block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:7px}
-.proof-point p{font-family:var(--body);font-size:14.5px;color:var(--ink-2);line-height:1.55;margin:0}
 @media(max-width:880px){.pioneer{grid-template-columns:1fr;gap:26px}}
-@media(max-width:680px){.authority-proof{grid-template-columns:1fr}}
 
 /* ════════════════════════════════════════
    STACK SLIDE — Brunson offer stack
@@ -1073,13 +1068,7 @@ h3{font-size:clamp(22px,3vw,30px);margin-bottom:12px}
 .stack-cta{display:flex;flex-direction:column;gap:10px;margin-top:14px}
 .stack-cta .btn{width:100%;justify-content:center}
 .stack-cta .micro-note{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink-3);text-align:center}
-.conversion-bridge{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0 4px}
-.bridge-card{background:#fff;border:1px solid var(--rule);padding:18px 18px;border-top:4px solid var(--ink)}
-.bridge-card:nth-child(2){border-top-color:var(--amber-2)}.bridge-card:nth-child(3){border-top-color:var(--red)}
-.bridge-card .ey{display:block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:8px}
-.bridge-card p{font-family:var(--body);font-size:15px;line-height:1.55;color:var(--ink-2);margin:0}
 @media(max-width:880px){.stack-grid{grid-template-columns:1fr;gap:24px}.stack-side{position:static}}
-@media(max-width:780px){.conversion-bridge{grid-template-columns:1fr}}
 
 /* ════════════════════════════════════════
    EMAIL FORM
@@ -1091,14 +1080,6 @@ h3{font-size:clamp(22px,3vw,30px);margin-bottom:12px}
 }
 .email-card::before{content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:5px;background:linear-gradient(90deg,var(--amber-2) 0 60%, var(--red) 60% 100%)}
 .email-card .copy{font-family:var(--body);font-size:16px;color:var(--ink-2);margin-bottom:22px;line-height:1.6}
-.qualifier{max-width:900px;margin:30px auto 0;background:var(--ink);color:#fff;border:1px solid var(--ink);display:grid;grid-template-columns:.95fr 1.05fr}
-.qualifier .q-head{padding:28px 28px;border-right:1px solid rgba(255,255,255,.14)}
-.qualifier .q-head .micro{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--amber-3);margin-bottom:10px}
-.qualifier .q-head h3{font-size:clamp(28px,3vw,40px);color:#fff;margin:0;line-height:1}
-.qualifier ul{list-style:none;display:grid;gap:0;margin:0;padding:0}
-.qualifier li{font-family:var(--body);font-size:15.5px;line-height:1.55;color:#F2F2F2;padding:18px 22px;border-bottom:1px solid rgba(255,255,255,.12)}
-.qualifier li:last-child{border-bottom:none}
-.qualifier strong{color:#fff}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
 .form-row.full{grid-template-columns:1fr}
 .f-group{display:flex;flex-direction:column;gap:6px}
@@ -1114,7 +1095,7 @@ h3{font-size:clamp(22px,3vw,30px);margin-bottom:12px}
 .form-success{display:none;padding:20px 22px;background:var(--amber-soft);border:1px solid var(--amber-line);border-left:4px solid var(--amber-2);font-family:var(--body);font-size:15.5px;color:var(--ink);line-height:1.55}
 .form-success.show{display:block;animation:tab-in .4s}
 .form-success strong{font-family:var(--cond);text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:6px;font-size:20px;color:var(--amber)}
-@media(max-width:680px){.email-card{padding:26px 22px}.qualifier{grid-template-columns:1fr}.qualifier .q-head{border-right:none;border-bottom:1px solid rgba(255,255,255,.14)}.form-row{grid-template-columns:1fr}.stage-row{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.email-card{padding:26px 22px}.form-row{grid-template-columns:1fr}.stage-row{grid-template-columns:1fr 1fr}}
 
 /* ════════════════════════════════════════
    KIT
@@ -1179,13 +1160,8 @@ h3{font-size:clamp(22px,3vw,30px);margin-bottom:12px}
 .btn-whatsapp{background:#fff;color:var(--navy);border:2px solid var(--amber-2);box-shadow:0 6px 0 var(--amber)}
 .btn-whatsapp:hover{background:var(--amber-3);color:var(--navy)}
 .btn:disabled{cursor:wait;filter:saturate(.85);transform:none}
-.final-authority{max-width:860px;margin:24px auto 30px;background:#fff;border:1px solid rgba(255,255,255,.22);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;padding:22px 24px;text-align:left;box-shadow:0 24px 54px rgba(0,0,0,.24)}
-.final-authority .seal{width:54px;height:54px;border-radius:50%;background:var(--ink);color:var(--amber-3);display:flex;align-items:center;justify-content:center;font-family:var(--cond);font-size:24px;font-weight:900;border:3px solid var(--amber-2)}
-.final-authority p{font-family:var(--body);font-size:16px;line-height:1.6;color:var(--ink-2);margin:0}
-.final-authority strong{color:var(--ink)}
 .final .ps{margin-top:34px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12);font-family:var(--body);font-style:italic;font-size:15px;color:#F2F2F2;max-width:60ch;margin-left:auto;margin-right:auto;line-height:1.7}
 .final .ps b{font-style:normal;color:var(--amber-3);font-family:var(--cond);text-transform:uppercase;letter-spacing:.05em;font-weight:800}
-@media(max-width:620px){.final-authority{grid-template-columns:1fr}.final-authority .seal{width:48px;height:48px}}
 
 /* ════════════════════════════════════════
    FOOTER
@@ -1604,43 +1580,43 @@ footer.foot-moment::after{
     <figure class="photo-card tall">
       <img src="https://images.pexels.com/photos/4173268/pexels-photo-4173268.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1500&fit=crop" alt="Dueña de negocio revisando su laptop en un restaurante" loading="lazy" decoding="async">
       <figcaption class="photo-caption">
-        <span class="pc-k">Clientes no es lo mismo que estabilidad</span>
-        <p>El Visor separa movimiento de avance: ventas, cobros, clientes que vuelven y decisiones que no pueden esperar.</p>
+        <span class="pc-k">Lo que pasa entre pedidos</span>
+        <p>El número importa cuando aterriza en la vida real: pedidos, cobros, turnos, proveedores y decisiones de hoy.</p>
       </figcaption>
     </figure>
     <figure class="photo-card">
       <img src="https://images.pexels.com/photos/4339799/pexels-photo-4339799.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Personas revisando números y trabajo en una mesa" loading="lazy" decoding="async">
       <figcaption class="photo-caption">
         <span class="pc-k">Sistema antes que intuición</span>
-        <p>Ocho señales juntas. No para decorar un reporte: para ver qué se sostiene y qué está empezando a ceder.</p>
+        <p>El Visor junta señales que normalmente se miran separadas y tarde.</p>
       </figcaption>
     </figure>
     <figure class="photo-card">
       <img src="https://images.pexels.com/photos/6694951/pexels-photo-6694951.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Persona contando dinero y revisando papeles de caja" loading="lazy" decoding="async">
       <figcaption class="photo-caption">
         <span class="pc-k">Caja sin teatro</span>
-        <p>Cuánto entra, cuánto sale, qué cobro cambia el mes y cuántas semanas reales tienes para decidir.</p>
+        <p>Cuánto entra, cuánto sale, qué cobro cambia el mes y qué decisión no puede esperar.</p>
       </figcaption>
     </figure>
     <figure class="photo-card">
       <img src="https://images.pexels.com/photos/7680736/pexels-photo-7680736.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Recibos y calculadora sobre una mesa de trabajo" loading="lazy" decoding="async">
       <figcaption class="photo-caption">
         <span class="pc-k">Gastos visibles</span>
-        <p>Un gasto pequeño no asusta. Veinte gastos pequeños, juntos, explican por qué vender más no siempre alcanza.</p>
+        <p>Un gasto pequeño no asusta. Veinte gastos pequeños, juntos, explican por qué la caja no alcanza.</p>
       </figcaption>
     </figure>
     <figure class="photo-card">
       <img src="https://images.pexels.com/photos/10178868/pexels-photo-10178868.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Equipo trabajando durante la operación de un negocio pequeño" loading="lazy" decoding="async">
       <figcaption class="photo-caption">
         <span class="pc-k">Operación real</span>
-        <p>Cuando el día corre con clientes, cobros, entregas y pendientes, el Visor muestra si el negocio también gana control.</p>
+        <p>Cuando el día corre con clientes, cobros, entregas y pendientes, el Visor muestra si el negocio también está avanzando.</p>
       </figcaption>
     </figure>
     <figure class="photo-card wide">
       <img src="https://images.pexels.com/photos/7545333/pexels-photo-7545333.jpeg?auto=compress&cs=tinysrgb&w=1400&h=700&fit=crop" alt="Papeles de negocio y recibos revisados a mano" loading="lazy" decoding="async">
       <figcaption class="photo-caption">
         <span class="pc-k">Claridad antes de urgencia</span>
-        <p>Runway, cobros, retención, canales y dependencia del fundador en una lectura que cabe en una mañana.</p>
+        <p>Runway, cobros, retención, canales y fundador en una sola lectura.</p>
       </figcaption>
     </figure>
   </div>
@@ -1914,19 +1890,9 @@ footer.foot-moment::after{
     <div class="pioneer">
       <div class="rv">
         <span class="kicker">Caso real · semi-anónimo · con permiso</span>
-        <h2 style="font-size:clamp(28px,3.6vw,46px);max-width:17ch">Una dueña abrió el Visor antes de seguir adivinando.</h2>
-        <p class="lede">El primer caso nació de una sesión real con una dueña en el mes 10 de vida de su negocio. No se publica para exhibirla. Se usa para mostrar otra cosa: lo que cambia cuando una persona que ya está operando, vendiendo y resolviendo todos los días decide mirar caja, cobros, clientes, canales y dependencia del fundador al mismo tiempo.</p>
-        <p class="lede" style="margin-top:14px">Ese es el estándar del Visor: <strong style="color:var(--ink)">menos ruido, más lectura completa.</strong> El reporte detallado se quedó entre la dueña y JFC. Lo que queda aquí, con su permiso, es la frase que abrió la sesión.</p>
-        <div class="authority-proof">
-          <div class="proof-point">
-            <span class="k">Criterio JFC</span>
-            <p>Diseñado por J.F. Carpio, investigador empresarial y económico, después de 14 años como profesor USFQ y años creando herramientas para dueños de negocio.</p>
-          </div>
-          <div class="proof-point">
-            <span class="k">No es gurú de internet</span>
-            <p>Es análisis de entorno empresarial convertido en una lectura práctica: qué mirar, en qué orden y qué no conviene seguir posponiendo.</p>
-          </div>
-        </div>
+        <h2 style="font-size:clamp(28px,3.6vw,46px);max-width:16ch">La dueña de un restaurante decidió mirar de frente.</h2>
+        <p class="lede">Una dueña de un restaurante en un lugar turístico icónico, en el mes 10 de vida del negocio, usó el Visor para poner todas las señales dispersas sobre la misma mesa. El negocio vendía. Tenía clientes. Tenía equipo. No estaba bien y tampoco estaba mal: estaba acumulando daños internos sin saberlo, mientras la caja se erosionaba en silencio.</p>
+        <p class="lede" style="margin-top:14px">El valor del caso no es la exposición. Es el coraje: <strong style="color:var(--ink)">decidir tener claridad antes de que el negocio la obligue a decidir por ella.</strong> El reporte completo se quedó entre la dueña y JFC. Lo único que queda aquí, con su permiso, es la frase que abrió la sesión.</p>
       </div>
       <div class="pioneer-side rv">
         <figure class="pioneer-photo">
@@ -1949,21 +1915,6 @@ footer.foot-moment::after{
     <p class="sl rv"><span class="sn">07</span> <span id="s07">Todo lo que entra por tu correo</span></p>
     <h2 class="rv" style="max-width:24ch">El Visor completo. Abierto. Sin candados, sin demos recortadas.</h2>
     <p class="lede rv" style="max-width:62ch">No es teaser, no es trial, no es paywall escondido. Es el diagnóstico que usarías cualquier primer lunes del mes — más cuatro recursos que normalmente se entregan en una consultoría pagada.</p>
-
-    <div class="conversion-bridge rv-stagger" aria-label="Por qué abrir el Visor antes de seguir operando igual">
-      <article class="bridge-card rv">
-        <span class="ey">Lo que descubres</span>
-        <p>Si tu negocio está ganando estabilidad, acumulando daños internos o sobreviviendo con una caja que todavía no ha gritado.</p>
-      </article>
-      <article class="bridge-card rv">
-        <span class="ey">Por qué no lo ves</span>
-        <p>Porque cada señal parece manejable por separado: un cobro tarde, un gasto pequeño, un canal borroso, una tarea que solo tú sabes hacer.</p>
-      </article>
-      <article class="bridge-card rv">
-        <span class="ey">Qué cambia al verlo junto</span>
-        <p>Dejas de reaccionar a síntomas sueltos y eliges una prioridad real para los próximos 7 días.</p>
-      </article>
-    </div>
 
     <div class="stack-grid">
       <ol class="stack-list rv" aria-label="Lo que recibes">
@@ -1994,7 +1945,7 @@ footer.foot-moment::after{
         <li class="stack-li">
           <span class="nx">04</span>
           <div class="pr">
-            <span class="nm">Semáforo de daños por señal</span>
+            <span class="nm">Semáforo de riesgo por señal</span>
             <span class="ds">Rojo · ámbar · estable. Sin ambigüedad, sin “depende”, sin medio paso.</span>
           </div>
           <span class="val"><s>$24</s><b>Incluido</b></span>
@@ -2043,7 +1994,7 @@ footer.foot-moment::after{
           <span class="micro">Mecanismo único · por qué funciona</span>
           <h3>Otras herramientas miden una métrica. El Visor mira las ocho a la vez.</h3>
           <p>Un calculador de runway te dice cuánto te queda en caja. Una hoja de retención te dice cuánto vuelve. Un dashboard de CAC te dice cuánto cuesta adquirir. Todos por separado.</p>
-          <p><strong style="color:var(--ink)">El Visor cruza las ocho señales en una sola lectura mensual</strong> — porque ninguna de ellas, sola, te dice si tu negocio cruza el valle. Y porque entre los meses 6 y 24, lo que rompe un negocio suele ser una <em>combinación</em>, no un factor único.</p>
+          <p><strong style="color:var(--ink)">El Visor cruza las ocho señales en una sola lectura mensual</strong> — porque ninguna de ellas, sola, te dice si tu negocio cruza el valle. Y porque entre los meses 6 y 24, la quiebra es siempre una <em>combinación</em>, no un factor único.</p>
           <div class="stack-cta">
             <a href="#diagnostico" class="btn btn-block"><span>Quiero abrirlo gratis</span></a>
             <span class="micro-note">Entrega inmediata · solo tu correo</span>
@@ -2063,20 +2014,8 @@ footer.foot-moment::after{
     <h2 class="rv" style="text-align:center;max-width:20ch;margin-left:auto;margin-right:auto">Deja tu correo y abre el Visor completo.</h2>
     <p class="lede rv" style="text-align:center;margin:0 auto">Te envío el plan de 7 días y la guía corta para leer tus rojos sin perderte. Sin spam, sin secuencias de venta. Una entrega, abierta.</p>
 
-    <div class="qualifier rv" aria-label="Para quién es el Visor Antiquiebra">
-      <div class="q-head">
-        <p class="micro">No es para todos</p>
-        <h3>Es para quien quiere mirar el negocio sin maquillarlo.</h3>
-      </div>
-      <ul>
-        <li><strong>Sí es para ti</strong> si prefieres ver la caja, los cobros, la retención y los canales antes de que el mes te obligue.</li>
-        <li><strong>No es para ti</strong> si buscas motivación, frases bonitas o una excusa para no mirar números incómodos.</li>
-        <li><strong>También sirve si vas bien</strong>: crecer desordenadamente no es lo mismo que crecer con claridad y control.</li>
-      </ul>
-    </div>
-
     <form class="email-card rv" id="visor-form" novalidate aria-label="Recibir acceso al Visor">
-      <p class="copy">Te abro el Visor completo, la calculadora SSS de supervivencia, la guía mensual y el plan de 7 días. La primera lectura entra a tu correo en menos de un minuto, para que sepas qué mirar antes de seguir moviendo piezas.</p>
+      <p class="copy">Te abro el Visor completo, la calculadora SSS de supervivencia, la guía mensual y el plan de 7 días. La primera lectura entra a tu correo en menos de un minuto.</p>
 
       <div class="form-row">
         <div class="f-group">
@@ -2242,10 +2181,6 @@ footer.foot-moment::after{
   <div class="wrap">
     <h2 id="s12">Abre el Visor.<br>Mira qué está <span class="a">firme</span>, qué se está <span class="r">dañando</span>, y qué no puede esperar otro mes.</h2>
     <p class="lede">El diagnóstico es gratuito. La decisión, no. Pero entrar a mirar — sí.</p>
-    <div class="final-authority rv">
-      <div class="seal">JFC</div>
-      <p><strong>Creado por J.F. Carpio, investigador empresarial y económico y ex profesor USFQ durante 14 años.</strong> El Visor traduce análisis de entorno empresarial a una lectura que un dueño puede usar esta misma semana: caja, cobros, clientes, canales, procesos y dependencia del fundador.</p>
-    </div>
     <div class="final-actions">
       <a href="#diagnostico" class="btn btn-theatrical">Abrir mi diagnóstico gratuito</a>
       <a href="https://wa.me/593999905080?text=Hola%20JFC%2C%20vi%20el%20Visor%20Antiquiebra%20y%20quiero%20hablar%20sobre%20mi%20negocio." class="btn btn-whatsapp" target="_blank" rel="noopener">Hablar por WhatsApp</a>
