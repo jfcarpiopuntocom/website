@@ -103,7 +103,7 @@
 </script>
 
 <style>
-/* jfcarpio.com/talleres v1.167 - 2026-05-24 */
+/* jfcarpio.com/talleres v1.168 - 2026-05-24 */
 /* v1.160: mecanismo MindOS arriba, epifanía 1a persona, result-callout +15%, stack+aritmética+escasez en CTA. Ver NOTAS DE DISEÑO en <main>. */
 /* v1.161: +5% académico — MindOS atribuido a Dr. Paul Dobransky; "capa" → "capa del cerebro" en todo el texto; tono menos slick, más contexto. */
 /* v1.163: diagnóstico 7 preguntas, qué cambia después, FAQ+schema, CLS fix ventana 2, fracaso evitado, deslop. */
@@ -111,6 +111,7 @@
 /* v1.165: dolor comprador más específico, puentes entre secciones, revelación MindOS antes del cierre y geografía corregida. */
 /* v1.166: más densidad visual, galerías editoriales HTML5, fotos extra y primer viewport más fuerte para mobile/WhatsApp. */
 /* v1.167: deslop de tono; español más sobrio y más cercano a anuncios/eventos USFQ Ecuador. */
+/* v1.168: capa superior para tráfico frío; dolor, prueba, elección y CTA antes del desarrollo largo. */
 /* ─── ROOT — light only, anti iOS auto-dark ─── */
 :root {
   color-scheme: light only;
@@ -316,6 +317,135 @@ a { text-decoration: none; color: inherit; }
 .closing-visual {
   display: grid;
   gap: 14px;
+}
+.quick-path {
+  display: grid;
+  gap: 18px;
+  margin: 0 0 34px;
+}
+.quick-intro {
+  max-width: 860px;
+}
+.quick-intro p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin: 0;
+}
+.quick-grid {
+  display: grid;
+  gap: 14px;
+}
+.quick-card {
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--orange);
+  border-radius: 4px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.015) 100%),
+    var(--card);
+  padding: 20px 18px;
+}
+.quick-card.ep {
+  border-left-color: var(--green);
+}
+.quick-card-kicker {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink-2) !important;
+  -webkit-text-fill-color: var(--ink-2) !important;
+  margin-bottom: 10px;
+}
+.quick-card h3 {
+  font-family: var(--display);
+  font-size: 30px;
+  line-height: 1.05;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 12px;
+}
+.quick-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 10px;
+}
+.quick-card p:last-child {
+  margin-bottom: 0;
+}
+.quick-card strong {
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+}
+.quick-proof {
+  display: grid;
+  gap: 12px;
+}
+.quick-proof-item {
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+}
+.quick-proof-item strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 2rem;
+  line-height: 1;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--orange) !important;
+  -webkit-text-fill-color: var(--orange) !important;
+  margin-bottom: 8px;
+}
+.quick-proof-item:nth-child(2) strong {
+  color: var(--green) !important;
+  -webkit-text-fill-color: var(--green) !important;
+}
+.quick-proof-item p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin: 0;
+}
+.quick-proof-item em {
+  color: var(--ink-2) !important;
+  -webkit-text-fill-color: var(--ink-2) !important;
+}
+.quick-quote {
+  margin: 0;
+  border-left: 3px solid var(--green);
+  padding: 0 0 0 16px;
+}
+.quick-quote p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 10px;
+}
+.quick-quote span {
+  display: block;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .06em;
+  line-height: 1.55;
+  color: var(--ink-2) !important;
+  -webkit-text-fill-color: var(--ink-2) !important;
+}
+.quick-note {
+  font-family: var(--mono);
+  font-size: .86rem;
+  letter-spacing: .03em;
+  line-height: 1.6;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin: 0;
 }
 .hero-gallery {
   margin: 0 0 36px;
@@ -984,6 +1114,10 @@ a { text-decoration: none; color: inherit; }
   }
   .hero-gallery .hero-gallery-main { grid-row: span 2; }
   .hero-gallery .hero-gallery-main .photo-wrap { aspect-ratio: 1 / 1.02; }
+  .quick-grid,
+  .quick-proof {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .editorial-band { grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); gap: 18px; }
   .editorial-band .editorial-note { grid-column: 1 / -1; }
   .proof-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
@@ -1013,6 +1147,9 @@ a { text-decoration: none; color: inherit; }
     align-items: start;
   }
   .editorial-band .editorial-note { grid-column: span 1; }
+  .quick-proof {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 /* ─── PAIN HOOK ─── */
@@ -1494,15 +1631,58 @@ a { text-decoration: none; color: inherit; }
 
   <!-- ─── HERO ─── -->
   <section class="hero">
-    <span class="eyebrow">Talleres corporativos de cambio rápido</span>
+    <span class="eyebrow">Talleres corporativos virtuales</span>
     <h1 class="h1">
-      <span>Si tu última capacitación</span>
-      <span>corporativa no cambió nada,</span>
-      <span>no es culpa del proveedor.</span>
-      <em>Operó en el nivel equivocado del cerebro.</em>
+      <span>Si el sueldo sube y el malestar no baja,</span>
+      <span>si la gente cumple pero no cuida activos,</span>
+      <span>o si la última capacitación duró dos semanas,</span>
+      <em>aquí ya hay un costo real en marcha.</em>
     </h1>
-    <p class="lede">El problema no es que el equipo no escuchó. Es que la capacitación entró por la capa del cerebro equivocada: información encima de creencias intactas. Aquí hay dos talleres separados, con dos problemas distintos y dos retornos distintos: uno ordena la vida financiera del participante; el otro corrige la manera en que el equipo entiende a la empresa privada.</p>
+    <p class="lede">Estos talleres están hechos para equipos que ya sienten el problema en productividad, criterio y clima interno, aunque todavía no lo hayan nombrado bien. Son dos módulos separados: uno ordena el frente financiero personal del participante; el otro corrige la lectura que el equipo hace de salario, empresa, utilidad, riesgo y activos.</p>
     <p class="byline">J.F. Carpio · Investigador empresarial y económico · 2026</p>
+  </section>
+
+  <section class="quick-path" aria-label="Ruta rápida para decidir si estos talleres aplican a tu equipo">
+    <div class="quick-intro">
+      <p>Si llegaste desde un post, un correo o una recomendación y quieres saber rápido si esto aplica, aquí está la versión corta: hay dos problemas distintos, dos talleres independientes y una misma meta para la empresa: menos distracción, mejor criterio y conductas observables después de la sesión.</p>
+    </div>
+    <div class="quick-grid">
+      <article class="quick-card">
+        <span class="quick-card-kicker">Módulo A · bienestar financiero</span>
+        <h3>Cuando el problema se mete a la oficina desde la casa</h3>
+        <p>Sirve cuando el equipo llega al trabajo con deuda, mala liquidez, inflación, remesas, vivienda o retiro postergado ocupando espacio mental.</p>
+        <p><strong>Qué compra la empresa:</strong> menos estrés financiero durante la jornada y mejores decisiones de deuda, ahorro y liquidez.</p>
+      </article>
+      <article class="quick-card ep">
+        <span class="quick-card-kicker">Módulo B · cultura empresarial</span>
+        <h3>Cuando el equipo cumple, pero no cuida activos ni margen</h3>
+        <p>Sirve cuando el trabajo se hace, pero la empresa se sigue leyendo como un juego en el que uno gana porque el otro pierde.</p>
+        <p><strong>Qué compra la empresa:</strong> mejor cuidado de activos, mejor lectura de salario y utilidad, y más esfuerzo discrecional.</p>
+      </article>
+    </div>
+    <div class="quick-proof" aria-label="Prueba temprana para primera visita">
+      <div class="quick-proof-item">
+        <strong>+15%</strong>
+        <p>Un equipo comercial subió sus resultados el semestre siguiente, con menos desmotivación y menos distracción.</p>
+      </div>
+      <div class="quick-proof-item">
+        <strong>4.800+</strong>
+        <p>estudiantes en 14 años como profesor en la USFQ, más trabajo corporativo en tres ciudades del Ecuador.</p>
+      </div>
+      <div class="quick-proof-item">
+        <strong>180 h/mes</strong>
+        <p>puede perder una nómina de 15 personas si el estrés financiero personal sigue entrando al trabajo. <em>PwC.</em></p>
+      </div>
+    </div>
+    <blockquote class="quick-quote">
+      <p>"Las personas me han dado muy buenos comentarios. Funciona bien para brokers, aseguradoras y casi todo tipo de negocio con gestión activa de ventas."</p>
+      <span>Fernando Hallo · Broker de seguros · Quito · Ecuador · 2024</span>
+    </blockquote>
+    <div class="cta-btns">
+      <button class="cta-btn" type="button" data-wa>Conversemos por WhatsApp</button>
+      <a href="https://calendly.com/jfcarpio/5minutos" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">Agendar 20 minutos</a>
+    </div>
+    <p class="quick-note">Si ya sabes que el problema existe, puedes escribir ahora. Debajo está la explicación completa, el mecanismo y el detalle de cada módulo.</p>
   </section>
 
   <section class="hero-gallery" aria-label="Escenas del tipo de intervención que abre estos talleres">
@@ -1528,14 +1708,14 @@ a { text-decoration: none; color: inherit; }
 
   <!-- ─── SEÑALES — path para ejecutivos no conscientes del problema ─── -->
   <div class="pain-hook" role="note" aria-label="Señales de que el problema ya está presente">
-    <p class="pain-hook-lead">¿Tu equipo tiene el problema sin haberlo nombrado todavía?</p>
+    <p class="pain-hook-lead">Si todavía no sabes por cuál módulo empezar, mira estas señales.</p>
     <ul class="pain-signals">
       <li>El sueldo sube y el estrés financiero del equipo no baja.</li>
       <li>Parte de tu nómina se te va en deuda, remesas, vivienda o retiro postergado, aunque no aparezca así en el P&amp;L.</li>
       <li>La gente cumple, pero trata inventario, herramientas o margen como si fueran de otro.</li>
       <li>La última capacitación dejó entusiasmo, pero no una decisión con fecha ni un número nuevo.</li>
     </ul>
-    <p class="pain-hook-out">Si alguna de estas situaciones te resulta familiar, ya hay un costo real en marcha. El problema está en una capa más honda del cerebro, no en la conducta visible. Eso es exactamente lo que trabajan estos talleres.</p>
+    <p class="pain-hook-out">Si reconoces dos o más, el problema ya está costando atención, criterio o margen. Lo que sigue explica por qué pasa y cómo se interviene sin sermón corporativo.</p>
   </div>
 
   <!-- ─── MECANISMO NOMBRADO — MindOS arriba como bandera (v1.160) ─── -->
