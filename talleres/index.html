@@ -103,12 +103,13 @@
 </script>
 
 <style>
-/* jfcarpio.com/talleres v1.165 - 2026-05-24 */
+/* jfcarpio.com/talleres v1.166 - 2026-05-24 */
 /* v1.160: mecanismo MindOS arriba, epifanía 1a persona, result-callout +15%, stack+aritmética+escasez en CTA. Ver NOTAS DE DISEÑO en <main>. */
 /* v1.161: +5% académico — MindOS atribuido a Dr. Paul Dobransky; "capa" → "capa del cerebro" en todo el texto; tono menos slick, más contexto. */
 /* v1.163: diagnóstico 7 preguntas, qué cambia después, FAQ+schema, CLS fix ventana 2, fracaso evitado, deslop. */
 /* v1.164: CTA secundario "5 minutos" → "20 minutos" + nota "Sin compromiso" (reversión de riesgo). Header reconciliado 1.161→1.164. URL Calendly sin tocar (JFC ajusta el evento). */
 /* v1.165: dolor comprador más específico, puentes entre secciones, revelación MindOS antes del cierre y geografía corregida. */
+/* v1.166: más densidad visual, galerías editoriales HTML5, fotos extra y primer viewport más fuerte para mobile/WhatsApp. */
 /* ─── ROOT — light only, anti iOS auto-dark ─── */
 :root {
   color-scheme: light only;
@@ -121,7 +122,7 @@
   --green: #28ECAA;
   --rule: rgba(255,255,255,.10);
   --card: #0B1729;
-  --muted: #CCCCCC;
+  --muted: #E6E6E6;
   --serif: "Fraunces", "Instrument Serif", Georgia, "Times New Roman", serif;
   --display: "Instrument Serif", "Fraunces", Georgia, serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -151,7 +152,7 @@ body {
 }
 
 /* Universal text-color enforcement (anti iOS dark-mode override) */
-h1, h2, h3, p, li, a, span, em, strong, blockquote, figcaption, time, label {
+h1, h2, h3, p, li, a, span, em, strong, blockquote, figcaption, time, label, dt, dd {
   color: var(--ink);
   -webkit-text-fill-color: var(--ink);
 }
@@ -282,6 +283,149 @@ a { text-decoration: none; color: inherit; }
   color: var(--ink-2) !important;
   -webkit-text-fill-color: var(--ink-2) !important;
   text-transform: uppercase;
+}
+
+/* ─── EDITORIAL PHOTO SYSTEM ─── */
+.photo-wrap,
+.program-media .img-wrap {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: #0B1729;
+}
+.photo-wrap::after,
+.program-media .img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6,14,29,0) 0%, rgba(6,14,29,.12) 100%);
+  pointer-events: none;
+}
+.photo-wrap img,
+.program-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-gallery,
+.editorial-band,
+.proof-gallery,
+.closing-visual {
+  display: grid;
+  gap: 14px;
+}
+.hero-gallery {
+  margin: 0 0 36px;
+}
+.hero-gallery figure,
+.editorial-band figure,
+.proof-gallery figure,
+.closing-visual figure {
+  margin: 0;
+}
+.hero-gallery .photo-wrap {
+  aspect-ratio: 4 / 3;
+}
+.hero-gallery figcaption,
+.editorial-band figcaption,
+.proof-gallery figcaption,
+.closing-visual figcaption {
+  display: block;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .06em;
+  line-height: 1.55;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  border-left: 2px solid var(--orange);
+  padding-left: 10px;
+  margin-top: 12px;
+}
+.hero-gallery figure:nth-child(2) figcaption,
+.proof-gallery figure:nth-child(2) figcaption,
+.closing-visual figcaption {
+  border-left-color: var(--green);
+}
+.editorial-band {
+  margin: 0 0 56px;
+}
+.editorial-band .photo-wrap {
+  aspect-ratio: 16 / 10;
+}
+.editorial-note,
+.closing-note {
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.015) 100%),
+    var(--card);
+  padding: 20px 18px;
+}
+.editorial-note .eyebrow,
+.closing-note .eyebrow {
+  margin-bottom: 16px;
+}
+.editorial-note h3,
+.closing-note h3 {
+  font-family: var(--display);
+  font-size: 30px;
+  line-height: 1.04;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 14px;
+}
+.editorial-note p,
+.closing-note p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 14px;
+}
+.editorial-note p:last-child,
+.closing-note p:last-child {
+  margin-bottom: 0;
+}
+.editorial-note dl {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+.editorial-note div {
+  border-top: 1px dashed var(--rule);
+  padding-top: 12px;
+}
+.editorial-note dt {
+  font-family: var(--mono);
+  font-size: .82rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--orange) !important;
+  -webkit-text-fill-color: var(--orange) !important;
+  margin-bottom: 6px;
+}
+.editorial-note dd {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+}
+.proof-gallery {
+  margin: 28px 0 0;
+}
+.proof-gallery .photo-wrap {
+  aspect-ratio: 5 / 4;
+}
+.closing-visual {
+  margin: 0 0 28px;
+}
+.closing-visual .photo-wrap {
+  aspect-ratio: 16 / 10;
 }
 
 /* ─── SECTION RULE ─── */
@@ -458,40 +602,21 @@ a { text-decoration: none; color: inherit; }
   min-width: 0;
   max-width: 100%;
 }
-.program-media figure {
-  min-width: 0;
-  max-width: 100%;
-}
-.program-media .img-wrap {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  background: #2A1408;
-}
-.program-media img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: none;
-}
-.program-media figure::after {
-  display: none;
-}
+.program-media figure { min-width: 0; max-width: 100%; }
+.program-media .img-wrap { aspect-ratio: 4 / 3; background: #2A1408; }
 .program-media figcaption {
   display: block;
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: .06em;
   line-height: 1.5;
-  color: var(--muted) !important;
-  -webkit-text-fill-color: var(--muted) !important;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
   border-left: 2px solid var(--orange);
   padding-left: 10px;
   margin-top: 12px;
 }
+.program-media figure.is-wide .img-wrap { aspect-ratio: 16 / 10; }
 .ventana.ep .program-media figcaption {
   border-left-color: var(--green);
 }
@@ -834,14 +959,16 @@ a { text-decoration: none; color: inherit; }
     gap: 0;
   }
   .program-media {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     align-items: start;
     max-width: 100%;
     gap: 32px;
   }
   .program-media figure {
     min-height: 220px;
+    grid-column: span 3;
   }
+  .program-media figure.is-wide { grid-column: 1 / -1; }
   .layers li { grid-template-columns: 130px 1fr; gap: 16px; padding: 18px 0; }
   .bio-flex { grid-template-columns: 96px 1fr; gap: 24px; }
   .speaker-bar { grid-template-columns: repeat(3, 1fr); gap: 28px; }
@@ -849,6 +976,17 @@ a { text-decoration: none; color: inherit; }
   .cta p { font-size: 36px; }
   .stats { grid-template-columns: repeat(3, 1fr); gap: 36px; padding: 44px 0; }
   .stat-num { font-size: 86px; }
+  .hero-gallery {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+    grid-auto-rows: minmax(0, auto);
+    gap: 16px;
+  }
+  .hero-gallery .hero-gallery-main { grid-row: span 2; }
+  .hero-gallery .hero-gallery-main .photo-wrap { aspect-ratio: 1 / 1.02; }
+  .editorial-band { grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); gap: 18px; }
+  .editorial-band .editorial-note { grid-column: 1 / -1; }
+  .proof-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .closing-visual { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 18px; align-items: start; }
 }
 
 @media (min-width: 900px) {
@@ -869,6 +1007,11 @@ a { text-decoration: none; color: inherit; }
   }
   .layers { grid-column: 1 / -1; }
   .format { grid-column: span 1; }
+  .editorial-band {
+    grid-template-columns: minmax(0, .95fr) minmax(0, .85fr) minmax(0, .95fr);
+    align-items: start;
+  }
+  .editorial-band .editorial-note { grid-column: span 1; }
 }
 
 /* ─── PAIN HOOK ─── */
@@ -1226,7 +1369,7 @@ a { text-decoration: none; color: inherit; }
 /* ─── ANTI iOS AUTO-DARK — repeat all text rules with !important ─── */
 @media (prefers-color-scheme: dark) {
   html, body { background: var(--bg) !important; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-  h1, h2, h3, p, li, a, span, em, strong, blockquote, figcaption, time, label {
+  h1, h2, h3, p, li, a, span, em, strong, blockquote, figcaption, time, label, dt, dd {
     color: var(--ink) !important;
     -webkit-text-fill-color: var(--ink) !important;
   }
@@ -1342,6 +1485,9 @@ a { text-decoration: none; color: inherit; }
        "Pacto del Capitalismo" y "Plusvalía de Say" (van en el Taller 2).
     8. Mandato JFC: nunca escribir "capa" a secas. Siempre "capa del
        cerebro". El modelo es neuro-conductual, no una metáfora suelta.
+    9. Las bandas visuales (.hero-gallery, .editorial-band, .proof-gallery,
+       .closing-visual) no son decoración suelta: ayudan a que WhatsApp,
+       mobile y desktop muestren escenas concretas de trabajo antes del CTA.
     ════════════════════════════════════════════════════════════════
   -->
 
@@ -1356,6 +1502,27 @@ a { text-decoration: none; color: inherit; }
     </h1>
     <p class="lede">El problema no es que el equipo no escuchó. Es que la capacitación entró por la capa del cerebro equivocada: información encima de creencias intactas. Aquí hay dos talleres separados, con dos problemas distintos y dos retornos distintos: uno ordena la vida financiera del participante; el otro corrige la relación mental con la empresa privada.</p>
     <p class="byline">J.F. Carpio · Investigador empresarial y económico · 2026</p>
+  </section>
+
+  <section class="hero-gallery" aria-label="Escenas del tipo de intervención que abre estos talleres">
+    <figure class="hero-gallery-main">
+      <div class="photo-wrap">
+        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=1200" srcset="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w" sizes="(min-width: 900px) 44vw, 100vw" width="1200" height="800" loading="eager" decoding="async" alt="Equipo ejecutivo trabajando en una mesa de decisión">
+      </div>
+      <figcaption>El punto no es “dar contenido”. Es cambiar cómo el equipo lee una decisión antes de repetirla cien veces.</figcaption>
+    </figure>
+    <figure>
+      <div class="photo-wrap">
+        <img src="https://jfcarpio.com/las7formas/img/pexels-1051838-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-1051838-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-1051838-w1800.jpg 1800w" sizes="(min-width: 900px) 24vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Gráficos impresos y una laptop sobre una mesa de trabajo">
+      </div>
+      <figcaption>Cuando el criterio cambia, cambia también la forma de mirar reportes, prioridades y costo invisible.</figcaption>
+    </figure>
+    <figure>
+      <div class="photo-wrap">
+        <img src="https://jfcarpio.com/las7formas/img/pexels-3943723-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-3943723-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-3943723-w1800.jpg 1800w" sizes="(min-width: 900px) 24vw, 100vw" width="900" height="1200" loading="lazy" decoding="async" alt="Una mano depositando una moneda en una alcancía rodeada de monedas">
+      </div>
+      <figcaption>Un módulo ordena fricción financiera privada. El otro corrige la lectura mental que el equipo hace de la empresa.</figcaption>
+    </figure>
   </section>
 
   <!-- ─── SEÑALES — path para ejecutivos no conscientes del problema ─── -->
@@ -1452,6 +1619,43 @@ a { text-decoration: none; color: inherit; }
     </ol>
   </section>
 
+  <section class="editorial-band" aria-label="Cómo se ve una intervención bien planteada">
+    <figure>
+      <div class="photo-wrap">
+        <picture>
+          <source srcset="https://jfcarpio.com/network-pacific.webp" type="image/webp">
+          <img src="https://jfcarpio.com/network-pacific.jpg" width="1512" height="672" loading="lazy" decoding="async" alt="Visual abstracta de una red conectada sobre una superficie azul">
+        </picture>
+      </div>
+      <figcaption>MindOS no entra como discurso. Entra como estructura: primero un límite, luego una conducta, después una explicación y finalmente una decisión.</figcaption>
+    </figure>
+    <aside class="editorial-note">
+      <span class="eyebrow">Cómo se siente en vivo</span>
+      <h3>Dos horas con densidad de trabajo, no con maquillaje motivacional.</h3>
+      <p>La sesión empieza donde el gerente ya siente el problema: distracción, ownership bajo, decisiones postergadas, resentimiento mal explicado. Después se ordena el descubrimiento.</p>
+      <dl>
+        <div>
+          <dt>Primero</dt>
+          <dd>Una escena reconocible que baja defensas y vuelve visible el costo real.</dd>
+        </div>
+        <div>
+          <dt>Después</dt>
+          <dd>Una explicación económica y neuro-conductual que el participante puede probar con sus propios números.</dd>
+        </div>
+        <div>
+          <dt>Al cierre</dt>
+          <dd>Una decisión fechada que la empresa puede observar, no solo un “me gustó”.</dd>
+        </div>
+      </dl>
+    </aside>
+    <figure>
+      <div class="photo-wrap">
+        <img src="https://jfcarpio.com/las7formas/img/pexels-8927648-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-8927648-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-8927648-w1800.jpg 1800w" sizes="(min-width: 900px) 31vw, 100vw" width="900" height="1200" loading="lazy" decoding="async" alt="Documentos financieros y una lupa sobre una mesa de trabajo">
+      </div>
+      <figcaption>El comprador correcto no necesita una charla “bonita”. Necesita una intervención que soporte revisión, costo y seguimiento.</figcaption>
+    </figure>
+  </section>
+
   <hr class="rule">
 
   <!-- ─── VENTANA 1 — Dinero ─── -->
@@ -1480,7 +1684,7 @@ a { text-decoration: none; color: inherit; }
     </ol>
 
     <div class="program-media" aria-label="Dinero y finanzas personales y familiares en el taller">
-      <figure>
+      <figure class="is-wide">
         <div class="img-wrap">
           <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=1000" srcset="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w" sizes="(min-width: 600px) 45vw, 100vw" width="1000" height="667" loading="lazy" decoding="async" alt="Datos financieros y gráficos de desempeño sobre una pantalla">
         </div>
@@ -1497,6 +1701,18 @@ a { text-decoration: none; color: inherit; }
           <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Participantes revisando notas durante una sesión de trabajo" sizes="(min-width: 600px) 45vw, 100vw">
         </div>
         <figcaption>Cada participante sale con dos o tres decisiones fechadas: liquidez mínima, deuda a atacar, porcentaje de ahorro automático.</figcaption>
+      </figure>
+      <figure>
+        <div class="img-wrap">
+          <img src="https://jfcarpio.com/las7formas/img/pexels-3943716-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-3943716-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-3943716-w1800.jpg 1800w" sizes="(min-width: 600px) 45vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Una mano depositando una moneda en una alcancía negra con monedas dispersas">
+        </div>
+        <figcaption>Ahorro, liquidez y reserva de valor dejan de ser palabras abstractas cuando el participante les pone cifra y orden.</figcaption>
+      </figure>
+      <figure>
+        <div class="img-wrap">
+          <img src="https://jfcarpio.com/las7formas/img/pexels-164527-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-164527-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-164527-w1800.jpg 1800w" sizes="(min-width: 600px) 45vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Billetes de dólar enrollados sobre una superficie clara">
+        </div>
+        <figcaption>El dinero deja de sentirse como niebla mensual y vuelve a verse como flujo, costo de oportunidad y protección familiar.</figcaption>
       </figure>
     </div>
 
@@ -1534,7 +1750,7 @@ a { text-decoration: none; color: inherit; }
     </ol>
 
     <div class="program-media" aria-label="Apreciación de la empresa privada en el taller">
-      <figure>
+      <figure class="is-wide">
         <div class="img-wrap">
           <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=1000" srcset="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w" sizes="(min-width: 600px) 45vw, 100vw" width="1000" height="667" loading="lazy" decoding="async" alt="Equipo empresarial trabajando junto a una pizarra">
         </div>
@@ -1551,6 +1767,18 @@ a { text-decoration: none; color: inherit; }
           <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Facilitador guiando una conversación empresarial" sizes="(min-width: 600px) 45vw, 100vw">
         </div>
         <figcaption>El rol del taller es ordenar el descubrimiento: que el participante vea el sistema que usaba sin saberlo.</figcaption>
+      </figure>
+      <figure>
+        <div class="img-wrap">
+          <img src="https://jfcarpio.com/las7formas/img/pexels-164634-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-164634-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-164634-w1800.jpg 1800w" sizes="(min-width: 600px) 45vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Fila de vehículos en una concesionaria">
+        </div>
+        <figcaption>Capital, inventario, marca y herramientas dejan de parecer “del dueño” y vuelven a verse como multiplicadores reales de productividad.</figcaption>
+      </figure>
+      <figure>
+        <div class="img-wrap">
+          <img src="https://jfcarpio.com/las7formas/img/pexels-590016-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-590016-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-590016-w1800.jpg 1800w" sizes="(min-width: 600px) 45vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Gráficos impresos sobre una mesa junto a una laptop">
+        </div>
+        <figcaption>El taller baja la discusión desde ideología difusa hasta una lectura concreta de margen, salario fijo, riesgo absorbido y cooperación.</figcaption>
       </figure>
     </div>
 
@@ -1622,6 +1850,30 @@ a { text-decoration: none; color: inherit; }
       <span class="pull-attr">— Evaluación de capacitación corporativa · Mutualista Pichincha · Coord.: Arianna Cevallos · Quito, 2017</span>
     </blockquote>
 
+    <div class="proof-gallery" aria-label="Escenas de autoridad, método y facilitación">
+      <figure>
+        <div class="photo-wrap">
+          <img src="https://jfcarpio.com/fotojfc.png" width="512" height="512" loading="lazy" decoding="async" alt="Retrato de Juan Fernando Carpio">
+        </div>
+        <figcaption>La autoridad aquí no se presenta como curriculum inflado: se presenta como criterio, docencia y experiencia de sala.</figcaption>
+      </figure>
+      <figure>
+        <div class="photo-wrap">
+          <picture>
+            <source srcset="https://jfcarpio.com/network-intel.webp" type="image/webp">
+            <img src="https://jfcarpio.com/network-intel.jpg" width="1512" height="672" loading="lazy" decoding="async" alt="Visual abstracta de una red con nodos iluminados en varios colores">
+          </picture>
+        </div>
+        <figcaption>El trabajo real del taller es conectar creencias, conducta, capital y decisión sin perder claridad ejecutiva.</figcaption>
+      </figure>
+      <figure>
+        <div class="photo-wrap">
+          <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Facilitador guiando una conversación empresarial">
+        </div>
+        <figcaption>Cuando la sesión está bien llevada, la objeción del gerente cambia de “¿esto servirá?” a “¿con cuál módulo empiezo?”.</figcaption>
+      </figure>
+    </div>
+
     <div class="speaker-bar" aria-label="Historial como speaker internacional">
       <div class="speaker-item">
         <span class="speaker-num">3.000</span>
@@ -1660,6 +1912,21 @@ a { text-decoration: none; color: inherit; }
   </section>
 
   <hr class="rule">
+
+  <section class="closing-visual" aria-label="Escena previa a la conversación de diagnóstico">
+    <figure>
+      <div class="photo-wrap">
+        <img src="https://jfcarpio.com/las7formas/img/pexels-8927648-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-8927648-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-8927648-w1800.jpg 1800w" sizes="(min-width: 900px) 44vw, 100vw" width="900" height="1200" loading="lazy" decoding="async" alt="Documentos financieros, una lupa y un teléfono sobre una mesa de trabajo">
+      </div>
+      <figcaption>Antes de contratar, la empresa necesita ver dónde se está escapando el costo: atención, liquidez, ownership, margen o lectura del riesgo.</figcaption>
+    </figure>
+    <aside class="closing-note">
+      <span class="eyebrow">Lo que sigue</span>
+      <h3>La conversación correcta no es “si capacitar”. Es qué retorno destrabas primero.</h3>
+      <p>Si el problema dominante es estrés financiero que invade horario laboral, entra el Módulo A. Si el problema dominante es una mala lectura de salario, utilidad, capital y empresa, entra el Módulo B.</p>
+      <p>Si aparecen ambos síntomas juntos, la secuencia completa suele tener más retorno porque el segundo taller cae sobre un cerebro ya reordenado por el primero.</p>
+    </aside>
+  </section>
 
   <!-- ─── DIAGNÓSTICO ─── -->
   <section class="diag" aria-label="Diagnóstico rápido: ¿cuál módulo necesita tu equipo?">
