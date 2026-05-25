@@ -103,7 +103,7 @@
 </script>
 
 <style>
-/* jfcarpio.com/talleres v1.173 - 2026-05-25 */
+/* jfcarpio.com/talleres v1.174 - 2026-05-25 */
 /* v1.160: mecanismo MindOS arriba, epifanía 1a persona, result-callout +15%, stack+aritmética+escasez en CTA. Ver NOTAS DE DISEÑO en <main>. */
 /* v1.161: +5% académico — MindOS atribuido a Dr. Paul Dobransky; "capa" → "capa del cerebro" en todo el texto; tono menos slick, más contexto. */
 /* v1.163: diagnóstico 7 preguntas, qué cambia después, FAQ+schema, CLS fix ventana 2, fracaso evitado, deslop. */
@@ -117,6 +117,7 @@
 /* v1.171: intro reemplazada por dos columnas de dolores con saltos directos a cada taller. */
 /* v1.172: columnas realmente paralelas; solo MindOS queda como puente común. */
 /* v1.173: dolores primero de verdad; sin introducción ni puente común antes de las dos columnas. */
+/* v1.174: columnas primero en pantalla; sin hero arriba, solo una pregunta breve sobre ambas. */
 /* ─── ROOT — light only, anti iOS auto-dark ─── */
 :root {
   color-scheme: light only;
@@ -1628,18 +1629,10 @@ a { text-decoration: none; color: inherit; }
     ════════════════════════════════════════════════════════════════
   -->
 
-  <!-- ─── HERO ─── -->
-  <section class="hero">
-    <span class="eyebrow">Talleres corporativos virtuales</span>
-    <h1 class="h1">
-      <span>¿Cuál de estos dos problemas</span>
-      <span>ya está pagando hoy tu empresa?</span>
-      <em>Falta de educación financiera o mala lectura de la empresa privada.</em>
-    </h1>
-    <p class="byline">J.F. Carpio · Investigador empresarial y económico · 2026</p>
-  </section>
-
   <section class="quick-path" aria-label="Ruta rápida para decidir si estos talleres aplican a tu equipo">
+    <div class="quick-intro">
+      <p>¿Cuál de estos dos problemas ya está pagando hoy tu empresa?</p>
+    </div>
     <div class="quick-grid">
       <article class="quick-card">
         <span class="quick-card-kicker">Módulo A · bienestar financiero</span>
@@ -1669,6 +1662,7 @@ a { text-decoration: none; color: inherit; }
   </section>
 
   <p class="lede">Estos talleres fueron creados para equipos que ya sienten el problema en productividad, criterio y clima interno, aunque todavía no lo hayan nombrado bien. Son dos módulos separados: uno ordena el manejo financiero personal del participante; el otro corrige la manera en que el equipo entiende el salario, la empresa, la utilidad, el riesgo y los activos. Ambos usan el mismo mecanismo, <a href="#mindos">MindOS</a>, pero trabajan problemas distintos y pueden contratarse por separado.</p>
+  <p class="byline">J.F. Carpio · Investigador empresarial y económico · 2026</p>
 
   <section class="hero-gallery" aria-label="Escenas del tipo de intervención que abre estos talleres">
     <figure class="hero-gallery-main">
