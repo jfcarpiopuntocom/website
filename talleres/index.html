@@ -103,7 +103,7 @@
 </script>
 
 <style>
-/* jfcarpio.com/talleres v1.170 - 2026-05-24 */
+/* jfcarpio.com/talleres v1.171 - 2026-05-25 */
 /* v1.160: mecanismo MindOS arriba, epifanía 1a persona, result-callout +15%, stack+aritmética+escasez en CTA. Ver NOTAS DE DISEÑO en <main>. */
 /* v1.161: +5% académico — MindOS atribuido a Dr. Paul Dobransky; "capa" → "capa del cerebro" en todo el texto; tono menos slick, más contexto. */
 /* v1.163: diagnóstico 7 preguntas, qué cambia después, FAQ+schema, CLS fix ventana 2, fracaso evitado, deslop. */
@@ -114,6 +114,7 @@
 /* v1.168: capa superior para tráfico frío; dolor, prueba, elección y CTA antes del desarrollo largo. */
 /* v1.169: deslop de apertura; menos frases de landing y más tono ejecutivo sobrio. */
 /* v1.170: anti-transliteración; menos calcos del inglés y español más natural en bloques clave. */
+/* v1.171: intro reemplazada por dos columnas de dolores con saltos directos a cada taller. */
 /* ─── ROOT — light only, anti iOS auto-dark ─── */
 :root {
   color-scheme: light only;
@@ -384,6 +385,51 @@ a { text-decoration: none; color: inherit; }
 .quick-card strong {
   color: var(--ink) !important;
   -webkit-text-fill-color: var(--ink) !important;
+}
+.quick-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+}
+.quick-list li {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  padding: 6px 0 6px 22px;
+  position: relative;
+  border-top: 1px solid var(--rule);
+}
+.quick-list li:first-child {
+  border-top: none;
+}
+.quick-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--orange) !important;
+  -webkit-text-fill-color: var(--orange) !important;
+}
+.quick-card.ep .quick-list li::before {
+  color: var(--green) !important;
+  -webkit-text-fill-color: var(--green) !important;
+}
+.quick-jump {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: .82rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+}
+.quick-jump::after {
+  content: '↓';
 }
 .quick-proof {
   display: grid;
@@ -1635,31 +1681,42 @@ a { text-decoration: none; color: inherit; }
   <section class="hero">
     <span class="eyebrow">Talleres corporativos virtuales</span>
     <h1 class="h1">
-      <span>Si el sueldo sube y el malestar no baja,</span>
-      <span>si la gente cumple pero no cuida activos,</span>
-      <span>o si la última capacitación duró dos semanas,</span>
-      <em>ya hay un problema que la empresa está pagando.</em>
+      <span>¿Cuál de estos dos problemas</span>
+      <span>ya está pagando hoy tu empresa?</span>
+      <em>Falta de educación financiera o mala lectura de la empresa privada.</em>
     </h1>
-    <p class="lede">Estos talleres están hechos para equipos que ya sienten el problema en productividad, criterio y clima interno, aunque todavía no lo hayan nombrado bien. Son dos módulos separados: uno ordena el manejo financiero personal del participante; el otro corrige la manera en que el equipo entiende el salario, la empresa, la utilidad, el riesgo y los activos.</p>
+    <p class="lede">Estos talleres fueron creados para equipos que ya sienten el problema en productividad, criterio y clima interno, aunque todavía no lo hayan nombrado bien. Son dos módulos separados: uno ordena el manejo financiero personal del participante; el otro corrige la manera en que el equipo entiende el salario, la empresa, la utilidad, el riesgo y los activos.</p>
     <p class="byline">J.F. Carpio · Investigador empresarial y económico · 2026</p>
   </section>
 
   <section class="quick-path" aria-label="Ruta rápida para decidir si estos talleres aplican a tu equipo">
     <div class="quick-intro">
-      <p>Si llegaste desde un post, un correo o una recomendación y quieres orientarte rápido, esto es lo esencial: hay dos problemas distintos, dos talleres independientes y un mismo objetivo para la empresa: menos distracción, mejor criterio y cambios concretos después de la sesión.</p>
+      <p>Si llegaste desde un post, un correo o una recomendación, ubica primero cuál de estos dos costos se parece más a tu equipo.</p>
     </div>
     <div class="quick-grid">
       <article class="quick-card">
         <span class="quick-card-kicker">Módulo A · bienestar financiero</span>
-        <h3>Cuando el problema entra al trabajo desde la vida financiera personal</h3>
-        <p>Sirve cuando el equipo llega al trabajo con deuda, mala liquidez, inflación, remesas, vivienda o retiro postergado ocupando espacio mental.</p>
-        <p><strong>Qué mejora en la empresa:</strong> menos estrés financiero durante la jornada y mejores decisiones de deuda, ahorro y liquidez.</p>
+        <h3>Dolores de no haber dado educación financiera y financial wellness</h3>
+        <ul class="quick-list">
+          <li>Sube el sueldo, pero el estrés financiero del equipo no baja.</li>
+          <li>La deuda, las remesas, la vivienda o el retiro postergado entran todos los días al trabajo.</li>
+          <li>Los aumentos de sueldo no se convierten en más tranquilidad ni en mejor concentración.</li>
+          <li>Parte de la nómina se pierde en urgencias, mala liquidez y decisiones financieras mal tomadas.</li>
+          <li>La empresa paga distracción, cansancio mental y decisiones postergadas que nadie reporta.</li>
+        </ul>
+        <a href="#taller-finanzas" class="quick-jump">Ver taller de finanzas</a>
       </article>
       <article class="quick-card ep">
         <span class="quick-card-kicker">Módulo B · cultura empresarial</span>
-        <h3>Cuando el equipo cumple, pero no cuida activos ni margen</h3>
-        <p>Sirve cuando el trabajo se hace, pero la empresa todavía se entiende como una relación en la que uno gana a costa del otro.</p>
-        <p><strong>Qué mejora en la empresa:</strong> mejor cuidado de activos, mejor lectura de salario y utilidad, y más iniciativa cuando hace falta.</p>
+        <h3>Dolores de que floten ideas marxistas y antiempresa en la mente del equipo</h3>
+        <ul class="quick-list">
+          <li>La utilidad se mira con sospecha, como si fuera abuso y no resultado.</li>
+          <li>El salario se entiende como “lo mínimo que me quieren pagar”, no como parte de un pacto económico.</li>
+          <li>Los activos de la empresa se tratan como ajenos: inventario, herramientas, margen, tiempo y clientes.</li>
+          <li>Baja la iniciativa porque, en el fondo, se cree que si gana la empresa el trabajador pierde.</li>
+          <li>Se instala una relación fría con la empresa: se cumple, pero no se cuida, no se propone y no se construye.</li>
+        </ul>
+        <a href="#taller-empresa" class="quick-jump">Ver taller de empresa privada</a>
       </article>
     </div>
     <div class="quick-proof" aria-label="Prueba temprana para primera visita">
@@ -1842,7 +1899,7 @@ a { text-decoration: none; color: inherit; }
   <hr class="rule">
 
   <!-- ─── VENTANA 1 — Dinero ─── -->
-  <section class="ventana">
+  <section class="ventana" id="taller-finanzas">
     <span class="ventana-label">Taller 1 · 2 horas · Independiente</span>
     <h2 class="h2">Dinero y Finanzas Personales y Familiares</h2>
     <p class="ventana-lede">El participante llega con un sistema financiero heredado: ideas sobre dinero, ahorro, deuda, inversión y seguridad familiar formadas antes de tener herramientas para evaluarlas.</p>
@@ -1908,7 +1965,7 @@ a { text-decoration: none; color: inherit; }
   <hr class="rule">
 
   <!-- ─── VENTANA 2 — Empresa Privada ─── -->
-  <section class="ventana ep">
+  <section class="ventana ep" id="taller-empresa">
     <span class="ventana-label">Taller 2 · 2 horas · Independiente</span>
     <h2 class="h2">Apreciación de la Empresa Privada</h2>
     <p class="ventana-lede">El sistema operativo heredado, en la mayoría de casos, es un frame win-lose: el empleador gana porque el empleado pierde. Llega antes que el contrato y rara vez se corrige con aritmética real.</p>
