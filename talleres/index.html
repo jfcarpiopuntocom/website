@@ -103,7 +103,7 @@
 </script>
 
 <style>
-/* jfcarpio.com/talleres v1.171 - 2026-05-25 */
+/* jfcarpio.com/talleres v1.172 - 2026-05-25 */
 /* v1.160: mecanismo MindOS arriba, epifanía 1a persona, result-callout +15%, stack+aritmética+escasez en CTA. Ver NOTAS DE DISEÑO en <main>. */
 /* v1.161: +5% académico — MindOS atribuido a Dr. Paul Dobransky; "capa" → "capa del cerebro" en todo el texto; tono menos slick, más contexto. */
 /* v1.163: diagnóstico 7 preguntas, qué cambia después, FAQ+schema, CLS fix ventana 2, fracaso evitado, deslop. */
@@ -115,6 +115,7 @@
 /* v1.169: deslop de apertura; menos frases de landing y más tono ejecutivo sobrio. */
 /* v1.170: anti-transliteración; menos calcos del inglés y español más natural en bloques clave. */
 /* v1.171: intro reemplazada por dos columnas de dolores con saltos directos a cada taller. */
+/* v1.172: columnas realmente paralelas; solo MindOS queda como puente común. */
 /* ─── ROOT — light only, anti iOS auto-dark ─── */
 :root {
   color-scheme: light only;
@@ -431,69 +432,22 @@ a { text-decoration: none; color: inherit; }
 .quick-jump::after {
   content: '↓';
 }
-.quick-proof {
-  display: grid;
-  gap: 12px;
-}
-.quick-proof-item {
+.quick-shared {
+  max-width: 860px;
   border-top: 1px solid var(--rule);
-  padding-top: 12px;
+  padding-top: 16px;
 }
-.quick-proof-item strong {
-  display: block;
-  font-family: var(--display);
-  font-size: 2rem;
-  line-height: 1;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-  margin-bottom: 8px;
-}
-.quick-proof-item:nth-child(2) strong {
-  color: var(--green) !important;
-  -webkit-text-fill-color: var(--green) !important;
-}
-.quick-proof-item p {
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin: 0;
-}
-.quick-proof-item em {
-  color: var(--ink-2) !important;
-  -webkit-text-fill-color: var(--ink-2) !important;
-}
-.quick-quote {
-  margin: 0;
-  border-left: 3px solid var(--green);
-  padding: 0 0 0 16px;
-}
-.quick-quote p {
+.quick-shared p {
   font-size: 16px;
   line-height: 1.7;
   color: var(--ink) !important;
   -webkit-text-fill-color: var(--ink) !important;
-  margin-bottom: 10px;
-}
-.quick-quote span {
-  display: block;
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: .06em;
-  line-height: 1.55;
-  color: var(--ink-2) !important;
-  -webkit-text-fill-color: var(--ink-2) !important;
-}
-.quick-note {
-  font-family: var(--mono);
-  font-size: .86rem;
-  letter-spacing: .03em;
-  line-height: 1.6;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
   margin: 0;
+}
+.quick-shared a {
+  color: var(--orange) !important;
+  -webkit-text-fill-color: var(--orange) !important;
+  text-decoration: none;
 }
 .hero-gallery {
   margin: 0 0 36px;
@@ -1162,8 +1116,7 @@ a { text-decoration: none; color: inherit; }
   }
   .hero-gallery .hero-gallery-main { grid-row: span 2; }
   .hero-gallery .hero-gallery-main .photo-wrap { aspect-ratio: 1 / 1.02; }
-  .quick-grid,
-  .quick-proof {
+  .quick-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .editorial-band { grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); gap: 18px; }
@@ -1195,9 +1148,6 @@ a { text-decoration: none; color: inherit; }
     align-items: start;
   }
   .editorial-band .editorial-note { grid-column: span 1; }
-  .quick-proof {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 /* ─── PAIN HOOK ─── */
@@ -1719,29 +1669,9 @@ a { text-decoration: none; color: inherit; }
         <a href="#taller-empresa" class="quick-jump">Ver taller de empresa privada</a>
       </article>
     </div>
-    <div class="quick-proof" aria-label="Prueba temprana para primera visita">
-      <div class="quick-proof-item">
-        <strong>+15%</strong>
-        <p>Un equipo comercial subió sus resultados el semestre siguiente, con menos desmotivación y menos distracción.</p>
-      </div>
-      <div class="quick-proof-item">
-        <strong>4.800+</strong>
-        <p>estudiantes en 14 años como profesor en la USFQ, más trabajo corporativo en tres ciudades del Ecuador.</p>
-      </div>
-      <div class="quick-proof-item">
-        <strong>180 h/mes</strong>
-        <p>puede perder una nómina de 15 personas si el estrés financiero personal sigue entrando al trabajo. <em>PwC.</em></p>
-      </div>
+    <div class="quick-shared">
+      <p>Ambos talleres usan el mismo mecanismo, <a href="#mindos">MindOS</a>, pero trabajan problemas distintos y pueden contratarse por separado.</p>
     </div>
-    <blockquote class="quick-quote">
-      <p>"Las personas me han dado muy buenos comentarios. Funciona bien para brokers, aseguradoras y casi todo tipo de negocio con gestión activa de ventas."</p>
-      <span>Fernando Hallo · Broker de seguros · Quito · Ecuador · 2024</span>
-    </blockquote>
-    <div class="cta-btns">
-      <button class="cta-btn" type="button" data-wa>Conversemos por WhatsApp</button>
-      <a href="https://calendly.com/jfcarpio/5minutos" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">Agendar 20 minutos</a>
-    </div>
-    <p class="quick-note">Si ya reconoces el problema, puedes escribir ahora. Debajo está la explicación completa y el detalle de cada taller.</p>
   </section>
 
   <section class="hero-gallery" aria-label="Escenas del tipo de intervención que abre estos talleres">
@@ -1778,7 +1708,7 @@ a { text-decoration: none; color: inherit; }
   </div>
 
   <!-- ─── MECANISMO NOMBRADO — MindOS arriba como bandera (v1.160) ─── -->
-  <section class="mech" aria-label="El mecanismo: MindOS">
+  <section class="mech" aria-label="El mecanismo: MindOS" id="mindos">
     <span class="eyebrow">El mecanismo</span>
     <h2 class="h2"><span class="mech-name">MindOS</span> — el sistema operativo de la mente que decide si una capacitación cambia la conducta o se pierde a las pocas semanas.</h2>
     <p>MindOS es el modelo del psiquiatra Dr. Paul Dobransky sobre cómo funciona la mente. Toda conducta corre sobre cuatro capas del cerebro, en orden: límite, conducta, intelecto y decisión. La capacitación corriente entra por el intelecto, información nueva, sobre un límite y unas creencias que nadie examinó. Por eso dura lo que dura el entusiasmo. La intervención sostenible respeta el orden de Dobransky: de la capa del cerebro más basal, donde vive lo emocional, a la más alta, donde se decide.</p>
