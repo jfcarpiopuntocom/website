@@ -134,7 +134,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.176 (USFQ Ecuador editorial deslop) · Last major refactor: 2026-05-21 · Author: JFC + Codex
+  v1.183 (deslop pass: kill repeated antithesis, aphoristic closers, em dashes; force es render on load) · Last major refactor: 2026-05-29 · Author: JFC + Claude
   WHITE E enhancements: added mix-blend-mode:screen to background images for
   beautiful, visible photography against white background (no more dingy appearance).
 ================================================================================
@@ -2649,16 +2649,16 @@ button { border:none; background:none; font:inherit; }
   <canvas id="heroCanvas" width="1869" height="750" style="width: 1869px; height: 750px;"></canvas>
   <div class="hero-layout">
     <div class="hero-in">
-      <p class="hero-kick"><span class="kd"></span><span data-t="kick">Economía aplicada · Empresa privada · América Latina</span></p>
+      <p class="hero-kick"><span class="kd"></span><span data-t="kick">Economía aplicada · Instituciones · Empresa privada</span></p>
       <h1 class="hero-h1">
         <span class="lw"><span class="li"><span data-t="h1_l1a">La expansión de un negocio en </span><span style="color:#E86040" data-t="h1_l1b">Latinoamérica</span></span></span>
-        <span class="lw"><span class="li" data-t="h1_l2">enfrenta dos batallas simultáneas: construir el negocio, y sobrevivir el entorno que lo complica.</span></span>
-        <span class="lw"><span class="li"><strong><span data-t="h1_l3a">Aquí el entorno deja de ser </span><span style="color:#E8A020" data-t="h1_l3b">ruido</span><span data-t="h1_l3c"> y se vuelve diagnóstico.</span></strong></span></span>
+        <span class="lw"><span class="li" data-t="h1_l2">no solo compite por clientes: compite contra reglas cambiantes, crédito escaso y señales mal leídas.</span></span>
+        <span class="lw"><span class="li"><strong><span data-t="h1_l3a">Aquí el ruido del entorno se convierte en </span><span style="color:#E8A020" data-t="h1_l3b">criterio</span><span data-t="h1_l3c"> para decidir.</span></strong></span></span>
       </h1>
-      <p class="hero-sub" data-t="hero_sub">Para empresarios que operan donde las reglas, el crédito y la política pesan tanto como el producto.</p>
+      <p class="hero-sub" data-t="hero_sub">Para empresarios que necesitan leer caja, incentivos y regulación antes de que el mercado les cobre la demora.</p>
       <div class="hero-ctas">
-        <a href="https://www.jfcarpio.com/visorantiquiebra/" class="hero-cta" target="_blank" rel="noopener" data-t="cta_primary">Empezar por diagnóstico del negocio →</a>
-        <a href="#" onclick="openWA();return false;" class="hero-cta-sec" data-t="cta_sec">¿Decisión urgente? Escríbeme →</a>
+        <a href="https://www.jfcarpio.com/visorantiquiebra/" class="hero-cta" target="_blank" rel="noopener" data-t="cta_primary">Ver diagnóstico del negocio →</a>
+        <a href="#" onclick="openWA();return false;" class="hero-cta-sec" data-t="cta_sec">Tengo una decisión encima →</a>
       </div>
       <div class="hero-badge">
         <span class="hero-badge-mark" data-t="badge_mark">Keynote</span>
@@ -2892,25 +2892,12 @@ button { border:none; background:none; font:inherit; }
 <!-- COPY + PHOTO — v1.3 -->
 <div class="copy-section">
   <div class="copy-text reveal in">
-    <p class="copy-p" data-t="cp1">La empresa latinoamericana rara vez se entiende desde manuales pensados para mercados estables.</p>
-    <p class="copy-p" data-t="cp_or">Opera donde el Estado cambia las reglas
-en mitad del partido, el crédito se vuelve prudente tarde, los impuestos
-pesan antes de que llegue la utilidad y la política acorta el horizonte de
-inversión. El problema no es psicológico; es institucional y operativo.</p>
-    <p class="copy-p" data-t="cp2">Por eso este sitio no empieza con una
-biografía. Empieza con problemas observables: caja, incentivos, coordinación,
-entorno institucional y decisiones que no conviene aplazar.</p>
-    <p class="copy-p" data-t="cp3b">Después de dos décadas entre consultoría,
-docencia, investigación y empresa privada, la conclusión se volvió difícil
-de ignorar: muchas organizaciones no fallan por falta de energía, sino por
-leer tarde señales que ya estaban disponibles.</p>
-    <p class="copy-p" data-t="cp4">Aquí esa lectura se vuelve práctica:
-dashboards para diagnosticar la salud del negocio; reportes para traducir
-macroeconomía y regulación a decisiones; talleres para que el equipo entienda
-dinero, empresa privada y cooperación productiva.</p>
-    <p class="copy-p" data-t="cp5">Escribo desde Ecuador para empresarios,
-directivos y equipos hispanohablantes o bilingües que operan en mercados
-donde el error se paga rápido. Growth OS es el primer punto de entrada.</p>
+    <p class="copy-p" data-t="cp1">En Ecuador y América Latina, una empresa no opera dentro de una abstracción.</p>
+    <p class="copy-p" data-t="cp_or">Opera con costos financieros altos, reglas que se mueven, impuestos que llegan antes que la utilidad y política que acorta el horizonte de inversión. Son límites de instituciones, caja y coordinación: medibles y operables.</p>
+    <p class="copy-p" data-t="cp2">Por eso este sitio abre con lo que un empresario puede observar hoy: caja, incentivos, señales del entorno y decisiones que pierden valor cuando se aplazan.</p>
+    <p class="copy-p" data-t="cp3b">Después de dos décadas entre consultoría, docencia universitaria, investigación y empresa privada, la conclusión es incómoda: muchas organizaciones quiebran por interpretar tarde señales que ya estaban sobre la mesa.</p>
+    <p class="copy-p" data-t="cp4">Aquí esa lectura baja a instrumentos: dashboards para mirar salud del negocio; reportes para traducir macroeconomía y regulación; talleres para alinear al equipo alrededor de dinero, empresa privada y cooperación productiva.</p>
+    <p class="copy-p" data-t="cp5">Escribo desde Ecuador para empresarios, directivos y equipos hispanohablantes o bilingües que trabajan en mercados donde equivocarse sale caro. Growth OS es el primer punto de entrada.</p>
     <p class="copy-byline">
       <strong>J. F. Carpio</strong> — <span data-t="byline">Economía con instituciones y empresas</span>
     </p>
@@ -3667,10 +3654,10 @@ var T={
     p5_desc:'Libros, papers y columnas: la cocina intelectual detrás de las herramientas.', p5_tag:'Académico',
     cp1:'En Ecuador y América Latina, una empresa no opera dentro de una abstracción.',
     cp1b:'',
-    cp_or:'Opera con costos financieros altos, reglas que se mueven, impuestos que llegan antes que la utilidad y política que acorta el horizonte de inversión. No es un problema de actitud. Es un problema de instituciones, caja y coordinación.',
-    cp2:'Por eso este sitio no abre con una biografía. Abre con lo que un empresario sí puede observar: caja, incentivos, señales del entorno y decisiones que pierden valor cuando se aplazan.',
+    cp_or:'Opera con costos financieros altos, reglas que se mueven, impuestos que llegan antes que la utilidad y política que acorta el horizonte de inversión. Son límites de instituciones, caja y coordinación: medibles y operables.',
+    cp2:'Por eso este sitio abre con lo que un empresario puede observar hoy: caja, incentivos, señales del entorno y decisiones que pierden valor cuando se aplazan.',
     cp3a:'',
-    cp3b:'Después de dos décadas entre consultoría, docencia universitaria, investigación y empresa privada, la conclusión es incómoda: muchas organizaciones no fallan por falta de esfuerzo, sino por interpretar tarde señales que ya estaban sobre la mesa.',
+    cp3b:'Después de dos décadas entre consultoría, docencia universitaria, investigación y empresa privada, la conclusión es incómoda: muchas organizaciones quiebran por interpretar tarde señales que ya estaban sobre la mesa.',
     cp4:'Aquí esa lectura baja a instrumentos: dashboards para mirar salud del negocio; reportes para traducir macroeconomía y regulación; talleres para alinear al equipo alrededor de dinero, empresa privada y cooperación productiva.',
     cp5:'Escribo desde Ecuador para empresarios, directivos y equipos hispanohablantes o bilingües que trabajan en mercados donde equivocarse sale caro. Growth OS es el primer punto de entrada.',
     guide_k:'No empieces por quién soy.',
@@ -3691,7 +3678,7 @@ var T={
     opt_context_1:'Antes de comprar una herramienta conviene formular bien la pregunta. Un mes difícil puede ser ruido; varios meses mal leídos ya son información cara.',
     opt_context_2:'Empieza donde el costo ya se está manifestando: caja, entorno o equipo. La secuencia importa más que la cantidad de opciones.',
     decision_rule:'Regla editorial',
-    decision_line:'Esto no es una vitrina. Es un índice de problemas empresariales leídos desde economía, instituciones y operación.',
+    decision_line:'Un índice de problemas empresariales, leídos desde economía, instituciones y operación.',
     opt1_h:'Diagnostica tu negocio',
     opt1_micro:'en 20 min separas señal de ruido',
     opt2_h:'Entiende tu entorno',
@@ -3715,16 +3702,16 @@ var T={
     t2_role:'Empresaria ecommerce · Orlando, FL',
     byline:'Economía, instituciones y empresa privada',
     tl_lbl:'Trayectoria', tl_title:'Una trayectoria en defensa de la sociedad civil y la empresa privada', tl_title_a:'Dos temas persistentes: ', tl_title_b:'crecimiento económico y optimismo racional',
-    tl1_t:'Growth OS — cuatro tableros para leer restricciones',
-    tl1_b:'Del primer MRR al exit. Herramientas para detectar temprano dónde se está trabando el negocio: caja, adquisición, decisión o ejecución. Economía aplicada sin perder de vista la operación.',
-    tl2_t:'Consultoría independiente — ideas contra la operación',
-    tl2_b:'33+ clientes directos. En proyectos específicos se observaron ROIs del 10–40% en mercados emergentes; no es una promesa de resultado típico. Keynote en Forum da Liberdade, Porto Alegre, ante 3.000 asistentes. Defender la empresa privada exige hablar también de decisiones, costos y resultados.',
+    tl1_t:'Growth OS: cuatro tableros para leer restricciones',
+    tl1_b:'Del primer MRR al exit. Herramientas para detectar temprano dónde se traba el negocio: caja, adquisición, decisión o ejecución.',
+    tl2_t:'Consultoría independiente: ideas puestas a prueba en la operación',
+    tl2_b:'33+ clientes directos. En proyectos específicos se observaron ROIs del 10–40% en mercados emergentes; no es una promesa de resultado típico. Keynote en Forum da Liberdade, Porto Alegre, ante 3.000 asistentes.',
     tl3_t:'14 años formando estudiantes universitarios en economía, mercado y empresa',
-    tl3_b:'Fundó el primer subdepartamento de Economía Austriaca e Institucional del Ecuador. Diseñó una síntesis propia — Economía con instituciones y empresas — para Principios de Economía (ECN100, USFQ). Asesoró y colaboró en la creación del Instituto de Economía de la USFQ y su revista académica Polemika.',
+    tl3_b:'Fundó el primer subdepartamento de Economía Austriaca e Institucional del Ecuador. Diseñó una síntesis propia, Economía con instituciones y empresas, para Principios de Economía (ECN100, USFQ). Asesoró y colaboró en la creación del Instituto de Economía de la USFQ y su revista académica Polemika.',
     tl4_t:'Autor, articulista y traductor de economía institucional y empresarial',
     tl4_b:'Autor de "10 Lecciones de Economía". Traducción y difusión en español de economía continental europea, con especial atención a la escuela austriaca. Columnista en prensa ecuatoriana.',
     tl5_t:'Formación teórica al servicio de problemas reales',
-    tl5_b:'M.E.E. en UFM Guatemala / Boston University. Trabajo doctoral en evolución institucional mengeriana (3 working papers). La teoría austriaca del capital como instrumento para entender coordinación, inversión y tiempo.',
+    tl5_b:'M.E.E. en UFM Guatemala / Boston University. Trabajo doctoral en evolución institucional mengeriana (3 working papers). Aplica la teoría austriaca del capital a problemas de coordinación, inversión y tiempo.',
     term_lbl:'Consulta directa', term_title_a:'¿Tienes una ', term_title_b:'pregunta', term_title_c:'?',
     contact_eye:'Consulta directa · WhatsApp',
     contact_title:'Trae un problema concreto',
@@ -3798,9 +3785,9 @@ var T={
     p5_desc:'Books, papers and columns: the intellectual kitchen behind the tools.', p5_tag:'Academic',
     cp1:'In Ecuador and Latin America, a company does not operate inside an abstraction.',
     cp1b:'',
-    cp2:'That is why this site does not open with a biography. It opens with what an entrepreneur can observe: cash, incentives, environmental signals and decisions that lose value when postponed.',
+    cp2:'That is why this site opens with what an entrepreneur can observe today: cash, incentives, environmental signals and decisions that lose value when postponed.',
     cp3a:'',
-    cp3b:'After two decades across consulting, university teaching, research and private enterprise, the conclusion is uncomfortable: many organizations do not fail for lack of effort, but for interpreting late signals that were already on the table.',
+    cp3b:'After two decades across consulting, university teaching, research and private enterprise, the conclusion is uncomfortable: many organizations fail by interpreting late signals that were already on the table.',
     cp4:'Here that reading becomes instruments: dashboards for business health; reports to translate macroeconomics and regulation; workshops to align teams around money, private enterprise and productive cooperation.',
     cp5:'I write from Ecuador for entrepreneurs, executives and Spanish-speaking or bilingual teams working in markets where being wrong gets expensive. Growth OS is the first entry point.',
     guide_k:'Do not start with who I am.',
@@ -3821,7 +3808,7 @@ var T={
     opt_context_1:'Before buying a tool, formulate the question well. One difficult month may be noise; several badly read months are already expensive information.',
     opt_context_2:'Start where the cost is already showing: cash, environment or team. Sequence matters more than the number of options.',
     decision_rule:'Editorial rule',
-    decision_line:'This is not a display case. It is an index of business problems read through economics, institutions and operation.',
+    decision_line:'An index of business problems, read through economics, institutions and operation.',
     opt1_h:'Diagnose your business',
     opt1_micro:'in 20 min separate signal from noise',
     opt2_h:'Understand your environment',
@@ -3843,19 +3830,19 @@ var T={
     t2_q:'Easy, no complications. Real. And 100% what we needed to land everything and make sure it was not just a dream.',
     t2_name:'Leonela Loor',
     t2_role:'Ecommerce entrepreneur · Orlando, FL',
-    cp_or:'They operate with high financing costs, moving rules, taxes that arrive before profit and politics that shortens the investment horizon. This is not an attitude problem. It is a problem of institutions, cash and coordination.',
+    cp_or:'They operate with high financing costs, moving rules, taxes that arrive before profit and politics that shortens the investment horizon. These are limits of institutions, cash and coordination: measurable and workable.',
     byline:'Economics, institutions and private enterprise',
     tl_lbl:'Track record', tl_title:'A career defending civil society and private enterprise', tl_title_a:'Two persistent themes: ', tl_title_b:'economic growth and rational optimism',
-    tl1_t:'Growth OS — four dashboards for reading constraints',
-    tl1_b:'From the first MRR to exit. Tools for detecting early where the business is getting stuck: cash, acquisition, decision or execution. Applied economics without losing sight of operation.',
-    tl2_t:'Independent consulting — ideas against operation',
-    tl2_b:'33+ direct clients. Specific projects showed 10–40% ROIs in emerging markets; this is not a typical-results promise. Keynote at Forum da Liberdade, Porto Alegre, before 3,000 attendees. Defending private enterprise also requires speaking about decisions, costs and results.',
+    tl1_t:'Growth OS: four dashboards for reading constraints',
+    tl1_b:'From the first MRR to exit. Tools for detecting early where the business gets stuck: cash, acquisition, decision or execution.',
+    tl2_t:'Independent consulting: ideas tested in operation',
+    tl2_b:'33+ direct clients. Specific projects showed 10–40% ROIs in emerging markets; this is not a typical-results promise. Keynote at Forum da Liberdade, Porto Alegre, before 3,000 attendees.',
     tl3_t:'14 years training university students in economics, markets and enterprise',
-    tl3_b:'Founded Ecuador\'s first Austrian and Institutional Economics sub-department. Designed an original synthesis — Economics with institutions and enterprise — for Principios de Economía (ECN100, USFQ). Advised and collaborated in the creation of the USFQ Institute of Economics and its academic journal Polemika.',
+    tl3_b:'Founded Ecuador\'s first Austrian and Institutional Economics sub-department. Designed an original synthesis, Economics with institutions and enterprise, for Principios de Economía (ECN100, USFQ). Advised and collaborated in the creation of the USFQ Institute of Economics and its academic journal Polemika.',
     tl4_t:'Author, article writer and translator of institutional and business economics',
     tl4_b:'Author of "10 Lessons of Economics". Translation and dissemination in Spanish of continental European economics, with special attention to the Austrian school. Columnist in Ecuadorian press.',
     tl5_t:'Theoretical formation in service of real problems',
-    tl5_b:'M.E.E. at UFM Guatemala / Boston University. Doctoral work in Mengerian institutional evolution (3 working papers). Austrian capital theory as an instrument for understanding coordination, investment and time.',
+    tl5_b:'M.E.E. at UFM Guatemala / Boston University. Doctoral work in Mengerian institutional evolution (3 working papers). He applies Austrian capital theory to problems of coordination, investment and time.',
     term_lbl:'Direct consultation', term_title_a:'Got a ', term_title_b:'question', term_title_c:'?',
     contact_eye:'Direct consultation · WhatsApp',
     contact_title:'Bring a concrete problem',
@@ -3927,7 +3914,7 @@ function setLang(l){
 
 /* Restore on load */
 (function(){
-  try{var s=localStorage.getItem('jfc_lang');if(s&&T[s])setLang(s);}catch(e){}
+  try{var s=localStorage.getItem('jfc_lang');setLang(s&&T[s]?s:'es');}catch(e){setLang('es');}
 })();
 
 /* v1.138: count-up animation */
