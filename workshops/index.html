@@ -105,11 +105,12 @@
 </script>
 
 <style>
-/* jfcarpio.com/workshops v1.170 - 2026-05-28 */
+/* jfcarpio.com/workshops v1.171 - 2026-05-28 */
 /* v1.167: quantified Fernando Hallo testimonial (+6% financial wellness, team of 25); world cases (PwC/Gallup/McKinsey) + projection, USA-focused for the buyer's team. */
 /* v1.168: deslop of AI-generated blocks (no "isn't X: it's Y" antithesis, no filler); E-E-A-T: jobTitle + knowsAbout on the Service Person for 2026 author SEO. */
 /* v1.169: port talleres B2B opening — two parallel pain columns (quick-path) + early proofbar replace the old hero; hidden SEO h1 added; jump anchors #workshop-finance/#workshop-enterprise/#mindos. Kicker/list/outcome sizes raised to >=13px/16px to honor min font rule. */
 /* v1.170: min-font legibility floor. Figcaptions raised 12 to 13px (kicker/list/outcome already compliant in v1.169). WhatsApp-preview verified: og:image 200, iOS anti-dark-mode stack intact. */
+/* v1.171: breathing room between the proof bar (quick-proofbar) and the lede; margin-bottom 30px so they no longer touch. */
 /* English mirror of talleres v1.166 */
 /* ─── ROOT — light only, anti iOS auto-dark ─── */
 :root {
@@ -751,7 +752,7 @@ a { text-decoration: none; color: inherit; }
 .quick-jump { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 2px; }
 .quick-jump::after { content: '↓'; }
 .quick-outcome { font-size: 16px; line-height: 1.65; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; border-top: 1px solid var(--rule); padding-top: 12px; margin: 0 0 14px; }
-.quick-proofbar { display: grid; gap: 12px; border-top: 1px solid var(--rule); padding-top: 16px; }
+.quick-proofbar { display: grid; gap: 12px; border-top: 1px solid var(--rule); padding-top: 16px; margin-bottom: 30px; }
 .quick-proofmini { border-left: 2px solid var(--orange); padding-left: 12px; }
 .quick-proofmini:nth-child(2) { border-left-color: var(--green); }
 .quick-proofmini:nth-child(3) { border-left-color: var(--blue, #3B7EE8); }
