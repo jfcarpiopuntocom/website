@@ -105,7 +105,7 @@
 </script>
 
 <style>
-/* jfcarpio.com/talleres v1.183 - 2026-05-28 */
+/* jfcarpio.com/talleres v1.184 - 2026-05-28 */
 /* v1.160: mecanismo MindOS arriba, epifanía 1a persona, result-callout +15%, stack+aritmética+escasez en CTA. Ver NOTAS DE DISEÑO en <main>. */
 /* v1.161: +5% académico — MindOS atribuido a Dr. Paul Dobransky; "capa" → "capa del cerebro" en todo el texto; tono menos slick, más contexto. */
 /* v1.163: diagnóstico 7 preguntas, qué cambia después, FAQ+schema, CLS fix ventana 2, fracaso evitado, deslop. */
@@ -129,6 +129,7 @@
 /* v1.181: h1 oculto (visually-hidden) al inicio del main para recuperar el encabezado principal de SEO sin alterar el diseño visible. */
 /* v1.182: piso de legibilidad de fuente. quick-card-kicker de 11 a 13px, quick-list de 15 a 16px, quick-outcome de 14 a 16px, figcaptions de 12 a 13px. WhatsApp-preview verificado: og:image 200, stack anti-dark-mode iOS intacto. */
 /* v1.183: aire entre la barra de cifras (quick-proofbar) y el lede; margin-bottom 30px para que no queden pegados. */
+/* v1.184: prompt suave en el pico de motivación (link "Hablemos de por dónde empezar" tras la proyección, salta al CTA #conversemos); CTA secundario apunta a Calendly /20minutos (coincide con "Agendar 20 minutos"); links al ensayo abren en pestaña nueva (target=_blank rel=noopener) para no perder al lector. */
 /* ─── ROOT — light only, anti iOS auto-dark ─── */
 :root {
   color-scheme: light only;
@@ -1835,6 +1836,7 @@ a { text-decoration: none; color: inherit; }
   <section class="tesis" aria-label="Evidencia mundial y proyección para tu equipo">
     <p>PwC mide esto en trabajadores de Estados Unidos, Gallup en más de cien países, McKinsey en cientos de transformaciones corporativas. Las tres llegan al mismo punto, y es el mismo que se movió en Quito: el equipo de Fernando Hallo subió <strong>6 puntos su bienestar financiero</strong>.</p>
     <p><strong>Proyección para tu equipo:</strong> 25 personas pierden hoy unas 3 horas por semana en estrés financiero (PwC). Si recuperan solo una parte, tu nómina libera del orden de <strong>150 horas-persona al mes</strong> que ya estás pagando. Ese 6% se traduce en horas de trabajo concentrado, y se nota el semestre siguiente.</p>
+    <a href="#conversemos" class="ensayo-link">Hablemos de por dónde empezar →</a>
   </section>
 
   <hr class="rule">
@@ -1962,7 +1964,7 @@ a { text-decoration: none; color: inherit; }
     <p class="format"><strong>Formato —</strong> 110 min de taller con ejercicios en vivo · 10 min de preguntas y respuestas. Puede contratarse sin el módulo de empresa privada.</p>
     <p class="format"><strong>Material opcional —</strong> lecturas breves, videos y ejercicios puntuales al final, a consciencia de cada participante. Nada largo, nada genérico.</p>
 
-    <a href="/mindos-talleres.html" class="ensayo-link">Leer el ensayo completo →</a>
+    <a href="/mindos-talleres.html" class="ensayo-link" target="_blank" rel="noopener noreferrer">Leer el ensayo completo →</a>
   </section>
 
   <hr class="rule">
@@ -2028,7 +2030,7 @@ a { text-decoration: none; color: inherit; }
     <p class="format"><strong>Formato —</strong> 110 min de taller con ejercicios en vivo · 10 min de preguntas y respuestas. Puede contratarse sin el módulo financiero.</p>
     <p class="format"><strong>Material opcional —</strong> lecturas breves, videos y ejercicios puntuales al final, a consciencia de cada participante. Nada largo, nada genérico.</p>
 
-    <a href="/mindos-talleres.html" class="ensayo-link">Leer el ensayo completo →</a>
+    <a href="/mindos-talleres.html" class="ensayo-link" target="_blank" rel="noopener noreferrer">Leer el ensayo completo →</a>
   </section>
 
   <!-- ─── RESULTADO OBSERVADO — antídoto a "suena filosófico" + prueba social (v1.160). Caso real de JFC, sin nombre de cliente. NO inventar. ─── -->
@@ -2200,7 +2202,7 @@ a { text-decoration: none; color: inherit; }
   <hr class="rule">
 
   <!-- ─── CTA ─── -->
-  <section class="cta">
+  <section class="cta" id="conversemos">
     <span class="cta-eyebrow">Si quieres conversar</span>
     <p>Si esto ya se parece a una conversación que tu empresa viene postergando, conversemos sobre qué módulo conviene más en este momento: finanzas personales y familiares, apreciación de la empresa privada, o una secuencia con ambos.</p>
     <p class="cta-math">Un empleado pierde en promedio 3 horas por semana por estrés financiero personal (PwC, <em>Employee Financial Wellness Survey</em>). Quince personas, cuatro semanas: <strong>180 horas al mes</strong> saliendo de tu nómina. El Taller 1 cuesta menos que una semana de esas horas.</p>
@@ -2236,7 +2238,7 @@ a { text-decoration: none; color: inherit; }
     <p class="cta-scarcity">Reservo un máximo de 3 talleres corporativos al mes. El diagnóstico previo no se hace en serie.</p>
     <div class="cta-btns">
       <button class="cta-btn" type="button" data-wa>Conversemos por WhatsApp</button>
-      <a href="https://calendly.com/jfcarpio/5minutos" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">Agendar 20 minutos</a>
+      <a href="https://calendly.com/jfcarpio/20minutos" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">Agendar 20 minutos</a>
     </div>
     <p class="cta-note">Sin compromiso.</p>
     <noscript><p><a href="mailto:jf@jfcarpio.com?subject=Talleres%20corporativos">Escribir por email sobre talleres corporativos</a></p></noscript>
