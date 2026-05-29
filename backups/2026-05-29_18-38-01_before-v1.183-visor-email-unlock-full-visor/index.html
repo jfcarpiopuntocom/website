@@ -2391,7 +2391,6 @@ footer.foot-moment::after{
   var submit = form.querySelector('button[type="submit"]');
   var cta = form.querySelector('.form-cta');
   var ok = document.getElementById('form-ok');
-  var unlockUrl = 'visor6-24.html?from=email';
 
   function markMissing(fields){
     fields.forEach(function(el){
@@ -2449,20 +2448,18 @@ footer.foot-moment::after{
           stage: payload.stage,
           createdAt: new Date().toISOString()
         }));
-        sessionStorage.setItem('visor_antiquiebra_unlocked', '1');
       } catch(storageError) {}
 
       if(ok){
         ok.classList.add('show');
-        ok.innerHTML = '<strong>Visor abierto.</strong> Tu correo quedó registrado. Te estoy llevando al Visor completo. Si no se abre en unos segundos, <a href="' + unlockUrl + '">entra aquí</a>.';
+        ok.innerHTML = '<strong>Visor abierto.</strong> Tu correo quedó registrado para el acceso al Visor completo. Revisa tu bandeja en unos minutos; si es la primera vez que usamos este canal, puede llegar una confirmación inicial.';
         ok.scrollIntoView({block:'center',behavior:'smooth'});
       }
       if(cta) cta.style.display = 'none';
-      setTimeout(function(){ window.location.href = unlockUrl; }, 900);
     } catch(error) {
       if(ok){
         ok.classList.add('show');
-        ok.innerHTML = '<strong>No pude registrar el correo automáticamente.</strong> Escríbeme a jf@jfcarpio.com con el asunto Visor Antiquiebra, o <a href="' + unlockUrl + '">abre el Visor completo de todos modos</a>.';
+        ok.innerHTML = '<strong>No pude registrar el correo automáticamente.</strong> Escríbeme a jf@jfcarpio.com con el asunto Visor Antiquiebra y te envío el acceso.';
         ok.scrollIntoView({block:'center',behavior:'smooth'});
       }
       if(submit){
