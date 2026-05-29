@@ -25,7 +25,7 @@
 <meta property="og:locale:alternate" content="es_MX">
 <meta property="og:site_name" content="jfcarpio.com">
 <meta property="og:title" content="¿Cuántos días o semanas le quedan a tu negocio?">
-<meta property="og:description" content="Una lectura inicial para saber si tu negocio está ganando estabilidad, acumulando daños internos o simplemente sobreviviendo sin darse cuenta.">
+<meta property="og:description" content="Un diagnóstico gratuito para saber si tu negocio está ganando estabilidad, acumulando daños internos o simplemente sobreviviendo sin darse cuenta.">
 <meta property="og:image" content="https://jfcarpio.com/visorantiquiebra/assets/VisorXMen.png">
 <meta property="og:image:secure_url" content="https://jfcarpio.com/visorantiquiebra/assets/VisorXMen.png">
 <meta property="og:image:type" content="image/png">
@@ -39,7 +39,7 @@
 <meta name="twitter:site" content="@jfcarpio">
 <meta name="twitter:creator" content="@jfcarpio">
 <meta name="twitter:title" content="¿Cuántos días o semanas le quedan a tu negocio?">
-<meta name="twitter:description" content="Una lectura inicial para saber si tu negocio está ganando estabilidad, acumulando daños internos o simplemente sobreviviendo sin darse cuenta.">
+<meta name="twitter:description" content="Un diagnóstico gratuito para saber si tu negocio está ganando estabilidad, acumulando daños internos o simplemente sobreviviendo sin darse cuenta.">
 <meta name="twitter:image" content="https://jfcarpio.com/visorantiquiebra/assets/VisorXMen.png">
 <meta name="twitter:image:alt" content="Visor Antiquiebra · diagnóstico para fundadores en meses 6–24">
 
@@ -403,7 +403,7 @@ h3{font-size:clamp(22px,3vw,30px);margin-bottom:12px}
   letter-spacing:-.02em;font-size:.88em;
   display:inline-block;transform:translateY(.02em);
 }
-.hero-h1 .q{color:var(--ink);font-weight:900;display:inline-block;transform:none}
+.hero-h1 .q{color:var(--red);font-weight:900;display:inline-block;transform:translateY(-.08em)}
 .hero-h1 .line{display:inline-block}
 .hero-h1 .line-bottom{display:inline-block}
 
@@ -1058,13 +1058,13 @@ h3{font-size:clamp(22px,3vw,30px);margin-bottom:12px}
 .stack-li .pr{display:flex;flex-direction:column;gap:3px}
 .stack-li .nm{font-family:var(--cond);font-size:19px;font-weight:800;text-transform:uppercase;color:var(--ink);line-height:1.12;letter-spacing:.005em}
 .stack-li .ds{font-family:var(--body);font-size:14px;color:var(--ink-2);line-height:1.5}
-.stack-li .val{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--ink-2);text-align:right;white-space:nowrap}
-.stack-li .val s{color:var(--ink-2)}
-.stack-li .val b{display:block;font-family:var(--mono);font-size:11px;color:var(--ink);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+.stack-li .val{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--ink-3);text-align:right;white-space:nowrap}
+.stack-li .val s{color:var(--ink-3)}
+.stack-li .val b{display:block;font-family:var(--cond);font-size:18px;color:var(--amber);font-weight:800;letter-spacing:.02em;text-transform:uppercase}
 .stack-li.extra{background:linear-gradient(90deg,rgba(232,160,32,.08),transparent)}
 .stack-total{background:var(--navy);color:#fff;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;border-top:3px solid var(--amber-2)}
 .stack-total .lab{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#F2F2F2}
-.stack-total .num{font-family:var(--mono);font-size:18px;font-weight:800;color:#fff;letter-spacing:.08em}
+.stack-total .num{font-family:var(--cond);font-size:30px;font-weight:900;color:#fff;letter-spacing:.01em}
 .stack-total .num s{color:#E6E6E6;font-weight:500;margin-right:14px}
 .stack-total .num b{color:var(--amber-3)}
 
@@ -1230,7 +1230,7 @@ footer{background:#040912;color:#F2F2F2;padding:50px var(--gutter) 36px;border-t
 .stack-li .pr{padding-top:6px}
 .stack-li .nm{font-size:21px;letter-spacing:0}
 .stack-li .val{padding-top:6px}
-.stack-li .val b{font-size:11px}
+.stack-li .val b{font-size:20px}
 
 .stack-li.extra{background:linear-gradient(90deg,rgba(214,41,26,.06),transparent 60%)}
 
@@ -1251,18 +1251,18 @@ footer{background:#040912;color:#F2F2F2;padding:50px var(--gutter) 36px;border-t
 }
 .stack-total .num{display:flex;align-items:baseline;gap:14px;line-height:.9}
 .stack-total .num s{
-  font-family:var(--mono);font-size:18px;color:#E6E6E6;font-weight:700;
+  font-family:var(--cond);font-size:42px;color:#E6E6E6;font-weight:600;
 }
 .stack-total .num b{
-  font-family:var(--mono);font-size:20px;font-weight:900;
-  color:var(--amber-3);letter-spacing:.06em;
-  text-shadow:none;
+  font-family:var(--cond);font-size:clamp(64px,8vw,110px);font-weight:900;
+  color:var(--amber-3);letter-spacing:-.04em;
+  text-shadow:0 0 32px rgba(232,160,32,.45);
 }
 @media(max-width:680px){
   .stack-li,.stack-total{grid-template-columns:50px 1fr;gap:14px}
   .stack-li .val,.stack-total .num{grid-column:1/-1;justify-content:flex-end;padding-top:0;margin-top:6px}
   .stack-li .nx{font-size:38px}
-  .stack-total .num b{font-size:22px}
+  .stack-total .num b{font-size:64px}
 }
 
 /* ════════════════════════════════════════
@@ -1527,8 +1527,8 @@ footer.foot-moment::after{
 ════════════════════════════════════ -->
 <section class="hero" aria-labelledby="h1">
   <div class="hero-shell">
-    <span class="hero-eyebrow">Visor Antiquiebra · diagnóstico empresarial · meses 6–24</span>
-    <h1 id="h1" class="hero-h1"><span class="line">¿Cuántos</span><br><em>días o semanas</em><br><span class="line-bottom">le quedan a tu negocio?</span></h1>
+    <span class="hero-eyebrow">Visor Antiquiebra · diagnóstico gratuito · meses 6–24</span>
+    <h1 id="h1" class="hero-h1"><span class="q">¿</span><span class="line">Cuántos</span><br><em>días o semanas</em><br><span class="line-bottom">le quedan a tu negocio?</span></h1>
   </div>
 
   <figure class="hero-poster" aria-hidden="true">
@@ -1556,12 +1556,12 @@ footer.foot-moment::after{
   <div class="hero-shell hero-lower">
     <div class="hero-copy-grid">
       <div>
-        <p class="hero-sub">Una lectura inicial para saber si tu negocio está <strong>ganando estabilidad</strong>, <strong>acumulando daños internos</strong>, o simplemente <strong>sobreviviendo sin darse cuenta</strong>.</p>
+        <p class="hero-sub">Un diagnóstico gratuito para saber si tu negocio está <strong>ganando estabilidad</strong>, <strong>acumulando daños internos</strong>, o simplemente <strong>sobreviviendo sin darse cuenta</strong>.</p>
       </div>
       <div>
         <p class="hero-support">No sólo mide la caja. Mira las señales que suelen romper a un negocio entre los meses 6 y 24: los ingresos, la retención, los canales, los cobros, la dependencia del fundador, los procesos y el runway.</p>
         <div class="cta-row">
-          <a href="#diagnostico" class="btn btn-primary btn-mega">Abrir el Visor</a>
+          <a href="#diagnostico" class="btn btn-primary btn-mega">Abrir mi diagnóstico gratuito</a>
           <a href="#que-mide" class="btn btn-ghost">Ver qué mide el Visor</a>
         </div>
       </div>
@@ -1929,8 +1929,8 @@ footer.foot-moment::after{
             <p>Diseñado por J.F. Carpio, investigador empresarial y económico, después de 14 años como profesor USFQ y años creando herramientas para dueños de negocio.</p>
           </div>
           <div class="proof-point">
-            <span class="k">Análisis aplicado</span>
-            <p>No es motivación empresarial. Es análisis de entorno convertido en una lectura práctica: qué mirar, en qué orden y qué no conviene seguir posponiendo.</p>
+            <span class="k">No es gurú de internet</span>
+            <p>Es análisis de entorno empresarial convertido en una lectura práctica: qué mirar, en qué orden y qué no conviene seguir posponiendo.</p>
           </div>
         </div>
         <div class="proof-trio" aria-label="Qué mostró el primer caso del Visor">
@@ -1967,7 +1967,7 @@ footer.foot-moment::after{
 <section class="section tall alt" id="que-recibes" aria-labelledby="s07">
   <div class="wrap">
     <p class="sl rv"><span class="sn">07</span> <span id="s07">Todo lo que entra por tu correo</span></p>
-    <h2 class="rv" style="max-width:24ch">El Visor completo. La primera lectura, abierta desde el inicio.</h2>
+    <h2 class="rv" style="max-width:24ch">El Visor completo. Abierto. Sin candados, sin demos recortadas.</h2>
     <p class="lede rv" style="max-width:62ch">No es teaser, no es trial, no es paywall escondido. En unos 45 minutos puedes ver lo que normalmente queda regado entre banco, facturas, WhatsApp, intuición y cansancio.</p>
 
     <div class="conversion-bridge rv-stagger" aria-label="Por qué abrir el Visor antes de seguir operando igual">
@@ -2040,7 +2040,7 @@ footer.foot-moment::after{
             <span class="nm">Calculadora SSS de supervivencia</span>
             <span class="ds">Una lectura rápida para aterrizar caja, gasto mensual y margen de maniobra sin inventarte fórmulas.</span>
           </div>
-          <span class="val"><s>$36</s><b>Incluido</b></span>
+          <span class="val"><s>$36</s><b>Gratis</b></span>
         </li>
         <li class="stack-li extra">
           <span class="nx">06</span>
@@ -2048,7 +2048,7 @@ footer.foot-moment::after{
             <span class="nm">Guía para leer tus rojos</span>
             <span class="ds">Qué significa cada señal, cuándo preocuparte y cuándo no sobrerreaccionar.</span>
           </div>
-          <span class="val"><s>$24</s><b>Incluido</b></span>
+          <span class="val"><s>$24</s><b>Gratis</b></span>
         </li>
         <li class="stack-li extra">
           <span class="nx">07</span>
@@ -2056,7 +2056,7 @@ footer.foot-moment::after{
             <span class="nm">Plan de 7 días</span>
             <span class="ds">Una prioridad operativa para esta semana. No quince tareas. Una que sí puede mover algo antes del viernes.</span>
           </div>
-          <span class="val"><s>$48</s><b>Incluido</b></span>
+          <span class="val"><s>$48</s><b>Gratis</b></span>
         </li>
         <li class="stack-li extra">
           <span class="nx">08</span>
@@ -2064,7 +2064,7 @@ footer.foot-moment::after{
             <span class="nm">Seguimiento para nuevos negocios</span>
             <span class="ds">Una nota útil para seguir mirando con criterio: caja, cobros, canales, procesos y decisiones reales.</span>
           </div>
-          <span class="val"><s>$24</s><b>Incluido</b></span>
+          <span class="val"><s>$24</s><b>Gratis</b></span>
         </li>
         <li class="stack-total">
           <span class="tx">∑</span>
@@ -2080,7 +2080,7 @@ footer.foot-moment::after{
           <p>Primero pones los datos mínimos. Luego ves los rojos. Después miras si esos rojos vienen de caja, cobros, clientes, canales, procesos o dependencia del fundador.</p>
           <p><strong style="color:var(--ink)">La promesa no es adivinar el futuro.</strong> Es dejar de operar con señales sueltas y cerrar la lectura con una pregunta concreta: qué conviene mover esta semana, antes de que el mes se vaya otra vez.</p>
           <div class="stack-cta">
-            <a href="#diagnostico" class="btn btn-block"><span>Quiero abrir el Visor</span></a>
+            <a href="#diagnostico" class="btn btn-block"><span>Quiero abrirlo gratis</span></a>
             <span class="micro-note">Entrega inmediata · solo tu correo</span>
           </div>
         </div>
@@ -2149,7 +2149,7 @@ footer.foot-moment::after{
         <input type="hidden" id="f-stage" name="stage" value="6-24">
       </div>
       <div class="form-cta">
-        <button type="submit" class="btn btn-primary">Recibir mi lectura inicial</button>
+        <button type="submit" class="btn btn-primary">Recibir acceso gratuito</button>
         <span class="form-note">Sin “paga con tu correo”. Sin culpa. Sin urgencias inventadas.</span>
       </div>
       <div class="form-success" id="form-ok" role="status">
@@ -2286,7 +2286,7 @@ footer.foot-moment::after{
       <p><strong>Creado por J.F. Carpio, investigador empresarial y económico y ex profesor USFQ durante 14 años.</strong> El Visor traduce análisis de entorno empresarial a una lectura que un dueño puede usar esta misma semana: caja, cobros, clientes, canales, procesos y dependencia del fundador.</p>
     </div>
     <div class="final-actions">
-      <a href="#diagnostico" class="btn btn-theatrical">Empezar el diagnóstico</a>
+      <a href="#diagnostico" class="btn btn-theatrical">Abrir mi diagnóstico gratuito</a>
       <a href="https://wa.me/593999905080?text=Hola%20JFC%2C%20vi%20el%20Visor%20Antiquiebra%20y%20quiero%20hablar%20sobre%20mi%20negocio." class="btn btn-whatsapp" target="_blank" rel="noopener">Hablar por WhatsApp</a>
     </div>
 
