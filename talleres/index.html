@@ -105,7 +105,7 @@
 </script>
 
 <style>
-/* jfcarpio.com/talleres v1.181 - 2026-05-28 */
+/* jfcarpio.com/talleres v1.182 - 2026-05-28 */
 /* v1.160: mecanismo MindOS arriba, epifanía 1a persona, result-callout +15%, stack+aritmética+escasez en CTA. Ver NOTAS DE DISEÑO en <main>. */
 /* v1.161: +5% académico — MindOS atribuido a Dr. Paul Dobransky; "capa" → "capa del cerebro" en todo el texto; tono menos slick, más contexto. */
 /* v1.163: diagnóstico 7 preguntas, qué cambia después, FAQ+schema, CLS fix ventana 2, fracaso evitado, deslop. */
@@ -127,6 +127,7 @@
 /* v1.179: testimonio cuantificado de Fernando Hallo (+6% bienestar financiero, equipo de 25); casos mundiales (PwC/Gallup/McKinsey) + proyección para el equipo del comprador. */
 /* v1.180: deslop de los bloques generados por IA (sin antítesis "no es X: es Y", sin relleno); E-E-A-T: jobTitle + knowsAbout en el Person del Service para SEO de autoría 2026. */
 /* v1.181: h1 oculto (visually-hidden) al inicio del main para recuperar el encabezado principal de SEO sin alterar el diseño visible. */
+/* v1.182: piso de legibilidad de fuente. quick-card-kicker de 11 a 13px, quick-list de 15 a 16px, quick-outcome de 14 a 16px, figcaptions de 12 a 13px. WhatsApp-preview verificado: og:image 200, stack anti-dark-mode iOS intacto. */
 /* ─── ROOT — light only, anti iOS auto-dark ─── */
 :root {
   color-scheme: light only;
@@ -367,7 +368,7 @@ a { text-decoration: none; color: inherit; }
 .quick-card-kicker {
   display: block;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: .16em;
   text-transform: uppercase;
   color: var(--ink-2) !important;
@@ -404,7 +405,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 0 14px;
 }
 .quick-list li {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.65;
   color: var(--ink) !important;
   -webkit-text-fill-color: var(--ink) !important;
@@ -461,7 +462,7 @@ a { text-decoration: none; color: inherit; }
   text-decoration: none;
 }
 .quick-outcome {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65;
   color: var(--ink) !important;
   -webkit-text-fill-color: var(--ink) !important;
@@ -521,7 +522,7 @@ a { text-decoration: none; color: inherit; }
 .closing-visual figcaption {
   display: block;
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: .06em;
   line-height: 1.55;
   color: var(--ink) !important;
@@ -794,7 +795,7 @@ a { text-decoration: none; color: inherit; }
 .program-media figcaption {
   display: block;
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: .06em;
   line-height: 1.5;
   color: var(--ink) !important;
