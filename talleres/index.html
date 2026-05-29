@@ -105,7 +105,7 @@
 </script>
 
 <style>
-/* jfcarpio.com/talleres v1.180 - 2026-05-28 */
+/* jfcarpio.com/talleres v1.181 - 2026-05-28 */
 /* v1.160: mecanismo MindOS arriba, epifanía 1a persona, result-callout +15%, stack+aritmética+escasez en CTA. Ver NOTAS DE DISEÑO en <main>. */
 /* v1.161: +5% académico — MindOS atribuido a Dr. Paul Dobransky; "capa" → "capa del cerebro" en todo el texto; tono menos slick, más contexto. */
 /* v1.163: diagnóstico 7 preguntas, qué cambia después, FAQ+schema, CLS fix ventana 2, fracaso evitado, deslop. */
@@ -126,6 +126,7 @@
 /* v1.178: cirugía de headline superior; más grave y más B2B sin sonar a truco. */
 /* v1.179: testimonio cuantificado de Fernando Hallo (+6% bienestar financiero, equipo de 25); casos mundiales (PwC/Gallup/McKinsey) + proyección para el equipo del comprador. */
 /* v1.180: deslop de los bloques generados por IA (sin antítesis "no es X: es Y", sin relleno); E-E-A-T: jobTitle + knowsAbout en el Person del Service para SEO de autoría 2026. */
+/* v1.181: h1 oculto (visually-hidden) al inicio del main para recuperar el encabezado principal de SEO sin alterar el diseño visible. */
 /* ─── ROOT — light only, anti iOS auto-dark ─── */
 :root {
   color-scheme: light only;
@@ -1643,6 +1644,8 @@ a { text-decoration: none; color: inherit; }
 </nav>
 
 <main class="wrap">
+
+  <h1 class="visually-hidden">Talleres corporativos de cambio de conducta: dinero y finanzas personales y apreciación de la empresa privada</h1>
 
   <!--
     ════════════════════════════════════════════════════════════════
