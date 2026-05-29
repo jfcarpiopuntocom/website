@@ -1041,12 +1041,8 @@ h3{font-size:clamp(22px,3vw,30px);margin-bottom:12px}
 .proof-point{background:#fff;border:1px solid var(--rule);padding:16px 16px;border-left:4px solid var(--amber-2)}
 .proof-point .k{display:block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:7px}
 .proof-point p{font-family:var(--body);font-size:14.5px;color:var(--ink-2);line-height:1.55;margin:0}
-.proof-trio{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.proof-chip{background:var(--paper);border:1px solid var(--rule);padding:16px 16px 18px}
-.proof-chip .k{display:block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:7px}
-.proof-chip p{font-family:var(--body);font-size:14.5px;color:var(--ink-2);line-height:1.55;margin:0}
 @media(max-width:880px){.pioneer{grid-template-columns:1fr;gap:26px}}
-@media(max-width:680px){.authority-proof,.proof-trio{grid-template-columns:1fr}}
+@media(max-width:680px){.authority-proof{grid-template-columns:1fr}}
 
 /* ════════════════════════════════════════
    STACK SLIDE — Brunson offer stack
@@ -1081,14 +1077,8 @@ h3{font-size:clamp(22px,3vw,30px);margin-bottom:12px}
 .bridge-card:nth-child(2){border-top-color:var(--amber-2)}.bridge-card:nth-child(3){border-top-color:var(--red)}
 .bridge-card .ey{display:block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:8px}
 .bridge-card p{font-family:var(--body);font-size:15px;line-height:1.55;color:var(--ink-2);margin:0}
-.mech-demo{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
-.mech-step{background:#fff;border:1px solid var(--rule);padding:18px;border-top:4px solid var(--amber-2)}
-.mech-step:nth-child(1){border-top-color:var(--ink)}
-.mech-step:nth-child(3){border-top-color:var(--red)}
-.mech-step .ey{display:block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:8px}
-.mech-step p{font-family:var(--body);font-size:15px;line-height:1.55;color:var(--ink-2);margin:0}
 @media(max-width:880px){.stack-grid{grid-template-columns:1fr;gap:24px}.stack-side{position:static}}
-@media(max-width:780px){.conversion-bridge,.mech-demo{grid-template-columns:1fr}}
+@media(max-width:780px){.conversion-bridge{grid-template-columns:1fr}}
 
 /* ════════════════════════════════════════
    EMAIL FORM
@@ -1108,9 +1098,6 @@ h3{font-size:clamp(22px,3vw,30px);margin-bottom:12px}
 .qualifier li{font-family:var(--body);font-size:15.5px;line-height:1.55;color:#F2F2F2;padding:18px 22px;border-bottom:1px solid rgba(255,255,255,.12)}
 .qualifier li:last-child{border-bottom:none}
 .qualifier strong{color:#fff}
-.utility-note{max-width:900px;margin:18px auto 0;padding:18px 20px;background:var(--amber-soft);border:1px solid var(--amber-line);border-left:4px solid var(--amber-2)}
-.utility-note p{font-family:var(--body);font-size:15.5px;line-height:1.58;color:var(--ink);margin:0}
-.utility-note strong{color:var(--ink)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
 .form-row.full{grid-template-columns:1fr}
 .f-group{display:flex;flex-direction:column;gap:6px}
@@ -1933,20 +1920,6 @@ footer.foot-moment::after{
             <p>Es análisis de entorno empresarial convertido en una lectura práctica: qué mirar, en qué orden y qué no conviene seguir posponiendo.</p>
           </div>
         </div>
-        <div class="proof-trio" aria-label="Qué mostró el primer caso del Visor">
-          <div class="proof-chip">
-            <span class="k">Lo que apareció</span>
-            <p>La caja sola asustaba. Con cobros cercanos en la mesa, la lectura cambiaba y la urgencia se volvía más precisa.</p>
-          </div>
-          <div class="proof-chip">
-            <span class="k">Lo que se aclaró</span>
-            <p>El problema no era una sola cosa. Había que distinguir entre canal, cobro, demanda y dependencia operativa.</p>
-          </div>
-          <div class="proof-chip">
-            <span class="k">Lo que cambió</span>
-            <p>La conversación dejó de girar alrededor del miedo y pasó al orden de acción de esa semana.</p>
-          </div>
-        </div>
       </div>
       <div class="pioneer-side rv">
         <figure class="pioneer-photo">
@@ -1982,21 +1955,6 @@ footer.foot-moment::after{
       <article class="bridge-card rv">
         <span class="ey">Qué cambia al verlo junto</span>
         <p>Dejas de reaccionar a síntomas sueltos y eliges una prioridad real para los próximos 7 días.</p>
-      </article>
-    </div>
-
-    <div class="mech-demo rv-stagger" aria-label="Cómo una señal suelta se vuelve una lectura útil">
-      <article class="mech-step rv">
-        <span class="ey">Señal suelta</span>
-        <p><strong>Caja apretada.</strong> Sola, esa frase todavía no te dice si el problema viene de gasto, cobro, margen o repetición.</p>
-      </article>
-      <article class="mech-step rv">
-        <span class="ey">Cruce de señales</span>
-        <p><strong>Runway corto + cobros lentos + canal borroso.</strong> Ahí ya no estás viendo estrés: estás viendo un patrón.</p>
-      </article>
-      <article class="mech-step rv">
-        <span class="ey">Lectura útil</span>
-        <p><strong>Prioridad de la semana:</strong> cobrar lo pendiente y aclarar el canal principal antes de seguir empujando más actividad a ciegas.</p>
       </article>
     </div>
 
@@ -2108,10 +2066,6 @@ footer.foot-moment::after{
         <li><strong>No es para ti</strong> si buscas motivación, frases bonitas o una lectura que confirme que todo está bien sin mirar caja, cobros y clientes que vuelven.</li>
         <li><strong>También sirve si vas bien</strong>: a veces el crecimiento es real, pero viene con desorden acumulado por dentro.</li>
       </ul>
-    </div>
-
-    <div class="utility-note rv" aria-label="Garantía de utilidad">
-      <p><strong>Utilidad primero.</strong> Si al terminar la lectura no te deja una prioridad más clara para esta semana, el Visor simplemente no era para ti. No pagas nada, no dejas tarjeta y puedes salir del correo cuando quieras.</p>
     </div>
 
     <form class="email-card rv" id="visor-form" novalidate aria-label="Recibir acceso al Visor">
