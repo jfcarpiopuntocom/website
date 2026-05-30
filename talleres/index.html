@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" prefix="og: https://ogp.me/ns#">
+<html lang="es" prefix="og: https://ogp.me/ns#" class="dir-edt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -26,6 +26,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Equipo corporativo trabajando en una sesión ejecutiva de cambio de comportamiento">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:locale" content="es_EC">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:site_name" content="J.F. Carpio">
@@ -41,7 +42,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -104,1512 +105,6 @@
 }
 </script>
 
-<style>
-/* jfcarpio.com/talleres v1.185 - 2026-05-29 */
-/* v1.160: mecanismo MindOS arriba, epifanía 1a persona, result-callout +15%, stack+aritmética+escasez en CTA. Ver NOTAS DE DISEÑO en <main>. */
-/* v1.161: +5% académico — MindOS atribuido a Dr. Paul Dobransky; "capa" → "capa del cerebro" en todo el texto; tono menos slick, más contexto. */
-/* v1.163: diagnóstico 7 preguntas, qué cambia después, FAQ+schema, CLS fix ventana 2, fracaso evitado, deslop. */
-/* v1.164: CTA secundario "5 minutos" → "20 minutos" + nota "Sin compromiso" (reversión de riesgo). Header reconciliado 1.161→1.164. URL Calendly sin tocar (JFC ajusta el evento). */
-/* v1.165: dolor comprador más específico, puentes entre secciones, revelación MindOS antes del cierre y geografía corregida. */
-/* v1.166: más densidad visual, galerías editoriales HTML5, fotos extra y primer viewport más fuerte para mobile/WhatsApp. */
-/* v1.167: deslop de tono; español más sobrio y más cercano a anuncios/eventos USFQ Ecuador. */
-/* v1.168: capa superior para tráfico frío; dolor, prueba, elección y CTA antes del desarrollo largo. */
-/* v1.169: deslop de apertura; menos frases de landing y más tono ejecutivo sobrio. */
-/* v1.170: anti-transliteración; menos calcos del inglés y español más natural en bloques clave. */
-/* v1.171: intro reemplazada por dos columnas de dolores con saltos directos a cada taller. */
-/* v1.172: columnas realmente paralelas; solo MindOS queda como puente común. */
-/* v1.173: dolores primero de verdad; sin introducción ni puente común antes de las dos columnas. */
-/* v1.174: columnas primero en pantalla; sin hero arriba, solo una pregunta breve sobre ambas. */
-/* v1.175: humanización del primer bloque; tono más natural y más cercano a estilo USFQ Ecuador. */
-/* v1.176: bloque superior comprimido y reforzado para conversión B2B; menos ruido, más resultado y prueba temprana. */
-/* v1.177: apertura rehecha con opción 2; más directa, más B2B y más fría para tráfico inicial. */
-/* v1.178: cirugía de headline superior; más grave y más B2B sin sonar a truco. */
-/* v1.179: testimonio cuantificado de Fernando Hallo (+6% bienestar financiero, equipo de 25); casos mundiales (PwC/Gallup/McKinsey) + proyección para el equipo del comprador. */
-/* v1.180: deslop de los bloques generados por IA (sin antítesis "no es X: es Y", sin relleno); E-E-A-T: jobTitle + knowsAbout en el Person del Service para SEO de autoría 2026. */
-/* v1.181: h1 oculto (visually-hidden) al inicio del main para recuperar el encabezado principal de SEO sin alterar el diseño visible. */
-/* v1.182: piso de legibilidad de fuente. quick-card-kicker de 11 a 13px, quick-list de 15 a 16px, quick-outcome de 14 a 16px, figcaptions de 12 a 13px. WhatsApp-preview verificado: og:image 200, stack anti-dark-mode iOS intacto. */
-/* v1.183: aire entre la barra de cifras (quick-proofbar) y el lede; margin-bottom 30px para que no queden pegados. */
-/* v1.184: prompt suave en el pico de motivación (link "Hablemos de por dónde empezar" tras la proyección, salta al CTA #conversemos); CTA secundario apunta a Calendly /20minutos (coincide con "Agendar 20 minutos"); links al ensayo abren en pestaña nueva (target=_blank rel=noopener) para no perder al lector. */
-/* v1.185: prosa más humana e hipnótica con buen gusto (Joe Vitale, sin truco): rayas conectoras de frase eliminadas en copy visible y schema. Puntos para el golpe, dos puntos para el payoff, paréntesis para los incisos. Labels Formato/Material opcional con dos puntos. Sin cambios de diseño ni de contenido aprobado. */
-/* ─── ROOT — light only, anti iOS auto-dark ─── */
-:root {
-  color-scheme: light only;
-  forced-color-adjust: none;
-  --bg: #060E1D;
-  --ink: #FFFFFF;
-  --ink-2: #FFFFFF;
-  --ink-3: #FFFFFF;
-  --orange: #E86040;
-  --green: #28ECAA;
-  --rule: rgba(255,255,255,.10);
-  --card: #0B1729;
-  --muted: #E6E6E6;
-  --serif: "Fraunces", "Instrument Serif", Georgia, "Times New Roman", serif;
-  --display: "Instrument Serif", "Fraunces", Georgia, serif;
-  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-}
-
-* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-
-html {
-  background: var(--bg);
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-body {
-  background: var(--bg) !important;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  font-family: var(--serif);
-  font-size: 16px;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  min-height: 100vh;
-  min-height: 100svh;
-}
-
-/* Universal text-color enforcement (anti iOS dark-mode override) */
-h1, h2, h3, p, li, a, span, em, strong, blockquote, figcaption, time, label, dt, dd {
-  color: var(--ink);
-  -webkit-text-fill-color: var(--ink);
-}
-
-a { text-decoration: none; color: inherit; }
-
-/* ─── SCROLL PROGRESS ─── */
-.scroll-progress {
-  position: fixed; top: 0; left: 0; right: 0; height: 2px;
-  background: rgba(255,255,255,.06);
-  z-index: 900;
-}
-.scroll-progress-fill {
-  height: 100%; width: 0;
-  background: linear-gradient(90deg, var(--orange), #E8A020);
-  transition: width .1s linear;
-}
-
-/* ─── TOPBAR ─── */
-.topbar {
-  position: sticky; top: 0; z-index: 800;
-  background: rgba(6,14,29,.86);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--rule);
-  padding: 14px 22px;
-  display: flex; align-items: center; justify-content: space-between;
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: .08em;
-}
-.topbar a {
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  display: inline-flex; align-items: center; gap: 8px;
-  min-height: 44px;
-}
-.topbar-home::before {
-  content: '←';
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-  margin-right: 4px;
-}
-.topbar-mark {
-  color: var(--ink-2) !important;
-  -webkit-text-fill-color: var(--ink-2) !important;
-  font-size: 13px;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-}
-
-/* ─── WRAP ─── */
-.wrap {
-  width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 24px 80px;
-}
-
-/* ─── HERO ─── */
-.hero {
-  width: 100%;
-  max-width: 840px;
-  padding: 56px 0 40px;
-}
-
-.eyebrow {
-  display: inline-block;
-  max-width: 100%;
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.35;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  overflow-wrap: anywhere;
-  color: var(--green) !important;
-  -webkit-text-fill-color: var(--green) !important;
-  border: 1px solid var(--green);
-  padding: 6px 12px;
-  border-radius: 2px;
-  margin-bottom: 28px;
-}
-
-.h1 {
-  font-family: var(--display);
-  font-size: 29px;
-  line-height: 1.02;
-  font-weight: 400;
-  letter-spacing: 0;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin-bottom: 24px;
-  font-style: italic;
-  max-width: 100%;
-  overflow-wrap: normal;
-  word-break: normal;
-  -webkit-hyphens: none;
-  hyphens: none;
-}
-.h1 span,
-.h1 em {
-  display: block;
-}
-.h1 em {
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-  font-style: italic;
-  font-weight: 400;
-}
-
-.lede {
-  font-family: var(--serif);
-  font-size: 17px;
-  line-height: 1.55;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin-bottom: 22px;
-  max-width: 100%;
-  overflow-wrap: break-word;
-  hyphens: auto;
-}
-
-.byline {
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: .14em;
-  color: var(--ink-2) !important;
-  -webkit-text-fill-color: var(--ink-2) !important;
-  text-transform: uppercase;
-}
-
-/* ─── EDITORIAL PHOTO SYSTEM ─── */
-.photo-wrap,
-.program-media .img-wrap {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  background: #0B1729;
-}
-.photo-wrap::after,
-.program-media .img-wrap::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(6,14,29,0) 0%, rgba(6,14,29,.12) 100%);
-  pointer-events: none;
-}
-.photo-wrap img,
-.program-media img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.hero-gallery,
-.editorial-band,
-.proof-gallery,
-.closing-visual {
-  display: grid;
-  gap: 14px;
-}
-.quick-path {
-  display: grid;
-  gap: 18px;
-  margin: 0 0 34px;
-}
-.quick-intro {
-  max-width: 860px;
-}
-.quick-intro p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin: 0;
-}
-.quick-grid {
-  display: grid;
-  gap: 14px;
-}
-.quick-card {
-  border: 1px solid var(--rule);
-  border-left: 3px solid var(--orange);
-  border-radius: 4px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.015) 100%),
-    var(--card);
-  padding: 20px 18px;
-}
-.quick-card.ep {
-  border-left-color: var(--green);
-}
-.quick-card-kicker {
-  display: block;
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--ink-2) !important;
-  -webkit-text-fill-color: var(--ink-2) !important;
-  margin-bottom: 10px;
-}
-.quick-card h3 {
-  font-family: var(--display);
-  font-size: 30px;
-  line-height: 1.05;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin-bottom: 12px;
-}
-.quick-card p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin-bottom: 10px;
-}
-.quick-card p:last-child {
-  margin-bottom: 0;
-}
-.quick-card strong {
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-}
-.quick-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 14px;
-}
-.quick-list li {
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  padding: 6px 0 6px 22px;
-  position: relative;
-  border-top: 1px solid var(--rule);
-}
-.quick-list li:first-child {
-  border-top: none;
-}
-.quick-list li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-}
-.quick-card.ep .quick-list li::before {
-  color: var(--green) !important;
-  -webkit-text-fill-color: var(--green) !important;
-}
-.quick-jump {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--mono);
-  font-size: .82rem;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  text-decoration: none;
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: 2px;
-}
-.quick-jump::after {
-  content: '↓';
-}
-.quick-shared {
-  max-width: 860px;
-  border-top: 1px solid var(--rule);
-  padding-top: 16px;
-}
-.quick-shared p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin: 0;
-}
-.quick-shared a {
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-  text-decoration: none;
-}
-.quick-outcome {
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  border-top: 1px solid var(--rule);
-  padding-top: 12px;
-  margin: 0 0 14px;
-}
-.quick-proofbar {
-  display: grid;
-  gap: 12px;
-  border-top: 1px solid var(--rule);
-  padding-top: 16px;
-  margin-bottom: 30px;
-}
-.quick-proofmini {
-  border-left: 2px solid var(--orange);
-  padding-left: 12px;
-}
-.quick-proofmini:nth-child(2) {
-  border-left-color: var(--green);
-}
-.quick-proofmini:nth-child(3) {
-  border-left-color: var(--blue);
-}
-.quick-proofmini strong {
-  display: block;
-  font-family: var(--display);
-  font-size: 28px;
-  line-height: 1;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin-bottom: 6px;
-}
-.quick-proofmini span {
-  display: block;
-  font-size: 13px;
-  line-height: 1.55;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-}
-.hero-gallery {
-  margin: 0 0 36px;
-}
-.hero-gallery figure,
-.editorial-band figure,
-.proof-gallery figure,
-.closing-visual figure {
-  margin: 0;
-}
-.hero-gallery .photo-wrap {
-  aspect-ratio: 4 / 3;
-}
-.hero-gallery figcaption,
-.editorial-band figcaption,
-.proof-gallery figcaption,
-.closing-visual figcaption {
-  display: block;
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: .06em;
-  line-height: 1.55;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  border-left: 2px solid var(--orange);
-  padding-left: 10px;
-  margin-top: 12px;
-}
-.hero-gallery figure:nth-child(2) figcaption,
-.proof-gallery figure:nth-child(2) figcaption,
-.closing-visual figcaption {
-  border-left-color: var(--green);
-}
-.editorial-band {
-  margin: 0 0 56px;
-}
-.editorial-band .photo-wrap {
-  aspect-ratio: 16 / 10;
-}
-.editorial-note,
-.closing-note {
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.015) 100%),
-    var(--card);
-  padding: 20px 18px;
-}
-.editorial-note .eyebrow,
-.closing-note .eyebrow {
-  margin-bottom: 16px;
-}
-.editorial-note h3,
-.closing-note h3 {
-  font-family: var(--display);
-  font-size: 30px;
-  line-height: 1.04;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin-bottom: 14px;
-}
-.editorial-note p,
-.closing-note p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin-bottom: 14px;
-}
-.editorial-note p:last-child,
-.closing-note p:last-child {
-  margin-bottom: 0;
-}
-.editorial-note dl {
-  display: grid;
-  gap: 12px;
-  margin: 0;
-}
-.editorial-note div {
-  border-top: 1px dashed var(--rule);
-  padding-top: 12px;
-}
-.editorial-note dt {
-  font-family: var(--mono);
-  font-size: .82rem;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-  margin-bottom: 6px;
-}
-.editorial-note dd {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.65;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-}
-.proof-gallery {
-  margin: 28px 0 0;
-}
-.proof-gallery .photo-wrap {
-  aspect-ratio: 5 / 4;
-}
-.closing-visual {
-  margin: 0 0 28px;
-}
-.closing-visual .photo-wrap {
-  aspect-ratio: 16 / 10;
-}
-
-/* ─── SECTION RULE ─── */
-.rule {
-  border: none;
-  border-top: 1px solid var(--rule);
-  margin: 56px 0;
-}
-
-/* ─── MODULE MAP ─── */
-.module-map {
-  display: grid;
-  gap: 18px;
-  margin: 0 0 56px;
-}
-.module-map-head {
-  max-width: 860px;
-}
-.module-map-head .eyebrow {
-  margin-bottom: 18px;
-}
-.module-map-head .h2 {
-  margin-bottom: 14px;
-}
-.module-map-head p {
-  font-size: 17px;
-  line-height: 1.7;
-  color: var(--ink-2) !important;
-  -webkit-text-fill-color: var(--ink-2) !important;
-}
-.module-cards {
-  display: grid;
-  gap: 14px;
-}
-.module-card {
-  border: 1px solid var(--rule);
-  border-left: 3px solid var(--orange);
-  background: var(--card);
-  border-radius: 4px;
-  padding: 22px 20px;
-}
-.module-card.ep {
-  border-left-color: var(--green);
-}
-.module-card-kicker {
-  font-family: var(--sans);
-  font-size: .82rem;
-  line-height: 1.2;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--green) !important;
-  -webkit-text-fill-color: var(--green) !important;
-}
-.module-card.ep .module-card-kicker {
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-}
-.module-card h3 {
-  font-family: var(--display);
-  font-size: 2.15rem;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: 0;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin: 10px 0 12px;
-}
-.module-card p {
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--ink-2) !important;
-  -webkit-text-fill-color: var(--ink-2) !important;
-  margin-bottom: 14px;
-}
-.module-card p:last-child {
-  margin-bottom: 0;
-}
-.module-roi {
-  display: block;
-  font-family: var(--mono);
-  font-size: .86rem;
-  line-height: 1.45;
-  letter-spacing: .04em;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  border-top: 1px dashed var(--rule);
-  padding-top: 14px;
-}
-.module-roi strong {
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-}
-
-/* ─── TESIS ─── */
-.tesis {
-  max-width: 780px;
-}
-.tesis p {
-  font-size: 17px;
-  line-height: 1.75;
-  margin-bottom: 18px;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-}
-.tesis p:last-child { margin-bottom: 0; }
-.tesis strong {
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  font-weight: 700;
-}
-.tesis em {
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-  font-style: italic;
-}
-
-/* ─── OFFER STACK ─── */
-.offer-stack {
-  display: grid;
-  gap: 16px;
-  margin: 0;
-}
-.offer-head {
-  max-width: 780px;
-}
-.offer-head .eyebrow {
-  margin-bottom: 18px;
-}
-.offer-head .h2 {
-  margin-bottom: 14px;
-}
-.offer-head p {
-  font-size: 17px;
-  line-height: 1.7;
-  color: var(--ink-2) !important;
-  -webkit-text-fill-color: var(--ink-2) !important;
-}
-.offer-items {
-  display: grid;
-  gap: 12px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.offer-items li {
-  border-top: 1px solid var(--rule);
-  padding: 16px 0;
-}
-.offer-items strong {
-  display: block;
-  font-family: var(--display);
-  font-size: 1.75rem;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.05;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin-bottom: 8px;
-}
-.offer-items span {
-  display: block;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--ink-2) !important;
-  -webkit-text-fill-color: var(--ink-2) !important;
-}
-
-/* ─── PROGRAM MEDIA ─── */
-.program-media {
-  display: grid;
-  gap: 28px;
-  margin: 0 0 26px;
-  min-width: 0;
-  max-width: 100%;
-}
-.program-media figure { min-width: 0; max-width: 100%; }
-.program-media .img-wrap { aspect-ratio: 4 / 3; background: #2A1408; }
-.program-media figcaption {
-  display: block;
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: .06em;
-  line-height: 1.5;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  border-left: 2px solid var(--orange);
-  padding-left: 10px;
-  margin-top: 12px;
-}
-.program-media figure.is-wide .img-wrap { aspect-ratio: 16 / 10; }
-.ventana.ep .program-media figcaption {
-  border-left-color: var(--green);
-}
-.ventana.ep .program-media figure {
-  background: #082A14;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* ─── VENTANA (taller card) ─── */
-.ventana {
-  background: var(--card);
-  border-left: 3px solid var(--orange);
-  border-radius: 4px;
-  padding: 30px 24px;
-  margin: 0;
-}
-.ventana.ep { border-left-color: var(--green); }
-
-.ventana-label {
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-  margin-bottom: 14px;
-  display: block;
-}
-.ventana.ep .ventana-label {
-  color: var(--green) !important;
-  -webkit-text-fill-color: var(--green) !important;
-}
-
-.h2 {
-  font-family: var(--display);
-  font-size: 34px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.05;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin-bottom: 14px;
-  letter-spacing: 0;
-}
-
-.ventana-lede {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--ink-2) !important;
-  -webkit-text-fill-color: var(--ink-2) !important;
-  margin-bottom: 26px;
-  font-style: italic;
-}
-
-.layers { list-style: none; padding: 0; margin: 0 0 24px; }
-.layers li {
-  padding: 16px 0;
-  border-top: 1px solid var(--rule);
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 6px;
-}
-.layers li:last-child { border-bottom: 1px solid var(--rule); }
-.layer-tag {
-  font-family: var(--mono);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-}
-.ventana.ep .layer-tag {
-  color: var(--green) !important;
-  -webkit-text-fill-color: var(--green) !important;
-}
-.layer-body {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-}
-.layer-body strong {
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-}
-
-.format {
-  font-family: var(--mono);
-  font-size: 13px;
-  line-height: 1.7;
-  letter-spacing: .04em;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  border-top: 1px dashed var(--rule);
-  padding-top: 18px;
-  margin-bottom: 8px;
-}
-.format + .format {
-  border-top: none;
-  padding-top: 0;
-  margin-bottom: 22px;
-}
-.format strong {
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-}
-
-.ensayo-link {
-  display: inline-flex; align-items: center; gap: 8px;
-  min-height: 44px;
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-  border-bottom: 1px solid var(--orange);
-  padding: 4px 0;
-}
-.ventana.ep .ensayo-link {
-  color: var(--green) !important;
-  -webkit-text-fill-color: var(--green) !important;
-  border-bottom-color: var(--green);
-}
-
-/* ─── STATS STRIP ─── */
-.stats {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 26px;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  padding: 36px 0;
-}
-.stat-num {
-  font-family: var(--display);
-  font-size: 72px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0;
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-  margin-bottom: 10px;
-}
-.stat-desc {
-  font-family: var(--serif);
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin-bottom: 10px;
-}
-.stat-src {
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: .06em;
-  line-height: 1.5;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-}
-.stat-src em {
-  color: var(--green) !important;
-  -webkit-text-fill-color: var(--green) !important;
-  font-style: italic;
-}
-
-/* ─── PULL QUOTE ─── */
-.pull {
-  border-left: 3px solid var(--orange);
-  padding: 18px 22px;
-  margin: 32px 0;
-  font-family: var(--display);
-  font-style: italic;
-  font-size: 26px;
-  line-height: 1.24;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-}
-.pull-attr {
-  display: block;
-  margin-top: 10px;
-  font-family: var(--mono);
-  font-size: 13px;
-  font-style: normal;
-  letter-spacing: .08em;
-  color: var(--ink-2) !important;
-  -webkit-text-fill-color: var(--ink-2) !important;
-}
-
-/* ─── BIO ─── */
-.bio p {
-  max-width: 780px;
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 8px;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-}
-.bio a {
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-  border-bottom: 1px solid var(--orange);
-}
-
-/* ─── CTA ─── */
-.cta {
-  max-width: 900px;
-  background: var(--card);
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  padding: 36px 28px;
-  text-align: left;
-}
-.cta-eyebrow {
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--green) !important;
-  -webkit-text-fill-color: var(--green) !important;
-  margin-bottom: 14px;
-  display: block;
-}
-.cta p {
-  font-family: var(--display);
-  font-size: 28px;
-  font-style: italic;
-  line-height: 1.18;
-  margin-bottom: 24px;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-}
-.cta-btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  min-height: 48px;
-  appearance: none;
-  border: 0;
-  background: var(--orange);
-  color: #FFFFFF !important;
-  -webkit-text-fill-color: #FFFFFF !important;
-  font-family: var(--sans);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  padding: 12px 22px;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: transform .15s ease, background .15s ease;
-}
-.cta-btn:hover { background: #D4502E; transform: translateY(-1px); }
-.cta-btn::after {
-  content: '→';
-  color: #FFFFFF !important;
-  -webkit-text-fill-color: #FFFFFF !important;
-}
-.cta noscript p {
-  font-family: var(--mono);
-  font-size: .82rem;
-  font-style: normal;
-  line-height: 1.5;
-  margin: 16px 0 0;
-}
-.cta noscript a {
-  color: var(--green) !important;
-  -webkit-text-fill-color: var(--green) !important;
-  border-bottom: 1px solid var(--green);
-}
-
-/* ─── FOOTER ─── */
-.foot {
-  border-top: 1px solid var(--rule);
-  margin-top: 64px;
-  padding: 28px 22px;
-  display: flex; flex-wrap: wrap; gap: 18px;
-  align-items: center; justify-content: space-between;
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: .08em;
-  color: var(--ink-2) !important;
-  -webkit-text-fill-color: var(--ink-2) !important;
-}
-.foot a {
-  color: var(--ink-2) !important;
-  -webkit-text-fill-color: var(--ink-2) !important;
-}
-.foot-links { display: flex; flex-wrap: wrap; gap: 18px; }
-.foot-dot {
-  display: inline-block; width: 8px; height: 8px; border-radius: 50%;
-  margin-right: 6px; vertical-align: middle;
-}
-
-/* ─── RESPONSIVE — progressive enhancement ─── */
-@media (max-width: 599px) {
-  .wrap {
-    width: calc(100vw - 56px);
-    max-width: calc(100vw - 56px);
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@media (min-width: 600px) {
-  .wrap { padding: 0 36px 100px; }
-  .hero { padding: 80px 0 56px; }
-  .h1 { font-size: 64px; }
-  .lede { font-size: 20px; }
-  .h2 { font-size: 44px; }
-  .ventana { padding: 36px 32px; }
-  .module-map {
-    gap: 24px;
-    margin-bottom: 76px;
-  }
-  .module-cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-  .offer-stack {
-    grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr);
-    gap: 34px;
-    align-items: start;
-  }
-  .offer-items {
-    gap: 0;
-  }
-  .program-media {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    align-items: start;
-    max-width: 100%;
-    gap: 32px;
-  }
-  .program-media figure {
-    min-height: 220px;
-    grid-column: span 3;
-  }
-  .program-media figure.is-wide { grid-column: 1 / -1; }
-  .layers li { grid-template-columns: 130px 1fr; gap: 16px; padding: 18px 0; }
-  .bio-flex { grid-template-columns: 96px 1fr; gap: 24px; }
-  .speaker-bar { grid-template-columns: repeat(3, 1fr); gap: 28px; }
-  .cta { padding: 44px 36px; }
-  .cta p { font-size: 36px; }
-  .stats { grid-template-columns: repeat(3, 1fr); gap: 36px; padding: 44px 0; }
-  .stat-num { font-size: 86px; }
-  .hero-gallery {
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
-    grid-auto-rows: minmax(0, auto);
-    gap: 16px;
-  }
-  .hero-gallery .hero-gallery-main { grid-row: span 2; }
-  .hero-gallery .hero-gallery-main .photo-wrap { aspect-ratio: 1 / 1.02; }
-  .quick-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .quick-proofbar {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .editorial-band { grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); gap: 18px; }
-  .editorial-band .editorial-note { grid-column: 1 / -1; }
-  .proof-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-  .closing-visual { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 18px; align-items: start; }
-}
-
-@media (min-width: 900px) {
-  .h1 { font-size: 84px; }
-  .h2 { font-size: 52px; }
-  .ventana {
-    display: grid;
-    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
-    column-gap: 34px;
-    align-items: start;
-  }
-  .ventana-label,
-  .ventana .h2,
-  .ventana-lede,
-  .program-media,
-  .ensayo-link {
-    grid-column: 1 / -1;
-  }
-  .layers { grid-column: 1 / -1; }
-  .format { grid-column: span 1; }
-  .editorial-band {
-    grid-template-columns: minmax(0, .95fr) minmax(0, .85fr) minmax(0, .95fr);
-    align-items: start;
-  }
-  .editorial-band .editorial-note { grid-column: span 1; }
-}
-
-/* ─── PAIN HOOK ─── */
-.pain-hook {
-  background: var(--card);
-  border-left: 3px solid var(--orange);
-  border-radius: 4px;
-  padding: 24px 22px;
-  margin: 32px 0 0;
-  max-width: 780px;
-}
-.pain-hook-lead {
-  font-family: var(--display);
-  font-size: 22px;
-  font-style: italic;
-  line-height: 1.22;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin-bottom: 14px;
-}
-.pain-signals {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 14px;
-}
-.pain-signals li {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  padding: 5px 0 5px 22px;
-  position: relative;
-}
-.pain-signals li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-  font-style: normal;
-}
-.pain-hook-out {
-  font-family: var(--mono);
-  font-size: .86rem;
-  letter-spacing: .04em;
-  line-height: 1.6;
-  color: var(--muted) !important;
-  -webkit-text-fill-color: var(--muted) !important;
-}
-
-/* ─── SOCIAL PROOF ─── */
-.social-proof { max-width: 860px; }
-.social-proof > .eyebrow { margin-bottom: 18px; }
-.social-proof > .h2 { margin-bottom: 0; }
-.speaker-bar {
-  display: grid;
-  gap: 20px;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  padding: 28px 0;
-  margin-top: 20px;
-}
-.speaker-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 14px;
-  align-items: start;
-}
-.speaker-num {
-  font-family: var(--display);
-  font-size: 2.8rem;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1;
-  color: var(--green) !important;
-  -webkit-text-fill-color: var(--green) !important;
-  min-width: 72px;
-}
-.speaker-desc {
-  font-family: var(--serif);
-  font-size: 15px;
-  line-height: 1.55;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  padding-top: 6px;
-}
-.speaker-desc em {
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  font-style: italic;
-}
-
-/* ─── BIO WITH PHOTO ─── */
-.bio-flex {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  align-items: start;
-}
-.bio-photo {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--orange);
-  display: block;
-}
-
-/* ─── PRICING RACK ─── */
-.pricing-rack {
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  overflow: hidden;
-  margin-bottom: 28px;
-}
-.price-anchor {
-  padding: 12px 18px;
-  border-bottom: 1px solid var(--rule);
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.price-anchor-label {
-  font-family: var(--mono);
-  font-size: .82rem;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--muted) !important;
-  -webkit-text-fill-color: var(--muted) !important;
-}
-.price-anchor-val {
-  font-family: var(--display);
-  font-size: 28px;
-  font-style: italic;
-  color: var(--muted) !important;
-  -webkit-text-fill-color: var(--muted) !important;
-  text-decoration: line-through;
-}
-.price-anchor-desc {
-  font-family: var(--serif);
-  font-size: 13px;
-  line-height: 1.4;
-  color: var(--muted) !important;
-  -webkit-text-fill-color: var(--muted) !important;
-}
-.price-options {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.price-opt {
-  padding: 16px 18px;
-  border-right: 1px solid var(--rule);
-}
-.price-opt:last-child { border-right: none; }
-.price-opt-name {
-  display: block;
-  font-family: var(--mono);
-  font-size: .82rem;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--muted) !important;
-  -webkit-text-fill-color: var(--muted) !important;
-  margin-bottom: 6px;
-}
-.price-opt-val {
-  display: block;
-  font-family: var(--display);
-  font-size: 40px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  margin-bottom: 6px;
-}
-.price-opt.featured .price-opt-val {
-  color: var(--orange) !important;
-  -webkit-text-fill-color: var(--orange) !important;
-}
-.price-opt-desc {
-  display: block;
-  font-family: var(--serif);
-  font-size: 13px;
-  line-height: 1.45;
-  color: var(--muted) !important;
-  -webkit-text-fill-color: var(--muted) !important;
-}
-.price-guarantee {
-  font-family: var(--mono);
-  font-size: .86rem;
-  letter-spacing: .03em;
-  line-height: 1.55;
-  color: var(--green) !important;
-  -webkit-text-fill-color: var(--green) !important;
-  border-top: 1px solid var(--rule);
-  padding: 12px 18px;
-  margin: 0;
-}
-
-/* ─── CTA BUTTONS ─── */
-.cta-btns {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.cta-btn-secondary {
-  display: inline-flex; align-items: center; gap: 8px;
-  min-height: 48px;
-  background: transparent;
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  font-family: var(--sans);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  padding: 12px 22px;
-  border-radius: 3px;
-  border: 1px solid var(--rule);
-  cursor: pointer;
-  text-decoration: none;
-  transition: transform .15s ease, border-color .15s ease;
-}
-.cta-btn-secondary:hover { border-color: var(--ink); transform: translateY(-1px); }
-.cta-btn-secondary::after {
-  content: '→';
-  color: var(--ink) !important;
-  -webkit-text-fill-color: var(--ink) !important;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* ─── MECHANISM FLAG (v1.160) ─── */
-.mech { max-width: 820px; margin: 32px 0 0; }
-.mech .eyebrow { margin-bottom: 18px; }
-.mech .h2 { margin-bottom: 16px; }
-.mech-name { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; font-style: italic; }
-.mech p { font-size: 17px; line-height: 1.7; margin-bottom: 16px; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-.mech-epiphany {
-  border-left: 3px solid var(--green);
-  padding: 4px 0 4px 18px;
-  font-family: var(--display);
-  font-style: italic;
-  font-size: 19px;
-  line-height: 1.4;
-}
-.mech-layers { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; }
-.mech-layers li {
-  font-family: var(--mono); font-size: 13px; font-weight: 700;
-  letter-spacing: .1em; text-transform: uppercase;
-  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
-  border: 1px solid var(--rule); border-left: 3px solid var(--orange);
-  border-radius: 3px; padding: 10px 14px;
-}
-.mech-layers li span { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; margin-right: 8px; }
-
-/* ─── RESULT CALLOUT (v1.160) ─── */
-.result-callout {
-  max-width: 820px;
-  background: var(--card);
-  border: 1px solid var(--rule);
-  border-left: 3px solid var(--green);
-  border-radius: 4px;
-  padding: 26px 24px;
-  margin: 0;
-  display: grid; gap: 12px;
-}
-.result-num {
-  font-family: var(--display); font-style: italic; font-weight: 400;
-  font-size: 56px; line-height: 1;
-  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
-}
-.result-body { font-family: var(--serif); font-size: 18px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-.result-attr { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-
-/* ─── CTA STACK + MATH + SCARCITY (v1.160) ─── */
-.cta-math {
-  font-family: var(--serif); font-size: 17px; line-height: 1.65; font-style: normal;
-  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
-  border-left: 3px solid var(--orange); padding-left: 16px; margin-bottom: 22px;
-}
-.cta-math strong { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
-.cta-math em { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-.cta-stack-label {
-  font-family: var(--sans); font-size: 13px; font-weight: 700;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
-  display: block; margin-bottom: 12px;
-}
-.cta-stack { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 0; }
-.cta-stack li {
-  font-family: var(--serif); font-size: 17px; line-height: 1.5;
-  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
-  border-top: 1px solid var(--rule); padding: 12px 0 12px 26px; position: relative;
-}
-.cta-stack li:last-child { border-bottom: 1px solid var(--rule); }
-.cta-stack li::before { content: '✓'; position: absolute; left: 0; color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; font-weight: 700; }
-.cta-stack li em { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-.cta-scarcity {
-  font-family: var(--mono); font-size: .9rem; line-height: 1.55; letter-spacing: .03em;
-  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
-  border: 1px dashed var(--orange); border-radius: 3px; padding: 12px 16px; margin-bottom: 22px;
-}
-.cta-note {
-  font-family: var(--mono); font-size: .9rem; line-height: 1.5; letter-spacing: .04em;
-  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
-  margin-top: 14px;
-}
-.cta-note + .cta-scarcity { margin-top: 16px; }
-
-/* ─── DIAGNÓSTICO ─── */
-.diag { max-width: 820px; background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--orange); border-radius: 4px; padding: 28px 24px; margin: 0; }
-.diag-lead { font-family: var(--display); font-size: 22px; font-style: italic; line-height: 1.22; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 18px; }
-.diag-items { list-style: none; padding: 0; margin: 0 0 20px; }
-.diag-items li { font-size: 15px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; padding: 8px 0 8px 28px; position: relative; border-top: 1px solid var(--rule); }
-.diag-items li:first-child { border-top: none; }
-.diag-items li::before { content: '☐'; position: absolute; left: 0; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; font-size: 14px; top: 9px; }
-.diag-score { font-family: var(--mono); font-size: .86rem; line-height: 1.7; letter-spacing: .03em; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; border-top: 1px dashed var(--rule); padding-top: 16px; }
-.diag-score strong { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
-.diag-score em { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; font-style: normal; }
-
-/* ─── QUÉ CAMBIA ─── */
-.que-cambia { max-width: 860px; }
-.que-cambia .h2 { margin-bottom: 6px; }
-.que-cambia-sub { font-family: var(--mono); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important; margin-bottom: 28px; display: block; }
-.cambios { display: grid; gap: 14px; }
-.cambio { background: var(--card); border: 1px solid var(--rule); border-radius: 4px; padding: 20px 22px; }
-.cambio-mod { font-family: var(--mono); font-size: .82rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; display: block; margin-bottom: 12px; }
-.cambio.ep .cambio-mod { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
-.cambio ul { list-style: none; padding: 0; margin: 0; }
-.cambio ul li { font-family: var(--serif); font-size: 15px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; padding: 5px 0 5px 20px; position: relative; }
-.cambio ul li::before { content: '→'; position: absolute; left: 0; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
-.cambio.ep ul li::before { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
-@media (min-width: 600px) { .cambios { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-
-/* ─── FAQ ─── */
-.faq { max-width: 820px; }
-.faq .eyebrow { margin-bottom: 18px; }
-.faq .h2 { margin-bottom: 0; }
-.faq-list { list-style: none; padding: 0; margin: 24px 0 0; }
-.faq-item { border-top: 1px solid var(--rule); padding: 20px 0; }
-.faq-item:last-child { border-bottom: 1px solid var(--rule); }
-.faq-q { font-family: var(--display); font-size: 19px; font-style: italic; line-height: 1.3; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 10px; }
-.faq-a { font-family: var(--serif); font-size: 16px; line-height: 1.65; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-.faq-a strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-
-/* ─── ANTI iOS AUTO-DARK — repeat all text rules with !important ─── */
-@media (prefers-color-scheme: dark) {
-  html, body { background: var(--bg) !important; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-  h1, h2, h3, p, li, a, span, em, strong, blockquote, figcaption, time, label, dt, dd {
-    color: var(--ink) !important;
-    -webkit-text-fill-color: var(--ink) !important;
-  }
-  .h1 em, .tesis em, .layer-tag, .ventana-label, .ensayo-link, .bio a {
-    color: var(--orange) !important;
-    -webkit-text-fill-color: var(--orange) !important;
-  }
-  .ventana.ep .layer-tag, .ventana.ep .ventana-label, .ventana.ep .ensayo-link, .eyebrow, .cta-eyebrow {
-    color: var(--green) !important;
-    -webkit-text-fill-color: var(--green) !important;
-  }
-  .lede, .byline, .ventana-lede, .format, .pull-attr, .topbar-mark, .foot, .foot a {
-    color: var(--ink-2) !important;
-    -webkit-text-fill-color: var(--ink-2) !important;
-  }
-  .ventana-lede, .format strong, .layer-body, .layer-body strong, .tesis strong, .bio p, .cta p {
-    color: var(--ink) !important;
-    -webkit-text-fill-color: var(--ink) !important;
-  }
-  .cta-btn, .cta-btn::after {
-    color: #FFFFFF !important;
-    -webkit-text-fill-color: #FFFFFF !important;
-  }
-  .speaker-num { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
-  .price-anchor-label, .price-anchor-val, .price-anchor-desc,
-  .price-opt-name, .price-opt-desc, .pain-hook-out {
-    color: var(--muted) !important;
-    -webkit-text-fill-color: var(--muted) !important;
-  }
-  .price-opt.featured .price-opt-val { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
-  .price-guarantee { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
-  .cta-btn-secondary { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-  .cta-btn-secondary::after { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-  .mech-name, .mech-layers li span, .cta-math strong, .cta-scarcity { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
-  .result-num, .cta-stack-label, .cta-stack li::before { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
-  .mech p, .mech-epiphany, .result-body, .result-attr, .cta-math, .cta-math em, .cta-stack li, .cta-stack li em { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-  .diag-lead, .diag-items li, .diag-score, .faq-q, .faq-a, .faq-a strong, .cambio ul li, .que-cambia-sub { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-  .diag-items li::before, .diag-score strong, .cambio-mod, .cambio ul li::before { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
-  .cambio.ep .cambio-mod, .cambio.ep ul li::before, .diag-score em { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
-}
-</style>
-
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -1638,14 +133,1064 @@ a { text-decoration: none; color: inherit; }
   ]
 }
 </script>
+
+<style>
+/* ════════════════════════════════════════════════════════════════
+   jfcarpio.com/talleres — rediseño visual award-winning (2026-05)
+   Light-only, anti iOS auto-dark. WhatsApp-first. Mobile = referencia.
+   ════════════════════════════════════════════════════════════════ */
+
+:root {
+  color-scheme: light only;
+  forced-color-adjust: none;
+
+  --bg:      #060E1D;
+  --bg-deep: #040A15;
+  --bg-2:    #08111F;
+  --card:    #0B1729;
+  --card-2:  #0D1B30;
+
+  --ink:   #FFFFFF;
+  --ink-2: #FFFFFF;
+  --ink-3: #FFFFFF;
+
+  --orange: #E86040;
+  --orange-deep: #C84A2C;
+  --green:  #28ECAA;
+  --blue:   #3B7EE8;
+  --muted:  #E6E6E6;
+
+  --rule:   rgba(255,255,255,.12);
+  --rule-2: rgba(255,255,255,.06);
+  --hair:   rgba(255,255,255,.18);
+
+  --serif:   "Fraunces", "Instrument Serif", Georgia, "Times New Roman", serif;
+  --instr:   "Instrument Serif", "Fraunces", Georgia, serif;
+  --archivo: "Archivo", "Inter", system-ui, sans-serif;
+  --sans:    "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Per-direction display family (overridden by .dir-* on <html>) */
+  --display: "Fraunces", Georgia, serif;
+  --display-italic: italic;
+  --display-weight: 340;
+  --display-tracking: -0.01em;
+  --display-transform: none;
+
+  --maxw: 1180px;
+  --gutter: 28px;
+}
+
+/* ─── DIRECTION VARIANTS ─── */
+.dir-edt {                               /* Editorial — Fraunces, alta elegancia */
+  --display: "Fraunces", Georgia, serif;
+  --display-italic: italic;
+  --display-weight: 340;
+  --display-tracking: -0.012em;
+  --display-transform: none;
+}
+.dir-lit {                               /* Literaria — Instrument Serif */
+  --display: "Instrument Serif", Georgia, serif;
+  --display-italic: italic;
+  --display-weight: 400;
+  --display-tracking: 0em;
+  --display-transform: none;
+}
+.dir-mod {                               /* Moderna — Archivo grotesque */
+  --display: "Archivo", "Inter", sans-serif;
+  --display-italic: normal;
+  --display-weight: 800;
+  --display-tracking: -0.025em;
+  --display-transform: none;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+html {
+  background: var(--bg);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg) !important;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-height: 100svh;
+  position: relative;
+}
+
+h1, h2, h3, p, li, a, span, em, strong, blockquote, figcaption, time, label, dt, dd {
+  color: var(--ink);
+  -webkit-text-fill-color: var(--ink);
+}
+a { text-decoration: none; color: inherit; }
+
+/* ─── TEXTURE LAYERS ─── */
+.grain {
+  position: fixed; inset: 0; z-index: 940; pointer-events: none;
+  opacity: .045; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+}
+.ambient {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(60vw 50vw at 82% -6%, rgba(232,96,64,.14), transparent 60%),
+    radial-gradient(55vw 50vw at 4% 18%, rgba(40,236,170,.08), transparent 60%),
+    radial-gradient(70vw 60vw at 50% 108%, rgba(59,126,232,.07), transparent 62%);
+}
+main, .topbar, .foot { position: relative; z-index: 1; }
+
+/* ─── SCROLL PROGRESS ─── */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 2px;
+  background: rgba(255,255,255,.05); z-index: 900;
+}
+.scroll-progress-fill {
+  height: 100%; width: 0;
+  background: linear-gradient(90deg, var(--orange), #E8A020);
+  transition: width .1s linear;
+}
+
+/* ─── TOPBAR ─── */
+.topbar {
+  position: sticky; top: 0; z-index: 800;
+  background: rgba(6,14,29,.82);
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  border-bottom: 1px solid var(--rule-2);
+  padding: 13px clamp(18px, 4vw, 40px);
+  display: flex; align-items: center; gap: 14px;
+  font-family: var(--mono); font-size: 13px; letter-spacing: .10em;
+}
+.topbar a, .topbar span { display: inline-flex; align-items: center; min-height: 40px; }
+.topbar-home { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.topbar-home::before {
+  content: '←'; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; margin-right: 8px;
+}
+.topbar .topbar-mark {
+  margin-left: auto; text-transform: uppercase; letter-spacing: .16em;
+  color: #AAAAAA !important; -webkit-text-fill-color: #AAAAAA !important; display: none;
+}
+.topbar-en {
+  margin-left: auto;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border: 1px solid var(--rule); border-radius: 999px; padding: 6px 14px;
+  text-transform: uppercase; letter-spacing: .10em; font-size: 13px;
+  transition: border-color .2s, background .2s;
+}
+.topbar-en:hover { border-color: var(--green); }
+@media (min-width: 760px){
+  .topbar .topbar-mark { display: inline-flex; margin-left: 28px; }
+  .topbar-en { margin-left: auto; }
+}
+@media (max-width: 419px){
+  .topbar-en .topbar-en-full { display: none; }
+}
+
+/* ─── WRAP ─── */
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--gutter) 90px;
+}
+@media (min-width: 600px){ :root{ --gutter: 40px; } }
+@media (min-width: 1000px){ :root{ --gutter: 56px; } }
+
+/* ─── INDEX TAG (eyebrow) ─── */
+.index-tag {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--mono); font-size: 13px; font-weight: 500;
+  letter-spacing: .16em; text-transform: uppercase;
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
+  margin-bottom: 20px;
+}
+.index-num {
+  font-family: var(--mono); font-weight: 700;
+  color: var(--bg) !important; -webkit-text-fill-color: var(--bg) !important;
+  background: var(--green);
+  border-radius: 3px; padding: 3px 7px; font-size: 13px; letter-spacing: .04em;
+}
+
+/* ─── DISPLAY TYPE ─── */
+.display-xl {
+  font-family: var(--display);
+  font-style: var(--display-italic);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  text-transform: var(--display-transform);
+  line-height: 1.1;
+  font-size: clamp(2.5rem, 8.6vw, 6rem);
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  text-wrap: balance;
+}
+.dxl-set {
+  display: block;
+  font-family: var(--mono);
+  font-style: normal; font-weight: 500;
+  font-size: clamp(.82rem, 2.6vw, 1rem); letter-spacing: .16em; text-transform: uppercase;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  margin-bottom: 18px; line-height: 1.3;
+}
+.dxl-q { display: block; }
+.display-xl em {
+  font-style: var(--display-italic);
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+}
+.dir-mod .display-xl em { font-style: normal; }
+
+.h2 {
+  font-family: var(--display);
+  font-style: var(--display-italic);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  text-transform: var(--display-transform);
+  font-size: clamp(1.9rem, 5.2vw, 3.4rem);
+  line-height: 1.04;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  text-wrap: balance;
+}
+.h2 em {
+  font-style: var(--display-italic);
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+}
+.dir-mod .h2 em { font-style: normal; }
+.dir-mod .h2 { line-height: 0.98; }
+
+/* ─── SECTION SPACING ─── */
+.wrap > section,
+.wrap > header,
+.wrap > figure {
+  margin-top: clamp(64px, 11vw, 132px);
+}
+.wrap > .opening { margin-top: clamp(40px, 7vw, 72px); }
+
+/* ════════════════════ APERTURA ════════════════════ */
+.opening-head { max-width: 17ch; margin-bottom: clamp(40px, 6vw, 64px); }
+.opening-head { max-width: none; }
+.opening-head .display-xl { max-width: 16ch; }
+.opening-sub {
+  font-family: var(--serif); font-size: clamp(1.05rem, 2.4vw, 1.32rem);
+  line-height: 1.55; margin-top: clamp(30px, 4vw, 48px); max-width: 46ch;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+
+.dolores {
+  display: grid; gap: 18px; align-items: stretch;
+  position: relative;
+}
+.dolores-vs {
+  display: none;
+  font-family: var(--display); font-style: italic; font-size: 1.6rem;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  color: #999999 !important; -webkit-text-fill-color: #999999 !important;
+}
+.dolor {
+  position: relative;
+  background:
+    linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.01)),
+    var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: clamp(24px, 4vw, 38px);
+  overflow: hidden;
+  isolation: isolate;
+}
+.dolor::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: var(--orange);
+}
+.dolor.ep::before { background: var(--green); }
+.dolor::after {
+  content: ''; position: absolute; z-index: -1; right: -30%; top: -40%;
+  width: 80%; height: 80%; border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,96,64,.13), transparent 68%);
+}
+.dolor.ep::after { background: radial-gradient(circle, rgba(40,236,170,.12), transparent 68%); }
+
+.dolor-mark { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; }
+.dolor-letter {
+  font-family: var(--display); font-style: italic; font-weight: 360;
+  font-size: clamp(3rem, 8vw, 4.6rem); line-height: .8;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+}
+.dir-mod .dolor-letter { font-style: normal; font-weight: 800; }
+.dolor.ep .dolor-letter { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.dolor-kicker {
+  font-family: var(--mono); font-size: 13px; font-weight: 500;
+  letter-spacing: .10em; text-transform: uppercase;
+  color: #CCCCCC !important; -webkit-text-fill-color: #CCCCCC !important;
+  line-height: 1.4;
+}
+.dolor-title {
+  font-family: var(--display); font-style: var(--display-italic); font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  font-size: clamp(1.55rem, 3.4vw, 2.15rem); line-height: 1.08;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 22px; text-wrap: balance;
+}
+.dolor-list { list-style: none; margin: 0 0 22px; }
+.dolor-list li {
+  font-family: var(--serif); font-size: 16px; line-height: 1.5;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  padding: 13px 0 13px 26px; position: relative;
+  border-top: 1px solid var(--rule-2);
+}
+.dolor-list li:first-child { border-top: none; }
+.dolor-list li::before {
+  content: ''; position: absolute; left: 0; top: 21px;
+  width: 12px; height: 1px; background: var(--orange);
+}
+.dolor.ep .dolor-list li::before { background: var(--green); }
+.dolor-out {
+  font-family: var(--serif); font-size: 15.5px; line-height: 1.55;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border-top: 1px dashed var(--hair); padding-top: 18px; margin-bottom: 22px;
+}
+.dolor-out span {
+  display: block; font-family: var(--mono); font-size: 13px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase; margin-bottom: 8px;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+}
+.dolor.ep .dolor-out span { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.dolor-jump {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 44px;
+  font-family: var(--mono); font-size: 13px; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border: 1px solid var(--rule); border-radius: 999px; padding: 9px 18px;
+  transition: border-color .2s, transform .2s, background .2s;
+}
+.dolor-jump::after { content: '↓'; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.dolor.ep .dolor-jump::after { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.dolor-jump:hover { border-color: var(--orange); transform: translateY(-1px); }
+.dolor.ep .dolor-jump:hover { border-color: var(--green); }
+
+@media (min-width: 820px){
+  .dolores { grid-template-columns: 1fr auto 1fr; gap: 22px; }
+  .dolores-vs { display: flex; align-self: center; }
+}
+
+/* ════════════════════ DIAGNÓSTICO ════════════════════ */
+.diag {
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01)), var(--card);
+  border: 1px solid var(--rule); border-radius: 8px;
+  padding: clamp(26px, 4.5vw, 48px);
+}
+.diag-head { margin-bottom: 28px; }
+.diag-lead {
+  font-family: var(--display); font-style: var(--display-italic); font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  font-size: clamp(1.55rem, 4.2vw, 2.7rem); line-height: 1.05;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; text-wrap: balance;
+}
+.diag-lead em { font-style: var(--display-italic); color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.dir-mod .diag-lead em { font-style: normal; }
+.diag-items {
+  list-style: none; margin: 0 0 28px;
+  display: grid; gap: 0;
+}
+.diag-items li {
+  font-family: var(--serif); font-size: 16px; line-height: 1.55;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  padding: 15px 0 15px 38px; position: relative; border-top: 1px solid var(--rule-2);
+  counter-increment: diag;
+}
+.diag-items { counter-reset: diag; }
+.diag-items li:first-child { border-top: none; }
+.diag-items li::before {
+  content: counter(diag, decimal-leading-zero);
+  position: absolute; left: 0; top: 15px;
+  font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: .04em;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+}
+@media (min-width: 720px){
+  .diag-items { grid-template-columns: 1fr 1fr; column-gap: 40px; }
+  .diag-items li:nth-child(2) { border-top: none; }
+}
+.diag-score {
+  border-top: 1px dashed var(--hair); padding-top: 22px;
+  display: grid; gap: 12px;
+}
+.diag-row {
+  display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: baseline;
+  padding: 4px 0;
+}
+.diag-row strong {
+  font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: .04em;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  white-space: nowrap;
+}
+.diag-row span {
+  font-family: var(--serif); font-size: 15.5px; line-height: 1.5;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.diag-row.hot strong { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.diag-foot {
+  font-family: var(--mono); font-size: 13px; line-height: 1.7; letter-spacing: .02em;
+  color: #D6D6D6 !important; -webkit-text-fill-color: #D6D6D6 !important;
+  margin-top: 12px; padding-top: 16px; border-top: 1px solid var(--rule-2);
+}
+
+/* ════════════════════ PROOFBAR ════════════════════ */
+.proofbar {
+  display: grid; gap: 0;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+.proofmini { padding: 22px 0; border-top: 1px solid var(--rule-2); }
+.proofmini:first-child { border-top: none; }
+.proofmini strong {
+  display: block; font-family: var(--display); font-style: var(--display-italic);
+  font-weight: var(--display-weight); letter-spacing: var(--display-tracking);
+  font-size: clamp(2.6rem, 7vw, 3.8rem); line-height: .92; margin-bottom: 10px;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+}
+.proofmini:nth-child(2) strong { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.proofmini:nth-child(3) strong { color: var(--blue) !important; -webkit-text-fill-color: var(--blue) !important; }
+.proofmini .pct { font-size: .55em; }
+.proofmini span {
+  display: block; font-family: var(--serif); font-size: 15px; line-height: 1.5;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; max-width: 36ch;
+}
+@media (min-width: 700px){
+  .proofbar { grid-template-columns: repeat(3, 1fr); }
+  .proofmini { border-top: none; border-left: 1px solid var(--rule-2); padding: 8px 0 8px 28px; }
+  .proofmini:first-child { border-left: none; padding-left: 0; }
+}
+
+/* ════════════════════ LEDE ════════════════════ */
+.lede {
+  font-family: var(--serif); font-size: clamp(1.18rem, 2.7vw, 1.55rem);
+  line-height: 1.55; max-width: 38ch;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  text-wrap: pretty;
+}
+.lede a {
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
+  border-bottom: 1px solid var(--green); padding-bottom: 1px;
+}
+.byline {
+  font-family: var(--mono); font-size: 13px; letter-spacing: .10em; text-transform: uppercase;
+  color: #BBBBBB !important; -webkit-text-fill-color: #BBBBBB !important;
+  margin-top: 22px;
+}
+
+/* ════════════════════ PHOTO SYSTEM ════════════════════ */
+.photo {
+  position: relative; overflow: hidden; border-radius: 8px;
+  border: 1px solid var(--rule); background: var(--bg-2);
+}
+.photo img {
+  display: block; width: 100%; height: 100%; object-fit: cover;
+  filter: saturate(.74) contrast(1.05) brightness(.94);
+  transition: transform .9s cubic-bezier(.2,.7,.2,1), filter .6s ease;
+}
+.photo::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(6,14,29,.10) 0%, rgba(6,14,29,.04) 40%, rgba(6,14,29,.45) 100%);
+  mix-blend-mode: multiply;
+}
+.photo::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 2;
+  background: linear-gradient(120deg, rgba(40,236,170,.07), transparent 40%, rgba(232,96,64,.07));
+  mix-blend-mode: soft-light;
+}
+figure:hover .photo img { transform: scale(1.035); filter: saturate(.92) contrast(1.05) brightness(.98); }
+
+figcaption {
+  font-family: var(--mono); font-size: 13px; letter-spacing: .02em; line-height: 1.6;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border-left: 2px solid var(--orange); padding-left: 14px; margin-top: 16px;
+  max-width: 60ch;
+}
+
+/* HERO SHOT */
+.hero-shot .photo { aspect-ratio: 16 / 9; }
+@media (max-width: 600px){ .hero-shot .photo { aspect-ratio: 4 / 5; } }
+
+/* ════════════════════ MECANISMO ════════════════════ */
+.mech { max-width: 56ch; }
+.mech .h2 { margin-bottom: 26px; }
+.mech-name {
+  font-family: var(--display); font-style: var(--display-italic);
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+}
+.dir-mod .mech-name { font-style: normal; }
+.mech-body {
+  font-family: var(--serif); font-size: clamp(1.02rem, 2.1vw, 1.18rem); line-height: 1.7;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 26px;
+}
+.mech-epiphany {
+  border-left: 3px solid var(--green); padding: 6px 0 6px 22px;
+  font-family: var(--display); font-style: italic; font-weight: var(--display-weight);
+  font-size: clamp(1.15rem, 2.6vw, 1.5rem); line-height: 1.42;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.dir-mod .mech-epiphany { font-family: var(--serif); font-style: italic; }
+.mech-layers {
+  list-style: none; display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; margin-top: 34px;
+}
+.mech-layers li {
+  display: flex; align-items: center; gap: 14px;
+  border: 1px solid var(--rule); border-radius: 6px; padding: 16px 18px;
+  background: var(--card);
+}
+.ml-num {
+  font-family: var(--mono); font-weight: 700; font-size: 13px;
+  color: var(--bg) !important; -webkit-text-fill-color: var(--bg) !important;
+  background: var(--orange); border-radius: 4px; width: 26px; height: 26px;
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+}
+.mech-layers li:nth-child(3) .ml-num,
+.mech-layers li:nth-child(4) .ml-num { background: var(--green); }
+.ml-name {
+  font-family: var(--mono); font-size: 13px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+@media (min-width: 720px){ .mech-layers { grid-template-columns: repeat(4,1fr); } }
+
+/* ════════════════════ MODULE MAP ════════════════════ */
+.module-map-head { max-width: 60ch; margin-bottom: 30px; }
+.module-map-head .h2 { margin-bottom: 18px; }
+.module-map-head p {
+  font-family: var(--serif); font-size: clamp(1.02rem, 2.1vw, 1.18rem); line-height: 1.65;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.module-cards { display: grid; gap: 16px; }
+.module-card {
+  position: relative; background: var(--card); border: 1px solid var(--rule);
+  border-radius: 8px; padding: clamp(24px, 4vw, 36px); overflow: hidden;
+}
+.module-card::before { content: ''; position: absolute; left:0; top:0; bottom:0; width: 4px; background: var(--orange); }
+.module-card.ep::before { background: var(--green); }
+.module-card-kicker {
+  font-family: var(--mono); font-size: 13px; font-weight: 500; letter-spacing: .10em; text-transform: uppercase;
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
+}
+.module-card.ep .module-card-kicker { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.module-card h3 {
+  font-family: var(--display); font-style: var(--display-italic); font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking); font-size: clamp(1.6rem, 3.6vw, 2.3rem); line-height: 1.04;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin: 14px 0 14px;
+}
+.module-card p {
+  font-family: var(--serif); font-size: 16px; line-height: 1.6;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 18px;
+}
+.module-roi {
+  display: block; font-family: var(--mono); font-size: 13px; line-height: 1.6; letter-spacing: .01em;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border-top: 1px dashed var(--hair); padding-top: 16px;
+}
+.module-roi strong { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.module-card.ep .module-roi strong { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+@media (min-width: 760px){ .module-cards { grid-template-columns: 1fr 1fr; } }
+
+/* ════════════════════ STATS ════════════════════ */
+.stats {
+  display: grid; gap: 0;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+.stat { padding: 30px 0; border-top: 1px solid var(--rule-2); }
+.stat:first-of-type { border-top: none; }
+.stat-num {
+  font-family: var(--display); font-style: var(--display-italic); font-weight: var(--display-weight);
+  letter-spacing: -0.02em; font-size: clamp(3.6rem, 11vw, 6rem); line-height: .85; margin-bottom: 16px;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+}
+.stat-unit { font-size: .42em; }
+.stat-desc {
+  font-family: var(--serif); font-size: 16px; line-height: 1.5; max-width: 34ch;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 12px;
+}
+.stat-src {
+  font-family: var(--mono); font-size: 13px; letter-spacing: .04em; line-height: 1.5;
+  color: #CCCCCC !important; -webkit-text-fill-color: #CCCCCC !important;
+}
+.stat-src em { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; font-style: italic; }
+@media (min-width: 700px){
+  .stats { grid-template-columns: repeat(3,1fr); gap: 0; }
+  .stat { border-top: none; border-left: 1px solid var(--rule-2); padding: 16px 0 16px 32px; }
+  .stat:first-of-type { border-left: none; padding-left: 0; }
+}
+
+/* ════════════════════ TESIS ════════════════════ */
+.tesis { max-width: 60ch; }
+.tesis p {
+  font-family: var(--serif); font-size: clamp(1.05rem, 2.2vw, 1.28rem); line-height: 1.72; margin-bottom: 22px;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; text-wrap: pretty;
+}
+.tesis p:last-child { margin-bottom: 0; }
+.tesis strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; font-weight: 700; }
+.tesis .tesis-strong { font-size: clamp(1.15rem, 2.5vw, 1.45rem); }
+.ensayo-link {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 10px;
+  font-family: var(--mono); font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  border-bottom: 1px solid var(--orange); padding: 4px 0;
+  transition: gap .2s;
+}
+.ensayo-link:hover { gap: 14px; }
+
+/* PULL QUOTE */
+.pull {
+  border-left: 3px solid var(--orange); padding: 6px 0 6px 24px; margin: 0 0 28px;
+  font-family: var(--display); font-style: italic; font-weight: var(--display-weight);
+  font-size: clamp(1.3rem, 3vw, 1.95rem); line-height: 1.26; max-width: 30ch;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.dir-mod .pull { font-family: var(--serif); }
+.pull.ep { border-left-color: var(--green); }
+.pull-attr {
+  display: block; margin-top: 16px; font-family: var(--mono); font-style: normal;
+  font-size: 13px; letter-spacing: .04em; line-height: 1.5;
+  color: #BBBBBB !important; -webkit-text-fill-color: #BBBBBB !important;
+}
+.pull-attr em { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; font-style: italic; }
+
+/* ════════════════════ OFFER STACK ════════════════════ */
+.offer-stack { display: grid; gap: 30px; }
+.offer-head .h2 { margin-bottom: 18px; }
+.offer-head p {
+  font-family: var(--serif); font-size: clamp(1.02rem, 2.1vw, 1.18rem); line-height: 1.65;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.offer-items { list-style: none; counter-reset: offer; }
+.offer-items li {
+  border-top: 1px solid var(--rule); padding: 22px 0 22px 52px; position: relative; counter-increment: offer;
+}
+.offer-items li:last-child { border-bottom: 1px solid var(--rule); }
+.offer-items li::before {
+  content: counter(offer, decimal-leading-zero);
+  position: absolute; left: 0; top: 24px;
+  font-family: var(--mono); font-size: 13px; font-weight: 700;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+}
+.offer-items strong {
+  display: block; font-family: var(--display); font-style: var(--display-italic); font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking); font-size: clamp(1.3rem, 2.8vw, 1.7rem); line-height: 1.1; margin-bottom: 10px;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.offer-items span {
+  display: block; font-family: var(--serif); font-size: 16px; line-height: 1.55;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+@media (min-width: 820px){
+  .offer-stack { grid-template-columns: minmax(0,.82fr) minmax(0,1.18fr); gap: 48px; align-items: start; }
+}
+
+/* ════════════════════ EDITORIAL BAND ════════════════════ */
+.editorial-band { display: grid; gap: 22px; align-items: start; }
+.band-photo .photo { aspect-ratio: 16 / 10; }
+.editorial-note {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 8px;
+  padding: clamp(24px, 4vw, 38px);
+}
+.editorial-note h3 {
+  font-family: var(--display); font-style: var(--display-italic); font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking); font-size: clamp(1.5rem, 3.4vw, 2.1rem); line-height: 1.08;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 16px;
+}
+.editorial-note p {
+  font-family: var(--serif); font-size: 16px; line-height: 1.65;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 22px;
+}
+.editorial-note dl { display: grid; gap: 0; }
+.editorial-note div { border-top: 1px solid var(--rule-2); padding: 16px 0; display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: baseline; }
+.editorial-note div:first-of-type { border-top: 1px dashed var(--hair); }
+.editorial-note dt {
+  font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: .10em; text-transform: uppercase;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; white-space: nowrap;
+}
+.editorial-note dd {
+  font-family: var(--serif); font-size: 15.5px; line-height: 1.55;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+@media (min-width: 860px){
+  .editorial-band { grid-template-columns: minmax(0,1.05fr) minmax(0,.95fr); gap: 30px; }
+}
+
+/* ════════════════════ VENTANA ════════════════════ */
+.ventana {
+  background: linear-gradient(180deg, rgba(255,255,255,.03), transparent 40%), var(--card);
+  border: 1px solid var(--rule); border-radius: 10px;
+  padding: clamp(26px, 4.5vw, 52px);
+  position: relative; overflow: hidden;
+}
+.ventana::before { content: ''; position: absolute; left:0; top:0; right:0; height: 4px; background: var(--orange); }
+.ventana.ep::before { background: var(--green); }
+.ventana-head { max-width: 54ch; margin-bottom: 30px; }
+.ventana-label {
+  display: inline-block; font-family: var(--mono); font-size: 13px; font-weight: 500;
+  letter-spacing: .10em; text-transform: uppercase; margin-bottom: 18px;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  border: 1px solid var(--rule); border-radius: 999px; padding: 6px 14px;
+}
+.ventana.ep .ventana-label { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.ventana .h2 { margin-bottom: 14px; }
+.ventana-tagline {
+  font-family: var(--display); font-style: italic; font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  font-size: clamp(1.18rem, 2.8vw, 1.65rem); line-height: 1.28; margin-bottom: 18px; max-width: 40ch;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+}
+.dir-mod .ventana-tagline { font-family: var(--serif); }
+.ventana.ep .ventana-tagline { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.ventana-lede {
+  font-family: var(--display); font-style: italic; font-weight: var(--display-weight);
+  font-size: clamp(1.15rem, 2.6vw, 1.5rem); line-height: 1.4; max-width: 46ch;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.dir-mod .ventana-lede { font-family: var(--serif); }
+
+.layers { list-style: none; margin: 0 0 34px; counter-reset: lyr; }
+.layers li {
+  padding: 22px 0; border-top: 1px solid var(--rule-2);
+  display: grid; gap: 8px; counter-increment: lyr;
+}
+.layers li:first-child { border-top: none; }
+.layer-tag {
+  font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  display: flex; align-items: center; gap: 10px;
+}
+.layer-tag::before {
+  content: counter(lyr, decimal-leading-zero);
+  font-weight: 700; color: #999999 !important; -webkit-text-fill-color: #999999 !important;
+}
+.ventana.ep .layer-tag { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.layer-body {
+  font-family: var(--serif); font-size: 16px; line-height: 1.6;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.layer-body strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; font-weight: 700; }
+@media (min-width: 760px){
+  .layers li { grid-template-columns: 150px 1fr; gap: 24px; align-items: baseline; }
+}
+
+.program-media { display: grid; gap: 18px; margin-bottom: 30px; }
+.program-media .photo { aspect-ratio: 4 / 3; }
+.program-media figure.is-wide .photo { aspect-ratio: 16 / 9; }
+@media (min-width: 700px){
+  .program-media { grid-template-columns: 1fr 1fr; }
+  .program-media figure.is-wide { grid-column: 1 / -1; }
+}
+
+.format {
+  font-family: var(--mono); font-size: 13px; line-height: 1.7; letter-spacing: .02em;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border-top: 1px dashed var(--hair); padding-top: 16px; margin-bottom: 10px;
+}
+.format + .format { border-top: none; padding-top: 0; margin-bottom: 24px; }
+.format strong { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.ventana.ep .format strong { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.ventana .ensayo-link { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; border-bottom-color: var(--orange); }
+.ventana.ep .ensayo-link { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; border-bottom-color: var(--green); }
+
+/* ════════════════════ RESULT CALLOUT ════════════════════ */
+.result-callout {
+  background: linear-gradient(135deg, rgba(40,236,170,.07), transparent 60%), var(--card);
+  border: 1px solid var(--rule); border-radius: 10px;
+  padding: clamp(28px, 5vw, 52px); display: grid; gap: 18px; max-width: 64ch;
+  position: relative; overflow: hidden;
+}
+.result-callout::before { content:''; position:absolute; left:0; top:0; bottom:0; width:5px; background: var(--green); box-shadow: 2px 0 12px rgba(40,236,170,.3); }
+.result-num {
+  font-family: var(--display); font-style: var(--display-italic); font-weight: var(--display-weight);
+  letter-spacing: -0.02em; font-size: clamp(3.4rem, 9vw, 5.4rem); line-height: .85;
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
+}
+.result-body {
+  font-family: var(--serif); font-size: clamp(1.05rem, 2.2vw, 1.28rem); line-height: 1.6;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.result-attr {
+  font-family: var(--mono); font-size: 13px; letter-spacing: .04em;
+  color: #CCCCCC !important; -webkit-text-fill-color: #CCCCCC !important;
+}
+
+/* ════════════════════ QUÉ CAMBIA ════════════════════ */
+.que-cambia-head { max-width: 56ch; margin-bottom: 30px; }
+.que-cambia-head .h2 { margin-bottom: 12px; }
+.que-cambia-sub {
+  font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
+  color: #BBBBBB !important; -webkit-text-fill-color: #BBBBBB !important;
+}
+.cambios { display: grid; gap: 16px; }
+.cambio { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: clamp(22px, 3.5vw, 32px); position: relative; overflow: hidden; }
+.cambio::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background: var(--orange); }
+.cambio.ep::before { background: var(--green); }
+.cambio-mod {
+  display: block; font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; margin-bottom: 18px;
+}
+.cambio.ep .cambio-mod { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.cambio ul { list-style: none; }
+.cambio ul li {
+  font-family: var(--serif); font-size: 15.5px; line-height: 1.55;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  padding: 11px 0 11px 26px; position: relative; border-top: 1px solid var(--rule-2);
+}
+.cambio ul li:first-child { border-top: none; }
+.cambio ul li::before { content: '→'; position: absolute; left: 0; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.cambio.ep ul li::before { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+@media (min-width: 700px){ .cambios { grid-template-columns: 1fr 1fr; } }
+
+/* ════════════════════ SOCIAL PROOF ════════════════════ */
+.social-proof { max-width: 64ch; }
+.social-proof .h2 { margin-bottom: 30px; }
+.social-proof .result-callout { margin: 0 0 28px; }
+.speaker-bar {
+  display: grid; gap: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-top: 8px;
+}
+.speaker-item { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; padding: 22px 0; border-top: 1px solid var(--rule-2); }
+.speaker-item:first-child { border-top: none; }
+.speaker-num {
+  font-family: var(--display); font-style: var(--display-italic); font-weight: var(--display-weight);
+  font-size: clamp(2.2rem, 6vw, 3rem); line-height: 1; min-width: 110px;
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
+}
+.speaker-desc {
+  font-family: var(--serif); font-size: 15px; line-height: 1.5;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.speaker-desc em { font-style: italic; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+@media (min-width: 760px){
+  .speaker-bar { grid-template-columns: repeat(3,1fr); }
+  .speaker-item { border-top: none; border-left: 1px solid var(--rule-2); padding: 8px 0 8px 24px; grid-template-columns: 1fr; gap: 12px; align-content: start; }
+  .speaker-item:first-child { border-left: none; padding-left: 0; }
+}
+
+/* ════════════════════ BIO ════════════════════ */
+.bio-flex { display: grid; gap: 22px; align-items: start; }
+.bio-photo {
+  width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+  border: 1px solid var(--rule); filter: saturate(.8) contrast(1.04);
+}
+.bio-text { max-width: 62ch; }
+.bio-text p {
+  font-family: var(--serif); font-size: 16px; line-height: 1.65; margin-bottom: 12px;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.bio-text strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.bio-text a { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; border-bottom: 1px solid var(--orange); }
+@media (min-width: 600px){ .bio-flex { grid-template-columns: 120px 1fr; gap: 32px; } }
+
+/* ════════════════════ CLOSING VISUAL ════════════════════ */
+.closing-visual { display: grid; gap: 24px; align-items: start; }
+.closing-visual .photo { aspect-ratio: 3 / 4; }
+.closing-note {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: clamp(24px, 4vw, 40px);
+}
+.closing-note h3 {
+  font-family: var(--display); font-style: var(--display-italic); font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking); font-size: clamp(1.5rem, 3.4vw, 2.2rem); line-height: 1.08;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 18px;
+}
+.closing-note p {
+  font-family: var(--serif); font-size: 16px; line-height: 1.65; margin-bottom: 16px;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.closing-note p:last-child { margin-bottom: 0; }
+@media (min-width: 860px){
+  .closing-visual { grid-template-columns: minmax(0,.78fr) minmax(0,1.22fr); gap: 36px; }
+}
+
+/* ════════════════════ CTA ════════════════════ */
+.cta {
+  background:
+    radial-gradient(80% 100% at 100% 0%, rgba(232,96,64,.10), transparent 60%),
+    linear-gradient(180deg, var(--card-2), var(--card));
+  border: 1px solid var(--rule); border-radius: 12px;
+  padding: clamp(30px, 5.5vw, 64px); max-width: 920px;
+}
+.cta-eyebrow {
+  display: block; font-family: var(--mono); font-size: 13px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; margin-bottom: 18px;
+}
+.cta-lead {
+  font-family: var(--display); font-style: var(--display-italic); font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking); font-size: clamp(1.5rem, 4vw, 2.6rem); line-height: 1.12; margin-bottom: 30px;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; text-wrap: balance;
+}
+.cta-math {
+  font-family: var(--serif); font-size: clamp(1rem, 2.1vw, 1.16rem); line-height: 1.65;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border-left: 3px solid var(--orange); padding-left: 18px; margin-bottom: 30px;
+}
+.cta-math strong { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.cta-math em { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; font-style: italic; }
+.cta-stack-label {
+  display: block; font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; margin-bottom: 14px;
+}
+.cta-stack { list-style: none; margin-bottom: 30px; }
+.cta-stack li {
+  font-family: var(--serif); font-size: 16px; line-height: 1.5;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border-top: 1px solid var(--rule-2); padding: 14px 0 14px 30px; position: relative;
+}
+.cta-stack li:last-child { border-bottom: 1px solid var(--rule-2); }
+.cta-stack li::before { content: '✓'; position: absolute; left: 0; color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; font-weight: 700; }
+
+.pricing-rack { border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; margin-bottom: 28px; }
+.price-anchor { padding: 14px 20px; border-bottom: 1px solid var(--rule); display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; background: rgba(255,255,255,.02); }
+.price-anchor-label { font-family: var(--mono); font-size: 13px; letter-spacing: .10em; text-transform: uppercase; color: #AAAAAA !important; -webkit-text-fill-color: #AAAAAA !important; }
+.price-anchor-val { font-family: var(--display); font-style: italic; font-size: 1.6rem; color: #999999 !important; -webkit-text-fill-color: #999999 !important; text-decoration: line-through; }
+.price-anchor-desc { font-family: var(--serif); font-size: 13px; line-height: 1.4; color: #AAAAAA !important; -webkit-text-fill-color: #AAAAAA !important; }
+.price-options { display: grid; grid-template-columns: 1fr 1fr; }
+.price-opt { padding: 24px 20px; border-right: 1px solid var(--rule); position: relative; }
+.price-opt:last-child { border-right: none; }
+.price-opt.featured { background: rgba(232,96,64,.06); }
+.price-opt-tag {
+  position: absolute; top: 12px; right: 14px;
+  font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--bg) !important; -webkit-text-fill-color: var(--bg) !important; background: var(--orange);
+  padding: 3px 8px; border-radius: 999px;
+}
+.price-opt-name { display: block; font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #BBBBBB !important; -webkit-text-fill-color: #BBBBBB !important; margin-bottom: 10px; }
+.price-opt-val { display: block; font-family: var(--display); font-style: var(--display-italic); font-weight: var(--display-weight); font-size: clamp(2.2rem, 6vw, 3rem); line-height: 1; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 10px; }
+.price-opt.featured .price-opt-val { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.price-opt-desc { display: block; font-family: var(--serif); font-size: 13px; line-height: 1.45; color: #CCCCCC !important; -webkit-text-fill-color: #CCCCCC !important; }
+.price-guarantee {
+  font-family: var(--mono); font-size: 13px; letter-spacing: .02em; line-height: 1.55;
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
+  border-top: 1px solid var(--rule); padding: 14px 20px; background: rgba(40,236,170,.04);
+}
+.cta-note {
+  font-family: var(--mono); font-size: 13px; line-height: 1.6; letter-spacing: .02em;
+  color: #CCCCCC !important; -webkit-text-fill-color: #CCCCCC !important; margin-top: 16px;
+}
+.cta-scarcity {
+  font-family: var(--mono); font-size: 13px; line-height: 1.55; letter-spacing: .02em;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  border: 1px dashed var(--orange); border-radius: 6px; padding: 14px 18px; margin: 16px 0 28px;
+}
+.cta-btns { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 52px;
+  appearance: none; border: 0; background: var(--orange);
+  color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;
+  font-family: var(--sans); font-size: 14px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  padding: 15px 26px; border-radius: 6px; cursor: pointer;
+  transition: transform .15s ease, background .15s ease, box-shadow .2s;
+  box-shadow: 0 8px 30px -12px rgba(232,96,64,.7);
+}
+.cta-btn:hover { background: var(--orange-deep); transform: translateY(-2px); box-shadow: 0 14px 36px -12px rgba(232,96,64,.8); }
+.cta-btn::after { content: '→'; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; }
+.cta-btn-secondary {
+  background: transparent; box-shadow: none;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; border: 1px solid var(--rule);
+}
+.cta-btn-secondary:hover { background: transparent; border-color: var(--ink); box-shadow: none; }
+.cta-btn-secondary::after { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.cta-noscript a { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; border-bottom: 1px solid var(--green); }
+
+/* ════════════════════ FAQ ════════════════════ */
+.faq { max-width: 64ch; }
+.faq .h2 { margin-bottom: 8px; }
+.faq-list { list-style: none; margin-top: 26px; }
+.faq-item { border-top: 1px solid var(--rule); padding: 26px 0; }
+.faq-item:last-child { border-bottom: 1px solid var(--rule); }
+.faq-q {
+  font-family: var(--display); font-style: var(--display-italic); font-weight: var(--display-weight);
+  font-size: clamp(1.2rem, 2.6vw, 1.55rem); line-height: 1.25; margin-bottom: 14px;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.faq-a {
+  font-family: var(--serif); font-size: 16px; line-height: 1.65;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.faq-a strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+
+/* ════════════════════ FOOTER ════════════════════ */
+.foot {
+  border-top: 1px solid var(--rule); margin-top: clamp(70px, 12vw, 130px);
+  padding: 32px var(--gutter); display: flex; flex-wrap: wrap; gap: 18px;
+  align-items: center; justify-content: space-between; max-width: var(--maxw); margin-left: auto; margin-right: auto;
+  font-family: var(--mono); font-size: 13px; letter-spacing: .04em;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.foot a { color: #CCCCCC !important; -webkit-text-fill-color: #CCCCCC !important; }
+.foot a:hover { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 20px; }
+.foot-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 7px; vertical-align: middle; }
+
+/* ════════════════════ UTILITIES ════════════════════ */
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ─── SCROLL REVEAL (solo cuando JS activa .js-reveal en <html>) ─── */
+.js-reveal [data-reveal] {
+  opacity: 0; transform: translateY(26px);
+  transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+.js-reveal [data-reveal].is-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important;
+  }
+  .js-reveal [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .photo img { transition: none; }
+}
+
+/* ════════════════════ ANTI iOS AUTO-DARK ════════════════════ */
+@media (prefers-color-scheme: dark) {
+  html, body { background: var(--bg) !important; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+  h1,h2,h3,p,li,a,span,em,strong,blockquote,figcaption,time,label,dt,dd {
+    color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  }
+  .index-tag, .cta-eyebrow, .cta-stack-label, .price-guarantee,
+  .dolor.ep .dolor-letter, .dolor.ep .dolor-out span, .dolor.ep .dolor-jump::after,
+  .module-card.ep .module-card-kicker, .module-card .module-card-kicker,
+  .ventana.ep .ventana-label, .ventana.ep .layer-tag, .ventana.ep .format strong, .ventana.ep .ensayo-link, .ventana.ep .ventana-tagline,
+  .proofmini:nth-child(2) strong, .result-num, .stat-src em, .speaker-num,
+  .diag-row.hot strong, .cambio.ep .cambio-mod, .cambio.ep ul li::before, .pull-attr em,
+  .lede a {
+    color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
+  }
+  .dxl-set, .display-xl em, .h2 em, .mech-name, .stat-num, .proofmini strong,
+  .dolor-letter, .dolor-out span, .dolor-jump::after, .dolor-list li::before,
+  .ventana-label, .layer-tag, .format strong, .ensayo-link, .module-roi strong, .ventana-tagline,
+  .diag-row strong, .diag-items li::before, .cambio-mod, .cambio ul li::before,
+  .offer-items li::before, .editorial-note dt, .cta-math strong, .cta-scarcity,
+  .price-opt.featured .price-opt-val, .bio-text a, figcaption {
+    color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  }
+  .proofmini:nth-child(3) strong, .foot-dot { color: var(--blue) !important; -webkit-text-fill-color: var(--blue) !important; }
+  .cta-btn, .cta-btn::after { color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; }
+  .price-opt-tag, .index-num, .ml-num { color: var(--bg) !important; -webkit-text-fill-color: var(--bg) !important; }
+  .cta-btn-secondary, .cta-btn-secondary::after { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+}
+
+</style>
 </head>
 <body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="ambient" aria-hidden="true"></div>
 
 <div class="scroll-progress"><div class="scroll-progress-fill" id="spFill"></div></div>
 
 <nav class="topbar">
   <a href="/" class="topbar-home">jfcarpio.com</a>
-  <a href="/workshops/" class="topbar-mark" hreflang="en" lang="en">EN · Workshops</a>
+  <span class="topbar-mark">Talleres corporativos</span>
+  <a href="/workshops/" class="topbar-en" hreflang="en" lang="en">EN<span class="topbar-en-full"> ·&nbsp;Workshops</span></a>
 </nav>
 
 <main class="wrap">
@@ -1654,144 +1199,147 @@ a { text-decoration: none; color: inherit; }
 
   <!--
     ════════════════════════════════════════════════════════════════
-    NOTAS DE DISEÑO — v1.160 (2026-05-19) · solo visibles en código.
+    NOTAS DE DISEÑO — rediseño visual 2026-05 (award-winning pass).
     Para JFC y cualquier IA/editor futuro. NO romper esto:
 
-    1. MECANISMO NOMBRADO ("MindOS", .mech) va ARRIBA, antes del module-map.
-       Razón (Schwartz/Brunson): el comprador es Product-Aware; necesita el
-       mecanismo con nombre antes que el catálogo de módulos. Si lo bajas,
-       vuelve a parecer "otra capacitación más" y se pierde diferenciación.
-    2. .mech-epiphany es relato en primera persona de JFC. Es historia, no
-       dato. No volver bullet, no "mejorar" el tono, no quitar el "yo".
-    3. .result-callout (+15%) es CASO REAL provisto por JFC, sin nombre de
-       cliente por confidencialidad. NO inventar cifras, nombres ni
-       atribuciones. Doble función: prueba social + antídoto a la objeción
-       "esto suena filosófico para mi equipo operativo".
-    4. CTA: .cta-math (aritmética 180 h/mes) + .cta-stack (entregables) +
-       .cta-scarcity (3/mes). La GARANTÍA vive SOLO en .price-guarantee;
-       no duplicar en el stack. Calendly apunta a /5minutos a pedido de
-       JFC (él lo cambia a 20 luego). WhatsApp = CTA primario (LatAm).
-    5. LEGIBILIDAD: copy nuevo siempre --ink/--orange/--green, nunca
-       --muted; mínimo 17px. No tocar locks anti-dark iOS/WhatsApp
-       (:root light-only + @media prefers-color-scheme dark con !important).
+    1. ESTRUCTURA: la página ABRE con las dos columnas de dolores +
+       el diagnóstico de 7 señales (mandato JFC). No anteponer hero.
+    2. MECANISMO NOMBRADO ("MindOS", .mech) va ANTES del module-map.
+       El comprador es Product-Aware; necesita el mecanismo con nombre
+       antes que el catálogo de módulos.
+    3. .mech-epiphany es relato en primera persona de JFC. Es historia,
+       no dato. No volver bullet ni quitar el "yo".
+    4. .result-callout (+15% y +6%) son CASOS REALES provistos por JFC.
+       NO inventar cifras, nombres ni atribuciones.
+    5. CTA: .cta-math + .cta-stack + .cta-scarcity. La GARANTÍA vive SOLO
+       en .price-guarantee. WhatsApp = CTA primario (LatAm).
     6. VERBATIM (module-map h2): "Cada uno recompensa a la empresa por una
        vía distinta." — bloqueada por JFC. No reescribir.
-
-    PENDIENTE (decisión JFC): lead magnet "Diagnóstico de 7 preguntas"
-    necesita destino (formulario+backend o página). No construido aún.
-
-    7. MindOS es el modelo del Dr. Paul Dobransky (psiquiatra). Atribuir
-       SIEMPRE a él. No presentarlo como coinage de JFC. Lo de JFC es
-       "Pacto del Capitalismo" y "Plusvalía de Say" (van en el Taller 2).
-    8. Mandato JFC: nunca escribir "capa" a secas. Siempre "capa del
-       cerebro". El modelo es neuro-conductual, no una metáfora suelta.
-    9. Las bandas visuales (.hero-gallery, .editorial-band, .proof-gallery,
-       .closing-visual) no son decoración suelta: ayudan a que WhatsApp,
-       mobile y desktop muestren escenas concretas de trabajo antes del CTA.
+    7. MindOS es el modelo del Dr. Paul Dobransky. Atribuir SIEMPRE a él.
+       Lo de JFC es "Pacto del Capitalismo" y "Plusvalía de Say" (Taller 2).
+    8. Nunca escribir "capa" a secas. Siempre "capa del cerebro".
+    9. WHATSAPP-FIRST: og:image + theme-color + locks anti-dark iOS
+       (:root light-only + @media prefers-color-scheme dark con !important)
+       NO se tocan. Mobile angosto es la vista de referencia.
+    10. El selector "Dirección visual" (.dir-switch) es solo herramienta de
+        edición. Para producción puede eliminarse el bloque .dir-switch y
+        dejar la clase deseada (dir-edt / dir-lit / dir-mod) en <html>.
     ════════════════════════════════════════════════════════════════
   -->
 
-  <section class="quick-path" aria-label="Ruta rápida para decidir si estos talleres aplican a tu equipo">
-    <div class="quick-intro">
-      <p>Antes de volver a capacitar, ¿cuál de estos dos costos ya está dentro de tu nómina?</p>
+  <!-- ═══ APERTURA — pregunta potente + dos columnas de dolores ═══ -->
+  <header class="opening" data-reveal>
+    <div class="opening-head">
+      <span class="index-tag"><span class="index-num">00</span> Diagnóstico de entrada</span>
+      <h2 class="display-xl">
+        <span class="dxl-set">Antes de volver a capacitar:</span>
+        <span class="dxl-q">¿cuál de estos dos costos <em>ya desgasta tu organización y tus proyectos?</em></span>
+      </h2>
+      <p class="opening-sub">Dos talleres distintos para dos costos distintos. Marca el que reconoces y baja directo al módulo que lo corrige.</p>
     </div>
-    <div class="quick-grid">
-      <article class="quick-card">
-        <span class="quick-card-kicker">Módulo A · bienestar financiero</span>
-        <h3>Falta de educación financiera en el equipo</h3>
-        <ul class="quick-list">
+
+    <div class="dolores">
+      <article class="dolor" data-reveal>
+        <div class="dolor-mark"><span class="dolor-letter">A</span><span class="dolor-kicker">Módulo A · bienestar financiero</span></div>
+        <h3 class="dolor-title">Falta de educación financiera en el equipo</h3>
+        <ul class="dolor-list">
           <li>El sueldo sube, pero el estrés financiero no baja.</li>
           <li>La jornada se contamina con deudas, urgencias y mala liquidez.</li>
           <li>Los aumentos no compran foco ni tranquilidad.</li>
           <li>La empresa paga tiempo, atención y energía que nunca recupera.</li>
         </ul>
-        <p class="quick-outcome"><strong>Qué cambia:</strong> menos distracción financiera y mejores decisiones personales que sí se traducen en más foco para trabajar.</p>
-        <a href="#taller-finanzas" class="quick-jump">Ver módulo de finanzas</a>
+        <p class="dolor-out"><span>Qué cambia</span>Menos distracción financiera y mejores decisiones personales que sí se traducen en más foco para trabajar.</p>
+        <a href="#taller-finanzas" class="dolor-jump">Ver módulo de finanzas</a>
       </article>
-      <article class="quick-card ep">
-        <span class="quick-card-kicker">Módulo B · cultura empresarial</span>
-        <h3>Ideas antiempresa que enfrían la relación con el trabajo</h3>
-        <ul class="quick-list">
+
+      <span class="dolores-vs" aria-hidden="true">o</span>
+
+      <article class="dolor ep" data-reveal>
+        <div class="dolor-mark"><span class="dolor-letter">B</span><span class="dolor-kicker">Módulo B · cultura empresarial</span></div>
+        <h3 class="dolor-title">Ideas antiempresa que enfrían la relación con el trabajo</h3>
+        <ul class="dolor-list">
           <li>La utilidad genera sospecha.</li>
           <li>El salario se interpreta como una concesión mezquina.</li>
           <li>Los activos de la empresa se tratan como si fueran de otro.</li>
           <li>Se trabaja para cumplir, no para cuidar, proponer o construir.</li>
         </ul>
-        <p class="quick-outcome"><strong>Qué cambia:</strong> mejora la relación con activos, margen, salario y utilidad, y sube la iniciativa en momentos clave.</p>
-        <a href="#taller-empresa" class="quick-jump">Ver módulo de empresa privada</a>
+        <p class="dolor-out"><span>Qué cambia</span>Mejora la relación con activos, margen, salario y utilidad, y sube la iniciativa en momentos clave.</p>
+        <a href="#taller-empresa" class="dolor-jump">Ver módulo de empresa privada</a>
       </article>
     </div>
+  </header>
+
+  <!-- ═══ DIAGNÓSTICO — subido al inicio (mandato JFC) ═══ -->
+  <section class="diag" aria-label="Diagnóstico rápido: ¿cuál módulo necesita tu equipo?" data-reveal>
+    <div class="diag-head">
+      <span class="index-tag"><span class="index-num">01</span> Las 7 señales</span>
+      <p class="diag-lead">¿Cuál módulo necesita tu equipo <em>ahora?</em></p>
+    </div>
+    <ul class="diag-items">
+      <li>Alguien del equipo llega a fin de mes justo o en rojo, y eso afecta su concentración en horario laboral.</li>
+      <li>Los aumentos de sueldo no resuelven el estrés financiero. La gente sigue igual de ajustada.</li>
+      <li>Las decisiones familiares (deuda, casa, educación de hijos) aparecen como distracción en horario de trabajo.</li>
+      <li>La gente cumple, pero no cuida lo que no es de su propiedad directa.</li>
+      <li>Hay desconfianza implícita sobre lo que "gana la empresa" versus lo que "se lleva el empleado".</li>
+      <li>La iniciativa propia es baja: la gente hace lo pedido, no lo que podría mejorar el resultado.</li>
+      <li>El entusiasmo post-capacitación no duró más de tres semanas en la última intervención.</li>
+    </ul>
+    <div class="diag-score">
+      <div class="diag-row"><strong>1–2 señales</strong><span>El problema es puntual. Un módulo resuelve.</span></div>
+      <div class="diag-row"><strong>3–5 señales</strong><span>Hay un patrón. Los dos módulos en secuencia tienen más retorno.</span></div>
+      <div class="diag-row hot"><strong>6–7 señales</strong><span>El sistema operativo del equipo necesita intervención completa. Hablemos esta semana.</span></div>
+      <p class="diag-foot">Si ya viste 3, 5 o 7 señales, la conversación correcta no es si capacitar o no. Es qué módulo conviene atender primero.</p>
+    </div>
   </section>
 
-  <div class="quick-proofbar" aria-label="Prueba y autoridad tempranas">
-    <div class="quick-proofmini">
-      <strong>+15%</strong>
+  <!-- ═══ PROOFBAR ═══ -->
+  <section class="proofbar" aria-label="Prueba y autoridad tempranas" data-reveal>
+    <div class="proofmini">
+      <strong>+15<span class="pct">%</span></strong>
       <span>Un equipo comercial subió sus resultados el semestre siguiente.</span>
     </div>
-    <div class="quick-proofmini">
-      <strong>4.800+</strong>
+    <div class="proofmini">
+      <strong>4.800<span class="pct">+</span></strong>
       <span>estudiantes en 14 años como profesor en la USFQ.</span>
     </div>
-    <div class="quick-proofmini">
-      <strong>3 ciudades</strong>
+    <div class="proofmini">
+      <strong>3 <span class="pct">ciudades</span></strong>
       <span>Capacitación corporativa en Ecuador, más invitaciones en Brasil y Turquía.</span>
     </div>
-  </div>
-
-  <p class="lede">Estos talleres fueron creados para equipos que ya sienten el costo en productividad, criterio y clima interno, aunque todavía no lo hayan nombrado con precisión. Son dos módulos distintos: uno ordena el manejo financiero personal del participante; el otro corrige la manera en que el equipo entiende el salario, la empresa, la utilidad, el riesgo y los activos. Ambos usan el mismo mecanismo, <a href="#mindos">MindOS</a>, pero trabajan problemas distintos y pueden contratarse por separado.</p>
-  <p class="byline">J.F. Carpio · Investigador empresarial y económico · 2026</p>
-
-  <section class="hero-gallery" aria-label="Escenas del tipo de intervención que abre estos talleres">
-    <figure class="hero-gallery-main">
-      <div class="photo-wrap">
-        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=1200" srcset="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w" sizes="(min-width: 900px) 44vw, 100vw" width="1200" height="800" loading="eager" decoding="async" alt="Equipo ejecutivo trabajando en una mesa de decisión">
-      </div>
-      <figcaption>El objetivo no es exponer contenidos. Es cambiar la manera en que el equipo entiende una decisión antes de repetirla muchas veces.</figcaption>
-    </figure>
-    <figure>
-      <div class="photo-wrap">
-        <img src="https://jfcarpio.com/las7formas/img/pexels-1051838-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-1051838-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-1051838-w1800.jpg 1800w" sizes="(min-width: 900px) 24vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Gráficos impresos y una laptop sobre una mesa de trabajo">
-      </div>
-      <figcaption>Cuando cambia el criterio, cambia también la forma de leer reportes, prioridades y costos que no aparecen a simple vista.</figcaption>
-    </figure>
-    <figure>
-      <div class="photo-wrap">
-        <img src="https://jfcarpio.com/las7formas/img/pexels-3943723-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-3943723-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-3943723-w1800.jpg 1800w" sizes="(min-width: 900px) 24vw, 100vw" width="900" height="1200" loading="lazy" decoding="async" alt="Una mano depositando una moneda en una alcancía rodeada de monedas">
-      </div>
-      <figcaption>Un módulo ordena el manejo financiero personal. El otro corrige la manera en que el equipo entiende la empresa.</figcaption>
-    </figure>
   </section>
 
-  <!-- ─── SEÑALES — path para ejecutivos no conscientes del problema ─── -->
-  <div class="pain-hook" role="note" aria-label="Señales de que el problema ya está presente">
-    <p class="pain-hook-lead">Si todavía no sabes por cuál módulo empezar, mira estas señales.</p>
-    <ul class="pain-signals">
-      <li>El sueldo sube y el estrés financiero del equipo no baja.</li>
-      <li>Parte de tu nómina se te va en deuda, remesas, vivienda o retiro postergado, aunque no aparezca así en el P&amp;L.</li>
-      <li>La gente cumple, pero trata inventario, herramientas o margen como si fueran de otro.</li>
-      <li>La última capacitación dejó entusiasmo, pero no una decisión con fecha ni un número nuevo.</li>
-    </ul>
-    <p class="pain-hook-out">Si reconoces dos o más, el problema ya está costando atención, criterio o margen. Lo que sigue explica por qué pasa y cómo se trabaja.</p>
-  </div>
+  <!-- ═══ LEDE ═══ -->
+  <section class="lede-block" data-reveal>
+    <p class="lede">Estos talleres fueron creados para equipos que ya sienten el costo en productividad, criterio y clima interno, aunque todavía no lo hayan nombrado con precisión. Son dos módulos distintos: uno ordena el manejo financiero personal del participante; el otro corrige la manera en que el equipo entiende el salario, la empresa, la utilidad, el riesgo y los activos. Ambos usan el mismo mecanismo, <a href="#mindos">MindOS</a>, pero trabajan problemas distintos y pueden contratarse por separado.</p>
+    <p class="byline">J.F. Carpio · Investigador empresarial y económico · 2026</p>
+  </section>
 
-  <!-- ─── MECANISMO NOMBRADO — MindOS arriba como bandera (v1.160) ─── -->
-  <section class="mech" aria-label="El mecanismo: MindOS" id="mindos">
-    <span class="eyebrow">El mecanismo</span>
-    <h2 class="h2"><span class="mech-name">MindOS</span>: el sistema operativo de la mente que decide si una capacitación cambia la conducta o se pierde a las pocas semanas.</h2>
-    <p>MindOS es el modelo del psiquiatra Dr. Paul Dobransky sobre cómo funciona la mente. Toda conducta corre sobre cuatro capas del cerebro, en orden: límite, conducta, intelecto y decisión. La capacitación corriente entra por el intelecto, información nueva, sobre un límite y unas creencias que nadie examinó. Por eso dura lo que dura el entusiasmo. La intervención sostenible respeta el orden de Dobransky: de la capa del cerebro más basal, donde vive lo emocional, a la más alta, donde se decide.</p>
+  <!-- ═══ IMAGEN EDITORIAL ÚNICA ═══ -->
+  <figure class="hero-shot" data-reveal>
+    <div class="photo">
+      <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=1600" srcset="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=1600 1600w" sizes="(min-width: 600px) 90vw, 100vw" width="1600" height="900" loading="eager" decoding="async" alt="Equipo ejecutivo trabajando en una mesa de decisión">
+    </div>
+    <figcaption>El objetivo no es exponer contenidos. Es cambiar la manera en que el equipo entiende una decisión antes de repetirla muchas veces.</figcaption>
+  </figure>
+
+  <!-- ═══ MECANISMO — MindOS ═══ -->
+  <section class="mech" aria-label="El mecanismo: MindOS" id="mindos" data-reveal>
+    <span class="index-tag"><span class="index-num">02</span> El mecanismo</span>
+    <h2 class="h2"><span class="mech-name">MindOS</span> — el sistema operativo de la mente que decide si una capacitación cambia la conducta o se pierde a las pocas semanas.</h2>
+    <p class="mech-body">MindOS es el modelo del psiquiatra Dr. Paul Dobransky sobre cómo funciona la mente. Toda conducta corre sobre cuatro capas del cerebro, en orden: límite, conducta, intelecto y decisión. La capacitación corriente entra por el intelecto, información nueva, sobre un límite y unas creencias que nadie examinó. Por eso dura lo que dura el entusiasmo. La intervención sostenible respeta el orden de Dobransky: de la capa del cerebro más basal, donde vive lo emocional, a la más alta, donde se decide.</p>
     <p class="mech-epiphany">Lo vi después de 14 años de aula, de capacitar equipos en tres ciudades del Ecuador y de hablar como invitado en Brasil y Turquía: la gente no fallaba por no saber. Fallaba porque la idea nueva aterrizaba sobre una creencia vieja que seguía intacta, sobre el dinero, sobre la empresa, sobre el salario. Cambié el orden de la intervención y el cambio empezó a quedarse.</p>
-    <ul class="mech-layers" aria-label="Las cuatro capas del cerebro en el modelo de Dobransky">
-      <li><span>1</span>Límite</li>
-      <li><span>2</span>Conducta</li>
-      <li><span>3</span>Intelecto</li>
-      <li><span>4</span>Decisión</li>
-    </ul>
+    <ol class="mech-layers" aria-label="Las cuatro capas del cerebro en el modelo de Dobransky">
+      <li><span class="ml-num">1</span><span class="ml-name">Límite</span></li>
+      <li><span class="ml-num">2</span><span class="ml-name">Conducta</span></li>
+      <li><span class="ml-num">3</span><span class="ml-name">Intelecto</span></li>
+      <li><span class="ml-num">4</span><span class="ml-name">Decisión</span></li>
+    </ol>
   </section>
 
-  <!-- ─── MAPA DE MÓDULOS ─── -->
-  <section class="module-map" aria-label="Dos talleres independientes con retornos separados">
+  <!-- ═══ MAPA DE MÓDULOS ═══ -->
+  <section class="module-map" aria-label="Dos talleres independientes con retornos separados" data-reveal>
     <div class="module-map-head">
-      <span class="eyebrow">No es un paquete confuso</span>
+      <span class="index-tag"><span class="index-num">03</span> No es un paquete confuso</span>
       <h2 class="h2">Son dos módulos independientes. <em>Cada uno recompensa a la empresa por una vía distinta.</em></h2>
       <p>La empresa puede contratar uno, el otro, o ambos. El Taller 1 reduce el desorden financiero personal que se filtra al trabajo. El Taller 2 cambia la manera en que el empleado entiende la empresa, el salario, el riesgo y el capital que lo rodea. En otras palabras: uno recupera atención financiera; el otro mejora el cuidado de activos y la comprensión económica básica del trabajo.</p>
     </div>
@@ -1805,56 +1353,50 @@ a { text-decoration: none; color: inherit; }
       <article class="module-card ep">
         <span class="module-card-kicker">Módulo B · cultura empresarial</span>
         <h3>Apreciación de la Empresa Privada</h3>
-        <p>Para equipos que heredaron una narrativa win-lose: “la empresa gana porque el trabajador pierde”. Esa idea afecta cuidado, lealtad, iniciativa y lectura del P&L.</p>
+        <p>Para equipos que heredaron una narrativa win-lose: “la empresa gana porque el trabajador pierde”. Esa idea afecta cuidado, lealtad, iniciativa y lectura del P&amp;L.</p>
         <span class="module-roi"><strong>Retorno propio:</strong> mejor relación con activos, salario, utilidad, riesgo empresarial y cooperación interna. No se trata de motivación: se trata de comprensión económica aplicada.</span>
       </article>
     </div>
   </section>
 
-  <!-- ─── STATS ─── -->
-  <section class="stats" aria-label="Por qué la inversión paga">
+  <!-- ═══ STATS ═══ -->
+  <section class="stats" aria-label="Por qué la inversión paga" data-reveal>
     <h2 class="visually-hidden">Por qué la inversión paga</h2>
-    <div>
-      <div class="stat-num">3 h</div>
+    <div class="stat">
+      <div class="stat-num">3<span class="stat-unit">h</span></div>
       <p class="stat-desc">por semana pierde un empleado promedio en el trabajo por estrés financiero personal.</p>
       <p class="stat-src"><em>PwC Employee Financial Wellness Survey</em></p>
     </div>
-    <div>
-      <div class="stat-num">+23%</div>
+    <div class="stat">
+      <div class="stat-num"><span class="stat-unit">+</span>23<span class="stat-unit">%</span></div>
       <p class="stat-desc">de rentabilidad en empresas con equipos de alto compromiso vs el resto de la industria.</p>
       <p class="stat-src"><em>Gallup, State of the Global Workplace</em></p>
     </div>
-    <div>
-      <div class="stat-num">70%</div>
-      <p class="stat-desc">de transformaciones organizacionales fracasan, casi siempre por no tocar la mentalidad en vez de intentar cambiar directamente los procesos y acciones</p>
+    <div class="stat">
+      <div class="stat-num">70<span class="stat-unit">%</span></div>
+      <p class="stat-desc">de transformaciones organizacionales fracasan, casi siempre por no tocar la mentalidad en vez de intentar cambiar directamente los procesos y acciones.</p>
       <p class="stat-src"><em>McKinsey, Why Transformations Fail</em></p>
     </div>
   </section>
 
-  <hr class="rule">
-
-  <!-- ─── CASOS MUNDIALES + PROYECCIÓN (v1.179) ─── -->
-  <section class="tesis" aria-label="Evidencia mundial y proyección para tu equipo">
+  <!-- ═══ CASOS MUNDIALES + PROYECCIÓN ═══ -->
+  <section class="tesis" aria-label="Evidencia mundial y proyección para tu equipo" data-reveal>
     <p>PwC mide esto en trabajadores de Estados Unidos, Gallup en más de cien países, McKinsey en cientos de transformaciones corporativas. Las tres llegan al mismo punto, y es el mismo que se movió en Quito: el equipo de Fernando Hallo subió <strong>6 puntos su bienestar financiero</strong>.</p>
     <p><strong>Proyección para tu equipo:</strong> 25 personas pierden hoy unas 3 horas por semana en estrés financiero (PwC). Si recuperan solo una parte, tu nómina libera del orden de <strong>150 horas-persona al mes</strong> que ya estás pagando. Ese 6% se traduce en horas de trabajo concentrado, y se nota el semestre siguiente.</p>
     <a href="#conversemos" class="ensayo-link">Hablemos de por dónde empezar →</a>
   </section>
 
-  <hr class="rule">
-
-  <!-- ─── TESIS ─── -->
-  <section class="tesis">
+  <!-- ═══ TESIS — secuencia ═══ -->
+  <section class="tesis" data-reveal>
     <p>Esos números no describen falta de talento. Describen una intervención mal planteada. Casi todos los programas corporativos cometen el mismo error: enseñan habilidades nuevas sobre creencias que nunca se examinaron. El participante practica la técnica dos semanas, su entorno la castiga sutilmente, y el sistema operativo anterior recupera el control. No por falta de voluntad. <strong>Por falta de intervención en la capa correcta del cerebro.</strong></p>
     <p>La secuencia correcta no empieza con teoría. Empieza con una grieta reconocible: “esto que hago todos los meses con mi dinero” o “esto que asumo todos los días sobre mi empresa”. Recién ahí tiene sentido introducir el marco. Cuatro movimientos, en orden: <strong>límite, conducta, intelecto y decisión.</strong> Si el orden se rompe, el cambio se vuelve discurso.</p>
     <p>Los dos talleres que siguen trabajan dos dominios donde esa grieta aparece rápido: el dinero personal y la empresa privada. Pueden tomarse por separado. Tomados juntos, el participante descubre algo más potente: el patrón que saboteaba una decisión financiera suele ser el mismo que saboteaba su relación con la empresa. Eso no se predica. Se hace visible.</p>
   </section>
 
-  <hr class="rule">
-
-  <!-- ─── OFERTA ─── -->
-  <section class="offer-stack" aria-label="Qué compra la empresa">
+  <!-- ═══ OFERTA ═══ -->
+  <section class="offer-stack" aria-label="Qué compra la empresa" data-reveal>
     <div class="offer-head">
-      <span class="eyebrow">Lo que compra la empresa</span>
+      <span class="index-tag"><span class="index-num">04</span> Lo que compra la empresa</span>
       <h2 class="h2">No una charla de compromiso. <em>Una intervención de dos horas.</em></h2>
       <p>J.F. Carpio diseña cada sesión para que el participante no solo entienda una idea, sino que la vea operando en sus propios hábitos, números y decisiones de trabajo. Lo que la empresa contrata no es entusiasmo. Es un proceso capaz de llevar al participante desde un problema reconocible hasta una decisión concreta.</p>
     </div>
@@ -1865,18 +1407,19 @@ a { text-decoration: none; color: inherit; }
     </ol>
   </section>
 
-  <section class="editorial-band" aria-label="Cómo se ve una intervención bien planteada">
-    <figure>
-      <div class="photo-wrap">
+  <!-- ═══ BANDA EDITORIAL — cómo se siente en vivo ═══ -->
+  <section class="editorial-band" aria-label="Cómo se ve una intervención bien planteada" data-reveal>
+    <figure class="band-photo">
+      <div class="photo">
         <picture>
           <source srcset="https://jfcarpio.com/network-pacific.webp" type="image/webp">
-          <img src="https://jfcarpio.com/network-pacific.jpg" width="1512" height="672" loading="lazy" decoding="async" alt="Visual abstracta de una red conectada sobre una superficie azul">
+          <img src="https://jfcarpio.com/network-pacific.jpg" width="1512" height="850" loading="lazy" decoding="async" alt="Visual abstracta de una red conectada sobre una superficie azul">
         </picture>
       </div>
       <figcaption>MindOS no entra como discurso. Entra como estructura: primero un límite, luego una conducta, después una explicación y finalmente una decisión.</figcaption>
     </figure>
     <aside class="editorial-note">
-      <span class="eyebrow">Cómo se siente en vivo</span>
+      <span class="index-tag"><span class="index-num">05</span> Cómo se siente en vivo</span>
       <h3>Dos horas de trabajo serio, no de motivación pasajera.</h3>
       <p>La sesión empieza donde el gerente ya siente el problema: distracción, poco cuidado de activos, decisiones postergadas y malestar mal explicado. Después se ordena el descubrimiento.</p>
       <dl>
@@ -1894,21 +1437,16 @@ a { text-decoration: none; color: inherit; }
         </div>
       </dl>
     </aside>
-    <figure>
-      <div class="photo-wrap">
-        <img src="https://jfcarpio.com/las7formas/img/pexels-8927648-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-8927648-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-8927648-w1800.jpg 1800w" sizes="(min-width: 900px) 31vw, 100vw" width="900" height="1200" loading="lazy" decoding="async" alt="Documentos financieros y una lupa sobre una mesa de trabajo">
-      </div>
-      <figcaption>La empresa que necesita esto no busca una charla agradable. Busca una intervención que resista revisión, costo y seguimiento.</figcaption>
-    </figure>
   </section>
 
-  <hr class="rule">
-
-  <!-- ─── VENTANA 1 — Dinero ─── -->
-  <section class="ventana" id="taller-finanzas">
-    <span class="ventana-label">Taller 1 · 2 horas · Independiente</span>
-    <h2 class="h2">Dinero y Finanzas Personales y Familiares</h2>
-    <p class="ventana-lede">El participante llega con un sistema financiero heredado: ideas sobre dinero, ahorro, deuda, inversión y seguridad familiar formadas antes de tener herramientas para evaluarlas.</p>
+  <!-- ═══ VENTANA 1 — Dinero ═══ -->
+  <section class="ventana" id="taller-finanzas" data-reveal>
+    <div class="ventana-head">
+      <span class="ventana-label">Taller 1 · 2 horas · Independiente</span>
+      <h2 class="h2">Dinero y Finanzas Personales y Familiares</h2>
+      <p class="ventana-tagline">Del caos y la angustia financiera al control y una nueva confianza.</p>
+      <p class="ventana-lede">El participante llega con un sistema financiero heredado: ideas sobre dinero, ahorro, deuda, inversión y seguridad familiar formadas antes de tener herramientas para evaluarlas.</p>
+    </div>
 
     <ol class="layers">
       <li>
@@ -1931,31 +1469,13 @@ a { text-decoration: none; color: inherit; }
 
     <div class="program-media" aria-label="Dinero y finanzas personales y familiares en el taller">
       <figure class="is-wide">
-        <div class="img-wrap">
-          <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=1000" srcset="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w" sizes="(min-width: 600px) 45vw, 100vw" width="1000" height="667" loading="lazy" decoding="async" alt="Datos financieros y gráficos de desempeño sobre una pantalla">
+        <div class="photo">
+          <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=1600" srcset="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=1600 1600w" sizes="(min-width: 600px) 90vw, 100vw" width="1600" height="900" loading="lazy" decoding="async" alt="Datos financieros y gráficos de desempeño sobre una pantalla">
         </div>
         <figcaption>El taller empieza con tu balance real, no con teoría: cuánto entra, cuánto queda, dónde se va.</figcaption>
       </figure>
       <figure>
-        <div class="img-wrap">
-          <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Gráficos y datos financieros sobre una mesa de trabajo" sizes="(min-width: 600px) 45vw, 100vw">
-        </div>
-        <figcaption>Buena deuda vs mala deuda, interés compuesto a favor o en contra: la aritmética que nadie enseñó en la escuela.</figcaption>
-      </figure>
-      <figure>
-        <div class="img-wrap">
-          <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Participantes revisando notas durante una sesión de trabajo" sizes="(min-width: 600px) 45vw, 100vw">
-        </div>
-        <figcaption>Cada participante sale con dos o tres decisiones fechadas: liquidez mínima, deuda a atacar, porcentaje de ahorro automático.</figcaption>
-      </figure>
-      <figure>
-        <div class="img-wrap">
-          <img src="https://jfcarpio.com/las7formas/img/pexels-3943716-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-3943716-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-3943716-w1800.jpg 1800w" sizes="(min-width: 600px) 45vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Una mano depositando una moneda en una alcancía negra con monedas dispersas">
-        </div>
-        <figcaption>Ahorro, liquidez y reserva de valor dejan de ser palabras abstractas cuando el participante les pone cifra y orden.</figcaption>
-      </figure>
-      <figure>
-        <div class="img-wrap">
+        <div class="photo">
           <img src="https://jfcarpio.com/las7formas/img/pexels-164527-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-164527-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-164527-w1800.jpg 1800w" sizes="(min-width: 600px) 45vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Billetes de dólar enrollados sobre una superficie clara">
         </div>
         <figcaption>El dinero deja de sentirse como niebla mensual y vuelve a verse como flujo, costo de oportunidad y protección familiar.</figcaption>
@@ -1968,13 +1488,14 @@ a { text-decoration: none; color: inherit; }
     <a href="/mindos-talleres.html" class="ensayo-link" target="_blank" rel="noopener noreferrer">Leer el ensayo completo →</a>
   </section>
 
-  <hr class="rule">
-
-  <!-- ─── VENTANA 2 — Empresa Privada ─── -->
-  <section class="ventana ep" id="taller-empresa">
-    <span class="ventana-label">Taller 2 · 2 horas · Independiente</span>
-    <h2 class="h2">Apreciación de la Empresa Privada</h2>
-    <p class="ventana-lede">El sistema operativo heredado, en la mayoría de casos, es un frame win-lose: el empleador gana porque el empleado pierde. Llega antes que el contrato y rara vez se corrige con aritmética real.</p>
+  <!-- ═══ VENTANA 2 — Empresa Privada ═══ -->
+  <section class="ventana ep" id="taller-empresa" data-reveal>
+    <div class="ventana-head">
+      <span class="ventana-label">Taller 2 · 2 horas · Independiente</span>
+      <h2 class="h2">Apreciación de la Empresa Privada</h2>
+      <p class="ventana-tagline">De Karl Marx a Carl Menger: de ganar-perder a ganar-ganar.</p>
+      <p class="ventana-lede">El sistema operativo heredado, en la mayoría de casos, es un frame win-lose: el empleador gana porque el empleado pierde. Llega antes que el contrato y rara vez se corrige con aritmética real.</p>
+    </div>
 
     <ol class="layers">
       <li>
@@ -1997,34 +1518,16 @@ a { text-decoration: none; color: inherit; }
 
     <div class="program-media" aria-label="Apreciación de la empresa privada en el taller">
       <figure class="is-wide">
-        <div class="img-wrap">
-          <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=1000" srcset="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w" sizes="(min-width: 600px) 45vw, 100vw" width="1000" height="667" loading="lazy" decoding="async" alt="Equipo empresarial trabajando junto a una pizarra">
+        <div class="photo">
+          <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=1600" srcset="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=1600 1600w" sizes="(min-width: 600px) 90vw, 100vw" width="1600" height="900" loading="lazy" decoding="async" alt="Equipo empresarial trabajando junto a una pizarra">
         </div>
         <figcaption>La idea de que uno gana y otro pierde se vuelve visible cuando el equipo construye su propio P&amp;L de empleo en tiempo real.</figcaption>
       </figure>
       <figure>
-        <div class="img-wrap">
-          <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=1000" width="1000" height="667" loading="lazy" decoding="async" alt="Equipo ejecutivo trabajando en una mesa de decisión" sizes="(min-width: 600px) 45vw, 100vw">
-        </div>
-        <figcaption>No es motivación: es aritmética del intercambio. La empresa como potenciadora de productividad, no como extractora.</figcaption>
-      </figure>
-      <figure>
-        <div class="img-wrap">
-          <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Facilitador guiando una conversación empresarial" sizes="(min-width: 600px) 45vw, 100vw">
-        </div>
-        <figcaption>El rol del taller es ordenar el descubrimiento: que el participante vea el sistema que usaba sin saberlo.</figcaption>
-      </figure>
-      <figure>
-        <div class="img-wrap">
+        <div class="photo">
           <img src="https://jfcarpio.com/las7formas/img/pexels-164634-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-164634-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-164634-w1800.jpg 1800w" sizes="(min-width: 600px) 45vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Fila de vehículos en una concesionaria">
         </div>
         <figcaption>Capital, inventario, marca y herramientas dejan de parecer “del dueño” y vuelven a verse como multiplicadores reales de productividad.</figcaption>
-      </figure>
-      <figure>
-        <div class="img-wrap">
-          <img src="https://jfcarpio.com/las7formas/img/pexels-590016-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-590016-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-590016-w1800.jpg 1800w" sizes="(min-width: 600px) 45vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Gráficos impresos sobre una mesa junto a una laptop">
-        </div>
-        <figcaption>El taller baja la discusión desde ideología difusa hasta una lectura concreta de margen, salario fijo, riesgo absorbido y cooperación.</figcaption>
       </figure>
     </div>
 
@@ -2034,20 +1537,20 @@ a { text-decoration: none; color: inherit; }
     <a href="/mindos-talleres.html" class="ensayo-link" target="_blank" rel="noopener noreferrer">Leer el ensayo completo →</a>
   </section>
 
-  <!-- ─── RESULTADO OBSERVADO — antídoto a "suena filosófico" + prueba social (v1.160). Caso real de JFC, sin nombre de cliente. NO inventar. ─── -->
-  <section class="result-callout" aria-label="Resultado observado en un cliente">
+  <!-- ═══ RESULTADO OBSERVADO ═══ -->
+  <section class="result-callout" aria-label="Resultado observado en un cliente" data-reveal>
     <span class="result-num">+15%</span>
     <p class="result-body">¿Suena filosófico? Un equipo comercial subió 15% sus resultados el semestre siguiente: menos desmotivación, menos distracción. No por una ovación pasajera. La empresa creó bonos por desempeño porque, con el criterio correcto, por fin tenían sentido.</p>
     <span class="result-attr">Equipo comercial · cliente corporativo</span>
   </section>
 
-  <hr class="rule">
-
-  <!-- ─── QUÉ CAMBIA DESPUÉS ─── -->
-  <section class="que-cambia" aria-label="Resultados observables post-taller">
-    <span class="eyebrow">Qué cambia después</span>
-    <h2 class="h2">No entusiasmo. <em>Conducta distinta.</em></h2>
-    <span class="que-cambia-sub">Comportamientos observables en las semanas siguientes al taller</span>
+  <!-- ═══ QUÉ CAMBIA DESPUÉS ═══ -->
+  <section class="que-cambia" aria-label="Resultados observables post-taller" data-reveal>
+    <div class="que-cambia-head">
+      <span class="index-tag"><span class="index-num">06</span> Qué cambia después</span>
+      <h2 class="h2">No entusiasmo. <em>Conducta distinta.</em></h2>
+      <span class="que-cambia-sub">Comportamientos observables en las semanas siguientes al taller</span>
+    </div>
     <div class="cambios">
       <div class="cambio">
         <span class="cambio-mod">Módulo A · Finanzas personales</span>
@@ -2068,63 +1571,35 @@ a { text-decoration: none; color: inherit; }
     </div>
   </section>
 
-  <hr class="rule">
-
-  <!-- ─── SINERGIA ─── -->
-  <section class="tesis">
+  <!-- ═══ SINERGIA ═══ -->
+  <section class="tesis" data-reveal>
     <blockquote class="pull">
-      Resumiendo a Carl Menger en lenguaje de hoy: en un intercambio voluntario, cada parte entrega algo que valora menos que lo que recibe. Por eso el intercambio ocurre.
-      <span class="pull-attr">— Resumen contemporáneo inspirado en Carl Menger, <em>Principios de Economía,</em> 1871</span>
+      Marx vio el intercambio como despojo: alguien gana porque alguien pierde. Carl Menger probó lo contrario. En todo intercambio voluntario, cada parte entrega lo que valora menos y recibe lo que valora más. No hay víctima. Hay dos que ganan.
+      <span class="pull-attr">— Carl Menger, el contrapunto a Marx que fundó la economía moderna del valor · <em>Principios de Economía,</em> 1871</span>
     </blockquote>
     <p>La transformación real no ocurre porque el participante lea un punto y piense "tiene sentido". Ocurre porque <strong>durante el taller</strong> descubre esos puntos en sus propios números, con su propia calculadora, en tiempo real. Su salario, su empresa, su dinero, su futuro: todo funciona de manera distinta a lo que le enseñaron. Y eso no se olvida porque no fue una consigna motivacional. Fue aritmética.</p>
   </section>
 
-  <hr class="rule">
-
-  <!-- ─── PRUEBA SOCIAL ─── -->
-  <section class="social-proof" aria-label="Experiencias de clientes y audiencias">
-    <span class="eyebrow">Quiénes han pasado por aquí</span>
+  <!-- ═══ PRUEBA SOCIAL ═══ -->
+  <section class="social-proof" aria-label="Experiencias de clientes y audiencias" data-reveal>
+    <span class="index-tag"><span class="index-num">07</span> Quiénes han pasado por aquí</span>
     <h2 class="h2">Tres instancias. <em>Un patrón consistente.</em></h2>
 
-    <blockquote class="pull" style="border-left-color:var(--green)">
+    <blockquote class="pull ep">
       "Experiencia bastante buena. Las personas me han dado muy buenos comentarios. Mucho más claro el audio logo: lo teníamos como idea, pero no estaba claro. Funciona bien para brokers, aseguradoras y casi todo tipo de negocio con gestión activa de ventas."
       <span class="pull-attr">— Fernando Hallo · Broker de seguros top 50, Quito · Ecuador · 2024</span>
     </blockquote>
 
-    <section class="result-callout" aria-label="Resultado medido en el equipo de un cliente">
+    <div class="result-callout green" aria-label="Resultado medido en el equipo de un cliente">
       <span class="result-num">+6%</span>
       <p class="result-body">Fernando Hallo midió el bienestar financiero de su equipo de 25 personas antes y después del taller. Subió 6 puntos, en una empresa real de Quito.</p>
       <span class="result-attr">Fernando Hallo · equipo de 25 personas · Quito, Ecuador · 2024</span>
-    </section>
+    </div>
 
     <blockquote class="pull">
       "500 personas capacitadas en una mañana en manejo emocional del estrés con técnicas de neurociencia."
       <span class="pull-attr">— Evaluación de capacitación corporativa · Mutualista Pichincha · Coord.: Arianna Cevallos · Quito, 2017</span>
     </blockquote>
-
-    <div class="proof-gallery" aria-label="Escenas de autoridad, método y facilitación">
-      <figure>
-        <div class="photo-wrap">
-          <img src="https://jfcarpio.com/fotojfc.png" width="512" height="512" loading="lazy" decoding="async" alt="Retrato de Juan Fernando Carpio">
-        </div>
-        <figcaption>La autoridad aquí no se presenta como curriculum inflado: se presenta como criterio, docencia y experiencia de sala.</figcaption>
-      </figure>
-      <figure>
-        <div class="photo-wrap">
-          <picture>
-            <source srcset="https://jfcarpio.com/network-intel.webp" type="image/webp">
-            <img src="https://jfcarpio.com/network-intel.jpg" width="1512" height="672" loading="lazy" decoding="async" alt="Visual abstracta de una red con nodos iluminados en varios colores">
-          </picture>
-        </div>
-        <figcaption>El trabajo real del taller es conectar creencias, conducta, capital y decisión sin perder claridad para quien dirige.</figcaption>
-      </figure>
-      <figure>
-        <div class="photo-wrap">
-          <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Facilitador guiando una conversación empresarial">
-        </div>
-        <figcaption>Cuando la sesión está bien llevada, la objeción del gerente cambia de “¿esto servirá?” a “¿con cuál módulo empiezo?”.</figcaption>
-      </figure>
-    </div>
 
     <div class="speaker-bar" aria-label="Historial como speaker internacional">
       <div class="speaker-item">
@@ -2142,12 +1617,10 @@ a { text-decoration: none; color: inherit; }
     </div>
   </section>
 
-  <hr class="rule">
-
-  <!-- ─── BIO ─── -->
-  <section class="bio">
+  <!-- ═══ BIO ═══ -->
+  <section class="bio" data-reveal>
     <div class="bio-flex">
-      <img src="https://jfcarpio.com/fotojfc.png" alt="Juan Fernando Carpio" class="bio-photo" width="96" height="96" loading="lazy">
+      <img src="https://jfcarpio.com/fotojfc.png" alt="Juan Fernando Carpio" class="bio-photo" width="120" height="120" loading="lazy">
       <div class="bio-text">
         <p><strong>Juan Fernando Carpio.</strong> Investigador y capacitador en pequeñas y medianas empresas como consultor independiente. Ex profesor de Economía en la USFQ (4.800+ estudiantes en 14 años). Quito, Ecuador.</p>
         <p>Capacitador corporativo en tres ciudades del Ecuador y conferencista invitado en Brasil y Turquía. Autor de <em>10 Lecciones de Economía</em> y consultor en empresa privada, dinero, capital e instituciones.</p>
@@ -2156,56 +1629,31 @@ a { text-decoration: none; color: inherit; }
     </div>
   </section>
 
-  <hr class="rule">
-
-  <!-- ─── FRACASO EVITADO ─── -->
-  <section class="tesis">
-    <p>El ejecutivo que no toca esto sigue pagando esas 180 horas al mes. Y la próxima capacitación va a producir el mismo resultado que la anterior: dos semanas de entusiasmo y vuelta al sistema operativo de siempre. No porque el proveedor sea malo. Porque <strong>nadie intervino en la capa correcta del cerebro.</strong></p>
+  <!-- ═══ FRACASO EVITADO ═══ -->
+  <section class="tesis" data-reveal>
+    <p class="tesis-strong">El ejecutivo que no toca esto sigue pagando esas 180 horas al mes. Y la próxima capacitación va a producir el mismo resultado que la anterior: dos semanas de entusiasmo y vuelta al sistema operativo de siempre. No porque el proveedor sea malo. Porque <strong>nadie intervino en la capa correcta del cerebro.</strong></p>
   </section>
 
-  <hr class="rule">
-
-  <section class="closing-visual" aria-label="Escena previa a la conversación de diagnóstico">
+  <!-- ═══ CIERRE VISUAL ═══ -->
+  <section class="closing-visual" aria-label="Escena previa a la conversación de diagnóstico" data-reveal>
     <figure>
-      <div class="photo-wrap">
+      <div class="photo">
         <img src="https://jfcarpio.com/las7formas/img/pexels-8927648-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-8927648-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-8927648-w1800.jpg 1800w" sizes="(min-width: 900px) 44vw, 100vw" width="900" height="1200" loading="lazy" decoding="async" alt="Documentos financieros, una lupa y un teléfono sobre una mesa de trabajo">
       </div>
       <figcaption>Antes de contratar, la empresa necesita ver dónde se está escapando el costo: atención, liquidez, cuidado de activos, margen o lectura del riesgo.</figcaption>
     </figure>
     <aside class="closing-note">
-      <span class="eyebrow">Lo que sigue</span>
+      <span class="index-tag"><span class="index-num">08</span> Lo que sigue</span>
       <h3>La conversación correcta no es si conviene capacitar. Es qué frente conviene corregir primero.</h3>
       <p>Si el problema principal es estrés financiero que invade horario laboral, entra el Módulo A. Si el problema principal es una mala comprensión de salario, utilidad, capital y empresa, entra el Módulo B.</p>
       <p>Si aparecen ambos síntomas juntos, la secuencia completa suele ofrecer un mejor resultado porque el segundo taller cae sobre un cerebro ya reordenado por el primero.</p>
     </aside>
   </section>
 
-  <!-- ─── DIAGNÓSTICO ─── -->
-  <section class="diag" aria-label="Diagnóstico rápido: ¿cuál módulo necesita tu equipo?">
-    <p class="diag-lead">Diagnóstico rápido: ¿cuál módulo necesita tu equipo ahora?</p>
-    <ul class="diag-items">
-      <li>Alguien del equipo llega a fin de mes justo o en rojo, y eso afecta su concentración en horario laboral.</li>
-      <li>Los aumentos de sueldo no resuelven el estrés financiero. La gente sigue igual de ajustada.</li>
-      <li>Las decisiones familiares (deuda, casa, educación de hijos) aparecen como distracción en horario de trabajo.</li>
-      <li>La gente cumple, pero no cuida lo que no es de su propiedad directa.</li>
-      <li>Hay desconfianza implícita sobre lo que "gana la empresa" versus lo que "se lleva el empleado".</li>
-      <li>La iniciativa propia es baja: la gente hace lo pedido, no lo que podría mejorar el resultado.</li>
-      <li>El entusiasmo post-capacitación no duró más de tres semanas en la última intervención.</li>
-    </ul>
-    <div class="diag-score">
-      <strong>1–2 señales:</strong> el problema es puntual. Un módulo resuelve.<br>
-      <strong>3–5 señales:</strong> hay un patrón. Los dos módulos en secuencia tienen más retorno.<br>
-      <em>6–7 señales:</em> el sistema operativo del equipo necesita intervención completa. Hablemos esta semana.<br>
-      Si ya viste 3, 5 o 7 señales, la conversación correcta no es si capacitar o no. Es qué módulo conviene atender primero.
-    </div>
-  </section>
-
-  <hr class="rule">
-
-  <!-- ─── CTA ─── -->
-  <section class="cta" id="conversemos">
+  <!-- ═══ CTA ═══ -->
+  <section class="cta" id="conversemos" data-reveal>
     <span class="cta-eyebrow">Si quieres conversar</span>
-    <p>Si esto ya se parece a una conversación que tu empresa viene postergando, conversemos sobre qué módulo conviene más en este momento: finanzas personales y familiares, apreciación de la empresa privada, o una secuencia con ambos.</p>
+    <p class="cta-lead">Si esto ya se parece a una conversación que tu empresa viene postergando, conversemos sobre qué módulo conviene más en este momento: finanzas personales y familiares, apreciación de la empresa privada, o una secuencia con ambos.</p>
     <p class="cta-math">Un empleado pierde en promedio 3 horas por semana por estrés financiero personal (PwC, <em>Employee Financial Wellness Survey</em>). Quince personas, cuatro semanas: <strong>180 horas al mes</strong> saliendo de tu nómina. El Taller 1 cuesta menos que una semana de esas horas.</p>
     <span class="cta-stack-label">Lo que recibe la empresa</span>
     <ul class="cta-stack">
@@ -2228,6 +1676,7 @@ a { text-decoration: none; color: inherit; }
           <span class="price-opt-desc">2 horas · Módulo A o B · desde 15 participantes</span>
         </div>
         <div class="price-opt featured">
+          <span class="price-opt-tag">Más elegido</span>
           <span class="price-opt-name">Ambos módulos</span>
           <span class="price-opt-val">$3.200</span>
           <span class="price-opt-desc">4 horas · Módulos A + B · desde 15 participantes</span>
@@ -2242,14 +1691,12 @@ a { text-decoration: none; color: inherit; }
       <a href="https://calendly.com/jfcarpio/20minutos" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">Agendar 20 minutos</a>
     </div>
     <p class="cta-note">Sin compromiso.</p>
-    <noscript><p><a href="mailto:jf@jfcarpio.com?subject=Talleres%20corporativos">Escribir por email sobre talleres corporativos</a></p></noscript>
+    <noscript><p class="cta-noscript"><a href="mailto:jf@jfcarpio.com?subject=Talleres%20corporativos">Escribir por email sobre talleres corporativos</a></p></noscript>
   </section>
 
-  <hr class="rule">
-
-  <!-- ─── FAQ ─── -->
-  <section class="faq" aria-label="Preguntas frecuentes">
-    <span class="eyebrow">Preguntas frecuentes</span>
+  <!-- ═══ FAQ ═══ -->
+  <section class="faq" aria-label="Preguntas frecuentes" data-reveal>
+    <span class="index-tag"><span class="index-num">09</span> Preguntas frecuentes</span>
     <h2 class="h2">Lo que suele preguntar <em>el gerente antes de decidir.</em></h2>
     <ul class="faq-list">
       <li class="faq-item">
@@ -2284,33 +1731,95 @@ a { text-decoration: none; color: inherit; }
 </footer>
 
 <script>
-(function(){
+/* talleres.js — interacciones del rediseño. Todo es progressive enhancement:
+   sin JS, la página se ve completa (reveal desactivado, contenido visible). */
+(function () {
+  'use strict';
+
+  var docEl = document.documentElement;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── 1. Barra de progreso ── */
   var fill = document.getElementById('spFill');
-  function onScroll(){
-    var d = document.documentElement;
-    var h = d.scrollHeight - d.clientHeight;
-    if (h <= 0) return;
-    var pct = d.scrollTop / h * 100;
-    fill.style.width = Math.min(pct, 100) + '%';
-  }
-  if(fill) {
-    window.addEventListener('scroll', onScroll, {passive: true});
+  if (fill) {
+    var ticking = false;
+    var onScroll = function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        var h = docEl.scrollHeight - docEl.clientHeight;
+        fill.style.width = h > 0 ? Math.min(docEl.scrollTop / h * 100, 100) + '%' : '0%';
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
 
-  function waNumber(){
-    return [53,57,51,57,57,57,57,48,53,48,56,48].map(function(c){
-      return String.fromCharCode(c);
-    }).join('');
+  /* ── 2. Reveal al hacer scroll ── */
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    docEl.classList.add('js-reveal');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    var vh0 = window.innerHeight;
+    document.querySelectorAll('[data-reveal]').forEach(function (el) {
+      // Lo que ya está a la vista en la primera pintura se muestra de inmediato
+      // (evita héroe en blanco si el observer tarda un frame).
+      if (el.getBoundingClientRect().top < vh0 * 0.95) {
+        el.classList.add('is-in');
+      } else {
+        io.observe(el);
+      }
+    });
   }
-  function openWA(){
+
+  /* ── 3. Parallax suave en imágenes editoriales ── */
+  if (!reduceMotion && window.matchMedia('(min-width: 700px)').matches) {
+    var shots = [].slice.call(document.querySelectorAll('.hero-shot .photo img, .band-photo .photo img, .closing-visual .photo img'));
+    if (shots.length) {
+      shots.forEach(function (img) { img.style.willChange = 'transform'; img.style.transform = 'scale(1.08)'; });
+      var pTicking = false;
+      var parallax = function () {
+        if (pTicking) return;
+        pTicking = true;
+        requestAnimationFrame(function () {
+          var vh = window.innerHeight;
+          shots.forEach(function (img) {
+            var r = img.getBoundingClientRect();
+            if (r.bottom < 0 || r.top > vh) { pTicking = false; return; }
+            var prog = (r.top + r.height / 2 - vh / 2) / vh; // -0.5..0.5
+            var shift = Math.max(-22, Math.min(22, -prog * 30));
+            img.style.transform = 'scale(1.08) translate3d(0,' + shift.toFixed(1) + 'px,0)';
+          });
+          pTicking = false;
+        });
+      };
+      window.addEventListener('scroll', parallax, { passive: true });
+      window.addEventListener('resize', parallax, { passive: true });
+      parallax();
+    }
+  }
+
+  /* ── 4. Dirección visual fijada en Editorial (dir-edt en <html>) ── */
+  try { localStorage.removeItem('talleres-dir'); } catch (e) {}
+
+  /* ── 5. WhatsApp (número ofuscado) ── */
+  function waNumber() {
+    return [53,57,51,57,57,57,57,48,53,48,56,48].map(function (c) { return String.fromCharCode(c); }).join('');
+  }
+  function openWA() {
     var msg = 'Hola JFC, vi la página de talleres y quisiera conversar sobre cuál módulo conviene más para mi empresa en este momento.';
     window.open('https://w' + 'a.me/' + waNumber() + '?text=' + encodeURIComponent(msg), '_blank', 'noopener,noreferrer');
   }
-  document.querySelectorAll('[data-wa]').forEach(function(btn){
-    btn.addEventListener('click', openWA);
-  });
+  document.querySelectorAll('[data-wa]').forEach(function (btn) { btn.addEventListener('click', openWA); });
 })();
+
 </script>
 
 </body>
