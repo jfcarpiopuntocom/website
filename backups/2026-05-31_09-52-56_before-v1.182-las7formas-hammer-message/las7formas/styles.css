@@ -1,5 +1,5 @@
 /* ============================================================
-   7 formas — La Escuela del Dinero · v1.182 · 2026-05-31
+   7 formas — La Escuela del Dinero · v1.181 · 2026-05-30
    Editorial confessional · cream, ink, oxblood
    Mobile-first, forces light, Safari-safe
    ============================================================ */
@@ -325,7 +325,6 @@ main:focus {
 }
 
 .hero__summary {
-  list-style: none;
   max-width: 720px;
   margin-top: 16px;
   padding: 18px 20px;
@@ -334,7 +333,7 @@ main:focus {
   display: grid;
   gap: 10px;
 }
-.hero__summary li {
+.hero__summary p {
   margin: 0;
   font-family: var(--sans);
   font-size: clamp(14px, 1.9vw, 15px);
@@ -1178,17 +1177,6 @@ main:focus {
 }
 .ticket::before { left: 14px; }
 .ticket::after { right: 14px; }
-
-.closing__nudge {
-  max-width: 720px;
-  margin: 0 auto clamp(22px, 4vw, 34px);
-  font-family: var(--display);
-  font-style: italic;
-  font-size: clamp(20px, 2.8vw, 28px);
-  line-height: 1.35;
-  text-align: center;
-  color: var(--paper);
-}
 
 .ticket__top {
   display: flex; justify-content: space-between;
@@ -2219,7 +2207,7 @@ main:focus {
   -webkit-text-fill-color: #36302a;
   min-height: 44px;
 }
-.forma-check {
+.fuga-check {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
@@ -2548,7 +2536,7 @@ main:focus {
   .testim__lead,
   .hero__plan li,
   .hero__proof p,
-  .hero__summary li,
+  .hero__summary p,
   .ticket__ready p,
   .ticket__decision li,
   .testim__disclaimer,

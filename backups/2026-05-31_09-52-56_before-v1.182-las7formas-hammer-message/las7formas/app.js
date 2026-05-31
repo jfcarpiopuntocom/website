@@ -82,7 +82,7 @@
   }
 
   // ----- Quiz score (v1.156) -----
-  var formaChecks = document.querySelectorAll('.forma-check');
+  var fugaChecks = document.querySelectorAll('.fuga-check');
   var quizCount = document.querySelector('.quiz__count');
   var quizResult = document.querySelector('.quiz__result');
   var quizVerdict = document.querySelector('.quiz__verdict');
@@ -90,16 +90,16 @@
     0: 'Cero marcadas significa o que ya cerraste las 7, o que aún no las nombraste. Lee el catálogo abajo: vas a reconocer al menos dos antes de llegar a la mitad.',
     1: 'Una basta para perder años. Cerrarla cambia el siguiente sueldo.',
     2: 'Dos al mismo tiempo es el patrón más común. El método las cierra en paralelo.',
-    3: 'Eres el lector exacto para el curso. Tres de las 7 formas de destruir tus finanzas personales y familiares ya son punto de inflexión: cada mes que siguen activas, sale dinero por tres lados a la vez.',
+    3: 'Eres el lector exacto para el curso. Tres fugas activas son el punto de inflexión: cada mes que siguen abiertas, sale dinero por tres lados a la vez.',
     4: 'Cuatro. Tu sueldo está saliendo por cuatro grietas distintas. Cada nómina que entra repite el mismo circuito.',
     5: 'Cinco. La buena noticia: las cinco se cierran con el mismo marco. Pero cada mes que pasa es otro mes operando con las cinco abiertas.',
     6: 'Seis de siete. No es disciplina lo que te falta, es el sistema. Cada quincena cuenta.',
-    7: 'Las siete. Honestidad poco común. Empieza por el video 1 y corrige una de las 7 formas por semana.'
+    7: 'Las siete. Honestidad poco común. Empieza por el video 1 y avanza una fuga por semana.'
   };
-  if (formaChecks.length && quizCount && quizResult && quizVerdict) {
-    formaChecks.forEach(function (cb) {
+  if (fugaChecks.length && quizCount && quizResult && quizVerdict) {
+    fugaChecks.forEach(function (cb) {
       cb.addEventListener('change', function () {
-        var c = document.querySelectorAll('.forma-check:checked').length;
+        var c = document.querySelectorAll('.fuga-check:checked').length;
         quizCount.textContent = c;
         quizResult.setAttribute('data-score', c);
         quizVerdict.textContent = verdicts[c];
