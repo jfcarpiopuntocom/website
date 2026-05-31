@@ -136,7 +136,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.190 (tighten manifesto column flow) · Last major refactor: 2026-05-31 · Author: JFC + Codex
+  v1.189 (helpful private-client positioning) · Last major refactor: 2026-05-31 · Author: JFC + Codex
   WHITE E enhancements: added mix-blend-mode:screen to background images for
   beautiful, visible photography against white background (no more dingy appearance).
 ================================================================================
@@ -2490,12 +2490,6 @@ button { border:none; background:none; font:inherit; }
   gap:18px 58px !important;
   align-items:start !important;
 }
-.copy-body {
-  grid-column:2 !important;
-  display:flex !important;
-  flex-direction:column !important;
-  gap:20px !important;
-}
 .copy-text .copy-p {
   font-size:clamp(1.02rem,1.2vw,1.16rem) !important;
   line-height:1.72 !important;
@@ -2503,14 +2497,21 @@ button { border:none; background:none; font:inherit; }
   color:#000000 !important;
 }
 .copy-text .copy-p[data-t="cp1"] {
-  grid-column:1 !important;
-  grid-row:1 !important;
+  grid-row:1 / span 6 !important;
   font-size:clamp(2rem,4.4vw,4.4rem) !important;
   line-height:1.02 !important;
   font-weight:700 !important;
   letter-spacing:0 !important;
   padding-left:24px !important;
   border-left:5px solid #E86040 !important;
+}
+.copy-text .copy-p[data-t="cp_or"],
+.copy-text .copy-p[data-t="cp2"],
+.copy-text .copy-p[data-t="cp3b"],
+.copy-text .copy-p[data-t="cp4"],
+.copy-text .copy-p[data-t="cp5"],
+.copy-byline {
+  grid-column:2 !important;
 }
 .copy-byline {
   margin-top:12px !important;
@@ -2550,7 +2551,13 @@ button { border:none; background:none; font:inherit; }
   .copy-text {
     gap:20px !important;
   }
-  .copy-body {
+  .copy-text .copy-p[data-t="cp1"],
+  .copy-text .copy-p[data-t="cp_or"],
+  .copy-text .copy-p[data-t="cp2"],
+  .copy-text .copy-p[data-t="cp3b"],
+  .copy-text .copy-p[data-t="cp4"],
+  .copy-text .copy-p[data-t="cp5"],
+  .copy-byline {
     grid-column:1 !important;
   }
   .copy-text .copy-p[data-t="cp1"] {
@@ -2888,7 +2895,6 @@ button { border:none; background:none; font:inherit; }
 <div class="copy-section">
   <div class="copy-text reveal in">
     <p class="copy-p" data-t="cp1">Escribo desde Ecuador, un país donde la moneda ya fue destruida una vez y donde la estabilidad nunca se debe dar por sentada.</p>
-    <div class="copy-body">
     <p class="copy-p" data-t="cp_or">He tenido la rara fortuna profesional de observar el mismo patrón en entornos muy distintos: familias que intentan conservar lo que ganan, empresas que pelean contra reglas móviles, mercados con crédito caro y países donde la inflación destruye poder adquisitivo sin hacer ruido.</p>
     <p class="copy-p" data-t="cp2">La lección no es dramática; es práctica. El patrimonio se protege antes de que el golpe sea obvio: leyendo moneda, caja, incentivos, regulación y señales del entorno con suficiente anticipación.</p>
     <p class="copy-p" data-t="cp3b">Después de dos décadas entre consultoría, docencia universitaria, investigación y empresa privada, la conclusión es sobria: familias y organizaciones pierden mucho cuando interpretan tarde señales que ya estaban sobre la mesa.</p>
@@ -2897,7 +2903,6 @@ button { border:none; background:none; font:inherit; }
     <p class="copy-byline">
       <strong>J. F. Carpio</strong> — <span data-t="byline">Patrimonio, instituciones y empresa privada</span>
     </p>
-    </div>
   </div>
 </div>
 
