@@ -1,5 +1,5 @@
 /* ============================================================
-   7 formas — La Escuela del Dinero · v1.189 · 2026-05-31
+   7 formas — La Escuela del Dinero · v1.188 · 2026-05-31
    Editorial confessional · cream, ink, oxblood
    Mobile-first, forces light, Safari-safe
    ============================================================ */
@@ -540,6 +540,17 @@ main:focus {
   font-size: clamp(15px, 1.9vw, 17px);
   line-height: 1.65;
   color: var(--ink-soft);
+}
+.world__bridge {
+  max-width: 780px;
+  margin: clamp(30px, 5vw, 48px) 0 0 auto;
+  padding-left: 24px;
+  border-left: 2px solid var(--oxblood);
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(24px, 3.5vw, 40px);
+  line-height: 1.08;
+  color: var(--ink);
 }
 @media (min-width: 760px) {
   .world-grid { grid-template-columns: repeat(2, 1fr); }
@@ -2135,6 +2146,28 @@ main:focus {
    distinct rendering edge case. See feedback_ios_safari_whatsapp_legibility.md.
    ============================================================ */
 
+/* v1.158 — Schwartz bridge ("hay un sistema") */
+.bridge {
+  max-width: var(--col-max);
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 48px) clamp(20px, 5vw, 32px);
+  text-align: center;
+}
+.bridge__line {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(18px, 2.7vw, 22px);
+  line-height: 1.5;
+  color: #36302a;
+  color: var(--ink-soft);
+  -webkit-text-fill-color: #36302a;
+}
+.bridge__line em {
+  font-style: italic;
+  color: #7a1f1a;
+  -webkit-text-fill-color: #7a1f1a;
+}
+
 /* v1.156 — Quiz de auto-identificación */
 .section--quiz { background: var(--paper-deep); }
 .quiz__fieldset {
@@ -2512,6 +2545,7 @@ main:focus {
   .transform__cost,
   .freestep__body,
   .price-reality__stack li,
+  .bridge__line,
   .quiz__list label,
   .quiz__result,
   .quiz__verdict,
@@ -2537,6 +2571,7 @@ main:focus {
   .testim__result,
   .freestep__body strong,
   .price-reality__stack li strong,
+  .bridge__line em,
   .quiz__count,
   .forme__col--yes .forme__h,
   .notrequire strong,
