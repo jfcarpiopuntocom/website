@@ -1,5 +1,5 @@
 /* ============================================================
-   7 formas — La Escuela del Dinero · v1.191 · 2026-05-31
+   7 formas — La Escuela del Dinero · v1.190 · 2026-05-31
    Editorial confessional · cream, ink, oxblood
    Mobile-first, forces light, Safari-safe
    ============================================================ */
@@ -23,16 +23,16 @@
   --mono:  "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
   /* Density variables — overridden by [data-density] on <html> */
-  --d-section-pad: clamp(34px, 5.5vw, 72px);
-  --d-stack:       clamp(14px, 2.5vw, 24px);
-  --d-line:        1.62;
+  --d-section-pad: clamp(56px, 9vw, 120px);
+  --d-stack:       clamp(20px, 3.4vw, 32px);
+  --d-line:        1.7;
 
   --col-max: 720px;
   --col-wide: 1100px;
 }
 
-html[data-density="compact"]      { --d-section-pad: clamp(28px, 4.5vw, 58px); --d-stack: clamp(12px, 2vw, 18px); --d-line: 1.5; }
-html[data-density="spacious"]     { --d-section-pad: clamp(52px, 8vw, 104px); --d-stack: clamp(22px, 3.5vw, 34px); --d-line: 1.74; }
+html[data-density="compact"]      { --d-section-pad: clamp(40px, 7vw, 88px);  --d-stack: clamp(14px, 2.6vw, 22px); --d-line: 1.55; }
+html[data-density="spacious"]     { --d-section-pad: clamp(80px, 13vw, 160px); --d-stack: clamp(28px, 4.5vw, 44px); --d-line: 1.85; }
 
 /* Force light scheme even on dark-mode devices */
 html { color-scheme: light; }
@@ -177,7 +177,7 @@ main:focus {
 /* ============================ HERO ============================ */
 .hero {
   position: relative;
-  padding: clamp(34px, 6vw, 78px) 22px clamp(26px, 4vw, 48px);
+  padding: clamp(48px, 9vw, 120px) 22px clamp(36px, 6vw, 72px);
   max-width: var(--col-wide);
   margin: 0 auto;
   text-align: left;
@@ -193,7 +193,7 @@ main:focus {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--oxblood);
-  margin-bottom: clamp(18px, 3vw, 28px);
+  margin-bottom: clamp(28px, 5vw, 44px);
 }
 .hero__kicker .rule { flex: 1; height: 1px; background: currentColor; opacity: 0.5; max-width: 60px; }
 .hero__kicker .rule:last-child { display: none; }
@@ -205,7 +205,7 @@ main:focus {
   font-size: clamp(50px, 10vw, 116px);
   line-height: 0.96;
   letter-spacing: 0;
-  margin: 0 0 clamp(20px, 3vw, 30px);
+  margin: 0 0 clamp(28px, 4vw, 40px);
   max-width: 920px;
   color: var(--ink);
 }
@@ -218,7 +218,7 @@ main:focus {
   font-style: normal;
   font-size: clamp(20px, 3.6vw, 38px);
   letter-spacing: -0.005em;
-  margin-top: clamp(12px, 2vw, 18px);
+  margin-top: clamp(18px, 2.5vw, 26px);
   font-weight: 300;
   color: var(--ink-soft);
   line-height: 1.18;
@@ -231,7 +231,7 @@ main:focus {
   line-height: 1.55;
   color: var(--ink-soft);
   max-width: 56ch;
-  margin: 0 0 clamp(22px, 3.5vw, 36px);
+  margin: 0 0 clamp(36px, 5vw, 56px);
   font-weight: 300;
 }
 
@@ -391,12 +391,12 @@ main:focus {
 /* ============================ Bleed image ============================ */
 .bleed {
   position: relative;
-  margin: clamp(18px, 3vw, 36px) 0;
+  margin: clamp(32px, 5vw, 64px) 0;
   overflow: hidden;
 }
 .bleed > img {
   width: 100%;
-  height: clamp(220px, 42vh, 440px);
+  height: clamp(260px, 50vh, 540px);
   object-fit: cover;
   filter: contrast(0.92) saturate(0.7) sepia(0.18);
 }
@@ -425,18 +425,18 @@ main:focus {
 }
 .band > img {
   width: 100%;
-  height: clamp(190px, 32vh, 340px);
+  height: clamp(220px, 38vh, 420px);
   object-fit: cover;
   filter: contrast(0.92) saturate(0.55) sepia(0.22);
   display: block;
   transition: transform 1.4s ease;
 }
 .band:hover > img { transform: scale(1.02); }
-.band--hero > img { height: clamp(220px, 40vh, 440px); }
-.band--med > img { height: clamp(170px, 28vh, 300px); }
+.band--hero > img { height: clamp(280px, 50vh, 560px); }
+.band--med > img { height: clamp(200px, 32vh, 360px); }
 
 .band--quad {
-  min-height: clamp(220px, 34vh, 360px);
+  min-height: clamp(260px, 42vh, 460px);
   background:
     radial-gradient(ellipse at center, rgba(122, 31, 26, 0.16), transparent 58%),
     var(--paper-deep);
@@ -489,7 +489,7 @@ main:focus {
 }
 
 @media (min-width: 760px) {
-  .band--quad { min-height: clamp(240px, 34vh, 400px); }
+  .band--quad { min-height: clamp(300px, 42vh, 500px); }
   .band__quad {
     grid-template-columns: 1.2fr 0.9fr 0.9fr;
     grid-template-rows: repeat(2, 1fr);
@@ -505,12 +505,12 @@ main:focus {
 
 /* ============================ World context ============================ */
 .section--world {
-  padding-top: clamp(34px, 5vw, 68px);
-  padding-bottom: clamp(14px, 2.5vw, 24px);
+  padding-top: clamp(62px, 10vw, 120px);
+  padding-bottom: clamp(24px, 4vw, 42px);
 }
 .world__lede {
   max-width: 900px;
-  margin: 0 0 clamp(20px, 3vw, 28px);
+  margin: 0 0 clamp(28px, 4vw, 42px);
   font-size: clamp(19px, 2.4vw, 28px);
   line-height: 1.35;
   color: var(--ink);
@@ -524,7 +524,7 @@ main:focus {
 }
 .world-grid article {
   background: var(--paper);
-  padding: clamp(18px, 2.4vw, 24px);
+  padding: clamp(22px, 3vw, 32px);
 }
 .world-grid__label {
   display: block;
@@ -563,7 +563,7 @@ main:focus {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--oxblood);
-  margin-bottom: clamp(18px, 3vw, 28px);
+  margin-bottom: clamp(28px, 4vw, 40px);
 }
 .eyebrow span:first-child {
   font-family: var(--display);
@@ -581,7 +581,7 @@ main:focus {
   line-height: 1.0;
   letter-spacing: -0.02em;
   font-weight: 400;
-  margin: 0 0 clamp(20px, 3vw, 34px);
+  margin: 0 0 clamp(28px, 4vw, 48px);
   color: var(--ink);
   max-width: 18ch;
 }
@@ -661,7 +661,7 @@ main:focus {
 /* ============================ Pull quote (image) ============================ */
 .pullquote {
   position: relative;
-  margin: clamp(22px, 4vw, 48px) 0;
+  margin: clamp(40px, 6vw, 80px) 0;
 }
 .pullquote figure {
   position: relative;
@@ -670,7 +670,7 @@ main:focus {
 }
 .pullquote img {
   width: 100%;
-  height: clamp(320px, 54vh, 560px);
+  height: clamp(420px, 68vh, 700px);
   object-fit: cover;
   object-position: center center;
   filter: contrast(0.95) saturate(0.55) sepia(0.25) brightness(0.7);
@@ -687,7 +687,7 @@ main:focus {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: clamp(22px, 4.5vw, 58px);
+  padding: clamp(30px, 6vw, 88px);
   margin: 0;
   font-family: var(--display);
   font-style: italic;
@@ -902,7 +902,7 @@ main:focus {
 .bleed__inner {
   position: absolute; inset: 0;
   display: flex; flex-direction: column; justify-content: center;
-  padding: clamp(22px, 4.5vw, 52px);
+  padding: clamp(28px, 6vw, 80px);
   max-width: var(--col-wide);
   margin: 0 auto;
 }
@@ -1119,8 +1119,8 @@ main:focus {
   position: relative;
   background: var(--ink);
   color: var(--paper);
-  padding: clamp(42px, 7vw, 88px) 22px;
-  margin-top: clamp(22px, 4vw, 44px);
+  padding: clamp(64px, 10vw, 130px) 22px;
+  margin-top: clamp(40px, 6vw, 80px);
   text-align: center;
   overflow: hidden;
 }
@@ -1141,7 +1141,7 @@ main:focus {
   font-size: clamp(20px, 3vw, 32px);
   line-height: 1.35;
   max-width: 28ch;
-  margin: 0 auto clamp(28px, 5vw, 44px);
+  margin: 0 auto clamp(48px, 7vw, 72px);
   color: var(--paper);
   opacity: 0.92;
   font-weight: 400;
@@ -1535,12 +1535,12 @@ main:focus {
 .ps {
   max-width: var(--col-wide);
   margin: 0 auto;
-  padding: clamp(28px, 4.5vw, 52px) 22px;
+  padding: clamp(40px, 6vw, 80px) 22px;
 }
 .ps__inner {
   max-width: 720px;
   border-top: 2px solid var(--oxblood);
-  padding-top: 22px;
+  padding-top: 32px;
 }
 .ps__label {
   font-family: var(--mono);
@@ -1582,7 +1582,7 @@ main:focus {
 
 /* ============================ Footer ============================ */
 .foot {
-  padding: clamp(34px, 5vw, 62px) 22px clamp(28px, 4vw, 42px);
+  padding: clamp(56px, 8vw, 96px) 22px clamp(40px, 6vw, 56px);
   text-align: left;
   font-family: var(--sans);
   font-size: 13px;
