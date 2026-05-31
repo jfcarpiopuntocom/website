@@ -1,5 +1,5 @@
 /* ============================================================
-   7 formas — La Escuela del Dinero · v1.179 · 2026-05-30
+   7 formas — La Escuela del Dinero · v1.178 · 2026-05-22
    Editorial confessional · cream, ink, oxblood
    Mobile-first, forces light, Safari-safe
    ============================================================ */
@@ -235,38 +235,6 @@ main:focus {
   font-weight: 300;
 }
 
-.hero__plan {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 clamp(28px, 4vw, 38px);
-  max-width: 720px;
-  display: grid;
-  gap: 10px;
-}
-.hero__plan li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 12px;
-  align-items: baseline;
-  padding: 14px 0;
-  border-top: 1px solid rgba(27,23,20,0.14);
-  font-family: var(--sans);
-  font-size: clamp(14px, 1.8vw, 15px);
-  line-height: 1.5;
-  color: var(--ink-soft);
-}
-.hero__plan li:last-child { border-bottom: 1px solid rgba(27,23,20,0.14); }
-.hero__plan span {
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--oxblood);
-}
-.hero__plan strong {
-  color: var(--ink);
-  font-weight: 800;
-}
-
 .hero__byline {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -288,40 +256,6 @@ main:focus {
   font-size: clamp(14px, 1.8vw, 17px);
   font-style: italic;
   color: var(--ink);
-}
-
-.hero__proof {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  max-width: 640px;
-  margin-top: 16px;
-}
-.hero__proof p {
-  margin: 0;
-  padding: 12px 14px;
-  background: rgba(122,31,26,0.06);
-  border: 1px solid rgba(122,31,26,0.2);
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  font-family: var(--sans);
-  color: var(--ink-soft);
-}
-.hero__proof strong {
-  font-family: var(--display);
-  font-size: clamp(28px, 4vw, 38px);
-  line-height: 0.9;
-  color: var(--oxblood);
-  font-weight: 400;
-}
-.hero__proof span {
-  font-size: 13px;
-  line-height: 1.35;
-}
-@media (min-width: 720px) {
-  .hero__proof { grid-template-columns: repeat(3, 1fr); }
-  .hero__proof p { align-items: center; flex-direction: column; gap: 6px; text-align: center; }
 }
 
 .hero__actions {
@@ -711,6 +645,14 @@ main:focus {
 
 /* ============================ Catálogo ============================ */
 .section--catalog { border-top: 1px solid var(--rule); }
+.catalog__intro {
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 56ch;
+  margin: 0 0 clamp(36px, 6vw, 64px);
+  font-weight: 300;
+}
 
 .errors { list-style: none; padding: 0; margin: 0; }
 .err {
@@ -1783,6 +1725,49 @@ main:focus {
    Mechanisms preview, decision urgency, real-world price comparison
    ============================================================ */
 
+/* Mechanisms preview block */
+.mechs {
+  margin: clamp(32px, 5vw, 56px) 0;
+  padding: clamp(24px, 4vw, 40px);
+  background: var(--paper-deep);
+  border-left: 3px solid var(--oxblood);
+}
+.mechs__intro {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-size: clamp(13px, 1.8vw, 14px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #36302a;
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+  -webkit-text-fill-color: #36302a;
+}
+.mechs__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.mechs__list li {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-size: clamp(15px, 2.2vw, 16px);
+  color: #36302a;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  -webkit-text-fill-color: #36302a;
+}
+.mechs__name {
+  font-weight: 700;
+  color: #7a1f1a;
+  color: var(--oxblood);
+  -webkit-text-fill-color: #7a1f1a;
+}
+
 /* Urgency note under mid CTA */
 .ctamid__note {
   margin: 10px 0 0;
@@ -1887,30 +1872,6 @@ main:focus {
   -webkit-text-fill-color: #36302a;
   text-align: center;
   line-height: 1.55;
-}
-
-.ticket__decision {
-  list-style: none;
-  margin: 16px 0 18px;
-  padding: 0;
-  display: grid;
-  gap: 8px;
-}
-.ticket__decision li {
-  padding: 12px 14px;
-  background: rgba(122,31,26,0.05);
-  border: 1px solid rgba(122,31,26,0.16);
-  font-family: var(--sans);
-  font-size: clamp(14px, 2vw, 15px);
-  line-height: 1.45;
-  color: #36302a;
-  color: var(--ink-soft);
-  -webkit-text-fill-color: #36302a;
-}
-.ticket__decision strong {
-  color: #7a1f1a;
-  color: var(--oxblood);
-  -webkit-text-fill-color: #7a1f1a;
 }
 
 /* ============================================================
@@ -2455,6 +2416,8 @@ main:focus {
    iOS Safari + WhatsApp dark mode overrides — ALL classes
    ============================================================ */
 @media (prefers-color-scheme: dark) {
+  .mechs__intro,
+  .mechs__list li,
   .ctamid__note,
   .ticket__urgency,
   .price-reality__lead,
@@ -2476,11 +2439,9 @@ main:focus {
   .ticket__lossline,
   .postclick-timeline__list li,
   .testim__lead,
-  .hero__plan li,
-  .hero__proof p,
-  .ticket__decision li,
   .ticket__lastpay em { color: #36302a !important; -webkit-text-fill-color: #36302a !important; }
   .quiz__legend { color: #1b1714 !important; -webkit-text-fill-color: #1b1714 !important; }
+  .mechs__name,
   .price-reality__eyebrow,
   .price-reality__list strong,
   .hero__reframe,
@@ -2497,12 +2458,8 @@ main:focus {
   .ticket__lossline em,
   .postclick-timeline__label,
   .postclick-timeline__time,
-  .hero__plan span,
-  .hero__proof strong,
-  .ticket__decision strong,
   .testim__lead em,
   .quiz__legend em { color: #7a1f1a !important; -webkit-text-fill-color: #7a1f1a !important; }
-  .hero__plan strong { color: #1b1714 !important; -webkit-text-fill-color: #1b1714 !important; }
   .freestep__note,
   .ticket__postclick,
   .quiz__intro,
