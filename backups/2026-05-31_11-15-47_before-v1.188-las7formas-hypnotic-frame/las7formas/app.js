@@ -87,14 +87,14 @@
   var quizResult = document.querySelector('.quiz__result');
   var quizVerdict = document.querySelector('.quiz__verdict');
   var verdicts = {
-    0: 'Cero marcadas significa una de dos cosas: ya saliste de las 7, o todavía no las estás viendo con suficiente nitidez. Sigue leyendo; a veces basta una frase para que el patrón aparezca.',
-    1: 'Una marca ya cambia la escena. No estás mirando un defecto personal; estás mirando una instrucción financiera que se puede reemplazar.',
-    2: 'Dos marcas suelen trabajar juntas. Cuando separas una de la otra, el patrón pierde fuerza y la primera regla se vuelve obvia.',
-    3: 'Tres marcas ya son mapa. El sueldo no desaparece por azar: sigue rutas. Ahora puedes elegir cuál ruta cerrar primero.',
-    4: 'Cuatro marcas no piden culpa. Piden orden. El viejo guion está visible; lo siguiente es instalar una respuesta nueva antes de la próxima nómina.',
-    5: 'Cinco marcas explican por qué esforzarte más no alcanzaba. No era falta de carácter: eran demasiadas instrucciones viejas ejecutándose al mismo tiempo.',
-    6: 'Seis de siete. Buen momento para dejar de negociar contigo cada mes. Una regla visible le gana a una promesa mental.',
-    7: 'Las siete. Eso no es sentencia; es claridad. Cuando todo el mapa aparece, también aparece por dónde salir.'
+    0: 'Cero marcadas significa o que ya cerraste las 7, o que aún no las nombraste. Lee el catálogo abajo: vas a reconocer al menos dos antes de llegar a la mitad.',
+    1: 'Una basta para perder años. Cerrarla cambia el siguiente sueldo.',
+    2: 'Dos al mismo tiempo es el patrón más común. El método las cierra en paralelo.',
+    3: 'Eres el lector exacto para el curso. Tres de las 7 formas de destruir tus finanzas personales y familiares ya son punto de inflexión: cada mes que siguen activas, sale dinero por tres lados a la vez.',
+    4: 'Cuatro. Tu sueldo está saliendo por cuatro grietas distintas. Cada nómina que entra repite el mismo circuito.',
+    5: 'Cinco. La buena noticia: las cinco se cierran con el mismo marco. Pero cada mes que pasa es otro mes operando con las cinco abiertas.',
+    6: 'Seis de siete. No es disciplina lo que te falta, es el sistema. Cada quincena cuenta.',
+    7: 'Las siete. Honestidad poco común. Empieza por el video 1 y corrige una de las 7 formas por semana.'
   };
   if (formaChecks.length && quizCount && quizResult && quizVerdict) {
     formaChecks.forEach(function (cb) {
