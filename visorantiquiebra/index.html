@@ -1489,6 +1489,170 @@ footer.foot-moment::after{
   .pioneer-photo{height:280px}
   .kit-side{position:static}
 }
+
+/* ════════════════════════════════════════
+   VALLE DISPLAY — cinematic chapter title
+════════════════════════════════════════ */
+.valle-intro{margin-bottom:clamp(26px,3.6vw,48px)}
+.valle-display{
+  font-size:clamp(44px,10vw,142px)!important;
+  line-height:.82;letter-spacing:-.028em;
+  max-width:none!important;margin-bottom:0;
+}
+.valle-display em{
+  font-family:var(--body);font-style:italic;text-transform:none;
+  color:var(--red);font-weight:500;letter-spacing:-.012em;
+}
+
+/* ════════════════════════════════════════
+   LIBROS · Próximamente — Atravesando el valle de la muerte
+════════════════════════════════════════ */
+.libros{
+  background:var(--navy);color:#fff;position:relative;overflow:hidden;
+  border-top:1px solid var(--ink);border-bottom:6px solid var(--amber-2);
+  padding:clamp(64px,9vw,128px) 0;
+}
+.libros::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(80% 70% at 16% -4%, rgba(232,160,32,.16), transparent 60%),
+    radial-gradient(74% 80% at 104% 104%, rgba(214,41,26,.16), transparent 60%);
+}
+.libros::after{
+  content:"6–24";position:absolute;right:-1%;bottom:-8%;
+  font-family:var(--cond);font-weight:900;font-size:clamp(170px,28vw,420px);
+  letter-spacing:-.05em;line-height:.8;color:rgba(255,255,255,.035);
+  pointer-events:none;z-index:0;white-space:nowrap;
+}
+.libros .wrap{position:relative;z-index:1}
+.libros .sl{color:#fff}
+.libros .sl .sn{background:var(--amber-2);color:var(--navy)}
+.libros .sl::after{background:linear-gradient(90deg,rgba(255,255,255,.2),transparent)}
+.libros .kicker{color:var(--amber-3)}
+.libros .kicker::before{background:var(--amber-3)}
+.libros h2{color:#fff;text-wrap:pretty;line-height:1.06;margin-bottom:26px;max-width:20ch}
+.libros h2 em{font-family:var(--body);font-style:italic;text-transform:none;color:var(--amber-3);font-weight:500;letter-spacing:-.01em}
+.libros .lede{color:#F2F2F2;max-width:60ch}
+
+.libros-head{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:end;margin-bottom:clamp(40px,5vw,68px)}
+.libros-head .bk-switch{justify-self:end}
+@media(max-width:900px){.libros-head{grid-template-columns:1fr;gap:24px}.libros-head .bk-switch{justify-self:start}}
+
+.bk-switch{display:inline-flex;align-items:center;gap:3px;border:1px solid rgba(255,255,255,.2);padding:5px;background:rgba(255,255,255,.04)}
+.bk-switch .bk-switch-label{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#E6E6E6;padding:0 9px 0 6px}
+.bk-switch button{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#F2F2F2;padding:9px 14px;border:1px solid transparent;transition:all .15s;min-height:38px;cursor:pointer;background:none}
+.bk-switch button:hover{color:#fff;background:rgba(255,255,255,.08)}
+.bk-switch button.active{background:var(--amber-2);color:var(--navy);border-color:var(--amber-2)}
+
+.libros-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,32px)}
+@media(max-width:880px){.libros-grid{grid-template-columns:1fr;gap:26px}}
+
+.libro{
+  display:grid;grid-template-columns:auto 1fr;gap:clamp(22px,3vw,36px);align-items:stretch;
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);
+  padding:clamp(24px,2.8vw,34px);
+}
+@media(max-width:560px){.libro{grid-template-columns:1fr;gap:24px;justify-items:start}}
+
+.bk-cover{
+  align-self:start;position:relative;
+  width:clamp(156px,15vw,196px);aspect-ratio:2/3;
+  background:var(--paper);color:var(--ink);border:1px solid var(--ink);
+  box-shadow:12px 12px 0 rgba(0,0,0,.5), 0 28px 54px -18px rgba(0,0,0,.7);
+  padding:18px 16px 16px 20px;display:flex;flex-direction:column;overflow:hidden;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.bk-cover::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:var(--ink)}
+.libro:hover .bk-cover{transform:translateY(-7px) rotate(-1.2deg)}
+.bk-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;position:relative;z-index:2}
+.bk-edition{font-family:var(--mono);font-size:8px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--red);line-height:1.3}
+.bk-series{font-family:var(--mono);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);text-align:right;line-height:1.3}
+.bk-title{font-family:var(--cond);font-weight:900;text-transform:uppercase;line-height:.88;letter-spacing:-.01em;font-size:clamp(20px,2.3vw,27px);color:var(--ink);margin:16px 0 0;position:relative;z-index:2}
+.bk-title em{font-style:normal;color:var(--red)}
+.bk-sub{font-family:var(--body);font-style:italic;font-size:9.5px;line-height:1.32;color:var(--ink-2);margin-top:10px;position:relative;z-index:2;max-width:22ch}
+.bk-curve{position:absolute;left:0;right:0;bottom:38px;height:46px;opacity:.5;z-index:1}
+.bk-author{margin-top:auto;font-family:var(--mono);font-size:8px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);position:relative;z-index:2;padding-top:10px;border-top:1px solid var(--rule)}
+.bk-cover-novela .bk-curve{color:var(--red)}
+.bk-cover-manual .bk-curve{color:var(--elec)}
+.bk-cover-manual .bk-title em{color:var(--elec)}
+.bk-cover-manual .bk-edition{color:var(--elec)}
+
+.libros.bk-noche .bk-cover{background:var(--navy-2);color:#fff;border-color:#000}
+.libros.bk-noche .bk-cover::before{background:var(--amber-2)}
+.libros.bk-noche .bk-title{color:#fff}
+.libros.bk-noche .bk-cover-novela .bk-title em{color:var(--red-2)}
+.libros.bk-noche .bk-cover-manual .bk-title em{color:var(--elec-2)}
+.libros.bk-noche .bk-sub{color:#D8DEE8}
+.libros.bk-noche .bk-series{color:#9AA6B8}
+.libros.bk-noche .bk-author{color:var(--amber-3);border-top-color:rgba(255,255,255,.2)}
+.libros.bk-cartel .bk-cover{background:var(--amber-2);color:var(--navy);border-color:#000}
+.libros.bk-cartel .bk-cover::before{background:var(--red)}
+.libros.bk-cartel .bk-cover-manual::before{background:var(--navy)}
+.libros.bk-cartel .bk-title{color:var(--navy)}
+.libros.bk-cartel .bk-cover-novela .bk-title em{color:var(--red)}
+.libros.bk-cartel .bk-cover-manual .bk-title em{color:#fff}
+.libros.bk-cartel .bk-sub{color:#3A2A06}
+.libros.bk-cartel .bk-series{color:#5A4A1A}
+.libros.bk-cartel .bk-author{color:var(--navy);border-top-color:rgba(0,0,0,.22)}
+.libros.bk-cartel .bk-edition{color:var(--red)}
+.libros.bk-cartel .bk-cover-manual .bk-edition{color:var(--navy)}
+
+.libro-detail{display:flex;flex-direction:column}
+.libro-kind{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-3);margin-bottom:9px}
+.libro.manual .libro-kind{color:var(--elec-2)}
+.libro-detail h3{font-family:var(--cond);font-size:clamp(23px,2.5vw,31px);font-weight:900;text-transform:uppercase;color:#fff;line-height:1;margin-bottom:12px;letter-spacing:-.005em}
+.libro-detail h3 em{font-style:italic;font-family:var(--body);font-weight:500;text-transform:none;letter-spacing:-.01em}
+.libro.novela h3 em{color:var(--amber-3)}
+.libro.manual h3 em{color:var(--elec-2)}
+.libro-detail p{font-family:var(--body);font-size:15px;line-height:1.62;color:#F2F2F2;margin:0 0 16px}
+.libro-detail p strong{color:#fff;font-weight:600}
+.libro-meta{margin-top:auto;display:flex;align-items:flex-end;gap:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14)}
+.libro-price{font-family:var(--cond);font-size:clamp(40px,4.4vw,52px);font-weight:900;color:var(--amber-3);line-height:.82;font-variant-numeric:tabular-nums}
+.libro-price .cur{font-size:.45em;vertical-align:top;color:#fff;margin-right:1px}
+.libro.manual .libro-price{color:var(--elec-2)}
+.libro-status{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#E6E6E6;line-height:1.55;padding-bottom:3px}
+.bk-notify{display:inline-flex;align-items:center;gap:9px;margin-top:18px;align-self:flex-start;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);background:var(--amber-2);padding:13px 21px;box-shadow:0 5px 0 var(--amber);transition:transform .18s,box-shadow .18s,background .18s;cursor:pointer}
+.bk-notify::after{content:"→";transition:transform .18s}
+.bk-notify:hover{background:var(--amber-3);transform:translateY(-2px);box-shadow:0 7px 0 var(--amber)}
+.bk-notify:hover::after{transform:translateX(4px)}
+.libro.manual .bk-notify{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.34);box-shadow:none}
+.libro.manual .bk-notify:hover{background:rgba(255,255,255,.08);transform:translateY(-2px);box-shadow:none}
+
+.libros-foot{margin-top:clamp(34px,4.5vw,54px);font-family:var(--body);font-size:16.5px;line-height:1.62;color:#F2F2F2;text-align:center;max-width:64ch;margin-left:auto;margin-right:auto;text-wrap:pretty}
+.libros-foot strong{color:var(--amber-3);font-weight:600}
+@media(max-width:560px){.bk-cover{width:min(62vw,210px)}}
+
+/* ════════════════════════════════════════
+   CRAFT PASS · 98/100 finishing
+════════════════════════════════════════ */
+/* Anchored nav clears the fixed bar + sticky Growth-OS strip */
+[id]{scroll-margin-top:104px}
+
+/* Typographic finishing — kerning, ligatures, hanging punctuation, pretty wrap */
+body{font-feature-settings:"kern" 1,"liga" 1,"calt" 1;font-variant-ligatures:common-ligatures contextual;hanging-punctuation:first allow-end}
+p,.lede,.problem .body,.libro-detail p,.libros-foot,.reframe-list li{text-wrap:pretty}
+
+/* Keyboard-accessible focus ring (mouse clicks stay clean via :focus-visible) */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
+summary:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--amber-2);outline-offset:3px}
+.bar a:focus-visible,.gos-strip a:focus-visible,.section.dark a:focus-visible,
+.libros a:focus-visible,.libros button:focus-visible,.final a:focus-visible{outline-color:var(--amber-3)}
+.twkp button:focus-visible,.twkp select:focus-visible{outline:2px solid var(--amber-3);outline-offset:2px}
+
+/* Book covers — gallery-grade depth: corner sheen + bottom vignette, finish-agnostic */
+.bk-cover::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:
+    radial-gradient(132% 86% at 84% -8%, rgba(255,255,255,.16), transparent 44%),
+    linear-gradient(180deg, transparent 58%, rgba(0,0,0,.13));
+}
+.libros.bk-cartel .bk-cover::after{background:radial-gradient(132% 86% at 84% -8%, rgba(255,255,255,.28), transparent 44%),linear-gradient(180deg, transparent 58%, rgba(0,0,0,.10))}
+.bk-cover::before{box-shadow:1px 0 0 rgba(255,255,255,.14)} /* spine inner highlight */
+.libro:hover .bk-cover{box-shadow:16px 18px 0 rgba(0,0,0,.5), 0 42px 72px -20px rgba(0,0,0,.8)}
+
+/* Watermark sits a touch crisper on the dark canvas */
+.libros::after{color:rgba(255,255,255,.045)}
+.libros.bk-cartel::after{color:rgba(255,255,255,.06)}
 </style>
 </head>
 <body>
@@ -1527,7 +1691,7 @@ footer.foot-moment::after{
 ════════════════════════════════════ -->
 <section class="hero" aria-labelledby="h1">
   <div class="hero-shell">
-    <span class="hero-eyebrow">Visor Antiquiebra · diagnóstico empresarial · meses 6–24</span>
+    <span class="hero-eyebrow">Visor Antiquiebra · el valle de la muerte · meses 6–24</span>
     <h1 id="h1" class="hero-h1"><span class="line">¿Cuántos</span><br><em>días o semanas</em><br><span class="line-bottom">le quedan a tu negocio?</span></h1>
   </div>
 
@@ -1792,10 +1956,14 @@ footer.foot-moment::after{
 ════════════════════════════════════ -->
 <section class="valle-full" aria-labelledby="s04">
   <div class="wrap">
-    <p class="sl rv"><span class="sn">04</span> <span id="s04">Por qué los meses 6 a 24</span></p>
+    <p class="sl rv"><span class="sn">04</span> <span id="s04">El valle de la muerte</span></p>
+    <div class="valle-intro rv">
+      <span class="kicker">Meses 6 a 24 · sin metáfora</span>
+      <h2 class="valle-display">El valle de la <em>muerte.</em></h2>
+    </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end">
       <div class="rv">
-        <span class="kicker">El Valle de la Muerte · sin metáfora</span>
+        <span class="kicker">Por qué esta ventana lo decide todo</span>
         <h2 style="max-width:18ch">El negocio ya existe. Aún no es un sistema.</h2>
       </div>
       <div class="rv">
@@ -2275,12 +2443,83 @@ footer.foot-moment::after{
 </section>
 
 <!-- ════════════════════════════════════
+     LIBROS · Próximamente — Atravesando el valle de la muerte
+════════════════════════════════════ -->
+<section class="libros bk-noche" id="libros" aria-labelledby="s12b">
+  <div class="wrap">
+    <div class="libros-head">
+      <div class="rv">
+        <p class="sl"><span class="sn">12</span> <span id="s12b">Próximamente · los dos libros</span></p>
+        <span class="kicker">Dos ediciones · un mismo valle</span>
+        <h2>Atravesando el valle de la muerte, <em>contado dos veces.</em></h2>
+        <p class="lede">El mismo territorio que mide el Visor, ahora en libro. <strong style="color:#fff">Atravesando el valle de la muerte: los primeros 6 a 24 meses de un negocio</strong> llega en dos ediciones — una novela sobre quienes cruzaron el valle, y un manual táctico para cruzarlo tú, indicador por indicador.</p>
+      </div>
+      <div class="bk-switch rv" role="group" aria-label="Acabado de portada">
+        <span class="bk-switch-label">Portada</span>
+        <button type="button" data-finish="classic" class="active">Papel</button>
+        <button type="button" data-finish="noche">Noche</button>
+        <button type="button" data-finish="cartel">Cartel</button>
+      </div>
+    </div>
+    <div class="libros-grid">
+      <article class="libro novela rv">
+        <div class="bk-cover bk-cover-novela" aria-hidden="true">
+          <div class="bk-top">
+            <span class="bk-edition">Edición · Novela</span>
+            <span class="bk-series">Valle 6–24M<br>J.F. Carpio</span>
+          </div>
+          <h3 class="bk-title">Atravesando el valle de la <em>muerte</em></h3>
+          <p class="bk-sub">Los primeros 6 a 24 meses de un negocio</p>
+          <svg class="bk-curve" viewBox="0 0 160 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0,6 C28,8 40,12 56,30 C82,52 108,52 132,30 C146,17 152,12 160,9" fill="none" stroke="currentColor" stroke-width="2.4" vector-effect="non-scaling-stroke"/></svg>
+          <div class="bk-author">J.F. Carpio</div>
+        </div>
+        <div class="libro-detail">
+          <div class="libro-kind">La novela</div>
+          <h3>Quienes <em>cruzaron</em> el valle.</h3>
+          <p>Ficción sobre los pioneros y visionarios que entraron al valle de la muerte y salieron del otro lado. La historia de los meses 6 a 24 contada desde adentro: las noches de caja corta, la tracción que engaña, la decisión que lo cambia todo.</p>
+          <p>Para leer lo que se siente cruzar el valle <strong>antes</strong> de estar en mitad de él.</p>
+          <div class="libro-meta">
+            <div class="libro-price"><span class="cur">$</span>13</div>
+            <div class="libro-status"><span class="ls-main">Pre-venta abierta</span><br>Lanzamiento · próximamente</div>
+          </div>
+          <a class="bk-notify" href="#libros-aviso">Avísame del lanzamiento</a>
+        </div>
+      </article>
+      <article class="libro manual rv">
+        <div class="bk-cover bk-cover-manual" aria-hidden="true">
+          <div class="bk-top">
+            <span class="bk-edition">Edición · Manual táctico</span>
+            <span class="bk-series">Valle 6–24M<br>J.F. Carpio</span>
+          </div>
+          <h3 class="bk-title">Atravesando el valle de la <em>muerte</em></h3>
+          <p class="bk-sub">Los primeros 6 a 24 meses de un negocio</p>
+          <svg class="bk-curve" viewBox="0 0 160 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0,6 C28,8 40,12 56,30 C82,52 108,52 132,30 C146,17 152,12 160,9" fill="none" stroke="currentColor" stroke-width="2.4" vector-effect="non-scaling-stroke"/></svg>
+          <div class="bk-author">J.F. Carpio</div>
+        </div>
+        <div class="libro-detail">
+          <div class="libro-kind">El manual táctico</div>
+          <h3>Cómo <em>cruzarlo</em>, mes a mes.</h3>
+          <p>El método operativo detrás del Visor: cómo usar los 8 indicadores mes a mes para atravesar el valle de la muerte. Caja, runway, retención, dependencia del fundador, cobros — qué leer, cuándo, y qué hacer con cada señal.</p>
+          <p>El compañero de trabajo del Visor: <strong>la travesía, paso a paso.</strong></p>
+          <div class="libro-meta">
+            <div class="libro-price"><span class="cur">$</span>13</div>
+            <div class="libro-status"><span class="ls-main">Pre-venta abierta</span><br>Lanzamiento · próximamente</div>
+          </div>
+          <a class="bk-notify" href="#libros-aviso">Avísame del lanzamiento</a>
+        </div>
+      </article>
+    </div>
+    <p class="libros-foot" id="libros-aviso">Dos formas de entender el mismo viaje: <strong>la novela</strong> te lo hace sentir, <strong>el manual</strong> te enseña a cruzarlo. Mientras tanto, el Visor ya te dice en qué punto del valle de la muerte está tu negocio hoy.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
      FINAL CTA + P.S.
 ════════════════════════════════════ -->
 <section class="final" aria-labelledby="s12">
   <div class="wrap">
     <h2 id="s12">Abre el Visor.<br>Mira qué está <span class="a">firme</span>, qué se está <span class="r">dañando</span>, y qué no puede esperar otro mes.</h2>
-    <p class="lede">La primera lectura queda abierta. La decisión, no. Pero entrar a mirar, sí.</p>
+    <p class="lede">Nadie cruza el valle de la muerte sin antes mirarlo de frente. La primera lectura queda abierta. La decisión, no.</p>
     <div class="final-authority rv">
       <div class="seal">JFC</div>
       <p><strong>Creado por J.F. Carpio, investigador empresarial y económico y ex profesor USFQ durante 14 años.</strong> El Visor traduce análisis de entorno empresarial a una lectura que un dueño puede usar esta misma semana: caja, cobros, clientes, canales, procesos y dependencia del fundador.</p>
@@ -2321,6 +2560,7 @@ footer.foot-moment::after{
     <div class="fc">
       <h4>Recursos</h4>
       <a href="#s09">Kit Antiquiebra 360</a>
+      <a href="#libros">Libros · Atravesando el valle</a>
       <a href="#s10">Sesión 1:1 con JFC</a>
       <a href="#diagnostico">Calculadora SSS</a>
       <a href="#diagnostico">Newsletter de nuevos negocios</a>
@@ -2557,6 +2797,164 @@ footer.foot-moment::after{
       }
     });
   });
+})();
+</script>
+
+<!-- Tweaks panel (on-brand, vanilla host-protocol) -->
+<style>
+  .twkp{position:fixed;right:18px;bottom:18px;z-index:2147483646;width:268px;display:none;
+    flex-direction:column;background:var(--navy);color:#fff;
+    border:1px solid rgba(255,255,255,.14);border-top:3px solid var(--amber-2);
+    box-shadow:0 24px 64px -16px rgba(0,0,0,.7);
+    font-family:var(--mono);overflow:hidden}
+  .twkp.open{display:flex}
+  .twkp-hd{display:flex;align-items:center;justify-content:space-between;
+    padding:13px 12px 13px 16px;cursor:move;user-select:none;border-bottom:1px solid rgba(255,255,255,.1)}
+  .twkp-hd b{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--amber-3)}
+  .twkp-x{appearance:none;border:0;background:transparent;color:rgba(255,255,255,.55);
+    width:24px;height:24px;cursor:pointer;font-size:16px;line-height:1}
+  .twkp-x:hover{color:#fff}
+  .twkp-body{padding:16px;display:flex;flex-direction:column;gap:18px}
+  .twkp-sect{font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:rgba(255,255,255,.4);margin-bottom:-6px}
+  .twkp-row{display:flex;flex-direction:column;gap:8px}
+  .twkp-lbl{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+  .twkp-seg{display:flex;gap:3px;border:1px solid rgba(255,255,255,.16);padding:3px;background:rgba(255,255,255,.04)}
+  .twkp-seg button{flex:1;appearance:none;border:0;background:transparent;color:#E6E6E6;
+    font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    padding:8px 4px;cursor:pointer;transition:all .15s}
+  .twkp-seg button:hover{background:rgba(255,255,255,.08);color:#fff}
+  .twkp-seg button.active{background:var(--amber-2);color:var(--navy)}
+  .twkp-price{display:flex;align-items:center;gap:0;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04)}
+  .twkp-price button{appearance:none;border:0;background:transparent;color:#fff;width:34px;height:34px;
+    font-size:16px;cursor:pointer;font-family:var(--cond);font-weight:900}
+  .twkp-price button:hover{background:rgba(255,255,255,.08)}
+  .twkp-price .v{flex:1;text-align:center;font-family:var(--cond);font-weight:900;font-size:22px;color:var(--amber-3);font-variant-numeric:tabular-nums}
+  .twkp-sel{appearance:none;width:100%;height:34px;padding:0 10px;border:1px solid rgba(255,255,255,.16);
+    background:rgba(255,255,255,.04);color:#fff;font-family:var(--mono);font-size:10px;letter-spacing:.08em;
+    text-transform:uppercase;cursor:pointer;outline:none}
+  .twkp-sel:focus{border-color:var(--amber-2)}
+  .twkp-sel option{background:var(--navy);color:#fff}
+</style>
+<div class="twkp" id="twkp" role="dialog" aria-label="Tweaks">
+  <div class="twkp-hd" id="twkp-hd"><b>Tweaks</b><button class="twkp-x" id="twkp-x" aria-label="Cerrar">×</button></div>
+  <div class="twkp-body">
+    <div class="twkp-sect">Los libros</div>
+    <div class="twkp-row">
+      <span class="twkp-lbl">Acabado de portada</span>
+      <div class="twkp-seg" data-tw="coverFinish">
+        <button data-v="classic">Papel</button>
+        <button data-v="noche">Noche</button>
+        <button data-v="cartel">Cartel</button>
+      </div>
+    </div>
+    <div class="twkp-row">
+      <span class="twkp-lbl">Precio (USD c/u)</span>
+      <div class="twkp-price">
+        <button id="twkp-pm" aria-label="menos">–</button>
+        <span class="v" id="twkp-pv">13</span>
+        <button id="twkp-pp" aria-label="más">+</button>
+      </div>
+    </div>
+    <div class="twkp-row">
+      <span class="twkp-lbl">Etiqueta de estado</span>
+      <select class="twkp-sel" data-tw="statusLabel">
+        <option value="Pre-venta abierta">Pre-venta abierta</option>
+        <option value="Próximamente">Próximamente</option>
+        <option value="Lista de espera">Lista de espera</option>
+        <option value="Disponible ya">Disponible ya</option>
+      </select>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "coverFinish": "noche",
+    "price": 13,
+    "statusLabel": "Pre-venta abierta"
+  }/*EDITMODE-END*/;
+
+  // Host persists edits to the EDITMODE block on disk → TWEAK_DEFAULTS is the
+  // single source of truth (no localStorage layer to go stale).
+  var t = Object.assign({}, TWEAK_DEFAULTS);
+
+  var sec=document.getElementById('libros');
+  var panel=document.getElementById('twkp');
+
+  function apply(){
+    if(sec){
+      sec.classList.remove('bk-classic','bk-noche','bk-cartel');
+      sec.classList.add('bk-'+t.coverFinish);
+      sec.querySelectorAll('.bk-switch button').forEach(function(b){
+        b.classList.toggle('active', b.dataset.finish===t.coverFinish);
+      });
+    }
+    document.querySelectorAll('#libros .libro-price').forEach(function(p){
+      p.innerHTML='<span class="cur">$</span>'+t.price;
+    });
+    document.querySelectorAll('#libros .ls-main').forEach(function(s){ s.textContent=t.statusLabel; });
+    // reflect in panel controls
+    panel.querySelectorAll('.twkp-seg[data-tw="coverFinish"] button').forEach(function(b){
+      b.classList.toggle('active', b.dataset.v===t.coverFinish);
+    });
+    var pv=document.getElementById('twkp-pv'); if(pv) pv.textContent=t.price;
+    var sel=panel.querySelector('.twkp-sel[data-tw="statusLabel"]'); if(sel) sel.value=t.statusLabel;
+  }
+
+  function setTweak(k,v){
+    t[k]=v;
+    var edits={}; edits[k]=v;
+    try{ window.parent.postMessage({type:'__edit_mode_set_keys', edits:edits}, '*'); }catch(e){}
+    apply();
+  }
+
+  // cover finish — panel + in-page switcher both drive the same tweak
+  panel.querySelectorAll('.twkp-seg[data-tw="coverFinish"] button').forEach(function(b){
+    b.addEventListener('click', function(){ setTweak('coverFinish', b.dataset.v); });
+  });
+  if(sec){
+    sec.querySelectorAll('.bk-switch button').forEach(function(b){
+      b.addEventListener('click', function(){ setTweak('coverFinish', b.dataset.finish); });
+    });
+  }
+  document.getElementById('twkp-pm').addEventListener('click', function(){ setTweak('price', Math.max(0, (+t.price||0)-1)); });
+  document.getElementById('twkp-pp').addEventListener('click', function(){ setTweak('price', (+t.price||0)+1); });
+  panel.querySelector('.twkp-sel[data-tw="statusLabel"]').addEventListener('change', function(e){ setTweak('statusLabel', e.target.value); });
+
+  // host protocol
+  window.addEventListener('message', function(e){
+    var ty=e&&e.data&&e.data.type;
+    if(ty==='__activate_edit_mode') panel.classList.add('open');
+    else if(ty==='__deactivate_edit_mode') panel.classList.remove('open');
+  });
+  try{ window.parent.postMessage({type:'__edit_mode_available'}, '*'); }catch(e){}
+
+  document.getElementById('twkp-x').addEventListener('click', function(){
+    panel.classList.remove('open');
+    try{ window.parent.postMessage({type:'__edit_mode_dismissed'}, '*'); }catch(e){}
+  });
+
+  // drag the panel by its header
+  (function(){
+    var hd=document.getElementById('twkp-hd'), dx, dy, dragging=false;
+    hd.addEventListener('mousedown', function(e){
+      if(e.target.id==='twkp-x') return;
+      dragging=true; var r=panel.getBoundingClientRect();
+      dx=e.clientX-r.left; dy=e.clientY-r.top;
+      panel.style.right='auto'; panel.style.bottom='auto';
+      panel.style.left=r.left+'px'; panel.style.top=r.top+'px';
+      e.preventDefault();
+    });
+    window.addEventListener('mousemove', function(e){
+      if(!dragging) return;
+      panel.style.left=Math.max(6, Math.min(window.innerWidth-60, e.clientX-dx))+'px';
+      panel.style.top=Math.max(6, Math.min(window.innerHeight-40, e.clientY-dy))+'px';
+    });
+    window.addEventListener('mouseup', function(){ dragging=false; });
+  })();
+
+  apply();
 })();
 </script>
 </body>
