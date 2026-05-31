@@ -1,5 +1,5 @@
 /* ============================================================
-   7 formas — La Escuela del Dinero · v1.180 · 2026-05-30
+   7 formas — La Escuela del Dinero · v1.179 · 2026-05-30
    Editorial confessional · cream, ink, oxblood
    Mobile-first, forces light, Safari-safe
    ============================================================ */
@@ -324,27 +324,6 @@ main:focus {
   .hero__proof p { align-items: center; flex-direction: column; gap: 6px; text-align: center; }
 }
 
-.hero__summary {
-  max-width: 720px;
-  margin-top: 16px;
-  padding: 18px 20px;
-  background: var(--paper-deep);
-  border: 1px solid rgba(122,31,26,0.22);
-  display: grid;
-  gap: 10px;
-}
-.hero__summary p {
-  margin: 0;
-  font-family: var(--sans);
-  font-size: clamp(14px, 1.9vw, 15px);
-  line-height: 1.55;
-  color: var(--ink-soft);
-}
-.hero__summary strong {
-  color: var(--ink);
-  font-weight: 800;
-}
-
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
@@ -357,16 +336,6 @@ main:focus {
 }
 .hero__actions .hero__scroll {
   margin-top: 0;
-}
-.hero__microcopy {
-  margin: 10px 0 0;
-  max-width: 640px;
-  font-family: var(--mono);
-  font-size: 11px;
-  line-height: 1.45;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--ink-mute);
 }
 
 .hero__scroll {
@@ -1212,24 +1181,6 @@ main:focus {
   line-height: 1.45;
   text-align: center;
   color: var(--ink-soft);
-}
-.ticket__ready {
-  margin: 0 0 18px;
-  padding: 16px 18px;
-  background: rgba(122,31,26,0.06);
-  border: 1px solid rgba(122,31,26,0.2);
-  text-align: center;
-}
-.ticket__ready p {
-  margin: 0;
-  font-family: var(--sans);
-  font-size: clamp(14px, 2vw, 15px);
-  line-height: 1.5;
-  color: var(--ink-soft);
-}
-.ticket__ready strong {
-  color: var(--ink);
-  font-weight: 800;
 }
 
 .ticket__features {
@@ -2442,15 +2393,6 @@ main:focus {
   color: #7a1f1a;
   -webkit-text-fill-color: #7a1f1a;
 }
-.testim__disclaimer {
-  margin: calc(-1 * var(--d-stack) + 10px) 0 var(--d-stack);
-  font-family: var(--sans);
-  font-size: 13px;
-  line-height: 1.5;
-  color: #36302a;
-  color: var(--ink-soft);
-  -webkit-text-fill-color: #36302a;
-}
 
 /* v1.165 — Post-click timeline (replaces single-line ticket__postclick) */
 .postclick-timeline {
@@ -2536,10 +2478,7 @@ main:focus {
   .testim__lead,
   .hero__plan li,
   .hero__proof p,
-  .hero__summary p,
-  .ticket__ready p,
   .ticket__decision li,
-  .testim__disclaimer,
   .ticket__lastpay em { color: #36302a !important; -webkit-text-fill-color: #36302a !important; }
   .quiz__legend { color: #1b1714 !important; -webkit-text-fill-color: #1b1714 !important; }
   .price-reality__eyebrow,
@@ -2563,9 +2502,7 @@ main:focus {
   .ticket__decision strong,
   .testim__lead em,
   .quiz__legend em { color: #7a1f1a !important; -webkit-text-fill-color: #7a1f1a !important; }
-  .hero__plan strong,
-  .hero__summary strong,
-  .ticket__ready strong { color: #1b1714 !important; -webkit-text-fill-color: #1b1714 !important; }
+  .hero__plan strong { color: #1b1714 !important; -webkit-text-fill-color: #1b1714 !important; }
   .freestep__note,
   .ticket__postclick,
   .quiz__intro,
