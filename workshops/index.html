@@ -111,6 +111,7 @@
 /* v1.169: port talleres B2B opening — two parallel pain columns (quick-path) + early proofbar replace the old hero; hidden SEO h1 added; jump anchors #workshop-finance/#workshop-enterprise/#mindos. Kicker/list/outcome sizes raised to >=13px/16px to honor min font rule. */
 /* v1.170: min-font legibility floor. Figcaptions raised 12 to 13px (kicker/list/outcome already compliant in v1.169). WhatsApp-preview verified: og:image 200, iOS anti-dark-mode stack intact. */
 /* v1.171: breathing room between the proof bar (quick-proofbar) and the lede; margin-bottom 30px so they no longer touch. */
+/* v1.175 (2026-05-31): replaced disliked Menger pull-quote with the Marx->Menger voyage thesis; added per-workshop subtitles (.ventana-sub) — Workshop 1: chaos/anxiety -> control/confidence; Workshop 2: Marx -> Menger / win-lose -> win-win. */
 /* v1.174 (2026-05-31): USA pricing — one workshop $5,500, both $9,900 (kept under the $10K single-approver threshold); capacity 22-70 + Enterprise for 70+; primary CTA Email (staff@jfcarpio.com) + Calendly secondary; "WhatsApp access" deliverable -> "direct access"; cta-math for 22 people. */
 /* v1.172: soft prompt at the motivation peak (link "Let's talk about where to start" after the projection, jumps to the CTA #lets-talk); secondary CTA points to Calendly /20minutos (matches "Schedule 20 minutes"); essay links open in a new tab (target=_blank rel=noopener) so the reader is not lost. */
 /* v1.173: more human, hypnotic copy in good taste (Joe Vitale, no gimmick): sentence-connector em dashes removed from visible copy and schema. Periods for the beat, colons for the payoff, parentheses for asides. Format/Optional material labels switched to colons. No design or approved-content changes. */
@@ -557,6 +558,12 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 14px; display: block;
 }
 .ventana.ep .ventana-label { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.ventana-sub {
+  font-size: 17px; font-size: clamp(17px, 2vw, 20px); font-weight: 600;
+  font-style: italic; line-height: 1.35; margin: 8px 0 0; display: block;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+}
+.ventana.ep .ventana-sub { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
 
 .h2 {
   font-family: var(--display); font-size: 34px; font-style: italic; font-weight: 400;
@@ -728,7 +735,7 @@ a { text-decoration: none; color: inherit; }
   .h1 { font-size: 84px; }
   .h2 { font-size: 52px; }
   .ventana { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); column-gap: 34px; align-items: start; }
-  .ventana-label, .ventana .h2, .ventana-lede, .program-media, .ensayo-link { grid-column: 1 / -1; }
+  .ventana-label, .ventana .h2, .ventana-sub, .ventana-lede, .program-media, .ensayo-link { grid-column: 1 / -1; }
   .layers { grid-column: 1 / -1; }
   .format { grid-column: span 1; }
   .editorial-band { grid-template-columns: minmax(0, .95fr) minmax(0, .85fr) minmax(0, .95fr); align-items: start; }
@@ -963,8 +970,8 @@ a { text-decoration: none; color: inherit; }
 @media (prefers-color-scheme: dark) {
   html, body { background: var(--bg) !important; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
   h1, h2, h3, p, li, a, span, em, strong, blockquote, figcaption, time, label, dt, dd { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-  .h1 em, .tesis em, .layer-tag, .ventana-label, .ensayo-link, .bio a { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
-  .ventana.ep .layer-tag, .ventana.ep .ventana-label, .ventana.ep .ensayo-link, .eyebrow, .cta-eyebrow { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+  .h1 em, .tesis em, .layer-tag, .ventana-label, .ventana-sub, .ensayo-link, .bio a { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+  .ventana.ep .layer-tag, .ventana.ep .ventana-label, .ventana.ep .ventana-sub, .ventana.ep .ensayo-link, .eyebrow, .cta-eyebrow { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
   .lede, .byline, .ventana-lede, .format, .pull-attr, .topbar-mark, .foot, .foot a { color: var(--ink-2) !important; -webkit-text-fill-color: var(--ink-2) !important; }
   .ventana-lede, .format strong, .layer-body, .layer-body strong, .tesis strong, .bio p, .cta p { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
   .cta-btn, .cta-btn::after { color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; }
@@ -1242,6 +1249,7 @@ a { text-decoration: none; color: inherit; }
   <section class="ventana" id="workshop-finance">
     <span class="ventana-label">Workshop 1 · 2 hours · Standalone</span>
     <h2 class="h2">Money and Personal &amp; Family Finance</h2>
+    <p class="ventana-sub">From financial chaos and anxiety to control and a new confidence.</p>
     <p class="ventana-lede">The participant arrives with an inherited financial system: ideas about money, savings, debt, investment, and family security formed before they had tools to evaluate them.</p>
 
     <ol class="layers">
@@ -1308,6 +1316,7 @@ a { text-decoration: none; color: inherit; }
   <section class="ventana ep" id="workshop-enterprise">
     <span class="ventana-label">Workshop 2 · 2 hours · Standalone</span>
     <h2 class="h2">Appreciation of Private Enterprise</h2>
+    <p class="ventana-sub">From Karl Marx to Carl Menger: from win-lose to win-win.</p>
     <p class="ventana-lede">The inherited operating system, in most cases, is a win-lose frame: the employer wins because the employee loses. It arrives before the contract and is rarely corrected with actual arithmetic.</p>
 
     <ol class="layers">
@@ -1407,8 +1416,7 @@ a { text-decoration: none; color: inherit; }
   <!-- ─── SYNERGY ─── -->
   <section class="tesis">
     <blockquote class="pull">
-      Summarizing Carl Menger in today's language: in a voluntary exchange, each party gives up something they value less than what they receive. That's why the exchange happens.
-      <span class="pull-attr">— Contemporary summary inspired by Carl Menger, <em>Principles of Economics,</em> 1871</span>
+      One program, one voyage: from Karl Marx to Carl Menger. From conflict, win-lose and resentment, to win-win, appreciation and gratitude.
     </blockquote>
     <p>Real transformation doesn't happen because the participant reads a point and thinks "that makes sense." It happens because <strong>during the workshop</strong> they discover those points in their own numbers, with their own calculator, in real time. Their salary, their company, their money, their future: all working differently from what they were taught. And that doesn't get forgotten because it wasn't a motivational directive. It was arithmetic.</p>
   </section>
