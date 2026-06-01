@@ -111,6 +111,7 @@
 /* v1.169: port talleres B2B opening — two parallel pain columns (quick-path) + early proofbar replace the old hero; hidden SEO h1 added; jump anchors #workshop-finance/#workshop-enterprise/#mindos. Kicker/list/outcome sizes raised to >=13px/16px to honor min font rule. */
 /* v1.170: min-font legibility floor. Figcaptions raised 12 to 13px (kicker/list/outcome already compliant in v1.169). WhatsApp-preview verified: og:image 200, iOS anti-dark-mode stack intact. */
 /* v1.171: breathing room between the proof bar (quick-proofbar) and the lede; margin-bottom 30px so they no longer touch. */
+/* v1.184 (2026-06-01): visual de-boring #1 — dramatic hero. The page was flat navy with every h2 at 52px (no hierarchy). New .wk-hero headline clamps to 92px with an orange italic accent, creating a real first-impression moment distinct from section heads. */
 /* v1.183 (2026-06-01): P1 de-boring — converted the static pain-hook into an INTERACTIVE team self-check (checkbox quiz with live count + verdict, las7formas-style, B2B-adapted, glyph eyebrow). */
 /* v1.182 (2026-06-01): P0 elegance — numbered editorial spine (01-08) in eyebrows (.eyebrow b orange number) a la las7formas; MindOS h2 unified to setup + italic payoff pattern. */
 /* v1.181 (2026-06-01): added two real JFC photos (jfc-studio.jpg navy studio, jfc-campo.jpg outdoors) to the proof gallery with the .jfc-grayfade gray->color effect; kept fotojfc. */
@@ -852,6 +853,32 @@ a { text-decoration: none; color: inherit; }
 .tc-count { font-family: var(--display); font-size: 32px; font-weight: 700; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; margin-right: 2px; }
 .tc-verdict { display: block; margin-top: 8px; font-size: 17px; line-height: 1.55; color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important; }
 
+/* ─── DRAMATIC HERO ─── */
+.wk-hero { padding: 26px 0 42px; }
+.wk-hero .eyebrow { margin-bottom: 24px; }
+.wk-hero-h {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 40px;
+  font-size: clamp(40px, 8.5vw, 92px);
+  line-height: 1.02;
+  letter-spacing: -.015em;
+  max-width: 16ch;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+}
+.wk-hero-h em { font-style: italic; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.wk-hero-sub {
+  margin-top: 26px;
+  font-family: var(--sans);
+  font-size: 18px;
+  font-size: clamp(18px, 2.4vw, 21px);
+  line-height: 1.5;
+  max-width: 540px;
+  color: var(--muted) !important;
+  -webkit-text-fill-color: var(--muted) !important;
+}
+
 /* ─── PRICING RACK ─── */
 .pricing-rack { border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; margin-bottom: 28px; }
 .price-anchor { padding: 12px 18px; border-bottom: 1px solid var(--rule); display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
@@ -1067,10 +1094,11 @@ a { text-decoration: none; color: inherit; }
 
   <h1 class="visually-hidden">Corporate behavior-change workshops: personal finance and private-enterprise appreciation</h1>
 
-  <div class="quick-intro" style="margin-bottom:18px">
+  <header class="wk-hero">
     <span class="eyebrow">Corporate Rapid-Change Workshops · 2 hours</span>
-    <h2 class="h2" style="margin-top:10px">Turn your team's money stress into dated, measurable commitments. In two hours, not a wasted day.</h2>
-  </div>
+    <h2 class="wk-hero-h">Turn your team's money stress into <em>dated, measurable commitments.</em></h2>
+    <p class="wk-hero-sub">Two 2-hour workshops. Measured, not motivational. We don't take your team's day, we change how they decide.</p>
+  </header>
 
   <!-- ─── QUICK PATH (B2B opening: two pain columns + early proof) — ported from /talleres v1.171–v1.178 ─── -->
   <section class="quick-path" aria-label="Quick path to decide whether these workshops fit your team">
