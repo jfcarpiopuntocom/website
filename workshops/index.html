@@ -111,6 +111,7 @@
 /* v1.169: port talleres B2B opening — two parallel pain columns (quick-path) + early proofbar replace the old hero; hidden SEO h1 added; jump anchors #workshop-finance/#workshop-enterprise/#mindos. Kicker/list/outcome sizes raised to >=13px/16px to honor min font rule. */
 /* v1.170: min-font legibility floor. Figcaptions raised 12 to 13px (kicker/list/outcome already compliant in v1.169). WhatsApp-preview verified: og:image 200, iOS anti-dark-mode stack intact. */
 /* v1.171: breathing room between the proof bar (quick-proofbar) and the lede; margin-bottom 30px so they no longer touch. */
+/* v1.179 (2026-05-31): applied the index.html grayscale->color hover effect (.jfc-grayfade: grayscale(100%) -> hover grayscale(30%) sepia(15%)) to the two JFC photos (bio + proof-gallery portrait). */
 /* v1.178 (2026-05-31): push to ~90+ — restored JFC photos (small, per request); added visible promise headline above quick-path (clarity lever); added US-companies FAQ converting international track record into a trust asset. */
 /* v1.177 (2026-05-31): removed JFC face photos per request (bio-photo + proof-gallery portrait); rewrote About with confident, charismatic copy using 4 writing frameworks (show-don't-tell specificity, third-party social proof, rule of three, reader-anchored ethos). */
 /* v1.176 (2026-05-31): expanded About/bio with real CV (E-E-A-T fix) — kept low-profile per JFC: degrees (PhD cand. SMC Switzerland, M.E.E. UFM/Boston U), USFQ track founder, 2,500 trained, Florida exec-coaching, book link, Mises contributor; clients as initials + categories; added Pablo Lucio-Paredes (Dir. Institute of Economics USFQ) endorsement pull-quote. */
@@ -819,6 +820,17 @@ a { text-decoration: none; color: inherit; }
 /* ─── BIO WITH PHOTO ─── */
 .bio-flex { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: start; }
 .bio-photo { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 2px solid var(--orange); display: block; }
+.jfc-grayfade {
+  -webkit-filter: grayscale(100%) contrast(1.1);
+  filter: grayscale(100%) contrast(1.1);
+  -webkit-transition: filter .45s ease, -webkit-filter .45s ease;
+  transition: filter .45s ease;
+}
+.jfc-grayfade:hover,
+.proof-gallery figure:hover .jfc-grayfade {
+  -webkit-filter: grayscale(30%) sepia(15%) contrast(1.05);
+  filter: grayscale(30%) sepia(15%) contrast(1.05);
+}
 
 /* ─── PRICING RACK ─── */
 .pricing-rack { border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; margin-bottom: 28px; }
@@ -1456,7 +1468,7 @@ a { text-decoration: none; color: inherit; }
     <div class="proof-gallery" aria-label="Scenes of authority, method, and facilitation">
       <figure>
         <div class="photo-wrap">
-          <img src="https://jfcarpio.com/fotojfc.png" width="512" height="512" loading="lazy" decoding="async" alt="Portrait of Juan Fernando Carpio">
+          <img src="https://jfcarpio.com/fotojfc.png" width="512" height="512" loading="lazy" decoding="async" alt="Portrait of Juan Fernando Carpio" class="jfc-grayfade">
         </div>
         <figcaption>The authority here is not presented as inflated resume copy. It is presented as judgment, teaching, and room experience.</figcaption>
       </figure>
@@ -1498,7 +1510,7 @@ a { text-decoration: none; color: inherit; }
   <!-- ─── BIO ─── -->
   <section class="bio">
     <div class="bio-flex">
-      <img src="https://jfcarpio.com/fotojfc.png" alt="Juan Fernando Carpio" class="bio-photo" width="96" height="96" loading="lazy">
+      <img src="https://jfcarpio.com/fotojfc.png" alt="Juan Fernando Carpio" class="bio-photo jfc-grayfade" width="96" height="96" loading="lazy">
       <div class="bio-text">
         <p><strong>Juan Fernando Carpio</strong> has spent two decades turning economics into decisions people can act on. Fourteen of them in front of a classroom: 4,800+ students at USFQ, the second most-requested professor in the Economics department, where he founded Ecuador's first Austrian and Institutional Economics track. He holds a Master in Entrepreneurial Economics from UFM and Boston University, and is a PhD candidate in Economics in Switzerland.</p>
         <p>Outside the classroom, the same method has trained 2,500 professionals at firms like Mutualista Pichincha, carried 30+ consulting engagements with documented ROI, and coached executives in a high-level program in Florida. He has translated Hoppe and Kinsella into Spanish, writes for the Mises Institute, and has keynoted Forum da Liberdade in Brazil to an audience of 3,000. His book, <a href="https://jfcarpio.gumroad.com/l/10LeccionesdeEconomia"><em>10 Lecciones de Economía</em></a>, distills the framework your team will sit inside for two hours.</p>
