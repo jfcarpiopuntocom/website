@@ -111,6 +111,7 @@
 /* v1.169: port talleres B2B opening — two parallel pain columns (quick-path) + early proofbar replace the old hero; hidden SEO h1 added; jump anchors #workshop-finance/#workshop-enterprise/#mindos. Kicker/list/outcome sizes raised to >=13px/16px to honor min font rule. */
 /* v1.170: min-font legibility floor. Figcaptions raised 12 to 13px (kicker/list/outcome already compliant in v1.169). WhatsApp-preview verified: og:image 200, iOS anti-dark-mode stack intact. */
 /* v1.171: breathing room between the proof bar (quick-proofbar) and the lede; margin-bottom 30px so they no longer touch. */
+/* v1.183 (2026-06-01): P1 de-boring — converted the static pain-hook into an INTERACTIVE team self-check (checkbox quiz with live count + verdict, las7formas-style, B2B-adapted, glyph eyebrow). */
 /* v1.182 (2026-06-01): P0 elegance — numbered editorial spine (01-08) in eyebrows (.eyebrow b orange number) a la las7formas; MindOS h2 unified to setup + italic payoff pattern. */
 /* v1.181 (2026-06-01): added two real JFC photos (jfc-studio.jpg navy studio, jfc-campo.jpg outdoors) to the proof gallery with the .jfc-grayfade gray->color effect; kept fotojfc. */
 /* v1.180 (2026-05-31): added FAQ reframing the 22-70 cap as the facilitator's favorite format (uses JFC's 3,000-audience / 500-in-a-morning context; "not a limit, it is the ideal") — charisma + objection-handling. */
@@ -835,6 +836,22 @@ a { text-decoration: none; color: inherit; }
   filter: grayscale(30%) sepia(15%) contrast(1.05);
 }
 
+/* ─── TEAM SELF-CHECK (interactive) ─── */
+.teamcheck { margin: 60px 0; }
+.teamcheck .h2 { margin-bottom: 12px; }
+.teamcheck-intro { font-size: 17px; line-height: 1.6; max-width: 640px; color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important; }
+.teamcheck-set { border: 0; padding: 0; margin: 0; min-inline-size: 0; }
+.teamcheck-list { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 10px; }
+.teamcheck-list label { display: flex; gap: 13px; align-items: flex-start; min-height: 44px; padding: 14px 16px; background: var(--card); border: 1px solid var(--rule); border-radius: 12px; cursor: pointer; font-size: 16px; line-height: 1.5; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; transition: border-color .25s ease, background .25s ease; }
+.teamcheck-list label:hover { border-color: var(--green); }
+.teamcheck-list label:has(.tc-box:checked) { border-color: var(--orange); background: #10203A; }
+.tc-box { -webkit-appearance: none; appearance: none; width: 24px; height: 24px; flex: none; margin-top: 1px; border: 2px solid var(--green); border-radius: 6px; background: transparent; cursor: pointer; position: relative; }
+.tc-box:checked { background: var(--green); }
+.tc-box:checked::after { content: "✓"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #060E1D; font-size: 15px; font-weight: 700; }
+.teamcheck-result { margin-top: 22px; font-family: var(--sans); font-size: 18px; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.tc-count { font-family: var(--display); font-size: 32px; font-weight: 700; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; margin-right: 2px; }
+.tc-verdict { display: block; margin-top: 8px; font-size: 17px; line-height: 1.55; color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important; }
+
 /* ─── PRICING RACK ─── */
 .pricing-rack { border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; margin-bottom: 28px; }
 .price-anchor { padding: 12px 18px; border-bottom: 1px solid var(--rule); display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
@@ -1127,17 +1144,23 @@ a { text-decoration: none; color: inherit; }
     </figure>
   </section>
 
-  <!-- ─── PAIN HOOK ─── -->
-  <div class="pain-hook" role="note" aria-label="Signs the problem is already present">
-    <p class="pain-hook-lead">Does your team have the problem without having named it yet?</p>
-    <ul class="pain-signals">
-      <li>Salaries go up and the team's financial stress does not go down.</li>
-      <li>Part of your payroll is disappearing into debt, remittances, housing, or postponed retirement, even if the P&amp;L never labels it that way.</li>
-      <li>People comply, but treat inventory, tools, or margin as if they belonged to somebody else.</li>
-      <li>The last training created enthusiasm, but not one dated decision or one new number.</li>
-    </ul>
-    <p class="pain-hook-out">If any of these scenes feels familiar, there is already an active cost. The problem sits at a deeper brain layer, not in the visible behavior. That is exactly what these workshops address.</p>
-  </div>
+  <!-- ─── TEAM SELF-CHECK (interactive) ─── -->
+  <section class="teamcheck" id="teamcheck" aria-label="A quick self-check for your team">
+    <span class="eyebrow"><b>◐</b> 30-second gut-check</span>
+    <h2 class="h2">How many of these does your team <em>already show?</em></h2>
+    <p class="teamcheck-intro">Check the ones you recognize. Each box is not a confession. It is a coordinate: the moment you see it, you are reading the map instead of standing inside it.</p>
+    <fieldset class="teamcheck-set">
+      <ul class="teamcheck-list">
+        <li><label><input type="checkbox" class="tc-box"><span>Salaries went up, but the team's financial stress did not go down.</span></label></li>
+        <li><label><input type="checkbox" class="tc-box"><span>Money worries visibly follow people into the workday.</span></label></li>
+        <li><label><input type="checkbox" class="tc-box"><span>Part of your payroll quietly disappears into debt, rent, or postponed retirement, even if the P&amp;L never labels it.</span></label></li>
+        <li><label><input type="checkbox" class="tc-box"><span>People treat inventory, tools, or margin as if they belonged to someone else.</span></label></li>
+        <li><label><input type="checkbox" class="tc-box"><span>Salary is read as a stingy concession, not an exchange.</span></label></li>
+        <li><label><input type="checkbox" class="tc-box"><span>The last training created enthusiasm, but not one dated decision.</span></label></li>
+      </ul>
+      <p class="teamcheck-result" data-score="0" aria-live="polite"><span class="tc-count">0</span><span class="tc-of"> of 6 recognized.</span> <span class="tc-verdict">Check the ones you see. Most managers recognize three or four on the first read.</span></p>
+    </fieldset>
+  </section>
 
   <!-- ─── MECHANISM ─── -->
   <section class="mech" aria-label="The mechanism: MindOS" id="mindos">
@@ -1683,6 +1706,29 @@ a { text-decoration: none; color: inherit; }
 </footer>
 
 <script>
+(function(){
+  var boxes = document.querySelectorAll('.tc-box');
+  if (!boxes.length) return;
+  var countEl = document.querySelector('.tc-count');
+  var verdictEl = document.querySelector('.tc-verdict');
+  var resultEl = document.querySelector('.teamcheck-result');
+  var verdicts = {
+    0: "Check the ones you see. Most managers recognize three or four on the first read.",
+    1: "One is already a cost. It is the kind of crack the first workshop closes fastest.",
+    2: "Two is a pattern forming. They tend to move together once the team sees the root.",
+    3: "This is the typical room. The same operating system usually drives most of them.",
+    4: "This is the typical room. The same operating system usually drives most of them.",
+    5: "This is not a talent problem. It is an unexamined operating system.",
+    6: "This is not a talent problem. It is exactly what these two hours rebuild."
+  };
+  function update(){
+    var n = 0; boxes.forEach(function(b){ if (b.checked) n++; });
+    countEl.textContent = n;
+    verdictEl.textContent = verdicts[n];
+    resultEl.setAttribute('data-score', n);
+  }
+  boxes.forEach(function(b){ b.addEventListener('change', update); });
+})();
 (function(){
   var fill = document.getElementById('spFill');
   function onScroll(){
