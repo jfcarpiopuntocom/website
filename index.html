@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es" prefix="og: https://ogp.me/ns#">
 <head>
 <meta charset="UTF-8">
@@ -136,7 +136,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.190 (tighten manifesto column flow) · Last major refactor: 2026-05-31 · Author: JFC + Codex
+  v1.197 (editorial entry and blog/publicaciones fixes) · Last major refactor: 2026-06-01 · Author: JFC + Codex
   WHITE E enhancements: added mix-blend-mode:screen to background images for
   beautiful, visible photography against white background (no more dingy appearance).
 ================================================================================
@@ -2445,7 +2445,7 @@ button { border:none; background:none; font:inherit; }
 }
 .options-cards {
   display:grid !important;
-  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr)) !important;
   gap:0 !important;
   border:1px solid rgba(255,255,255,.16) !important;
   border-top:none !important;
@@ -2644,16 +2644,15 @@ button { border:none; background:none; font:inherit; }
   <canvas id="heroCanvas" width="1869" height="750" style="width: 1869px; height: 750px;"></canvas>
   <div class="hero-layout">
     <div class="hero-in">
-      <p class="hero-kick"><span class="kd"></span><span data-t="kick">Economía aplicada · Instituciones · Empresa privada</span></p>
       <h1 class="hero-h1">
-        <span class="lw"><span class="li"><span data-t="h1_l1a">La expansión de un negocio en </span><span style="color:#E86040" data-t="h1_l1b">Latinoamérica</span></span></span>
-        <span class="lw"><span class="li" data-t="h1_l2">no solo compite por clientes: compite contra reglas cambiantes, crédito escaso y señales mal leídas.</span></span>
-        <span class="lw"><span class="li"><strong><span data-t="h1_l3a">Aquí el ruido del entorno se convierte en </span><span style="color:#E8A020" data-t="h1_l3b">criterio</span><span data-t="h1_l3c"> para decidir.</span></strong></span></span>
+        <span class="lw"><span class="li"><span data-t="h1_l1a">Antes de expandir, endeudarte o contratar, conviene saber </span><span style="color:#E86040" data-t="h1_l1b">qué país real</span></span></span>
+        <span class="lw"><span class="li" data-t="h1_l2">está entrando a tu empresa por la caja, el crédito, la regulación y las ideas de tu equipo.</span></span>
+        <span class="lw"><span class="li"><strong><span data-t="h1_l3a">Ese es el trabajo: convertir entorno, instituciones y experiencia empresarial en </span><span style="color:#E8A020" data-t="h1_l3b">criterio</span><span data-t="h1_l3c">.</span></strong></span></span>
       </h1>
-      <p class="hero-sub" data-t="hero_sub">Para empresarios y clientes privados que necesitan leer caja, incentivos y regulación antes de comprometer capital.</p>
+      <p class="hero-sub" data-t="hero_sub">Ensayos, publicaciones, talleres y herramientas nacidas de una pregunta práctica: cómo proteger la empresa privada cuando el entorno cambia antes que el plan.</p>
       <div class="hero-ctas">
-        <a href="https://www.jfcarpio.com/visorantiquiebra/" class="hero-cta" target="_blank" rel="noopener" data-t="cta_primary">Ver diagnóstico del negocio →</a>
-        <a href="#" onclick="openWA();return false;" class="hero-cta-sec" data-t="cta_sec">Consulta privada para empresa →</a>
+        <a href="https://jfcarpio.com/blog/" class="hero-cta" data-t="cta_primary">Leer ensayos →</a>
+        <a href="https://jfcarpio.com/talleres/" class="hero-cta-sec" data-t="cta_sec">Fortalecer equipos →</a>
       </div>
       <div class="hero-badge">
         <span class="hero-badge-mark" data-t="badge_mark">Campo</span>
@@ -2661,20 +2660,20 @@ button { border:none; background:none; font:inherit; }
       </div>
     </div>
     <aside class="hero-aside hero-guide">
-      <p class="hero-guide-k" data-t="guide_k">No empieces por admirar una biografía.</p>
-      <h2 class="hero-guide-title" data-t="guide_t">Empieza por el reto más urgente.</h2>
+      <p class="hero-guide-k" data-t="guide_k">No es una página de autoservicio.</p>
+      <h2 class="hero-guide-title" data-t="guide_t">Es una obra aplicada, ordenada por el problema que tienes delante.</h2>
       <div class="guide-list">
         <div class="guide-step">
           <span class="guide-num">01</span>
-          <p class="guide-copy"><strong data-t="guide_1_t">Si falta caja</strong><span data-t="guide_1_b">usa un dashboard.</span></p>
+          <p class="guide-copy"><strong data-t="guide_1_t">Si quieres criterio</strong><span data-t="guide_1_b">lee los ensayos y publicaciones.</span></p>
         </div>
         <div class="guide-step">
           <span class="guide-num">02</span>
-          <p class="guide-copy"><strong data-t="guide_2_t">Si el entorno cambió</strong><span data-t="guide_2_b">lee un reporte.</span></p>
+          <p class="guide-copy"><strong data-t="guide_2_t">Si el equipo arrastra malas ideas</strong><span data-t="guide_2_b">fortalécelo con un taller.</span></p>
         </div>
         <div class="guide-step">
           <span class="guide-num">03</span>
-          <p class="guide-copy"><strong data-t="guide_3_t">Si el equipo no entiende</strong><span data-t="guide_3_b">arma un taller.</span></p>
+          <p class="guide-copy"><strong data-t="guide_3_t">Si los números no cuadran</strong><span data-t="guide_3_b">usa una herramienta de diagnóstico.</span></p>
         </div>
       </div>
     </aside>
@@ -2684,38 +2683,43 @@ button { border:none; background:none; font:inherit; }
 <!-- v1.1 CONNECTOR -->
 <div class="connector">
   <div class="connector-line"></div>
-  <span class="connector-lbl" data-t="connector">Recursos para tu negocio</span>
+  <span class="connector-lbl" data-t="connector">Obra, criterio y herramientas</span>
   <div class="connector-line"></div>
 </div>
 
 <!-- 3 OPTIONS STRIP — v1.140 -->
 <div class="options-strip">
   <div class="options-hd">
-    <span class="options-eyebrow" data-t="opt_eyebrow">Mapa de decisión</span>
-    <span class="options-title" data-t="opt_title">Ubica el reto urgente. Escoge la herramienta correcta.</span>
+    <span class="options-eyebrow" data-t="opt_eyebrow">Entrada recomendada</span>
+    <span class="options-title" data-t="opt_title">Empieza por lo que te está costando pensar bien.</span>
   </div>
   <div class="options-context">
-    <p data-t="opt_context_1">Antes de elegir una herramienta conviene ubicar el reto más urgente: proteger inversiones, defender la libertad de producir o leer mejor caja, entorno y equipo.</p>
-    <p data-t="opt_context_2">Trabajo en dos frentes: defensa razonada de la empresa privada y herramientas prácticas para negocios que ya toman decisiones recurrentes.</p>
+    <p data-t="opt_context_1">Algunos llegan por una idea: cómo defender la empresa privada sin repetir consignas. Otros llegan porque el equipo perdió claridad, porque la coyuntura volvió torpe una decisión, o porque los números dejaron de contar una historia honesta.</p>
+    <p data-t="opt_context_2">jfcarpio.com reúne esa obra: ensayos, publicaciones, talleres y herramientas. También trabajo con clientes privados, de forma limitada, cuando el problema exige investigación y criterio aplicado.</p>
   </div>
   <div class="decision-statement">
-    <span class="decision-rule" data-t="decision_rule">Regla editorial</span>
-    <strong class="decision-line" data-t="decision_line">La página está organizada como una lectura aplicada de problemas empresariales, no como catálogo de productos.</strong>
+    <span class="decision-rule" data-t="decision_rule">Cuatro entradas</span>
+    <strong class="decision-line" data-t="decision_line">Leer. Aprender. Fortalecer equipos. Diagnosticar.</strong>
   </div>
   <div class="options-cards">
-    <a class="opt-card" href="https://www.jfcarpio.com/visorantiquiebra/" target="_blank" rel="noopener">
+    <a class="opt-card" href="https://jfcarpio.com/blog/">
       <span class="opt-num">01</span>
-      <span class="opt-stack"><span class="opt-heading" data-t="opt1_h">Diagnostica tu negocio</span><span class="opt-micro" data-t="opt1_micro">en 20 min sabes si estás en zona de riesgo</span></span>
+      <span class="opt-stack"><span class="opt-heading" data-t="opt1_h">Leer</span><span class="opt-micro" data-t="opt1_micro">ensayos sobre empresa privada, instituciones, capital, historia económica y libertad de producir</span></span>
       <span class="opt-arrow">→</span>
     </a>
-    <a class="opt-card" href="https://brilla-group.com/reportes" target="_blank" rel="noopener">
+    <a class="opt-card" href="https://jfcarpio.com/las7formas/">
       <span class="opt-num">02</span>
-      <span class="opt-stack"><span class="opt-heading" data-t="opt2_h">Entiende tu entorno</span><span class="opt-micro" data-t="opt2_micro">un reporte que traduce la macro a una decisión concreta</span></span>
+      <span class="opt-stack"><span class="opt-heading" data-t="opt2_h">Aprender</span><span class="opt-micro" data-t="opt2_micro">un programa para ordenar patrimonio, ahorro, inversión y decisiones financieras personales</span></span>
       <span class="opt-arrow">→</span>
     </a>
     <a class="opt-card" href="https://jfcarpio.com/talleres/">
       <span class="opt-num">03</span>
-      <span class="opt-stack"><span class="opt-heading" data-t="opt3_h">Explora talleres corporativos</span><span class="opt-micro" data-t="opt3_micro">dinero, salario, utilidad y cooperación</span></span>
+      <span class="opt-stack"><span class="opt-heading" data-t="opt3_h">Fortalecer equipos</span><span class="opt-micro" data-t="opt3_micro">talleres sobre dinero, empresa privada, salario, riesgo, utilidad y cooperación</span></span>
+      <span class="opt-arrow">→</span>
+    </a>
+    <a class="opt-card" href="https://www.jfcarpio.com/visorantiquiebra/" target="_blank" rel="noopener">
+      <span class="opt-num">04</span>
+      <span class="opt-stack"><span class="opt-heading" data-t="opt4_h">Diagnosticar</span><span class="opt-micro" data-t="opt4_micro">herramientas prácticas para revisar riesgo, caja, deuda, etapa y fragilidad del negocio</span></span>
       <span class="opt-arrow">→</span>
     </a>
   </div>
@@ -2725,10 +2729,10 @@ button { border:none; background:none; font:inherit; }
 <div class="bento-wrap">
   <div class="bento-hd">
     <div>
-      <span class="bh-sub" data-t="bh_sub">Elige por reto, no por curiosidad</span>
-      <p class="bento-deck" data-t="bento_deck">Cinco entradas para ordenar caja, entorno, equipo, ideas y respaldo formal.</p>
+      <span class="bh-sub" data-t="bh_sub">Archivo aplicado</span>
+      <p class="bento-deck" data-t="bento_deck">Libros, columnas, talleres, reportes y herramientas: no como catálogo de botones, sino como una forma de leer negocios en países complicados.</p>
     </div>
-    <span class="bh-hint" data-t="bh_hint">5 secciones</span>
+    <span class="bh-hint" data-t="bh_hint">5 archivos</span>
   </div>
   <div class="bento" style="--bx: 1042.3666687011719px; --by: 11px;">
 
@@ -2749,7 +2753,7 @@ button { border:none; background:none; font:inherit; }
           <span class="pan-cnt" style="color:#0A9060;" data-target="4">4</span>
         </div>
         <h3 class="pan-title" data-t="p1_title">Dashboards</h3>
-        <p class="pan-desc" data-t="p1_desc">Para dueños y equipos directivos que necesitan leer caja, margen, riesgo y etapa sin adornos.</p>
+        <p class="pan-desc" data-t="p1_desc">Cuando la caja no explica la sensación de avance: margen, deuda, riesgo y etapa puestos en un tablero legible.</p>
         <p class="pan-ladder" data-t="gos_ladder">Empieza donde estás: GROW ($47, meses 0–6) · CROSS (comunitario, meses 6–24, mientras construyes tracción) · SCALE (PRO, cuando llegues ahí).</p>
       </div>
       <div class="pan-items">
@@ -2772,7 +2776,7 @@ button { border:none; background:none; font:inherit; }
           <span class="pan-cnt" style="color:#3B7EE8;" data-target="7">7</span>
         </div>
         <h3 class="pan-title" data-t="p2_title">Reportes</h3>
-        <p class="pan-desc" data-t="p2_desc">Macroeconomía, regulación y benchmarks para empresas que necesitan decidir antes de comprometer caja.</p>
+        <p class="pan-desc" data-t="p2_desc">Cuando regulación, crédito, inflación o benchmarks ya cambiaron el terreno y la empresa sigue decidiendo con mapas viejos.</p>
       </div>
       <div class="pan-items">
         <span class="pan-item"><span class="pan-item-tag" style="color:#3B7EE8;">2025 · ENG/SPA</span>Minerales Críticos en América Latina — Riesgo Regulatorio</span>
@@ -2795,7 +2799,7 @@ button { border:none; background:none; font:inherit; }
           <span class="pan-cnt" style="color:#00B0C8;" data-target="2">2</span>
         </div>
         <h3 class="pan-title" data-t="p3_title">Talleres corporativos</h3>
-        <p class="pan-desc" data-t="p3_desc">Talleres in-house y virtuales para equipos: finanzas personales y familiares; apreciación de la empresa privada. Programas para empresas medianas por cotización.</p>
+        <p class="pan-desc" data-t="p3_desc">Cuando el equipo arrastra estrés financiero o ideas antiempresa que dañan foco, activos, salario, utilidad y cooperación.</p>
       </div>
       <div class="pan-items">
         <span class="pan-item"><span class="pan-item-tag" style="color:#00B0C8;">2h</span>Dinero y Finanzas Personales y Familiares — ahorro, inversión y protección patrimonial</span>
@@ -2816,7 +2820,7 @@ button { border:none; background:none; font:inherit; }
           <span class="pan-cnt" style="color:#E8A020;" data-target="48">48</span>
         </div>
         <h3 class="pan-title" data-t="p4_title">Artículos</h3>
-        <p class="pan-desc" data-t="p4_desc">Ensayos de economía, instituciones e historia empresarial para leer mejor el entorno ecuatoriano y latinoamericano.</p>
+        <p class="pan-desc" data-t="p4_desc">Cuando la discusión pública vuelve confuso lo básico: capital, reglas, empresarialidad, inflación, historia y libertad económica.</p>
       </div>
       <div class="pan-items">
         <span class="pan-item"><span class="pan-item-tag" style="color:#E8A020;">Dic 25</span>Litio, Cobre y Poder — 5 lecciones que redefinen el mapa minero de América Latina</span>
@@ -2838,7 +2842,7 @@ button { border:none; background:none; font:inherit; }
           <span class="pan-cnt" style="color:#E86040;" data-target="12">12</span>
         </div>
         <h3 class="pan-title" data-t="p5_title">Publicaciones</h3>
-        <p class="pan-desc" data-t="p5_desc">Libros, papers y columnas. El respaldo formal detrás de cada herramienta.</p>
+        <p class="pan-desc" data-t="p5_desc">Cuando quieres revisar las ideas, fuentes y método detrás de cada herramienta, framework y metodología.</p>
       </div>
       <div class="pan-items">
         <span class="pan-item"><span class="pan-item-tag" style="color:#E86040;">Libro</span>10 Lecciones de Economía</span>
@@ -2892,8 +2896,8 @@ button { border:none; background:none; font:inherit; }
     <p class="copy-p" data-t="cp_or">He tenido la rara fortuna profesional de observar el mismo patrón en entornos muy distintos: familias que intentan conservar lo que ganan, empresas que pelean contra reglas móviles, mercados con crédito caro y países donde la inflación destruye poder adquisitivo sin hacer ruido.</p>
     <p class="copy-p" data-t="cp2">La lección no es dramática; es práctica. El patrimonio se protege antes de que el golpe sea obvio: leyendo moneda, caja, incentivos, regulación y señales del entorno con suficiente anticipación.</p>
     <p class="copy-p" data-t="cp3b">Después de dos décadas entre consultoría, docencia universitaria, investigación y empresa privada, la conclusión es sobria: familias y organizaciones pierden mucho cuando interpretan tarde señales que ya estaban sobre la mesa.</p>
-    <p class="copy-p" data-t="cp4">Aquí esa lectura baja a dos planos: defensa razonada de la empresa privada, protección de inversiones y libertad de producir y crear; y herramientas prácticas para negocios en distintas etapas.</p>
-    <p class="copy-p" data-t="cp5">Durante mi período sabático universitario creé herramientas de apoyo para profesionales independientes y pequeños negocios, y las dejé gratuitas como servicio a la comunidad. Hoy concentro mi trabajo privado en empresas medianas que necesitan criterio económico, tableros, reportes o talleres con aplicación directa.</p>
+    <p class="copy-p" data-t="cp4">Aquí esa lectura baja a dos planos: defensa de la empresarialidad, las economías abiertas, la protección de inversiones y la libertad de producir y crear; y herramientas de apoyo para negocios.</p>
+    <p class="copy-p" data-t="cp5">Durante mi período sabático universitario creé varias herramientas de apoyo a los negocios, y las dejé gratuitas como servicio a la comunidad y a la empresarialidad. Hoy trabajo con clientes privados, de forma limitada.</p>
     <p class="copy-byline">
       <strong>J. F. Carpio</strong> — <span data-t="byline">Patrimonio, instituciones y empresa privada</span>
     </p>
@@ -2945,29 +2949,29 @@ button { border:none; background:none; font:inherit; }
 <!-- CONTACT CARD -->
 <div class="contact-section" id="terminal">
   <div class="section-hd">
-    <span class="section-hd-lbl" data-t="term_lbl">Consulta directa</span>
+    <span class="section-hd-lbl" data-t="term_lbl">Contacto</span>
     <span class="section-hd-title"><span data-t="term_title_a">¿Tienes una </span><span style="color:#E86040" data-t="term_title_b">pregunta</span><span data-t="term_title_c">?</span></span>
   </div>
   <div class="contact-card reveal in">
 
     <!-- Body: chips + textarea + two action buttons -->
     <div class="contact-head-simple">
-      <p class="contact-eyebrow" data-t="contact_eye">Consulta directa · WhatsApp</p>
-      <h3 class="contact-title" data-t="contact_title">Trae una decisión concreta</h3>
-      <p class="contact-sub" data-t="contact_sub">Clientes privados: caja, entorno, equipo, inversión o una decisión de dirección.</p>
+      <p class="contact-eyebrow" data-t="contact_eye">Talleres · Disponibilidad limitada</p>
+      <h3 class="contact-title" data-t="contact_title">Para fortalecer equipos</h3>
+      <p class="contact-sub" data-t="contact_sub">Uso WhatsApp para coordinar talleres corporativos y mensajes puntuales. El resto de recursos del sitio puede revisarse directamente.</p>
     </div>
     <div class="contact-body">
       <div class="contact-routes">
         <div class="route-card">
-          <span class="route-label" data-t="ruta_a_num">Ruta A · 15 min · orientación inicial</span>
-          <h4 class="route-title" data-t="ruta_a_title">Lectura rápida de indicadores</h4>
-          <p class="route-desc" data-t="ruta_a_desc">Trae los números que ya tienes. En 15 minutos vemos qué revelan, qué ocultan y si tiene sentido avanzar a un trabajo privado.</p>
-          <button class="route-btn" onclick="bookReview()" data-t="ruta_a_btn">Solicitar orientación →</button>
+          <span class="route-label" data-t="ruta_a_num">Ruta A · Taller corporativo</span>
+          <h4 class="route-title" data-t="ruta_a_title">Fortalecer equipos</h4>
+          <p class="route-desc" data-t="ruta_a_desc">Para empresas que necesitan trabajar dinero, empresa privada, salario, riesgo, utilidad y cooperación con lenguaje claro.</p>
+          <button class="route-btn" onclick="bookReview()" data-t="ruta_a_btn">Coordinar taller →</button>
         </div>
         <div class="route-card">
-          <span class="route-label" data-t="ruta_b_num">Ruta B · Consulta privada</span>
-          <h4 class="route-title" data-t="ruta_b_title">Ya tienes una decisión de empresa</h4>
-          <p class="route-desc" data-t="ruta_b_desc">Escribe el contexto. Identificamos si el reto pide dashboard, reporte, taller in-house o una conversación privada.</p>
+          <span class="route-label" data-t="ruta_b_num">Ruta B · Mensaje breve</span>
+          <h4 class="route-title" data-t="ruta_b_title">Si el caso no cabe en una herramienta</h4>
+          <p class="route-desc" data-t="ruta_b_desc">Escribe el contexto sin pitch largo. Respondo cuando hay encaje y disponibilidad.</p>
           <button class="route-btn alt" onclick="openWA()" data-t="ruta_b_btn">Abrir WhatsApp →</button>
         </div>
       </div>
@@ -2991,7 +2995,7 @@ button { border:none; background:none; font:inherit; }
       <div class="c-two-btns">
         <button class="c-btn-wa c-btn-direct" onclick="openWA()" data-t="wa_send">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.112 1.523 5.847L.057 23.886c-.083.35.22.666.571.583l6.214-1.432A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.805 9.805 0 01-5.045-1.393l-.361-.215-3.741.862.938-3.634-.236-.374A9.789 9.789 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"></path></svg>
-          <span data-t="wa_send">Solicitar orientación inicial — 15 min →</span>
+          <span data-t="wa_send">Pedir primera lectura — 15 min →</span>
         </button>
         <button class="c-btn-draft" onclick="draftAndSend()" id="draftBtn" data-t="wa_draft">
           <span id="draftSpinner" style="display:none;width:10px;height:10px;border:1.5px solid rgba(0,0,0,.3);border-top-color:#fff;border-radius:50%;-webkit-animation:spin .6s linear infinite;animation:spin .6s linear infinite;"></span>
@@ -3009,7 +3013,7 @@ button { border:none; background:none; font:inherit; }
 <div class="nl-section reveal in">
   <div class="nl-copy">
     <h3 class="nl-title" data-t="nl_title">Lista de correos de jfcarpio.com</h3>
-    <p class="nl-sub" data-t="nl_sub">Ensayos, herramientas comunitarias gratuitas y avisos de nuevos recursos de jfcarpio.com.<br>Plataforma: Gumroad.</p>
+    <p class="nl-sub" data-t="nl_sub">Ensayos, herramientas gratuitas de servicio a la comunidad y a la empresarialidad, y avisos de nuevos recursos de jfcarpio.com.<br>Plataforma: Gumroad.</p>
     <p class="nl-freq" data-t="nl_freq">Frecuencia irregular. Solo cuando hay algo que vale. Baja cuando quieras desde Gumroad.</p>
   </div>
   <div class="nl-form">
@@ -3619,16 +3623,16 @@ var lang='es';
 var T={
   es:{
     kick:'Economía aplicada · Instituciones · Empresa privada',
-    h1_l1a:'La expansión de un negocio en ', h1_l1b:'Latinoamérica',
-    h1_l2:'no solo compite por clientes: compite contra reglas cambiantes, crédito escaso y señales mal leídas.',
-    h1_l3a:'Aquí el ruido del entorno se convierte en ', h1_l3b:'criterio', h1_l3c:' para decidir.',
-    hero_sub:'Para empresarios y clientes privados que necesitan leer caja, incentivos y regulación antes de comprometer capital.',
+    h1_l1a:'Antes de expandir, endeudarte o contratar, conviene saber ', h1_l1b:'qué país real',
+    h1_l2:'está entrando a tu empresa por la caja, el crédito, la regulación y las ideas de tu equipo.',
+    h1_l3a:'Ese es el trabajo: convertir entorno, instituciones y experiencia empresarial en ', h1_l3b:'criterio', h1_l3c:'.',
+    hero_sub:'Ensayos, publicaciones, talleres y herramientas nacidas de una pregunta práctica: cómo proteger la empresa privada cuando el entorno cambia antes que el plan.',
     badge_mark:'Campo',
     badge_copy:'Crisis vividas en 3 países · salarios y ahorros estudiados en 12+',
-    cta_primary:'Ver diagnóstico del negocio →',
-    cta_sec:'Consulta privada para empresa →',
-    connector:'Lecturas y herramientas',
-    bh_sub:'Elige por reto, no por curiosidad', bh_hint:'5 entradas',
+    cta_primary:'Leer ensayos →',
+    cta_sec:'Fortalecer equipos →',
+    connector:'Obra, criterio y herramientas',
+    bh_sub:'Archivo aplicado', bh_hint:'5 archivos',
     ov_lbl:'jfcarpio.com — Navegar',
     ov1_t:'Dashboards',    ov1_sub:'Diagnóstico inmediato · Growth OS',
     ov2_t:'Reportes',      ov2_sub:'Benchmarks y análisis sectoriales',
@@ -3636,50 +3640,52 @@ var T={
     ov4_t:'Artículos',     ov4_sub:'Ensayos de economía, instituciones e historia',
     ov5_t:'Publicaciones', ov5_sub:'Libros, papers y columnas académicas',
     p1_num:'01 — Acción inmediata',   p1_title:'Dashboards',
-    p1_desc:'Para dueños y equipos directivos que necesitan leer caja, margen, riesgo y etapa sin adornos.', p1_tag:'Growth OS',
+    p1_desc:'Cuando la caja no explica la sensación de avance: margen, deuda, riesgo y etapa puestos en un tablero legible.', p1_tag:'Growth OS',
     p2_num:'02 — Entender el contexto', p2_title:'Reportes',
-    p2_desc:'Macroeconomía, regulación y benchmarks para empresas que necesitan decidir antes de comprometer caja.', p2_tag:'6 reportes',
+    p2_desc:'Cuando regulación, crédito, inflación o benchmarks ya cambiaron el terreno y la empresa sigue decidiendo con mapas viejos.', p2_tag:'6 reportes',
     p3_num:'03 — Talleres corporativos virtuales', p3_title:'Talleres corporativos',
-    p3_desc:'Talleres in-house y virtuales para equipos: finanzas personales y familiares; apreciación de la empresa privada. Programas para empresas medianas por cotización.', p3_tag:'Virtual / In-house',
+    p3_desc:'Cuando el equipo arrastra estrés financiero o ideas antiempresa que dañan foco, activos, salario, utilidad y cooperación.', p3_tag:'Virtual / In-house',
     p4_num:'04 — Artículos y ensayos', p4_title:'Artículos',
-    p4_desc:'Ensayos de economía, instituciones e historia para no confundir coyuntura con destino.', p4_tag:'Eleutheros',
+    p4_desc:'Cuando la discusión pública vuelve confuso lo básico: capital, reglas, empresarialidad, inflación, historia y libertad económica.', p4_tag:'Eleutheros',
     p5_num:'05 — Divulgación y académicos', p5_title:'Publicaciones',
-    p5_desc:'Libros, papers y columnas: la cocina intelectual detrás de las herramientas.', p5_tag:'Académico',
+    p5_desc:'Cuando quieres revisar las ideas, fuentes y método detrás de cada herramienta, framework y metodología.', p5_tag:'Académico',
     cp1:'Escribo desde Ecuador, un país donde la moneda ya fue destruida una vez y donde la estabilidad nunca se debe dar por sentada.',
     cp1b:'',
     cp_or:'He tenido la rara fortuna profesional de observar el mismo patrón en entornos muy distintos: familias que intentan conservar lo que ganan, empresas que pelean contra reglas móviles, mercados con crédito caro y países donde la inflación destruye poder adquisitivo sin hacer ruido.',
     cp2:'La lección no es dramática; es práctica. El patrimonio se protege antes de que el golpe sea obvio: leyendo moneda, caja, incentivos, regulación y señales del entorno con suficiente anticipación.',
     cp3a:'',
     cp3b:'Después de dos décadas entre consultoría, docencia universitaria, investigación y empresa privada, la conclusión es sobria: familias y organizaciones pierden mucho cuando interpretan tarde señales que ya estaban sobre la mesa.',
-    cp4:'Aquí esa lectura baja a dos planos: defensa razonada de la empresa privada, protección de inversiones y libertad de producir y crear; y herramientas prácticas para negocios en distintas etapas.',
-    cp5:'Durante mi período sabático universitario creé herramientas de apoyo para profesionales independientes y pequeños negocios, y las dejé gratuitas como servicio a la comunidad. Hoy concentro mi trabajo privado en empresas medianas que necesitan criterio económico, tableros, reportes o talleres con aplicación directa.',
-    guide_k:'No empieces por quién soy.',
-    guide_t:'Empieza por el reto más urgente.',
-    guide_1_t:'Si falta caja',
-    guide_1_b:'mira el tablero.',
-    guide_2_t:'Si el entorno cambió',
-    guide_2_b:'lee el contexto.',
-    guide_3_t:'Si el equipo no entiende',
-    guide_3_b:'arma una sesión.',
+    cp4:'Aquí esa lectura baja a dos planos: defensa de la empresarialidad, las economías abiertas, la protección de inversiones y la libertad de producir y crear; y herramientas de apoyo para negocios.',
+    cp5:'Durante mi período sabático universitario creé varias herramientas de apoyo a los negocios, y las dejé gratuitas como servicio a la comunidad y a la empresarialidad. Hoy trabajo con clientes privados, de forma limitada.',
+    guide_k:'No es una página de autoservicio.',
+    guide_t:'Es una obra aplicada, ordenada por el problema que tienes delante.',
+    guide_1_t:'Si quieres criterio',
+    guide_1_b:'lee los ensayos y publicaciones.',
+    guide_2_t:'Si el equipo arrastra malas ideas',
+    guide_2_b:'fortalécelo con un taller.',
+    guide_3_t:'Si los números no cuadran',
+    guide_3_b:'usa una herramienta de diagnóstico.',
     proof1:'clientes directos', proof2:'estudiantes', proof3:'años en el campo', proof4:'países estudiados',
     proof1_note:'Trabajo aplicado con empresas reales y decisiones de dirección.',
     proof2_note:'Años llevando teoría económica a aula, directorio y decisión.',
     proof3_note:'Investigación, consultoría, formación ejecutiva y empresa privada.',
     proof4_note:'Cómo se destruyen y cómo se protegen salarios, ahorros y patrimonio.',
-    opt_eyebrow:'Mapa de decisión',
-    opt_title:'Ubica el reto urgente. Escoge la herramienta correcta.',
-    opt_context_1:'Antes de elegir una herramienta conviene ubicar el reto más urgente: proteger inversiones, defender la libertad de producir o leer mejor caja, entorno y equipo.',
-    opt_context_2:'Trabajo en dos frentes: defensa razonada de la empresa privada y herramientas prácticas para negocios que ya toman decisiones recurrentes.',
-    decision_rule:'Regla editorial',
-    decision_line:'Un índice de problemas empresariales, leídos desde economía, instituciones y operación.',
-    opt1_h:'Diagnostica tu negocio',
-    opt1_micro:'en 20 min separas señal de ruido',
-    opt2_h:'Entiende tu entorno',
-    opt2_micro:'macro y regulación convertidas en criterio',
-    opt3_h:'Explora talleres corporativos',
-    opt3_micro:'dinero, utilidad, salario y cooperación',
+    opt_eyebrow:'Entrada recomendada',
+    opt_title:'Empieza por lo que te está costando pensar bien.',
+    opt_context_1:'Algunos llegan por una idea: cómo defender la empresa privada sin repetir consignas. Otros llegan porque el equipo perdió claridad, porque la coyuntura volvió torpe una decisión, o porque los números dejaron de contar una historia honesta.',
+    opt_context_2:'jfcarpio.com reúne esa obra: ensayos, publicaciones, talleres y herramientas. También trabajo con clientes privados, de forma limitada, cuando el problema exige investigación y criterio aplicado.',
+    decision_rule:'Cuatro entradas',
+    decision_line:'Leer. Aprender. Fortalecer equipos. Diagnosticar.',
+    opt1_h:'Leer',
+    opt1_micro:'ensayos sobre empresa privada, instituciones, capital, historia económica y libertad de producir',
+    opt2_h:'Aprender',
+    opt2_micro:'un programa para ordenar patrimonio, ahorro, inversión y decisiones financieras personales',
+    opt3_h:'Fortalecer equipos',
+    opt3_micro:'talleres sobre dinero, empresa privada, salario, riesgo, utilidad y cooperación',
+    opt4_h:'Diagnosticar',
+    opt4_micro:'herramientas prácticas para revisar riesgo, caja, deuda, etapa y fragilidad del negocio',
     gos_ladder:'Empieza donde estás: GROW ($47, meses 0–6) · CROSS (comunitario, meses 6–24, mientras construyes tracción) · SCALE (PRO, cuando llegues ahí).',
-    bento_deck:'Cinco entradas: caja, entorno, equipo, ideas y respaldo formal.',
+    bento_deck:'Libros, columnas, talleres, reportes y herramientas: no como catálogo de botones, sino como una forma de leer negocios en países complicados.',
     band_label:'J.F. Carpio · Investigador económico ecuatoriano',
     band_a:'Patrimonio',
     band_b:'Crisis monetarias',
@@ -3709,22 +3715,22 @@ var T={
     tl4_b:'Autor de "10 Lecciones de Economía". Traducción y difusión en español de economía continental europea, con especial atención a la escuela austriaca. Columnista en prensa ecuatoriana.',
     tl5_t:'Formación teórica al servicio de problemas reales',
     tl5_b:'M.E.E. en UFM Guatemala / Boston University. Trabajo doctoral en evolución institucional mengeriana (3 working papers). Aplica la teoría austriaca del capital a problemas de coordinación, inversión y tiempo.',
-    term_lbl:'Consulta directa', term_title_a:'¿Tienes una ', term_title_b:'pregunta', term_title_c:'?',
-    contact_eye:'Consulta directa · WhatsApp',
-    contact_title:'Trae una decisión concreta',
-    contact_sub:'Clientes privados: caja, entorno, equipo, inversión o una decisión de dirección.',
-    ruta_a_num:'Ruta A · 15 min · orientación inicial',
-    ruta_a_title:'Lectura rápida de indicadores',
-    ruta_a_desc:'Trae los números que ya tienes. En 15 minutos vemos qué revelan, qué ocultan y si tiene sentido avanzar a un trabajo privado.',
-    ruta_a_btn:'Solicitar orientación →',
-    ruta_a_msg:'Hola JFC, quisiera solicitar la orientación inicial de 15 min. Mi empresa es: [nombre, sector, etapa].',
-    ruta_b_num:'Ruta B · Consulta privada',
-    ruta_b_title:'Ya tienes una decisión de empresa',
-    ruta_b_desc:'Escribe el contexto. Identificamos si el reto pide dashboard, reporte, taller in-house o una conversación privada.',
+    term_lbl:'Contacto', term_title_a:'¿Tienes una ', term_title_b:'pregunta', term_title_c:'?',
+    contact_eye:'Talleres · Disponibilidad limitada',
+    contact_title:'Para fortalecer equipos',
+    contact_sub:'Uso WhatsApp para coordinar talleres corporativos y mensajes puntuales. El resto de recursos del sitio puede revisarse directamente.',
+    ruta_a_num:'Ruta A · Taller corporativo',
+    ruta_a_title:'Fortalecer equipos',
+    ruta_a_desc:'Para empresas que necesitan trabajar dinero, empresa privada, salario, riesgo, utilidad y cooperación con lenguaje claro.',
+    ruta_a_btn:'Coordinar taller →',
+    ruta_a_msg:'Hola JFC, quisiera coordinar un taller corporativo. Empresa/sector: [nombre, sector]. Equipo aproximado: [número].',
+    ruta_b_num:'Ruta B · Mensaje breve',
+    ruta_b_title:'Si el caso no cabe en una herramienta',
+    ruta_b_desc:'Escribe el contexto sin pitch largo. Respondo cuando hay encaje y disponibilidad.',
     ruta_b_btn:'Abrir WhatsApp →',
     wa_btn:'Escribir ahora',
     wa_btn_s:'WhatsApp',
-    wa_send:'Solicitar orientación inicial — 15 min →',
+    wa_send:'Pedir primera lectura — 15 min →',
     wa_draft:'Draft question',
     wa_confirm:'WhatsApp opened — if it did not load, write to jf@jfcarpio.com',
     c_char_of:'/300',
@@ -3747,23 +3753,23 @@ var T={
     c_scarcity:'Agenda limitada: consulta disponibilidad para talleres y sesiones este mes.',
     term_ph:'Describe tu situación en pocas palabras…', term_btn:'Ejecutar',
     nl_title:'Lista de correos de jfcarpio.com',
-    nl_sub:'Ensayos, herramientas comunitarias gratuitas y avisos de nuevos recursos de jfcarpio.com.<br>Plataforma: Gumroad.',
+    nl_sub:'Ensayos, herramientas gratuitas de servicio a la comunidad y a la empresarialidad, y avisos de nuevos recursos de jfcarpio.com.<br>Plataforma: Gumroad.',
     nl_btn:'Ir a Gumroad →',
     foot_copy:'© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador',
     sys_prompt:'Eres J.F. Carpio, autor e investigador económico ecuatoriano de la escuela austriaca, defensor de la empresa privada, analista de entorno económico-empresarial y creador del Growth OS. Tu marco: precios como computación social, crítica al intervencionismo, defensa del capital productivo. MindOS: Boundary/MRR, Behavior/CAC, Intellect/IDF+RACI, Decision/Semáforo. Responde con criterio económico sólido, sin motivación barata. UNA acción concreta al final. Máximo 4 párrafos. Responde en español.'
   },
   en:{
     kick:'Applied economics · Institutions · Private enterprise',
-    h1_l1a:'Expanding a business in ', h1_l1b:'Latin America',
-    h1_l2:'does not only compete for customers: it competes against changing rules, scarce credit and misread signals.',
-    h1_l3a:'Here environmental noise becomes ', h1_l3b:'judgment', h1_l3c:' for decision.',
-    hero_sub:'For entrepreneurs and private clients who need to read cash, incentives and regulation before committing capital.',
+    h1_l1a:'Before expanding, taking debt or hiring, it helps to know ', h1_l1b:'which real country',
+    h1_l2:'is entering your company through cash, credit, regulation and the ideas inside your team.',
+    h1_l3a:'That is the work: turning environment, institutions and business experience into ', h1_l3b:'judgment', h1_l3c:'.',
+    hero_sub:'Essays, publications, workshops and tools born from a practical question: how to protect private enterprise when the environment changes before the plan.',
     badge_mark:'Fieldwork',
     badge_copy:'Economic crises lived in 3 countries · wages and savings studied in 12+',
-    cta_primary:'See the business diagnosis →',
-    cta_sec:'Private consultation for a company →',
-    connector:'Readings and tools',
-    bh_sub:'Choose by challenge, not curiosity', bh_hint:'5 entries',
+    cta_primary:'Read essays →',
+    cta_sec:'Strengthen teams →',
+    connector:'Work, judgment and tools',
+    bh_sub:'Applied archive', bh_hint:'5 archives',
     ov1_t:'Dashboards',    ov1_sub:'Immediate diagnosis · Growth OS',
     ov_lbl:'jfcarpio.com — Navigate',
     ov2_t:'Reports',       ov2_sub:'Benchmarks and sector analysis',
@@ -3771,49 +3777,51 @@ var T={
     ov4_t:'Articles',      ov4_sub:'Essays on economics, institutions and history',
     ov5_t:'Publications',  ov5_sub:'Books, papers and academic columns',
     p1_num:'01 — Immediate action',    p1_title:'Dashboards',
-    p1_desc:'For owners and management teams that need to read cash, margin, risk and stage without decoration.', p1_tag:'Growth OS',
+    p1_desc:'When cash does not match the feeling of progress: margin, debt, risk and stage placed on a readable dashboard.', p1_tag:'Growth OS',
     p2_num:'02 — Understanding context', p2_title:'Reports',
-    p2_desc:'Macroeconomics, regulation and benchmarks for companies that need to decide before committing cash.', p2_tag:'6 reports',
+    p2_desc:'When regulation, credit, inflation or benchmarks already changed the ground and the company is still deciding with old maps.', p2_tag:'6 reports',
     p3_num:'03 — Corporate workshops', p3_title:'Corporate workshops',
-    p3_desc:'In-house and virtual workshops for teams: personal and family finance; appreciation of private enterprise. Programs for mid-sized companies by quote.', p3_tag:'Virtual / In-house',
+    p3_desc:'When the team carries financial stress or anti-enterprise ideas that damage focus, assets, wages, profit and cooperation.', p3_tag:'Virtual / In-house',
     p4_num:'04 — Articles and essays', p4_title:'Articles',
-    p4_desc:'Essays on economics, institutions and history to avoid mistaking the cycle for destiny.', p4_tag:'Eleutheros',
+    p4_desc:'When public debate makes the basics confusing: capital, rules, entrepreneurship, inflation, history and economic freedom.', p4_tag:'Eleutheros',
     p5_num:'05 — Public and academic', p5_title:'Publications',
-    p5_desc:'Books, papers and columns: the intellectual kitchen behind the tools.', p5_tag:'Academic',
+    p5_desc:'When you want to inspect the ideas, sources and method behind each tool, framework and methodology.', p5_tag:'Academic',
     cp1:'I write from Ecuador, a country where the currency was already destroyed once and stability should never be taken for granted.',
     cp1b:'',
     cp2:'The lesson is not dramatic; it is practical. Wealth is protected before the hit becomes obvious: by reading money, cash, incentives, regulation and environmental signals early enough.',
     cp3a:'',
     cp3b:'After two decades across consulting, university teaching, research and private enterprise, the conclusion is sober: families and organizations lose a lot when they interpret late signals that were already on the table.',
-    cp4:'Here that reading works on two levels: a reasoned defense of private enterprise, investment protection and the freedom to produce and create; and practical tools for businesses at different stages.',
-    cp5:'During my university sabbatical period, I created support tools for independent professionals and small businesses, then left them free as a service to the community. Today my private work focuses on mid-sized companies that need economic judgment, dashboards, reports or workshops with direct application.',
-    guide_k:'Do not start with who I am.',
-    guide_t:'Start with the most urgent challenge.',
-    guide_1_t:'If cash is tight',
-    guide_1_b:'read the board.',
-    guide_2_t:'If the environment changed',
-    guide_2_b:'read the context.',
-    guide_3_t:'If the team does not understand',
-    guide_3_b:'run a session.',
+    cp4:'Here that reading works on two levels: defense of entrepreneurship, open economies, investment protection and the freedom to produce and create; and support tools for businesses.',
+    cp5:'During my university sabbatical period, I created several support tools for businesses, then left them free as a service to the community and to entrepreneurship. Today I work with private clients, in a limited way.',
+    guide_k:'This is not a self-service page.',
+    guide_t:'It is applied work, organized by the problem in front of you.',
+    guide_1_t:'If you want judgment',
+    guide_1_b:'read the essays and publications.',
+    guide_2_t:'If the team carries bad ideas',
+    guide_2_b:'strengthen it with a workshop.',
+    guide_3_t:'If the numbers do not add up',
+    guide_3_b:'use a diagnostic tool.',
     proof1:'direct clients', proof2:'students', proof3:'years in the field', proof4:'countries studied',
     proof1_note:'Applied work with real companies and management decisions.',
     proof2_note:'Years taking economic theory into class, boardroom and decision.',
     proof3_note:'Research, consulting, executive training and private enterprise.',
     proof4_note:'How wages, savings and wealth are destroyed and protected.',
-    opt_eyebrow:'Decision map',
-    opt_title:'Locate the urgent challenge. Choose the right tool.',
-    opt_context_1:'Before choosing a tool, locate the most urgent challenge: protecting investments, defending the freedom to produce, or reading cash, environment and team more clearly.',
-    opt_context_2:'I work on two fronts: a reasoned defense of private enterprise and practical tools for businesses already making recurring decisions.',
-    decision_rule:'Editorial rule',
-    decision_line:'An index of business problems, read through economics, institutions and operation.',
-    opt1_h:'Diagnose your business',
-    opt1_micro:'in 20 min separate signal from noise',
-    opt2_h:'Understand your environment',
-    opt2_micro:'macro and regulation turned into judgment',
-    opt3_h:'Explore corporate workshops',
-    opt3_micro:'money, profit, wages and cooperation',
+    opt_eyebrow:'Recommended entry',
+    opt_title:'Start with what is making it hard to think clearly.',
+    opt_context_1:'Some arrive through an idea: how to defend private enterprise without repeating slogans. Others arrive because the team lost clarity, because the cycle made a decision clumsy, or because the numbers stopped telling an honest story.',
+    opt_context_2:'jfcarpio.com gathers that work: essays, publications, workshops and tools. I also work with private clients, in a limited way, when the problem requires research and applied judgment.',
+    decision_rule:'Four entries',
+    decision_line:'Read. Learn. Strengthen teams. Diagnose.',
+    opt1_h:'Read',
+    opt1_micro:'essays on private enterprise, institutions, capital, economic history and the freedom to produce',
+    opt2_h:'Learn',
+    opt2_micro:'a program to organize wealth, saving, investment and personal financial decisions',
+    opt3_h:'Strengthen teams',
+    opt3_micro:'workshops on money, private enterprise, wages, risk, profit and cooperation',
+    opt4_h:'Diagnose',
+    opt4_micro:'practical tools to review risk, cash, debt, stage and business fragility',
     gos_ladder:'Start where you are: GROW ($47, months 0–6) · CROSS (community edition, months 6–24, while building traction) · SCALE (PRO, when you get there).',
-    bento_deck:'Five entries: cash, environment, team, ideas and formal backing.',
+    bento_deck:'Books, columns, workshops, reports and tools: not as a button catalog, but as a way to read business in complicated countries.',
     band_label:'J.F. Carpio · Ecuadorian economic researcher',
     band_a:'Wealth',
     band_b:'Monetary crises',
@@ -3844,22 +3852,22 @@ var T={
     tl4_b:'Author of "10 Lessons of Economics". Translation and dissemination in Spanish of continental European economics, with special attention to the Austrian school. Columnist in Ecuadorian press.',
     tl5_t:'Theoretical formation in service of real problems',
     tl5_b:'M.E.E. at UFM Guatemala / Boston University. Doctoral work in Mengerian institutional evolution (3 working papers). He applies Austrian capital theory to problems of coordination, investment and time.',
-    term_lbl:'Direct consultation', term_title_a:'Got a ', term_title_b:'question', term_title_c:'?',
-    contact_eye:'Direct consultation · WhatsApp',
-    contact_title:'Bring a concrete decision',
-    contact_sub:'Private clients: cash, environment, team, investment or a management decision.',
-    ruta_a_num:'Path A · 15 min · initial orientation',
-    ruta_a_title:'Quick indicator reading',
-    ruta_a_desc:'Bring the numbers you already have. In 15 minutes we see what they reveal, what they hide and whether private work makes sense.',
-    ruta_a_btn:'Request orientation →',
-    ruta_a_msg:'Hi JFC, I would like to request the initial 15-minute orientation. My company is: [name, sector, stage].',
-    ruta_b_num:'Path B · Private consultation',
-    ruta_b_title:'You already have a company decision',
-    ruta_b_desc:'Send the context. We identify whether the challenge calls for a dashboard, report, in-house workshop or private conversation.',
+    term_lbl:'Contact', term_title_a:'Got a ', term_title_b:'question', term_title_c:'?',
+    contact_eye:'Workshops · Limited availability',
+    contact_title:'For strengthening teams',
+    contact_sub:'I use WhatsApp to coordinate corporate workshops and short messages. The rest of the site resources can be reviewed directly.',
+    ruta_a_num:'Path A · Corporate workshop',
+    ruta_a_title:'Strengthen teams',
+    ruta_a_desc:'For companies that need to work on money, private enterprise, wages, risk, profit and cooperation in clear language.',
+    ruta_a_btn:'Coordinate workshop →',
+    ruta_a_msg:'Hi JFC, I would like to coordinate a corporate workshop. Company/sector: [name, sector]. Approximate team size: [number].',
+    ruta_b_num:'Path B · Short message',
+    ruta_b_title:'If the case does not fit a tool',
+    ruta_b_desc:'Send context without a long pitch. I reply when there is fit and availability.',
     ruta_b_btn:'Open WhatsApp →',
     wa_btn:'Write now',
     wa_btn_s:'WhatsApp',
-    wa_send:'Request initial orientation — 15 min →',
+    wa_send:'Request first reading — 15 min →',
     wa_draft:'Redactar pregunta',
     wa_confirm:'WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
     c_char_of:'/300',
@@ -3882,7 +3890,7 @@ var T={
     c_scarcity:'Limited calendar: ask about availability for workshops and sessions this month.',
     term_ph:'Describe your situation briefly…', term_btn:'Run',
     nl_title:'jfcarpio.com email list',
-    nl_sub:'Essays, free community tools and notices about new jfcarpio.com resources.<br>Platform: Gumroad.',
+    nl_sub:'Essays, free tools in service of the community and entrepreneurship, and notices about new jfcarpio.com resources.<br>Platform: Gumroad.',
     nl_btn:'Go to Gumroad →',
     foot_copy:'© 2026 J.F. Carpio · jfcarpio.com · Quito, Ecuador',
     sys_prompt:'You are J.F. Carpio, an Ecuadorian economic and business researcher in the Austrian tradition, defender of private enterprise, business environment analyst and creator of Growth OS. You also work as a corporate trainer and invited speaker. Your framework: prices as social computation, critique of interventionism, defense of productive capital. MindOS: Boundary/MRR, Behavior/CAC, Intellect/IDF+RACI, Decision/Traffic Light. Answer with sound economic reasoning, no cheap motivation. Always end with ONE concrete action for this week. Maximum 4 paragraphs. Reply in English.'
