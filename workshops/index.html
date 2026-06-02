@@ -111,6 +111,7 @@
 /* v1.169: port talleres B2B opening — two parallel pain columns (quick-path) + early proofbar replace the old hero; hidden SEO h1 added; jump anchors #workshop-finance/#workshop-enterprise/#mindos. Kicker/list/outcome sizes raised to >=13px/16px to honor min font rule. */
 /* v1.170: min-font legibility floor. Figcaptions raised 12 to 13px (kicker/list/outcome already compliant in v1.169). WhatsApp-preview verified: og:image 200, iOS anti-dark-mode stack intact. */
 /* v1.171: breathing room between the proof bar (quick-proofbar) and the lede; margin-bottom 30px so they no longer touch. */
+/* v1.187 (2026-06-01): killed the large sleazy hero; opening is now a restrained consultant-tone question that opens BOTH pain columns ("losing ground: how they handle money, or how they see the company"), max 31px, no orange accent. */
 /* v1.186 (2026-06-01): hero = option 3 question only ("partner, or an adversary that happens to pay them?"); removed the sub and the bridge line JFC rejected; flow is now question -> two pain columns -> rest. Topics are kept separate (only share MindOS). */
 /* v1.185 (2026-06-01): hero reframed per JFC — opens with a GLOBAL question ("Which two costs are already inside your payroll?") covering BOTH domains (personal money + relationship with the company), not just money stress; sub names both; leads straight into the two pain columns. */
 /* v1.184 (2026-06-01): visual de-boring #1 — dramatic hero. The page was flat navy with every h2 at 52px (no hierarchy). New .wk-hero headline clamps to 92px with an orange italic accent, creating a real first-impression moment distinct from section heads. */
@@ -855,30 +856,17 @@ a { text-decoration: none; color: inherit; }
 .tc-count { font-family: var(--display); font-size: 32px; font-weight: 700; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; margin-right: 2px; }
 .tc-verdict { display: block; margin-top: 8px; font-size: 17px; line-height: 1.55; color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important; }
 
-/* ─── DRAMATIC HERO ─── */
-.wk-hero { padding: 26px 0 42px; }
-.wk-hero .eyebrow { margin-bottom: 24px; }
-.wk-hero-h {
+/* ─── OPENING QUESTION (consultant tone, restrained) ─── */
+.wk-open { padding: 22px 0 14px; max-width: 720px; }
+.wk-open .eyebrow { margin-bottom: 18px; }
+.wk-open-q {
   font-family: var(--display);
   font-weight: 400;
-  font-size: 40px;
-  font-size: clamp(40px, 8.5vw, 92px);
-  line-height: 1.02;
-  letter-spacing: -.015em;
-  max-width: 16ch;
+  font-size: 24px;
+  font-size: clamp(24px, 3.2vw, 31px);
+  line-height: 1.34;
   color: var(--ink) !important;
   -webkit-text-fill-color: var(--ink) !important;
-}
-.wk-hero-h em { font-style: italic; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
-.wk-hero-sub {
-  margin-top: 26px;
-  font-family: var(--sans);
-  font-size: 18px;
-  font-size: clamp(18px, 2.4vw, 21px);
-  line-height: 1.5;
-  max-width: 540px;
-  color: var(--muted) !important;
-  -webkit-text-fill-color: var(--muted) !important;
 }
 
 /* ─── PRICING RACK ─── */
@@ -1096,10 +1084,10 @@ a { text-decoration: none; color: inherit; }
 
   <h1 class="visually-hidden">Corporate behavior-change workshops: personal finance and private-enterprise appreciation</h1>
 
-  <header class="wk-hero">
+  <div class="wk-open">
     <span class="eyebrow">Corporate Rapid-Change Workshops · 2 hours</span>
-    <h2 class="wk-hero-h">Does your team see your company as a partner, or <em>an adversary that happens to pay them?</em></h2>
-  </header>
+    <p class="wk-open-q">Where is your team quietly losing ground: in how they handle their own money, or in how they see the company they work for?</p>
+  </div>
 
   <!-- ─── QUICK PATH (B2B opening: two pain columns + early proof) — ported from /talleres v1.171–v1.178 ─── -->
   <section class="quick-path" aria-label="Quick path to decide whether these workshops fit your team">
