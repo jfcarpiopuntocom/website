@@ -105,8 +105,7 @@
 </script>
 
 <style>
-/* jfcarpio.com/workshops v1.191 - 2026-06-02 */
-/* v1.191 (2026-06-02): added early diagnosis CTA, internal-buyer proof language, a buyer-fit grid for CEO/HR/CFO/L&D, and a sharper payroll-leakage opening for USA/global B2B conversion. */
+/* jfcarpio.com/workshops v1.190 - 2026-06-02 */
 /* v1.190 (2026-06-02): repositioned the page as the USA/global flagship, removed the forbidden old label from schema, tightened metadata, and reframed CTA around requesting the team diagnosis. */
 /* v1.167: quantified Fernando Hallo testimonial (+6% financial wellness, team of 25); world cases (PwC/Gallup/McKinsey) + projection, USA-focused for the buyer's team. */
 /* v1.168: deslop of AI-generated blocks (no "isn't X: it's Y" antithesis, no filler); E-E-A-T: jobTitle + knowsAbout on the Service Person for 2026 author SEO. */
@@ -742,9 +741,6 @@ a { text-decoration: none; color: inherit; }
   .hero-gallery .hero-gallery-main .photo-wrap { aspect-ratio: 1 / 1.02; }
   .quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .quick-proofbar { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .quick-decision { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
-  .b2b-proof { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .buyer-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .editorial-band { grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); gap: 18px; }
   .editorial-band .editorial-note { grid-column: 1 / -1; }
   .proof-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
@@ -787,20 +783,6 @@ a { text-decoration: none; color: inherit; }
 .quick-proofmini:nth-child(3) { border-left-color: var(--blue, #3B7EE8); }
 .quick-proofmini strong { display: block; font-family: var(--display); font-size: 28px; line-height: 1; font-style: italic; font-weight: 400; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 6px; }
 .quick-proofmini span { display: block; font-size: 13px; line-height: 1.55; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-.quick-decision { display: grid; gap: 18px; border: 1px solid var(--rule); border-left: 3px solid var(--green); background: linear-gradient(180deg, rgba(40,236,170,.08), rgba(255,255,255,.015)), var(--card); border-radius: 4px; padding: 20px 18px; margin: 0 0 34px; }
-.quick-decision p { font-size: 17px; line-height: 1.65; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin: 0; }
-.quick-decision strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
-.quick-decision .cta-btns { margin-top: 2px; }
-.b2b-proof { display: grid; gap: 16px; margin: 36px 0; }
-.b2b-proof-card { border-top: 1px solid var(--rule); padding-top: 16px; }
-.b2b-proof-kicker { display: block; font-family: var(--mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; margin-bottom: 8px; }
-.b2b-proof-card p { font-size: 16px; line-height: 1.65; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin: 0; }
-.buyer-fit { margin: 44px 0; }
-.buyer-fit .h2 { margin-bottom: 16px; }
-.buyer-grid { display: grid; gap: 12px; }
-.buyer-card { border: 1px solid var(--rule); border-radius: 4px; background: var(--card); padding: 18px 16px; }
-.buyer-card span { display: block; font-family: var(--mono); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; margin-bottom: 8px; }
-.buyer-card p { font-size: 15px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin: 0; }
 
 /* ─── PAIN HOOK ─── */
 .pain-hook {
@@ -1107,7 +1089,7 @@ a { text-decoration: none; color: inherit; }
 
   <div class="wk-open">
     <span class="eyebrow">Corporate Behavior-Change Workshops · 2 hours</span>
-    <p class="wk-open-q">Most training tries to add skills. These two compact interventions remove the belief patterns that keep eating payroll after training ends.</p>
+    <p class="wk-open-q">Two compact interventions for teams losing focus to personal financial stress, or initiative to a cold relationship with the company.</p>
   </div>
 
   <!-- ─── QUICK PATH (B2B opening: two pain columns + early proof) — ported from /talleres v1.171–v1.178 ─── -->
@@ -1155,30 +1137,8 @@ a { text-decoration: none; color: inherit; }
     </div>
   </div>
 
-  <div class="quick-decision" aria-label="Request the short team diagnosis">
-    <p><strong>If one column already sounds familiar, the company is already paying for it.</strong> The first step is not a sales call. It is a short diagnosis: which cost is leaking now, financial stress or low ownership?</p>
-    <div class="cta-btns">
-      <a class="cta-btn" href="mailto:staff@jfcarpio.com?subject=Corporate%20workshop%20team%20diagnosis">Request team diagnosis</a>
-    </div>
-  </div>
-
   <p class="lede">These workshops were built for USA, global, and bilingual teams that already feel the cost in productivity, judgment, and internal climate, even if they haven't named it precisely yet. They are two separate modules: one orders the participant's personal financial life; the other corrects how the team understands salary, the company, profit, risk, and assets. Both run on the same mechanism, <a href="#mindos">MindOS</a>, but they work on different problems and can be booked separately.</p>
   <p class="byline">J.F. Carpio · Business and economic researcher · 2026</p>
-
-  <section class="b2b-proof" aria-label="Why a buyer can defend this internally">
-    <article class="b2b-proof-card">
-      <span class="b2b-proof-kicker">For the business case</span>
-      <p>PwC tracks financial stress as a productivity problem. This page does not ask the company to buy wellness language. It shows where paid attention is being lost.</p>
-    </article>
-    <article class="b2b-proof-card">
-      <span class="b2b-proof-kicker">For the culture case</span>
-      <p>Gallup keeps finding the same pattern: engagement changes performance. The second module works on the economic beliefs that shape ownership, care, and initiative.</p>
-    </article>
-    <article class="b2b-proof-card">
-      <span class="b2b-proof-kicker">For the change case</span>
-      <p>McKinsey's transformation failure point is familiar: processes change, mindset does not. MindOS is the mechanism that keeps this from becoming another two-week enthusiasm spike.</p>
-    </article>
-  </section>
 
   <section class="hero-gallery" aria-label="Scenes of the kind of intervention these workshops create">
     <figure class="hero-gallery-main">
@@ -1256,29 +1216,6 @@ a { text-decoration: none; color: inherit; }
     </div>
   </section>
 
-  <section class="buyer-fit" aria-label="How different internal buyers defend the workshop">
-    <span class="eyebrow">Buyer fit</span>
-    <h2 class="h2">Different executives can defend the same workshop <em>without using the same argument.</em></h2>
-    <div class="buyer-grid">
-      <article class="buyer-card">
-        <span>CEO</span>
-        <p>Payroll leakage, weak initiative, poor ownership, and a colder relationship with the company.</p>
-      </article>
-      <article class="buyer-card">
-        <span>HR / People</span>
-        <p>Financial stress, engagement, retention risk, and a practical intervention that does not infantilize employees.</p>
-      </article>
-      <article class="buyer-card">
-        <span>CFO</span>
-        <p>Paid hours lost to distraction, bad personal-money decisions, and avoidable friction around salary, profit, and margin.</p>
-      </article>
-      <article class="buyer-card">
-        <span>L&amp;D</span>
-        <p>Behavior change with pre-work, a dense two-hour session, homework, and observable exits instead of generic content delivery.</p>
-      </article>
-    </div>
-  </section>
-
   <!-- ─── STATS ─── -->
   <section class="stats" aria-label="Why the investment pays">
     <h2 class="visually-hidden">Why the investment pays</h2>
@@ -1312,8 +1249,9 @@ a { text-decoration: none; color: inherit; }
 
   <!-- ─── THESIS ─── -->
   <section class="tesis">
-    <p>Those numbers do not describe a talent problem. They describe a badly aimed intervention. Most corporate programs teach new skills on top of beliefs no one examined; two weeks later, the old operating system takes back control. <strong>Not for lack of willpower. For lack of intervention at the right brain layer.</strong></p>
-    <p>The correct sequence starts with a recognizable crack: a monthly money habit, or an assumption carried every day about the company. Then the framework enters: <strong>boundary, behavior, intellect, and decision.</strong> The two workshops apply that sequence to personal money and private enterprise. They can be taken separately; together, they reveal the same pattern across both domains.</p>
+    <p>Those numbers do not describe a talent problem. They describe a badly aimed intervention. Nearly every corporate program makes the same mistake: it teaches new skills on top of beliefs that were never examined. The participant practices the technique for two weeks, their environment quietly punishes it, and the old operating system takes back control. Not for lack of willpower. <strong>For lack of intervention at the right brain layer.</strong></p>
+    <p>The correct sequence doesn't start with theory. It starts with a recognizable crack: "this thing I do every month with my money" or "this assumption I carry every day about my company." Only then does it make sense to introduce the framework. Four moves, in order: <strong>boundary, behavior, intellect, and decision.</strong> Break the order and change becomes a speech.</p>
+    <p>The two workshops that follow work two domains where that crack appears quickly: personal money and private enterprise. They can be taken separately. Taken together, the participant discovers something more powerful: the pattern sabotaging a financial decision is usually the same one sabotaging their relationship with the company. That doesn't get preached. It gets made visible.</p>
   </section>
 
   <hr class="rule">
