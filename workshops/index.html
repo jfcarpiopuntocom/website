@@ -106,6 +106,7 @@
 
 <style>
 /* jfcarpio.com/workshops v1.191 - 2026-06-02 */
+/* v1.192 (2026-06-02): visual depth + 2 minor lifts (no structural change) — body radial-gradient depth (kills flat navy, base+dark), gradient hairline dividers, larger editorial section numerals; surfaced the free-diagnosis + guarantee risk-reversal in the early CTA; removed reader-facing meta-commentary from the closing cta-note. */
 /* v1.191 (2026-06-02): added early diagnosis CTA, internal-buyer proof language, a buyer-fit grid for CEO/HR/CFO/L&D, and a sharper payroll-leakage opening for USA/global B2B conversion. */
 /* v1.190 (2026-06-02): repositioned the page as the USA/global flagship, removed the forbidden old label from schema, tightened metadata, and reframed CTA around requesting the team diagnosis. */
 /* v1.167: quantified Fernando Hallo testimonial (+6% financial wellness, team of 25); world cases (PwC/Gallup/McKinsey) + projection, USA-focused for the buyer's team. */
@@ -161,6 +162,7 @@ html {
 
 body {
   background: var(--bg) !important;
+  background: radial-gradient(135% 85% at 50% -6%, #0D1C34 0%, #081326 32%, var(--bg) 60%) !important;
   color: var(--ink) !important;
   -webkit-text-fill-color: var(--ink) !important;
   font-family: var(--serif);
@@ -421,7 +423,8 @@ a { text-decoration: none; color: inherit; }
 /* ─── SECTION RULE ─── */
 .rule {
   border: none;
-  border-top: 1px solid var(--rule);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rule) 16%, rgba(232,96,64,.30) 50%, var(--rule) 84%, transparent);
   margin: 56px 0;
 }
 
@@ -1031,7 +1034,7 @@ a { text-decoration: none; color: inherit; }
 /* ─── FAQ ─── */
 .faq { max-width: 820px; }
 .faq .eyebrow { margin-bottom: 18px; }
-.eyebrow b { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; font-weight: 700; margin-right: 7px; letter-spacing: .1em; }
+.eyebrow b { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; font-weight: 700; font-size: 1.18em; margin-right: 9px; letter-spacing: .1em; }
 .faq .h2 { margin-bottom: 0; }
 .faq-list { list-style: none; padding: 0; margin: 24px 0 0; }
 .faq-item { border-top: 1px solid var(--rule); padding: 20px 0; }
@@ -1042,7 +1045,8 @@ a { text-decoration: none; color: inherit; }
 
 /* ─── ANTI iOS AUTO-DARK ─── */
 @media (prefers-color-scheme: dark) {
-  html, body { background: var(--bg) !important; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+  html { background: var(--bg) !important; }
+  body { background: radial-gradient(135% 85% at 50% -6%, #0D1C34 0%, #081326 32%, var(--bg) 60%) !important; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
   h1, h2, h3, p, li, a, span, em, strong, blockquote, figcaption, time, label, dt, dd { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
   .h1 em, .tesis em, .layer-tag, .ventana-label, .ventana-sub, .ensayo-link, .bio a { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
   .ventana.ep .layer-tag, .ventana.ep .ventana-label, .ventana.ep .ventana-sub, .ventana.ep .ensayo-link, .eyebrow, .cta-eyebrow { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
@@ -1156,7 +1160,7 @@ a { text-decoration: none; color: inherit; }
   </div>
 
   <div class="quick-decision" aria-label="Request the short team diagnosis">
-    <p><strong>If one column already sounds familiar, the company is already paying for it.</strong> The first step is not a sales call. It is a short diagnosis: which cost is leaking now, financial stress or low ownership?</p>
+    <p><strong>If one column already sounds familiar, the company is already paying for it.</strong> The first step is not a sales call. It is a short diagnosis: which cost is leaking now, financial stress or low ownership? The diagnosis is free, and the work carries a guarantee: if the first session produces no observable change, the second is at no charge.</p>
     <div class="cta-btns">
       <a class="cta-btn" href="mailto:staff@jfcarpio.com?subject=Corporate%20workshop%20team%20diagnosis">Request team diagnosis</a>
     </div>
@@ -1693,7 +1697,7 @@ a { text-decoration: none; color: inherit; }
       </div>
       <div class="price-guarantee">Guarantee: if no observable change in the team, the second session is at no charge.</div>
     </div>
-    <p class="cta-note">If you made it this far with one less objection, notice what just happened: the page did not only explain MindOS. It moved you through boundary, behavior, intellect, and decision. That is exactly what your team will experience, with their own numbers.</p>
+    <p class="cta-note">In the room, your team goes through exactly this, with their own numbers: boundary, behavior, intellect, and decision, until a dated choice comes out.</p>
     <p class="cta-scarcity">I reserve a maximum of 3 corporate workshops per month. The pre-workshop diagnosis is not done in bulk.</p>
     <div class="cta-btns">
       <a class="cta-btn" href="mailto:staff@jfcarpio.com?subject=Corporate%20workshop%20team%20diagnosis">Request team diagnosis</a>
