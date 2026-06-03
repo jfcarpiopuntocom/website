@@ -106,6 +106,7 @@
 
 <style>
 /* jfcarpio.com/workshops v1.195 - 2026-06-03 */
+/* v1.197 (2026-06-03): moved the rapid-change sequence (boundary/behavior/intellect/decision) from the end to right after the two pain columns — sells the solution immediately; reframed its heading for that position (no cold MindOS reference) and excluded it from scroll-reveal so it shows instantly near the top. */
 /* v1.196 (2026-06-03): corrected Hallo result to +4% wellbeing/motivation (was +6%/+15%); removed the inflated +15% sales claim; added an honest illustrative-ROI section (two representative scenarios + PwC 3-7hrs and 5-20% study ranges); enriched cta-math with the 5-20% recovery range. */
 /* v1.195 (2026-06-03): replaced the closing room-timeline with a sales-oriented MindOS timeline explaining why two hours can move behavior quickly. */
 /* v1.194 (2026-06-03): added closing room-timeline after FAQ to replace blank space with real delivery formats and JFC's 22-70 interaction preference. */
@@ -1242,6 +1243,41 @@ a { text-decoration: none; color: inherit; }
     </div>
   </section>
 
+  <section class="room-timeline" aria-label="The rapid-change sequence inside the two-hour workshop">
+    <span class="eyebrow">The solution · rapid-change workshops</span>
+    <h2 class="h2">Two hours move behavior because the sequence is right: <em>boundary, behavior, intellect, decision.</em></h2>
+    <div class="room-track">
+      <article class="room-stop">
+        <span class="room-num">01</span>
+        <div class="room-copy">
+          <h3>Boundary</h3>
+          <p>The room stops treating the symptom as normal. Financial stress, resentment, or low ownership becomes visible as a cost already inside payroll.</p>
+        </div>
+      </article>
+      <article class="room-stop">
+        <span class="room-num">02</span>
+        <div class="room-copy">
+          <h3>Behavior</h3>
+          <p>Participants identify the repeated action: the debt decision, the money habit, the asset-care problem, the way salary or profit is being read.</p>
+        </div>
+      </article>
+      <article class="room-stop">
+        <span class="room-num">03</span>
+        <div class="room-copy">
+          <h3>Intellect</h3>
+          <p>Only then does the economic explanation enter. It sticks because the participant has already seen where the old belief was costing them.</p>
+        </div>
+      </article>
+      <article class="room-stop">
+        <span class="room-num">04</span>
+        <div class="room-copy">
+          <h3>Decision</h3>
+          <p>The workshop closes with a dated choice: a number, a criterion, a next action. That is why two hours can become observable behavior.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <div class="quick-proofbar" aria-label="Early proof and authority">
     <div class="quick-proofmini">
       <strong>+4%</strong>
@@ -1852,41 +1888,6 @@ a { text-decoration: none; color: inherit; }
     </ul>
   </section>
 
-  <section class="room-timeline" aria-label="MindOS sequence inside the two-hour workshop">
-    <span class="eyebrow">Why two hours can move behavior</span>
-    <h2 class="h2">MindOS works fast because it changes the order: <em>boundary, behavior, intellect, decision.</em></h2>
-    <div class="room-track">
-      <article class="room-stop">
-        <span class="room-num">01</span>
-        <div class="room-copy">
-          <h3>Boundary</h3>
-          <p>The room stops treating the symptom as normal. Financial stress, resentment, or low ownership becomes visible as a cost already inside payroll.</p>
-        </div>
-      </article>
-      <article class="room-stop">
-        <span class="room-num">02</span>
-        <div class="room-copy">
-          <h3>Behavior</h3>
-          <p>Participants identify the repeated action: the debt decision, the money habit, the asset-care problem, the way salary or profit is being read.</p>
-        </div>
-      </article>
-      <article class="room-stop">
-        <span class="room-num">03</span>
-        <div class="room-copy">
-          <h3>Intellect</h3>
-                            <p>Only then does the economic explanation enter. The explanation sticks because the participant has already seen where the old belief was costing them.</p>
-        </div>
-      </article>
-      <article class="room-stop">
-        <span class="room-num">04</span>
-        <div class="room-copy">
-          <h3>Decision</h3>
-          <p>The workshop closes with a dated choice: a number, a criterion, a next action. That is why two hours can become observable behavior.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
 </main>
 
 <footer class="foot">
@@ -1902,7 +1903,7 @@ a { text-decoration: none; color: inherit; }
 <script>
 (function(){
   /* scroll reveal — opt-in only; if this never runs, content stays fully visible */
-  var els = Array.prototype.slice.call(document.querySelectorAll('main > section')).filter(function(el){ return !el.classList.contains('quick-path'); });
+  var els = Array.prototype.slice.call(document.querySelectorAll('main > section')).filter(function(el){ return !el.classList.contains('quick-path') && !el.classList.contains('room-timeline'); });
   if (('IntersectionObserver' in window) && els.length && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
     document.documentElement.classList.add('js-rv');
     els.forEach(function(el){ el.classList.add('rv'); });
