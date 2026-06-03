@@ -106,6 +106,7 @@
 
 <style>
 /* jfcarpio.com/workshops v1.191 - 2026-06-02 */
+/* v1.193 (2026-06-02): magnificent visual layer — full-bleed light/dark bands on .mech (MindOS) and .social-proof (content centered at reading width), plus scroll-reveal motion using the sanctioned js-rv gate (content fully visible without JS; respects reduced-motion). WhatsApp/iOS legibility stack untouched. */
 /* v1.192 (2026-06-02): visual depth + 2 minor lifts (no structural change) — body radial-gradient depth (kills flat navy, base+dark), gradient hairline dividers, larger editorial section numerals; surfaced the free-diagnosis + guarantee risk-reversal in the early CTA; removed reader-facing meta-commentary from the closing cta-note. */
 /* v1.191 (2026-06-02): added early diagnosis CTA, internal-buyer proof language, a buyer-fit grid for CEO/HR/CFO/L&D, and a sharper payroll-leakage opening for USA/global B2B conversion. */
 /* v1.190 (2026-06-02): repositioned the page as the USA/global flagship, removed the forbidden old label from schema, tightened metadata, and reframed CTA around requesting the team diagnosis. */
@@ -1065,6 +1066,27 @@ a { text-decoration: none; color: inherit; }
   .diag-items li::before, .diag-score strong, .cambio-mod, .cambio ul li::before { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
   .cambio.ep .cambio-mod, .cambio.ep ul li::before, .diag-score em { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
 }
+/* ─── FULL-BLEED BANDS (light/dark scroll rhythm) ─── */
+.band {
+  --half: 536px;
+  max-width: 100vw !important;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding-top: 58px;
+  padding-bottom: 58px;
+  padding-left: max(24px, calc(50vw - var(--half)));
+  padding-right: max(24px, calc(50vw - var(--half)));
+  background: var(--card);
+}
+.mech.band { --half: 410px; margin-top: 40px; }
+.social-proof.band { --half: 430px; }
+
+/* ─── SCROLL REVEAL (content visible by default; animates only when js-rv is set) ─── */
+.js-rv .rv { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1); }
+.js-rv .rv-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js-rv .rv { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
 </style>
 
 <script type="application/ld+json">
@@ -1224,7 +1246,7 @@ a { text-decoration: none; color: inherit; }
   </section>
 
   <!-- ─── MECHANISM ─── -->
-  <section class="mech" aria-label="The mechanism: MindOS" id="mindos">
+  <section class="mech band" aria-label="The mechanism: MindOS" id="mindos">
     <span class="eyebrow"><b>01</b> The mechanism</span>
     <h2 class="h2"><span class="mech-name">MindOS</span>: the operating system that decides <em>whether a training sticks, or fades within weeks.</em></h2>
     <p>MindOS is the model developed by psychiatrist Dr. Paul Dobransky on how the mind works. All behavior runs on four brain layers, in order: boundary, behavior, intellect, and decision. Conventional training enters through the intellect with new information, landing on a boundary and beliefs no one examined. That's why it lasts as long as the enthusiasm does. Sustainable intervention respects Dobransky's sequence: from the most foundational brain layer, where the emotional lives, up to the highest, where decisions are made.</p>
@@ -1555,7 +1577,7 @@ a { text-decoration: none; color: inherit; }
   <hr class="rule">
 
   <!-- ─── SOCIAL PROOF ─── -->
-  <section class="social-proof" aria-label="Client and audience experiences">
+  <section class="social-proof band" aria-label="Client and audience experiences">
     <span class="eyebrow"><b>06</b> Who has been through here</span>
     <h2 class="h2">Three instances. <em>One consistent pattern.</em></h2>
 
@@ -1754,6 +1776,18 @@ a { text-decoration: none; color: inherit; }
 </footer>
 
 <script>
+(function(){
+  /* scroll reveal — opt-in only; if this never runs, content stays fully visible */
+  var els = Array.prototype.slice.call(document.querySelectorAll('main > section')).filter(function(el){ return !el.classList.contains('quick-path'); });
+  if (('IntersectionObserver' in window) && els.length && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    document.documentElement.classList.add('js-rv');
+    els.forEach(function(el){ el.classList.add('rv'); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('rv-in'); io.unobserve(e.target); } });
+    }, { threshold: 0.06, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function(el){ io.observe(el); });
+  }
+})();
 (function(){
   var boxes = document.querySelectorAll('.tc-box');
   if (!boxes.length) return;
