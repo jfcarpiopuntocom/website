@@ -106,6 +106,7 @@
 
 <style>
 /* jfcarpio.com/workshops v1.195 - 2026-06-03 */
+/* v1.196 (2026-06-03): corrected Hallo result to +4% wellbeing/motivation (was +6%/+15%); removed the inflated +15% sales claim; added an honest illustrative-ROI section (two representative scenarios + PwC 3-7hrs and 5-20% study ranges); enriched cta-math with the 5-20% recovery range. */
 /* v1.195 (2026-06-03): replaced the closing room-timeline with a sales-oriented MindOS timeline explaining why two hours can move behavior quickly. */
 /* v1.194 (2026-06-03): added closing room-timeline after FAQ to replace blank space with real delivery formats and JFC's 22-70 interaction preference. */
 /* v1.193 (2026-06-02): magnificent visual layer — full-bleed light/dark bands on .mech (MindOS) and .social-proof (content centered at reading width), plus scroll-reveal motion using the sanctioned js-rv gate (content fully visible without JS; respects reduced-motion). WhatsApp/iOS legibility stack untouched. */
@@ -1032,6 +1033,21 @@ a { text-decoration: none; color: inherit; }
 }
 .result-num { font-family: var(--display); font-style: italic; font-weight: 400; font-size: 56px; line-height: 1; color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
 .result-body { font-family: var(--serif); font-size: 18px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+
+/* ─── ILLUSTRATIVE ROI CASES ─── */
+.roi-cases { margin: 44px 0; }
+.roi-cases .h2 { margin-bottom: 12px; }
+.roi-intro { font-size: 16px; line-height: 1.65; max-width: 720px; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.roi-intro strong { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.roi-grid { display: grid; gap: 14px; margin: 22px 0 18px; }
+.roi-card { background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--orange); border-radius: 4px; padding: 18px; }
+.roi-tag { display: block; font-family: var(--mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; margin-bottom: 10px; }
+.roi-card p { font-size: 15.5px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin: 0 0 8px; }
+.roi-card p:last-child { margin-bottom: 0; }
+.roi-card strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.roi-foot { font-size: 14px; line-height: 1.6; font-style: italic; max-width: 720px; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.roi-foot strong { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+@media (min-width: 700px) { .roi-grid { grid-template-columns: 1fr 1fr; } }
 .result-attr { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
 
 /* ─── CTA STACK + MATH + SCARCITY ─── */
@@ -1228,8 +1244,8 @@ a { text-decoration: none; color: inherit; }
 
   <div class="quick-proofbar" aria-label="Early proof and authority">
     <div class="quick-proofmini">
-      <strong>+15%</strong>
-      <span>A sales team raised its results the following half-year.</span>
+      <strong>+4%</strong>
+      <span>measured lift in a 25-person team's wellbeing and motivation (Quito).</span>
     </div>
     <div class="quick-proofmini">
       <strong>4,800+</strong>
@@ -1389,7 +1405,7 @@ a { text-decoration: none; color: inherit; }
 
   <!-- ─── WORLD CASES + PROJECTION (v1.167) ─── -->
   <section class="tesis" aria-label="Global evidence and a projection for your team">
-    <p>PwC measures this in American workers, Gallup across more than a hundred countries, McKinsey across hundreds of corporate transformations. All three land on the same point, and it's the one that moved in Quito: Fernando Hallo's team raised its <strong>financial wellness by 6 points</strong>.</p>
+    <p>PwC measures this in American workers, Gallup across more than a hundred countries, McKinsey across hundreds of corporate transformations. All three land on the same point, and it's the one that moved in Quito: Fernando Hallo's team raised its <strong>wellbeing and general motivation by about 4 points</strong>.</p>
     <p><strong>Projection for your team:</strong> 25 people lose about 3 hours a week to financial stress today (PwC). Recover even part of that and your payroll frees up roughly <strong>150 person-hours a month</strong> you're already paying for. That 6-point lift turns into focused work hours, and it shows up the next two quarters.</p>
     <a href="#lets-talk" class="ensayo-link">Let's talk about where to start →</a>
   </section>
@@ -1589,11 +1605,24 @@ a { text-decoration: none; color: inherit; }
     <a href="/mindos-talleres.html" class="ensayo-link" target="_blank" rel="noopener noreferrer">Read the full essay →</a>
   </section>
 
-  <!-- ─── RESULT CALLOUT ─── -->
-  <section class="result-callout" aria-label="Observed result with a client">
-    <span class="result-num">+15%</span>
-    <p class="result-body">Sounds philosophical? A sales team increased results by 15% the following semester: less demotivation, less distraction. Not because of a passing ovation. The company created performance bonuses because, with the right frame, they finally made sense.</p>
-    <span class="result-attr">Sales team · corporate client</span>
+  <!-- ─── ILLUSTRATIVE ROI ─── -->
+  <section class="roi-cases" aria-label="Illustrative ROI scenarios">
+    <span class="eyebrow"><b>◇</b> The math, illustrated</span>
+    <h2 class="h2">Two representative engagements, <em>run as numbers.</em></h2>
+    <p class="roi-intro">These are illustrative models, not named clients. They are built on published ranges: PwC puts the productivity lost to financial stress at <strong>3 to 7 hours</strong> per employee per week, and studies on financial-wellness and engagement programs report recoveries in the <strong>5–20%</strong> range. The conservative end is enough to pay for the room.</p>
+    <div class="roi-grid">
+      <article class="roi-card">
+        <span class="roi-tag">Scenario A · 40-person team, Texas</span>
+        <p><strong>The leak:</strong> 40 people × 4 distracted hours/week × $55 loaded/hour ≈ <strong>$35,000 a month</strong> in paid attention lost to money stress.</p>
+        <p><strong>The return:</strong> recover just 10% of that and it is ~$3,500/month back. The full program ($9,900) pays back in under three months, then keeps returning.</p>
+      </article>
+      <article class="roi-card">
+        <span class="roi-tag">Scenario B · 60-person team, both modules</span>
+        <p><strong>The leak:</strong> low ownership and resentment about salary, profit, and margin show up as weak discretionary effort, the cost no P&amp;L line names.</p>
+        <p><strong>The return:</strong> lift engaged effort by even 5% (well inside the engagement-to-performance gap Gallup keeps measuring) and the return dwarfs a $9,900 one-time cost.</p>
+      </article>
+    </div>
+    <p class="roi-foot">The one real, measured data point so far: a 25-person team in Quito lifted wellbeing and general motivation by about <strong>4 points</strong> after the session. US numbers will replace these models as the first engagements close.</p>
   </section>
 
   <hr class="rule">
@@ -1647,8 +1676,8 @@ a { text-decoration: none; color: inherit; }
     </blockquote>
 
     <section class="result-callout" aria-label="Measured result on a client's team">
-      <span class="result-num">+6%</span>
-      <p class="result-body">Fernando Hallo measured his 25-person team's financial wellness before and after the workshop. It rose 6 points, in a real company in Quito. It's the same metric U.S. employers track in their financial-wellness programs.</p>
+      <span class="result-num">+4%</span>
+      <p class="result-body">Fernando Hallo measured his 25-person team's wellbeing and general motivation before and after the workshop. It rose about 4 points, in a real company in Quito. Modest, measured, and real, which is exactly why it is worth more than a rounded-up claim.</p>
       <span class="result-attr">Fernando Hallo · team of 25 · Quito, Ecuador · 2024</span>
     </section>
 
@@ -1745,7 +1774,7 @@ a { text-decoration: none; color: inherit; }
   <section class="cta" id="lets-talk">
     <span class="cta-eyebrow">Request the team diagnosis</span>
     <p>If this already sounds like a conversation your company has been postponing, request the short team diagnosis and we will discuss which module has the better ROI right now: personal and family finance, appreciation of private enterprise, or a sequence with both.</p>
-    <p class="cta-math">The average employee loses 3 hours per week to personal financial stress (PwC, <em>Employee Financial Wellness Survey</em>). Twenty-two people, four weeks: <strong>264 hours a month</strong> leaving your payroll. One workshop costs less than two weeks of those hours.</p>
+    <p class="cta-math">The average employee loses 3 hours per week to personal financial stress (PwC, <em>Employee Financial Wellness Survey</em>). Twenty-two people, four weeks: <strong>264 hours a month</strong> leaving your payroll. Recover even <strong>5 to 20%</strong> of that, the range studies put on financial-wellness and engagement programs, and one workshop pays for itself inside the first month.</p>
     <span class="cta-stack-label">What the company receives</span>
     <ul class="cta-stack">
       <li>Pre-workshop team diagnosis: brief survey before the session</li>
