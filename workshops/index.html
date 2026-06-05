@@ -106,6 +106,7 @@
 
 <style>
 /* jfcarpio.com/workshops v1.195 - 2026-06-03 */
+/* v1.203 (2026-06-03): tightened the gap between the agitate line and the rapid-change band (room-timeline margin-top 42-72px -> 14-22px, padding trimmed, wk-open bottom padding 14 -> 4) — it had leftover end-of-page spacing. */
 /* v1.202 (2026-06-03): naming correction per JFC — they are WORKSHOPS, not modules. Renamed all visible "Module A/B" -> "Workshop 1/2" and "module(s)" -> "workshop(s)" across copy, schema, FAQ, pricing, and the wa-message (CSS class names left intact). "financial wellness" confirmed. */
 /* v1.201 (2026-06-03): 15 micro-fixes — killed the stale "180 hours"; +4% -> +4 pts (Hallo measured points, not percent); ROI scenario aligned to the 3h PwC baseline; unified naming to Workshop 1/B (dropped "Workshop 1/2"); voice to third person (epiphany + scarcity); de-duplicated the 4-step re-listings + payroll motif; tightened teamcheck intro, cut "In other words", "same workshop"->"same program", CTA eyebrow de-echoed, closing image de-duplicated. */
 /* v1.200 (2026-06-03): cleaned PAS opening — stripped module talk from the pain columns (removed "What changes" + "See the module" links so Problem stays Problem); unglued the label (now the eyebrow of the solution section, with its own spacing); rewrote the solution intro to actually introduce the product: "Introducing the rapid-change workshops: two hours...". */
@@ -872,8 +873,8 @@ a { text-decoration: none; color: inherit; }
 .room-timeline {
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
-  padding: clamp(34px, 6vw, 58px) 0;
-  margin: clamp(42px, 7vw, 72px) 0 0;
+  padding: clamp(26px, 4.5vw, 40px) 0;
+  margin: clamp(14px, 2.2vw, 22px) 0 0;
 }
 .room-timeline .eyebrow { margin-bottom: 16px; }
 .room-timeline .h2 { margin-bottom: 26px; max-width: 860px; }
@@ -949,7 +950,7 @@ a { text-decoration: none; color: inherit; }
 .tc-verdict { display: block; margin-top: 8px; font-size: 17px; line-height: 1.55; color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important; }
 
 /* ─── OPENING QUESTION (consultant tone, restrained) ─── */
-.wk-open { padding: 22px 0 14px; max-width: 720px; }
+.wk-open { padding: 22px 0 4px; max-width: 720px; }
 .wk-open .eyebrow { margin-bottom: 18px; }
 .wk-open-q {
   font-family: var(--display);
