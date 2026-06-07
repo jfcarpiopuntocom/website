@@ -136,7 +136,7 @@
 /*
 ================================================================================
   jfcarpio.com -- MASTER STYLE BLOCK
-  v1.197 (editorial entry and blog/publicaciones fixes) · Last major refactor: 2026-06-01 · Author: JFC + Codex
+  v1.198 (Bastiat/Mises hero and editorial entry order) · Last major refactor: 2026-06-05 · Author: JFC + Codex
   WHITE E enhancements: added mix-blend-mode:screen to background images for
   beautiful, visible photography against white background (no more dingy appearance).
 ================================================================================
@@ -468,6 +468,43 @@ button { border:none; background:none; font:inherit; }
   margin-bottom:0;
   overflow:hidden;
 }
+.hero-quotes {
+  display:grid;
+  gap:14px;
+  max-width:780px;
+  margin:0 0 24px;
+}
+.hero-quote {
+  position:relative;
+  padding:0 0 0 18px;
+  border-left:3px solid #E8A020;
+}
+.hero-quote:nth-child(2) {
+  border-left-color:#E86040;
+}
+.hero-quote-text {
+  font-family:'Lora',Georgia,serif;
+  font-size:clamp(1.02rem,1.8vw,1.32rem);
+  line-height:1.45;
+  color:#000000;
+  font-style:italic;
+}
+.hero-quote-text strong {
+  color:#000000;
+  font-weight:700;
+  font-style:normal;
+}
+.hero-quote-attr {
+  display:block;
+  margin-top:7px;
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:.82rem;
+  font-weight:700;
+  letter-spacing:.1em;
+  line-height:1.45;
+  text-transform:uppercase;
+  color:#B73318;
+}
 .lw { overflow:hidden; display:block; }
 .li {
   display:block;
@@ -525,6 +562,9 @@ button { border:none; background:none; font:inherit; }
   .hero{padding:64px 7% 38px;background-position:center top;}
   .hero-kick{letter-spacing:.16em;margin-bottom:10px;line-height:1.65;}
   .hero-h1{font-size:clamp(1.45rem,7.25vw,1.98rem);line-height:1.15;letter-spacing:0;}
+  .hero-quotes{gap:12px;margin-bottom:20px;}
+  .hero-quote{padding-left:13px;}
+  .hero-quote-text{font-size:.98rem;line-height:1.5;}
   .hero-sub{font-size:.95rem;line-height:1.55;margin-top:16px;padding-left:13px;}
   .hero-ctas{gap:10px;margin-top:20px;}
   .hero-cta,.hero-cta-sec{padding:10px 14px;line-height:1.35;}
@@ -2644,15 +2684,26 @@ button { border:none; background:none; font:inherit; }
   <canvas id="heroCanvas" width="1869" height="750" style="width: 1869px; height: 750px;"></canvas>
   <div class="hero-layout">
     <div class="hero-in">
+      <div class="hero-quotes" aria-label="Citas sobre empresa privada y propiedad">
+        <blockquote class="hero-quote">
+          <p class="hero-quote-text"><span data-t="quote_bastiat_a">En la guerra, el fuerte se impone al débil;</span><br><span data-t="quote_bastiat_b">en los negocios, </span><strong data-t="quote_bastiat_c">el fuerte imparte fortaleza al débil.</strong></p>
+          <cite class="hero-quote-attr" data-t="quote_bastiat_attr">Frédéric Bastiat</cite>
+        </blockquote>
+        <blockquote class="hero-quote">
+          <p class="hero-quote-text" data-t="quote_mises">La existencia continuada de la sociedad depende de la propiedad privada.</p>
+          <cite class="hero-quote-attr" data-t="quote_mises_attr">Ludwig von Mises</cite>
+        </blockquote>
+      </div>
       <h1 class="hero-h1">
-        <span class="lw"><span class="li"><span data-t="h1_l1a">Antes de expandir, endeudarte o contratar, conviene saber </span><span style="color:#E86040" data-t="h1_l1b">qué país real</span></span></span>
-        <span class="lw"><span class="li" data-t="h1_l2">está entrando a tu empresa por la caja, el crédito, la regulación y las ideas de tu equipo.</span></span>
-        <span class="lw"><span class="li"><strong><span data-t="h1_l3a">Ese es el trabajo: convertir entorno, instituciones y experiencia empresarial en </span><span style="color:#E8A020" data-t="h1_l3b">criterio</span><span data-t="h1_l3c">.</span></strong></span></span>
+        <span class="lw"><span class="li"><span data-t="h1_l1a">Ideas </span><span style="color:#E86040" data-t="h1_l1b">primero</span><span data-t="h1_l1c">.</span></span></span>
+        <span class="lw"><span class="li" data-t="h1_l2">Herramientas después.</span></span>
+        <span class="lw"><span class="li"><strong><span data-t="h1_l3a">Soluciones cuando el problema exige </span><span style="color:#E8A020" data-t="h1_l3b">criterio aplicado</span><span data-t="h1_l3c">.</span></strong></span></span>
       </h1>
-      <p class="hero-sub" data-t="hero_sub">Ensayos, publicaciones, talleres y herramientas nacidas de una pregunta práctica: cómo proteger la empresa privada cuando el entorno cambia antes que el plan.</p>
+      <p class="hero-sub" data-t="hero_sub">jfcarpio.com reúne ensayos, publicaciones, herramientas y trabajo selectivo sobre empresa privada, instituciones, capital, moneda, equipos y decisiones en países donde el entorno cambia antes que el plan.</p>
       <div class="hero-ctas">
-        <a href="https://jfcarpio.com/blog/" class="hero-cta" data-t="cta_primary">Leer ensayos →</a>
-        <a href="https://jfcarpio.com/talleres/" class="hero-cta-sec" data-t="cta_sec">Fortalecer equipos →</a>
+        <a href="https://jfcarpio.com/blog/" class="hero-cta" data-t="cta_primary">Leer el blog →</a>
+        <a href="https://www.jfcarpio.com/visorantiquiebra/" class="hero-cta-sec" target="_blank" rel="noopener" data-t="cta_sec">Explorar herramientas →</a>
+        <a href="https://jfcarpio.com/talleres/" class="hero-cta-sec" data-t="cta_sol">Ver soluciones →</a>
       </div>
       <div class="hero-badge">
         <span class="hero-badge-mark" data-t="badge_mark">Campo</span>
@@ -2660,20 +2711,20 @@ button { border:none; background:none; font:inherit; }
       </div>
     </div>
     <aside class="hero-aside hero-guide">
-      <p class="hero-guide-k" data-t="guide_k">No es una página de autoservicio.</p>
-      <h2 class="hero-guide-title" data-t="guide_t">Es una obra aplicada, ordenada por el problema que tienes delante.</h2>
+      <p class="hero-guide-k" data-t="guide_k">Obra aplicada</p>
+      <h2 class="hero-guide-title" data-t="guide_t">Ideas para entender, herramientas para decidir y soluciones cuando el criterio importa.</h2>
       <div class="guide-list">
         <div class="guide-step">
           <span class="guide-num">01</span>
-          <p class="guide-copy"><strong data-t="guide_1_t">Si quieres criterio</strong><span data-t="guide_1_b">lee los ensayos y publicaciones.</span></p>
+          <p class="guide-copy"><strong data-t="guide_1_t">Blog</strong><span data-t="guide_1_b">ensayos, publicaciones y columnas.</span></p>
         </div>
         <div class="guide-step">
           <span class="guide-num">02</span>
-          <p class="guide-copy"><strong data-t="guide_2_t">Si el equipo arrastra malas ideas</strong><span data-t="guide_2_b">fortalécelo con un taller.</span></p>
+          <p class="guide-copy"><strong data-t="guide_2_t">Herramientas</strong><span data-t="guide_2_b">visores, programas y tableros prácticos.</span></p>
         </div>
         <div class="guide-step">
           <span class="guide-num">03</span>
-          <p class="guide-copy"><strong data-t="guide_3_t">Si los números no cuadran</strong><span data-t="guide_3_b">usa una herramienta de diagnóstico.</span></p>
+          <p class="guide-copy"><strong data-t="guide_3_t">Soluciones</strong><span data-t="guide_3_b">talleres, reportes y trabajo privado selectivo.</span></p>
         </div>
       </div>
     </aside>
@@ -2683,7 +2734,7 @@ button { border:none; background:none; font:inherit; }
 <!-- v1.1 CONNECTOR -->
 <div class="connector">
   <div class="connector-line"></div>
-  <span class="connector-lbl" data-t="connector">Obra, criterio y herramientas</span>
+  <span class="connector-lbl" data-t="connector">Blog · herramientas · soluciones</span>
   <div class="connector-line"></div>
 </div>
 
@@ -2691,35 +2742,30 @@ button { border:none; background:none; font:inherit; }
 <div class="options-strip">
   <div class="options-hd">
     <span class="options-eyebrow" data-t="opt_eyebrow">Entrada recomendada</span>
-    <span class="options-title" data-t="opt_title">Empieza por lo que te está costando pensar bien.</span>
+    <span class="options-title" data-t="opt_title">Empieza por el tipo de lectura que necesitas.</span>
   </div>
   <div class="options-context">
-    <p data-t="opt_context_1">Algunos llegan por una idea: cómo defender la empresa privada sin repetir consignas. Otros llegan porque el equipo perdió claridad, porque la coyuntura volvió torpe una decisión, o porque los números dejaron de contar una historia honesta.</p>
-    <p data-t="opt_context_2">jfcarpio.com reúne esa obra: ensayos, publicaciones, talleres y herramientas. También trabajo con clientes privados, de forma limitada, cuando el problema exige investigación y criterio aplicado.</p>
+    <p data-t="opt_context_1">La primera puerta es intelectual: economía aplicada, historia, empresa privada, capital, instituciones y libertad de producir. Desde ahí nacen las herramientas y las soluciones.</p>
+    <p data-t="opt_context_2">No todo problema necesita contacto directo. Algunos se resuelven leyendo mejor, otros usando una herramienta, y unos pocos exigen investigación, taller o criterio aplicado con JFC.</p>
   </div>
   <div class="decision-statement">
-    <span class="decision-rule" data-t="decision_rule">Cuatro entradas</span>
-    <strong class="decision-line" data-t="decision_line">Leer. Aprender. Fortalecer equipos. Diagnosticar.</strong>
+    <span class="decision-rule" data-t="decision_rule">Tres entradas</span>
+    <strong class="decision-line" data-t="decision_line">Blog. Herramientas. Soluciones.</strong>
   </div>
   <div class="options-cards">
     <a class="opt-card" href="https://jfcarpio.com/blog/">
       <span class="opt-num">01</span>
-      <span class="opt-stack"><span class="opt-heading" data-t="opt1_h">Leer</span><span class="opt-micro" data-t="opt1_micro">ensayos sobre empresa privada, instituciones, capital, historia económica y libertad de producir</span></span>
+      <span class="opt-stack"><span class="opt-heading" data-t="opt1_h">Blog</span><span class="opt-micro" data-t="opt1_micro">ensayos sobre empresa privada, instituciones, capital, historia económica y libertad de producir</span></span>
       <span class="opt-arrow">→</span>
     </a>
-    <a class="opt-card" href="https://jfcarpio.com/las7formas/">
+    <a class="opt-card" href="https://www.jfcarpio.com/visorantiquiebra/" target="_blank" rel="noopener">
       <span class="opt-num">02</span>
-      <span class="opt-stack"><span class="opt-heading" data-t="opt2_h">Aprender</span><span class="opt-micro" data-t="opt2_micro">un programa para ordenar patrimonio, ahorro, inversión y decisiones financieras personales</span></span>
+      <span class="opt-stack"><span class="opt-heading" data-t="opt2_h">Herramientas</span><span class="opt-micro" data-t="opt2_micro">visores, dashboards y programas para ordenar patrimonio, caja, riesgo y decisiones</span></span>
       <span class="opt-arrow">→</span>
     </a>
     <a class="opt-card" href="https://jfcarpio.com/talleres/">
       <span class="opt-num">03</span>
-      <span class="opt-stack"><span class="opt-heading" data-t="opt3_h">Fortalecer equipos</span><span class="opt-micro" data-t="opt3_micro">talleres sobre dinero, empresa privada, salario, riesgo, utilidad y cooperación</span></span>
-      <span class="opt-arrow">→</span>
-    </a>
-    <a class="opt-card" href="https://www.jfcarpio.com/visorantiquiebra/" target="_blank" rel="noopener">
-      <span class="opt-num">04</span>
-      <span class="opt-stack"><span class="opt-heading" data-t="opt4_h">Diagnosticar</span><span class="opt-micro" data-t="opt4_micro">herramientas prácticas para revisar riesgo, caja, deuda, etapa y fragilidad del negocio</span></span>
+      <span class="opt-stack"><span class="opt-heading" data-t="opt3_h">Soluciones</span><span class="opt-micro" data-t="opt3_micro">talleres, reportes y trabajo privado cuando el caso necesita criterio aplicado</span></span>
       <span class="opt-arrow">→</span>
     </a>
   </div>
@@ -3014,7 +3060,7 @@ button { border:none; background:none; font:inherit; }
   <div class="nl-copy">
     <h3 class="nl-title" data-t="nl_title">Lista de correos de jfcarpio.com</h3>
     <p class="nl-sub" data-t="nl_sub">Ensayos, herramientas gratuitas de servicio a la comunidad y a la empresarialidad, y avisos de nuevos recursos de jfcarpio.com.<br>Plataforma: Gumroad.</p>
-    <p class="nl-freq" data-t="nl_freq">Frecuencia irregular. Solo cuando hay algo que vale. Baja cuando quieras desde Gumroad.</p>
+    <p class="nl-freq" data-t="nl_freq">Correos ocasionales sobre economía, empresa y las herramientas del siglo XXI.</p>
   </div>
   <div class="nl-form">
     <a class="nl-submit" href="https://jfcarpio.gumroad.com/" target="_blank" rel="noopener" data-t="nl_btn">Ir a Gumroad →</a>
@@ -3623,15 +3669,22 @@ var lang='es';
 var T={
   es:{
     kick:'Economía aplicada · Instituciones · Empresa privada',
-    h1_l1a:'Antes de expandir, endeudarte o contratar, conviene saber ', h1_l1b:'qué país real',
-    h1_l2:'está entrando a tu empresa por la caja, el crédito, la regulación y las ideas de tu equipo.',
-    h1_l3a:'Ese es el trabajo: convertir entorno, instituciones y experiencia empresarial en ', h1_l3b:'criterio', h1_l3c:'.',
-    hero_sub:'Ensayos, publicaciones, talleres y herramientas nacidas de una pregunta práctica: cómo proteger la empresa privada cuando el entorno cambia antes que el plan.',
+    quote_bastiat_a:'En la guerra, el fuerte se impone al débil;',
+    quote_bastiat_b:'en los negocios, ',
+    quote_bastiat_c:'el fuerte imparte fortaleza al débil.',
+    quote_bastiat_attr:'Frédéric Bastiat',
+    quote_mises:'La existencia continuada de la sociedad depende de la propiedad privada.',
+    quote_mises_attr:'Ludwig von Mises',
+    h1_l1a:'Ideas ', h1_l1b:'primero', h1_l1c:'.',
+    h1_l2:'Herramientas después.',
+    h1_l3a:'Soluciones cuando el problema exige ', h1_l3b:'criterio aplicado', h1_l3c:'.',
+    hero_sub:'jfcarpio.com reúne ensayos, publicaciones, herramientas y trabajo selectivo sobre empresa privada, instituciones, capital, moneda, equipos y decisiones en países donde el entorno cambia antes que el plan.',
     badge_mark:'Campo',
     badge_copy:'Crisis vividas en 3 países · salarios y ahorros estudiados en 12+',
-    cta_primary:'Leer ensayos →',
-    cta_sec:'Fortalecer equipos →',
-    connector:'Obra, criterio y herramientas',
+    cta_primary:'Leer el blog →',
+    cta_sec:'Explorar herramientas →',
+    cta_sol:'Ver soluciones →',
+    connector:'Blog · herramientas · soluciones',
     bh_sub:'Archivo aplicado', bh_hint:'5 archivos',
     ov_lbl:'jfcarpio.com — Navegar',
     ov1_t:'Dashboards',    ov1_sub:'Diagnóstico inmediato · Growth OS',
@@ -3657,31 +3710,31 @@ var T={
     cp3b:'Después de dos décadas entre consultoría, docencia universitaria, investigación y empresa privada, la conclusión es sobria: familias y organizaciones pierden mucho cuando interpretan tarde señales que ya estaban sobre la mesa.',
     cp4:'Aquí esa lectura baja a dos planos: defensa de la empresarialidad, las economías abiertas, la protección de inversiones y la libertad de producir y crear; y herramientas de apoyo para negocios.',
     cp5:'Durante mi período sabático universitario creé varias herramientas de apoyo a los negocios, y las dejé gratuitas como servicio a la comunidad y a la empresarialidad. Hoy trabajo con clientes privados, de forma limitada.',
-    guide_k:'No es una página de autoservicio.',
-    guide_t:'Es una obra aplicada, ordenada por el problema que tienes delante.',
-    guide_1_t:'Si quieres criterio',
-    guide_1_b:'lee los ensayos y publicaciones.',
-    guide_2_t:'Si el equipo arrastra malas ideas',
-    guide_2_b:'fortalécelo con un taller.',
-    guide_3_t:'Si los números no cuadran',
-    guide_3_b:'usa una herramienta de diagnóstico.',
+    guide_k:'Obra aplicada',
+    guide_t:'Ideas para entender, herramientas para decidir y soluciones cuando el criterio importa.',
+    guide_1_t:'Blog',
+    guide_1_b:'ensayos, publicaciones y columnas.',
+    guide_2_t:'Herramientas',
+    guide_2_b:'visores, programas y tableros prácticos.',
+    guide_3_t:'Soluciones',
+    guide_3_b:'talleres, reportes y trabajo privado selectivo.',
     proof1:'clientes directos', proof2:'estudiantes', proof3:'años en el campo', proof4:'países estudiados',
     proof1_note:'Trabajo aplicado con empresas reales y decisiones de dirección.',
     proof2_note:'Años llevando teoría económica a aula, directorio y decisión.',
     proof3_note:'Investigación, consultoría, formación ejecutiva y empresa privada.',
     proof4_note:'Cómo se destruyen y cómo se protegen salarios, ahorros y patrimonio.',
     opt_eyebrow:'Entrada recomendada',
-    opt_title:'Empieza por lo que te está costando pensar bien.',
-    opt_context_1:'Algunos llegan por una idea: cómo defender la empresa privada sin repetir consignas. Otros llegan porque el equipo perdió claridad, porque la coyuntura volvió torpe una decisión, o porque los números dejaron de contar una historia honesta.',
-    opt_context_2:'jfcarpio.com reúne esa obra: ensayos, publicaciones, talleres y herramientas. También trabajo con clientes privados, de forma limitada, cuando el problema exige investigación y criterio aplicado.',
-    decision_rule:'Cuatro entradas',
-    decision_line:'Leer. Aprender. Fortalecer equipos. Diagnosticar.',
-    opt1_h:'Leer',
+    opt_title:'Empieza por el tipo de lectura que necesitas.',
+    opt_context_1:'La primera puerta es intelectual: economía aplicada, historia, empresa privada, capital, instituciones y libertad de producir. Desde ahí nacen las herramientas y las soluciones.',
+    opt_context_2:'No todo problema necesita contacto directo. Algunos se resuelven leyendo mejor, otros usando una herramienta, y unos pocos exigen investigación, taller o criterio aplicado con JFC.',
+    decision_rule:'Tres entradas',
+    decision_line:'Blog. Herramientas. Soluciones.',
+    opt1_h:'Blog',
     opt1_micro:'ensayos sobre empresa privada, instituciones, capital, historia económica y libertad de producir',
-    opt2_h:'Aprender',
-    opt2_micro:'un programa para ordenar patrimonio, ahorro, inversión y decisiones financieras personales',
-    opt3_h:'Fortalecer equipos',
-    opt3_micro:'talleres sobre dinero, empresa privada, salario, riesgo, utilidad y cooperación',
+    opt2_h:'Herramientas',
+    opt2_micro:'visores, dashboards y programas para ordenar patrimonio, caja, riesgo y decisiones',
+    opt3_h:'Soluciones',
+    opt3_micro:'talleres, reportes y trabajo privado cuando el caso necesita criterio aplicado',
     opt4_h:'Diagnosticar',
     opt4_micro:'herramientas prácticas para revisar riesgo, caja, deuda, etapa y fragilidad del negocio',
     gos_ladder:'Empieza donde estás: GROW ($47, meses 0–6) · CROSS (comunitario, meses 6–24, mientras construyes tracción) · SCALE (PRO, cuando llegues ahí).',
@@ -3734,7 +3787,7 @@ var T={
     wa_draft:'Draft question',
     wa_confirm:'WhatsApp opened — if it did not load, write to jf@jfcarpio.com',
     c_char_of:'/300',
-    nl_freq:'Frecuencia irregular. Solo cuando hay algo que vale. Baja cuando quieras desde Gumroad.',
+    nl_freq:'Correos ocasionales sobre economía, empresa y las herramientas del siglo XXI.',
     c_helper:'Escribe el contexto disponible: caja, entorno, equipo, reporte o taller. El segundo botón puede convertirlo en una pregunta más útil.',
     wa_follow:'¿Quieres profundizar?',
     wa_default:'Hola, vengo de jfcarpio.com y tengo una consulta.',
@@ -3760,15 +3813,22 @@ var T={
   },
   en:{
     kick:'Applied economics · Institutions · Private enterprise',
-    h1_l1a:'Before expanding, taking debt or hiring, it helps to know ', h1_l1b:'which real country',
-    h1_l2:'is entering your company through cash, credit, regulation and the ideas inside your team.',
-    h1_l3a:'That is the work: turning environment, institutions and business experience into ', h1_l3b:'judgment', h1_l3c:'.',
-    hero_sub:'Essays, publications, workshops and tools born from a practical question: how to protect private enterprise when the environment changes before the plan.',
+    quote_bastiat_a:'In war, the strong overpower the weak;',
+    quote_bastiat_b:'in business, ',
+    quote_bastiat_c:'the strong impart strength to the weak.',
+    quote_bastiat_attr:'Frédéric Bastiat',
+    quote_mises:'The continued existence of society depends upon private property.',
+    quote_mises_attr:'Ludwig von Mises',
+    h1_l1a:'Ideas ', h1_l1b:'first', h1_l1c:'.',
+    h1_l2:'Tools after that.',
+    h1_l3a:'Solutions when the problem requires ', h1_l3b:'applied judgment', h1_l3c:'.',
+    hero_sub:'jfcarpio.com gathers essays, publications, tools and selective work on private enterprise, institutions, capital, money, teams and decisions in countries where the environment changes before the plan.',
     badge_mark:'Fieldwork',
     badge_copy:'Economic crises lived in 3 countries · wages and savings studied in 12+',
-    cta_primary:'Read essays →',
-    cta_sec:'Strengthen teams →',
-    connector:'Work, judgment and tools',
+    cta_primary:'Read the blog →',
+    cta_sec:'Explore tools →',
+    cta_sol:'See solutions →',
+    connector:'Blog · tools · solutions',
     bh_sub:'Applied archive', bh_hint:'5 archives',
     ov1_t:'Dashboards',    ov1_sub:'Immediate diagnosis · Growth OS',
     ov_lbl:'jfcarpio.com — Navigate',
@@ -3793,31 +3853,31 @@ var T={
     cp3b:'After two decades across consulting, university teaching, research and private enterprise, the conclusion is sober: families and organizations lose a lot when they interpret late signals that were already on the table.',
     cp4:'Here that reading works on two levels: defense of entrepreneurship, open economies, investment protection and the freedom to produce and create; and support tools for businesses.',
     cp5:'During my university sabbatical period, I created several support tools for businesses, then left them free as a service to the community and to entrepreneurship. Today I work with private clients, in a limited way.',
-    guide_k:'This is not a self-service page.',
-    guide_t:'It is applied work, organized by the problem in front of you.',
-    guide_1_t:'If you want judgment',
-    guide_1_b:'read the essays and publications.',
-    guide_2_t:'If the team carries bad ideas',
-    guide_2_b:'strengthen it with a workshop.',
-    guide_3_t:'If the numbers do not add up',
-    guide_3_b:'use a diagnostic tool.',
+    guide_k:'Applied work',
+    guide_t:'Ideas for understanding, tools for deciding and solutions when judgment matters.',
+    guide_1_t:'Blog',
+    guide_1_b:'essays, publications and columns.',
+    guide_2_t:'Tools',
+    guide_2_b:'diagnostic viewers, programs and practical dashboards.',
+    guide_3_t:'Solutions',
+    guide_3_b:'workshops, reports and selective private work.',
     proof1:'direct clients', proof2:'students', proof3:'years in the field', proof4:'countries studied',
     proof1_note:'Applied work with real companies and management decisions.',
     proof2_note:'Years taking economic theory into class, boardroom and decision.',
     proof3_note:'Research, consulting, executive training and private enterprise.',
     proof4_note:'How wages, savings and wealth are destroyed and protected.',
     opt_eyebrow:'Recommended entry',
-    opt_title:'Start with what is making it hard to think clearly.',
-    opt_context_1:'Some arrive through an idea: how to defend private enterprise without repeating slogans. Others arrive because the team lost clarity, because the cycle made a decision clumsy, or because the numbers stopped telling an honest story.',
-    opt_context_2:'jfcarpio.com gathers that work: essays, publications, workshops and tools. I also work with private clients, in a limited way, when the problem requires research and applied judgment.',
-    decision_rule:'Four entries',
-    decision_line:'Read. Learn. Strengthen teams. Diagnose.',
-    opt1_h:'Read',
+    opt_title:'Start with the kind of reading you need.',
+    opt_context_1:'The first door is intellectual: applied economics, history, private enterprise, capital, institutions and the freedom to produce. The tools and solutions grow from there.',
+    opt_context_2:'Not every problem needs direct contact. Some are solved by reading better, others by using a tool, and a few require research, a workshop or applied judgment with JFC.',
+    decision_rule:'Three entries',
+    decision_line:'Blog. Tools. Solutions.',
+    opt1_h:'Blog',
     opt1_micro:'essays on private enterprise, institutions, capital, economic history and the freedom to produce',
-    opt2_h:'Learn',
-    opt2_micro:'a program to organize wealth, saving, investment and personal financial decisions',
-    opt3_h:'Strengthen teams',
-    opt3_micro:'workshops on money, private enterprise, wages, risk, profit and cooperation',
+    opt2_h:'Tools',
+    opt2_micro:'diagnostic viewers, dashboards and programs to organize wealth, cash, risk and decisions',
+    opt3_h:'Solutions',
+    opt3_micro:'workshops, reports and private work when the case needs applied judgment',
     opt4_h:'Diagnose',
     opt4_micro:'practical tools to review risk, cash, debt, stage and business fragility',
     gos_ladder:'Start where you are: GROW ($47, months 0–6) · CROSS (community edition, months 6–24, while building traction) · SCALE (PRO, when you get there).',
@@ -3871,7 +3931,7 @@ var T={
     wa_draft:'Redactar pregunta',
     wa_confirm:'WhatsApp abierto — si no cargó, escríbeme a jf@jfcarpio.com',
     c_char_of:'/300',
-    nl_freq:'Irregular frequency. Only when there is something worth sending. Unsubscribe anytime from Gumroad.',
+    nl_freq:'Occasional emails about economics, business, and the tools of the twenty-first century.',
     c_helper:'Write the available context: cash, environment, team, report, workshop or a company decision. The second button can turn it into a more useful question.',
     wa_follow:'Want to go deeper?',
     wa_default:'Hi, I came from jfcarpio.com and have a question.',
@@ -4123,8 +4183,6 @@ if(!reduced&&window.innerWidth>=860){
 
 })();
 </script>
-
-
 
 
 

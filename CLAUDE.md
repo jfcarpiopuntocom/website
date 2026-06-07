@@ -116,3 +116,4 @@ https://claude.ai/code/session_[ID]
 3. **No unsolicited refactoring.** Only change what was asked.
 4. **No removing backups.** Timestamped files are intentional safety nets.
 5. **Commit after each version bump**, not in bulk.
+6. **Scope promise is a hard contract.** When a plan lists specific files to be touched, ONLY those files may be touched — no exceptions, even if additional files are functionally necessary. If a file outside the stated scope needs to change, STOP. Do not touch it. Tell JFC, get explicit approval, then proceed. Violating a stated scope after JFC approved the plan is the same as acting without approval.
