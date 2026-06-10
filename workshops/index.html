@@ -128,6 +128,10 @@
 /* v1.170: min-font legibility floor. Figcaptions raised 12 to 13px (kicker/list/outcome already compliant in v1.169). WhatsApp-preview verified: og:image 200, iOS anti-dark-mode stack intact. */
 /* v1.171: breathing room between the proof bar (quick-proofbar) and the lede; margin-bottom 30px so they no longer touch. */
 /* v1.189 (2026-06-01): un-rowed JFC's 3 photos (were clustered in the proof-gallery). Distributed: jfc-studio -> bio/About portrait; jfc-campo -> closing-visual before the CTA (last third); fotojfc -> stays alone in the proof-gallery. */
+/* v1.206 (2026-06-10): LIQUID GLASS pass on 4 surfaces only (topbar, stats, MindOS room-stops, pricing). Teamcheck deliberately NOT glassed (checkbox affordance contrast). All rules APPENDED at end of <style> as one block; do not interleave into older sections. */
+/* v1.207 (2026-06-10): DASHING pass (CSS-only, zero copy changes, zero grid/layout changes). Glass+glow film on quick-cards (pain columns: GRID UNTOUCHED, left accent identity kept), proofbar -> display-number glass chips, eyebrows -> glass pills, h2 em glow, photo frames rounded+hover zoom, roi/buyer/b2b cards -> glass with hover lift, pull quotes -> glass slabs, CTA pill radius+glow (button bg colors untouched for contrast safety). Reduced-motion guard + @supports fallback included. */
+/* v1.208 (2026-06-10): SPRINKLE pass — photo redistribution only, zero copy/caption changes. hero-gallery 3->1 (cinematic 21:10 solo); Workshop1 gallery 5->3; Workshop2 gallery 5->3. The 6 freed figures became standalone .sprinkle figures placed by caption theme: charts->before module-map, facilitator->before buyer-fit, piggy->before stats, debt-graphs->between W1/W2, participants->after que-cambia, exec-table->before FAQ. Accent: orange=money theme, sp-green=enterprise/both. */
+/* v1.209 (2026-06-10): GLASS INTENSITY pass ported from JFC's github-glass-badge reference (bubbbly WebGL card). CSS-only re-spec of existing glass surfaces, no new elements: fills .05->.08-.10, borders .12->.26-.45, blur up to 22px, baked-in top lighting gradient (the shader's gradient term as a background layer, NOT a pseudo-element - avoids paint-order/text-wash issues), inner edge ring via second inset shadow (shader's rb2 ring), radii 16->20-26px, drop shadows deepened to 24px/60px class, ambient glow fields boosted so saturate() has color to pull. Own @supports fallback at end. */
 /* v1.188 (2026-06-01): removed the redundant bottom "Quick diagnosis" (.diag) section; kept the interactive top self-check and renamed its eyebrow from "30-second gut-check" to "Where your team actually stands". */
 /* v1.187 (2026-06-01): killed the large sleazy hero; opening is now a restrained consultant-tone question that opens BOTH pain columns ("losing ground: how they handle money, or how they see the company"), max 31px, no orange accent. */
 /* v1.186 (2026-06-01): hero = option 3 question only ("partner, or an adversary that happens to pay them?"); removed the sub and the bridge line JFC rejected; flow is now question -> two pain columns -> rest. Topics are kept separate (only share MindOS). */
@@ -1172,6 +1176,384 @@ a { text-decoration: none; color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .js-rv .rv { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   v1.206 · LIQUID GLASS LAYER (2026-06-10)
+   AI-NOTES — READ BEFORE EDITING, DO NOT DELETE:
+   1. Glass is applied ONLY to: .topbar, .stats cards, .room-stop
+      (MindOS 01-04), and the pricing rack. The .teamcheck checklist
+      is INTENTIONALLY not glassed: its green checkbox states carry
+      meaning and need full contrast. Do not "complete the set."
+   2. Blur is invisible over flat navy. The ::before AMBIENT GLOW
+      fields under .stats / .room-timeline / .pricing-rack are what
+      make the glass read. Removing them kills the whole effect.
+   3. Palette locked to page colors: orange #E86040, green #28ECAA,
+      white. No greys on glass — text stays #FFF / orange / green.
+   4. .room-stop border uses !important on purpose: three breakpoint
+      variants (base / 600px / 900px) re-add divider borders.
+   5. @supports fallback at the bottom gives solid backgrounds to
+      browsers without backdrop-filter. Keep it last in this block.
+   6. Perf: blur ≤18px, saturate ≤160%. Do not raise. Do not add
+      more glass surfaces without removing one.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── 1. Topbar: floating chrome ── */
+.topbar {
+  background: linear-gradient(180deg, rgba(12,22,42,.74), rgba(6,14,29,.52));
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid rgba(255,255,255,.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 8px 24px rgba(0,0,0,.25);
+}
+
+/* ── 2. Ambient glow fields (the light the glass refracts) ── */
+.stats, .pricing-rack, .room-timeline { position: relative; }
+.stats::before, .pricing-rack::before, .room-timeline::before {
+  content: ""; position: absolute; inset: -28px -8px;
+  pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(440px 280px at 12% 18%, rgba(232,96,64,.15), transparent 70%),
+    radial-gradient(480px 300px at 88% 82%, rgba(40,236,170,.11), transparent 70%),
+    radial-gradient(380px 260px at 55% 50%, rgba(255,255,255,.045), transparent 70%);
+}
+.stats > div, .pricing-rack > *, .room-timeline > * { position: relative; z-index: 1; }
+
+/* ── 3. Stats band → three glass cards ── */
+.stats { border-top: none; border-bottom: none; padding: 40px 0; }
+.stats > div {
+  background: rgba(255,255,255,.055);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 18px;
+  padding: 26px 24px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12),
+              inset 0 -1px 0 rgba(255,255,255,.04),
+              0 14px 34px rgba(0,0,0,.30);
+}
+
+/* ── 4. MindOS 01-04 → subtle glass cards ── */
+.room-track { gap: 14px; }
+.room-stop,
+.room-stop:first-child,
+.room-stop:nth-child(odd),
+.room-stop:nth-child(n+3) {
+  border: 1px solid rgba(255,255,255,.11) !important;
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  border-radius: 16px;
+  padding: 22px 20px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.09);
+}
+
+/* ── 5. Pricing rack → glass panels, featured gets the rim light ── */
+.pricing-rack { border: none; overflow: visible; border-radius: 0; }
+.price-anchor {
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  background: rgba(255,255,255,.045);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  margin-bottom: 14px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10);
+}
+.price-options { gap: 14px; }
+.price-opt, .price-opt:last-child {
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 16px;
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(14px) saturate(155%);
+  -webkit-backdrop-filter: blur(14px) saturate(155%);
+  padding: 20px 18px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 12px 30px rgba(0,0,0,.28);
+}
+.price-opt.featured {
+  border-color: rgba(232,96,64,.55);
+  background: linear-gradient(180deg, rgba(232,96,64,.12), rgba(255,255,255,.05));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16),
+              0 0 0 1px rgba(232,96,64,.25),
+              0 16px 40px rgba(232,96,64,.18);
+}
+
+/* ── 6. Fallback: no backdrop-filter → solid panels, identical layout ── */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .topbar { background: rgba(6,14,29,.97); }
+  .stats > div, .price-opt, .price-anchor { background: rgba(13,26,47,.96); }
+  .room-stop, .room-stop:first-child, .room-stop:nth-child(odd), .room-stop:nth-child(n+3) { background: rgba(13,26,47,.96); }
+  .price-opt.featured { background: rgba(38,22,24,.96); }
+}
+/* ═══ END v1.206 LIQUID GLASS LAYER ═══ */
+
+/* ═══════════════════════════════════════════════════════════════
+   v1.207 · DASHING LAYER (2026-06-10)
+   AI-NOTES — READ BEFORE EDITING, DO NOT DELETE:
+   1. PROTECTED: .quick-grid two-column layout (the parallel pain
+      columns) — JFC explicitly requires them side by side at
+      >=600px. This block styles .quick-card SURFACES only and must
+      NEVER set display/grid-template/columns on .quick-grid.
+   2. CSS-only. No copy was added or changed. Keep it that way.
+   3. CTA button BACKGROUND COLORS are deliberately untouched
+      (white-on-orange contrast already tuned). Only radius,
+      shadow, and hover lift were added here.
+   4. .quick-card / .roi-card keep their 3px LEFT accent border
+      (orange = money, green = enterprise). That color coding is
+      a concept, not decoration.
+   5. Text stays #FFF / orange / green / #6BA8FF. No greys.
+   6. All hover transforms are disabled under
+      prefers-reduced-motion. Keep that guard.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── 1. Pain columns: glass film, identity borders kept, grid untouched ── */
+.quick-card {
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255,255,255,.12);
+  border-left: 3px solid var(--orange);
+  border-radius: 16px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 12px 30px rgba(0,0,0,.25);
+}
+.quick-card.ep { border-left-color: var(--green); }
+
+/* ── 2. Early proofbar: numbers become the show ── */
+.quick-proofbar { gap: 14px; border-top: none; padding-top: 4px; }
+.quick-proofmini {
+  border-left: none;
+  padding: 16px 18px;
+  background: rgba(255,255,255,.045);
+  backdrop-filter: blur(10px) saturate(145%);
+  -webkit-backdrop-filter: blur(10px) saturate(145%);
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 14px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.09);
+}
+.quick-proofmini strong {
+  font-size: clamp(34px, 4.4vw, 44px);
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  text-shadow: 0 0 22px rgba(232,96,64,.35);
+}
+.quick-proofmini:nth-child(2) strong {
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
+  text-shadow: 0 0 22px rgba(40,236,170,.30);
+}
+.quick-proofmini:nth-child(3) strong {
+  color: #6BA8FF !important; -webkit-text-fill-color: #6BA8FF !important;
+  text-shadow: 0 0 22px rgba(107,168,255,.30);
+}
+
+/* ── 3. Eyebrows: square tags become glass pills ── */
+.eyebrow {
+  background: rgba(40,236,170,.08);
+  border: 1px solid rgba(40,236,170,.45);
+  border-radius: 999px;
+  padding: 7px 16px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+/* ── 4. Display italics get a soft stage light ── */
+.h2 em { text-shadow: 0 0 26px rgba(232,96,64,.40); }
+
+/* ── 5. Photography: rounded frames + slow hover zoom ── */
+.photo-wrap, .program-media .img-wrap {
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 14px 34px rgba(0,0,0,.32);
+}
+.photo-wrap img, .program-media img { transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.photo-wrap:hover img, .program-media .img-wrap:hover img { transform: scale(1.035); }
+
+/* ── 6. ROI scenarios, buyer-fit, and case cards: glass + hover lift ── */
+.roi-card, .buyer-card, .b2b-proof-card {
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 12px 30px rgba(0,0,0,.25);
+  transition: transform .25s ease, border-color .25s ease;
+}
+.b2b-proof-card { padding: 16px 18px; }
+.roi-card { border-left: 3px solid var(--orange); }
+.roi-card:nth-child(2) { border-left-color: var(--green); }
+.roi-card:hover, .buyer-card:hover, .b2b-proof-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,.28);
+}
+
+/* ── 7. Pull quotes: editorial glass slabs ── */
+.pull {
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  border: 1px solid rgba(255,255,255,.11);
+  border-left: 3px solid var(--orange);
+  border-radius: 16px;
+  padding: 26px 28px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.09);
+}
+
+/* ── 8. CTAs: pill + glow + lift (background colors untouched) ── */
+.cta-btn-primary, a.cta-btn, .cta-btn {
+  border-radius: 999px;
+  box-shadow: 0 10px 26px rgba(232,96,64,.30), inset 0 1px 0 rgba(255,255,255,.28);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.cta-btn-primary:hover, a.cta-btn:hover, .cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(232,96,64,.45), inset 0 1px 0 rgba(255,255,255,.34);
+}
+.cta-btn-secondary {
+  border-radius: 999px;
+  border-color: rgba(255,255,255,.22);
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08); /* overrides .cta-btn orange glow on combined class */
+}
+.cta-btn-secondary:hover { box-shadow: inset 0 1px 0 rgba(255,255,255,.12); }
+
+/* ── 9. Motion respect ── */
+@media (prefers-reduced-motion: reduce) {
+  .photo-wrap img, .program-media img,
+  .roi-card, .buyer-card, .b2b-proof-card,
+  .cta-btn-primary, a.cta-btn, .cta-btn { transition: none; }
+  .photo-wrap:hover img, .program-media .img-wrap:hover img,
+  .roi-card:hover, .buyer-card:hover, .b2b-proof-card:hover,
+  .cta-btn-primary:hover, a.cta-btn:hover, .cta-btn:hover { transform: none; }
+}
+
+/* ── 10. No-backdrop-filter fallback for the new surfaces ── */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .quick-card, .quick-proofmini, .roi-card, .buyer-card,
+  .b2b-proof-card, .pull, .cta-btn-secondary { background: rgba(13,26,47,.96); }
+}
+/* ═══ END v1.207 DASHING LAYER ═══ */
+
+/* ═══════════════════════════════════════════════════════════════
+   v1.208 · SPRINKLE LAYER (2026-06-10)
+   AI-NOTES — READ BEFORE EDITING, DO NOT DELETE:
+   1. Six figures were MOVED (not added/removed) out of the three
+      photo clusters into text-heavy zones. Captions untouched and
+      thematically matched to their new neighbors. Do not re-cluster.
+   2. .sprinkle = standalone cinematic figure (21:9). sp-green flips
+      the caption accent to green for enterprise-themed images
+      (orange = money theme). This follows the page's color concept.
+   3. hero-gallery now holds ONE wide figure; the 1fr override below
+      defeats the old 2-col grid at >=600px. If photos are ever added
+      back there, remove that override first.
+   4. program-media galleries now hold 3 figures each (1 wide + 2):
+      balanced on the 6-col grid. Keep them at 3.
+   ═══════════════════════════════════════════════════════════════ */
+.hero-gallery { grid-template-columns: 1fr; }
+.hero-gallery .hero-gallery-main .photo-wrap { aspect-ratio: 21 / 10; }
+.sprinkle { margin: 52px 0; }
+.sprinkle .photo-wrap { aspect-ratio: 21 / 9; }
+.sprinkle figcaption {
+  display: block;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: .06em;
+  line-height: 1.55;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  border-left: 2px solid var(--orange);
+  padding-left: 10px;
+  margin-top: 12px;
+  max-width: 760px;
+}
+.sprinkle.sp-green figcaption { border-left-color: var(--green); }
+/* ═══ END v1.208 SPRINKLE LAYER ═══ */
+
+/* ═══════════════════════════════════════════════════════════════
+   v1.209 · GLASS INTENSITY LAYER (2026-06-10)
+   Source of the recipe: JFC's github-glass-badge.html reference
+   (WebGL liquid-glass card). The shader itself was NOT ported —
+   wrong tool for a content/SEO page. Its visual terms were:
+     · lighting gradient (brighter above card center)
+         → baked into `background` as a top white gradient layer.
+           DO NOT convert to ::before/::after — positioned pseudos
+           paint over static text and wash it out.
+     · rb2 edge ring → second inset 0 0 0 1px shadow.
+     · bold spec: fill .07-.10, border .30-.45, blur 22, r26.
+   AI-NOTES:
+   1. This layer only RE-SPECS surfaces created in v1.206/v1.207.
+      Selectors must stay in sync with those layers.
+   2. Text colors untouched. No greys. Legibility rule intact.
+   3. Keep the @supports fallback LAST in this layer: the gradient
+      backgrounds here override the older fallbacks in the cascade.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Shared loud-glass recipe on all card surfaces ── */
+.stats > div, .price-opt, .price-anchor,
+.quick-card, .quick-proofmini,
+.roi-card, .buyer-card, .b2b-proof-card,
+.pull, .room-stop,
+.room-stop:first-child, .room-stop:nth-child(odd), .room-stop:nth-child(n+3) {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,0) 46%),
+    rgba(255,255,255,.085);
+  backdrop-filter: blur(20px) saturate(165%);
+  -webkit-backdrop-filter: blur(20px) saturate(165%);
+  border-color: rgba(255,255,255,.30);
+  border-radius: 20px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.38),
+    inset 0 0 0 1px rgba(255,255,255,.07),
+    0 24px 60px rgba(0,0,0,.26);
+}
+/* identity left-accents survive the border-color re-spec */
+.quick-card { border-left: 3px solid var(--orange); }
+.quick-card.ep { border-left-color: var(--green); }
+.roi-card { border-left: 3px solid var(--orange); }
+.roi-card:nth-child(2) { border-left-color: var(--green); }
+.pull { border-left: 3px solid var(--orange); }
+
+/* featured price: loudest object on the page */
+.price-opt.featured {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,0) 46%),
+    linear-gradient(180deg, rgba(232,96,64,.16), rgba(255,255,255,.06));
+  border-color: rgba(232,96,64,.65);
+  border-radius: 24px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.42),
+    inset 0 0 0 1px rgba(232,96,64,.20),
+    0 0 0 1px rgba(232,96,64,.30),
+    0 26px 64px rgba(232,96,64,.22);
+}
+
+/* topbar: deeper lens */
+.topbar {
+  backdrop-filter: blur(22px) saturate(165%);
+  -webkit-backdrop-filter: blur(22px) saturate(165%);
+  border-bottom: 1px solid rgba(255,255,255,.22);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 10px 30px rgba(0,0,0,.30);
+}
+
+/* eyebrow pills + secondary CTA: reference-grade .45 borders */
+.eyebrow { border-color: rgba(40,236,170,.55); background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,0) 55%), rgba(40,236,170,.09); }
+.cta-btn-secondary { border-color: rgba(255,255,255,.45); background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,0) 55%), rgba(255,255,255,.07); }
+
+/* ambient glow fields: more color for saturate() to refract */
+.stats::before, .pricing-rack::before, .room-timeline::before {
+  background:
+    radial-gradient(460px 300px at 12% 18%, rgba(232,96,64,.22), transparent 70%),
+    radial-gradient(500px 320px at 88% 82%, rgba(40,236,170,.17), transparent 70%),
+    radial-gradient(400px 280px at 55% 50%, rgba(255,255,255,.06), transparent 70%);
+}
+
+/* ── Fallback: no backdrop-filter → solid, same geometry ── */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .stats > div, .price-opt, .price-anchor,
+  .quick-card, .quick-proofmini,
+  .roi-card, .buyer-card, .b2b-proof-card,
+  .pull, .room-stop,
+  .room-stop:first-child, .room-stop:nth-child(odd), .room-stop:nth-child(n+3),
+  .cta-btn-secondary { background: rgba(15,29,52,.97); }
+  .price-opt.featured { background: rgba(42,24,26,.97); }
+}
+/* ═══ END v1.209 GLASS INTENSITY LAYER ═══ */
 </style>
 
 <script type="application/ld+json">
@@ -1328,19 +1710,7 @@ a { text-decoration: none; color: inherit; }
       </div>
       <figcaption>The point is not to “deliver content.” It is to change how the team reads a decision before repeating it a hundred times.</figcaption>
     </figure>
-    <figure>
-      <div class="photo-wrap">
-        <img src="https://jfcarpio.com/las7formas/img/pexels-1051838-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-1051838-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-1051838-w1800.jpg 1800w" sizes="(min-width: 900px) 24vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Printed charts and a laptop on a work table">
-      </div>
-      <figcaption>When judgment changes, the way people read reports, priorities, and hidden cost changes too.</figcaption>
-    </figure>
-    <figure>
-      <div class="photo-wrap">
-        <img src="https://jfcarpio.com/las7formas/img/pexels-3943723-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-3943723-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-3943723-w1800.jpg 1800w" sizes="(min-width: 900px) 24vw, 100vw" width="900" height="1200" loading="lazy" decoding="async" alt="A hand placing a coin into a piggy bank surrounded by coins">
-      </div>
-      <figcaption>One workshop addresses private financial friction. The other corrects the mental reading the team has of the company itself.</figcaption>
-    </figure>
-  </section>
+    </section>
 
   <!-- ─── TEAM SELF-CHECK (interactive) ─── -->
   <section class="teamcheck" id="teamcheck" aria-label="A quick self-check for your team">
@@ -1375,7 +1745,15 @@ a { text-decoration: none; color: inherit; }
   </section>
 
   <!-- ─── MODULE MAP ─── -->
-  <section class="module-map" aria-label="Two independent workshops with separate returns">
+  <figure class="sprinkle">
+      <div class="photo-wrap">
+        <img src="https://jfcarpio.com/las7formas/img/pexels-1051838-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-1051838-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-1051838-w1800.jpg 1800w" sizes="(min-width: 900px) 24vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Printed charts and a laptop on a work table">
+      </div>
+      <figcaption>When judgment changes, the way people read reports, priorities, and hidden cost changes too.</figcaption>
+    </figure>
+
+
+    <section class="module-map" aria-label="Two independent workshops with separate returns">
     <div class="module-map-head">
       <span class="eyebrow"><b>02</b> Not a confusing bundle</span>
       <h2 class="h2">Two independent, modular workshops. <em>Take one, the other, or both, and each rewards the company through a different path.</em></h2>
@@ -1397,7 +1775,15 @@ a { text-decoration: none; color: inherit; }
     </div>
   </section>
 
-  <section class="buyer-fit" aria-label="How different internal buyers defend the workshop">
+  <figure class="sprinkle sp-green">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Facilitator guiding a business conversation" sizes="(min-width: 600px) 45vw, 100vw">
+        </div>
+        <figcaption>The workshop's role is to order the discovery: let the participant see the system they were running without knowing it.</figcaption>
+      </figure>
+
+
+    <section class="buyer-fit" aria-label="How different internal buyers defend the workshop">
     <span class="eyebrow">Buyer fit</span>
     <h2 class="h2">Different executives can defend the same program <em>without using the same argument.</em></h2>
     <div class="buyer-grid">
@@ -1421,7 +1807,15 @@ a { text-decoration: none; color: inherit; }
   </section>
 
   <!-- ─── STATS ─── -->
-  <section class="stats" aria-label="Why the investment pays">
+  <figure class="sprinkle sp-green">
+      <div class="photo-wrap">
+        <img src="https://jfcarpio.com/las7formas/img/pexels-3943723-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-3943723-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-3943723-w1800.jpg 1800w" sizes="(min-width: 900px) 24vw, 100vw" width="900" height="1200" loading="lazy" decoding="async" alt="A hand placing a coin into a piggy bank surrounded by coins">
+      </div>
+      <figcaption>One workshop addresses private financial friction. The other corrects the mental reading the team has of the company itself.</figcaption>
+    </figure>
+
+
+    <section class="stats" aria-label="Why the investment pays">
     <h2 class="visually-hidden">Why the investment pays</h2>
     <div>
       <div class="stat-num">3 h</div>
@@ -1547,18 +1941,6 @@ a { text-decoration: none; color: inherit; }
       </figure>
       <figure>
         <div class="img-wrap">
-          <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Financial graphs and data on a work table" sizes="(min-width: 600px) 45vw, 100vw">
-        </div>
-        <figcaption>Good debt vs bad debt, compound interest working for or against you: the arithmetic nobody taught in school.</figcaption>
-      </figure>
-      <figure>
-        <div class="img-wrap">
-          <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Participants reviewing notes during a working session" sizes="(min-width: 600px) 45vw, 100vw">
-        </div>
-        <figcaption>Every participant leaves with two or three dated decisions: minimum liquidity, debt to attack, automatic savings percentage.</figcaption>
-      </figure>
-      <figure>
-        <div class="img-wrap">
           <img src="https://jfcarpio.com/las7formas/img/pexels-3943716-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-3943716-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-3943716-w1800.jpg 1800w" sizes="(min-width: 600px) 45vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="A hand placing a coin into a black piggy bank with scattered coins">
         </div>
         <figcaption>Savings, liquidity, and store of value stop being floating words once the participant gives them order and numbers.</figcaption>
@@ -1580,7 +1962,15 @@ a { text-decoration: none; color: inherit; }
   <hr class="rule">
 
   <!-- ─── WORKSHOP 2 — Private Enterprise ─── -->
-  <section class="ventana ep" id="workshop-enterprise">
+  <figure class="sprinkle">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Financial graphs and data on a work table" sizes="(min-width: 600px) 45vw, 100vw">
+        </div>
+        <figcaption>Good debt vs bad debt, compound interest working for or against you: the arithmetic nobody taught in school.</figcaption>
+      </figure>
+
+
+    <section class="ventana ep" id="workshop-enterprise">
     <span class="ventana-label">Workshop 2 · 2 hours · Standalone</span>
     <h2 class="h2">Appreciation of Private Enterprise</h2>
     <p class="ventana-sub">From Karl Marx to Carl Menger: from win-lose to win-win.</p>
@@ -1611,18 +2001,6 @@ a { text-decoration: none; color: inherit; }
           <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=1000" srcset="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w" sizes="(min-width: 600px) 45vw, 100vw" width="1000" height="667" loading="lazy" decoding="async" alt="Business team working together at a whiteboard">
         </div>
         <figcaption>The win-lose frame becomes visible when the team builds their own employment P&amp;L in real time.</figcaption>
-      </figure>
-      <figure>
-        <div class="img-wrap">
-          <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=1000" width="1000" height="667" loading="lazy" decoding="async" alt="Executive team working at a decision table" sizes="(min-width: 600px) 45vw, 100vw">
-        </div>
-        <figcaption>Not motivation. Exchange arithmetic. The company as a productivity amplifier, not an extractor.</figcaption>
-      </figure>
-      <figure>
-        <div class="img-wrap">
-          <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Facilitator guiding a business conversation" sizes="(min-width: 600px) 45vw, 100vw">
-        </div>
-        <figcaption>The workshop's role is to order the discovery: let the participant see the system they were running without knowing it.</figcaption>
       </figure>
       <figure>
         <div class="img-wrap">
@@ -1690,6 +2068,14 @@ a { text-decoration: none; color: inherit; }
       </div>
     </div>
   </section>
+
+  <figure class="sprinkle">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Participants reviewing notes during a working session" sizes="(min-width: 600px) 45vw, 100vw">
+        </div>
+        <figcaption>Every participant leaves with two or three dated decisions: minimum liquidity, debt to attack, automatic savings percentage.</figcaption>
+      </figure>
+
 
   <hr class="rule">
 
@@ -1866,7 +2252,15 @@ a { text-decoration: none; color: inherit; }
   <hr class="rule">
 
   <!-- ─── FAQ ─── -->
-  <section class="faq" aria-label="Frequently asked questions">
+  <figure class="sprinkle sp-green">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=1000" width="1000" height="667" loading="lazy" decoding="async" alt="Executive team working at a decision table" sizes="(min-width: 600px) 45vw, 100vw">
+        </div>
+        <figcaption>Not motivation. Exchange arithmetic. The company as a productivity amplifier, not an extractor.</figcaption>
+      </figure>
+
+
+    <section class="faq" aria-label="Frequently asked questions">
     <span class="eyebrow"><b>08</b> Frequently asked questions</span>
     <h2 class="h2">What the manager <em>usually asks before deciding.</em></h2>
     <ul class="faq-list">
