@@ -1557,8 +1557,10 @@ a { text-decoration: none; color: inherit; }
 }
 /* ═══ END v1.209 GLASS INTENSITY LAYER ═══ */
 
-/* SAY-COMPARE: plusvalia marxista (mito) vs Plusvalia de Say (realidad) */
-.say-compare{margin:8px 0 4px;display:grid;grid-template-columns:1fr;gap:14px}
+/* SAY-FIG: Marx vs Say diagram + Say's surplus stats */
+.say-fig{margin:10px 0 4px}
+.say-fig-head{font-family:var(--mono);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;text-align:center;margin:0 0 12px;color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important}
+.say-compare{display:grid;grid-template-columns:1fr;gap:14px;align-items:start}
 .say-col{border:1px solid var(--rule);border-top:4px solid var(--rule);border-radius:6px;padding:16px 16px 8px;background:#0C1A2F}
 .say-col.myth{border-top-color:#E86040}
 .say-col.real{border-top-color:#28ECAA}
@@ -1567,8 +1569,13 @@ a { text-decoration: none; color: inherit; }
 .say-col ul{list-style:none;margin:0;padding:0}
 .say-col li{font-family:var(--serif);font-size:15px;line-height:1.45;padding:10px 0;border-top:1px solid var(--rule);color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important}
 .say-col li:first-child{border-top:none}
-.say-cap{font-family:var(--mono);font-size:.82rem;letter-spacing:.04em;text-align:center;margin:8px 0 0;color:#CCCCCC !important;-webkit-text-fill-color:#CCCCCC !important}
-@media(min-width:760px){.say-compare{grid-template-columns:1fr 1fr}}
+.say-vs{justify-self:center;align-self:center;font-family:var(--mono);font-weight:700;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:#060E1D !important;-webkit-text-fill-color:#060E1D !important;background:#E8A020;border-radius:999px;padding:5px 13px}
+.say-stats{display:grid;grid-template-columns:1fr;gap:12px;margin-top:16px}
+.say-stat{border:1px solid var(--rule);border-radius:6px;padding:14px 16px;background:#0C1A2F}
+.say-stat-num{display:block;font-family:var(--display);font-style:italic;font-size:34px;line-height:1;color:#28ECAA !important;-webkit-text-fill-color:#28ECAA !important;margin-bottom:6px}
+.say-stat-desc{display:block;font-family:var(--serif);font-size:14px;line-height:1.45;color:#CCCCCC !important;-webkit-text-fill-color:#CCCCCC !important}
+.say-cap{font-family:var(--mono);font-size:.82rem;letter-spacing:.04em;text-align:center;margin:14px 0 0;color:#CCCCCC !important;-webkit-text-fill-color:#CCCCCC !important}
+@media(min-width:760px){.say-compare{grid-template-columns:1fr auto 1fr}.say-stats{grid-template-columns:1fr 1fr}}
 </style>
 
 <script type="application/ld+json">
@@ -2011,29 +2018,43 @@ a { text-decoration: none; color: inherit; }
       </li>
     </ol>
 
-    <div class="say-compare" aria-label="Comparison: Marxist surplus value versus Say's surplus value">
-      <div class="say-col myth">
-        <h4>Marxist surplus value</h4>
-        <p class="say-sub">The exploitation myth (an error that came from Adam Smith)</p>
-        <ul>
-          <li>The company wins because the worker loses: zero-sum.</li>
-          <li>Profit is wages stolen from the worker.</li>
-          <li>Capital contributes nothing; only labor creates value.</li>
-          <li>Employment is a modern serfdom.</li>
-        </ul>
+    <div class="say-fig" aria-label="Marx versus Say: hiring doesn't extract, it potentiates">
+      <p class="say-fig-head">Two incompatible theories of wage labor</p>
+      <div class="say-compare">
+        <div class="say-col myth">
+          <h4>Marxist surplus value</h4>
+          <p class="say-sub">The exploitation myth · an error from Adam Smith</p>
+          <ul>
+            <li>The company wins because the worker loses: zero-sum.</li>
+            <li>Profit is wages stolen from the worker.</li>
+            <li>Capital contributes nothing; only labor creates value.</li>
+            <li>Employment is a modern serfdom.</li>
+          </ul>
+        </div>
+        <span class="say-vs">vs</span>
+        <div class="say-col real">
+          <h4>Say's surplus value</h4>
+          <p class="say-sub">The reality of exchange · Say (1803) + Reisman</p>
+          <ul>
+            <li>Free exchange benefits both sides: win-win.</li>
+            <li>Without the capitalist who absorbs the risk, the fixed wage does not exist.</li>
+            <li>Capital supplies tools, clientele and brand, and multiplies productivity.</li>
+            <li>Employment is a risk pact: one absorbs it, the other receives a fixed income.</li>
+          </ul>
+        </div>
       </div>
-      <div class="say-col real">
-        <h4>Say's surplus value</h4>
-        <p class="say-sub">The reality of exchange (Jean-Baptiste Say, 1803)</p>
-        <ul>
-          <li>Free exchange benefits both sides: win-win.</li>
-          <li>Without the capitalist who absorbs the risk, the fixed wage does not exist.</li>
-          <li>Capital supplies tools, team, clientele and brand, and multiplies productivity.</li>
-          <li>Employment is a risk pact: one absorbs it, the other receives a fixed income.</li>
-        </ul>
+      <div class="say-stats">
+        <div class="say-stat">
+          <span class="say-stat-num">$1 : $45</span>
+          <span class="say-stat-desc">For every dollar the capitalist keeps, about 45 reach the rest of society (Nordhaus, 2004; Henrekson, 2017).</span>
+        </div>
+        <div class="say-stat">
+          <span class="say-stat-num">5×–6×</span>
+          <span class="say-stat-desc">The same person's productivity under a strong brand versus working on their own. That gap is Say's surplus value.</span>
+        </div>
       </div>
+      <p class="say-cap">Marx versus Say: hiring doesn't extract, it potentiates.</p>
     </div>
-    <p class="say-cap">Two incompatible ways to understand wage labor.</p>
 
     <div class="program-media" aria-label="Appreciation of private enterprise in the workshop">
       <figure class="is-wide">
