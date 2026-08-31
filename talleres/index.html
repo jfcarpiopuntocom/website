@@ -107,7 +107,8 @@
 </script>
 
 <style>
-/* jfcarpio.com/workshops v1.195 - 2026-06-03 */
+/* jfcarpio.com/workshops v1.206 - 2026-06-18 */
+/* v1.206 (2026-06-18): enriched Workshop 1 (Dinero) ROI scenario with precise figures from the Escuela del Dinero brochure — 13 hrs/month, $400-700/employee/year, 3-5x PwC/SHRM return, $2-4/dollar (Willis Towers Watson/WEF); expanded its "qué cambia después" list with fondo de emergencia + claridad de jubilación. */
 /* v1.205 (2026-06-03): added a second named case — Multicines / Santiago Cárdenas (then marketing mgr) for Workshop 2 (Private Enterprise), publicly endorsed twice on X; corrected Hallo to 23 people + Workshop 1 (Money) financial wellness; reframed social proof to "a named result per workshop, real corporate rooms"; updated tesis + roi-foot accordingly. */
 /* v1.204 (2026-06-03): reframed the Hallo +4 as a CFO-citeable metric (named client, pre/post measured, board-defensible) in the result-callout + added his name to the proofbar; added "modular" framing to the workshops map (take one, the other, or both). Visible "module" copy already gone (only CSS class names remain). */
 /* v1.203 (2026-06-03): tightened the gap between the agitate line and the rapid-change band (room-timeline margin-top 42-72px -> 14-22px, padding trimmed, wk-open bottom padding 14 -> 4) — it had leftover end-of-page spacing. */
@@ -134,6 +135,7 @@
 /* v1.207 (2026-06-10): DASHING pass (CSS-only, zero copy changes, zero grid/layout changes). Glass+glow film on quick-cards (pain columns: GRID UNTOUCHED, left accent identity kept), proofbar -> display-number glass chips, eyebrows -> glass pills, h2 em glow, photo frames rounded+hover zoom, roi/buyer/b2b cards -> glass with hover lift, pull quotes -> glass slabs, CTA pill radius+glow (button bg colors untouched for contrast safety). Reduced-motion guard + @supports fallback included. */
 /* v1.208 (2026-06-10): SPRINKLE pass — photo redistribution only, zero copy/caption changes. hero-gallery 3->1 (cinematic 21:10 solo); Workshop1 gallery 5->3; Workshop2 gallery 5->3. The 6 freed figures became standalone .sprinkle figures placed by caption theme: charts->before module-map, facilitator->before buyer-fit, piggy->before stats, debt-graphs->between W1/W2, participants->after que-cambia, exec-table->before FAQ. Accent: orange=money theme, sp-green=enterprise/both. */
 /* v1.209 (2026-06-10): GLASS INTENSITY pass ported from JFC's github-glass-badge reference (bubbbly WebGL card). CSS-only re-spec of existing glass surfaces, no new elements: fills .05->.08-.10, borders .12->.26-.45, blur up to 22px, baked-in top lighting gradient (the shader's gradient term as a background layer, NOT a pseudo-element - avoids paint-order/text-wash issues), inner edge ring via second inset shadow (shader's rb2 ring), radii 16->20-26px, drop shadows deepened to 24px/60px class, ambient glow fields boosted so saturate() has color to pull. Own @supports fallback at end. */
+/* v1.210 (2026-06-19): Taller 1 content depth pass (per JFC's Escuela del Dinero brochure). Added 12-module curriculum grid (new .curriculum-* CSS, minimal), an ROI stat-card block reusing existing .say-stats/.say-fig components (zero new CSS), and expanded "Qué cambia después" from 5 plain bullets to 6 bolded outcomes matching the brochure's "Resultados Tangibles". Trimmed the old "Dentro del taller" prose to avoid duplicating the new grid. Pricing untouched. */
 /* v1.188 (2026-06-01): removed the redundant bottom "Quick diagnosis" (.diag) section; kept the interactive top self-check and renamed its eyebrow from "30-second gut-check" to "Where your team actually stands". */
 /* v1.187 (2026-06-01): killed the large sleazy hero; opening is now a restrained consultant-tone question that opens BOTH pain columns ("losing ground: how they handle money, or how they see the company"), max 31px, no orange accent. */
 /* v1.186 (2026-06-01): hero = option 3 question only ("partner, or an adversary that happens to pay them?"); removed the sub and the bridge line JFC rejected; flow is now question -> two pain columns -> rest. Topics are kept separate (only share MindOS). */
@@ -1123,6 +1125,34 @@ a { text-decoration: none; color: inherit; }
 .cambio.ep ul li::before { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
 @media (min-width: 600px) { .cambios { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
+/* ─── CURRICULUM GRID ─── */
+.curriculum { margin: 0 0 26px; }
+.curriculum-head {
+  display: block; font-family: var(--mono); font-size: .82rem;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  margin-bottom: 14px;
+}
+.ventana.ep .curriculum-head { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.curriculum-grid { list-style: none; display: grid; gap: 10px; padding: 0; margin: 0; }
+.curriculum-item {
+  display: flex; align-items: baseline; gap: 10px;
+  border: 1px solid var(--rule); border-left: 3px solid var(--orange);
+  background: var(--card); border-radius: 4px; padding: 12px 14px;
+}
+.ventana.ep .curriculum-item { border-left-color: var(--green); }
+.curriculum-num {
+  font-family: var(--mono); font-size: .82rem; flex: none;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+}
+.ventana.ep .curriculum-num { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.curriculum-title {
+  font-family: var(--sans); font-size: 15px; line-height: 1.4;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+@media (min-width: 700px) { .curriculum-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 980px) { .curriculum-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
 /* ─── FAQ ─── */
 .faq { max-width: 820px; }
 .faq .eyebrow { margin-bottom: 18px; }
@@ -1954,6 +1984,47 @@ a { text-decoration: none; color: inherit; }
       </li>
     </ol>
 
+    <div class="curriculum" aria-label="Currículo del taller de Dinero">
+      <span class="curriculum-head">El currículo, módulo por módulo</span>
+      <ol class="curriculum-grid">
+        <li class="curriculum-item"><span class="curriculum-num">01</span><span class="curriculum-title">Origen y Naturaleza del Dinero</span></li>
+        <li class="curriculum-item"><span class="curriculum-num">02</span><span class="curriculum-title">Ahorro vs. Inversión</span></li>
+        <li class="curriculum-item"><span class="curriculum-num">03</span><span class="curriculum-title">Poder del Interés Compuesto</span></li>
+        <li class="curriculum-item"><span class="curriculum-num">04</span><span class="curriculum-title">Amenazas a la Riqueza</span></li>
+        <li class="curriculum-item"><span class="curriculum-num">05</span><span class="curriculum-title">Activos vs. Pasivos Financieros</span></li>
+        <li class="curriculum-item"><span class="curriculum-num">06</span><span class="curriculum-title">Deuda Buena vs. Deuda Mala</span></li>
+        <li class="curriculum-item"><span class="curriculum-num">07</span><span class="curriculum-title">Cuadrante del Flujo de Dinero</span></li>
+        <li class="curriculum-item"><span class="curriculum-num">08</span><span class="curriculum-title">Estrategia "Páguese Primero"</span></li>
+        <li class="curriculum-item"><span class="curriculum-num">09</span><span class="curriculum-title">Método Bola de Nieve</span></li>
+        <li class="curriculum-item"><span class="curriculum-num">10</span><span class="curriculum-title">Inversión a Largo Plazo</span></li>
+        <li class="curriculum-item"><span class="curriculum-num">11</span><span class="curriculum-title">Escudos Anti-Inflación</span></li>
+        <li class="curriculum-item"><span class="curriculum-num">12</span><span class="curriculum-title">El Portafolio Permanente</span></li>
+      </ol>
+    </div>
+
+    <div class="say-fig" aria-label="El caso de negocio del taller de Dinero, en números">
+      <p class="say-fig-head">El caso de negocio, en números</p>
+      <div class="say-stats">
+        <div class="say-stat">
+          <span class="say-stat-num">15–20%</span>
+          <span class="say-stat-desc">Mejora en productividad: más enfoque y producción diaria por colaborador.</span>
+        </div>
+        <div class="say-stat">
+          <span class="say-stat-num">25–30%</span>
+          <span class="say-stat-desc">Reducción en rotación de personal y en su costo de reemplazo asociado.</span>
+        </div>
+        <div class="say-stat">
+          <span class="say-stat-num">10–15%</span>
+          <span class="say-stat-desc">Menos reclamos médicos ligados al estrés financiero.</span>
+        </div>
+        <div class="say-stat">
+          <span class="say-stat-num">+40%</span>
+          <span class="say-stat-desc">Más compromiso y lealtad laboral, medido después del taller.</span>
+        </div>
+      </div>
+      <p class="say-cap">Costo de reemplazar a un colaborador (~$8,000) frente al costo estimado del programa por persona (~$80).</p>
+    </div>
+
     <div class="program-media" aria-label="Dinero y finanzas personales en el taller">
       <figure class="is-wide">
         <div class="img-wrap">
@@ -1975,7 +2046,7 @@ a { text-decoration: none; color: inherit; }
       </figure>
     </div>
 
-    <p class="format"><strong>Dentro del taller:</strong> el origen del dinero (Menger y Szabo) · los tres roles y la liquidez · la Ley de Gresham y el Efecto Cantillon · ahorro e inversión desde la escuela austríaca (Menger, Böhm-Bawerk) · el interés compuesto · activos contra pasivos financieros · buena deuda y mala deuda · el cuadrante del flujo · págate primero · la bola de nieve de Ramsey · indexados contra value investing · el Portafolio Permanente de Harry Browne · la tranquilidad financiera (qué es y cómo lograrla) · bancos, mutualistas, cooperativas y cajas de ahorro · los seguros y la lotería negativa · la paradoja de la Seguridad Social · oportunidades de inversión en Ecuador 2025-2030.</p>
+    <p class="format"><strong>Detrás de cada módulo:</strong> el origen del dinero (Menger y Szabo) · la Ley de Gresham y el Efecto Cantillon · ahorro e inversión desde la escuela austríaca (Menger, Böhm-Bawerk) · indexados contra value investing (estilo Buffett) · el Portafolio Permanente de Harry Browne · la bola de nieve de Dave Ramsey · la tranquilidad financiera (qué es y cómo lograrla) · bancos, mutualistas, cooperativas y cajas de ahorro · los seguros y la lotería negativa · la paradoja de la Seguridad Social · oportunidades de inversión en Ecuador 2025-2030.</p>
     <p class="format"><strong>Formato:</strong> taller de 110 min con ejercicios en vivo · 10 min de preguntas. Se puede contratar sin el taller de empresa privada.</p>
     <p class="format"><strong>Material opcional:</strong> lecturas breves, videos y <em>tarea</em> quirúrgica al final, a criterio de cada participante. Nada largo, nada genérico.</p>
 
@@ -2092,8 +2163,8 @@ a { text-decoration: none; color: inherit; }
     <div class="roi-grid">
       <article class="roi-card">
         <span class="roi-tag">Escenario A · equipo de 40 personas</span>
-        <p><strong>La fuga:</strong> 40 personas × 3 horas distraídas por semana ≈ <strong>480 horas-persona al mes</strong> que ya están en tu nómina, drenadas por el estrés financiero.</p>
-        <p><strong>El retorno:</strong> recupera apenas el 10% y son ~48 horas de trabajo enfocado de vuelta cada mes. El programa completo ($6,060) se cubre con una porción pequeña de ese foco recuperado, y el resto se acumula trimestre a trimestre.</p>
+        <p><strong>La fuga:</strong> 40 personas × 3 horas distraídas por semana (PwC), unas 13 horas por persona al mes, ≈ <strong>480 horas-persona al mes</strong> que ya están en tu nómina, traducidas en $400–700 USD extra al año por empleado en errores, ausencias y rotación.</p>
+        <p><strong>El retorno:</strong> PwC y SHRM ubican el retorno de los programas de bienestar financiero entre <strong>3 y 5 veces lo invertido</strong> (Willis Towers Watson y el WEF lo calculan en $2 a $4 netos por dólar). Recupera apenas el 10% del tiempo perdido y son ~48 horas de trabajo enfocado de vuelta cada mes. El programa completo ($6,060) se cubre con una porción pequeña de ese foco recuperado, y el resto se acumula trimestre a trimestre.</p>
       </article>
       <article class="roi-card">
         <span class="roi-tag">Escenario B · equipo de 60 personas, ambos talleres</span>
@@ -2115,9 +2186,12 @@ a { text-decoration: none; color: inherit; }
       <div class="cambio">
         <span class="cambio-mod">Taller 1 · Finanzas personales</span>
         <ul>
-          <li>Deja de usar la tarjeta para cubrir el mes. Tiene un número de liquidez mínima y lo conoce.</li>
-          <li>Distingue la deuda productiva de la deuda de consumo antes de firmar.</li>
-          <li>Ahorra primero, gasta lo que queda. No al revés.</li>
+          <li><strong>Libertad de deudas:</strong> distingue la deuda productiva de la de consumo y sabe, paso a paso, cuál ataca primero.</li>
+          <li><strong>Fondo de emergencia:</strong> empieza o refuerza el suyo, en vez de dejarlo para "cuando sobre".</li>
+          <li><strong>Confianza en inversión:</strong> sale con su primer criterio de portafolio, no con la recomendación de un cuñado.</li>
+          <li><strong>Claridad en jubilación:</strong> tiene un plan con números propios, no una esperanza vaga.</li>
+          <li><strong>Cambio de mentalidad:</strong> pasa de la escasez a la abundancia. Deja de usar la tarjeta para cubrir el mes.</li>
+          <li><strong>Control financiero:</strong> decide con base en metas claras, no en lo que sobra a fin de mes.</li>
         </ul>
       </div>
       <div class="cambio ep">
