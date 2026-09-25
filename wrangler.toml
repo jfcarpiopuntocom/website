@@ -4,3 +4,6 @@ compatibility_date = "2025-09-27"
 
 [assets]
 directory = "./"
+binding = "ASSETS"
+# El Worker corre primero: redirige www y pone cabeceras de seguridad en todo.
+run_worker_first = true

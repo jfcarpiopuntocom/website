@@ -1,0 +1,21 @@
+# Lo que NUNCA se publica en jfcarpio.com (JFC 2026-09-25). Antes todo el repo
+# era publico: /CLAUDE.md, /AGENTS.md, /wrangler.toml, /worker.js daban 200.
+.git
+.git/**
+.assetsignore
+.gitignore
+.claude
+node_modules
+backups
+codex-backups
+CLAUDE*.md
+AGENTS.md
+*.md
+*.toml
+worker.js
+*.mjs
+*.py
+*.txt
+!robots.txt
+scripts
+entities.json
