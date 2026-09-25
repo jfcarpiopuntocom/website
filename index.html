@@ -2749,6 +2749,63 @@ button { border:none; background:none; font:inherit; }
 
 <!-- HERO — v1.2 editorial 2-col on desktop -->
 <main id="main-content">
+<!-- EMBUDO v1 (JFC 2026-09-25). Oferta UNICA arriba: diagnostico Jev + research
+     (causa de 0 clientes: demasiadas ofertas; primer paso: brief gratis; garantia; escasez honesta).
+     Nada del sitio se quito: la portada, los paneles y la trayectoria siguen abajo. -->
+<!-- EMBUDO v2 (JFC 2026-09-25): producto central = las 3 apps (decision de JFC). Jev con research:
+     primera pantalla = proposito + 3 tarjetas (1.0), cada tarjeta a su propia landing (0.98), confianza
+     "economista" debajo (0.89). Research y talleres = 1B, con el testimonio. Nada del sitio se quito. -->
+<section class="oferta" aria-labelledby="of-title">
+  <p class="of-kicker" data-t="of_k">Hecho en Cuenca, Ecuador</p>
+  <h1 id="of-title" class="of-title" data-t="of_t">Herramientas simples para negocios reales, hechas por un economista.</h1>
+  <p class="of-sub" data-t="of_s">Tres apps para ver tu negocio con claridad: qué se vende, qué falta y a quién le debes.</p>
+  <div class="apps3">
+    <a class="app3" href="/friendly123/"><strong>friendly-123</strong><span data-t="a1">Inventario, ventas y consignación para tiendas pequeñas. Funciona sin internet.</span><em data-t="a_go">Ver cómo funciona →</em></a>
+    <a class="app3" href="https://jfcarpiopuntocom.github.io/AMIGABLE/"><strong>amigable-123</strong><span data-t="a2">La versión en español para Latinoamérica, con un plan gratis para siempre.</span><em data-t="a_go">Ver cómo funciona →</em></a>
+    <a class="app3" href="https://jfcarpiopuntocom.github.io/consultorio-123/"><strong>consultorio-123</strong><span data-t="a3">Cuentas claras para consultorios médicos: ingresos, cobros y resultados. En beta.</span><em data-t="a_go">Ver cómo funciona →</em></a>
+  </div>
+  <p class="of-trust" data-t="of_trust">Detrás hay 20 años de consultoría, docencia e investigación económica. Las apps nacen de ver los mismos errores repetirse en negocios de todos los tamaños.</p>
+</section>
+<section class="oferta b1" aria-labelledby="of-1b">
+  <p class="of-kicker" data-t="b1_k">Para empresas</p>
+  <h2 id="of-1b" class="of-title b1t" data-t="b1_t">Research macro y sectorial de Ecuador, y talleres para equipos directivos.</h2>
+  <blockquote class="of-quote"><p data-t="of_q">“Obtuve el research macroeconómico nacional que estaba buscando.”</p>
+    <footer data-t="of_qa">Diego Peñaherrera, CEO · Quito, 2022</footer></blockquote>
+  <button type="button" class="of-cta" onclick="pedirBrief()" data-t="of_cta">Pide gratis el brief de 1 página de tu sector</button>
+  <p class="of-note" data-t="of_g">Garantía: si el estudio no responde la pregunta acordada, te devuelvo todo. Acepto pocos estudios a medida por trimestre.</p>
+  <p class="of-f123"><a href="/talleres/" data-t="b1_w">Ver talleres corporativos →</a></p>
+</section>
+<style>
+.oferta{background:#0F1923;margin:0;padding:88px 18px 36px;padding-left:max(18px,calc((100% - 760px)/2));padding-right:max(18px,calc((100% - 760px)/2));color:#FFFFFF}
+.of-kicker{font-size:14px;font-weight:700;letter-spacing:.04em;color:#E8A020!important;-webkit-text-fill-color:#E8A020!important;margin:0 0 10px}
+.of-title{font-size:30px;font-size:clamp(30px,6vw,46px);line-height:1.1;margin:0 0 14px;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+.of-sub{font-size:18px;line-height:1.5;margin:0 0 18px;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+.of-quote{margin:0 0 20px;padding:14px 16px;border-left:4px solid #E8A020;background:#16222F}
+.of-quote p{font-size:18px;margin:0 0 6px;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+.of-quote footer{font-size:15px;color:#CCCCCC!important;-webkit-text-fill-color:#CCCCCC!important}
+.of-cta{display:block;width:100%;min-height:52px;padding:14px 18px;border:0;border-radius:12px;background:#E8A020;color:#0F1923!important;-webkit-text-fill-color:#0F1923!important;font-size:18px;font-weight:800;cursor:pointer}
+.of-note{font-size:15px;line-height:1.5;margin:12px 0 0;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+.of-f123{margin:16px 0 0;font-size:16px}.of-f123 a{color:#28ECAA!important;-webkit-text-fill-color:#28ECAA!important}
+.apps3{display:grid;gap:12px;margin:0 0 18px}
+.app3{display:block;padding:16px;border:2px solid #E8A020;border-radius:14px;background:#16222F;text-decoration:none;min-height:44px}
+.app3 strong{display:block;font-size:20px;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;margin-bottom:4px}
+.app3 span{display:block;font-size:16px;line-height:1.45;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+.app3 em{display:block;margin-top:8px;font-style:normal;font-weight:700;font-size:16px;color:#E8A020!important;-webkit-text-fill-color:#E8A020!important}
+.of-trust{font-size:16px;line-height:1.5;margin:0;color:#CCCCCC!important;-webkit-text-fill-color:#CCCCCC!important}
+.oferta.b1{padding-top:36px;border-top:1px solid #2E6278}.b1t{font-size:24px!important}
+@media (min-width:760px){.apps3{grid-template-columns:repeat(3,1fr)}}
+/* Plegables 2026: <details> nativo con apertura animada donde el navegador lo soporta. */
+.plegable{margin:0 0 18px;border:2px solid #E8A020;border-radius:12px;padding:0 16px}
+.plegable>summary{min-height:48px;display:flex;align-items:center;font-size:18px;font-weight:700;cursor:pointer;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+@supports (interpolate-size:allow-keywords){.plegable{interpolate-size:allow-keywords}.plegable::details-content{height:0;overflow:clip;transition:height .35s ease,content-visibility .35s allow-discrete}.plegable[open]::details-content{height:auto}}
+@media (prefers-reduced-motion:reduce){.plegable::details-content{transition:none}}
+</style>
+<script>
+/* Brief gratis: reusa el WhatsApp del sitio (openWA). Sin servidor, sin datos guardados aqui. */
+function pedirBrief(){var t=document.getElementById('tIn');var en=(typeof lang!=='undefined'&&lang==='en');
+ if(t)t.value=en?'Hello Juan Fernando, I would like the free 1-page macro brief for my sector. My company and sector: ':'Hola Juan Fernando, quiero el brief macro gratis de 1 página de mi sector. Mi empresa y sector: ';
+ try{openWAMessage(t?t.value:'');}catch(_){if(t){t.scrollIntoView({behavior:'smooth',block:'center'});t.focus();}}}
+</script>
 <section class="hero">
 
   <div class="scroll-bar" id="scrollBar" aria-hidden="true" style="--scroll-pct: 0.0%;"></div>
@@ -3165,6 +3222,7 @@ button { border:none; background:none; font:inherit; }
 
 <!-- v1.6 — ABOUT / TIMELINE -->
 <div class="about-section">
+<details class="plegable"><summary data-t="of_about">Trayectoria</summary>
   <span class="section-ghost" id="sectionGhost" aria-hidden="true">2026</span>
   <div class="section-hd">
     <span class="section-hd-lbl" data-t="tl_lbl">Trayectoria</span>
@@ -3247,6 +3305,7 @@ capital como instrumento para entender coordinación, inversión y tiempo.</div>
       </div>
     </div>
   </div>
+</details><!-- /plegable trayectoria: la foto queda siempre visible -->
   <div style="display:-webkit-flex;display:flex;flex-direction:column;-webkit-align-items:center;align-items:center;padding:40px 0 8px;">
     <div class="photo-frame" style="width:180px;max-width:180px;">
       <img src="https://jfcarpio.com/fotojfc.png" alt="Juan Fernando Carpio" width="180" height="228" loading="lazy" onerror="this.parentNode.style.minHeight='228px';this.style.display='none';">
@@ -3763,6 +3822,23 @@ function draftAndSend(){
 var lang='es';
 var T={
   es:{
+    b1_w:"Ver talleres corporativos →",
+    b1_t:"Research macro y sectorial de Ecuador, y talleres para equipos directivos.",
+    b1_k:"Para empresas",
+    of_trust:"Detrás hay 20 años de consultoría, docencia e investigación económica. Las apps nacen de ver los mismos errores repetirse en negocios de todos los tamaños.",
+    a_go:"Ver cómo funciona →",
+    a3:"Cuentas claras para consultorios médicos: ingresos, cobros y resultados. En beta.",
+    a2:"La versión en español para Latinoamérica, con un plan gratis para siempre.",
+    a1:"Inventario, ventas y consignación para tiendas pequeñas. Funciona sin internet.",
+    of_k:"Hecho en Cuenca, Ecuador",
+    of_t:"Herramientas simples para negocios reales, hechas por un economista.",
+    of_s:"Tres apps para ver tu negocio con claridad: qué se vende, qué falta y a quién le debes.",
+    of_q:'“Obtuve el research macroeconómico nacional que estaba buscando.”',
+    of_qa:"Diego Peñaherrera, CEO · Quito, 2022",
+    of_cta:'Pide gratis el brief de 1 página de tu sector',
+    of_g:'Garantía: si el estudio no responde la pregunta acordada, te devuelvo todo. Acepto pocos estudios a medida por trimestre.',
+    of_f123:'¿Tienes una tienda? Conoce friendly-123 →',
+    of_about:'Trayectoria',
     kick:'Economía aplicada · Instituciones · Empresa privada',
     quote_bastiat_a:'En la guerra, el fuerte se impone al débil;',
     quote_bastiat_b:'en los negocios, ',
@@ -3911,6 +3987,23 @@ var T={
     sys_prompt:'Eres J.F. Carpio, autor e investigador económico ecuatoriano de la escuela austriaca, defensor de la empresa privada, analista de entorno económico-empresarial y creador del Growth OS. Tu marco: precios como computación social, crítica al intervencionismo, defensa del capital productivo. MindOS: Boundary/MRR, Behavior/CAC, Intellect/IDF+RACI, Decision/Semáforo. Responde con criterio económico sólido, sin motivación barata. UNA acción concreta al final. Máximo 4 párrafos. Responde en español.'
   },
   en:{
+    b1_w:"See corporate workshops →",
+    b1_t:"Macro and sector research on Ecuador, and workshops for leadership teams.",
+    b1_k:"For companies",
+    of_trust:"Behind them are 20 years of consulting, teaching and economic research. The apps come from watching the same mistakes repeat in businesses of every size.",
+    a_go:"See how it works →",
+    a3:"Clear accounts for medical practices: income, collections and results. In beta.",
+    a2:"The Spanish edition for Latin America, with a free-forever plan.",
+    a1:"Stock, sales and consignment for small shops. Works without internet.",
+    of_k:"Made in Cuenca, Ecuador",
+    of_t:"Simple tools for real businesses, built by an economist.",
+    of_s:"Three apps to see your business clearly: what sells, what is running out and who you owe.",
+    of_q:'“I got the national macroeconomic research I was looking for.”',
+    of_qa:"Diego Peñaherrera, CEO · Quito, 2022",
+    of_cta:'Get the free 1-page brief for your sector',
+    of_g:'Guarantee: if the study does not answer the agreed question, full refund. I take only a few custom studies per quarter.',
+    of_f123:'Run a shop? Meet friendly-123 →',
+    of_about:'Background',
     kick:'Applied economics · Institutions · Private enterprise',
     quote_bastiat_a:'In war, the strong overpower the weak;',
     quote_bastiat_b:'in business, ',
