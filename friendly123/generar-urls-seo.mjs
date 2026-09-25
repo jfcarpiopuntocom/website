@@ -66,6 +66,8 @@ function pagina({ lang, url, titulo, desc, art }) {
   let h = src;
   const locale = lang === "es" ? "es_ES" : "en_US", otro = lang === "es" ? "en_US" : "es_ES";
   h = reemplazar(h, '<html lang="en">', `<html lang="${lang}">`, "html lang");
+  // Enlaces de los botones "leer": en espanol apuntan a los articulos en espanol.
+  if (lang === "es") { h = h.split('href="' + RUTA + 'shared-digital-notebook/"').join('href="' + RUTA + 'es/cuaderno-digital-compartido/"'); h = h.split('href="' + RUTA + 'consignment-commissions/"').join('href="' + RUTA + 'es/comisiones-de-consignacion/"'); }
   h = h.replace(/<title>[^<]*<\/title>/, `<title>${esc(titulo)}</title>`);
   h = h.replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(desc)}">`);
   h = h.replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${url}">`);
