@@ -17,5 +17,6 @@ worker.js
 *.py
 *.txt
 !robots.txt
+!c2d8b4e084c5a6e9498a037240f5da45.txt
 scripts
 entities.json
