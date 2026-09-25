@@ -23,6 +23,11 @@ const CSP =
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    // 0. blog.jfcarpio.com -> jfcarpio.com/blog/ (JFC 2026-09-25): antes iba a github.io y
+    //    regalaba autoridad SEO a otro dominio. Redireccion permanente al blog del sitio.
+    if (url.hostname === "blog.jfcarpio.com") {
+      return Response.redirect("https://jfcarpio.com/blog/", 301);
+    }
     // 1. Canonico: www -> apex
     if (url.hostname.startsWith("www.")) {
       url.hostname = url.hostname.slice(4);
