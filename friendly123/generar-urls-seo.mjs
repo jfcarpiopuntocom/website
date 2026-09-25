@@ -40,6 +40,9 @@ function uno(re, que) { const m = src.match(re); if (!m) throw new Error("no enc
 // Objeto literal de JS (no JSON estricto): se evalua; es contenido de este mismo repo.
 const esJson = new Function("return (" + uno(/\n\s*es:(\{"payNext"[^\n]*\})\s*,?\n/, "copy.es")[1] + ")")();
 const tituloES = uno(/document\.title=language==="es"\?"([^"]+)"/, "titulo ES")[1];
+// Version corta SOLO para buscadores (<=60 / <=155 caracteres); la pagina sigue mostrando la larga.
+const TITULO_ES_SEO = "POS de consignación para tiendas: $399 por 5 años | friendly-123";
+const DESC_ES_SEO = "Inventario, ventas y comisiones de consignación en un cuaderno compartido. Funciona sin internet. Pago único, sin mensualidad. Pruébalo 30 días.";
 const descES = uno(/content=language==="es"\?"([^"]+)"/, "description ES")[1];
 const tituloEN = uno(/<title>([^<]+)<\/title>/, "titulo EN")[1];
 const descEN = uno(/<meta name="description" content="([^"]+)">/, "description EN")[1];
@@ -102,11 +105,11 @@ function pagina({ lang, url, titulo, desc, art }) {
   const guion = `<script>
 /* Generado por friendly123/generar-urls-seo.mjs (${FECHA}). No editar a mano: rehacer con el script. */
 (function(){try{setLanguage("${lang}")}catch(_){}
-${art ? `/* setLanguage() pone el titulo y la descripcion de la LANDING; mientras el articulo
-   esta abierto mandan los suyos (Google ejecuta JS y lee el titulo final). */
+/* setLanguage() pone el titulo y la descripcion largos de la landing; aqui mandan los de
+   esta pagina (Google ejecuta JS y lee el titulo final). */
 var T=${JSON.stringify(titulo)},D=${JSON.stringify(desc)},md=document.querySelector('meta[name="description"]');
 document.title=T;if(md)md.content=D;
-var d=document.getElementById("${art.id}");if(d){try{d.removeAttribute("open");d.showModal();}catch(_){d.setAttribute("open","");}
+${art ? `var d=document.getElementById("${art.id}");if(d){try{d.removeAttribute("open");d.showModal();}catch(_){d.setAttribute("open","");}
 /* Al cerrar (X, fondo o Escape) la barra vuelve a la landing. Se observa el
    atributo "open": en esta landing el evento "close" no llega (probado). */
 var volver=function(){try{history.replaceState(null,"",${JSON.stringify(inicio)})}catch(_){}try{setLanguage(document.documentElement.lang==="es"?"es":"en")}catch(_){}};
@@ -119,7 +122,7 @@ try{new MutationObserver(function(){if(!d.open){volver();this.disconnect();}}).o
 }
 
 const salidas = [
-  { ruta: "es/", lang: "es", url: BASE + "es/", titulo: tituloES, desc: descES },
+  { ruta: "es/", lang: "es", url: BASE + "es/", titulo: TITULO_ES_SEO, desc: DESC_ES_SEO },
 ];
 for (const a of ARTS) {
   salidas.push({ ruta: a.en, lang: "en", url: BASE + a.en, titulo: a.tituloEN, desc: a.descEN, art: a });
