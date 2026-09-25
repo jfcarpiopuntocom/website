@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>friendly-123 · mosaico</title>
+<!-- MOSAICO friendly-123 (JFC 2026-09-25). Pelicula cuadrada de 10 s en bucle, WebGL2 y
+     JavaScript plano: sin librerias, imagenes, fuentes ni audio. Pared de vidrio y pan de oro
+     cuyas teselas nunca se pegaron: vuelan, se voltean y encajan formando el logo, luego el
+     semaforo de una percha (como en la app), y otra vez el logo. Todo el cuadro es un enlace:
+     ?go=URL (o data-go en el <a>) decide a donde lleva; por defecto la landing de friendly-123.
+     Se puede incrustar con <iframe src="/friendly123/mosaico.html"> (mismo origen). -->
+<style>
+html,body{margin:0;height:100%;background:#0B2233}
+a#m{display:block;position:relative;width:min(100vw,100vh);aspect-ratio:1;margin:0 auto;outline:none;cursor:pointer}
+a#m:focus-visible{box-shadow:0 0 0 4px #FFD978 inset}
+canvas{display:block;width:100%;height:100%}
+.fb{position:absolute;inset:0;display:none;align-items:center;justify-content:center;font:800 28px/1.2 system-ui,sans-serif;color:#FFC72C;text-align:center}
+</style>
+</head>
+<body>
+<a id="m" href="/friendly123/" aria-label="friendly-123: ver cómo funciona"><canvas id="c" width="1080" height="1080"></canvas><span class="fb" id="fb">friendly-123</span></a>
+<script>
+(function(){
+"use strict";
+var link=document.getElementById("m");
+try{var go=new URLSearchParams(location.search).get("go");if(go&&/^(\/|https:\/\/)/.test(go))link.href=go;}catch(_){}
+link.addEventListener("click",function(e){if(window.top!==window.self){e.preventDefault();window.top.location.href=link.href;}});
+var cv=document.getElementById("c");
+var gl=cv.getContext("webgl2",{antialias:true,premultipliedAlpha:false});
+if(!gl){document.getElementById("fb").style.display="flex";cv.style.display="none";return;}
+
+var N=44, T=N*N, LOOP=10;
+// ---- Escenas: se dibujan en un lienzo 2D diminuto (N x N) y cada pixel es el color de una tesela.
+function lienzo(dibujar){var c=document.createElement("canvas");c.width=c.height=N;var x=c.getContext("2d");dibujar(x);return x.getImageData(0,0,N,N).data;}
+var FONDO=[11,34,51];
+function logo(x){
+  x.fillStyle="rgb(11,34,51)";x.fillRect(0,0,N,N);
+  x.textAlign="center";x.textBaseline="alphabetic";
+  // Ajuste de ancho: "friendly" siempre cabe con 3 teselas de margen, sea cual sea la fuente del sistema.
+  var fs=14;do{x.font="900 "+fs+"px system-ui, 'Segoe UI', Arial, sans-serif";fs-=.5;}while(x.measureText("friendly").width>N-6&&fs>7);
+  x.lineWidth=3;x.strokeStyle="#1B1B2E";x.strokeText("friendly",N/2,21);
+  x.fillStyle="#FFC72C";x.fillText("friendly",N/2,21);
+  x.font="900 17px system-ui, 'Segoe UI', Arial, sans-serif";
+  var cols=["#E8365D","#F28C28","#2F80ED"],d=["1","2","3"],xs=[N/2-11,N/2,N/2+11];
+  for(var i=0;i<3;i++){x.strokeText(d[i],xs[i],38);x.fillStyle=cols[i];x.fillText(d[i],xs[i],38);}
+}
+function semaforo(x){
+  x.fillStyle="rgb(11,34,51)";x.fillRect(0,0,N,N);
+  var rows=[["#00C87A",9],["#F5C518",19],["#E8365D",29]];
+  for(var i=0;i<3;i++){var y=rows[i][1];
+    x.fillStyle="#E7EEF3";x.fillRect(6,y,32,8);          // tarjeta
+    x.fillStyle=rows[i][0];x.fillRect(6,y,10,8);          // semaforo de la tarjeta
+    x.fillStyle="#8FA3B1";x.fillRect(19,y+2,13,2);x.fillRect(19,y+5,8,1);
+    x.fillStyle="#1B1B2E";x.fillRect(34,y+2,3,4);}
+  x.fillStyle="#FFD978";x.fillRect(6,39,32,1);             // listón dorado de la percha
+}
+var A=lienzo(logo),B=lienzo(semaforo);
+function esFondo(d,i){return Math.abs(d[i]-FONDO[0])+Math.abs(d[i+1]-FONDO[1])+Math.abs(d[i+2]-FONDO[2])<30;}
+
+// ---- Datos por tesela: posicion en la grilla, color A, color B, semilla, si es oro.
+var inst=new Float32Array(T*12);
+for(var k=0;k<T;k++){var gx=k%N,gy=(k/N)|0,p=k*4,o=k*12;
+  inst[o]=gx;inst[o+1]=gy;
+  inst[o+2]=A[p]/255;inst[o+3]=A[p+1]/255;inst[o+4]=A[p+2]/255;
+  inst[o+5]=B[p]/255;inst[o+6]=B[p+1]/255;inst[o+7]=B[p+2]/255;
+  var h=Math.sin(k*12.9898+gy*78.233)*43758.5453;inst[o+8]=h-Math.floor(h);
+  inst[o+9]=esFondo(A,p)?0:1;   // figura en el logo
+  inst[o+10]=esFondo(B,p)?0:1;  // figura en el semaforo
+  var h2=Math.sin(k*4.1414+3.7)*9173.13;inst[o+11]=h2-Math.floor(h2);
+}
+
+var VS=`#version 300 es
+precision highp float;
+layout(location=0) in vec3 aPos;      // caja unitaria
+layout(location=1) in vec3 aNor;
+layout(location=2) in vec2 iGrid;
+layout(location=3) in vec3 iColA;
+layout(location=4) in vec3 iColB;
+layout(location=5) in float iSeed;
+layout(location=6) in vec2 iFig;
+layout(location=7) in float iSeed2;
+uniform float uT; uniform float uN; uniform mat4 uVP; uniform float uCalm;
+out vec3 vCol; out vec3 vNor; out vec3 vWorld; out vec2 vUV; out float vGold; out float vFlash; out float vSeed; out float vFace;
+const float PI=3.14159265;
+float sat(float x){return clamp(x,0.,1.);}
+float easeOutBack(float x){float c1=1.9,c3=c1+1.;return 1.+c3*pow(x-1.,3.)+c1*pow(x-1.,2.);}
+float easeInOut(float x){return x<.5?4.*x*x*x:1.-pow(-2.*x+2.,3.)/2.;}
+mat3 rotAxis(vec3 a,float ang){a=normalize(a);float s=sin(ang),c=cos(ang),oc=1.-c;
+ return mat3(oc*a.x*a.x+c,oc*a.x*a.y+a.z*s,oc*a.z*a.x-a.y*s, oc*a.x*a.y-a.z*s,oc*a.y*a.y+c,oc*a.y*a.z+a.x*s, oc*a.z*a.x+a.y*s,oc*a.y*a.z-a.x*s,oc*a.z*a.z+c);}
+void main(){
+ vec2 home=(iGrid-(uN-1.)*.5)*vec2(1.,-1.);
+ float t=uT;
+ // Retrasos por tesela: onda desde el centro + ruido.
+ float dist=length(home)/(uN*.7);
+ float din=dist*.9+iSeed*.55;              // llegada
+ float dwave=(home.x+uN*.5)/uN*.9+iSeed*.25; // ola diagonal de volteo
+ // 1) llegada volando 0 - 2.4 s ; 5) salida 9.0 - 10 s
+ float arr=sat((t-din)/1.25);
+ float lvS=sat((t-9.0-iSeed*.55)/.9);
+ float fly=(1.-easeOutBack(arr))+lvS*lvS;  // 1 = lejos, 0 = en su lugar
+ fly=max(fly,0.);
+ // 2) volteo a semaforo 3.6 - 5.2 ; 3) volteo a logo 6.6 - 8.0
+ float f1=sat((t-3.6-dwave)/.8), f2=sat((t-6.3-dwave)/.8);
+ float flip=easeInOut(f1)-easeInOut(f2);  // 0 = logo, 1 = semaforo
+ float flipAng=PI*flip;
+ float lift=sin(PI*f1)+sin(PI*f2);        // se levantan al voltear
+ // Posicion y giro durante el vuelo.
+ vec3 far=vec3(home*1.8+vec2(iSeed-.5,iSeed2-.5)*uN*1.3, 26.+iSeed2*30.);
+ vec3 axis=normalize(vec3(iSeed-.5,iSeed2-.5,.35));
+ float spin=fly*(6.+iSeed*8.);
+ mat3 R=rotAxis(axis,spin*uCalm)*rotAxis(vec3(0.,1.,0.),flipAng);
+ vec3 p=R*(aPos*vec3(.92,.92,.18));
+ vec3 pos=vec3(home,0.)+p;
+ pos=mix(pos,pos+far-vec3(home,0.)+vec3(home,0.)*0.,sat(fly)*uCalm);
+ pos.z+=(lift*1.6+sin(t*1.3+iSeed*6.28)*.03)*uCalm;
+ gl_Position=uVP*vec4(pos,1.);
+ vNor=R*aNor; vWorld=pos; vUV=aPos.xy+.5;
+ // Cara visible: el reverso del volteo muestra la escena B.
+ vFace=step(.5,flip);
+ vCol=mix(iColA,iColB,vFace);
+ vGold=mix(iFig.x,iFig.y,vFace);
+ vSeed=iSeed;
+ // Destello de "clic" al encajar y al terminar cada volteo.
+ float land=sat(1.-abs(t-din-1.05)*6.)*step(t,4.);
+ float c1=sat(1.-abs(t-4.4-dwave)*7.), c2=sat(1.-abs(t-7.1-dwave)*7.);
+ vFlash=(land+c1+c2)*uCalm;
+}`;
+var FS=`#version 300 es
+precision highp float;
+in vec3 vCol; in vec3 vNor; in vec3 vWorld; in vec2 vUV; in float vGold; in float vFlash; in float vSeed; in float vFace;
+uniform float uT; uniform vec3 uCam;
+out vec4 o;
+float h21(vec2 p){p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);return fract(p.x*p.y);}
+void main(){
+ vec3 N=normalize(vNor);
+ vec3 L=normalize(vec3(-.45,.6,.75));
+ vec3 V=normalize(uCam-vWorld);
+ // Bisel: bordes de la tesela mas claros (vidrio cortado a mano).
+ vec2 e=min(vUV,1.-vUV); float bev=1.-smoothstep(0.,.14,min(e.x,e.y));
+ float diff=.55+.45*max(dot(N,L),0.);
+ vec3 base=vCol;
+ // Pan de oro: escamas con brillo propio en las teselas de figura del logo.
+ float flake=h21(floor(vUV*9.)+vSeed*31.);
+ vec3 gold=mix(vec3(.88,.69,.29),vec3(1.,.85,.47),flake);
+ float isGoldLeaf=vGold*(1.-vFace)*step(.6,vCol.r)*step(.55,vCol.g); // amarillo del logo = oro
+ base=mix(base,gold*mix(.9,1.15,flake),isGoldLeaf*.85);
+ // Vidrio: el fondo es vidrio oscuro con variacion por tesela.
+ float glass=(1.-vGold);
+ base=mix(base,base*(.8+.4*h21(vec2(vSeed*7.,vSeed*3.))),glass);
+ vec3 H=normalize(L+V);
+ float spec=pow(max(dot(N,H),0.),mix(40.,120.,glass));
+ float fres=pow(1.-max(dot(N,V),0.),3.);
+ // Barrido de luz que recorre la pared cada ciclo (hace chispear el oro).
+ float sweep=exp(-pow((vWorld.x+vWorld.y*.6)-(mod(uT,10.)*9.-40.),2.)/18.);
+ vec3 col=base*diff + vec3(1.,.93,.78)*spec*(isGoldLeaf>0. ? 1.6 : .7);
+ col+=fres*vec3(.35,.55,.7)*glass*.6;
+ col+=bev*.12;
+ col+=sweep*(isGoldLeaf*.9*flake+.12)*vec3(1.,.9,.6);
+ col+=vFlash*vec3(1.,.92,.7)*.55;
+ // Juntas: el mortero oscuro entre teselas.
+ col*=mix(.55,1.,smoothstep(.0,.05,min(e.x,e.y)));
+ o=vec4(col,1.);
+}`;
+function sh(t,s){var x=gl.createShader(t);gl.shaderSource(x,s);gl.compileShader(x);if(!gl.getShaderParameter(x,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(x));return x;}
+var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,VS));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,FS));gl.linkProgram(pr);
+if(!gl.getProgramParameter(pr,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(pr));
+
+// Caja unitaria (6 caras) con normales.
+var v=[],F=[[0,0,1],[0,0,-1],[1,0,0],[-1,0,0],[0,1,0],[0,-1,0]];
+F.forEach(function(n){var u=[n[1],n[2],n[0]],w=[n[2],n[0],n[1]];
+  var c=function(a,b){return [n[0]*.5+u[0]*a+w[0]*b,n[1]*.5+u[1]*a+w[1]*b,n[2]*.5+u[2]*a+w[2]*b];};
+  var q=[c(-.5,-.5),c(.5,-.5),c(.5,.5),c(-.5,-.5),c(.5,.5),c(-.5,.5)];
+  q.forEach(function(P){v.push(P[0],P[1],P[2],n[0],n[1],n[2]);});});
+var vao=gl.createVertexArray();gl.bindVertexArray(vao);
+var bb=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bb);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(v),gl.STATIC_DRAW);
+gl.enableVertexAttribArray(0);gl.vertexAttribPointer(0,3,gl.FLOAT,false,24,0);
+gl.enableVertexAttribArray(1);gl.vertexAttribPointer(1,3,gl.FLOAT,false,24,12);
+var ib=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,ib);gl.bufferData(gl.ARRAY_BUFFER,inst,gl.STATIC_DRAW);
+[[2,2,0],[3,3,2],[4,3,5],[5,1,8],[6,2,9],[7,1,11]].forEach(function(a){gl.enableVertexAttribArray(a[0]);gl.vertexAttribPointer(a[0],a[1],gl.FLOAT,false,48,a[2]*4);gl.vertexAttribDivisor(a[0],1);});
+
+var uT=gl.getUniformLocation(pr,"uT"),uN=gl.getUniformLocation(pr,"uN"),uVP=gl.getUniformLocation(pr,"uVP"),uCam=gl.getUniformLocation(pr,"uCam"),uCalm=gl.getUniformLocation(pr,"uCalm");
+function persp(f,a,n,fa){var t=1/Math.tan(f/2);return [t/a,0,0,0, 0,t,0,0, 0,0,(fa+n)/(n-fa),-1, 0,0,2*fa*n/(n-fa),0];}
+function lookAt(e,c){var z=[e[0]-c[0],e[1]-c[1],e[2]-c[2]],l=Math.hypot.apply(null,z);z=z.map(function(q){return q/l;});
+  var up=[0,1,0],x=[up[1]*z[2]-up[2]*z[1],up[2]*z[0]-up[0]*z[2],up[0]*z[1]-up[1]*z[0]];l=Math.hypot.apply(null,x);x=x.map(function(q){return q/l;});
+  var y=[z[1]*x[2]-z[2]*x[1],z[2]*x[0]-z[0]*x[2],z[0]*x[1]-z[1]*x[0]];
+  return [x[0],y[0],z[0],0, x[1],y[1],z[1],0, x[2],y[2],z[2],0, -(x[0]*e[0]+x[1]*e[1]+x[2]*e[2]),-(y[0]*e[0]+y[1]*e[1]+y[2]*e[2]),-(z[0]*e[0]+z[1]*e[1]+z[2]*e[2]),1];}
+function mul(a,b){var r=new Array(16);for(var i=0;i<4;i++)for(var j=0;j<4;j++){var s=0;for(var k=0;k<4;k++)s+=a[k*4+j]*b[i*4+k];r[i*4+j]=s;}return r;}
+
+var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+function size(){var d=Math.min(window.devicePixelRatio||1,2),r=cv.getBoundingClientRect(),s=Math.round(Math.max(r.width,1)*d);if(cv.width!==s){cv.width=cv.height=s;}}
+var t0=performance.now();
+// ?t=3.2 congela la pelicula en ese segundo (para revisar cuadros); sin el parametro, bucle normal.
+var FIJO=null;try{var qt=parseFloat(new URLSearchParams(location.search).get("t"));if(isFinite(qt))FIJO=qt;}catch(_){}
+function frame(now){
+  size();gl.viewport(0,0,cv.width,cv.height);
+  var t=reduce?2.6:(FIJO!==null?FIJO:((now-t0)/1000)%LOOP);
+  gl.clearColor(.043,.133,.2,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);
+  // Camara con respiracion lenta (sin mareo).
+  var a=reduce?0:Math.sin(t/LOOP*Math.PI*2);
+  var eye=[a*6,-4+a*2,66],VP=mul(persp(.72,1,1,300),lookAt(eye,[0,0,0]));
+  gl.useProgram(pr);gl.uniform1f(uT,t);gl.uniform1f(uN,N);gl.uniformMatrix4fv(uVP,false,new Float32Array(VP));gl.uniform3fv(uCam,eye);gl.uniform1f(uCalm,reduce?0:1);
+  gl.bindVertexArray(vao);gl.drawArraysInstanced(gl.TRIANGLES,0,36,T);
+  if(!reduce)requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
