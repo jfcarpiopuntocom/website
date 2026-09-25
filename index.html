@@ -2806,6 +2806,17 @@ button { border:none; background:none; font:inherit; }
 .plegable>summary{min-height:48px;display:flex;align-items:center;font-size:18px;font-weight:700;cursor:pointer;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
 @supports (interpolate-size:allow-keywords){.plegable{interpolate-size:allow-keywords}.plegable::details-content{height:0;overflow:clip;transition:height .35s ease,content-visibility .35s allow-discrete}.plegable[open]::details-content{height:auto}}
 @media (prefers-reduced-motion:reduce){.plegable::details-content{transition:none}}
+
+/* TRES BANDAS (JFC 2026-09-25, research + Jev 0.9): oscuro arriba (apps), claro en el medio
+   (contenido), oscuro abajo (trayectoria y pie). Estas dos franjas eran oscuras en medio de lo
+   claro (7 saltos al bajar). Solo cambian fondo y tinta; la estructura queda igual. */
+.options-strip,.stakes-section{background:#F5F4F2!important}
+.options-strip .options-title,.options-strip p,.options-strip .decision-line,.options-strip .opt-heading,
+.stakes-section .stakes-signal,.stakes-section span,.stakes-section a{color:#060E1D!important;-webkit-text-fill-color:#060E1D!important}
+.options-strip .opt-micro{color:#333333!important;-webkit-text-fill-color:#333333!important}
+.options-strip .options-eyebrow,.options-strip .opt-num,.options-strip .opt-arrow{color:#0B7A4B!important;-webkit-text-fill-color:#0B7A4B!important}
+.options-strip .decision-rule,.stakes-section .stakes-kicker{color:#755000!important;-webkit-text-fill-color:#755000!important}
+.options-strip .opt-card{background:#FFFFFF!important;border:1px solid #D7E0E8}
 </style>
 <script>
 /* Brief gratis: reusa el WhatsApp del sitio (openWA). Sin servidor, sin datos guardados aqui. */
