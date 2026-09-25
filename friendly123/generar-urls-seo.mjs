@@ -71,6 +71,11 @@ function pagina({ lang, url, titulo, desc, art }) {
   h = h.replace(/<title>[^<]*<\/title>/, `<title>${esc(titulo)}</title>`);
   h = h.replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(desc)}">`);
   h = h.replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${url}">`);
+  // hreflang propio de cada pagina: el articulo declara como pareja al mismo articulo en el otro idioma.
+  const par = art ? { en: BASE + art.en, es: BASE + art.es } : { en: BASE, es: BASE + "es/" };
+  h = h.replace(/<link rel="alternate" hreflang="en" href="[^"]*">/, `<link rel="alternate" hreflang="en" href="${par.en}">`)
+       .replace(/<link rel="alternate" hreflang="es" href="[^"]*">/, `<link rel="alternate" hreflang="es" href="${par.es}">`)
+       .replace(/<link rel="alternate" hreflang="x-default" href="[^"]*">/, `<link rel="alternate" hreflang="x-default" href="${par.en}">`);
   h = h.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(titulo)}">`);
   h = h.replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(desc)}">`);
   h = h.replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${url}">`);
