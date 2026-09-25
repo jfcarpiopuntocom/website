@@ -1,5 +1,10 @@
 name = "website"
 main = "worker.js"
+routes = [
+  { pattern = "jfcarpio.com/*", zone_name = "jfcarpio.com" },
+  { pattern = "www.jfcarpio.com/*", zone_name = "jfcarpio.com" },
+  { pattern = "blog.jfcarpio.com/*", zone_name = "jfcarpio.com" },
+]
 compatibility_date = "2025-09-27"
 
 [assets]
