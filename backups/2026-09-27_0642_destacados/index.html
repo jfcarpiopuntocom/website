@@ -2894,26 +2894,6 @@ $399 por 5 anos, un solo pago, demo con PIN 456, EN/ES, sin internet. No inventa
     </div>
   </div>
 </section>
-<!-- OBRA APLICADA (JFC 2026-09-27): destacar /talleres/, /las7formas/ y los tableros.
-ES = tono academico. EN = ademas un bloque SOLO EN INGLES (.solo-en) "Available for hire": trabajo remoto
-freelance / consulting / part-time para clientes de EE. UU. Datos tomados de cada pagina (titulos y
-descripciones); Ecuador = UTC-5, igual que la hora del Este de EE. UU. en horario estandar. No inventar cifras. -->
-<section class="oferta obra" aria-labelledby="obra-t">
-<p class="of-kicker" data-t="obra_k">Obra aplicada</p>
-<h2 id="obra-t" class="of-title b1t" data-t="obra_t">Talleres, formación y tableros: la investigación convertida en herramientas.</h2>
-<div class="solo-en hire">
-<p class="of-kicker">Available for hire · Remote</p>
-<p class="of-sub">The JFCarpio.com team designs and builds business apps (friendly-123, amigable-123, consultorio-123) and decision dashboards, backed by 20 years of economic and business research and consulting. We take remote freelance, consulting and part-time work for US companies.</p>
-<p class="of-proof">Same working hours as US Eastern (Ecuador, UTC-5) · English and Spanish · We reply within 24 business hours.</p>
-<button type="button" class="of-cta" onclick="pedirHire()">Tell us about your project</button>
-</div>
-<div class="apps3">
-<a class="app3" href="/talleres/" data-href-en="/workshops/"><strong data-t="obra1_n">Talleres corporativos</strong><span data-t="obra1_d">Intervenciones de 2 horas sobre estrés financiero, decisiones personales de dinero y cultura de empresa privada.</span><em data-t="obra1_go">Ver talleres →</em></a>
-<a class="app3" href="/las7formas/"><strong data-t="obra2_n">Las 7 formas</strong><span data-t="obra2_d">Las 7 formas de destruir tus finanzas personales y familiares: identificarlas y empezar a corregirlas en 12 semanas.</span><em data-t="obra2_go">Ver el programa →</em></a>
-<a class="app3" href="/visorantiquiebra/"><strong data-t="obra3_n">Visor Antiquiebra</strong><span data-t="obra3_d">Una primera lectura de cuántos días o semanas le quedan a un negocio, y si gana estabilidad o acumula daños.</span><em data-t="obra3_go">Abrir el visor →</em></a>
-<a class="app3" href="/visorgerencial/"><strong data-t="obra4_n">Visor Gerencial</strong><span data-t="obra4_d">7 tableros gerenciales gratuitos de entorno económico, con benchmarks de Ecuador, Colombia, Perú y Chile. Sin registro.</span><em data-t="obra4_go">Abrir los tableros →</em></a>
-</div>
-</section>
 <div class="options-strip">
   <div class="options-hd">
     <span class="options-eyebrow" data-t="opt_eyebrow">¿Para quién es esto y para quién no?</span>
@@ -3245,11 +3225,6 @@ descripciones); Ecuador = UTC-5, igual que la hora del Este de EE. UU. en horari
 /* Citas movidas a fondo oscuro: tinta blanca (salian negras e ilegibles, 2026-09-27). */
 .citas-lectores .hero-quote-text,.citas-lectores .hero-quote-text *,.citas-lectores .hero-quote-attr{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
 .cta-fija{display:none}
-/* Obra aplicada + bloque solo en ingles (JFC 2026-09-27). setLang() pone <html lang>. */
-.oferta.obra{padding-top:36px;border-top:1px solid #2E6278}
-.solo-en{display:none}html[lang="en"] .solo-en{display:block}
-.hire{border:2px solid #E8A020;border-radius:14px;padding:16px;margin:0 0 18px;background:#16222F}
-@media (min-width:760px){.oferta.obra .apps3{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:760px){.cta-fija{display:block;position:fixed;left:0;right:0;bottom:0;z-index:900;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:#0F1923;border-top:1px solid #2E6278}.cta-fija .of-cta{min-height:48px;font-size:17px;padding:10px 14px}body{padding-bottom:84px}}
 .ps-final{background:#0F1923;color:#FFFFFF;padding:28px 18px;padding-left:max(18px,calc((100% - 760px)/2));padding-right:max(18px,calc((100% - 760px)/2));border-top:1px solid #2E6278}
 .ps-final p{font-size:18px;line-height:1.5;margin:0 0 14px;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
@@ -3277,7 +3252,6 @@ a.of-cta{text-align:center;text-decoration:none;margin:0 0 16px}
 </style>
 <script>
 /* Brief gratis: reusa el WhatsApp del sitio (openWA). Sin servidor, sin datos guardados aqui. */
-function pedirHire(){var t=document.getElementById('tIn');var m='Hello JFCarpio.com team, I would like to discuss a remote engagement (freelance / consulting / part-time). Company and project: ';if(t)t.value=m;try{openWAMessage(m);}catch(_){if(t){t.scrollIntoView({behavior:'smooth',block:'center'});t.focus();}}}
 function pedirBrief(){var t=document.getElementById('tIn');var en=(typeof lang!=='undefined'&&lang==='en');
  if(t)t.value=en?'Hello JFCarpio.com team, I would like the free 1-page macro brief for my sector. My company and sector: ':'Hola, equipo de JFCarpio.com: quiero el brief macro gratis de 1 página de mi sector. Mi empresa y sector: ';
  try{openWAMessage(t?t.value:'');}catch(_){if(t){t.scrollIntoView({behavior:'smooth',block:'center'});t.focus();}}}
@@ -3964,20 +3938,6 @@ var T={
     f123_why:'Funciona en tu aparato, sin servidores que pagar cada mes.',
     f123_demo:'La demo no pide registro ni tarjeta.',
     founder_note:'Nota del fundador',
-    obra_k:'Obra aplicada',
-    obra_t:'Talleres, formación y tableros: la investigación convertida en herramientas.',
-    obra1_n:'Talleres corporativos',
-    obra1_d:'Intervenciones de 2 horas sobre estrés financiero, decisiones personales de dinero y cultura de empresa privada.',
-    obra1_go:'Ver talleres →',
-    obra2_n:'Las 7 formas',
-    obra2_d:'Las 7 formas de destruir tus finanzas personales y familiares: identificarlas y empezar a corregirlas en 12 semanas.',
-    obra2_go:'Ver el programa →',
-    obra3_n:'Visor Antiquiebra',
-    obra3_d:'Una primera lectura de cuántos días o semanas le quedan a un negocio, y si gana estabilidad o acumula daños.',
-    obra3_go:'Abrir el visor →',
-    obra4_n:'Visor Gerencial',
-    obra4_d:'7 tableros gerenciales gratuitos de entorno económico, con benchmarks de Ecuador, Colombia, Perú y Chile. Sin registro.',
-    obra4_go:'Abrir los tableros →',
     of_qr:'Resultado: al año siguiente tomó mejores decisiones de finanzas corporativas y expansión.',
     b1_72h:'Te lo entregamos en las siguientes 72 horas.',
     ps_t:'P.D.: Pide gratis el brief de 1 página de tu sector; te lo entregamos en 72 horas. Si un estudio no responde la pregunta acordada, te devolvemos todo.',
@@ -4152,20 +4112,6 @@ var T={
     f123_why:'It runs on your device, with no servers to pay for every month.',
     f123_demo:'The demo needs no sign-up and no card.',
     founder_note:"Founder's note",
-    obra_k:'Apps, dashboards and workshops',
-    obra_t:'We build apps and decision dashboards, and run corporate workshops.',
-    obra1_n:'Corporate workshops',
-    obra1_d:'2-hour sessions on financial stress, personal money decisions and private-enterprise culture, for US, global and bilingual teams.',
-    obra1_go:'See workshops →',
-    obra2_n:'Las 7 formas (Spanish)',
-    obra2_d:'A Spanish-language program on the 7 ways people wreck their personal and family finances, and how to start fixing them in 12 weeks.',
-    obra2_go:'See the program →',
-    obra3_n:'Bankruptcy-risk viewer',
-    obra3_d:'A first read on how many days or weeks a business has left, and whether it is gaining stability or piling up damage.',
-    obra3_go:'Open the viewer →',
-    obra4_n:'Management dashboards',
-    obra4_d:'7 free management dashboards on the economic environment, with benchmarks for Ecuador, Colombia, Peru and Chile. No sign-up.',
-    obra4_go:'Open the dashboards →',
     of_qr:'Result: the following year he made better corporate finance and expansion decisions.',
     b1_72h:'Delivered within the next 72 hours.',
     ps_t:'P.S. Get the free 1-page brief for your sector, delivered within 72 hours. If a study does not answer the agreed question, full refund.',
@@ -4321,8 +4267,6 @@ function setLang(l){
   if(be){be.className='lang-btn'+(l==='es'?' lang-active':'');be.setAttribute('aria-pressed',String(l==='es'));}
   if(bn){bn.className='lang-btn'+(l==='en'?' lang-active':'');bn.setAttribute('aria-pressed',String(l==='en'));}
   document.documentElement.setAttribute('lang',l);
-  /* data-href-en (JFC 2026-09-27): en ingles, talleres -> /workshops/. */
-  var hs=document.querySelectorAll('[data-href-en]');for(var h=0;h<hs.length;h++){if(!hs[h].getAttribute('data-href-es'))hs[h].setAttribute('data-href-es',hs[h].getAttribute('href'));hs[h].setAttribute('href',l==='en'?hs[h].getAttribute('data-href-en'):hs[h].getAttribute('data-href-es'));}
   try{localStorage.setItem('jfc_lang',l);}catch(e){}
 }
 
