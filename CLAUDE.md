@@ -26,6 +26,10 @@ Branch for feature work: `claude/high-contrast-white-design-VK5kk`. Base: `main`
   casi doctorado. Tampoco debe sonar a asesor contable.
 - Cómo SÍ: **investigador económico y empresarial** y **consultor** (EN: economic and
   business researcher; consultant).
+- **jfcarpio.com es el sitio personal de JFC como investigador y consultor (JFC 2026-09-27),
+  NO el sitio de las apps.** Las 3 apps tendrán sus propios sitios; por ahora friendly-123 vive
+  en /friendly123/ (landing propia, archivo friendly123/index.html). En el inicio las apps van
+  como sección secundaria, no como portada. Reemplaza la decisión del 2026-09-25.
 - No aplica a terceros (p. ej. "Bastiat, economista francés") ni a textos académicos
   sobre "los economistas" en general.
 
