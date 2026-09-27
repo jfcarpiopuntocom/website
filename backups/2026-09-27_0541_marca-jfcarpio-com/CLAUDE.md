@@ -26,14 +26,6 @@ Branch for feature work: `claude/high-contrast-white-design-VK5kk`. Base: `main`
   casi doctorado. Tampoco debe sonar a asesor contable.
 - Cómo SÍ: **investigador económico y empresarial** y **consultor** (EN: economic and
   business researcher; consultant).
-- **Tono: SOLIDEZ, no lucimiento (JFC 2026-09-27).** "En mis 30s quería lucirme; ahora quiero
-  darle solidez a mis negocios." Nada de efectos para impresionar: claridad, prueba y negocio.
-- **Jev pondera TODA mejora o cambio antes de proponerlo (orden de JFC, no opcional).** Sin Jev
-  (error o sin créditos) no se presenta como validado: se dice que falta la pasada de Jev.
-- **MARCA = JFCarpio.com, voz de EQUIPO (JFC 2026-09-27, regla dura).** El sitio NO es sobre
-  JFC: habla "el equipo de JFCarpio.com ha desarrollado...", en plural ("te devolvemos",
-  "aceptamos"). Nunca "J.F. Carpio" como marca en títulos, metadatos, pie ni mensajes. Se
-  mantienen solo las firmas de autor (bylines de ensayos y citas) y la bio de trayectoria.
 - **jfcarpio.com es el sitio personal de JFC como investigador y consultor (JFC 2026-09-27),
   NO el sitio de las apps.** Las 3 apps tendrán sus propios sitios; por ahora friendly-123 vive
   en /friendly123/ (landing propia, archivo friendly123/index.html). En el inicio las apps van
