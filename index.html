@@ -2908,7 +2908,7 @@ descripciones); Ecuador = UTC-5, igual que la hora del Este de EE. UU. en horari
 <button type="button" class="of-cta" onclick="pedirHire()">Tell us about your project</button>
 </div>
 <div class="apps3">
-<a class="app3" href="/talleres/" data-href-en="/workshops/"><strong data-t="obra1_n">Talleres corporativos</strong><span data-t="obra1_d">Intervenciones de 2 horas sobre estrés financiero, decisiones personales de dinero y cultura de empresa privada.</span><em data-t="obra1_go">Ver talleres →</em></a>
+<a class="app3" href="/talleres/" data-href-en="/workshops/"><strong data-t="obra1_n">Talleres corporativos</strong><span data-t="obra1_d">Intervenciones de 2 horas sobre estrés financiero, decisiones personales de dinero y cultura de empresa privada.</span><b class="cupo" data-t="obra1_cupo">Máximo 2 talleres al mes y hay lista de espera: conviene reservar con semanas de antelación.</b><em data-t="obra1_go">Ver talleres →</em></a>
 <a class="app3" href="/las7formas/"><strong data-t="obra2_n">Las 7 formas</strong><span data-t="obra2_d">Las 7 formas de destruir tus finanzas personales y familiares: identificarlas y empezar a corregirlas en 12 semanas.</span><em data-t="obra2_go">Ver el programa →</em></a>
 <a class="app3" href="/visorantiquiebra/"><strong data-t="obra3_n">Visor Antiquiebra</strong><span data-t="obra3_d">Una primera lectura de cuántos días o semanas le quedan a un negocio, y si gana estabilidad o acumula daños.</span><em data-t="obra3_go">Abrir el visor →</em></a>
 <a class="app3" href="/visorgerencial/"><strong data-t="obra4_n">Visor Gerencial</strong><span data-t="obra4_d">7 tableros gerenciales gratuitos de entorno económico, con benchmarks de Ecuador, Colombia, Perú y Chile. Sin registro.</span><em data-t="obra4_go">Abrir los tableros →</em></a>
@@ -3159,7 +3159,7 @@ descripciones); Ecuador = UTC-5, igual que la hora del Este de EE. UU. en horari
 
     <!-- Body: chips + textarea + two action buttons -->
     <div class="contact-head-simple">
-      <p class="contact-eyebrow" data-t="contact_eye">Talleres · Disponibilidad limitada</p>
+      <p class="contact-eyebrow" data-t="contact_eye">Talleres · Máximo 2 al mes</p>
       <h3 class="contact-title" data-t="contact_title">Para fortalecer equipos</h3>
       <p class="contact-sub" data-t="contact_sub">Usamos WhatsApp para coordinar talleres corporativos y mensajes puntuales. El resto de recursos del sitio puede revisarse directamente.</p>
     </div>
@@ -3247,6 +3247,7 @@ descripciones); Ecuador = UTC-5, igual que la hora del Este de EE. UU. en horari
 .cta-fija{display:none}
 /* Obra aplicada + bloque solo en ingles (JFC 2026-09-27). setLang() pone <html lang>. */
 .oferta.obra{padding-top:36px;border-top:1px solid #2E6278}
+.app3 .cupo{display:block;margin-top:8px;font-size:15px;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
 .solo-en{display:none}html[lang="en"] .solo-en{display:block}
 .hire{border:2px solid #E8A020;border-radius:14px;padding:16px;margin:0 0 18px;background:#16222F}
 @media (min-width:760px){.oferta.obra .apps3{grid-template-columns:repeat(2,1fr)}}
@@ -3969,6 +3970,7 @@ var T={
     obra1_n:'Talleres corporativos',
     obra1_d:'Intervenciones de 2 horas sobre estrés financiero, decisiones personales de dinero y cultura de empresa privada.',
     obra1_go:'Ver talleres →',
+    obra1_cupo:'Máximo 2 talleres al mes y hay lista de espera: conviene reservar con semanas de antelación.',
     obra2_n:'Las 7 formas',
     obra2_d:'Las 7 formas de destruir tus finanzas personales y familiares: identificarlas y empezar a corregirlas en 12 semanas.',
     obra2_go:'Ver el programa →',
@@ -4069,7 +4071,7 @@ var T={
     tl5_t:'Formación teórica al servicio de problemas reales',
     tl5_b:'M.E.E. en UFM Guatemala / Boston University. Trabajo doctoral en evolución institucional mengeriana (3 working papers). Aplica la teoría austriaca del capital a problemas de coordinación, inversión y tiempo.',
     term_lbl:'Contacto', term_title_a:'¿Tienes una ', term_title_b:'pregunta', term_title_c:'?',
-    contact_eye:'Talleres · Disponibilidad limitada',
+    contact_eye:'Talleres · Máximo 2 al mes',
     contact_title:'Para fortalecer equipos',
     contact_sub:'Usamos WhatsApp para coordinar talleres corporativos y mensajes puntuales. El resto de recursos del sitio puede revisarse directamente.',
     ruta_a_num:'Ruta A · Taller corporativo',
@@ -4157,6 +4159,7 @@ var T={
     obra1_n:'Corporate workshops',
     obra1_d:'2-hour sessions on financial stress, personal money decisions and private-enterprise culture, for US, global and bilingual teams.',
     obra1_go:'See workshops →',
+    obra1_cupo:'At most 2 workshops a month, with a waiting list: book weeks ahead.',
     obra2_n:'Las 7 formas (Spanish)',
     obra2_d:'A Spanish-language program on the 7 ways people wreck their personal and family finances, and how to start fixing them in 12 weeks.',
     obra2_go:'See the program →',
@@ -4257,7 +4260,7 @@ var T={
     tl5_t:'Theoretical formation in service of real problems',
     tl5_b:'M.E.E. at UFM Guatemala / Boston University. Doctoral work in Mengerian institutional evolution (3 working papers). He applies Austrian capital theory to problems of coordination, investment and time.',
     term_lbl:'Contact', term_title_a:'Got a ', term_title_b:'question', term_title_c:'?',
-    contact_eye:'Workshops · Limited availability',
+    contact_eye:'Workshops · At most 2 a month',
     contact_title:'For strengthening teams',
     contact_sub:'We use WhatsApp to coordinate corporate workshops and short messages. The rest of the site resources can be reviewed directly.',
     ruta_a_num:'Path A · Corporate workshop',
