@@ -30,6 +30,10 @@ Branch for feature work: `claude/high-contrast-white-design-VK5kk`. Base: `main`
   NO el sitio de las apps.** Las 3 apps tendrán sus propios sitios; por ahora friendly-123 vive
   en /friendly123/ (landing propia, archivo friendly123/index.html). En el inicio las apps van
   como sección secundaria, no como portada. Reemplaza la decisión del 2026-09-25.
+- OJO las7formas: la bio "Economista por USFQ, Maestría en Economía por la Universidad de
+  Maastricht" es de **Andrés Vergara** (co-instructor del curso), NO de JFC; no se toca.
+  JFC estudió en la USFQ Administración de Empresas y una especialización en Marketing.
+  (Error de Claude 2026-09-27: se le cambió a Andrés; revertido el mismo día.)
 - No aplica a terceros (p. ej. "Bastiat, economista francés") ni a textos académicos
   sobre "los economistas" en general.
 
