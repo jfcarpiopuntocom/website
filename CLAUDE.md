@@ -20,6 +20,16 @@ Branch for feature work: `claude/high-contrast-white-design-VK5kk`. Base: `main`
 
 ## Absolute Rules (never change without JFC explicit approval)
 
+### REGLA DURA JFC 2026-09-27: NUNCA LLAMAR A JFC "ECONOMISTA"
+- Prohibido "economista" / "economist" para referirse a JFC, en cualquier texto (sitio,
+  apps, onepagers, bios, metadatos, posts). A él le suena pretencioso, aun con maestría y
+  casi doctorado. Tampoco debe sonar a asesor contable.
+- Cómo SÍ: **investigador económico y empresarial** y **consultor** (EN: economic and
+  business researcher; consultant).
+- No aplica a terceros (p. ej. "Bastiat, economista francés") ni a textos académicos
+  sobre "los economistas" en general.
+
+
 ### Colors — Dark Theme
 - Background: `#060E1D`
 - Primary text: `#FFFFFF`
