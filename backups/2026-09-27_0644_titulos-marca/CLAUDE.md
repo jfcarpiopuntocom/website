@@ -26,9 +26,6 @@ Branch for feature work: `claude/high-contrast-white-design-VK5kk`. Base: `main`
   casi doctorado. Tampoco debe sonar a asesor contable.
 - Cómo SÍ: **investigador económico y empresarial** y **consultor** (EN: economic and
   business researcher; consultant).
-- **Avatiun en el Visor Gerencial es REAL y da aval extra (JFC 2026-09-27): NO se cambia a JFCarpio.com.**
-  En títulos de pestaña y metadatos de marca de las demás páginas va "JFCarpio.com"; se mantienen
-  autor/fundador (Person) como J.F. Carpio.
 - **Tono: SOLIDEZ, no lucimiento (JFC 2026-09-27).** "En mis 30s quería lucirme; ahora quiero
   darle solidez a mis negocios." Nada de efectos para impresionar: claridad, prueba y negocio.
 - **Jev pondera TODA mejora o cambio antes de proponerlo (orden de JFC, no opcional).** Sin Jev
