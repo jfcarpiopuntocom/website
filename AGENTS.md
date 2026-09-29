@@ -173,3 +173,10 @@ https://Codex.ai/code/session_[ID]
 3. **No unsolicited refactoring.** Only change what was asked.
 4. **No removing backups.** Timestamped files are intentional safety nets.
 5. **Commit after each version bump**, not in bulk.
+
+### Reel vertical de la portada (JFC 2026-09-29)
+- `index.html` es un reel vertical (12 fotogramas). Lee `notas/REEL-NOTAS-2026-09-29.md` y el comentario al inicio del `<body>` ANTES de tocar.
+- Colores/contenido = el sitio de julio 2026 (commit `9f550ca`); texto blanco sobre fondo navy propio; sin gris/translucido; `dvh`, nunca `vh`.
+- Prueba obligatoria tras cambiar la portada: `SITE=$PWD PW=<playwright> node scripts/test-reel.cjs white` (debe decir TODO OK).
+- El reel anterior (Codex) esta en `indexbackup28sept2026-reel-codex.html`; no borrar.
+- OJO despliegue: el Worker `website` debe estar conectado a ESTE repo (no a friendly-123). Ver la nota de despliegue en `notas/`.
