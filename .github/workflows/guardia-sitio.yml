@@ -21,15 +21,16 @@ jobs:
       - name: Portada, index y landing de friendly123
         run: |
           fallo=0
+          UA='Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1'
           for u in https://jfcarpio.com/ https://jfcarpio.com/index.html; do
-            code=$(curl -s -m 30 -o /tmp/p.html -w '%{http_code}' -H 'Cache-Control: no-cache' "$u?guardia=$(date +%s)" || echo 000)
-            echo "$u -> HTTP $code"
+            code=$(curl -s -m 30 -A "$UA" -D /tmp/h.txt -o /tmp/p.html -w '%{http_code}' -H 'Accept: text/html,application/xhtml+xml' -H 'Accept-Language: es' -H 'Cache-Control: no-cache' "$u?guardia=$(date +%s)" || echo 000)
+            echo "$u -> HTTP $code"; [ "$code" = "200" ] || { head -c 600 /tmp/h.txt; }
             if [ "$code" != "200" ]; then echo "::error::$u respondio $code"; fallo=1; continue; fi
             if grep -qi 'aislamiento.js\|AISLAMIENTO DE ALMACENAMIENTO\|f123-shell\|register(.\?sw.js' /tmp/p.html; then
               echo "::error::$u muestra la APP (friendly-123), no la portada. Worker website mal conectado o desplegado desde otro repo."; fallo=1; fi
             if ! grep -q 'JFCarpio.com' /tmp/p.html; then echo "::error::$u no contiene JFCarpio.com: no parece la portada"; fallo=1; fi
           done
-          code=$(curl -s -m 30 -o /tmp/f.html -w '%{http_code}' "https://jfcarpio.com/friendly123/?guardia=$(date +%s)" || echo 000)
+          code=$(curl -s -m 30 -A "$UA" -o /tmp/f.html -w '%{http_code}' "https://jfcarpio.com/friendly123/?guardia=$(date +%s)" || echo 000)
           echo "friendly123 -> HTTP $code"
           [ "$code" = "200" ] || { echo "::error::/friendly123/ respondio $code"; fallo=1; }
           exit $fallo
