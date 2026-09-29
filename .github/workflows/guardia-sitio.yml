@@ -1,0 +1,35 @@
+# GUARDIA DE jfcarpio.com (JFC 2026-09-29). Nace del incidente en que un Worker mal conectado publico la app
+# friendly-123 encima de la portada. Cada 30 minutos (y en cada push a main) mira el sitio VIVO desde afuera y falla
+# en rojo si la raiz no es la portada o si aparece algo de la app. GitHub avisa por correo cuando un workflow programado
+# falla. Solo LEE (curl): no toca Cloudflare ni el repo. Esto DETECTA rapido; lo que PREVIENE es que el Worker "website"
+# este conectado solo a jfcarpiopuntocom/website (main). Ver notas/INCIDENTE-2026-09-29.md.
+name: guardia-sitio
+on:
+  schedule:
+    - cron: '7,37 * * * *'
+  push:
+    branches: [main]
+    paths: ['.github/workflows/guardia-sitio.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  mirar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Portada, index y landing de friendly123
+        run: |
+          fallo=0
+          for u in https://jfcarpio.com/ https://jfcarpio.com/index.html; do
+            code=$(curl -s -m 30 -o /tmp/p.html -w '%{http_code}' -H 'Cache-Control: no-cache' "$u?guardia=$(date +%s)" || echo 000)
+            echo "$u -> HTTP $code"
+            if [ "$code" != "200" ]; then echo "::error::$u respondio $code"; fallo=1; continue; fi
+            if grep -qi 'aislamiento.js\|AISLAMIENTO DE ALMACENAMIENTO\|f123-shell\|register(.\?sw.js' /tmp/p.html; then
+              echo "::error::$u muestra la APP (friendly-123), no la portada. Worker website mal conectado o desplegado desde otro repo."; fallo=1; fi
+            if ! grep -q 'JFCarpio.com' /tmp/p.html; then echo "::error::$u no contiene JFCarpio.com: no parece la portada"; fallo=1; fi
+          done
+          code=$(curl -s -m 30 -o /tmp/f.html -w '%{http_code}' "https://jfcarpio.com/friendly123/?guardia=$(date +%s)" || echo 000)
+          echo "friendly123 -> HTTP $code"
+          [ "$code" = "200" ] || { echo "::error::/friendly123/ respondio $code"; fallo=1; }
+          exit $fallo
