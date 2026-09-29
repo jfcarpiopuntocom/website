@@ -10,3 +10,7 @@
 - Regla: el Worker `website` solo se conecta a `jfcarpiopuntocom/website`, rama `main`. Nunca a friendly-123.
 - Verificacion tras un merge en friendly-123: el commit no debe tener el check "Workers Builds: website".
 - Esta carpeta `notas/` esta excluida de los assets por `.assetsignore`: no se publica.
+- 2026-09-29 ~14:55 UTC: el build de Cloudflare de 490affc (reel vertical, PR #33) fallo sin log visible por el conector.
+  `wrangler deploy --dry-run` local con 4.143.0 pasa (1233 archivos de assets). A la misma hora fallo tambien el build de
+  friendly-123 sin cambios de codigo: se trata como fallo pasajero de Cloudflare y se reintenta con este commit.
+  Si vuelve a fallar: abrir el Build ID en el dashboard (Deployments > View build history) y leer el error.
