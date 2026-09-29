@@ -1,5 +1,3 @@
-# Recovery 2026-09-29: deploy the website Worker from jfcarpiopuntocom/website.
-# The friendly-123 repository must never be the build source for this Worker.
 name = "website"
 main = "worker.js"
 routes = [
