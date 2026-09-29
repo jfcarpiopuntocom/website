@@ -32,5 +32,7 @@ jobs:
           done
           code=$(curl -s -m 30 -A "$UA" -o /tmp/f.html -w '%{http_code}' "https://jfcarpio.com/friendly123/?guardia=$(date +%s)" || echo 000)
           echo "friendly123 -> HTTP $code"
-          [ "$code" = "200" ] || { echo "::error::/friendly123/ respondio $code"; fallo=1; }
+          # /friendly123/ es AVISO, no alarma (2026-09-29: desde los servidores de GitHub da 403 por una regla del borde de
+          # Cloudflare; la portada si pasa). La alarma roja es solo "la app tapa la portada".
+          [ "$code" = "200" ] || echo "::warning::/friendly123/ respondio $code desde GitHub (revisar en el telefono)"
           exit $fallo
