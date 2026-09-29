@@ -101,7 +101,7 @@ const settle = p => p.waitForFunction(() => window.__reel && !window.__reel.auto
     const idx = () => page.evaluate(() => window.__reel.idx);
     await page.mouse.move(700, 450); await page.mouse.wheel(0, 260); await page.waitForTimeout(900); (await idx()) === 1 ? OK('rueda avanza 1') : F('rueda no avanzo: ' + await idx());
     await page.keyboard.press('ArrowDown'); await page.waitForTimeout(500); (await idx()) === 2 ? OK('flecha abajo avanza') : F('flecha abajo');
-    await page.keyboard.press('End'); await page.waitForTimeout(500); (await idx()) === 11 ? OK('End va al ultimo') : F('End');
+    await page.keyboard.press('End'); await page.waitForTimeout(500); (await idx()) === 12 ? OK('End va al ultimo') : F('End');
     await page.keyboard.press('Home'); await page.waitForTimeout(500);
     await page.mouse.move(500, 500); await page.mouse.down(); await page.mouse.move(500, 250, { steps: 8 }); await page.mouse.up(); await page.waitForTimeout(600); (await idx()) === 1 ? OK('arrastre hacia arriba avanza') : F('arrastre: ' + await idx());
     await page.evaluate(() => window.__reel.go(0)); await page.waitForTimeout(1500);
@@ -112,12 +112,12 @@ const settle = p => p.waitForFunction(() => window.__reel && !window.__reel.auto
     const closed = await page.evaluate(() => { const s = document.querySelectorAll('.slide')[0]; return { cls: s.classList.contains('open'), inert: s.querySelector('.panel').inert, vis: getComputedStyle(s.querySelector('.panel')).visibility }; });
     !closed.cls && closed.inert && closed.vis === 'hidden' ? OK('Escape cierra el panel') : F('cerrar panel: ' + JSON.stringify(closed));
     // todos los paneles: abrir, medir que su contenido cabe y que los enlaces son absolutos o #
-    const N = 12; let panelBad = [];
+    const N = 13; let panelBad = [];
     for (let i = 0; i < N; i++) { const has = await page.evaluate(k => !!document.querySelectorAll('.slide')[k].querySelector('.panel'), i); if (!has) continue; await page.evaluate(k => { window.__reel.cl(); window.__reel.go(k); }, i); await page.waitForTimeout(1300); await page.evaluate(k => window.__reel.op(k), i); await page.waitForTimeout(900);
       const pr = await page.evaluate(k => { const p = document.querySelectorAll('.slide')[k].querySelector('.panel'); return { h: p.scrollHeight, ch: p.clientHeight, links: [...p.querySelectorAll('a')].map(a => a.getAttribute('href')), fsMin: Math.min(...[...p.querySelectorAll('p,li,h3,h4,.btn,.tg,b')].map(e => parseFloat(getComputedStyle(e).fontSize))) }; }, i);
       if (pr.fsMin < 14) panelBad.push(`panel ${i}: fuente ${pr.fsMin}px`); for (const l of pr.links) if (!/^(https?:\/\/|#)/.test(l || '')) panelBad.push(`panel ${i}: enlace raro ${l}`);
       await page.evaluate(() => window.__reel.cl()); await page.waitForTimeout(300); }
-    panelBad.length ? F('paneles: ' + panelBad.join(' | ')) : OK('12 paneles: fuentes >=14px y enlaces validos');
+    panelBad.length ? F('paneles: ' + panelBad.join(' | ')) : OK('13 paneles: fuentes >=14px y enlaces validos');
     // idioma
     await page.evaluate(() => { window.__reel.cl(); window.__reel.go(0); }); await page.waitForTimeout(1200);
     await page.click('.lang button[data-lang=en]'); await page.waitForTimeout(200);
@@ -132,7 +132,7 @@ const settle = p => p.waitForFunction(() => window.__reel && !window.__reel.auto
 
   // hash directo
   { const { ctx, page } = await setup(browser, 1440, 900, false); await page.goto('file://' + SITE + '/index.html#libro'); await page.waitForTimeout(1200);
-    const r = await page.evaluate(() => ({ idx: window.__reel.idx, auto: window.__reel.auto })); r.idx === 6 && !r.auto ? OK('#libro abre directo sin entrada animada') : F('hash: ' + JSON.stringify(r)); await ctx.close(); }
+    const r = await page.evaluate(() => ({ idx: window.__reel.idx, auto: window.__reel.auto })); r.idx === 7 && !r.auto ? OK('#libro abre directo sin entrada animada') : F('hash: ' + JSON.stringify(r)); await ctx.close(); }
   // ?lang=en
   { const { ctx, page } = await setup(browser, 1440, 900, false); await page.goto('file://' + SITE + '/index.html?lang=en'); await settle(page); const h = await page.evaluate(() => document.querySelector('h1').textContent); h.startsWith('Blog. Tools.') ? OK('?lang=en fuerza ingles') : F('lang param'); await ctx.close(); }
   // reduced motion: sin barrido
