@@ -345,8 +345,8 @@ h1,h2,h3,h4,.big,.brand span{font-family:var(--fd);font-weight:600;letter-spacin
 /* Velo translucido (.72) que sigue la altura del texto: deja ver la foto y mantiene 7:1 aun con foto blanca */
 .tx::before{background:rgba(6,14,29,.72)!important}
 @media(min-width:901px){.tx::before{background:linear-gradient(90deg,rgba(6,14,29,.74) 0,rgba(6,14,29,.72) 700px,rgba(6,14,29,0) 1000px)!important}}
-.top::before{background:rgba(6,14,29,.72)}
-#portada .lead:not(.lead2){display:none}
+.top::before{background:rgba(6,14,29,.76);-webkit-mask-image:linear-gradient(180deg,#000 82%,transparent);mask-image:linear-gradient(180deg,#000 82%,transparent)}
+.reel #portada .lead:not(.lead2){display:none}
 .top .no{font-size:clamp(1.7rem,4.2dvh,2.6rem)}
 .top .kick{font-size:14px}
 .front h1,.front h2{font-size:clamp(1.7rem,5.2dvh,3.6rem)}
@@ -362,6 +362,8 @@ h1,h2,h3,h4,.big,.brand span{font-family:var(--fd);font-weight:600;letter-spacin
  .tx{gap:8px}
 }
 
+/* Sin JS (sitio apilado): se ve TODO el texto, aunque el reel lo aligere en pantallas chicas */
+html:not(.reel) .front .lead,html:not(.reel) .ri{display:block!important}html:not(.reel) .rr{display:grid!important}html:not(.reel) .front .ex{display:inline-flex!important}html:not(.reel) .top .no{display:block!important}
 @media(prefers-reduced-motion:reduce){.face,.panel,.veil,.js-rv .reveal{transition-duration:.01s}}
 
 </style>
