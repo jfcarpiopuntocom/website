@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link rel="preconnect" href="https://images.pexels.com/" crossorigin>
 <link rel="preload" as="image" href="https://jfcarpio.com/network-pacific.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@700;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23060E1D'/%3E%3Ctext y='22' x='4' font-family='Arial' font-weight='700' font-size='16' fill='%23E8A020'%3EJF%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">{
   "@context":"https://schema.org",
@@ -310,6 +310,32 @@ a.ri:hover{background:none}a.ri:hover span{color:var(--c)}
 /* Telefonos bajos (iPhone SE): filas en una linea corrida y sin el enlace "Ver por donde empezar" (el reel ya navega) */
 @media(max-width:640px) and (max-height:760px){#portada .ri{display:block}#portada .ri b{display:inline;margin-right:8px}#portada .ri span{display:inline}#portada .ex.lnk{display:none}#portada .top .no{display:none}#portada .rr{gap:4px}#portada .top{margin-top:16px}#portada h1{font-size:clamp(1.7rem,5.4dvh,2.4rem)}}
 html:not(.reel) .top{position:static;padding:18px 18px 0}
+
+/* ==== TIPOGRAFIA "CINEMA" (JFC 2026-09-29: "fijate en lo cool que queda porque las letras son medianas o pequenas"):
+   titulos en serif de alto contraste (Playfair Display) a tamano MEDIANO, numeros en cursiva, etiquetas en sans espaciada
+   (Jost). Texto en Lora (el de julio). Menos texto sobre la foto: en telefono el parrafo pasa al panel y quedan las filas.
+   Legibilidad intacta: nada gris, nada < 14px, blanco sobre navy. */
+:root{--fd:'Playfair Display',Georgia,'Times New Roman',serif;--fl:'Jost','Helvetica Neue',Arial,sans-serif}
+h1,h2,h3,h4,.big,.brand span{font-family:var(--fd);font-weight:600;letter-spacing:.01em}
+.kick,.tg,.chip,.btn,.count,.lang button,.wa,.cur,.pips span,.ri b,.ft{font-family:var(--fl);font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.front .btn,.wa{font-size:14px;letter-spacing:.08em}
+.top .no{font-family:var(--fd);font-style:italic;font-weight:500;font-size:clamp(2.2rem,5.6dvh,3.4rem)}
+.top .kick{letter-spacing:.18em;font-weight:500}
+@media(max-height:760px){.lead2{display:none}.top .no{font-size:2rem}.top{gap:4px}.tx:has(.rr) .lead{display:none}}
+@media(max-width:640px) and (max-height:760px){.tx .rr{display:none}#portada .tx .rr{display:grid}}
+.front h1,.front h2{font-size:clamp(1.9rem,6.4dvh,4.4rem);line-height:1.02;max-width:17ch}
+.front h1.long,.front h2.long{font-size:clamp(1.6rem,4.6dvh,3rem)}
+.front .sub{font-family:var(--fd);font-weight:500}
+.ri b{font-size:14px;letter-spacing:.2em}
+.panel h3{font-size:2rem}.panel h4{font-size:1.35rem}.cd b{font-size:1.25rem;text-transform:none}
+@media(max-width:640px){
+ .front h1,.front h2{font-size:clamp(1.7rem,4.9dvh,2.35rem)}
+ .front h1.long,.front h2.long{font-size:clamp(1.45rem,4.1dvh,1.95rem)}
+ /* Como en el ejemplo: titulo + filas de datos + boton. El parrafo vive en el panel "Ver..." */
+ .tx:has(.rr) .lead{display:none}
+ .rr{display:grid;gap:6px}
+ .ri{display:block}.ri b{display:inline;margin-right:10px}.ri span{display:inline;font-size:15px}
+}
 
 @media(prefers-reduced-motion:reduce){.face,.panel,.veil,.js-rv .reveal{transition-duration:.01s}}
 
