@@ -337,6 +337,31 @@ h1,h2,h3,h4,.big,.brand span{font-family:var(--fd);font-weight:600;letter-spacin
  .ri{display:block}.ri b{display:inline;margin-right:10px}.ri span{display:inline;font-size:15px}
 }
 
+/* ==== "QUE LA FOTO SE LUZCA" (JFC 2026-09-29, 2a captura motionin): sin bloques navy solidos; dos degradados suaves
+   (arriba para el indice, abajo para el texto) y el texto SOLO en el tercio inferior: titulo, 2 filas y 1 boton.
+   Legibilidad: el degradado inferior no baja de .7 bajo el texto (blanco sobre foto blanca = 7:1). Si se agrega texto
+   y sube, el test de contraste (scripts/test-reel.cjs white) falla: quitar texto, no aclarar. */
+.sc{background:linear-gradient(0deg,rgba(6,14,29,.5) 0,rgba(6,14,29,0) 45%),linear-gradient(180deg,rgba(6,14,29,.45) 0,rgba(6,14,29,0) 28%)}
+/* Velo translucido (.72) que sigue la altura del texto: deja ver la foto y mantiene 7:1 aun con foto blanca */
+.tx::before{background:rgba(6,14,29,.72)!important}
+@media(min-width:901px){.tx::before{background:linear-gradient(90deg,rgba(6,14,29,.74) 0,rgba(6,14,29,.72) 700px,rgba(6,14,29,0) 1000px)!important}}
+.top::before{background:rgba(6,14,29,.72)}
+#portada .lead:not(.lead2){display:none}
+.top .no{font-size:clamp(1.7rem,4.2dvh,2.6rem)}
+.top .kick{font-size:14px}
+.front h1,.front h2{font-size:clamp(1.7rem,5.2dvh,3.6rem)}
+.front h1.long,.front h2.long{font-size:clamp(1.4rem,4dvh,2.5rem)}
+.front .ex{border-color:transparent;padding:12px 6px;text-decoration:underline;text-underline-offset:4px}
+.bl{align-items:center}
+@media(max-width:640px){
+ .front h1,.front h2{font-size:clamp(1.5rem,4.3dvh,2.05rem)}
+ .front h1.long,.front h2.long{font-size:clamp(1.3rem,3.5dvh,1.7rem)}
+ .front .sub{font-size:1.02rem}
+ .tx .rr .ri:nth-child(n+3){display:none}#portada .tx .rr .ri:nth-child(3){display:block}
+ #portada .ex.lnk{display:none}
+ .tx{gap:8px}
+}
+
 @media(prefers-reduced-motion:reduce){.face,.panel,.veil,.js-rv .reveal{transition-duration:.01s}}
 
 </style>
