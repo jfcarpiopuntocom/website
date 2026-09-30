@@ -38,3 +38,21 @@ main>p{max-width:70ch}
 .ft{border-top:1px solid #2F4670;padding:22px max(20px,5vw);font-size:.95rem}
 .ft p{margin:10px 0 0}
 a:focus-visible{outline:3px solid #E8A020;outline-offset:3px}
+/* v1.153: idioma, testimonios, preguntas frecuentes, bola de nieve completa, WhatsApp y direccion (JFC 2026-09-30) */
+.hr{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.lang{font:700 .9rem 'Space Mono',monospace;letter-spacing:.06em;color:#fff;text-decoration:underline;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center;padding:0 6px}
+.snow ol{columns:2 240px;column-gap:28px;margin:8px 0 0;padding-left:1.6em}
+.snow li{margin:0 0 6px;break-inside:avoid}
+.snow li::marker{font:700 .875rem 'Space Mono',monospace;color:#E8A020}
+.snow .cnt{display:inline-block;background:#E8A020;color:#060E1D;border-radius:99px;padding:2px 10px;font:700 .95rem 'Space Mono',monospace;margin-right:6px}
+.quote{margin:26px 0;padding:18px 20px;border-left:3px solid #E8A020;background:#0B1F3F}
+.quote .ql{font:700 .875rem 'Space Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#E8A020;margin-bottom:6px}
+.quote blockquote{margin:0;font:600 1.25rem/1.45 'Lora',Georgia,serif}
+.quote .qa{margin:8px 0 0;font-size:1rem}
+.faq{margin:34px 0}
+.faq details{border-top:1px solid #2F4670;padding:4px 0}
+.faq summary{cursor:pointer;min-height:48px;display:flex;align-items:center;font:700 1.1rem/1.3 'Lora',Georgia,serif}
+.faq details p{margin:0 0 14px}
+.ft nav a,.ft .loc a{color:#fff}
+.ft .loc{margin:12px 0 0}
+.ft .wa{font-weight:600}

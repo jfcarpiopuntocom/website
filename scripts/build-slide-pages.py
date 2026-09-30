@@ -1,45 +1,84 @@
 #!/usr/bin/env python3
 """
-Genera una pagina HTML propia por cada fotograma del reel (SEO: cada slide = una URL con su titulo,
-descripcion, canonical, H1 y JSON-LD) a partir de index.html. Uso:  python3 scripts/build-slide-pages.py
+Genera una pagina HTML propia por cada fotograma del reel, en ESPANOL y en INGLES (mercado mundial),
+a partir de index.html. Uso:  python3 scripts/build-slide-pages.py   y luego   node scripts/build-og.cjs
 
-- Lee index.html (fuente unica de verdad: textos ES en el diccionario T).
-- Escribe <slug>/index.html por slide, historia-de-dos-negocios/index.html (indice de capitulos) y slide-page.css.
-- Actualiza el bloque generado de sitemap.xml y la lista de enlaces dentro del indice de index.html (marcadores PAGES-START/END).
-- NO toca las paginas que ya existen a mano: /talleres/, /publicaciones/, /juan-fernando-carpio/.
-Volver a correrlo cada vez que cambie el texto de un fotograma. (JFC 2026-09-30)
+- Lee index.html (fuente unica de verdad: textos ES y EN del diccionario T).
+- ES: /<slug>/index.html      EN: /en/<slug-en>/index.html      (+ indice de la historia en ambos idiomas)
+- Cada pagina: titulo, descripcion, canonical, hreflang es/en/x-default, imagen propia al compartir
+  (og/<clave>-<lang>.png, la dibuja scripts/build-og.cjs desde og/manifest.json), JSON-LD
+  (WebPage + BreadcrumbList + ProfessionalService con direccion en Cuenca; FAQPage en visores).
+- Actualiza sitemap.xml (bloque SLIDE-PAGES) y la lista de enlaces del indice de index.html (PAGES-START/END).
+- slide-page.css es ahora un archivo fuente normal (ya no se genera aqui).
+- NO toca las paginas hechas a mano: /talleres/, /publicaciones/, /juan-fernando-carpio/.
+Volver a correr ambos scripts cada vez que cambie el texto de un fotograma. (JFC 2026-09-30)
+REGLAS: nunca "economista"; marca JFCarpio.com en voz de equipo; texto minimo .82rem; imagenes con URL absoluta.
 """
-import re, json, html, os, sys
+import re, json, html, os
 from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://jfcarpio.com"
-OG = SITE + "/og-jfcarpio-v2.png"
 DATE = "2026-09-30"
+WA = "https://wa.me/593999905080"
+ADDR = "General Torres #14, Cuenca, Ecuador"
 
-# id del fotograma -> (ruta, nombre corto para migas y enlaces)
+# id del fotograma -> (ruta ES, ruta EN, nombre ES, nombre EN)
+HUB = {"es": ("historia-de-dos-negocios", "Historia de dos negocios"), "en": ("en/tale-of-two-businesses", "A tale of two businesses")}
 PAGES = {
-    "c1": ("historia-de-dos-negocios/dos-maneras-de-operar", "Historia 1 · Dos maneras de operar"),
-    "apps": ("apps", "Apps"),
-    "dato": ("el-dato", "El dato"),
-    "c4": ("historia-de-dos-negocios/la-informacion-sola-no-basta", "Historia 2 · La información sola no basta"),
-    "articulos": ("articulos", "Artículos"),
-    "libro": ("libro", "Libro"),
-    "c5": ("historia-de-dos-negocios/lo-que-pasa-afuera", "Historia 3 · Lo que pasa afuera"),
-    "reportes": ("reportes", "Reportes"),
-    "trayectoria": ("trayectoria", "Trayectoria"),
-    "c8": ("historia-de-dos-negocios/datos-no-es-ver", "Historia 4 · Datos no es ver"),
-    "dashboards": ("dashboards", "Dashboards"),
-    "visores": ("visores", "Visores"),
-    "gumroad": ("tienda-gumroad", "Tienda Gumroad"),
-    "escuela": ("la-escuela-del-dinero", "La Escuela del Dinero"),
-    "gratis": ("recursos-gratuitos", "Recursos gratuitos"),
-    "clientes": ("clientes", "Clientes"),
-    "c9": ("historia-de-dos-negocios/la-decision", "Historia 5 · La decisión"),
-    "contacto": ("contacto", "Contacto"),
+    "c1": ("historia-de-dos-negocios/dos-maneras-de-operar", "en/tale-of-two-businesses/two-ways-to-operate", "Historia 1 · Dos maneras de operar", "Story 1 · Two ways to operate"),
+    "apps": ("apps", "en/apps", "Apps", "Apps"),
+    "dato": ("el-dato", "en/the-data-point", "El dato", "The data point"),
+    "c4": ("historia-de-dos-negocios/la-informacion-sola-no-basta", "en/tale-of-two-businesses/information-alone-is-not-enough", "Historia 2 · La información sola no basta", "Story 2 · Information alone is not enough"),
+    "articulos": ("articulos", "en/articles", "Artículos", "Articles"),
+    "libro": ("libro", "en/book", "Libro", "Book"),
+    "c5": ("historia-de-dos-negocios/lo-que-pasa-afuera", "en/tale-of-two-businesses/what-happens-outside", "Historia 3 · Lo que pasa afuera", "Story 3 · What happens outside"),
+    "reportes": ("reportes", "en/reports", "Reportes", "Reports"),
+    "trayectoria": ("trayectoria", "en/track-record", "Trayectoria", "Track record"),
+    "c8": ("historia-de-dos-negocios/datos-no-es-ver", "en/tale-of-two-businesses/data-is-not-seeing", "Historia 4 · Datos no es ver", "Story 4 · Data is not seeing"),
+    "dashboards": ("dashboards", "en/dashboards", "Dashboards", "Dashboards"),
+    "visores": ("visores", "en/business-viewers", "Visores", "Business viewers"),
+    "gumroad": ("tienda-gumroad", "en/gumroad-store", "Tienda Gumroad", "Gumroad store"),
+    "escuela": ("la-escuela-del-dinero", "en/money-school", "La Escuela del Dinero", "La Escuela del Dinero (Money School)"),
+    "gratis": ("recursos-gratuitos", "en/free-resources", "Recursos gratuitos", "Free resources"),
+    "clientes": ("clientes", "en/clients", "Clientes", "Clients"),
+    "c9": ("historia-de-dos-negocios/la-decision", "en/tale-of-two-businesses/the-decision", "Historia 5 · La decisión", "Story 5 · The decision"),
+    "contacto": ("contacto", "en/contact", "Contacto", "Contact"),
 }
 EXISTING = {"talleres": "/talleres/", "publicaciones": "/publicaciones/", "perfil": "/juan-fernando-carpio/"}
-HUB = ("historia-de-dos-negocios", "Historia de dos negocios")
+
+UI = {
+    "es": {"reel": "Ver en el reel interactivo →", "home": "Inicio", "nav": "Siguiente y anterior", "other": "English", "blog": "Blog",
+           "talleres": "Talleres", "pubs": "Publicaciones", "contact": "Contacto", "wa": "Escríbenos por WhatsApp", "faq": "Preguntas frecuentes",
+           "quote": "Lo que dicen clientes reales", "start": "Empezar la historia", "loc": "es_EC",
+           "hub_h1": "Dos negocios nacieron el mismo año.", "hub_lead": "Misma idea. Mismo esfuerzo. Mismo primer día. Esta es su historia. Es ilustrativa: los datos, no.",
+           "hub_desc": "Dos negocios nacieron el mismo año. Cinco capítulos que muestran cómo se acumulan las consecuencias de decidir con o sin herramientas, talleres, reportes y dashboards.",
+           "idx_h": "Cada sección tiene su propia página", "pdf": "Descargar las 17 consecuencias (PDF)"},
+    "en": {"reel": "See it in the interactive reel →", "home": "Home", "nav": "Next and previous", "other": "Español", "blog": "Blog (ES)",
+           "talleres": "Workshops (ES)", "pubs": "Publications (ES)", "contact": "Contact", "wa": "Message us on WhatsApp", "faq": "Frequently asked questions",
+           "quote": "What real clients say", "start": "Start the story", "loc": "en_US",
+           "hub_h1": "Two businesses were born the same year.", "hub_lead": "Same idea. Same effort. Same first day. This is their story. It is illustrative: the data is not.",
+           "hub_desc": "Two businesses were born the same year. Five chapters showing how consequences pile up when you decide with or without tools, workshops, reports and dashboards.",
+           "idx_h": "Each section has its own page", "pdf": "Download the 17 consequences (PDF)"},
+}
+
+# Preguntas frecuentes (solo hechos confirmados por JFC): se muestran en la pagina Y van como FAQPage.
+FAQ = {
+    "visores": {
+        "es": [("¿Los visores son gratuitos?", "Sí. El Visor Gerencial (tablero de Marketing) y el Visor Antiquiebra son gratuitos y sin registro."),
+               ("¿Qué áreas cubre el Visor Gerencial?", "Hoy está disponible Marketing, con calculadoras en vivo de CAC, LTV y ROI. Ventas, Finanzas, Operaciones, RRHH, Logística y TI llegan próximamente."),
+               ("¿Con qué países me compara?", "Con benchmarks de Ecuador, Colombia, Perú y Chile."),
+               ("¿Qué me evita el Visor Antiquiebra?", "Descubrir tarde que el negocio solo aguanta: detecta daños internos antes de que aprieten la caja."),
+               ("¿Qué pasa si necesito más que el diagnóstico?", "Al final puedes pasar al Kit (USD 97) o a una sesión de revisión con el equipo de JFCarpio.com (USD 197).")],
+        "en": [("Are the viewers free?", "Yes. The Management Viewer (Marketing dashboard) and the Anti-bankruptcy Viewer are free, with no sign-up."),
+               ("Which areas does the Management Viewer cover?", "Marketing is live today, with live CAC, LTV and ROI calculators. Sales, Finance, Operations, HR, Logistics and IT are coming soon."),
+               ("Which countries does it compare me with?", "With benchmarks for Ecuador, Colombia, Peru and Chile."),
+               ("What does the Anti-bankruptcy Viewer save me from?", "Finding out too late that the business is only holding on: it spots internal damage before it squeezes cash."),
+               ("What if I need more than the diagnosis?", "At the end you can move on to the Kit (USD 97) or a review session with the JFCarpio.com team (USD 197).")],
+    }
+}
+# Testimonios reales (textos literales de la slide Clientes); se muestran en las paginas de estos capitulos.
+QUOTES = {"c5": ("k300", "k301"), "c4": ("k257", "k258"), "c9": ("k259", "k260")}
 
 
 class N:
@@ -50,10 +89,7 @@ class N:
         return self.attrs.get("class", "").split()
 
     def text(self):
-        out = []
-        for k in self.kids:
-            out.append(k if isinstance(k, str) else k.text())
-        return "".join(out)
+        return "".join(k if isinstance(k, str) else k.text() for k in self.kids)
 
     def walk(self):
         yield self
@@ -103,189 +139,244 @@ def find_all(n, tag=None, cls=None):
     return [x for x in n.walk() if x is not n and (not tag or x.tag == tag) and (not cls or cls in x.cls())]
 
 
+def esc(t):
+    return html.escape(t or "")
+
+
+def slug(sid, lang):
+    return PAGES[sid][0] if lang == "es" else PAGES[sid][1]
+
+
+def name(sid, lang):
+    return PAGES[sid][2] if lang == "es" else PAGES[sid][3]
+
+
+def ogfile(key, lang):
+    return f"og/{key}-{lang}.png"
+
+
 def main():
     src = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
-    T = json.loads(re.search(r"const T=(\{.*?\});\n", src, re.S).group(1))["es"]
+    TT = json.loads(re.search(r"const T=(\{.*?\});\n", src, re.S).group(1))
     secs = {}
     for m in re.finditer(r'<section class="slide[^"]*" id="([a-z0-9]+)"[^>]*>.*?</section>', src, re.S):
         secs[m.group(1)] = parse(m.group(0))
-    order = list(secs.keys())
+    page_list = [sid for sid in secs if sid in PAGES]
+    manifest = []
+    sitemap_urls = []
 
-    def tx(n):
-        """texto ES de un nodo (usa data-t si lo tiene)."""
-        k = n.attrs.get("data-t")
-        if k and k in T: return T[k].strip()
-        inner = [x for x in n.walk() if x is not n and x.attrs.get("data-t") in T]
-        if inner and not n.text().strip():
-            return inner[0].text().strip()
-        return re.sub(r"\s+", " ", n.text()).strip()
+    for lang in ("es", "en"):
+        T = TT[lang]; U = UI[lang]; other = "en" if lang == "es" else "es"
+        home = SITE + ("/" if lang == "es" else "/?lang=en")
 
-    def href_to_page(h):
-        if h.startswith("#"):
-            sid = h[1:]
-            if sid in PAGES: return "/" + PAGES[sid][0] + "/"
-            if sid in EXISTING: return EXISTING[sid]
-            return SITE + "/#" + sid
-        return h
+        def tx(n):
+            k = n.attrs.get("data-t")
+            if k and k in T: return T[k].strip()
+            inner = [x for x in n.walk() if x is not n and x.attrs.get("data-t") in T]
+            if inner and not n.text().strip():
+                return inner[0].text().strip()
+            if inner and len(inner) == 1 and inner[0].text().strip() == n.text().strip():
+                return T[inner[0].attrs["data-t"]].strip()
+            return re.sub(r"\s+", " ", n.text()).strip()
 
-    page_list = [sid for sid in order if sid in PAGES]
+        def href_to_page(h):
+            if h.startswith("#"):
+                sid = h[1:]
+                if sid in PAGES: return "/" + slug(sid, lang) + "/"
+                if sid in EXISTING: return EXISTING[sid]
+                return SITE + "/#" + sid
+            return h
 
-    def render(sid):
-        root = secs[sid]
-        slug, short = PAGES[sid]
-        h2 = find(root, "h2") or find(root, "h1")
-        title_h = tx(h2) if h2 else short
-        kick = find(root, cls="kick"); kick_t = tx(kick) if kick else short
-        leads = [tx(x) for x in find_all(root, "p", "lead") if tx(x)]
-        desc = (leads[0] if leads else title_h)
-        desc = re.sub(r"\s+", " ", desc)
-        if len(desc) > 158: desc = desc[:155].rsplit(" ", 1)[0] + "…"
-        title = f"{title_h.rstrip('.')} | JFCarpio.com"
-        if len(title) > 68: title = f"{short} | JFCarpio.com"
-        canon = f"{SITE}/{slug}/"
-        i = page_list.index(sid)
-        prv = page_list[i - 1] if i > 0 else None
-        nxt = page_list[i + 1] if i < len(page_list) - 1 else None
+        def head(title, desc, canon, alt_es, alt_en, og, ld):
+            return HEAD_TPL.format(lang=lang, title=esc(title), desc=esc(desc), canon=canon, alt_es=alt_es, alt_en=alt_en,
+                                   og=og, loc=U["loc"], ld=json.dumps(ld, ensure_ascii=False))
 
-        body = []
-        # tarjetas (.rr .ri)
-        rr = find(root, cls="rr")
-        if rr:
-            body.append('<ul class="tiles">')
-            for ri in find_all(rr, cls="ri"):
-                b = find(ri, "b"); sp = find(ri, "span")
-                t1 = tx(b) if b else ""; t2 = tx(sp) if sp else ""
-                inner = f"<h2>{html.escape(t1)}</h2><p>{html.escape(t2)}</p>"
-                h = ri.attrs.get("href")
-                if h: inner = f'<a href="{html.escape(href_to_page(h))}">{inner}</a>'
-                body.append(f"<li>{inner}</li>")
-            body.append("</ul>")
-        # pares primero/segundo (.ab)
-        for ab in find_all(root, cls="ab"):
-            if "panel" in (ab.parent.cls() if ab.parent else []): continue
-            ps = find_all(ab, "p")
-            if ps:
-                body.append('<div class="pair">')
-                for p in ps:
-                    b = find(p, "b"); head = tx(b) if b else ""
-                    txt = re.sub(r"\s+", " ", p.text()).strip()
-                    if head and txt.startswith(head): txt = txt[len(head):].strip()
-                    if not head:
-                        kids = [x for x in p.kids if isinstance(x, N) and x.attrs.get("data-t") in T]
-                    body.append(f'<p class="{"a" if "pa" in p.cls() else "b"}"><strong>{html.escape(head)}</strong> {html.escape(txt)}</p>')
-                body.append("</div>")
-        # bola de nieve
-        sn = find(root, cls="snow") or find(root, cls="sum")
-        if sn:
-            chips = [tx(c) for c in find_all(sn, cls="c")]
-            lab = tx(find(sn, cls="sl"))
-            body.append(f'<p class="snow"><strong>{html.escape(lab)}</strong> ' + " · ".join(html.escape(c) for c in chips) + "</p>")
-        # botones (.bl)
-        bl = find(root, cls="bl")
-        btns = []
-        if bl:
-            for a in find_all(bl, "a"):
-                h = a.attrs.get("href")
-                if not h: continue
-                ext = h.startswith("http")
-                btns.append(f'<a class="btn{" p" if "p" in a.cls() else ""}" href="{html.escape(href_to_page(h))}"' + (' rel="noopener"' if ext and "jfcarpio.com" not in h else "") + f">{html.escape(tx(a))}</a>")
-        # panel: detalle
-        panel = find(root, cls="panel")
-        detail = []
-        if panel:
-            for ch in panel.kids:
-                if not isinstance(ch, N): continue
-                if ch.tag == "h3": detail.append(f"<h2>{html.escape(tx(ch))}</h2>")
-                elif ch.tag == "p" and tx(ch): detail.append(f"<p>{html.escape(tx(ch))}</p>")
-                elif "gd" in ch.cls():
-                    detail.append('<div class="cards">')
-                    for cd in find_all(ch, cls="cd"):
-                        b = find(cd, "b"); tg = find(cd, cls="tg"); pr = find(cd, cls="pr")
-                        ps = [p for p in find_all(cd, "p") if "pr" not in p.cls()]
-                        a = find(cd, "a")
-                        c = "<div class=\"card\">"
-                        if tg: c += f'<span class="tag">{html.escape(tx(tg))}</span>'
-                        if b: c += f"<h3>{html.escape(tx(b))}</h3>"
-                        for p in ps: c += f"<p>{html.escape(tx(p))}</p>"
-                        if pr: c += f'<p class="price">{html.escape(tx(pr))}</p>'
-                        if a and a.attrs.get("href"):
-                            h = a.attrs["href"]
-                            c += f'<a class="btn" href="{html.escape(href_to_page(h))}" rel="noopener">{html.escape(tx(a))}</a>'
-                        c += "</div>"; detail.append(c)
-                    detail.append("</div>")
-        lead_html = "".join(f"<p class=\"lead\">{html.escape(t)}</p>" for t in leads)
-        nav = '<nav class="pn" aria-label="Siguiente y anterior">'
-        nav += f'<a href="/{PAGES[prv][0]}/">← {html.escape(PAGES[prv][1])}</a>' if prv else "<span></span>"
-        nav += f'<a href="/{PAGES[nxt][0]}/">{html.escape(PAGES[nxt][1])} →</a>' if nxt else "<span></span>"
-        nav += "</nav>"
-        ld = {
-            "@context": "https://schema.org",
-            "@graph": [
-                {"@type": "WebPage", "@id": canon + "#page", "url": canon, "name": title, "description": desc,
-                 "inLanguage": "es", "isPartOf": {"@type": "WebSite", "name": "JFCarpio.com", "url": SITE + "/"},
-                 "primaryImageOfPage": OG},
-                {"@type": "BreadcrumbList", "itemListElement": [
-                    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": SITE + "/"}]
-                 + ([{"@type": "ListItem", "position": 2, "name": HUB[1], "item": f"{SITE}/{HUB[0]}/"},
-                     {"@type": "ListItem", "position": 3, "name": short, "item": canon}] if slug.startswith(HUB[0] + "/")
+        def org():
+            return {"@type": "ProfessionalService", "@id": SITE + "/#org", "name": "JFCarpio.com", "url": SITE + "/",
+                    "telephone": "+593999905080", "image": SITE + "/og-jfcarpio-v2.png",
+                    "address": {"@type": "PostalAddress", "streetAddress": "General Torres #14", "addressLocality": "Cuenca", "addressCountry": "EC"},
+                    "areaServed": "Worldwide"}
+
+        def chrome(reel, alt_url, body, nav=""):
+            ft = (f'<footer class="ft"><nav><a href="{home}">{U["home"]}</a> · <a href="/{HUB[lang][0]}/">{esc(HUB[lang][1])}</a> · '
+                  f'<a href="/blog/">{U["blog"]}</a> · <a href="/talleres/">{U["talleres"]}</a> · <a href="/publicaciones/">{U["pubs"]}</a> · '
+                  f'<a href="/{slug("contacto", lang)}/">{U["contact"]}</a></nav>'
+                  f'<p class="loc"><a class="wa" href="{WA}" rel="noopener">{U["wa"]}</a> · <span>{ADDR}</span></p>'
+                  f'<p>© 2026 JFCarpio.com</p></footer>')
+            hd = (f'<header class="hd"><a class="brand" href="{home}">JFCarpio.com</a><span class="hr">'
+                  f'<a class="lang" href="{alt_url}" hreflang="{other}" lang="{other}">{U["other"]}</a>'
+                  f'<a class="reel" href="{reel}">{U["reel"]}</a></span></header>')
+            return hd + "\n<main>\n" + body + "\n</main>\n" + nav + "\n" + ft
+
+        def write(path, content):
+            d = os.path.join(ROOT, path); os.makedirs(d, exist_ok=True)
+            open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(content)
+
+        for i, sid in enumerate(page_list):
+            root = secs[sid]
+            sl, short = slug(sid, lang), name(sid, lang)
+            h2 = find(root, "h2") or find(root, "h1")
+            title_h = tx(h2) if h2 else short
+            kick = find(root, cls="kick"); kick_t = tx(kick) if kick else short
+            leads = [tx(x) for x in find_all(root, "p", "lead") if tx(x)]
+            desc = re.sub(r"\s+", " ", leads[0] if leads else title_h)
+            if len(desc) > 158: desc = desc[:155].rsplit(" ", 1)[0] + "…"
+            title = f"{title_h.rstrip('.')} | JFCarpio.com"
+            if len(title) > 68: title = f"{short} | JFCarpio.com"
+            canon = f"{SITE}/{sl}/"
+            alt_es, alt_en = f"{SITE}/{slug(sid, 'es')}/", f"{SITE}/{slug(sid, 'en')}/"
+            og = f"{SITE}/{ogfile(sid, lang)}"
+            manifest.append({"file": ogfile(sid, lang), "kick": kick_t, "title": title_h, "lang": lang})
+            prv = page_list[i - 1] if i > 0 else None
+            nxt = page_list[i + 1] if i < len(page_list) - 1 else None
+
+            body = [f'<p class="kick">{esc(kick_t)}</p>', f"<h1>{esc(title_h)}</h1>"]
+            body += [f'<p class="lead">{esc(t)}</p>' for t in leads]
+            rr = find(root, cls="rr")
+            if rr:
+                body.append('<ul class="tiles">')
+                for ri in find_all(rr, cls="ri"):
+                    b = find(ri, "b"); sp = find(ri, "span")
+                    inner = f"<h2>{esc(tx(b) if b else '')}</h2><p>{esc(tx(sp) if sp else '')}</p>"
+                    h = ri.attrs.get("href")
+                    if h: inner = f'<a href="{esc(href_to_page(h))}">{inner}</a>'
+                    body.append(f"<li>{inner}</li>")
+                body.append("</ul>")
+            for ab in find_all(root, cls="ab"):
+                if "panel" in (ab.parent.cls() if ab.parent else []): continue
+                ps = find_all(ab, "p")
+                if ps:
+                    body.append('<div class="pair">')
+                    for p in ps:
+                        b = find(p, "b"); hd_ = tx(b) if b else ""
+                        spn = find(p, "span")
+                        txt = tx(spn) if spn else re.sub(r"\s+", " ", p.text()).strip()
+                        body.append(f'<p class="{"a" if "pa" in p.cls() else "b"}"><strong>{esc(hd_)}</strong> {esc(txt)}</p>')
+                    body.append("</div>")
+            sn = find(root, cls="snow") or find(root, cls="sum")
+            if sn:
+                chips = [tx(c) for c in find_all(sn, cls="c")]
+                lab = tx(find(sn, cls="sl"))
+                body.append(f'<div class="snow"><p><b class="cnt">B {len(chips)}</b> <strong>{esc(lab)}</strong></p><ol>'
+                            + "".join(f"<li>{esc(c)}</li>" for c in chips) + "</ol></div>")
+            if sid in QUOTES:
+                q, a = QUOTES[sid]
+                body.append(f'<figure class="quote"><figcaption class="ql">{U["quote"]}</figcaption><blockquote>{esc(T[q])}</blockquote><p class="qa">{esc(T[a])}</p></figure>')
+            bl = find(root, cls="bl")
+            btns = []
+            if bl:
+                for a in find_all(bl, "a"):
+                    h = a.attrs.get("href")
+                    if not h: continue
+                    ext = h.startswith("http") and "jfcarpio.com" not in h
+                    btns.append(f'<a class="btn{" p" if "p" in a.cls() else ""}" href="{esc(href_to_page(h))}"' + (' rel="noopener"' if ext else "") + f">{esc(tx(a))}</a>")
+            if sid == "c9":
+                btns.append(f'<a class="btn" href="/17-consecuencias-{lang}.pdf" download>{U["pdf"]}</a>')
+            if btns: body.append('<p class="cta">' + " ".join(btns) + "</p>")
+            panel = find(root, cls="panel")
+            if panel:
+                for ch in panel.kids:
+                    if not isinstance(ch, N): continue
+                    if ch.tag == "h3": body.append(f"<h2>{esc(tx(ch))}</h2>")
+                    elif ch.tag == "p" and tx(ch): body.append(f"<p>{esc(tx(ch))}</p>")
+                    elif "gd" in ch.cls():
+                        body.append('<div class="cards">')
+                        for cd in find_all(ch, cls="cd"):
+                            b = find(cd, "b"); tg = find(cd, cls="tg"); pr = find(cd, cls="pr")
+                            ps = [p for p in find_all(cd, "p") if "pr" not in p.cls()]
+                            a = find(cd, "a")
+                            c = '<div class="card">'
+                            if tg: c += f'<span class="tag">{esc(tx(tg))}</span>'
+                            if b: c += f"<h3>{esc(tx(b))}</h3>"
+                            for p in ps: c += f"<p>{esc(tx(p))}</p>"
+                            if pr: c += f'<p class="price">{esc(tx(pr))}</p>'
+                            if a and a.attrs.get("href"):
+                                c += f'<a class="btn" href="{esc(href_to_page(a.attrs["href"]))}" rel="noopener">{esc(tx(a))}</a>'
+                            body.append(c + "</div>")
+                        body.append("</div>")
+            graph = [
+                {"@type": "WebPage", "@id": canon + "#page", "url": canon, "name": title, "description": desc, "inLanguage": lang,
+                 "isPartOf": {"@type": "WebSite", "name": "JFCarpio.com", "url": SITE + "/"}, "primaryImageOfPage": og,
+                 "publisher": {"@id": SITE + "/#org"}},
+                {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": U["home"], "item": home}]
+                 + ([{"@type": "ListItem", "position": 2, "name": HUB[lang][1], "item": f"{SITE}/{HUB[lang][0]}/"},
+                     {"@type": "ListItem", "position": 3, "name": short, "item": canon}] if sl.startswith(HUB[lang][0] + "/")
                     else [{"@type": "ListItem", "position": 2, "name": short, "item": canon}])},
-            ],
-        }
-        page = PAGE_TPL.format(
-            title=html.escape(title), desc=html.escape(desc), canon=canon, og=OG, kick=html.escape(kick_t),
-            h1=html.escape(title_h), lead=lead_html, body="\n".join(body),
-            btns=('<p class="cta">' + " ".join(btns) + "</p>") if btns else "", detail="\n".join(detail),
-            reel=f"{SITE}/#{sid}", nav=nav, ld=json.dumps(ld, ensure_ascii=False))
-        d = os.path.join(ROOT, slug); os.makedirs(d, exist_ok=True)
-        open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(page)
-        return slug, short, title_h, desc
+                org(),
+            ]
+            if sid in FAQ:
+                qa = FAQ[sid][lang]
+                body.append(f'<section class="faq"><h2>{U["faq"]}</h2>' + "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in qa) + "</section>")
+                graph.append({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]})
+            nav = f'<nav class="pn" aria-label="{U["nav"]}">'
+            nav += f'<a href="/{slug(prv, lang)}/">← {esc(name(prv, lang))}</a>' if prv else "<span></span>"
+            nav += f'<a href="/{slug(nxt, lang)}/">{esc(name(nxt, lang))} →</a>' if nxt else "<span></span>"
+            nav += "</nav>"
+            reel = f"{SITE}/{'?lang=en' if lang == 'en' else ''}#{sid}"
+            page = head(title, desc, canon, alt_es, alt_en, og, {"@context": "https://schema.org", "@graph": graph}) + \
+                chrome(reel, alt_en if lang == "es" else alt_es, "\n".join(body), nav) + "\n</body>\n</html>\n"
+            write(sl, page)
+            sitemap_urls.append((canon, alt_es, alt_en, "0.7"))
 
-    results = {sid: render(sid) for sid in page_list}
+        # indice de la historia
+        chs = [sid for sid in page_list if slug(sid, lang).startswith(HUB[lang][0] + "/")]
+        items = "".join(f'<li><a href="/{slug(s, lang)}/"><h2>{esc(name(s, lang))}</h2><p>{esc(tx(find(secs[s], "h2")))}</p></a></li>' for s in chs)
+        hc = f"{SITE}/{HUB[lang][0]}/"; he, hen = f"{SITE}/{HUB['es'][0]}/", f"{SITE}/{HUB['en'][0]}/"
+        og = f"{SITE}/{ogfile('historia', lang)}"
+        manifest.append({"file": ogfile("historia", lang), "kick": HUB[lang][1], "title": U["hub_h1"], "lang": lang})
+        ld = {"@context": "https://schema.org", "@graph": [
+            {"@type": "CollectionPage", "@id": hc + "#page", "url": hc, "name": HUB[lang][1] + " | JFCarpio.com", "description": U["hub_desc"], "inLanguage": lang,
+             "isPartOf": {"@type": "WebSite", "name": "JFCarpio.com", "url": SITE + "/"}, "primaryImageOfPage": og},
+            {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": U["home"], "item": home},
+                                                            {"@type": "ListItem", "position": 2, "name": HUB[lang][1], "item": hc}]}, org()]}
+        body = (f'<p class="kick">{esc(HUB[lang][1])}</p><h1>{esc(U["hub_h1"])}</h1><p class="lead">{esc(U["hub_lead"])}</p>'
+                f'<ul class="tiles">{items}</ul><p class="cta"><a class="btn p" href="/{slug(chs[0], lang)}/">{U["start"]}</a></p>')
+        write(HUB[lang][0], head(HUB[lang][1] + " | JFCarpio.com", U["hub_desc"], hc, he, hen, og, ld)
+              + chrome(f"{SITE}/{'?lang=en' if lang == 'en' else ''}#portada", hen if lang == "es" else he, body) + "\n</body>\n</html>\n")
+        sitemap_urls.append((hc, he, hen, "0.8"))
 
-    # hub de la historia
-    chs = [sid for sid in page_list if PAGES[sid][0].startswith(HUB[0] + "/")]
-    items = "".join(f'<li><a href="/{PAGES[s][0]}/"><h2>{html.escape(PAGES[s][1])}</h2><p>{html.escape(results[s][2])}</p></a></li>' for s in chs)
-    hub_desc = "Dos negocios nacieron el mismo año. Cinco capítulos que muestran cómo se acumulan las consecuencias de decidir con o sin herramientas, talleres, reportes y dashboards."
-    hub_canon = f"{SITE}/{HUB[0]}/"
-    ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "CollectionPage", "@id": hub_canon + "#page", "url": hub_canon, "name": HUB[1] + " | JFCarpio.com", "description": hub_desc, "inLanguage": "es",
-         "isPartOf": {"@type": "WebSite", "name": "JFCarpio.com", "url": SITE + "/"}},
-        {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": SITE + "/"},
-                                                        {"@type": "ListItem", "position": 2, "name": HUB[1], "item": hub_canon}]}]}
-    hub = PAGE_TPL.format(title=html.escape(HUB[1] + " | JFCarpio.com"), desc=html.escape(hub_desc), canon=hub_canon, og=OG,
-                          kick="Historia de dos negocios", h1="Dos negocios nacieron el mismo año.",
-                          lead="<p class=\"lead\">Misma idea. Mismo esfuerzo. Mismo primer día. Esta es su historia. Es ilustrativa: los datos, no.</p>",
-                          body=f'<ul class="tiles">{items}</ul>', btns='<p class="cta"><a class="btn p" href="' + f"/{PAGES[chs[0]][0]}/" + '">Empezar la historia</a></p>',
-                          detail="", reel=SITE + "/#portada", nav="", ld=json.dumps(ld, ensure_ascii=False))
-    os.makedirs(os.path.join(ROOT, HUB[0]), exist_ok=True)
-    open(os.path.join(ROOT, HUB[0], "index.html"), "w", encoding="utf-8").write(hub)
-
-    open(os.path.join(ROOT, "slide-page.css"), "w", encoding="utf-8").write(CSS)
+    os.makedirs(os.path.join(ROOT, "og"), exist_ok=True)
+    json.dump(manifest, open(os.path.join(ROOT, "og", "manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    # PDF de las 17 consecuencias: fuente HTML (lo imprime build-og.cjs)
+    c9 = secs["c9"]
+    for lang in ("es", "en"):
+        T = TT[lang]
+        chips = [T[c.attrs["data-t"]] for c in find_all(c9, cls="c") if c.attrs.get("data-t") in T]
+        lab = T[find(c9, cls="sl").attrs["data-t"]]
+        hub_url = f"{SITE}/{HUB[lang][0]}/"
+        open(os.path.join(ROOT, "og", f"pdf-{lang}.html"), "w", encoding="utf-8").write(PDF_TPL.format(
+            lang=lang, h=esc(UI[lang]["hub_h1"]), lab=esc(lab), n=len(chips), hub=hub_url,
+            items="".join(f"<li>{esc(c)}</li>" for c in chips),
+            foot=("El equipo de JFCarpio.com · " if lang == "es" else "The JFCarpio.com team · ") + f"{SITE} · WhatsApp +593 99 990 5080"))
 
     # sitemap
     sm_path = os.path.join(ROOT, "sitemap.xml"); sm = open(sm_path, encoding="utf-8").read()
     sm = re.sub(r"\n  <!-- SLIDE-PAGES-START -->.*?<!-- SLIDE-PAGES-END -->\n", "\n", sm, flags=re.S)
-    urls = [(HUB[0], "0.8")] + [(PAGES[s][0], "0.7") for s in page_list]
     block = "\n  <!-- SLIDE-PAGES-START -->\n" + "".join(
-        f"  <url>\n    <loc>{SITE}/{u}/</loc>\n    <lastmod>{DATE}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>{pr}</priority>\n  </url>\n" for u, pr in urls) + "  <!-- SLIDE-PAGES-END -->\n"
+        f'  <url>\n    <loc>{u}</loc>\n    <lastmod>{DATE}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>{pr}</priority>\n'
+        f'    <xhtml:link rel="alternate" hreflang="es" href="{e}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="{n}"/>\n'
+        f'    <xhtml:link rel="alternate" hreflang="x-default" href="{e}"/>\n  </url>\n' for u, e, n, pr in sitemap_urls) + "  <!-- SLIDE-PAGES-END -->\n"
     sm = re.sub(r"\s*</urlset>\s*$", "\n</urlset>\n", sm)
     sm = sm.replace("</urlset>", block + "</urlset>")
     open(sm_path, "w", encoding="utf-8").write(sm)
 
-    # enlaces dentro del indice de index.html
-    links = f'<li><a href="/{HUB[0]}/">{HUB[1]}</a></li>' + "".join(f'<li><a href="/{PAGES[s][0]}/">{html.escape(PAGES[s][1])}</a></li>' for s in page_list)
-    links += "".join(f'<li><a href="{u}">{html.escape(n)}</a></li>' for n, u in [("Talleres", "/talleres/"), ("Publicaciones", "/publicaciones/"), ("Perfil", "/juan-fernando-carpio/")])
-    blk = f'<!--PAGES-START--><nav class="idxp" aria-label="Páginas del sitio"><h3 data-t="k520">Cada sección tiene su propia página</h3><ul>{links}</ul></nav><!--PAGES-END-->'
+    # enlaces rastreables dentro del indice de index.html (ES + EN)
+    def links(lang):
+        out = f'<li><a href="/{HUB[lang][0]}/" hreflang="{lang}">{esc(HUB[lang][1])}</a></li>'
+        return out + "".join(f'<li><a href="/{slug(s, lang)}/" hreflang="{lang}">{esc(name(s, lang))}</a></li>' for s in page_list)
+    extra = "".join(f'<li><a href="{u}">{esc(n)}</a></li>' for n, u in [("Talleres", "/talleres/"), ("Publicaciones", "/publicaciones/"), ("Perfil", "/juan-fernando-carpio/")])
+    blk = (f'<!--PAGES-START--><nav class="idxp" aria-label="Páginas del sitio"><h3 data-t="k520">{UI["es"]["idx_h"]}</h3><ul>{links("es")}{extra}</ul>'
+           f'<h3 lang="en">In English</h3><ul lang="en">{links("en")}</ul></nav><!--PAGES-END-->')
     if "<!--PAGES-START-->" in src:
         src = re.sub(r"<!--PAGES-START-->.*?<!--PAGES-END-->", lambda m: blk, src, flags=re.S)
     else:
         src = src.replace('<ol id="idxl"></ol>', '<ol id="idxl"></ol>' + blk, 1)
     open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(src)
-    print("paginas:", len(page_list) + 1)
+    print("paginas:", len(sitemap_urls), "imagenes:", len(manifest))
 
 
-PAGE_TPL = """<!DOCTYPE html>
-<html lang="es">
+HEAD_TPL = """<!DOCTYPE html>
+<html lang="{lang}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -293,8 +384,11 @@ PAGE_TPL = """<!DOCTYPE html>
 <meta name="description" content="{desc}">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="{canon}">
+<link rel="alternate" hreflang="es" href="{alt_es}">
+<link rel="alternate" hreflang="en" href="{alt_en}">
+<link rel="alternate" hreflang="x-default" href="{alt_es}">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="es_EC">
+<meta property="og:locale" content="{loc}">
 <meta property="og:site_name" content="JFCarpio.com">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
@@ -315,62 +409,17 @@ PAGE_TPL = """<!DOCTYPE html>
 </head>
 <body>
 <!-- Pagina generada por scripts/build-slide-pages.py desde index.html. NO editar a mano: cambia el fotograma en index.html y vuelve a correr el script. -->
-<header class="hd"><a class="brand" href="/">JFCarpio.com</a><a class="reel" href="{reel}">Ver en el reel interactivo →</a></header>
-<main>
-<p class="kick">{kick}</p>
-<h1>{h1}</h1>
-{lead}
-{body}
-{btns}
-{detail}
-</main>
-{nav}
-<footer class="ft"><a href="/">Inicio</a> · <a href="/historia-de-dos-negocios/">Historia de dos negocios</a> · <a href="/blog/">Blog</a> · <a href="/talleres/">Talleres</a> · <a href="/publicaciones/">Publicaciones</a> · <a href="/contacto/">Contacto</a><p>© 2026 JFCarpio.com · Cuenca, Ecuador</p></footer>
-</body>
-</html>
 """
 
-CSS = """/* Estilo de las paginas por fotograma (generado por scripts/build-slide-pages.py). Paleta: navy #060E1D, dorado #E8A020, carmesi #B0183E. Texto minimo .82rem, blanco sobre navy. */
-*{box-sizing:border-box}
-html{background:#060E1D}
-body{margin:0;background:#060E1D;color:#fff;font:400 1.125rem/1.65 'Lora',Georgia,serif}
-a{color:#fff}
-.hd{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:14px max(20px,5vw);border-bottom:1px solid #2F4670}
-.brand{font:700 1.4rem 'Barlow Condensed',sans-serif;letter-spacing:.02em;text-decoration:none}
-.reel{font:700 .9rem 'Space Mono',monospace;letter-spacing:.06em;text-decoration:none;border:2px solid #fff;border-radius:99px;padding:10px 16px;min-height:44px;display:inline-flex;align-items:center}
-main{max-width:980px;margin:0 auto;padding:clamp(28px,6vw,64px) max(20px,5vw)}
-.kick{font:700 .875rem 'Space Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#E8A020;margin:0 0 10px}
-h1{font:800 clamp(2.2rem,6vw,4rem)/1.02 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.01em;margin:0 0 18px}
-h2{font:800 1.5rem/1.1 'Barlow Condensed',sans-serif;margin:0 0 6px}
-h3{font:800 1.3rem/1.1 'Barlow Condensed',sans-serif;margin:0 0 6px}
-.lead{font-size:1.2rem;max-width:64ch;margin:0 0 14px}
-.tiles{list-style:none;padding:0;margin:26px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
-.tiles li{background:#0B1F3F;border:1px solid #2F4670;border-radius:10px;padding:16px 18px;counter-increment:t}
-.tiles li::before{content:counter(t,decimal-leading-zero);display:block;font:700 .875rem 'Space Mono',monospace;letter-spacing:.16em;color:#E8A020;margin-bottom:4px}
-.tiles{counter-reset:t}
-.tiles li a{text-decoration:none;display:block}
-.tiles li p{margin:0;font-size:1rem}
-.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;margin:22px 0}
-.pair p{margin:0;background:#0B1F3F;border-top:1px solid #2F4670;padding:14px 16px}
-.pair strong{display:block;font:700 .875rem 'Space Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#E8A020;margin-bottom:4px}
-.snow{background:#0B1F3F;border-left:3px solid #E8A020;padding:12px 16px;margin:22px 0;font-size:1rem}
-.snow strong{font:700 .875rem 'Space Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#E8A020;display:block;margin-bottom:4px}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0}
-.btn{display:inline-flex;align-items:center;min-height:48px;padding:10px 22px;border:2px solid #fff;border-radius:99px;color:#fff;text-decoration:none;font:700 .9rem 'Jost','Space Mono',sans-serif;letter-spacing:.08em;text-transform:uppercase}
-.btn.p{background:#B0183E;border-color:#B0183E}
-.btn:hover,.btn:focus-visible{background:#fff;color:#060E1D}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:12px;margin:18px 0}
-.card{background:#0B1F3F;border:1px solid #2F4670;border-radius:10px;padding:16px 18px}
-.card p{margin:0 0 10px;font-size:1rem}
-.card .tag{display:block;font:700 .875rem 'Space Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#E8A020;margin-bottom:4px}
-.card .price{font-weight:600}
-main>p{max-width:70ch}
-.pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;max-width:980px;margin:0 auto;padding:0 max(20px,5vw) 30px}
-.pn a{font:700 .95rem 'Space Mono',monospace;text-decoration:none;border:1px solid #2F4670;border-radius:10px;padding:12px 16px;min-height:48px;display:inline-flex;align-items:center}
-.ft{border-top:1px solid #2F4670;padding:22px max(20px,5vw);font-size:.95rem}
-.ft p{margin:10px 0 0}
-a:focus-visible{outline:3px solid #E8A020;outline-offset:3px}
-"""
+PDF_TPL = """<!DOCTYPE html><html lang="{lang}"><head><meta charset="UTF-8"><style>
+@page{{size:A4;margin:18mm}}body{{font:12pt/1.5 'Lora',serif;color:#060E1D}}
+h1{{font:800 30pt/1 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:0 0 8pt}}
+.l{{font:700 11pt 'Space Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9A5B00;margin:0 0 14pt}}
+.n{{display:inline-block;background:#E8A020;color:#060E1D;border-radius:99px;padding:2pt 10pt;margin-right:8pt}}
+ol{{columns:2;column-gap:14mm;padding-left:18pt}}li{{margin:0 0 7pt;break-inside:avoid}}li::marker{{font:700 11pt 'Space Mono',monospace;color:#9A5B00}}
+.f{{margin-top:18pt;border-top:2px solid #E8A020;padding-top:8pt;font-size:10.5pt}}a{{color:#060E1D}}
+</style></head><body><h1>{h}</h1><p class="l"><span class="n">B {n}</span>{lab}</p><ol>{items}</ol>
+<p class="f"><a href="{hub}">{hub}</a><br>{foot}</p></body></html>"""
 
 if __name__ == "__main__":
     main()
