@@ -13,7 +13,6 @@ on:
       - 'visorantiquiebra/**/*.html'
       - 'publicaciones/**/*.html'
       - 'working-paper-hidden-cost.html'
-      - 'market-intelligence-latam/**/*.html'
       - 'visorgerencial/**/*.html'
       - 'friendly123/**/*.html'
       - 'talleres/**/*.html'
@@ -40,7 +39,7 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     env:
-      FILES: "index.html las7formas/index.html visorantiquiebra/index.html visorgerencial/index.html publicaciones/index.html working-paper-hidden-cost.html market-intelligence-latam/index.html friendly123/index.html talleres/index.html"
+      FILES: "index.html las7formas/index.html visorantiquiebra/index.html visorgerencial/index.html publicaciones/index.html working-paper-hidden-cost.html friendly123/index.html talleres/index.html"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -100,7 +99,7 @@ jobs:
       - name: Canonical present on SEO-maintained pages
         run: |
           set -e
-          SEO_FILES="publicaciones/index.html working-paper-hidden-cost.html market-intelligence-latam/index.html visorgerencial/index.html visorantiquiebra/index.html friendly123/index.html talleres/index.html"
+          SEO_FILES="publicaciones/index.html working-paper-hidden-cost.html visorgerencial/index.html visorantiquiebra/index.html friendly123/index.html talleres/index.html"
           for f in $SEO_FILES; do
             grep -qi 'rel="canonical"' "$f" || { echo "FAIL: $f has no canonical"; exit 1; }
           done
