@@ -13,3 +13,7 @@ binding = "ASSETS"
 # El Worker corre primero: redirige www y pone cabeceras de seguridad en todo.
 run_worker_first = true
 not_found_handling = "404-page"
+
+# IndexNow diario (ver scheduled() en worker.js)
+[triggers]
+crons = ["23 11 * * *"]

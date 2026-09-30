@@ -63,6 +63,12 @@ export default {
       return Response.redirect(url.toString(), 301);
     }
 
+    // 1c. Slides borrados por JFC 2026-09-30 (El dato, Dashboards: redundantes con Visores). 301 para no perder SEO.
+    const GONE = { "/el-dato/": "/visores/", "/dashboards/": "/visores/", "/en/the-data-point/": "/en/business-viewers/",
+      "/en/dashboards/": "/en/business-viewers/", "/17-consecuencias-es.pdf": "/consecuencias-es.pdf", "/17-consecuencias-en.pdf": "/consecuencias-en.pdf" };
+    const to = GONE[url.pathname] || GONE[url.pathname + "/"];
+    if (to) return Response.redirect("https://jfcarpio.com" + to, 301);
+
     // 2. Archivos del sitio desde Cloudflare (sin volver a GitHub)
     const res = await env.ASSETS.fetch(request);
     // 3. Cabeceras de seguridad en todo
@@ -90,5 +96,22 @@ export default {
     }
 
     return secured;
+  },
+  // 5. IndexNow (JFC 2026-09-30, SEO mundial): una vez al dia avisa a Bing/Yandex/Seznam/Naver
+  //    las URLs del sitemap cambiadas en los ultimos 3 dias (lastmod). Bing alimenta a ChatGPT y Copilot.
+  //    Clave publica: /c2d8b4e084c5a6e9498a037240f5da45.txt (NO borrar ese archivo).
+  async scheduled(event, env, ctx) {
+    const r = await env.ASSETS.fetch("https://jfcarpio.com/sitemap.xml");
+    const xml = await r.text();
+    const since = Date.now() - 3 * 864e5;
+    const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)]
+      .filter((m) => Date.parse(m[2]) >= since).map((m) => m[1]).slice(0, 10000);
+    if (!urls.length) return;
+    ctx.waitUntil(fetch("https://api.indexnow.org/indexnow", {
+      method: "POST",
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+      body: JSON.stringify({ host: "jfcarpio.com", key: "c2d8b4e084c5a6e9498a037240f5da45",
+        keyLocation: "https://jfcarpio.com/c2d8b4e084c5a6e9498a037240f5da45.txt", urlList: urls }),
+    }));
   },
 };

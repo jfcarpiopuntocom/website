@@ -28,7 +28,6 @@ HUB = {"es": ("historia-de-dos-negocios", "Historia de dos negocios"), "en": ("e
 PAGES = {
     "c1": ("historia-de-dos-negocios/dos-maneras-de-operar", "en/tale-of-two-businesses/two-ways-to-operate", "Historia 1 · Dos maneras de operar", "Story 1 · Two ways to operate"),
     "apps": ("apps", "en/apps", "Apps", "Apps"),
-    "dato": ("el-dato", "en/the-data-point", "El dato", "The data point"),
     "c4": ("historia-de-dos-negocios/la-informacion-sola-no-basta", "en/tale-of-two-businesses/information-alone-is-not-enough", "Historia 2 · La información sola no basta", "Story 2 · Information alone is not enough"),
     "articulos": ("articulos", "en/articles", "Artículos", "Articles"),
     "libro": ("libro", "en/book", "Libro", "Book"),
@@ -36,7 +35,6 @@ PAGES = {
     "reportes": ("reportes", "en/reports", "Reportes", "Reports"),
     "trayectoria": ("trayectoria", "en/track-record", "Trayectoria", "Track record"),
     "c8": ("historia-de-dos-negocios/datos-no-es-ver", "en/tale-of-two-businesses/data-is-not-seeing", "Historia 4 · Datos no es ver", "Story 4 · Data is not seeing"),
-    "dashboards": ("dashboards", "en/dashboards", "Dashboards", "Dashboards"),
     "visores": ("visores", "en/business-viewers", "Visores", "Business viewers"),
     "gumroad": ("tienda-gumroad", "en/gumroad-store", "Tienda Gumroad", "Gumroad store"),
     "escuela": ("la-escuela-del-dinero", "en/money-school", "La Escuela del Dinero", "La Escuela del Dinero (Money School)"),
@@ -53,13 +51,13 @@ UI = {
            "quote": "Lo que dicen clientes reales", "start": "Empezar la historia", "loc": "es_EC",
            "hub_h1": "Dos negocios nacieron el mismo año.", "hub_lead": "Misma idea. Mismo esfuerzo. Mismo primer día. Esta es su historia. Es ilustrativa: los datos, no.",
            "hub_desc": "Dos negocios nacieron el mismo año. Cinco capítulos que muestran cómo se acumulan las consecuencias de decidir con o sin herramientas, talleres, reportes y dashboards.",
-           "idx_h": "Cada sección tiene su propia página", "pdf": "Descargar las 17 consecuencias (PDF)"},
+           "idx_h": "Cada sección tiene su propia página", "pdf": "Descargar las 15 consecuencias (PDF)"},
     "en": {"reel": "See it in the interactive reel →", "home": "Home", "nav": "Next and previous", "other": "Español", "blog": "Blog (ES)",
            "talleres": "Workshops", "pubs": "Publications (ES)", "contact": "Contact", "wa": "Message us on WhatsApp", "faq": "Frequently asked questions",
            "quote": "What real clients say", "start": "Start the story", "loc": "en_US",
            "hub_h1": "Two businesses were born the same year.", "hub_lead": "Same idea. Same effort. Same first day. This is their story. It is illustrative: the data is not.",
            "hub_desc": "Two businesses were born the same year. Five chapters showing how consequences pile up when you decide with or without tools, workshops, reports and dashboards.",
-           "idx_h": "Each section has its own page", "pdf": "Download the 17 consequences (PDF)"},
+           "idx_h": "Each section has its own page", "pdf": "Download the 15 consequences (PDF)"},
 }
 
 # Preguntas frecuentes (solo hechos confirmados por JFC): se muestran en la pagina Y van como FAQPage.
@@ -271,7 +269,7 @@ def main():
                     ext = h.startswith("http") and "jfcarpio.com" not in h
                     btns.append(f'<a class="btn{" p" if "p" in a.cls() else ""}" href="{esc(href_to_page(h))}"' + (' rel="noopener"' if ext else "") + f">{esc(tx(a))}</a>")
             if sid == "c9":
-                btns.append(f'<a class="btn" href="/17-consecuencias-{lang}.pdf" download>{U["pdf"]}</a>')
+                btns.append(f'<a class="btn" href="/consecuencias-{lang}.pdf" download>{U["pdf"]}</a>')
             if btns: body.append('<p class="cta">' + " ".join(btns) + "</p>")
             panel = find(root, cls="panel")
             if panel:
@@ -372,6 +370,23 @@ def main():
     else:
         src = src.replace('<ol id="idxl"></ol>', '<ol id="idxl"></ol>' + blk, 1)
     open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(src)
+    # llms.txt: mapa del sitio para buscadores con IA (ChatGPT, Claude, Perplexity). Se regenera aqui.
+    L = ["# JFCarpio.com", "",
+         "> Economic and business research team based in Cuenca, Ecuador, serving clients worldwide in English and Spanish: reports, dashboards, free decision tools and rapid-change corporate workshops. Investigación económica y empresarial: reportes, dashboards, herramientas gratuitas y talleres.", "",
+         "Contact: WhatsApp +593 99 990 5080 · " + ADDR, "",
+         "## English", "",
+         f"- [A tale of two businesses]({SITE}/{HUB['en'][0]}/): {UI['en']['hub_desc']}",
+         f"- [Rapid-change corporate workshops]({SITE}/workshops/): 2-hour corporate interventions for financial stress and private-enterprise culture.",
+         f"- [Latin America Market Intelligence]({SITE}/market-intelligence-latam/): decision-focused research on pricing, competition, market entry and economic context.",
+         f"- [Pacific Basin Intelligence Unit]({SITE}/pacific-basin/): macroeconomic intelligence on Chile, Ecuador, Peru and Colombia."]
+    L += [f"- [{name(s, 'en')}]({SITE}/{slug(s, 'en')}/)" for s in page_list]
+    L += ["", "## Español", "", f"- [Historia de dos negocios]({SITE}/{HUB['es'][0]}/): {UI['es']['hub_desc']}",
+          f"- [Talleres corporativos de cambio rápido]({SITE}/talleres/)", f"- [Publicaciones]({SITE}/publicaciones/)",
+          f"- [Las 7 formas de destruir tus finanzas personales y familiares]({SITE}/las7formas/)",
+          f"- [Visor Antiquiebra · 6–24M]({SITE}/visorantiquiebra/): atravesar el Valle de la Muerte (meses 6 a 24), 15 minutos semanales.",
+          f"- [Visor Gerencial]({SITE}/visorgerencial/): un tablero por área ejecutiva; Marketing ya disponible."]
+    L += [f"- [{name(s, 'es')}]({SITE}/{slug(s, 'es')}/)" for s in page_list]
+    open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write("\n".join(L) + "\n")
     print("paginas:", len(sitemap_urls), "imagenes:", len(manifest))
 
 

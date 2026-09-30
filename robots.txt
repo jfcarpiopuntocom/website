@@ -1,4 +1,22 @@
+# jfcarpio.com: abierto a buscadores y a buscadores con IA (JFC 2026-09-30, mercado mundial)
 User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://jfcarpio.com/sitemap.xml
