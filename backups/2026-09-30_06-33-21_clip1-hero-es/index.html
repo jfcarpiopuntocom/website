@@ -77,13 +77,6 @@
     .hero-copy .small-note{color:#e6e6e6;margin-top:20px;max-width:420px}
     .hero .btn-light{background:transparent;border-color:#d6e3f1;color:var(--white)}.hero .btn-light:hover{background:#284565}
     .hero-art{position:relative;isolation:isolate;min-height:540px;--px:0px;--py:0px}
-    /* Clip 1 del hero (misma logica que friendly123/index.html; aqui la ruta es ../clips/ porque es/ esta un nivel mas abajo).
-       NO cubre el arte, ni el H1 ni el CTA. Escritorio: bajo el texto. Movil (<=900px): orden texto -> arte -> clip. */
-    .hero-grid .hero-copy{grid-column:1;grid-row:1}
-    .hero-grid .hero-art{grid-column:2;grid-row:1 / span 2}
-    .hero-clip{grid-column:1;grid-row:2;align-self:start;margin:0;width:min(300px,100%);position:relative;z-index:1}
-    .hero-clip iframe{display:block;width:100%;aspect-ratio:1/1;border:0;border-radius:14px;background:#F6F1E7}
-    .hero-clip figcaption{margin-top:10px;font-size:.95rem;line-height:1.5;font-weight:500;color:var(--white)}
     .art-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;transform:translate(var(--px),var(--py));transition:transform .45s ease-out}
     .art-grid{opacity:.75}.art-products{transform-origin:50% 50%;animation:art-enter 1.05s cubic-bezier(.2,.7,.25,1) both}
     .art-route{stroke-dasharray:10 20;animation:art-flow 3s linear 1 both}
@@ -108,7 +101,7 @@
     .faq{background:#f6f9fc}.faq details{border-bottom:1px solid #aebfce;padding:17px 0}.faq details:first-child{border-top:1px solid #aebfce}.faq summary{font-size:.99rem;font-weight:700}.faq details p{font-weight:500;font-size:.93rem}
     .last-cta{background:#14283f}.last-cta h2{max-width:780px}.last-cta .section-intro{font-size:1.07rem}.last-cta .btn-light{background:transparent;border-color:#d6e3f1;color:#fff}.last-cta .btn-light:hover{background:#284565}
     footer{border-top:1px solid #d8e1e9}.footer-inner{font-size:.81rem;font-weight:600}
-    @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-grid .hero-copy,.hero-grid .hero-art,.hero-clip{grid-column:1;grid-row:auto}.hero-clip{width:min(340px,100%);margin:30px auto 0}.hero-copy{max-width:650px}.hero-art{max-width:650px;width:100%;margin-inline:auto;min-height:490px}.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:18px}.feature{border:1px solid var(--line);border-radius:10px;padding:22px;margin:0}.feature:last-child{border:1px solid var(--line)}.calc-grid{grid-template-columns:1fr}.calc-result{max-width:650px}}
+    @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-copy{max-width:650px}.hero-art{max-width:650px;width:100%;margin-inline:auto;min-height:490px}.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:18px}.feature{border:1px solid var(--line);border-radius:10px;padding:22px;margin:0}.feature:last-child{border:1px solid var(--line)}.calc-grid{grid-template-columns:1fr}.calc-result{max-width:650px}}
     @media(max-width:620px){body{font-size:15.5px}.wrap{width:min(calc(100% - 34px),var(--max))}.header-inner{min-height:65px}.brand{width:min(186px,48vw)}.hero{padding:52px 0 45px}.hero-grid{gap:10px}h1{font-size:clamp(2rem,8vw,2.6rem);line-height:1.18}.hero-copy .lede{font-size:1rem}.hero-art{min-height:345px}.art-tag{font-size:.75rem;padding:5px 7px}.art-tag-one{top:28%;left:0}.art-tag-two{top:13%;right:0}.art-tag-three{bottom:28%;right:0}.art-legend{left:2%;bottom:4px;padding:7px 9px}.art-legend strong{font-size:.76rem}.art-legend span{font-size:.72rem}.shelf-caption{font-size:.74rem;bottom:-18px;max-width:150px}.section{padding:62px 0}.feature-list,.steps-grid,.proof-grid,.offer-grid{grid-template-columns:1fr}.feature{margin:0}.feature:last-child{border:1px solid var(--line)}.quote{padding:24px}.offer-card{padding:25px}.price-band{padding:22px}}
     @media(prefers-reduced-motion:reduce){.art-products,.art-route{animation:none}.art-svg,.btn{transition:none}}
     /* Two deliberate journeys: personal trial and association buying. No false discount claims. */
@@ -205,7 +198,6 @@ a.btn-wa,#assocWhatsApp,#guideWhatsApp,#whatsAppCta{background:#25D366!important
       <div class="art-legend"><strong data-i18n="shelfTitle">Your shelf, at a glance</strong><span data-i18n="shelfSub">Illustrative product signals</span></div>
       <span class="shelf-caption" data-i18n="shelfCaption">A visual explanation—not a live customer screen.</span>
     </div>
-    <figure class="hero-clip"><iframe src="../clips/clip1-split-fable.html" loading="lazy" sandbox title="One sale, split fairly"></iframe><figcaption data-i18n="clipSplit">One $50 sale splits 60/40 between the artist and the house. The shelf turns green when it reaches its monthly goal.</figcaption></figure>
   </div></section>
   <section class="section pain"><div class="wrap pain-grid"><div><h2 data-i18n="painTitle">The real cost is not the counting. It is the constant uncertainty.</h2><p class="section-intro" data-i18n="painLead">A paper notebook tells you what someone wrote down. It cannot show you, right now, what is missing or what has stopped moving.</p><div class="pain-callout" data-i18n="painCallout">A quieter Sunday begins with a clearer Saturday.</div></div><ul class="pain-list"><li data-i18n="pain1">Closing up and still wondering if stock and sales agree.</li><li data-i18n="pain2">Recounting everything because one number looks wrong.</li><li data-i18n="pain3">A customer asking for a product nobody can locate quickly.</li><li data-i18n="pain4">Products sitting untouched while you buy more of the wrong thing.</li></ul></div></section>
   <section class="photo-story" aria-label="Scenes from everyday retail"><div class="wrap photo-story-grid">
@@ -296,7 +288,6 @@ const copy={
 };
 copy.es.heroTitle='Conoce tu stock/inventario. <span class="signal-word">Decide qué sigue.</span>';
 Object.assign(copy.es,{
-  clipSplit:"Una venta de $50 se parte 60/40 entre la artista y la casa. La percha se pone en verde al llegar a su meta del mes.",
   headerAssoc:"Grupos 30+",heroAssoc:"¿Representas una asociación o red de comerciantes? ↗",
   assocKicker:"Para asociaciones y redes de comerciantes",assocTitle:"Una conversación puede ayudar a toda tu red a ver más lejos.",assocLead:"¿Representas a un gremio o red de comercios? Hay descuentos por volumen para asociaciones con 30 o más negocios miembros. Conversemos sobre sus retos diarios y una implementación práctica antes de una propuesta.",assocCta:"Conversemos por WhatsApp sobre licencias grupales",assocFoot:"Sin promesas de descuento genéricas. Primero hablemos de la necesidad, el número de miembros y una implementación práctica.",assocArt:"Una asociación que conecta a varios negocios independientes",assocHub:"negocios",assocTag1:"Claridad",assocTag2:"Implementación",assocTag3:"Valor para miembros",assocTag4:"Una conversación",
   guideKicker:"Una buena primera pregunta",guideTitle:"Cuéntanos qué necesitas cambiar.",guideLead:"Responde unas pocas preguntas cortas. Esta guía gratuita te ayuda a encontrar el siguiente paso y prepara un mensaje editable de WhatsApp si quieres conversar. Sin cuenta, clave de IA ni envío automático.",guideTop:"Tu ruta · privada en esta página",guideWhatsApp:"Continuar por WhatsApp",guideApp:"Explorar la app",guideReset:"Empezar de nuevo",guidePrivacy:"Tus respuestas permanecen en esta página hasta que tú decidas abrir WhatsApp. No incluyas PIN, licencia ni datos de clientes en el mensaje."
