@@ -1,0 +1,2961 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#060E1D">
+<meta name="color-scheme" content="light dark">
+
+<!-- ══════════ SEO · PRIMARY ══════════ -->
+<title>Visor Antiquiebra · ¿Cuántos días o semanas le quedan a tu negocio? | JFCarpio.com</title>
+<meta name="description" content="Una primera lectura para saber si tu negocio gana estabilidad, acumula daños internos o sólo parece estar bien porque todavía aguanta.">
+<meta name="keywords" content="visor antiquiebra, diagnóstico de negocio, runway, valle de la muerte, meses 6 24, J.F. Carpio, jfcarpio, growth os, dependencia del fundador, retención, CAC payback, supervivencia empresarial">
+<meta name="author" content="J.F. Carpio">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="googlebot" content="index,follow">
+<link rel="canonical" href="https://jfcarpio.com/visorantiquiebra/">
+<link rel="alternate" hreflang="es" href="https://jfcarpio.com/visorantiquiebra/">
+<link rel="alternate" hreflang="en" href="https://jfcarpio.com/visorantiquiebra/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/visorantiquiebra/">
+
+<!-- ══════════ OPEN GRAPH ══════════ -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_EC">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="es_MX">
+<meta property="og:site_name" content="jfcarpio.com">
+<meta property="og:title" content="¿Cuántos días o semanas le quedan a tu negocio?">
+<meta property="og:description" content="Una primera lectura para saber si tu negocio gana estabilidad, acumula daños internos o sólo parece estar bien porque todavía aguanta.">
+<meta property="og:image" content="https://jfcarpio.com/visorantiquiebra/assets/VisorXMen.png">
+<meta property="og:image:secure_url" content="https://jfcarpio.com/visorantiquiebra/assets/VisorXMen.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="Visor Antiquiebra · JFCarpio.com">
+<meta property="og:url" content="https://jfcarpio.com/visorantiquiebra/">
+
+<!-- ══════════ TWITTER / X ══════════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@jfcarpio">
+<meta name="twitter:creator" content="@jfcarpio">
+<meta name="twitter:title" content="¿Cuántos días o semanas le quedan a tu negocio?">
+<meta name="twitter:description" content="Una primera lectura para saber si tu negocio gana estabilidad, acumula daños internos o sólo parece estar bien porque todavía aguanta.">
+<meta name="twitter:image" content="https://jfcarpio.com/visorantiquiebra/assets/VisorXMen.png">
+<meta name="twitter:image:alt" content="Visor Antiquiebra · diagnóstico para fundadores en meses 6–24">
+
+<!-- ══════════ FAVICON ══════════ -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23060E1D'/%3E%3Crect x='5' y='13' width='22' height='6' rx='1' fill='%23E8A020'/%3E%3Crect x='8' y='14.5' width='16' height='3' fill='%23060E1D'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="https://jfcarpio.com/visorantiquiebra/assets/VisorXMen.png">
+
+<!-- ══════════ FONTS ══════════ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="https://jfcarpio.com/visorantiquiebra/assets/VisorXMen.png" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- ══════════ JSON-LD · ORGANIZATION ══════════ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"J.F. Carpio",
+  "url":"https://jfcarpio.com/",
+  "logo":"https://jfcarpio.com/visorantiquiebra/assets/growthos-logo-blue.png",
+  "sameAs":["https://twitter.com/jfcarpio"],
+  "founder":{"@type":"Person","name":"J.F. Carpio"}
+}
+</script>
+<!-- ══════════ JSON-LD · WEBSITE ══════════ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Visor Antiquiebra",
+  "url":"https://jfcarpio.com/visorantiquiebra/",
+  "inLanguage":"es",
+  "publisher":{"@type":"Organization","name":"JFCarpio.com"}
+}
+</script>
+<!-- ══════════ JSON-LD · PRODUCT (Visor) ══════════ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Product",
+  "name":"Visor Antiquiebra",
+  "description":"Primera lectura de supervivencia para negocios entre los meses 6 y 24 — 8 señales, semáforo de daños y plan de 7 días.",
+  "image":"https://jfcarpio.com/visorantiquiebra/assets/VisorXMen.png",
+  "brand":{"@type":"Brand","name":"JFCarpio.com"},
+  "category":"Business Diagnostic Tool",
+  "offers":{
+    "@type":"Offer",
+    "price":"0",
+    "priceCurrency":"USD",
+    "availability":"https://schema.org/InStock",
+    "url":"https://jfcarpio.com/visorantiquiebra/#diagnostico"
+  }
+}
+</script>
+<!-- ══════════ JSON-LD · PRODUCT (Kit) ══════════ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Product",
+  "name":"Kit Antiquiebra 360",
+  "description":"Plantillas operativas para implementar lo que el Visor detecta: hojas de caja, matriz de canales, guiones de WhatsApp, RACI, planes de 7 y 30 días.",
+  "image":"https://jfcarpio.com/visorantiquiebra/assets/growthos-logo-blue.png",
+  "brand":{"@type":"Brand","name":"JFCarpio.com"},
+  "offers":{
+    "@type":"Offer",
+    "price":"100",
+    "priceCurrency":"USD",
+    "availability":"https://schema.org/InStock"
+  }
+}
+</script>
+<!-- ══════════ JSON-LD · BREADCRUMBS ══════════ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"jfcarpio.com","item":"https://jfcarpio.com/"},
+    {"@type":"ListItem","position":2,"name":"Visor Antiquiebra","item":"https://jfcarpio.com/visorantiquiebra/"}
+  ]
+}
+</script>
+<!-- ══════════ JSON-LD · FAQ ══════════ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿Cuánto cuesta el Visor Antiquiebra?","acceptedAnswer":{"@type":"Answer","text":"No pagas nada para abrir la primera lectura. Dejas tu correo y se abre el Visor con la calculadora de runway, el semáforo, la guía mensual de lectura y el plan de 7 días."}},
+    {"@type":"Question","name":"¿Sirve si mi negocio tiene menos de 6 meses?","acceptedAnswer":{"@type":"Answer","text":"El Visor está optimizado para los meses 6 a 24, la ventana del valle de la muerte. Antes del mes 6 todavía estás en lanzamiento — el problema es otro. Puedes usarlo, pero la lectura más certera es a partir del mes 6."}},
+    {"@type":"Question","name":"¿Y si recién reestructuré el negocio?","acceptedAnswer":{"@type":"Answer","text":"El reloj vuelve a cero. Reestructurar es empezar el ciclo de nuevo: el negocio funciona, pero las señales del valle aplican otra vez desde el mes 6 del reinicio."}},
+    {"@type":"Question","name":"¿Necesito tener mis números ordenados antes de abrirlo?","acceptedAnswer":{"@type":"Answer","text":"No. El Visor está diseñado para que llegues con los números desordenados — la primera lectura es justamente la que pone todo en la misma mesa."}},
+    {"@type":"Question","name":"¿Reemplaza a un contador?","acceptedAnswer":{"@type":"Answer","text":"No. La contabilidad te dice qué pasó. El Visor te ayuda a mirar qué está pasando por dentro: caja, cobros, clientes que vuelven, canales, procesos y dependencia del fundador."}},
+    {"@type":"Question","name":"¿Cuánto tiempo toma la primera lectura?","acceptedAnswer":{"@type":"Answer","text":"45 minutos la primera vez. 10 minutos cada mes después. La idea es que sea el ritual del primer lunes, no una auditoría anual."}}
+  ]
+}
+</script>
+
+<style>
+/* ════════════════════════════════════════════════════════════
+   VISOR ANTIQUIEBRA · LANDING · v2.0
+   Editorial · warm paper · amber/gold · red danger · navy ink
+   No green. Brunson hook-story-offer. Schwartz mechanism.
+════════════════════════════════════════════════════════════ */
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+a{text-decoration:none;color:inherit}
+button{border:none;background:none;font:inherit;cursor:pointer;color:inherit}
+img,svg{max-width:100%;display:block}
+
+:root{
+  /* Pure white & ink — max contrast */
+  --paper:        #FFFFFF;
+  --paper-2:      #FAFAFA;
+  --paper-3:      #F0F0F0;
+  --ink:          #000000;
+  --ink-2:        #1A1A1A;
+  --ink-3:        #3A3A3A;
+  --rule:         rgba(0,0,0,.16);
+  --rule-soft:    rgba(0,0,0,.08);
+
+  /* Brand — amber/gold primary (saturated) */
+  --amber:        #B07407;
+  --amber-2:      #E8A020;
+  --amber-3:      #FFC22A;
+  --amber-soft:   rgba(232,160,32,.14);
+  --amber-line:   rgba(232,160,32,.42);
+
+  /* Navy / black structure */
+  --navy:         #060E1D;
+  --navy-2:       #0B1628;
+  --navy-3:       #111E35;
+
+  /* Electric blue — trust/data */
+  --elec:         #1D5BBF;
+  --elec-2:       #4A8AF0;
+  --elec-soft:    rgba(74,138,240,.12);
+  --elec-line:    rgba(74,138,240,.36);
+
+  /* Red — danger (saturated) */
+  --red:          #D6291A;
+  --red-2:        #FF4727;
+  --red-soft:     rgba(214,41,26,.10);
+  --red-line:     rgba(214,41,26,.38);
+
+  /* Type */
+  --cond:  'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  --body:  'Lora',Georgia,'Times New Roman',serif;
+  --mono:  'Space Mono','Courier New',ui-monospace,monospace;
+
+  /* Layout */
+  --maxw: 1240px;
+  --gutter: clamp(18px,4vw,40px);
+}
+
+html{background:var(--paper);scroll-behavior:smooth}
+body{
+  font-family:var(--body);
+  background:var(--paper);
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+  position:relative;
+}
+::selection{background:var(--ink);color:var(--amber-3)}
+
+/* ════════════════════════════════════════
+   JFC TOPBAR · dark · kept from brand
+════════════════════════════════════════ */
+.bar{
+  position:fixed;top:0;left:0;right:0;z-index:800;
+  background:rgba(6,14,29,.97);
+  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(232,160,32,.18);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 28px;height:56px;
+}
+.bar-brand{display:flex;align-items:center;gap:12px;color:#fff}
+.jfc-avatar{
+  width:32px;height:32px;border-radius:50%;flex-shrink:0;overflow:hidden;
+  display:block;object-fit:cover;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.15), 0 0 0 1px rgba(232,160,32,.55);
+}
+.bar-name{font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;letter-spacing:.18em;text-transform:uppercase}
+.bar-name b{color:var(--amber-3)}
+.site-nav{
+  display:flex;align-items:center;gap:18px;
+  margin-left:18px;margin-right:auto;
+}
+.site-nav a{
+  font-family:var(--mono);font-size:10px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:#F2F2F2;
+  padding:6px 0;border-bottom:1px solid transparent;
+  transition:color .15s,border-color .15s;
+}
+.site-nav a:hover{color:var(--amber-3);border-bottom-color:var(--amber-3)}
+.bar-right{display:flex;align-items:center;gap:14px;margin-left:auto}
+.bar-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:9px 16px;
+  border:1px solid var(--amber-2);
+  background:var(--amber-2);
+  color:var(--navy);
+  font-family:var(--mono);font-size:11px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;
+  transition:all .18s ease;
+}
+.bar-cta:hover{background:var(--amber-3);box-shadow:0 0 0 3px rgba(232,160,32,.25)}
+.bar-cta::after{content:"→";font-size:13px;transition:transform .18s}
+.bar-cta:hover::after{transform:translateX(3px)}
+.bar-cta-short{display:none}
+.lang-sw{display:flex;align-items:center;gap:4px}
+.lang-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:5px 10px;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.06);
+  color:#F2F2F2;
+  font-family:var(--mono);font-size:11px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  transition:all .15s;line-height:1;
+}
+.lang-btn:hover:not(.active){background:rgba(255,255,255,.16);color:#fff}
+.lang-btn.active{background:#fff;color:#060E1D;border-color:#fff}
+@media(max-width:1080px){.site-nav{display:none}}
+@media(max-width:680px){
+  .bar{padding:0 14px;height:52px}
+  .bar-name{display:none}
+  .bar-right{gap:8px}
+  .bar-cta{padding:8px 12px;font-size:10px;letter-spacing:.1em;max-width:none;white-space:nowrap;overflow:hidden}
+  .bar-cta-full{display:none}
+  .bar-cta-short{display:inline}
+  .bar-cta::after{display:none}
+  .lang-sw{display:none}
+  .lang-btn{padding:4px 7px}
+  .lang-btn .lng{display:none}
+}
+
+/* ════════════════════════════════════════
+   GROWTH OS SUB-HEADER — kept from index.html
+════════════════════════════════════════ */
+.gos-strip{
+  position:sticky;top:56px;z-index:790;
+  background:rgba(6,14,29,.96);
+  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(232,160,32,.22);
+  padding:12px 28px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+}
+.gos-strip .logo-area{display:flex;align-items:center;gap:14px;min-width:0}
+.gos-strip .gos-logo{width:48px;height:48px;flex-shrink:0;object-fit:contain;filter:drop-shadow(0 0 16px rgba(232,160,32,.25))}
+.gos-strip .logo-text{min-width:0}
+.gos-strip .logo-text strong{
+  display:block;font-family:var(--cond);font-size:15px;font-weight:800;
+  letter-spacing:.02em;color:#fff;text-transform:uppercase;line-height:1.1;
+  text-shadow:0 0 18px rgba(232,160,32,.18);
+}
+.gos-strip .logo-vol{
+  display:block;font-family:var(--mono);font-size:10px;color:#E6E6E6;
+  letter-spacing:.16em;text-transform:uppercase;margin-top:3px;
+}
+.gos-strip .gos-center{
+  font-family:var(--mono);font-size:10.5px;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;color:#F2F2F2;
+  display:flex;align-items:center;gap:10px;flex-shrink:0;
+}
+.gos-strip .gos-center::before,.gos-strip .gos-center::after{
+  content:"";width:20px;height:1px;background:rgba(232,160,32,.4);
+}
+.gos-strip .gos-nav{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.gos-strip .gos-nav a{
+  font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:#F2F2F2;transition:color .15s;
+  padding:4px 0;border-bottom:1px solid transparent;
+}
+.gos-strip .gos-nav a:hover{color:var(--amber-3)}
+.gos-strip .gos-nav a.active{color:var(--amber-3);border-bottom-color:var(--amber-3)}
+.gos-strip .gos-nav .sep{color:#E6E6E6}
+@media(max-width:1024px){.gos-strip .gos-center{display:none}}
+@media(max-width:780px){
+  .gos-strip{padding:10px 14px;flex-wrap:wrap;gap:10px}
+  .gos-strip .logo-text strong{font-size:13px}
+  .gos-strip .logo-vol{font-size:9px}
+  .gos-strip .gos-logo{width:38px;height:38px}
+  .gos-strip .gos-nav{width:100%;justify-content:space-between;overflow-x:auto;padding-top:4px;border-top:1px solid rgba(255,255,255,.08)}
+  .gos-strip .gos-nav a{font-size:9.5px;letter-spacing:.08em;white-space:nowrap}
+}
+
+/* ════════════════════════════════════════
+   LAYOUT
+════════════════════════════════════════ */
+main{padding-top:56px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+.wrap-narrow{max-width:920px;margin:0 auto;padding:0 var(--gutter)}
+
+.sl{
+  font-family:var(--cond);font-size:13px;font-weight:900;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--ink);
+  display:flex;align-items:center;gap:12px;margin:0 0 18px 0;
+}
+.sl .sn{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:28px;height:28px;
+  background:var(--ink);color:var(--amber-3);
+  font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:0;
+}
+.sl::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--rule),transparent)}
+
+h1,h2,h3{font-family:var(--cond);font-weight:900;letter-spacing:-.005em;line-height:1.04;text-transform:uppercase;color:var(--ink)}
+h2{font-size:clamp(30px,4.6vw,56px);margin-bottom:18px;text-wrap:balance}
+h3{font-size:clamp(22px,3vw,30px);margin-bottom:12px}
+
+.lede{font-size:clamp(17px,1.6vw,21px);line-height:1.6;color:var(--ink-2);max-width:62ch;text-wrap:pretty}
+.kicker{
+  font-family:var(--mono);font-size:11px;font-weight:700;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--amber);
+  margin-bottom:14px;display:inline-flex;align-items:center;gap:10px;
+}
+.kicker::before{content:"";width:24px;height:1px;background:var(--amber)}
+
+/* ════════════════════════════════════════
+   HERO v3 · oversized editorial · broken grid
+════════════════════════════════════════ */
+.hero{position:relative;padding:34px 0 0;overflow:hidden;border-bottom:1px solid var(--ink)}
+.hero::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:5px;
+  background:linear-gradient(90deg,var(--red) 0 10%, var(--amber-2) 10% 90%, var(--red) 90% 100%);
+  z-index:5;
+}
+.hero-shell{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:11px;font-weight:700;
+  letter-spacing:.22em;text-transform:uppercase;color:#fff;
+  padding:7px 14px;background:var(--ink);
+  border:1px solid var(--ink);margin-bottom:34px;
+}
+.hero-eyebrow::before{
+  content:"";width:7px;height:7px;border-radius:50%;
+  background:var(--red);box-shadow:0 0 0 3px var(--red-soft);
+  animation:pulse 2.2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+.hero-h1{
+  font-family:var(--cond);
+  font-size:clamp(54px,13vw,212px);
+  font-weight:900;
+  line-height:.86;letter-spacing:-.022em;
+  text-transform:uppercase;color:var(--ink);
+  margin:0 0 22px 0;text-wrap:balance;
+}
+.hero-h1 em{
+  font-family:var(--body);font-style:italic;font-weight:600;
+  text-transform:none;color:var(--red);
+  letter-spacing:-.02em;font-size:.88em;
+  display:inline-block;transform:translateY(.02em);
+}
+.hero-h1 .q{color:var(--ink);font-weight:900;display:inline-block;transform:none}
+.hero-h1 .line{display:inline-block}
+.hero-h1 .line-bottom{display:inline-block}
+
+/* ===== Full-bleed helmet poster ===== */
+.hero-poster{
+  position:relative;
+  width:100%;
+  margin-top:36px;
+  background:#000;
+  overflow:hidden;
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:stretch;
+  min-height:min(72vh,720px);
+}
+.hero-poster::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 30% 50%, rgba(232,160,32,.22), transparent 55%),
+    radial-gradient(circle at 75% 50%, rgba(214,41,26,.18), transparent 55%);
+  z-index:1;pointer-events:none;
+}
+.hero-poster-img-wrap{
+  position:relative;z-index:2;
+  display:flex;align-items:center;justify-content:center;
+  padding:32px;
+  will-change:transform;
+}
+.hero-poster-img{
+  width:100%;max-width:540px;height:auto;
+  filter:drop-shadow(0 30px 60px rgba(0,0,0,.6)) drop-shadow(0 0 100px rgba(232,160,32,.25));
+  animation:helmet-in 1.1s cubic-bezier(.2,.7,.2,1) both;
+}
+@keyframes helmet-in{from{opacity:0;transform:translateY(28px) scale(.94)}to{opacity:1;transform:none}}
+
+.poster-side{
+  position:relative;z-index:2;
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:48px clamp(28px,4vw,56px);
+  color:#fff;
+  border-left:1px solid rgba(255,255,255,.08);
+}
+.poster-mark{
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-family:var(--mono);font-size:10.5px;font-weight:700;
+  letter-spacing:.24em;text-transform:uppercase;
+  color:#E6E6E6;
+  padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.12);
+}
+.poster-mark .pm-k{color:var(--amber-3)}
+
+.poster-stat{
+  display:flex;flex-direction:column;gap:12px;
+}
+.poster-stat .ps-k{
+  font-family:var(--mono);font-size:11px;font-weight:700;
+  letter-spacing:.22em;text-transform:uppercase;color:#E6E6E6;
+}
+.poster-stat .ps-v{
+  font-family:var(--cond);font-size:clamp(80px,15vw,180px);
+  font-weight:900;line-height:.86;letter-spacing:-.04em;color:var(--amber-3);
+  font-variant-numeric:tabular-nums;
+  text-shadow:0 0 40px rgba(232,160,32,.4);
+  display:flex;align-items:baseline;gap:14px;
+}
+.poster-stat .ps-v small{font-size:.22em;font-family:var(--mono);font-weight:700;color:#E6E6E6;letter-spacing:.12em;text-transform:uppercase}
+.poster-stat .ps-l{
+  font-family:var(--body);font-style:italic;font-size:16px;color:#F2F2F2;
+  max-width:34ch;line-height:1.5;
+}
+.poster-stat .ps-sig{
+  margin-top:14px;
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--red-2);
+  padding-top:14px;border-top:1px dashed rgba(255,255,255,.12);
+}
+.poster-stat .ps-sig::before{content:"▲";color:var(--red-2)}
+
+.poster-foot{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:18px;border-top:1px solid rgba(255,255,255,.12);
+  font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#E6E6E6;
+}
+
+/* Hero lower copy area */
+.hero-lower{padding:54px 0 60px}
+.hero-copy-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:start}
+.hero-sub{
+  font-size:clamp(18px,1.6vw,24px);
+  color:var(--ink);line-height:1.5;
+  margin:0;text-wrap:pretty;
+}
+.hero-sub strong{color:var(--ink);background:linear-gradient(180deg,transparent 60%, rgba(232,160,32,.34) 60% 88%, transparent 88%);padding:0 2px}
+.hero-support{
+  font-size:15.5px;color:var(--ink-2);line-height:1.62;
+  margin:0 0 22px;
+  padding:16px 18px;background:var(--paper-2);
+  border:1px solid var(--rule);border-left:4px solid var(--red);
+}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn-mega{padding:20px 28px;font-size:13px;letter-spacing:.18em}
+
+/* Trust strip */
+.hero-meta-strip{
+  background:var(--ink);color:#fff;
+  padding:18px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);
+}
+.hero-trust-list{
+  list-style:none;display:flex;flex-wrap:wrap;gap:22px 36px;
+  align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:#F2F2F2;
+}
+.hero-trust-list li{display:inline-flex;align-items:center;gap:10px}
+.hero-trust-list .dot{width:7px;height:7px;border-radius:50%;background:var(--amber-3);box-shadow:0 0 0 3px rgba(232,160,32,.18);flex-shrink:0}
+
+@media(max-width:1024px){
+  .hero-poster{grid-template-columns:1fr;min-height:auto}
+  .poster-side{border-left:none;border-top:1px solid rgba(255,255,255,.08)}
+  .hero-poster-img-wrap{padding:34px 24px}
+}
+@media(min-width:1100px){
+  .hero{
+    display:grid;
+    grid-template-columns:minmax(0,700px) minmax(360px,430px);
+    grid-template-areas:
+      "intro poster"
+      "lower poster"
+      "trust trust";
+    align-items:center;
+    justify-content:center;
+    column-gap:clamp(42px,5vw,78px);
+    row-gap:22px;
+    min-height:calc(100vh - 56px);
+    padding:clamp(42px,4.6vw,68px) var(--gutter) 0;
+  }
+  .hero-shell{max-width:none;margin:0;padding:0}
+  .hero > .hero-shell:first-of-type{grid-area:intro;align-self:end}
+  .hero-eyebrow{
+    margin-bottom:24px;
+    font-size:10px;
+    letter-spacing:.2em;
+    padding:8px 12px;
+  }
+  .hero-h1{
+    font-size:clamp(70px,5.4vw,104px);
+    line-height:.88;
+    letter-spacing:-.012em;
+    margin:0;
+    max-width:10.8ch;
+  }
+  .hero-h1 em{
+    font-size:.74em;
+    line-height:.92;
+    margin:.02em 0 .04em;
+  }
+  .hero-h1 .line-bottom{
+    font-size:.7em;
+    line-height:.9;
+    max-width:14ch;
+    white-space:normal;
+  }
+  .hero-poster{
+    grid-area:poster;
+    grid-template-columns:1fr;
+    width:100%;
+    max-width:430px;
+    min-height:0;
+    margin:0;
+    justify-self:end;
+    align-self:center;
+    border:2px solid var(--ink);
+    box-shadow:14px 14px 0 var(--ink), 0 24px 70px rgba(6,14,29,.22);
+  }
+  .hero-poster::after{
+    content:"";
+    position:absolute;
+    inset:14px;
+    border:1px solid rgba(232,160,32,.28);
+    z-index:2;
+    pointer-events:none;
+  }
+  .hero-poster-img-wrap{
+    padding:28px 28px 20px;
+    min-height:0;
+    background:
+      linear-gradient(135deg, rgba(214,41,26,.18), transparent 48%),
+      radial-gradient(circle at 50% 42%, rgba(232,160,32,.20), transparent 62%);
+  }
+  .hero-poster-img{max-width:330px}
+  .poster-side{
+    display:block;
+    border-left:0;
+    border-top:1px solid rgba(255,255,255,.12);
+    padding:22px 24px 24px;
+  }
+  .poster-mark{
+    font-size:9px;
+    letter-spacing:.16em;
+    padding-bottom:10px;
+  }
+  .poster-stat{gap:7px;margin-top:16px}
+  .poster-stat .ps-k{font-size:9.5px;letter-spacing:.18em}
+  .poster-stat .ps-v{
+    font-size:clamp(54px,5.6vw,82px);
+    letter-spacing:-.025em;
+    text-shadow:none;
+  }
+  .poster-stat .ps-l{
+    font-size:14.5px;
+    font-style:normal;
+    max-width:none;
+  }
+  .poster-stat .ps-sig{
+    margin-top:8px;
+    padding-top:10px;
+    font-size:8.5px;
+    letter-spacing:.12em;
+  }
+  .poster-foot{display:none}
+  .hero-lower{
+    grid-area:lower;
+    align-self:start;
+    padding:4px 0 38px;
+  }
+  .hero-copy-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  .hero-sub{
+    max-width:42ch;
+    font-size:clamp(18px,1.35vw,22px);
+    line-height:1.45;
+  }
+  .hero-support{
+    max-width:54ch;
+    margin-bottom:18px;
+    padding:14px 16px;
+    font-size:15.5px;
+  }
+  .cta-row{gap:12px}
+  .btn-mega{padding:17px 22px;font-size:11px;letter-spacing:.14em}
+  .hero-meta-strip{
+    grid-area:trust;
+    width:100vw;
+    margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
+  }
+}
+@media(max-width:880px){
+  .hero{padding:24px 0 0}
+  .hero-eyebrow{
+    max-width:100%;
+    white-space:normal;
+    line-height:1.45;
+    letter-spacing:.14em;
+    margin-bottom:28px;
+  }
+  .hero-h1{font-size:clamp(44px,14vw,90px);line-height:.88}
+  .hero-h1 em{
+    font-size:clamp(38px,11.2vw,52px);
+    line-height:.94;
+    max-width:100%;
+    white-space:normal;
+  }
+  .hero-h1 .line-bottom{font-size:.86em;line-height:.9}
+  .hero-lower{padding:36px 0 44px}
+  .hero-copy-grid{grid-template-columns:1fr;gap:24px}
+  .poster-side{padding:36px 24px}
+  .poster-stat .ps-v{font-size:clamp(64px,22vw,120px)}
+  .hero-trust-list{gap:14px 22px;font-size:10px;letter-spacing:.12em}
+}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 22px;
+  font-family:var(--mono);font-size:12px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;line-height:1;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  white-space:nowrap;cursor:pointer;border:1px solid transparent;
+}
+.btn-primary{
+  background:var(--amber-2);color:var(--navy);
+  box-shadow:0 6px 0 var(--amber), 0 14px 30px -10px rgba(176,116,7,.55);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--amber), 0 18px 36px -8px rgba(176,116,7,.7)}
+.btn-primary:active{transform:translateY(3px);box-shadow:0 2px 0 var(--amber)}
+.btn-primary::after{content:"→";font-size:14px;transition:transform .18s}
+.btn-primary:hover::after{transform:translateX(4px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--amber-3)}
+
+/* CTA variations — each one different */
+.btn-block{
+  width:100%;justify-content:center;padding:22px 28px;
+  background:var(--ink);color:#fff;border:1px solid var(--ink);
+  font-size:13px;letter-spacing:.2em;
+  box-shadow:none;
+  position:relative;overflow:hidden;
+}
+.btn-block::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,var(--amber-2),var(--red));
+  transform:translateY(100%);transition:transform .35s cubic-bezier(.6,0,.2,1);z-index:0;
+}
+.btn-block:hover::before{transform:translateY(0)}
+.btn-block:hover{transform:none;color:var(--ink);box-shadow:none}
+.btn-block > *{position:relative;z-index:1}
+.btn-block::after{content:"→";font-size:14px;transition:transform .25s}
+.btn-block:hover::after{transform:translateX(6px)}
+
+.btn-theatrical{
+  font-size:clamp(14px,1.4vw,18px);letter-spacing:.18em;
+  padding:clamp(20px,2vw,32px) clamp(28px,4vw,56px);
+  background:var(--amber-2);color:var(--navy);
+  border:2px solid var(--amber-2);
+  position:relative;
+  box-shadow:
+    0 0 0 4px var(--navy),
+    0 0 0 6px var(--amber-2),
+    0 22px 50px -16px rgba(232,160,32,.6);
+}
+.btn-theatrical:hover{
+  transform:translateY(-3px);
+  box-shadow:
+    0 0 0 4px var(--navy),
+    0 0 0 6px var(--amber-3),
+    0 28px 60px -14px rgba(232,160,32,.85);
+  background:var(--amber-3);
+}
+.btn-theatrical::after{content:"→";font-size:1.1em;margin-left:6px}
+
+/* dead — old hero classes removed, keep btn rules */
+.cta-row-old{display:none}
+
+/* Reduced motion */
+
+/* ════════════════════════════════════════
+   SECTIONS
+════════════════════════════════════════ */
+.section{padding:88px 0;border-bottom:1px solid var(--rule)}
+.section.short{padding:44px 0}
+.section.tall{padding:160px 0}
+.section.xtall{padding:220px 0}
+.section.alt{background:#FAFAFA;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.section.dark{background:var(--navy);color:#fff;border-bottom:none;border-top:1px solid rgba(255,255,255,.08)}
+.section.dark h2,.section.dark h3,.section.dark .sl{color:#fff}
+.section.dark .sl .sn{background:var(--amber-2);color:var(--navy)}
+.section.dark .sl::after{background:linear-gradient(90deg,rgba(255,255,255,.18),transparent)}
+.section.dark .lede{color:#F2F2F2}
+.section.dark .kicker{color:var(--amber-3)}
+.section.dark .kicker::before{background:var(--amber-3)}
+
+/* ════════════════════════════════════════
+   AUTHORITY STRIP — Schwartz: proof/specificity
+════════════════════════════════════════ */
+.auth-strip{
+  background:var(--navy);color:#fff;padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);overflow:hidden;
+}
+.auth-track{
+  display:flex;gap:46px;align-items:center;
+  font-family:var(--mono);font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:#F2F2F2;
+  white-space:nowrap;animation:scroll-x 38s linear infinite;
+}
+.auth-track .pip{color:var(--amber-3)}
+.auth-track .sep{color:#E6E6E6}
+@keyframes scroll-x{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.auth-track{animation:none;flex-wrap:wrap;white-space:normal;justify-content:center}}
+
+/* ════════════════════════════════════════
+   PROBLEM AGITATION — Schwartz P-A-S
+════════════════════════════════════════ */
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.problem{
+  background:#fff;border:1px solid var(--rule);padding:28px 24px 24px;
+  position:relative;transition:transform .25s, box-shadow .25s;
+}
+.problem:hover{transform:translateY(-4px);box-shadow:0 20px 38px -22px rgba(11,19,34,.22)}
+.problem::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--red)}
+.problem .tag{
+  font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--red);margin-bottom:10px;display:flex;justify-content:space-between;
+}
+.problem .tag .src{color:var(--ink-3);font-size:9px}
+.problem .stat{font-family:var(--cond);font-size:64px;font-weight:900;line-height:1;color:var(--red);letter-spacing:-.02em;margin-bottom:10px;font-variant-numeric:tabular-nums}
+.problem .body{font-family:var(--body);font-size:15.5px;color:var(--ink-2);line-height:1.55}
+.problem .body strong{color:var(--ink)}
+.problem .cite{margin-top:14px;padding-top:12px;border-top:1px dashed var(--rule-soft);font-family:var(--mono);font-size:9.5px;color:var(--ink-3);letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:880px){.problem-grid{grid-template-columns:1fr;gap:14px}}
+
+/* ════════════════════════════════════════
+   REFRAME — Brunson's "false belief → new belief"
+════════════════════════════════════════ */
+.reframe-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:start}
+.reframe-quote{
+  font-family:var(--cond);font-size:clamp(26px,3.4vw,42px);
+  font-weight:800;line-height:1.08;text-transform:uppercase;
+  color:var(--ink);letter-spacing:-.005em;
+  padding:34px 36px;background:#fff;
+  border:1px solid var(--rule);border-left:5px solid var(--amber-2);
+  position:relative;box-shadow:0 14px 36px -22px rgba(11,19,34,.25);
+}
+.reframe-quote .accent{color:var(--amber)}
+.reframe-quote::before{
+  content:"“";position:absolute;top:-10px;left:18px;
+  font-family:var(--body);font-size:88px;color:var(--amber);opacity:.18;line-height:1;
+}
+.reframe-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:18px}
+.reframe-list li{display:flex;gap:14px;padding:10px 0;border-bottom:1px dashed var(--rule-soft);font-size:16px;color:var(--ink-2);line-height:1.55}
+.reframe-list li::before{content:"";flex-shrink:0;width:9px;height:9px;margin-top:9px;background:var(--amber-2)}
+.reframe-list strong{color:var(--ink);font-weight:600}
+@media(max-width:880px){.reframe-grid{grid-template-columns:1fr;gap:30px}.reframe-quote{padding:24px 22px;font-size:26px}}
+
+/* ════════════════════════════════════════
+   3 STATES
+════════════════════════════════════════ */
+.states{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.state{position:relative;background:#fff;border:1px solid var(--rule);padding:30px 26px 26px;display:flex;flex-direction:column;gap:14px;transition:transform .25s, box-shadow .25s}
+.state:hover{transform:translateY(-4px);box-shadow:0 22px 40px -22px rgba(11,19,34,.25)}
+.state::before{content:"";position:absolute;top:0;left:0;right:0;height:5px}
+.state.b::before{background:var(--elec)}
+.state.a::before{background:var(--amber-2)}
+.state.r::before{background:var(--red)}
+.state-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.state.b .state-tag{color:var(--elec)}.state.a .state-tag{color:var(--amber)}.state.r .state-tag{color:var(--red)}
+.state-tag .dot{width:9px;height:9px;border-radius:50%}
+.state.b .state-tag .dot{background:var(--elec-2);box-shadow:0 0 0 3px var(--elec-soft)}
+.state.a .state-tag .dot{background:var(--amber-2);box-shadow:0 0 0 3px var(--amber-soft)}
+.state.r .state-tag .dot{background:var(--red);box-shadow:0 0 0 3px var(--red-soft)}
+.state h3{font-size:clamp(22px,2.4vw,28px);margin-bottom:0;line-height:1.06}
+.state-body{font-size:15.5px;color:var(--ink-2);line-height:1.62}
+.state-sym{list-style:none;display:flex;flex-direction:column;gap:7px;padding-top:14px;border-top:1px dashed var(--rule)}
+.state-sym li{font-size:14px;color:var(--ink-2);line-height:1.5;display:flex;gap:9px;align-items:flex-start}
+.state-sym li::before{content:"";flex-shrink:0;width:6px;height:6px;border-radius:50%;margin-top:9px}
+.state.b .state-sym li::before{background:var(--elec-2)}
+.state.a .state-sym li::before{background:var(--amber-2)}
+.state.r .state-sym li::before{background:var(--red)}
+.state-signal{margin-top:auto;padding:14px 14px;background:var(--paper);border:1px solid var(--rule-soft);font-family:var(--mono);font-size:12px;color:var(--ink-2);line-height:1.55;position:relative}
+.state-signal::before{content:"señal del visor";position:absolute;top:-8px;left:10px;background:var(--paper);font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);padding:0 6px}
+.state-signal strong{color:var(--ink)}
+@media(max-width:880px){.states{grid-template-columns:1fr;gap:18px}}
+
+/* ════════════════════════════════════════
+   FULL-BLEED PULL QUOTE
+════════════════════════════════════════ */
+.bigquote{
+  background:var(--ink);color:#fff;
+  padding:clamp(80px,12vw,180px) var(--gutter);
+  text-align:center;position:relative;overflow:hidden;
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);
+}
+.bigquote::before{
+  content:"“";position:absolute;top:6%;left:8%;
+  font-family:var(--body);font-style:italic;font-size:clamp(180px,28vw,420px);
+  color:rgba(232,160,32,.12);line-height:1;pointer-events:none;
+  font-weight:400;
+}
+.bigquote::after{
+  content:"”";position:absolute;bottom:-6%;right:8%;
+  font-family:var(--body);font-style:italic;font-size:clamp(180px,28vw,420px);
+  color:rgba(214,41,26,.10);line-height:1;pointer-events:none;
+  font-weight:400;
+}
+.bigquote-text{
+  font-family:var(--body);font-style:italic;font-weight:500;
+  font-size:clamp(40px,8.4vw,128px);
+  line-height:1.02;letter-spacing:-.015em;
+  color:#fff;max-width:18ch;margin:0 auto;text-wrap:balance;
+  position:relative;z-index:1;
+}
+.bigquote-text .y{color:var(--amber-3)}
+.bigquote-mark{
+  margin-top:38px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.28em;
+  text-transform:uppercase;color:#E6E6E6;
+  position:relative;z-index:1;
+}
+.bigquote-mark::before{content:"— "}
+@media(max-width:680px){
+  .bigquote{padding:64px var(--gutter)}
+  .bigquote-text{font-size:clamp(34px,11vw,68px)}
+}
+
+/* ════════════════════════════════════════
+   FULL-BLEED VALLE
+════════════════════════════════════════ */
+.valle-full{
+  position:relative;width:100%;
+  background:#fff;
+  padding:clamp(56px,8vw,120px) 0 0;
+  border-bottom:1px solid var(--ink);
+}
+.valle-full .wrap{margin-bottom:36px}
+.valle-canvas{
+  position:relative;width:100%;
+  height:clamp(360px,42vw,580px);
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);
+  background:
+    linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px) 0 0/100% 14.28%,
+    linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px) 0 0/8.333% 100%,
+    #fff;
+  overflow:hidden;
+}
+.valle-canvas svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.valle-label{
+  position:absolute;
+  font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink);background:#fff;padding:5px 10px;
+  border:1px solid var(--ink);
+}
+.valle-label.red{color:#fff;background:var(--red);border-color:var(--red)}
+.valle-label.amber{color:var(--ink);background:var(--amber-3);border-color:var(--amber-2)}
+.vl-axis{
+  position:absolute;bottom:14px;left:0;right:0;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0 clamp(20px,5vw,60px);
+  font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink-3);pointer-events:none;
+}
+.vl-axis span{background:#fff;padding:2px 6px}
+.valle-foot{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border-bottom:1px solid var(--ink);
+}
+.valle-foot > div{
+  padding:32px clamp(24px,4vw,40px);
+  border-right:1px solid var(--ink);
+}
+.valle-foot > div:last-child{border-right:none}
+.valle-foot .vfk{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--red);margin-bottom:10px;
+}
+.valle-foot .vft{
+  font-family:var(--cond);font-size:clamp(22px,2.4vw,30px);font-weight:800;
+  text-transform:uppercase;line-height:1.05;color:var(--ink);margin-bottom:8px;
+}
+.valle-foot .vfd{font-size:14.5px;color:var(--ink-2);line-height:1.55}
+@media(max-width:780px){
+  .valle-foot{grid-template-columns:1fr}
+  .valle-foot > div{border-right:none;border-bottom:1px solid var(--ink)}
+  .valle-foot > div:last-child{border-bottom:none}
+}
+.valle-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+.valle-viz{position:relative;aspect-ratio:1.55/1;background:#fff;border:1px solid var(--rule);padding:26px;overflow:hidden}
+.valle-svg{width:100%;height:100%;display:block}
+.valle-callout{position:absolute;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);background:rgba(244,239,228,.94);padding:3px 8px;border:1px solid var(--rule)}
+.callout-6{left:18%;top:10%}
+.callout-24{right:10%;top:10%}
+.callout-bottom{left:50%;transform:translateX(-50%);bottom:18px;color:var(--red);border-color:var(--red-line);background:var(--red-soft)}
+.reset-note{
+  margin-top:22px;padding:18px 22px;background:var(--navy);color:#fff;
+  border:1px solid var(--navy);border-left:5px solid var(--amber-2);
+  font-family:var(--cond);font-size:22px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.01em;line-height:1.18;
+}
+.reset-note strong{color:var(--amber-2)}
+@media(max-width:880px){.valle-grid{grid-template-columns:1fr;gap:26px}}
+
+/* ════════════════════════════════════════
+   DASHBOARD PREVIEW — Brunson "show, don't tell"
+════════════════════════════════════════ */
+.dash-preview{
+  background:var(--navy);border:1px solid rgba(255,255,255,.08);
+  padding:0;position:relative;overflow:hidden;
+  box-shadow:0 36px 70px -30px rgba(11,19,34,.55);
+}
+.dash-preview::before{
+  content:"ejemplo visual · datos ficticios";
+  position:absolute;top:14px;right:18px;
+  font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;
+  color:#E6E6E6;background:rgba(255,255,255,.04);
+  padding:4px 9px;border:1px solid rgba(255,255,255,.08);z-index:5;
+}
+.dash-chrome{display:flex;align-items:center;gap:8px;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
+.dash-chrome .lights{display:flex;gap:6px}
+.dash-chrome .lights span{width:9px;height:9px;border-radius:50%}
+.dash-chrome .lights span:nth-child(1){background:#E86040}
+.dash-chrome .lights span:nth-child(2){background:#E8A020}
+.dash-chrome .lights span:nth-child(3){background:#4A8AF0}
+.dash-chrome .url{margin-left:14px;font-family:var(--mono);font-size:11px;color:#E6E6E6;letter-spacing:.06em}
+.dash-tabs{display:flex;gap:0;border-bottom:1px solid rgba(255,255,255,.07)}
+.dash-tab{flex:1;padding:18px 22px;font-family:var(--cond);font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#E6E6E6;background:transparent;border-right:1px solid rgba(255,255,255,.07);border-bottom:3px solid transparent;transition:all .18s;text-align:left;display:flex;align-items:center;gap:10px}
+.dash-tab:last-child{border-right:none}
+.dash-tab:hover{color:#F2F2F2;background:rgba(255,255,255,.02)}
+.dash-tab.active{color:#fff;background:rgba(255,255,255,.03);border-bottom-color:var(--amber-2)}
+.dash-tab .num{font-family:var(--mono);font-size:10px;background:rgba(255,255,255,.06);padding:2px 7px;letter-spacing:0}
+.dash-tab.active .num{background:var(--amber-2);color:var(--navy)}
+.dash-body{padding:32px;min-height:340px;position:relative}
+.dash-panel{display:none;animation:tab-in .35s ease both}
+.dash-panel.active{display:block}
+@keyframes tab-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.dp-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.dp-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:20px 18px}
+.dp-card .l{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#E6E6E6;margin-bottom:10px}
+.dp-card .n{font-family:var(--cond);font-size:46px;font-weight:900;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.dp-card .n.a{color:#F0B040}.dp-card .n.r{color:#FF7A5E}.dp-card .n.b{color:#7AA8F5}.dp-card .n.w{color:#fff}
+.dp-card .s{font-family:var(--mono);font-size:11px;color:#E6E6E6;margin-top:8px;letter-spacing:.04em}
+.dp-prio{margin-top:22px;padding:14px 18px;background:rgba(176,116,7,.14);border:1px solid rgba(232,160,32,.42);border-left:4px solid var(--amber-2);display:flex;align-items:center;gap:12px;font-family:var(--cond);font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#F5C040}
+.dp-prio::before{content:"▲";color:var(--amber-2);font-size:14px}
+.dp-list{display:flex;flex-direction:column;gap:14px}
+.dp-li{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;padding:16px 18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08)}
+.dp-li .sig{width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-family:var(--cond);font-weight:900;font-size:14px}
+.dp-li.b .sig{background:rgba(74,138,240,.18);color:#7AA8F5}
+.dp-li.a .sig{background:rgba(176,116,7,.18);color:#F0B040}
+.dp-li.r .sig{background:rgba(183,50,30,.18);color:#FF7A5E}
+.dp-li .t{font-family:var(--body);font-size:15px;color:#fff;line-height:1.5}
+.dp-li .t small{display:block;font-size:12px;color:#E6E6E6;margin-top:2px;font-family:var(--mono)}
+.dp-li .v{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.dp-li.b .v{color:#7AA8F5}.dp-li.a .v{color:#F0B040}.dp-li.r .v{color:#FF7A5E}
+.sem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.sem{padding:22px 18px;text-align:center;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);position:relative}
+.sem-dot{width:46px;height:46px;border-radius:50%;margin:0 auto 12px;position:relative}
+.sem-dot::after{content:"";position:absolute;inset:-8px;border-radius:50%;border:1px solid currentColor;opacity:.3}
+.sem.r .sem-dot{background:radial-gradient(circle at 35% 35%, #ff9277, #B7321E);color:#FF7A5E;box-shadow:0 0 24px rgba(255,122,94,.35)}
+.sem.a .sem-dot{background:radial-gradient(circle at 35% 35%, #ffd47a, #B07407);color:#F0B040;box-shadow:0 0 24px rgba(240,176,64,.35)}
+.sem.b .sem-dot{background:radial-gradient(circle at 35% 35%, #a5cfff, #1D5BBF);color:#7AA8F5;box-shadow:0 0 24px rgba(122,168,245,.35)}
+.sem .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#E6E6E6;margin-bottom:4px}
+.sem .nm{font-family:var(--cond);font-size:18px;font-weight:800;color:#fff;text-transform:uppercase}
+@media(max-width:880px){.dash-body{padding:20px}.dp-grid,.sem-grid{grid-template-columns:1fr 1fr;gap:12px}.dash-tab{padding:14px;font-size:12px;letter-spacing:.08em}.dash-tab .num{display:none}.dp-card .n{font-size:34px}}
+@media(max-width:520px){.dp-grid,.sem-grid{grid-template-columns:1fr}}
+
+/* ════════════════════════════════════════
+   PIONEER
+════════════════════════════════════════ */
+.pioneer{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+.pioneer-card{background:#fff;border:1px solid var(--rule);padding:36px 34px;position:relative}
+.pioneer-card::before{content:"";position:absolute;top:0;left:0;width:5px;height:100%;background:linear-gradient(180deg,var(--amber-2),var(--red))}
+.pioneer-quote{font-family:var(--body);font-style:italic;font-size:clamp(22px,2.4vw,30px);line-height:1.32;color:var(--ink);margin-bottom:18px}
+.pioneer-quote::before{content:"“"}.pioneer-quote::after{content:"”"}
+.pioneer-attr{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.authority-proof{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.proof-point{background:#fff;border:1px solid var(--rule);padding:16px 16px;border-left:4px solid var(--amber-2)}
+.proof-point .k{display:block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:7px}
+.proof-point p{font-family:var(--body);font-size:14.5px;color:var(--ink-2);line-height:1.55;margin:0}
+.proof-trio{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.proof-chip{background:var(--paper);border:1px solid var(--rule);padding:16px 16px 18px}
+.proof-chip .k{display:block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:7px}
+.proof-chip p{font-family:var(--body);font-size:14.5px;color:var(--ink-2);line-height:1.55;margin:0}
+@media(max-width:880px){.pioneer{grid-template-columns:1fr;gap:26px}}
+@media(max-width:680px){.authority-proof,.proof-trio{grid-template-columns:1fr}}
+
+/* ════════════════════════════════════════
+   STACK SLIDE — Brunson offer stack
+════════════════════════════════════════ */
+.stack-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;margin-top:30px}
+.stack-list{list-style:none;display:flex;flex-direction:column;gap:0;background:#fff;border:1px solid var(--rule)}
+.stack-li{display:grid;grid-template-columns:1fr auto;gap:14px;padding:18px 22px;border-bottom:1px solid var(--rule-soft);align-items:center}
+.stack-li:last-child{border-bottom:none}
+.stack-li .pr{display:flex;flex-direction:column;gap:3px}
+.stack-li .nm{font-family:var(--cond);font-size:19px;font-weight:800;text-transform:uppercase;color:var(--ink);line-height:1.12;letter-spacing:.005em}
+.stack-li .ds{font-family:var(--body);font-size:14px;color:var(--ink-2);line-height:1.5}
+.stack-li .val{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--ink-2);text-align:right;white-space:nowrap}
+.stack-li .val s{color:var(--ink-2)}
+.stack-li .val b{display:block;font-family:var(--mono);font-size:11px;color:var(--ink);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+.stack-li.extra{background:linear-gradient(90deg,rgba(232,160,32,.08),transparent)}
+.stack-total{background:var(--navy);color:#fff;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;border-top:3px solid var(--amber-2)}
+.stack-total .lab{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#F2F2F2}
+.stack-total .num{font-family:var(--mono);font-size:18px;font-weight:800;color:#fff;letter-spacing:.08em}
+.stack-total .num s{color:#E6E6E6;font-weight:500;margin-right:14px}
+.stack-total .num b{color:var(--amber-3)}
+
+.stack-side{position:sticky;top:80px}
+.stack-promise{background:#fff;border:1px solid var(--rule);padding:30px 30px;border-top:4px solid var(--amber-2)}
+.stack-promise h3{margin-bottom:14px;font-size:26px}
+.stack-promise p{font-size:15.5px;color:var(--ink-2);line-height:1.62;margin-bottom:18px}
+.stack-promise .micro{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
+.stack-cta{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.stack-cta .btn{width:100%;justify-content:center}
+.stack-cta .micro-note{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink-3);text-align:center}
+.conversion-bridge{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0 4px}
+.bridge-card{background:#fff;border:1px solid var(--rule);padding:18px 18px;border-top:4px solid var(--ink)}
+.bridge-card:nth-child(2){border-top-color:var(--amber-2)}.bridge-card:nth-child(3){border-top-color:var(--red)}
+.bridge-card .ey{display:block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:8px}
+.bridge-card p{font-family:var(--body);font-size:15px;line-height:1.55;color:var(--ink-2);margin:0}
+.mech-demo{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.mech-step{background:#fff;border:1px solid var(--rule);padding:18px;border-top:4px solid var(--amber-2)}
+.mech-step:nth-child(1){border-top-color:var(--ink)}
+.mech-step:nth-child(3){border-top-color:var(--red)}
+.mech-step .ey{display:block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:8px}
+.mech-step p{font-family:var(--body);font-size:15px;line-height:1.55;color:var(--ink-2);margin:0}
+@media(max-width:880px){.stack-grid{grid-template-columns:1fr;gap:24px}.stack-side{position:static}}
+@media(max-width:780px){.conversion-bridge,.mech-demo{grid-template-columns:1fr}}
+
+/* ════════════════════════════════════════
+   EMAIL FORM
+════════════════════════════════════════ */
+.email-card{
+  max-width:760px;margin:30px auto 0;background:#fff;
+  border:1px solid var(--rule);padding:36px 38px;position:relative;
+  box-shadow:0 30px 56px -28px rgba(11,19,34,.32);
+}
+.email-card::before{content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:5px;background:linear-gradient(90deg,var(--amber-2) 0 60%, var(--red) 60% 100%)}
+.email-card .copy{font-family:var(--body);font-size:16px;color:var(--ink-2);margin-bottom:22px;line-height:1.6}
+.qualifier{max-width:900px;margin:30px auto 0;background:var(--ink);color:#fff;border:1px solid var(--ink);display:grid;grid-template-columns:.95fr 1.05fr}
+.qualifier .q-head{padding:28px 28px;border-right:1px solid rgba(255,255,255,.14)}
+.qualifier .q-head .micro{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--amber-3);margin-bottom:10px}
+.qualifier .q-head h3{font-size:clamp(28px,3vw,40px);color:#fff;margin:0;line-height:1}
+.qualifier ul{list-style:none;display:grid;gap:0;margin:0;padding:0}
+.qualifier li{font-family:var(--body);font-size:15.5px;line-height:1.55;color:#F2F2F2;padding:18px 22px;border-bottom:1px solid rgba(255,255,255,.12)}
+.qualifier li:last-child{border-bottom:none}
+.qualifier strong{color:#fff}
+.utility-note{max-width:900px;margin:18px auto 0;padding:18px 20px;background:var(--amber-soft);border:1px solid var(--amber-line);border-left:4px solid var(--amber-2)}
+.utility-note p{font-family:var(--body);font-size:15.5px;line-height:1.58;color:var(--ink);margin:0}
+.utility-note strong{color:var(--ink)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-row.full{grid-template-columns:1fr}
+.f-group{display:flex;flex-direction:column;gap:6px}
+.f-group label{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.f-group input,.f-group select{padding:12px 14px;border:1px solid var(--rule);background:var(--paper);font-family:var(--body);font-size:15px;color:var(--ink);transition:border-color .15s, background .15s, box-shadow .15s;width:100%}
+.f-group input:focus,.f-group select:focus{outline:none;border-color:var(--amber);background:#fff;box-shadow:0 0 0 3px var(--amber-soft)}
+.stage-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px}
+.stage-pill{text-align:center;padding:11px 8px;border:1px solid var(--rule);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);background:#fff;cursor:pointer;transition:all .15s}
+.stage-pill:hover{border-color:var(--amber-line);color:var(--amber)}
+.stage-pill.active{background:var(--amber-2);color:var(--navy);border-color:var(--amber-2)}
+.form-cta{margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.form-note{font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:.1em;text-transform:uppercase;margin-top:12px}
+.form-success{display:none;padding:20px 22px;background:var(--amber-soft);border:1px solid var(--amber-line);border-left:4px solid var(--amber-2);font-family:var(--body);font-size:15.5px;color:var(--ink);line-height:1.55}
+.form-success.show{display:block;animation:tab-in .4s}
+.form-success strong{font-family:var(--cond);text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:6px;font-size:20px;color:var(--amber)}
+@media(max-width:680px){.email-card{padding:26px 22px}.qualifier{grid-template-columns:1fr}.qualifier .q-head{border-right:none;border-bottom:1px solid rgba(255,255,255,.14)}.form-row{grid-template-columns:1fr}.stage-row{grid-template-columns:1fr 1fr}}
+
+/* ════════════════════════════════════════
+   KIT
+════════════════════════════════════════ */
+.kit-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}
+.kit-bullets{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;margin-top:20px}
+.kit-bullets li{font-family:var(--body);font-size:15px;color:#F2F2F2;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;gap:10px;align-items:flex-start}
+.kit-bullets li::before{content:"+";color:var(--amber-2);font-family:var(--mono);font-size:16px;font-weight:700;line-height:1.2;flex-shrink:0}
+.kit-card{position:sticky;top:80px;background:rgba(255,255,255,.04);border:1px solid rgba(232,160,32,.34);padding:32px 32px}
+.kit-card .tag{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--amber-2);padding:5px 10px;border:1px solid rgba(232,160,32,.36);margin-bottom:14px}
+.kit-card .name{font-family:var(--cond);font-size:32px;font-weight:900;text-transform:uppercase;line-height:1;letter-spacing:-.005em;margin-bottom:8px}
+.kit-card .desc{font-family:var(--body);font-size:14.5px;color:#F2F2F2;line-height:1.6;margin-bottom:22px}
+.kit-card .price{font-family:var(--cond);font-size:56px;font-weight:900;line-height:1;color:var(--amber-2);text-shadow:0 0 30px rgba(232,160,32,.3)}
+.kit-card .price .cur{font-size:24px;vertical-align:top;color:#fff;margin-right:4px}
+.kit-card .price-note{font-family:var(--mono);font-size:11px;color:#E6E6E6;letter-spacing:.1em;margin-top:8px}
+.kit-card .btn{margin-top:22px;width:100%;justify-content:center;background:var(--amber-2);color:var(--navy);box-shadow:0 6px 0 #7a5004}
+.kit-card .btn:hover{background:var(--amber-3)}
+@media(max-width:880px){.kit-grid{grid-template-columns:1fr;gap:30px}.kit-card{position:static}.kit-bullets{grid-template-columns:1fr}}
+
+/* ════════════════════════════════════════
+   SESSION
+════════════════════════════════════════ */
+.sess-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
+.sess{background:#fff;border:1px solid var(--rule);padding:30px 28px;display:flex;flex-direction:column;gap:14px;position:relative}
+.sess.flag-ec{border-top:4px solid var(--amber-2)}
+.sess.flag-us{border-top:4px solid var(--ink)}
+.sess .flag{position:absolute;top:14px;right:18px;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+.sess h3{font-size:24px}
+.sess .desc{font-size:15px;color:var(--ink-2);line-height:1.6}
+.sess .pack{margin-top:auto;padding-top:14px;border-top:1px dashed var(--rule);display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:13px;color:var(--ink-2)}
+.sess .pack b{font-family:var(--cond);font-size:26px;font-weight:900;color:var(--ink)}
+.sess .filter-note{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);padding:6px 10px;background:var(--amber-soft);border:1px solid var(--amber-line);align-self:flex-start}
+@media(max-width:680px){.sess-grid{grid-template-columns:1fr}}
+
+/* ════════════════════════════════════════
+   FAQ — SEO + objections
+════════════════════════════════════════ */
+.faq{display:flex;flex-direction:column;gap:0;margin-top:24px;border-top:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule);padding:18px 4px;transition:background .15s}
+.faq details[open]{background:rgba(232,160,32,.04)}
+.faq summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--cond);font-size:clamp(18px,2vw,22px);font-weight:800;letter-spacing:.005em;text-transform:uppercase;
+  color:var(--ink);padding:6px 4px 6px 0;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);font-weight:700;font-size:22px;color:var(--amber);transition:transform .25s, color .15s;flex-shrink:0;margin-left:18px}
+.faq details[open] summary::after{transform:rotate(45deg);color:var(--red)}
+.faq .a{padding:8px 4px 8px 0;color:var(--ink-2);font-size:16px;line-height:1.65;max-width:72ch}
+
+/* ════════════════════════════════════════
+   FINAL CTA
+════════════════════════════════════════ */
+.final{background:var(--navy);color:#fff;padding:100px 0;text-align:center;position:relative;overflow:hidden;border-bottom:none}
+.final::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 50%, rgba(232,160,32,.22), transparent 55%),radial-gradient(circle at 70% 50%, rgba(183,50,30,.20), transparent 55%);z-index:0}
+.final > *{position:relative;z-index:1}
+.final h2{font-size:clamp(34px,5.4vw,76px);color:#fff;text-wrap:balance;max-width:20ch;margin:0 auto 26px}
+.final h2 .a{color:var(--amber-3)}.final h2 .r{color:var(--red-2)}
+.final .lede{color:#F2F2F2;margin:0 auto 30px;max-width:62ch}
+.final .btn-primary{padding:18px 30px;font-size:13px}
+.final-actions{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn-whatsapp{background:#fff;color:var(--navy);border:2px solid var(--amber-2);box-shadow:0 6px 0 var(--amber)}
+.btn-whatsapp:hover{background:var(--amber-3);color:var(--navy)}
+.btn:disabled{cursor:wait;filter:saturate(.85);transform:none}
+.final-authority{max-width:860px;margin:24px auto 30px;background:#fff;border:1px solid rgba(255,255,255,.22);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;padding:22px 24px;text-align:left;box-shadow:0 24px 54px rgba(0,0,0,.24)}
+.final-authority .seal{width:54px;height:54px;border-radius:50%;background:var(--ink);color:var(--amber-3);display:flex;align-items:center;justify-content:center;font-family:var(--cond);font-size:24px;font-weight:900;border:3px solid var(--amber-2)}
+.final-authority p{font-family:var(--body);font-size:16px;line-height:1.6;color:var(--ink-2);margin:0}
+.final-authority strong{color:var(--ink)}
+.final .ps{margin-top:34px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12);font-family:var(--body);font-style:italic;font-size:15px;color:#F2F2F2;max-width:60ch;margin-left:auto;margin-right:auto;line-height:1.7}
+.final .ps b{font-style:normal;color:var(--amber-3);font-family:var(--cond);text-transform:uppercase;letter-spacing:.05em;font-weight:800}
+@media(max-width:620px){.final-authority{grid-template-columns:1fr}.final-authority .seal{width:48px;height:48px}}
+
+/* ════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════ */
+footer{background:#040912;color:#F2F2F2;padding:50px var(--gutter) 36px;border-top:1px solid rgba(255,255,255,.06);font-family:var(--mono);font-size:12px;letter-spacing:.04em}
+.foot-wrap{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end}
+.foot-brand{display:flex;align-items:center;gap:12px}
+.foot-brand .lg{font-family:var(--cond);font-size:22px;color:#fff;font-weight:900;letter-spacing:.02em;text-transform:uppercase}
+.foot-priv{font-size:11px;line-height:1.7;letter-spacing:0;color:#E6E6E6;max-width:46ch}
+.foot-rule{height:1px;background:rgba(255,255,255,.06);margin:30px auto;max-width:var(--maxw)}
+.foot-bottom{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#E6E6E6;flex-wrap:wrap;gap:18px}
+.foot-bottom > span{flex:0 0 auto}
+@media(max-width:680px){.foot-wrap{grid-template-columns:1fr;align-items:start}}
+
+/* ════════════════════════════════════════
+   STACK SLIDE v2 — big numbers, dramatic total
+════════════════════════════════════════ */
+.stack-li{
+  grid-template-columns:80px 1fr auto;
+  padding:22px 24px;align-items:start;
+  transition:background .2s;
+}
+.stack-li:hover{background:rgba(232,160,32,.06)}
+.stack-li .nx{
+  font-family:var(--cond);font-size:54px;font-weight:900;
+  line-height:.85;color:var(--ink);
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums;
+}
+.stack-li.extra .nx{color:var(--red)}
+.stack-li .pr{padding-top:6px}
+.stack-li .nm{font-size:21px;letter-spacing:0}
+.stack-li .val{padding-top:6px}
+.stack-li .val b{font-size:11px}
+
+.stack-li.extra{background:linear-gradient(90deg,rgba(214,41,26,.06),transparent 60%)}
+
+.stack-total{
+  display:grid;grid-template-columns:80px 1fr auto;
+  gap:18px;align-items:center;
+  padding:36px 24px;
+  background:var(--ink);color:#fff;
+  border-top:4px solid var(--amber-2);
+}
+.stack-total .tx{
+  font-family:var(--cond);font-size:30px;font-weight:900;
+  line-height:.85;color:var(--amber-3);letter-spacing:-.02em;
+}
+.stack-total .lab{
+  font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:#E6E6E6;
+}
+.stack-total .num{display:flex;align-items:baseline;gap:14px;line-height:.9}
+.stack-total .num s{
+  font-family:var(--mono);font-size:18px;color:#E6E6E6;font-weight:700;
+}
+.stack-total .num b{
+  font-family:var(--mono);font-size:20px;font-weight:900;
+  color:var(--amber-3);letter-spacing:.06em;
+  text-shadow:none;
+}
+@media(max-width:680px){
+  .stack-li,.stack-total{grid-template-columns:50px 1fr;gap:14px}
+  .stack-li .val,.stack-total .num{grid-column:1/-1;justify-content:flex-end;padding-top:0;margin-top:6px}
+  .stack-li .nx{font-size:38px}
+  .stack-total .num b{font-size:22px}
+}
+
+/* ════════════════════════════════════════
+   FAQ THEATRICAL — + rotates to ×
+════════════════════════════════════════ */
+.faq details{border-bottom:1px solid var(--ink);padding:22px 4px;background:#fff;transition:background .3s, padding .3s}
+.faq details[open]{background:var(--paper-2);padding:28px 16px 28px 24px}
+.faq summary{
+  list-style:none;cursor:pointer;
+  display:grid;grid-template-columns:1fr 36px;gap:18px;align-items:center;
+  font-family:var(--cond);font-size:clamp(20px,2.2vw,26px);font-weight:800;letter-spacing:.005em;text-transform:uppercase;
+  color:var(--ink);padding:0;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{display:none}
+.faq summary .toggle{
+  width:36px;height:36px;position:relative;flex-shrink:0;
+  border:1px solid var(--ink);
+  transition:background .2s, border-color .2s, transform .35s cubic-bezier(.5,0,.2,1);
+}
+.faq summary .toggle::before,.faq summary .toggle::after{
+  content:"";position:absolute;left:50%;top:50%;
+  width:14px;height:2px;background:var(--ink);
+  transform:translate(-50%,-50%);transition:background .2s;
+}
+.faq summary .toggle::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq details[open] summary .toggle{transform:rotate(135deg);background:var(--red);border-color:var(--red)}
+.faq details[open] summary .toggle::before,.faq details[open] summary .toggle::after{background:#fff}
+.faq .a{padding:14px 0 4px;color:var(--ink-2);font-size:16.5px;line-height:1.65;max-width:72ch}
+.faq details[open] .a{animation:faq-in .4s ease both}
+@keyframes faq-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* ════════════════════════════════════════
+   PROOF STRIP · above-fold social proof
+════════════════════════════════════════ */
+.proof-strip{
+  background:#fff;
+  border-bottom:1px solid var(--ink);
+  padding:38px 0;
+}
+.proof-grid{
+  display:grid;grid-template-columns:1.1fr 1.4fr 1fr;
+  gap:0;align-items:center;
+  border:1px solid var(--ink);background:#fff;
+}
+.proof-cell{padding:24px 28px;border-right:1px solid var(--ink);display:flex;flex-direction:column;gap:4px}
+.proof-cell:last-child{border-right:none}
+.proof-cell .pk{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3)}
+.proof-cell .pv{font-family:var(--cond);font-size:clamp(24px,2.6vw,34px);font-weight:900;line-height:1;letter-spacing:-.01em;color:var(--ink)}
+.proof-cell .pv .red{color:var(--red)}
+.proof-cell .pv .amber{color:var(--amber)}
+.proof-cell.quote{padding:22px 28px}
+.proof-cell.quote blockquote{
+  font-family:var(--body);font-style:italic;font-size:16px;line-height:1.45;color:var(--ink);margin:0;
+}
+.proof-cell.quote blockquote::before{content:"“";color:var(--red);font-weight:700}
+.proof-cell.quote blockquote::after{content:"”";color:var(--red);font-weight:700}
+.proof-cell.quote cite{display:block;font-family:var(--mono);font-size:10px;font-style:normal;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-top:8px}
+@media(max-width:880px){
+  .proof-grid{grid-template-columns:1fr}
+  .proof-cell{border-right:none;border-bottom:1px solid var(--ink)}
+  .proof-cell:last-child{border-bottom:none}
+}
+
+/* ════════════════════════════════════════
+   DASHBOARD PREVIEW v2 — editorial frame (no mac-chrome)
+════════════════════════════════════════ */
+.dash-chrome{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 24px;border-bottom:1px solid rgba(255,255,255,.14);
+  background:transparent;
+}
+.dash-chrome .lights{display:none}
+.dash-chrome .panel-tag{
+  font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--amber-3);
+  display:inline-flex;align-items:center;gap:10px;
+}
+.dash-chrome .panel-tag::before{content:"";width:7px;height:7px;background:var(--amber-2);border-radius:50%;box-shadow:0 0 0 3px rgba(232,160,32,.2);animation:pulse 2.4s ease-in-out infinite}
+.dash-chrome .url{margin:0;font-family:var(--mono);font-size:10.5px;color:#E6E6E6;letter-spacing:.18em;text-transform:uppercase}
+.dash-chrome .stamp{
+  font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:#E6E6E6;padding:4px 9px;border:1px solid rgba(255,255,255,.18);
+}
+
+/* ════════════════════════════════════════
+   REVEAL VARIATIONS
+════════════════════════════════════════ */
+.rv-left{opacity:0;transform:translateX(-32px);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv-left.on{opacity:1;transform:none}
+.rv-right{opacity:0;transform:translateX(32px);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv-right.on{opacity:1;transform:none}
+.rv-fade{opacity:0;transition:opacity 1s ease}
+.rv-fade.on{opacity:1}
+.rv-scale{opacity:0;transform:scale(.94);transition:opacity .7s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv-scale.on{opacity:1;transform:none}
+.rv-stagger > *{opacity:0;transform:translateY(22px);transition:opacity .65s ease, transform .65s cubic-bezier(.2,.7,.2,1)}
+.rv-stagger.on > *{opacity:1;transform:none}
+.rv-stagger.on > *:nth-child(1){transition-delay:.05s}
+.rv-stagger.on > *:nth-child(2){transition-delay:.15s}
+.rv-stagger.on > *:nth-child(3){transition-delay:.25s}
+.rv-stagger.on > *:nth-child(4){transition-delay:.35s}
+.rv-stagger.on > *:nth-child(5){transition-delay:.45s}
+.rv-stagger.on > *:nth-child(6){transition-delay:.55s}
+.rv-stagger.on > *:nth-child(7){transition-delay:.65s}
+.rv-stagger.on > *:nth-child(8){transition-delay:.75s}
+@media(prefers-reduced-motion:reduce){
+  .rv-left,.rv-right,.rv-fade,.rv-scale,.rv-stagger > *{opacity:1;transform:none}
+}
+
+/* ════════════════════════════════════════
+   FOOTER MOMENT v2 — big logo, editorial credits
+════════════════════════════════════════ */
+footer.foot-moment{
+  background:var(--ink);color:#F2F2F2;
+  padding:0;border-top:6px solid var(--amber-2);
+  font-family:var(--mono);
+  position:relative;overflow:hidden;
+}
+footer.foot-moment .foot-statement{
+  padding:clamp(60px,8vw,120px) clamp(28px,5vw,80px) clamp(40px,5vw,72px);
+  border-bottom:1px solid rgba(255,255,255,.1);
+  display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;
+  max-width:var(--maxw);margin:0 auto;
+}
+footer.foot-moment .fs-line{
+  font-family:var(--cond);font-size:clamp(36px,6.4vw,96px);
+  font-weight:900;letter-spacing:-.012em;text-transform:uppercase;
+  color:#fff;line-height:.94;text-wrap:balance;
+}
+footer.foot-moment .fs-line em{font-family:var(--body);font-style:italic;text-transform:none;color:var(--amber-3);font-weight:500;letter-spacing:-.01em}
+footer.foot-moment .fs-meta{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+footer.foot-moment .fs-meta img{max-width:240px;width:100%;height:auto;border:1px solid rgba(255,255,255,.14);background:#000;box-shadow:0 18px 42px rgba(0,0,0,.32)}
+footer.foot-moment .fs-meta p{font-family:var(--body);font-size:15px;color:#F2F2F2;line-height:1.55;max-width:36ch}
+footer.foot-moment .foot-cols{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  max-width:var(--maxw);margin:0 auto;
+}
+footer.foot-moment .fc{
+  padding:36px clamp(20px,3vw,32px);
+  border-right:1px solid rgba(255,255,255,.1);
+  display:flex;flex-direction:column;gap:10px;
+}
+footer.foot-moment .fc:last-child{border-right:none}
+footer.foot-moment .fc h4{
+  font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--amber-3);margin-bottom:6px;
+}
+footer.foot-moment .fc a, footer.foot-moment .fc span{
+  font-family:var(--body);font-size:14.5px;color:#F2F2F2;line-height:1.55;
+  transition:color .15s;
+}
+footer.foot-moment .fc a:hover{color:var(--amber-3)}
+footer.foot-moment .foot-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:24px clamp(28px,5vw,80px);
+  max-width:var(--maxw);margin:0 auto;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:#E6E6E6;flex-wrap:wrap;gap:14px;
+}
+footer.foot-moment .foot-bottom a{color:#F2F2F2;border-bottom:1px dotted rgba(255,255,255,.3)}
+footer.foot-moment .foot-bottom a:hover{color:var(--amber-3)}
+footer.foot-moment::after{
+  content:"";
+  position:absolute;bottom:-32px;left:0;right:0;
+  font-family:var(--cond);font-weight:900;font-size:clamp(80px,16vw,260px);
+  letter-spacing:-.04em;color:#E6E6E6;
+  text-align:center;line-height:.85;pointer-events:none;
+  white-space:nowrap;
+}
+@media(max-width:880px){
+  footer.foot-moment .foot-statement{grid-template-columns:1fr;gap:30px}
+  footer.foot-moment .foot-cols{grid-template-columns:1fr 1fr}
+  footer.foot-moment .fc{border-right:none;border-bottom:1px solid rgba(255,255,255,.08)}
+  footer.foot-moment .fc:nth-child(2){border-right:none}
+}
+@media(max-width:520px){
+  footer.foot-moment .foot-cols{grid-template-columns:1fr}
+  footer.foot-moment::after{font-size:60px;bottom:-12px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+  .helmet-wrap{animation:none}
+}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease, transform .7s ease}
+.rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+
+.section.alt{padding:88px 0}
+@media(max-width:880px){.section,.section.alt{padding:54px 0}}
+
+/* Real-business photo band */
+.photo-band{background:var(--paper-2);border-bottom:1px solid var(--ink);padding:34px 0}
+.photo-band-expanded{padding:44px 0}
+.photo-mosaic{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:1.15fr .85fr .85fr;grid-auto-rows:210px;gap:18px}
+.photo-card{position:relative;overflow:hidden;border:1px solid var(--ink);background:var(--ink);color:#fff;min-height:0}
+.photo-card.tall{grid-row:span 2}
+.photo-card.wide{grid-column:span 2}
+.photo-card img,.photo-split img,.state-photo img,.pioneer-photo img,.kit-photo-panel img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.96) contrast(1.04)}
+.photo-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,14,29,0) 30%,rgba(6,14,29,.88) 100%)}
+.photo-caption{position:absolute;left:18px;right:18px;bottom:18px;z-index:2}
+.photo-caption .pc-k{display:block;font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber-3);margin-bottom:7px}
+.photo-caption p{margin:0;font-family:var(--body);font-size:18px;line-height:1.35;color:#fff;max-width:30ch;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.photo-card.tall .photo-caption p{font-size:22px}
+.reframe-side{display:grid;gap:18px}
+.photo-split,.state-photo,.pioneer-photo,.kit-photo-panel{border:1px solid var(--ink);overflow:hidden;background:var(--ink)}
+.photo-split{height:320px}
+.state-photo{height:170px;margin:-30px -26px 8px;border-left:0;border-right:0;border-top:0}
+.pioneer-side{display:grid;gap:18px}
+.pioneer-photo{height:300px}
+.kit-side{position:sticky;top:80px;display:grid;gap:18px}
+.kit-side .kit-card{position:static}
+.kit-photo-panel{height:260px;border-color:rgba(255,255,255,.18)}
+@media(max-width:880px){
+  .photo-band{padding:18px 0}.photo-band-expanded{padding:24px 0}
+  .photo-mosaic{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-right:18px}
+  .photo-card,.photo-card.tall,.photo-card.wide{min-width:82vw;min-height:310px;scroll-snap-align:start;grid-row:auto;grid-column:auto}
+  .photo-card.tall .photo-caption p{font-size:20px}
+  .reframe-side{gap:14px}
+  .photo-split{height:280px}
+  .state-photo{height:190px;margin:-30px -26px 8px}
+  .pioneer-photo{height:280px}
+  .kit-side{position:static}
+}
+
+/* ════════════════════════════════════════
+   VALLE DISPLAY — cinematic chapter title
+════════════════════════════════════════ */
+.valle-intro{margin-bottom:clamp(26px,3.6vw,48px)}
+.valle-display{
+  font-size:clamp(44px,10vw,142px)!important;
+  line-height:.82;letter-spacing:-.028em;
+  max-width:none!important;margin-bottom:0;
+}
+.valle-display em{
+  font-family:var(--body);font-style:italic;text-transform:none;
+  color:var(--red);font-weight:500;letter-spacing:-.012em;
+}
+
+/* ════════════════════════════════════════
+   LIBROS · Próximamente — Atravesando el valle de la muerte
+════════════════════════════════════════ */
+.libros{
+  background:var(--navy);color:#fff;position:relative;overflow:hidden;
+  border-top:1px solid var(--ink);border-bottom:6px solid var(--amber-2);
+  padding:clamp(64px,9vw,128px) 0;
+}
+.libros::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(80% 70% at 16% -4%, rgba(232,160,32,.16), transparent 60%),
+    radial-gradient(74% 80% at 104% 104%, rgba(214,41,26,.16), transparent 60%);
+}
+.libros::after{
+  content:"6–24";position:absolute;right:-1%;bottom:-8%;
+  font-family:var(--cond);font-weight:900;font-size:clamp(170px,28vw,420px);
+  letter-spacing:-.05em;line-height:.8;color:rgba(255,255,255,.035);
+  pointer-events:none;z-index:0;white-space:nowrap;
+}
+.libros .wrap{position:relative;z-index:1}
+.libros .sl{color:#fff}
+.libros .sl .sn{background:var(--amber-2);color:var(--navy)}
+.libros .sl::after{background:linear-gradient(90deg,rgba(255,255,255,.2),transparent)}
+.libros .kicker{color:var(--amber-3)}
+.libros .kicker::before{background:var(--amber-3)}
+.libros h2{color:#fff;text-wrap:pretty;line-height:1.06;margin-bottom:26px;max-width:20ch}
+.libros h2 em{font-family:var(--body);font-style:italic;text-transform:none;color:var(--amber-3);font-weight:500;letter-spacing:-.01em}
+.libros .lede{color:#F2F2F2;max-width:60ch}
+
+.libros-head{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:end;margin-bottom:clamp(40px,5vw,68px)}
+.libros-head .bk-switch{justify-self:end}
+@media(max-width:900px){.libros-head{grid-template-columns:1fr;gap:24px}.libros-head .bk-switch{justify-self:start}}
+
+.bk-switch{display:inline-flex;align-items:center;gap:3px;border:1px solid rgba(255,255,255,.2);padding:5px;background:rgba(255,255,255,.04)}
+.bk-switch .bk-switch-label{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#E6E6E6;padding:0 9px 0 6px}
+.bk-switch button{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#F2F2F2;padding:9px 14px;border:1px solid transparent;transition:all .15s;min-height:38px;cursor:pointer;background:none}
+.bk-switch button:hover{color:#fff;background:rgba(255,255,255,.08)}
+.bk-switch button.active{background:var(--amber-2);color:var(--navy);border-color:var(--amber-2)}
+
+.libros-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,32px)}
+@media(max-width:880px){.libros-grid{grid-template-columns:1fr;gap:26px}}
+
+.libro{
+  display:grid;grid-template-columns:auto 1fr;gap:clamp(22px,3vw,36px);align-items:stretch;
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);
+  padding:clamp(24px,2.8vw,34px);
+}
+@media(max-width:560px){.libro{grid-template-columns:1fr;gap:24px;justify-items:start}}
+
+.bk-cover{
+  align-self:start;position:relative;
+  width:clamp(156px,15vw,196px);aspect-ratio:2/3;
+  background:var(--paper);color:var(--ink);border:1px solid var(--ink);
+  box-shadow:12px 12px 0 rgba(0,0,0,.5), 0 28px 54px -18px rgba(0,0,0,.7);
+  padding:18px 16px 16px 20px;display:flex;flex-direction:column;overflow:hidden;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.bk-cover::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:var(--ink)}
+.libro:hover .bk-cover{transform:translateY(-7px) rotate(-1.2deg)}
+.bk-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;position:relative;z-index:2}
+.bk-edition{font-family:var(--mono);font-size:8px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--red);line-height:1.3}
+.bk-series{font-family:var(--mono);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);text-align:right;line-height:1.3}
+.bk-title{font-family:var(--cond);font-weight:900;text-transform:uppercase;line-height:.88;letter-spacing:-.01em;font-size:clamp(20px,2.3vw,27px);color:var(--ink);margin:16px 0 0;position:relative;z-index:2}
+.bk-title em{font-style:normal;color:var(--red)}
+.bk-sub{font-family:var(--body);font-style:italic;font-size:9.5px;line-height:1.32;color:var(--ink-2);margin-top:10px;position:relative;z-index:2;max-width:22ch}
+.bk-curve{position:absolute;left:0;right:0;bottom:38px;height:46px;opacity:.5;z-index:1}
+.bk-author{margin-top:auto;font-family:var(--mono);font-size:8px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);position:relative;z-index:2;padding-top:10px;border-top:1px solid var(--rule)}
+.bk-cover-novela .bk-curve{color:var(--red)}
+.bk-cover-manual .bk-curve{color:var(--elec)}
+.bk-cover-manual .bk-title em{color:var(--elec)}
+.bk-cover-manual .bk-edition{color:var(--elec)}
+
+.libros.bk-noche .bk-cover{background:var(--navy-2);color:#fff;border-color:#000}
+.libros.bk-noche .bk-cover::before{background:var(--amber-2)}
+.libros.bk-noche .bk-title{color:#fff}
+.libros.bk-noche .bk-cover-novela .bk-title em{color:var(--red-2)}
+.libros.bk-noche .bk-cover-manual .bk-title em{color:var(--elec-2)}
+.libros.bk-noche .bk-sub{color:#D8DEE8}
+.libros.bk-noche .bk-series{color:#9AA6B8}
+.libros.bk-noche .bk-author{color:var(--amber-3);border-top-color:rgba(255,255,255,.2)}
+.libros.bk-cartel .bk-cover{background:var(--amber-2);color:var(--navy);border-color:#000}
+.libros.bk-cartel .bk-cover::before{background:var(--red)}
+.libros.bk-cartel .bk-cover-manual::before{background:var(--navy)}
+.libros.bk-cartel .bk-title{color:var(--navy)}
+.libros.bk-cartel .bk-cover-novela .bk-title em{color:var(--red)}
+.libros.bk-cartel .bk-cover-manual .bk-title em{color:#fff}
+.libros.bk-cartel .bk-sub{color:#3A2A06}
+.libros.bk-cartel .bk-series{color:#5A4A1A}
+.libros.bk-cartel .bk-author{color:var(--navy);border-top-color:rgba(0,0,0,.22)}
+.libros.bk-cartel .bk-edition{color:var(--red)}
+.libros.bk-cartel .bk-cover-manual .bk-edition{color:var(--navy)}
+
+.libro-detail{display:flex;flex-direction:column}
+.libro-kind{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-3);margin-bottom:9px}
+.libro.manual .libro-kind{color:var(--elec-2)}
+.libro-detail h3{font-family:var(--cond);font-size:clamp(23px,2.5vw,31px);font-weight:900;text-transform:uppercase;color:#fff;line-height:1;margin-bottom:12px;letter-spacing:-.005em}
+.libro-detail h3 em{font-style:italic;font-family:var(--body);font-weight:500;text-transform:none;letter-spacing:-.01em}
+.libro.novela h3 em{color:var(--amber-3)}
+.libro.manual h3 em{color:var(--elec-2)}
+.libro-detail p{font-family:var(--body);font-size:15px;line-height:1.62;color:#F2F2F2;margin:0 0 16px}
+.libro-detail p strong{color:#fff;font-weight:600}
+.libro-meta{margin-top:auto;display:flex;align-items:flex-end;gap:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14)}
+.libro-price{font-family:var(--cond);font-size:clamp(40px,4.4vw,52px);font-weight:900;color:var(--amber-3);line-height:.82;font-variant-numeric:tabular-nums}
+.libro-price .cur{font-size:.45em;vertical-align:top;color:#fff;margin-right:1px}
+.libro.manual .libro-price{color:var(--elec-2)}
+.libro-status{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#E6E6E6;line-height:1.55;padding-bottom:3px}
+.bk-notify{display:inline-flex;align-items:center;gap:9px;margin-top:18px;align-self:flex-start;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);background:var(--amber-2);padding:13px 21px;box-shadow:0 5px 0 var(--amber);transition:transform .18s,box-shadow .18s,background .18s;cursor:pointer}
+.bk-notify::after{content:"→";transition:transform .18s}
+.bk-notify:hover{background:var(--amber-3);transform:translateY(-2px);box-shadow:0 7px 0 var(--amber)}
+.bk-notify:hover::after{transform:translateX(4px)}
+.libro.manual .bk-notify{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.34);box-shadow:none}
+.libro.manual .bk-notify:hover{background:rgba(255,255,255,.08);transform:translateY(-2px);box-shadow:none}
+
+.libros-foot{margin-top:clamp(34px,4.5vw,54px);font-family:var(--body);font-size:16.5px;line-height:1.62;color:#F2F2F2;text-align:center;max-width:64ch;margin-left:auto;margin-right:auto;text-wrap:pretty}
+.libros-foot strong{color:var(--amber-3);font-weight:600}
+@media(max-width:560px){.bk-cover{width:min(62vw,210px)}}
+
+/* ════════════════════════════════════════
+   CRAFT PASS · 98/100 finishing
+════════════════════════════════════════ */
+/* Anchored nav clears the fixed bar + sticky Growth-OS strip */
+[id]{scroll-margin-top:104px}
+
+/* Typographic finishing — kerning, ligatures, hanging punctuation, pretty wrap */
+body{font-feature-settings:"kern" 1,"liga" 1,"calt" 1;font-variant-ligatures:common-ligatures contextual;hanging-punctuation:first allow-end}
+p,.lede,.problem .body,.libro-detail p,.libros-foot,.reframe-list li{text-wrap:pretty}
+
+/* Keyboard-accessible focus ring (mouse clicks stay clean via :focus-visible) */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
+summary:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--amber-2);outline-offset:3px}
+.bar a:focus-visible,.gos-strip a:focus-visible,.section.dark a:focus-visible,
+.libros a:focus-visible,.libros button:focus-visible,.final a:focus-visible{outline-color:var(--amber-3)}
+.twkp button:focus-visible,.twkp select:focus-visible{outline:2px solid var(--amber-3);outline-offset:2px}
+
+/* Book covers — gallery-grade depth: corner sheen + bottom vignette, finish-agnostic */
+.bk-cover::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:
+    radial-gradient(132% 86% at 84% -8%, rgba(255,255,255,.16), transparent 44%),
+    linear-gradient(180deg, transparent 58%, rgba(0,0,0,.13));
+}
+.libros.bk-cartel .bk-cover::after{background:radial-gradient(132% 86% at 84% -8%, rgba(255,255,255,.28), transparent 44%),linear-gradient(180deg, transparent 58%, rgba(0,0,0,.10))}
+.bk-cover::before{box-shadow:1px 0 0 rgba(255,255,255,.14)} /* spine inner highlight */
+.libro:hover .bk-cover{box-shadow:16px 18px 0 rgba(0,0,0,.5), 0 42px 72px -20px rgba(0,0,0,.8)}
+
+/* Watermark sits a touch crisper on the dark canvas */
+.libros::after{color:rgba(255,255,255,.045)}
+.libros.bk-cartel::after{color:rgba(255,255,255,.06)}
+</style>
+</head>
+<body>
+
+<!-- ════ TOPBAR ════ -->
+<header class="bar" role="banner">
+  <a href="https://jfcarpio.com/" class="bar-brand" aria-label="Volver a jfcarpio.com">
+    <img class="jfc-avatar" src="https://jfcarpio.com/visorantiquiebra/assets/jfc-avatar.jpg" alt="J.F. Carpio" width="32" height="32" loading="eager">
+    <span class="bar-name">jfcarpio.com · <b>Visor Antiquiebra</b></span>
+  </a>
+  <nav class="site-nav" aria-label="Navegación principal de J.F. Carpio">
+    <a href="https://jfcarpio.com/">Inicio</a>
+    <a href="https://jfcarpio.com/las7formas/">Las 7 formas</a>
+    <a href="https://jfcarpio.com/talleres/">Talleres</a>
+    <a href="https://jfcarpio.com/blog.html">Blog</a>
+  </nav>
+  <div class="bar-right">
+    <nav class="lang-sw" aria-label="Idioma">
+      <button class="lang-btn active" aria-pressed="true">
+        <svg width="16" height="12" viewBox="0 0 18 13" aria-hidden="true"><rect width="18" height="13" fill="#c60b1e"/><rect y="3" width="18" height="7" fill="#ffc400"/></svg>
+        <span class="lng">ES</span>
+      </button>
+      <button class="lang-btn" aria-pressed="false">
+        <svg width="16" height="12" viewBox="0 0 18 13" aria-hidden="true"><rect width="18" height="13" fill="#012169"/><path d="M0,0 L18,13 M18,0 L0,13" stroke="#fff" stroke-width="2"/><path d="M9,0 L9,13 M0,6.5 L18,6.5" stroke="#fff" stroke-width="3"/><path d="M9,0 L9,13 M0,6.5 L18,6.5" stroke="#C8102E" stroke-width="1.5"/></svg>
+        <span class="lng">EN</span>
+      </button>
+    </nav>
+    <a href="#diagnostico" class="bar-cta"><span class="bar-cta-full">Abrir el diagnóstico</span><span class="bar-cta-short">Abrir</span></a>
+  </div>
+</header>
+
+<main role="main">
+
+<!-- ════════════════════════════════════
+     HERO v3 · oversized editorial · broken grid
+════════════════════════════════════ -->
+<section class="hero" aria-labelledby="h1">
+  <div class="hero-shell">
+    <span class="hero-eyebrow">Visor Antiquiebra · el valle de la muerte · meses 6–24</span>
+    <h1 id="h1" class="hero-h1"><span class="line">¿Cuántos</span><br><em>días o semanas</em><br><span class="line-bottom">le quedan a tu negocio?</span></h1>
+  </div>
+
+  <figure class="hero-poster" aria-hidden="true">
+    <div class="hero-poster-img-wrap" data-parallax="0.06">
+      <img class="hero-poster-img" src="https://jfcarpio.com/visorantiquiebra/assets/VisorXMen.png" alt="Visor Antiquiebra — emblema del diagnóstico" width="1024" height="1024" fetchpriority="high">
+    </div>
+    <div class="poster-side">
+      <div class="poster-mark">
+        <span class="pm-k">Vista previa del tablero</span>
+        <span class="pm-y">Ed. 2026</span>
+      </div>
+      <div class="poster-stat">
+        <span class="ps-k">Ejemplo de lectura</span>
+        <span class="ps-v"><span class="counter" data-to="2.1" data-dec="1">0.0</span><small>meses</small></span>
+        <span class="ps-l">El Visor cruza caja, cobros cercanos y gasto mensual para mostrar cuánto margen real tienes antes de decidir con presión.</span>
+        <span class="ps-sig">El tablero completo se abre con tu correo</span>
+      </div>
+      <div class="poster-foot">
+        <span>ejemplo visual · datos ficticios</span>
+        <span>JFC · cross 6–24M</span>
+      </div>
+    </div>
+  </figure>
+
+  <div class="hero-shell hero-lower">
+    <div class="hero-copy-grid">
+      <div>
+        <p class="hero-sub">Una primera lectura para saber si tu negocio está <strong>ganando estabilidad</strong>, <strong>acumulando daños internos</strong>, o sólo parece estar bien porque todavía aguanta.</p>
+      </div>
+      <div>
+        <p class="hero-support">La caja importa, pero casi nunca habla sola. El Visor junta las señales que suelen explicar el mes antes de que el mes te obligue a explicarlo: ingresos, clientes que vuelven, canales, cobros, procesos, fundador y runway.</p>
+        <div class="cta-row">
+          <a href="#diagnostico" class="btn btn-primary btn-mega">Abrir el Visor</a>
+          <a href="#que-mide" class="btn btn-ghost">Ver qué mide el Visor</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-meta-strip">
+    <div class="wrap">
+      <ul class="hero-trust-list">
+        <li><span class="dot"></span>Sin tarjeta</li>
+        <li><span class="dot"></span>Sin instalación</li>
+        <li><span class="dot"></span>Sin cita</li>
+        <li><span class="dot"></span>8 señales</li>
+        <li><span class="dot"></span>45 minutos</li>
+        <li><span class="dot"></span>Plan de 7 días</li>
+        <li><span class="dot"></span>$0</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ════ PROOF STRIP · above-fold social proof ════ -->
+<aside class="proof-strip" aria-label="Indicadores y prueba social">
+  <div class="proof-grid">
+    <div class="proof-cell">
+      <span class="pk">Foco</span>
+      <span class="pv">Meses <span class="red">6–24</span></span>
+    </div>
+    <div class="proof-cell">
+      <span class="pk">Mide</span>
+      <span class="pv"><span class="amber">8</span> señales</span>
+    </div>
+    <div class="proof-cell">
+      <span class="pk">Primera lectura</span>
+      <span class="pv">45 min</span>
+    </div>
+    <div class="proof-cell quote">
+      <blockquote>La meta se sigue alejando.</blockquote>
+      <cite>Dueña de restaurante · mes 10 del valle</cite>
+    </div>
+  </div>
+</aside>
+<!-- Real-business photo band · Pexels CDN -->
+<section class="photo-band photo-band-expanded" id="negocio-real" aria-label="Negocios reales bajo presión">
+  <div class="photo-mosaic">
+    <figure class="photo-card tall">
+      <img src="https://images.pexels.com/photos/4173268/pexels-photo-4173268.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1500&fit=crop" alt="Dueña de negocio revisando su laptop en un restaurante" loading="lazy" decoding="async">
+      <figcaption class="photo-caption">
+        <span class="pc-k">Clientes no es lo mismo que estabilidad</span>
+        <p>El Visor separa movimiento de avance: ventas, cobros, clientes que vuelven y decisiones que no pueden esperar.</p>
+      </figcaption>
+    </figure>
+    <figure class="photo-card">
+      <img src="https://images.pexels.com/photos/4339799/pexels-photo-4339799.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Personas revisando números y trabajo en una mesa" loading="lazy" decoding="async">
+      <figcaption class="photo-caption">
+        <span class="pc-k">Sistema antes que intuición</span>
+        <p>Ocho señales juntas. No para decorar un reporte: para ver qué se sostiene y qué está empezando a ceder.</p>
+      </figcaption>
+    </figure>
+    <figure class="photo-card">
+      <img src="https://images.pexels.com/photos/6694951/pexels-photo-6694951.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Persona contando dinero y revisando papeles de caja" loading="lazy" decoding="async">
+      <figcaption class="photo-caption">
+        <span class="pc-k">Caja sin teatro</span>
+        <p>Cuánto entra, cuánto sale, qué cobro cambia el mes y cuántas semanas reales tienes para decidir.</p>
+      </figcaption>
+    </figure>
+    <figure class="photo-card">
+      <img src="https://images.pexels.com/photos/7680736/pexels-photo-7680736.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Recibos y calculadora sobre una mesa de trabajo" loading="lazy" decoding="async">
+      <figcaption class="photo-caption">
+        <span class="pc-k">Gastos visibles</span>
+        <p>Un gasto pequeño no asusta. Veinte gastos pequeños, juntos, explican por qué vender más no siempre alcanza.</p>
+      </figcaption>
+    </figure>
+    <figure class="photo-card">
+      <img src="https://images.pexels.com/photos/10178868/pexels-photo-10178868.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="Equipo trabajando durante la operación de un negocio pequeño" loading="lazy" decoding="async">
+      <figcaption class="photo-caption">
+        <span class="pc-k">Operación real</span>
+        <p>Cuando el día corre con clientes, cobros, entregas y pendientes, el Visor muestra si el negocio también gana control.</p>
+      </figcaption>
+    </figure>
+    <figure class="photo-card wide">
+      <img src="https://images.pexels.com/photos/7545333/pexels-photo-7545333.jpeg?auto=compress&cs=tinysrgb&w=1400&h=700&fit=crop" alt="Papeles de negocio y recibos revisados a mano" loading="lazy" decoding="async">
+      <figcaption class="photo-caption">
+        <span class="pc-k">Claridad antes de urgencia</span>
+        <p>Runway, cobros, retención, canales y dependencia del fundador en una lectura que cabe en una mañana.</p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     PROBLEM AGITATION — Schwartz P-A-S
+════════════════════════════════════ -->
+<section class="section" id="que-mide" aria-labelledby="s01">
+  <div class="wrap">
+    <p class="sl rv"><span class="sn">01</span> <span id="s01">El silencio antes del cierre</span></p>
+    <header class="rv">
+      <span class="kicker">Lo que nadie te dice cuando todavía parece que va bien</span>
+      <h2>El negocio no cierra de un día para otro. Tarda meses dándote señales.</h2>
+      <p class="lede">El cierre nunca es repentino. Es la suma de tres a cinco indicadores que se rompieron silenciosamente — uno por mes — mientras tú estabas concentrado en vender más. Cuando finalmente entran al P&amp;L, ya es tarde para revertirlos sin dolor.</p>
+    </header>
+
+    <div class="problem-grid rv-stagger">
+      <article class="problem rv">
+        <p class="tag"><span>CB Insights · 2024</span><span class="src">Top reasons startups fail</span></p>
+        <p class="stat counter" data-to="38" data-suffix="%">0%</p>
+        <p class="body">colapsa por falta de caja — <strong>no por falta de clientes ni de producto.</strong></p>
+        <p class="cite">Estudio sobre 100+ post-mortems de negocios cerrados</p>
+      </article>
+      <article class="problem rv">
+        <p class="tag"><span>Startup Genome · 2023</span><span class="src">Operational efficiency gap</span></p>
+        <p class="stat counter" data-to="57" data-prefix="+" data-suffix="%">+0%</p>
+        <p class="body">de los costos operativos son <strong>errores de gestión evitables</strong>, no errores de mercado.</p>
+        <p class="cite">Startup Genome Report · panel de 3.000+ negocios</p>
+      </article>
+      <article class="problem rv">
+        <p class="tag"><span>U.S. BLS · 2024</span><span class="src">Business Employment Dynamics</span></p>
+        <p class="stat">Mes 18</p>
+        <p class="body">es el pico de mortalidad. <strong>Ya hay tracción. Todavía no hay sistema.</strong> Esa combinación los detiene.</p>
+        <p class="cite">Bureau of Labor Statistics · cohorte 2018–2023</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     REFRAME — Brunson belief shift
+════════════════════════════════════ -->
+<section class="section alt" aria-labelledby="s02">
+  <div class="wrap">
+    <p class="sl rv"><span class="sn">02</span> <span id="s02">El reframe</span></p>
+    <div class="reframe-grid">
+      <div class="rv">
+        <span class="kicker">Antes de pensar en vender más</span>
+        <h2>El problema no siempre es vender poco.</h2>
+        <p class="lede">A veces es crecer sin entender qué estás rompiendo por dentro. Algunos negocios tienen poca caja. Otros crecen con desorden. Otros venden bien y cobran tarde. Algunos dependen demasiado del fundador. Y otros tuvieron un mes bueno y no saben cómo repetirlo.</p>
+        <ul class="reframe-list">
+          <li><span><strong>Cash:</strong> hay pedidos, pero la caja no aguanta el ciclo.</span></li>
+          <li><span><strong>Desorden:</strong> las ventas suben en papel y el equipo no respira.</span></li>
+          <li><span><strong>Cobros:</strong> el P&amp;L es rentable; la cuenta del banco no lo es.</span></li>
+          <li><span><strong>Fundador:</strong> si tú sales una semana, todo se detiene.</span></li>
+          <li><span><strong>Repetibilidad:</strong> un mes bueno no es un sistema, es un evento.</span></li>
+        </ul>
+      </div>
+      <div class="reframe-side rv">
+        <div class="reframe-quote">
+          Crecer desordenadamente <span class="accent">no es lo mismo</span> que crecer con claridad y control.
+        </div>
+        <figure class="photo-split" aria-label="Trabajo real de una dueña de negocio">
+          <img src="https://images.pexels.com/photos/4049790/pexels-photo-4049790.jpeg?auto=compress&cs=tinysrgb&w=1100&h=850&fit=crop" alt="Emprendedora trabajando con una laptop en su negocio" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     BIG PULL QUOTE · first appearance (no attribution name)
+════════════════════════════════════ -->
+<aside class="bigquote" aria-label="Frase de apertura">
+  <p class="bigquote-text">La meta se sigue <span class="y">alejando.</span></p>
+  <p class="bigquote-mark">Lo que dijo una dueña de negocio antes de abrir el Visor</p>
+</aside>
+
+<!-- ════════════════════════════════════
+     3 STATES
+════════════════════════════════════ -->
+<section class="section" aria-labelledby="s03">
+  <div class="wrap">
+    <p class="sl rv"><span class="sn">03</span> <span id="s03">Los tres estados del valle</span></p>
+    <h2 class="rv" style="max-width:22ch">Tu negocio está ahora mismo en uno de estos tres lugares.</h2>
+    <p class="lede rv" style="max-width:62ch">El Visor no te dice cuál te gustaría ser. Te dice cuál eres — con números y señales concretas — este mes.</p>
+
+    <div class="states rv-stagger">
+      <article class="state b rv" aria-labelledby="st-1">
+        <figure class="state-photo">
+          <img src="https://images.pexels.com/photos/5366662/pexels-photo-5366662.jpeg?auto=compress&cs=tinysrgb&w=900&h=520&fit=crop" alt="Restaurante atendiendo clientes durante el servicio" loading="lazy" decoding="async">
+        </figure>
+        <span class="state-tag"><span class="dot"></span>Ganando estabilidad</span>
+        <h3 id="st-1">El sistema sostiene el crecimiento.</h3>
+        <p class="state-body">El negocio empieza a operar sin que el fundador tenga que estar en cada decisión. La caja respira, los clientes vuelven, los procesos críticos están documentados.</p>
+        <ul class="state-sym">
+          <li>Runway mejora mes a mes — no por ahorrar, por cobrar mejor.</li>
+          <li>Retención estable o subiendo después del mes 6.</li>
+          <li>Dependencia del fundador bajando trimestre a trimestre.</li>
+          <li>Canales medidos por LTV:CAC, no por intuición.</li>
+        </ul>
+        <p class="state-signal">Señal del Visor: <strong>runway 4M+, retención &gt;70%, IDF &lt;70%.</strong> El sistema opera; tú diriges.</p>
+      </article>
+
+      <article class="state a rv" aria-labelledby="st-2">
+        <figure class="state-photo">
+          <img src="https://images.pexels.com/photos/7680683/pexels-photo-7680683.jpeg?auto=compress&cs=tinysrgb&w=900&h=520&fit=crop" alt="Documentos de gastos revisados con calculadora" loading="lazy" decoding="async">
+        </figure>
+        <span class="state-tag"><span class="dot"></span>Acumulando daños internos</span>
+        <h3 id="st-2">Las ventas crecen — el motor se desgasta.</h3>
+        <p class="state-body">El P&amp;L se ve bien, los reportes son optimistas. Pero por debajo, los cobros se alargan, los canales no tienen margen claro y el proceso crítico sigue en la cabeza de una sola persona.</p>
+        <ul class="state-sym">
+          <li>Ventas crecen, pero los cobros se alargan cada mes.</li>
+          <li>Canal principal sin margen real claro.</li>
+          <li>Procesos críticos sin documentar — viven en WhatsApp.</li>
+          <li>Cada cliente nuevo tapa el hueco del anterior.</li>
+        </ul>
+        <p class="state-signal">Señal del Visor: <strong>MRR ↑ pero CCE creciendo, LTV:CAC borroso por canal.</strong> Lo que crece, no se sostiene.</p>
+      </article>
+
+      <article class="state r rv" aria-labelledby="st-3">
+        <figure class="state-photo">
+          <img src="https://images.pexels.com/photos/4050444/pexels-photo-4050444.jpeg?auto=compress&cs=tinysrgb&w=900&h=520&fit=crop" alt="Persona pensativa frente a una laptop revisando decisiones" loading="lazy" decoding="async">
+        </figure>
+        <span class="state-tag"><span class="dot"></span>Sobreviviendo sin darse cuenta</span>
+        <h3 id="st-3">La caja cubre semanas, no meses.</h3>
+        <p class="state-body">El negocio existe, factura, tiene clientes. Por eso parece real. Pero la operación entera depende de que tú estés todos los días, y la caja decide cada semana si llega a la siguiente.</p>
+        <ul class="state-sym">
+          <li>Caja cubre menos de 4 meses de quema.</li>
+          <li>El fundador carga ventas, cobros y operaciones a la vez.</li>
+          <li>Clientes que compraron una vez no vuelven.</li>
+          <li>Decisiones estratégicas tomadas por urgencia.</li>
+        </ul>
+        <p class="state-signal">Señal del Visor: <strong>runway &lt;4M, retención &lt;55%, IDF &gt;85%.</strong> No es bajón; es estructura.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     VALLE 6–24 · full-bleed editorial
+════════════════════════════════════ -->
+<section class="valle-full" aria-labelledby="s04">
+  <div class="wrap">
+    <p class="sl rv"><span class="sn">04</span> <span id="s04">El valle de la muerte</span></p>
+    <div class="valle-intro rv">
+      <span class="kicker">Meses 6 a 24 · sin metáfora</span>
+      <h2 class="valle-display">El valle de la <em>muerte.</em></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end">
+      <div class="rv">
+        <span class="kicker">Por qué esta ventana lo decide todo</span>
+        <h2 style="max-width:18ch">El negocio ya existe. Aún no es un sistema.</h2>
+      </div>
+      <div class="rv">
+        <p class="lede">Ya vende. Tiene clientes. Tiene equipo. Por eso parece sólido. Pero entre los meses 6 y 24 es donde la caja, la retención, los canales, la dependencia del fundador y la disciplina de cobros deciden si el negocio cruza el valle o se rompe en él.</p>
+        <p class="lede" style="margin-top:14px">Antes del mes 6 todavía estás en lanzamiento. Después del mes 24 ya tienes — o ya no tienes — un sistema. <strong style="color:var(--ink)">La ventana intermedia define el resto.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="valle-canvas rv" aria-label="Curva del Valle de la Muerte · meses 0 a 24+">
+    <svg viewBox="0 0 1440 560" preserveAspectRatio="none" role="img" aria-hidden="true">
+      <defs>
+        <linearGradient id="valleFill" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="#D6291A" stop-opacity=".14"/>
+          <stop offset="100%" stop-color="#D6291A" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,120 C 180,140 240,160 360,300 C 540,500 720,540 840,500 C 1020,420 1140,260 1440,120 L 1440,560 L 0,560 Z" fill="url(#valleFill)"/>
+      <path d="M0,120 C 180,140 240,160 360,300 C 540,500 720,540 840,500 C 1020,420 1140,260 1440,120"
+            fill="none" stroke="#000" stroke-width="3" vector-effect="non-scaling-stroke"/>
+      <g>
+        <line x1="360" y1="120" x2="360" y2="300" stroke="#000" stroke-width="1" stroke-dasharray="4,5" vector-effect="non-scaling-stroke"/>
+        <circle cx="360" cy="300" r="7" fill="#000"/>
+        <line x1="840" y1="120" x2="840" y2="500" stroke="#D6291A" stroke-width="1" stroke-dasharray="4,5" vector-effect="non-scaling-stroke"/>
+        <circle cx="840" cy="500" r="9" fill="#D6291A"/>
+        <line x1="1140" y1="120" x2="1140" y2="260" stroke="#B07407" stroke-width="1" stroke-dasharray="4,5" vector-effect="non-scaling-stroke"/>
+        <circle cx="1140" cy="260" r="7" fill="#B07407"/>
+      </g>
+    </svg>
+    <span class="valle-label" style="left:24%;top:10%">Mes 6 · inicio del valle</span>
+    <span class="valle-label red" style="left:56%;top:18%">⚠ Pico de cierre · mes 18</span>
+    <span class="valle-label amber" style="left:77%;top:30%">Mes 24 · sistema o no</span>
+    <div class="vl-axis">
+      <span>Mes 0</span><span>Mes 6</span><span>Mes 12</span><span>Mes 18</span><span>Mes 24</span><span>Mes 30+</span>
+    </div>
+  </div>
+
+  <div class="valle-foot">
+    <div class="rv">
+      <div class="vfk">Mes 0–6 · lanzamiento</div>
+      <div class="vft">Todavía es prototipo.</div>
+      <div class="vfd">El problema central es la validación. La caja contra las ventas todavía no decide nada estructural.</div>
+    </div>
+    <div class="rv">
+      <div class="vfk" style="color:var(--red)">Mes 6–24 · valle</div>
+      <div class="vft">La ventana que define el resto.</div>
+      <div class="vfd">Hay tracción, hay clientes, hay equipo — y por eso el daño interno avanza sin alarmas. Aquí se decide si el negocio cruza.</div>
+    </div>
+    <div class="rv">
+      <div class="vfk" style="color:var(--amber)">Mes 24+ · sistema</div>
+      <div class="vft">Ya tienes o no tienes negocio escalable.</div>
+      <div class="vfd">Si la retención, los cobros y la independencia del fundador están en su lugar, el negocio empieza a operarse solo.</div>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-top:48px;padding-bottom:88px">
+    <p class="reset-note rv" style="max-width:780px">Si el negocio fue recientemente reestructurado, <strong>el reloj vuelve a cero.</strong></p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     DASHBOARD APPETITE PREVIEW
+════════════════════════════════════ -->
+<section class="section dark" id="visor-preview" aria-labelledby="s05">
+  <div class="wrap">
+    <p class="sl rv"><span class="sn">05</span> <span id="s05">Lo que verías al abrir el Visor</span></p>
+    <h2 class="rv" style="max-width:24ch">Tres lecturas que la mayoría no se atreve a mirar de frente.</h2>
+    <p class="lede rv" style="max-width:62ch;margin-bottom:30px">Sin entrar al panel completo. Tres pestañas. La conversación que normalmente nadie quiere tener — puesta sobre la mesa.</p>
+
+    <div class="dash-preview rv">
+      <div class="dash-chrome">
+        <span class="panel-tag">Panel · 06 · Lectura del mes</span>
+        <span class="url">visor-antiquiebra · cross 6–24M</span>
+        <span class="stamp">EJ · DATOS FICTICIOS</span>
+      </div>
+
+      <div class="dash-tabs" role="tablist">
+        <button class="dash-tab active" data-tab="caja" role="tab" aria-selected="true"><span class="num">01</span>Caja &amp; Runway</button>
+        <button class="dash-tab" data-tab="dano" role="tab" aria-selected="false"><span class="num">02</span>Daños internos</button>
+        <button class="dash-tab" data-tab="sem" role="tab" aria-selected="false"><span class="num">03</span>Semáforo</button>
+      </div>
+
+      <div class="dash-body">
+        <div class="dash-panel active" id="panel-caja" role="tabpanel">
+          <div class="dp-grid">
+            <div class="dp-card"><p class="l">Runway actual</p><p class="n r">2.1<small style="font-size:18px;color:#E6E6E6"> M</small></p><p class="s">caja ÷ quema promedio · &lt; 4M</p></div>
+            <div class="dp-card"><p class="l">Con cobros cercanos</p><p class="n a">3.4<small style="font-size:18px;color:#E6E6E6"> M</small></p><p class="s">si entra lo facturado a 30d</p></div>
+            <div class="dp-card"><p class="l">Quema mensual</p><p class="n w">$ 18.4K</p><p class="s">opex − ingresos · prom. 3M</p></div>
+          </div>
+          <p class="dp-prio">Prioridad de la semana · revisar caja antes del viernes.</p>
+        </div>
+
+        <div class="dash-panel" id="panel-dano" role="tabpanel">
+          <div class="dp-list">
+            <div class="dp-li a"><span class="sig">!</span><span class="t">Ventas creciendo, cobros lentos<small>MRR +12% · DSO 47 días · el ciclo se alarga</small></span><span class="v">cobros ↑</span></div>
+            <div class="dp-li a"><span class="sig">!</span><span class="t">Canal principal sin margen claro<small>LTV:CAC del canal 1 no medido · 68% del gasto</small></span><span class="v">visibilidad</span></div>
+            <div class="dp-li r"><span class="sig">×</span><span class="t">Proceso crítico todavía en la cabeza del fundador<small>onboarding sin doc · IDF 87%</small></span><span class="v">documentar</span></div>
+            <div class="dp-li b"><span class="sig">✓</span><span class="t">Retención M+6 estabilizando<small>62% · subió desde 54% en el último trimestre</small></span><span class="v">vigilar</span></div>
+          </div>
+        </div>
+
+        <div class="dash-panel" id="panel-sem" role="tabpanel">
+          <div class="sem-grid">
+            <div class="sem r"><div class="sem-dot"></div><p class="lbl">Runway</p><p class="nm">Rojo</p></div>
+            <div class="sem a"><div class="sem-dot"></div><p class="lbl">Retención</p><p class="nm">Ámbar</p></div>
+            <div class="sem a"><div class="sem-dot"></div><p class="lbl">Canales</p><p class="nm">Ámbar</p></div>
+            <div class="sem b"><div class="sem-dot"></div><p class="lbl">IDF</p><p class="nm">Estable</p></div>
+          </div>
+          <p class="dp-prio" style="margin-top:24px">Foco del mes · cobrar lo facturado y aislar el canal principal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     PIONEER · social proof · caso semi-anónimo
+════════════════════════════════════ -->
+<section class="section short" aria-labelledby="s06">
+  <div class="wrap">
+    <p class="sl rv"><span class="sn">06</span> <span id="s06">El primer caso del Visor</span></p>
+    <div class="pioneer">
+      <div class="rv">
+        <span class="kicker">Caso real · semi-anónimo · con permiso</span>
+        <h2 style="font-size:clamp(28px,3.6vw,46px);max-width:17ch">Una dueña abrió el Visor antes de seguir adivinando.</h2>
+        <p class="lede">El primer caso nació de una sesión real con una dueña en el mes 10 de vida de su negocio. No se publica para exhibirla. Se usa para mostrar otra cosa: lo que cambia cuando una persona que ya está operando, vendiendo y resolviendo todos los días decide mirar caja, cobros, clientes, canales y dependencia del fundador al mismo tiempo.</p>
+        <p class="lede" style="margin-top:14px">Ese es el estándar del Visor: <strong style="color:var(--ink)">menos ruido, más lectura completa.</strong> El reporte detallado se quedó entre la dueña y JFC. Lo que queda aquí, con su permiso, es la frase que abrió la sesión.</p>
+        <div class="authority-proof">
+          <div class="proof-point">
+            <span class="k">Criterio JFC</span>
+            <p>Diseñado por J.F. Carpio, investigador empresarial y económico, después de 14 años como profesor USFQ y años creando herramientas para dueños de negocio.</p>
+          </div>
+          <div class="proof-point">
+            <span class="k">Análisis aplicado</span>
+            <p>No es motivación empresarial. Es análisis de entorno convertido en una lectura práctica: qué mirar, en qué orden y qué no conviene seguir posponiendo.</p>
+          </div>
+        </div>
+        <div class="proof-trio" aria-label="Qué mostró el primer caso del Visor">
+          <div class="proof-chip">
+            <span class="k">Lo que apareció</span>
+            <p>La caja sola asustaba. Con cobros cercanos en la mesa, la lectura cambiaba y la urgencia se volvía más precisa.</p>
+          </div>
+          <div class="proof-chip">
+            <span class="k">Lo que se aclaró</span>
+            <p>El problema no era una sola cosa. Había que distinguir entre canal, cobro, demanda y dependencia operativa.</p>
+          </div>
+          <div class="proof-chip">
+            <span class="k">Lo que cambió</span>
+            <p>La conversación dejó de girar alrededor del miedo y pasó al orden de acción de esa semana.</p>
+          </div>
+        </div>
+      </div>
+      <div class="pioneer-side rv">
+        <figure class="pioneer-photo">
+          <img src="https://images.pexels.com/photos/36763311/pexels-photo-36763311.jpeg?auto=compress&cs=tinysrgb&w=1100&h=760&fit=crop" alt="Dueño de negocio atendiendo llamadas y revisando una laptop" loading="lazy" decoding="async">
+        </figure>
+        <figure class="pioneer-card">
+          <blockquote class="pioneer-quote">La meta se sigue alejando.</blockquote>
+          <figcaption class="pioneer-attr">— Dueña de un restaurante en una plaza turística icónica · mes 10 del valle · primera en abrir el Visor</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     STACK SLIDE — Brunson offer stack
+════════════════════════════════════ -->
+<section class="section tall alt" id="que-recibes" aria-labelledby="s07">
+  <div class="wrap">
+    <p class="sl rv"><span class="sn">07</span> <span id="s07">Lo que se abre cuando entras</span></p>
+    <h2 class="rv" style="max-width:24ch">Abres el Visor y empiezas a ver el negocio entero.</h2>
+    <p class="lede rv" style="max-width:62ch">En unos 45 minutos puedes juntar lo que normalmente queda regado entre banco, facturas, WhatsApp, intuición y cansancio. No para juzgar el negocio. Para volver a mirarlo con control.</p>
+
+    <div class="conversion-bridge rv-stagger" aria-label="Por qué abrir el Visor antes de seguir operando igual">
+      <article class="bridge-card rv">
+        <span class="ey">Lo que descubres</span>
+        <p>Si tu negocio está ganando estabilidad, acumulando daños internos o sobreviviendo con una caja que todavía no ha gritado.</p>
+      </article>
+      <article class="bridge-card rv">
+        <span class="ey">Por qué no lo ves</span>
+        <p>Porque cada señal parece manejable por separado: un cobro tarde, un gasto pequeño, un canal borroso, una tarea que solo tú sabes hacer.</p>
+      </article>
+      <article class="bridge-card rv">
+        <span class="ey">Qué cambia al verlo junto</span>
+        <p>Dejas de reaccionar a síntomas sueltos y eliges una prioridad real para los próximos 7 días.</p>
+      </article>
+    </div>
+
+    <div class="mech-demo rv-stagger" aria-label="Cómo una señal suelta se vuelve una lectura útil">
+      <article class="mech-step rv">
+        <span class="ey">Señal suelta</span>
+        <p><strong>Caja apretada.</strong> Sola, esa frase todavía no te dice si el problema viene de gasto, cobro, margen o repetición.</p>
+      </article>
+      <article class="mech-step rv">
+        <span class="ey">Cruce de señales</span>
+        <p><strong>Runway corto + cobros lentos + canal borroso.</strong> Ahí ya no estás viendo estrés: estás viendo un patrón.</p>
+      </article>
+      <article class="mech-step rv">
+        <span class="ey">Lectura útil</span>
+        <p><strong>Prioridad de la semana:</strong> cobrar lo pendiente y aclarar el canal principal antes de seguir empujando más actividad a ciegas.</p>
+      </article>
+    </div>
+
+    <div class="stack-grid">
+      <ol class="stack-list rv" aria-label="Lo que abres">
+        <li class="stack-li">
+          <span class="nx">01</span>
+          <div class="pr">
+            <span class="nm">Vista completa de tu negocio</span>
+            <span class="ds">Ocho señales en una sola pantalla: caja, ingresos, retención, canales, cobros, fundador, procesos y runway.</span>
+          </div>
+          <span class="val"><s>$97</s><b>Incluido</b></span>
+        </li>
+        <li class="stack-li">
+          <span class="nx">02</span>
+          <div class="pr">
+            <span class="nm">Lectura de estabilidad, daños o supervivencia</span>
+            <span class="ds">El Visor no te dice “vas bien” o “vas mal”. Te muestra qué parte está firme, qué se está dañando y qué pide acción.</span>
+          </div>
+          <span class="val"><s>$48</s><b>Incluido</b></span>
+        </li>
+        <li class="stack-li">
+          <span class="nx">03</span>
+          <div class="pr">
+            <span class="nm">Cuántas semanas tienes realmente</span>
+            <span class="ds">Runway con caja disponible y runway incluyendo cobros cercanos. Dos lecturas distintas, una decisión más clara.</span>
+          </div>
+          <span class="val"><s>$36</s><b>Incluido</b></span>
+        </li>
+        <li class="stack-li">
+          <span class="nx">04</span>
+          <div class="pr">
+            <span class="nm">Tus puntos rojos del mes</span>
+            <span class="ds">Rojo, ámbar o estable por señal. No para asustarte: para ordenar qué se mueve primero.</span>
+          </div>
+          <span class="val"><s>$24</s><b>Incluido</b></span>
+        </li>
+        <li class="stack-li extra">
+          <span class="nx">05</span>
+          <div class="pr">
+            <span class="nm">Calculadora SSS de supervivencia</span>
+            <span class="ds">Una lectura rápida para aterrizar caja, gasto mensual y margen de maniobra sin inventarte fórmulas.</span>
+          </div>
+          <span class="val"><s>$36</s><b>Incluido</b></span>
+        </li>
+        <li class="stack-li extra">
+          <span class="nx">06</span>
+          <div class="pr">
+            <span class="nm">Guía para leer tus rojos</span>
+            <span class="ds">Qué significa cada señal, cuándo preocuparte y cuándo no sobrerreaccionar.</span>
+          </div>
+          <span class="val"><s>$24</s><b>Incluido</b></span>
+        </li>
+        <li class="stack-li extra">
+          <span class="nx">07</span>
+          <div class="pr">
+            <span class="nm">Plan de 7 días</span>
+            <span class="ds">Una prioridad operativa para esta semana. No quince tareas. Una que sí puede mover algo antes del viernes.</span>
+          </div>
+          <span class="val"><s>$48</s><b>Incluido</b></span>
+        </li>
+        <li class="stack-li extra">
+          <span class="nx">08</span>
+          <div class="pr">
+            <span class="nm">Seguimiento para nuevos negocios</span>
+            <span class="ds">Una nota útil para seguir mirando con criterio: caja, cobros, canales, procesos y decisiones reales.</span>
+          </div>
+          <span class="val"><s>$24</s><b>Incluido</b></span>
+        </li>
+        <li class="stack-total">
+          <span class="tx">∑</span>
+          <span class="lab">Primera lectura completa</span>
+          <span class="num"><s>$337</s><b>$0</b></span>
+        </li>
+      </ol>
+
+      <aside class="stack-side rv">
+        <div class="stack-promise">
+          <span class="micro">Qué podrás ver en 45 minutos</span>
+          <h3>No necesitas otro tablero. Necesitas saber qué mirar primero.</h3>
+          <p>Pones los datos mínimos. Ves los rojos. Luego entiendes si vienen de caja, cobros, clientes, canales, procesos o dependencia del fundador.</p>
+          <p><strong style="color:var(--ink)">No se trata de adivinar el futuro.</strong> Se trata de salir con una pregunta más útil: qué conviene mover esta semana, antes de que el mes se vaya otra vez.</p>
+          <div class="stack-cta">
+            <a href="#diagnostico" class="btn btn-block"><span>Quiero abrir el Visor</span></a>
+            <span class="micro-note">Entrega inmediata · solo tu correo</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     EMAIL CAPTURE
+════════════════════════════════════ -->
+<section class="section" id="diagnostico" aria-labelledby="s08">
+  <div class="wrap-narrow">
+    <p class="sl rv"><span class="sn">08</span> <span id="s08">Abrir el Visor</span></p>
+    <h2 class="rv" style="text-align:center;max-width:20ch;margin-left:auto;margin-right:auto">Déjame tu correo y abre el Visor.</h2>
+    <p class="lede rv" style="text-align:center;margin:0 auto">No necesitas estar en crisis para mirar. A veces el mejor momento es justo cuando todavía parece que todo va bien.</p>
+
+    <div class="qualifier rv" aria-label="Para quién es el Visor Antiquiebra">
+      <div class="q-head">
+        <p class="micro">No es para todos</p>
+        <h3>Es para quien prefiere claridad antes que consuelo.</h3>
+      </div>
+      <ul>
+        <li><strong>Sí es para ti</strong> si quieres saber qué parte del negocio aguanta, qué parte se está dañando y qué decisión no conviene patear otro mes.</li>
+        <li><strong>No es para ti</strong> si buscas motivación, frases bonitas o una lectura que confirme que todo está bien sin mirar caja, cobros y clientes que vuelven.</li>
+        <li><strong>También sirve si vas bien</strong>: a veces el crecimiento es real, pero viene con desorden acumulado por dentro.</li>
+      </ul>
+    </div>
+
+    <div class="utility-note rv" aria-label="Garantía de utilidad">
+      <p><strong>Debe servirte desde la primera lectura.</strong> Si al terminar no tienes una prioridad más clara para esta semana, el Visor simplemente no era para ti. No pagas nada, no dejas tarjeta y puedes salir del correo cuando quieras.</p>
+    </div>
+
+    <form class="email-card rv" id="visor-form" novalidate aria-label="Recibir acceso al Visor">
+      <p class="copy">Te envío el acceso al Visor, la calculadora SSS, la guía mensual y el plan de 7 días. Entras, miras tus señales y sales con una idea más clara de qué mover antes de seguir moviendo todo.</p>
+
+      <div class="form-row">
+        <div class="f-group">
+          <label for="f-email">Tu correo</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="tu@correo.com" aria-required="true">
+        </div>
+        <div class="f-group">
+          <label for="f-country">País</label>
+          <select id="f-country" name="country" required aria-required="true">
+            <option value="">Selecciona…</option>
+            <option>Ecuador</option><option>Colombia</option><option>Perú</option>
+            <option>México</option><option>Chile</option><option>Argentina</option>
+            <option>Estados Unidos</option><option>España</option><option>Otro</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row full">
+        <div class="f-group">
+          <label for="f-biz">Tipo de negocio</label>
+          <input id="f-biz" name="business" type="text" required placeholder="Ej. servicios B2B · ecommerce · restaurante · SaaS pequeño" aria-required="true">
+        </div>
+      </div>
+      <div class="f-group">
+        <label>Etapa del negocio</label>
+        <div class="stage-row" role="radiogroup" aria-label="Etapa del negocio">
+          <button type="button" class="stage-pill" data-stage="0-6" role="radio" aria-checked="false">0–6 m</button>
+          <button type="button" class="stage-pill active" data-stage="6-24" role="radio" aria-checked="true">6–24 m</button>
+          <button type="button" class="stage-pill" data-stage="24+" role="radio" aria-checked="false">24+ m</button>
+          <button type="button" class="stage-pill" data-stage="reset" role="radio" aria-checked="false">Reestructurado</button>
+        </div>
+        <input type="hidden" id="f-stage" name="stage" value="6-24">
+      </div>
+      <div class="form-cta">
+        <button type="submit" class="btn btn-primary">Abrir el Visor completo</button>
+        <span class="form-note">Se abre en esta misma pantalla. Sin tarjeta. Sin llamada obligatoria.</span>
+      </div>
+      <div class="form-success" id="form-ok" role="status">
+        <strong>Visor abierto.</strong>
+        Tu correo queda registrado para el acceso al Visor completo. Revisa tu bandeja en unos minutos; si es la primera vez que usamos este canal, puede llegar una confirmación inicial.
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     KIT — ladder up
+════════════════════════════════════ -->
+<section class="section dark" aria-labelledby="s09">
+  <div class="wrap">
+    <p class="sl rv"><span class="sn">09</span> <span id="s09">Kit · cuando ya viste qué no puede esperar</span></p>
+    <div class="kit-grid">
+      <div class="rv">
+        <span class="kicker">Visor detecta · Kit implementa</span>
+        <h2 style="color:#fff;max-width:22ch">Cuando el diagnóstico ya te mostró qué no puede esperar.</h2>
+        <p class="lede" style="color:#F2F2F2">El Kit te entrega las plantillas para actuar sin depender de una sesión. No es teoría ni es un PDF motivacional: son las hojas exactas que un nuevo negocio usa el lunes en la mañana para mover la aguja antes del viernes.</p>
+        <ul class="kit-bullets">
+          <li>Hoja mensual de caja</li>
+          <li>Plantilla de runway (con y sin cobros)</li>
+          <li>Matriz de canales (LTV:CAC)</li>
+          <li>Guiones de WhatsApp · alianzas, clientes, cobros</li>
+          <li>Checklist de procesos críticos</li>
+          <li>RACI básico para delegar</li>
+          <li>Plan de 7 días — operativo</li>
+          <li>Plan de 30 días — estructural</li>
+          <li>Excel de seguimiento mensual</li>
+          <li>Lectura de rojos · guía corta</li>
+        </ul>
+      </div>
+      <div class="kit-side rv">
+        <figure class="kit-photo-panel">
+          <img src="https://images.pexels.com/photos/7680692/pexels-photo-7680692.jpeg?auto=compress&cs=tinysrgb&w=1100&h=760&fit=crop" alt="Calculadora, documentos y plantillas de caja sobre una mesa" loading="lazy" decoding="async">
+        </figure>
+        <aside class="kit-card">
+          <span class="tag">Kit Antiquiebra 360</span>
+          <p class="name">Plantillas + plan operativo</p>
+          <p class="desc">Todo lo que el Visor te pidió, ya en formato editable. Sin armar la hoja en Excel a las once de la noche.</p>
+          <p class="price"><span class="cur">$</span>100</p>
+          <p class="price-note">Pago único · acceso permanente · actualizaciones incluidas</p>
+          <a href="#diagnostico" class="btn">Primero abrir el Visor</a>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SESSION
+════════════════════════════════════ -->
+<section class="section alt" aria-labelledby="s10">
+  <div class="wrap">
+    <p class="sl rv"><span class="sn">10</span> <span id="s10">Sesión 1:1 · solo para quien ya compró el Kit</span></p>
+    <h2 class="rv" style="max-width:22ch">Decidir con números ordenados — no empezar desde cero.</h2>
+    <p class="lede rv" style="max-width:62ch">La sesión no es para explicarte el Visor. Es para que llegues con el Visor leído y el Kit en marcha. Dos horas con JFC para definir qué se mueve este mes, en qué orden, y qué se posterga sin culpa.</p>
+
+    <div class="sess-grid">
+      <article class="sess flag-ec rv">
+        <span class="flag">EC · LATAM</span>
+        <h3>Sesión de operación</h3>
+        <p class="desc">Para quien ya tiene el Kit y necesita un par de horas con JFC para ordenar las decisiones del mes — caja, cobros, canales, prioridad del Lunes 1.</p>
+        <span class="filter-note">Filtrado · solo compradores del Kit</span>
+        <div class="pack"><span>Kit + sesión</span><b>$100 + $100</b></div>
+      </article>
+      <article class="sess flag-us rv">
+        <span class="flag">USA · Business</span>
+        <h3>Revisión ejecutiva</h3>
+        <p class="desc">Paquete distinto, no la misma sesión con precio más alto. Diagnóstico extendido sobre los 8 indicadores, lectura de canales y hoja de ruta a 90 días lista para junta.</p>
+        <span class="filter-note">Por aplicación · agenda limitada</span>
+        <div class="pack"><span>Paquete ejecutivo</span><b>Consultar</b></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     FAQ — objection handling + SEO
+════════════════════════════════════ -->
+<section class="section" aria-labelledby="s11">
+  <div class="wrap-narrow">
+    <p class="sl rv"><span class="sn">11</span> <span id="s11">Lo que la gente nos pregunta</span></p>
+    <h2 class="rv" style="max-width:22ch">Antes de dejar tu correo.</h2>
+
+    <div class="faq rv">
+      <details open>
+        <summary><span>¿Cuánto cuesta el Visor Antiquiebra?</span><span class="toggle" aria-hidden="true"></span></summary>
+        <p class="a">No pagas nada para abrir la primera lectura. Dejas tu correo y se abre el Visor con la calculadora de runway, el semáforo, la guía mensual y el plan de 7 días. No hay tarjeta ni cita previa.</p>
+      </details>
+      <details>
+        <summary><span>¿Sirve si mi negocio tiene menos de 6 meses?</span><span class="toggle" aria-hidden="true"></span></summary>
+        <p class="a">El Visor está optimizado para los meses 6–24 — la ventana del valle. Antes del mes 6 todavía estás en lanzamiento; el problema central es otro (validación, no supervivencia). Puedes usarlo, pero la lectura más certera es a partir del mes 6.</p>
+      </details>
+      <details>
+        <summary><span>¿Y si recién reestructuré el negocio?</span><span class="toggle" aria-hidden="true"></span></summary>
+        <p class="a">El reloj vuelve a cero. Reestructurar significa empezar el ciclo de nuevo: el negocio funciona y vende, pero las señales del valle aplican otra vez desde el mes 6 del reinicio. El Visor lo reconoce y ajusta los umbrales.</p>
+      </details>
+      <details>
+        <summary><span>¿Necesito tener mis números ordenados antes de abrirlo?</span><span class="toggle" aria-hidden="true"></span></summary>
+        <p class="a">No. Está diseñado para que llegues con los números desordenados — la primera lectura es justamente la que pone todo en la misma mesa. Si tienes Excel propio, mejor; si no, los campos guían qué buscar y dónde.</p>
+      </details>
+      <details>
+        <summary><span>¿Reemplaza a un contador o a una contabilidad formal?</span><span class="toggle" aria-hidden="true"></span></summary>
+        <p class="a">No. Y no debería. La contabilidad te dice qué pasó. El Visor te ayuda a mirar qué está pasando por dentro: caja, cobros, clientes que vuelven, canales, procesos y dependencia del fundador. Complementa la contabilidad; no la sustituye.</p>
+      </details>
+      <details>
+        <summary><span>¿Cuánto tiempo toma la primera lectura?</span><span class="toggle" aria-hidden="true"></span></summary>
+        <p class="a">45 minutos la primera vez — porque tienes que ubicar los datos. 10 minutos cada mes después. La idea es que sea el ritual del primer lunes, no una auditoría anual.</p>
+      </details>
+      <details>
+        <summary><span>¿Qué pasa después de la primera lectura?</span><span class="toggle" aria-hidden="true"></span></summary>
+        <p class="a">Tres caminos. (1) Lo usas tú solo cada mes — es lo que la mayoría hace. (2) Adquieres el Kit Antiquiebra 360 para implementar lo que el Visor te pidió. (3) Si ya tienes Kit y necesitas ordenar las decisiones del mes, está la sesión 1:1. No hay obligación de subir al siguiente nivel.</p>
+      </details>
+      <details>
+        <summary><span>¿Me van a llenar el correo de promociones?</span><span class="toggle" aria-hidden="true"></span></summary>
+        <p class="a">No. Además del acceso al Visor, llega la guía mensual de lectura y una nota corta del newsletter de nuevos negocios. No hay secuencias de venta agresivas ni urgencias inventadas. Puedes salirte cuando quieras desde el pie de cualquier correo.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     LIBROS · Próximamente — Atravesando el valle de la muerte
+════════════════════════════════════ -->
+<section class="libros bk-noche" id="libros" aria-labelledby="s12b">
+  <div class="wrap">
+    <div class="libros-head">
+      <div class="rv">
+        <p class="sl"><span class="sn">12</span> <span id="s12b">Próximamente · los dos libros</span></p>
+        <span class="kicker">Dos ediciones · un mismo valle</span>
+        <h2>Atravesando el valle de la muerte, <em>contado dos veces.</em></h2>
+        <p class="lede">El mismo territorio que mide el Visor, ahora en libro. <strong style="color:#fff">Atravesando el valle de la muerte: los primeros 6 a 24 meses de un negocio</strong> llega en dos ediciones — una novela sobre quienes cruzaron el valle, y un manual táctico para cruzarlo tú, indicador por indicador.</p>
+      </div>
+      <div class="bk-switch rv" role="group" aria-label="Acabado de portada">
+        <span class="bk-switch-label">Portada</span>
+        <button type="button" data-finish="classic" class="active">Papel</button>
+        <button type="button" data-finish="noche">Noche</button>
+        <button type="button" data-finish="cartel">Cartel</button>
+      </div>
+    </div>
+    <div class="libros-grid">
+      <article class="libro novela rv">
+        <div class="bk-cover bk-cover-novela" aria-hidden="true">
+          <div class="bk-top">
+            <span class="bk-edition">Edición · Novela</span>
+            <span class="bk-series">Valle 6–24M<br>J.F. Carpio</span>
+          </div>
+          <h3 class="bk-title">Atravesando el valle de la <em>muerte</em></h3>
+          <p class="bk-sub">Los primeros 6 a 24 meses de un negocio</p>
+          <svg class="bk-curve" viewBox="0 0 160 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0,6 C28,8 40,12 56,30 C82,52 108,52 132,30 C146,17 152,12 160,9" fill="none" stroke="currentColor" stroke-width="2.4" vector-effect="non-scaling-stroke"/></svg>
+          <div class="bk-author">J.F. Carpio</div>
+        </div>
+        <div class="libro-detail">
+          <div class="libro-kind">La novela</div>
+          <h3>Quienes <em>cruzaron</em> el valle.</h3>
+          <p>Ficción sobre los pioneros y visionarios que entraron al valle de la muerte y salieron del otro lado. La historia de los meses 6 a 24 contada desde adentro: las noches de caja corta, la tracción que engaña, la decisión que lo cambia todo.</p>
+          <p>Para leer lo que se siente cruzar el valle <strong>antes</strong> de estar en mitad de él.</p>
+          <div class="libro-meta">
+            <div class="libro-price"><span class="cur">$</span>13</div>
+            <div class="libro-status"><span class="ls-main">Pre-venta abierta</span><br>Lanzamiento · próximamente</div>
+          </div>
+          <a class="bk-notify" href="#libros-aviso">Avísame del lanzamiento</a>
+        </div>
+      </article>
+      <article class="libro manual rv">
+        <div class="bk-cover bk-cover-manual" aria-hidden="true">
+          <div class="bk-top">
+            <span class="bk-edition">Edición · Manual táctico</span>
+            <span class="bk-series">Valle 6–24M<br>J.F. Carpio</span>
+          </div>
+          <h3 class="bk-title">Atravesando el valle de la <em>muerte</em></h3>
+          <p class="bk-sub">Los primeros 6 a 24 meses de un negocio</p>
+          <svg class="bk-curve" viewBox="0 0 160 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0,6 C28,8 40,12 56,30 C82,52 108,52 132,30 C146,17 152,12 160,9" fill="none" stroke="currentColor" stroke-width="2.4" vector-effect="non-scaling-stroke"/></svg>
+          <div class="bk-author">J.F. Carpio</div>
+        </div>
+        <div class="libro-detail">
+          <div class="libro-kind">El manual táctico</div>
+          <h3>Cómo <em>cruzarlo</em>, mes a mes.</h3>
+          <p>El método operativo detrás del Visor: cómo usar los 8 indicadores mes a mes para atravesar el valle de la muerte. Caja, runway, retención, dependencia del fundador, cobros — qué leer, cuándo, y qué hacer con cada señal.</p>
+          <p>El compañero de trabajo del Visor: <strong>la travesía, paso a paso.</strong></p>
+          <div class="libro-meta">
+            <div class="libro-price"><span class="cur">$</span>13</div>
+            <div class="libro-status"><span class="ls-main">Pre-venta abierta</span><br>Lanzamiento · próximamente</div>
+          </div>
+          <a class="bk-notify" href="#libros-aviso">Avísame del lanzamiento</a>
+        </div>
+      </article>
+    </div>
+    <p class="libros-foot" id="libros-aviso">Dos formas de entender el mismo viaje: <strong>la novela</strong> te lo hace sentir, <strong>el manual</strong> te enseña a cruzarlo. Mientras tanto, el Visor ya te dice en qué punto del valle de la muerte está tu negocio hoy.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     FINAL CTA + P.S.
+════════════════════════════════════ -->
+<section class="final" aria-labelledby="s12">
+  <div class="wrap">
+    <h2 id="s12">Abre el Visor.<br>Mira qué está <span class="a">firme</span>, qué se está <span class="r">dañando</span>, y qué no puede esperar otro mes.</h2>
+    <p class="lede">Nadie cruza el valle de la muerte sin antes mirarlo de frente. La primera lectura queda abierta. La decisión, no.</p>
+    <div class="final-authority rv">
+      <div class="seal">JFC</div>
+      <p><strong>Creado por J.F. Carpio, investigador empresarial y económico y ex profesor USFQ durante 14 años.</strong> El Visor traduce análisis de entorno empresarial a una lectura que un dueño puede usar esta misma semana: caja, cobros, clientes, canales, procesos y dependencia del fundador.</p>
+    </div>
+    <div class="final-actions">
+      <a href="#diagnostico" class="btn btn-theatrical">Empezar el diagnóstico</a>
+      <a href="https://wa.me/593999905080?text=Hola%20JFC%2C%20vi%20el%20Visor%20Antiquiebra%20y%20quiero%20hablar%20sobre%20mi%20negocio." class="btn btn-whatsapp" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+    </div>
+
+    <p class="ps">
+      <b>P.D.</b> &nbsp; El día en que un nuevo negocio deja de mirar es el día en que el propio negocio empieza a decidir por su dueño. Entre el mes 6 y el mes 24, esa diferencia de mirada es la que separa a los que cruzan el valle de los que no llegan a contarlo. El Visor solo te pone los números delante. Lo que decidas hacer con ellos sigue siendo tuyo.
+    </p>
+  </div>
+</section>
+
+<!-- EXISTING DASHBOARD ENGINE SHOULD BE MOUNTED BELOW THIS POINT; DO NOT REWRITE IT -->
+
+</main>
+
+<!-- ════ FOOTER · editorial moment ════ -->
+<footer class="foot-moment" role="contentinfo">
+  <div class="foot-statement">
+    <p class="fs-line">Crecer <em>desordenadamente</em> no es lo mismo que crecer con claridad y control.</p>
+    <div class="fs-meta">
+      <img src="https://jfcarpio.com/visorantiquiebra/assets/growthos-logo-slogan.png" alt="Growth OS — sistema operativo para negocios en expansión" loading="lazy">
+      <p>Volumen 2 del sistema operativo Growth OS — diseñado para nuevos negocios entre los meses 6 y 24 de vida. El Visor Antiquiebra es la herramienta de diagnóstico mensual del volumen.</p>
+    </div>
+  </div>
+
+  <nav class="foot-cols" aria-label="Navegación del pie">
+    <div class="fc">
+      <h4>El Visor</h4>
+      <a href="#diagnostico">Abrir el diagnóstico</a>
+      <a href="#que-mide">Qué mide</a>
+      <a href="#visor-preview">Vista previa</a>
+      <a href="#que-recibes">Lo que abres</a>
+    </div>
+    <div class="fc">
+      <h4>Recursos</h4>
+      <a href="#s09">Kit Antiquiebra 360</a>
+      <a href="#libros">Libros · Atravesando el valle</a>
+      <a href="#s10">Sesión 1:1 con JFC</a>
+      <a href="#diagnostico">Calculadora SSS</a>
+      <a href="#diagnostico">Newsletter de nuevos negocios</a>
+    </div>
+    <div class="fc">
+      <h4>Growth OS</h4>
+      <a href="https://jfcarpio.com/">!LAUNCH · 45 días</a>
+      <a href="https://jfcarpio.com/">GROW · 0–6M</a>
+      <a href="https://jfcarpio.com/visorantiquiebra/">CROSS · 6–24M</a>
+      <a href="https://jfcarpio.com/">SCALE · 24M+</a>
+    </div>
+    <div class="fc">
+      <h4>J.F. Carpio</h4>
+      <a href="https://jfcarpio.com/">jfcarpio.com</a>
+      <a href="https://jfcarpio.com/blog.html">Blog</a>
+      <a href="https://twitter.com/jfcarpio">Twitter / X</a>
+      <span style="color:#E6E6E6">Privacidad: no publicaremos tus datos ni usaremos casos reales sin permiso explícito.</span>
+    </div>
+  </nav>
+
+  <div class="foot-bottom">
+    <span>© 2026 J.F. Carpio</span>
+    <span><a href="https://opensource.org/licenses/MIT">Licencia MIT</a> · uso libre con atribución</span>
+  </div>
+</footer>
+
+<script>
+// ════ Dashboard preview tabs ════
+(function(){
+  var tabs = document.querySelectorAll('.dash-tab');
+  var panels = {
+    caja: document.getElementById('panel-caja'),
+    dano: document.getElementById('panel-dano'),
+    sem:  document.getElementById('panel-sem')
+  };
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
+      Object.keys(panels).forEach(function(k){ panels[k].classList.remove('active'); });
+      t.classList.add('active');
+      t.setAttribute('aria-selected','true');
+      var key = t.getAttribute('data-tab');
+      if(panels[key]) panels[key].classList.add('active');
+    });
+  });
+})();
+
+// ════ Stage pill selector ════
+(function(){
+  var pills = document.querySelectorAll('.stage-pill');
+  var hidden = document.getElementById('f-stage');
+  pills.forEach(function(p){
+    p.addEventListener('click', function(){
+      pills.forEach(function(x){ x.classList.remove('active'); x.setAttribute('aria-checked','false'); });
+      p.classList.add('active');
+      p.setAttribute('aria-checked','true');
+      hidden.value = p.getAttribute('data-stage');
+    });
+  });
+})();
+
+// ════ Lead capture: Visor completo ════
+(function(){
+  var form = document.getElementById('visor-form');
+  if(!form) return;
+
+  var endpoint = 'https://formsubmit.co/ajax/jf@jfcarpio.com';
+  var submit = form.querySelector('button[type="submit"]');
+  var cta = form.querySelector('.form-cta');
+  var ok = document.getElementById('form-ok');
+  var unlockUrl = 'visor6-24.html?from=email';
+
+  function markMissing(fields){
+    fields.forEach(function(el){
+      if(!el || el.value.trim()) return;
+      el.style.borderColor = '#B7321E';
+      setTimeout(function(){ el.style.borderColor=''; }, 2000);
+    });
+  }
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+
+    var email = document.getElementById('f-email');
+    var country = document.getElementById('f-country');
+    var biz = document.getElementById('f-biz');
+    var stage = document.getElementById('f-stage');
+    var fields = [email, country, biz];
+
+    if(!email.value.trim() || !country.value.trim() || !biz.value.trim()){
+      markMissing(fields);
+      return;
+    }
+
+    var payload = {
+      email: email.value.trim(),
+      country: country.value.trim(),
+      business: biz.value.trim(),
+      stage: stage ? stage.value : '6-24',
+      source: 'visorantiquiebra_landing',
+      subject: 'Nuevo interesado en Visor Antiquiebra completo',
+      _subject: 'Nuevo interesado en Visor Antiquiebra completo',
+      _template: 'table',
+      _captcha: 'false'
+    };
+
+    if(submit){
+      submit.disabled = true;
+      submit.textContent = 'Registrando...';
+    }
+
+    try {
+      var res = await fetch(endpoint, {
+        method: 'POST',
+        headers: {'Content-Type':'application/json', 'Accept':'application/json'},
+        body: JSON.stringify(payload)
+      });
+
+      if(!res.ok) throw new Error('capture_failed');
+
+      try {
+        localStorage.setItem('visor_antiquiebra_lead_v1', JSON.stringify({
+          email: payload.email,
+          country: payload.country,
+          business: payload.business,
+          stage: payload.stage,
+          createdAt: new Date().toISOString()
+        }));
+        sessionStorage.setItem('visor_antiquiebra_unlocked', '1');
+      } catch(storageError) {}
+
+      if(ok){
+        ok.classList.add('show');
+        ok.innerHTML = '<strong>Visor abierto.</strong> Tu correo quedó registrado. Te estoy llevando al Visor completo. Si no se abre en unos segundos, <a href="' + unlockUrl + '">entra aquí</a>.';
+        ok.scrollIntoView({block:'center',behavior:'smooth'});
+      }
+      if(cta) cta.style.display = 'none';
+      setTimeout(function(){ window.location.href = unlockUrl; }, 900);
+    } catch(error) {
+      if(ok){
+        ok.classList.add('show');
+        ok.innerHTML = '<strong>No pude registrar el correo automáticamente.</strong> Escríbeme a jf@jfcarpio.com con el asunto Visor Antiquiebra, o <a href="' + unlockUrl + '">abre el Visor completo de todos modos</a>.';
+        ok.scrollIntoView({block:'center',behavior:'smooth'});
+      }
+      if(submit){
+        submit.disabled = false;
+        submit.textContent = 'Intentar otra vez';
+      }
+    }
+  });
+})();
+
+// ════ Reveal on scroll ════
+(function(){
+  if(!('IntersectionObserver' in window)){
+    document.querySelectorAll('.rv, .rv-stagger, .rv-left, .rv-right, .rv-fade, .rv-scale').forEach(function(el){ el.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {threshold:.08, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv, .rv-stagger, .rv-left, .rv-right, .rv-fade, .rv-scale').forEach(function(el){ io.observe(el); });
+})();
+
+// ════ Number counter animation ════
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    document.querySelectorAll('.counter').forEach(function(el){
+      var to = el.getAttribute('data-to');
+      var pre = el.getAttribute('data-prefix') || '';
+      var suf = el.getAttribute('data-suffix') || '';
+      el.textContent = pre + to + suf;
+    });
+    return;
+  }
+  function animate(el){
+    var to  = parseFloat(el.getAttribute('data-to')) || 0;
+    var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
+    var pre = el.getAttribute('data-prefix') || '';
+    var suf = el.getAttribute('data-suffix') || '';
+    var dur = 1400, t0 = performance.now();
+    function step(now){
+      var p = Math.min(1, (now - t0) / dur);
+      var eased = 1 - Math.pow(1 - p, 3); // ease-out cubic
+      var v = (to * eased).toFixed(dec);
+      el.textContent = pre + v + suf;
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if(!('IntersectionObserver' in window)){
+    document.querySelectorAll('.counter').forEach(animate);
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ animate(en.target); io.unobserve(en.target); }
+    });
+  }, {threshold:.4});
+  document.querySelectorAll('.counter').forEach(function(el){ io.observe(el); });
+})();
+
+// ════ Helmet parallax — subtle scroll-tied float ════
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  var els = document.querySelectorAll('[data-parallax]');
+  if(!els.length) return;
+  var ticking = false;
+  function update(){
+    els.forEach(function(el){
+      var rect = el.getBoundingClientRect();
+      var vh = window.innerHeight || 1;
+      var center = rect.top + rect.height/2 - vh/2;
+      var ratio = parseFloat(el.getAttribute('data-parallax')) || .05;
+      el.style.transform = 'translate3d(0,'+(-center * ratio).toFixed(1)+'px,0)';
+    });
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if(!ticking){ requestAnimationFrame(update); ticking = true; }
+  }, {passive:true});
+  update();
+})();
+
+// ════ FAQ accordion (single-open optional) ════
+(function(){
+  // Native <details> — no JS required for accessibility; just smooth-scroll on open
+  document.querySelectorAll('.faq details').forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if(d.open){
+        // optional analytics hook
+      }
+    });
+  });
+})();
+</script>
+
+<!-- Tweaks panel (on-brand, vanilla host-protocol) -->
+<style>
+  .twkp{position:fixed;right:18px;bottom:18px;z-index:2147483646;width:268px;display:none;
+    flex-direction:column;background:var(--navy);color:#fff;
+    border:1px solid rgba(255,255,255,.14);border-top:3px solid var(--amber-2);
+    box-shadow:0 24px 64px -16px rgba(0,0,0,.7);
+    font-family:var(--mono);overflow:hidden}
+  .twkp.open{display:flex}
+  .twkp-hd{display:flex;align-items:center;justify-content:space-between;
+    padding:13px 12px 13px 16px;cursor:move;user-select:none;border-bottom:1px solid rgba(255,255,255,.1)}
+  .twkp-hd b{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--amber-3)}
+  .twkp-x{appearance:none;border:0;background:transparent;color:rgba(255,255,255,.55);
+    width:24px;height:24px;cursor:pointer;font-size:16px;line-height:1}
+  .twkp-x:hover{color:#fff}
+  .twkp-body{padding:16px;display:flex;flex-direction:column;gap:18px}
+  .twkp-sect{font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:rgba(255,255,255,.4);margin-bottom:-6px}
+  .twkp-row{display:flex;flex-direction:column;gap:8px}
+  .twkp-lbl{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+  .twkp-seg{display:flex;gap:3px;border:1px solid rgba(255,255,255,.16);padding:3px;background:rgba(255,255,255,.04)}
+  .twkp-seg button{flex:1;appearance:none;border:0;background:transparent;color:#E6E6E6;
+    font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    padding:8px 4px;cursor:pointer;transition:all .15s}
+  .twkp-seg button:hover{background:rgba(255,255,255,.08);color:#fff}
+  .twkp-seg button.active{background:var(--amber-2);color:var(--navy)}
+  .twkp-price{display:flex;align-items:center;gap:0;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04)}
+  .twkp-price button{appearance:none;border:0;background:transparent;color:#fff;width:34px;height:34px;
+    font-size:16px;cursor:pointer;font-family:var(--cond);font-weight:900}
+  .twkp-price button:hover{background:rgba(255,255,255,.08)}
+  .twkp-price .v{flex:1;text-align:center;font-family:var(--cond);font-weight:900;font-size:22px;color:var(--amber-3);font-variant-numeric:tabular-nums}
+  .twkp-sel{appearance:none;width:100%;height:34px;padding:0 10px;border:1px solid rgba(255,255,255,.16);
+    background:rgba(255,255,255,.04);color:#fff;font-family:var(--mono);font-size:10px;letter-spacing:.08em;
+    text-transform:uppercase;cursor:pointer;outline:none}
+  .twkp-sel:focus{border-color:var(--amber-2)}
+  .twkp-sel option{background:var(--navy);color:#fff}
+</style>
+<div class="twkp" id="twkp" role="dialog" aria-label="Tweaks">
+  <div class="twkp-hd" id="twkp-hd"><b>Tweaks</b><button class="twkp-x" id="twkp-x" aria-label="Cerrar">×</button></div>
+  <div class="twkp-body">
+    <div class="twkp-sect">Los libros</div>
+    <div class="twkp-row">
+      <span class="twkp-lbl">Acabado de portada</span>
+      <div class="twkp-seg" data-tw="coverFinish">
+        <button data-v="classic">Papel</button>
+        <button data-v="noche">Noche</button>
+        <button data-v="cartel">Cartel</button>
+      </div>
+    </div>
+    <div class="twkp-row">
+      <span class="twkp-lbl">Precio (USD c/u)</span>
+      <div class="twkp-price">
+        <button id="twkp-pm" aria-label="menos">–</button>
+        <span class="v" id="twkp-pv">13</span>
+        <button id="twkp-pp" aria-label="más">+</button>
+      </div>
+    </div>
+    <div class="twkp-row">
+      <span class="twkp-lbl">Etiqueta de estado</span>
+      <select class="twkp-sel" data-tw="statusLabel">
+        <option value="Pre-venta abierta">Pre-venta abierta</option>
+        <option value="Próximamente">Próximamente</option>
+        <option value="Lista de espera">Lista de espera</option>
+        <option value="Disponible ya">Disponible ya</option>
+      </select>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "coverFinish": "noche",
+    "price": 13,
+    "statusLabel": "Pre-venta abierta"
+  }/*EDITMODE-END*/;
+
+  // Host persists edits to the EDITMODE block on disk → TWEAK_DEFAULTS is the
+  // single source of truth (no localStorage layer to go stale).
+  var t = Object.assign({}, TWEAK_DEFAULTS);
+
+  var sec=document.getElementById('libros');
+  var panel=document.getElementById('twkp');
+
+  function apply(){
+    if(sec){
+      sec.classList.remove('bk-classic','bk-noche','bk-cartel');
+      sec.classList.add('bk-'+t.coverFinish);
+      sec.querySelectorAll('.bk-switch button').forEach(function(b){
+        b.classList.toggle('active', b.dataset.finish===t.coverFinish);
+      });
+    }
+    document.querySelectorAll('#libros .libro-price').forEach(function(p){
+      p.innerHTML='<span class="cur">$</span>'+t.price;
+    });
+    document.querySelectorAll('#libros .ls-main').forEach(function(s){ s.textContent=t.statusLabel; });
+    // reflect in panel controls
+    panel.querySelectorAll('.twkp-seg[data-tw="coverFinish"] button').forEach(function(b){
+      b.classList.toggle('active', b.dataset.v===t.coverFinish);
+    });
+    var pv=document.getElementById('twkp-pv'); if(pv) pv.textContent=t.price;
+    var sel=panel.querySelector('.twkp-sel[data-tw="statusLabel"]'); if(sel) sel.value=t.statusLabel;
+  }
+
+  function setTweak(k,v){
+    t[k]=v;
+    var edits={}; edits[k]=v;
+    try{ window.parent.postMessage({type:'__edit_mode_set_keys', edits:edits}, '*'); }catch(e){}
+    apply();
+  }
+
+  // cover finish — panel + in-page switcher both drive the same tweak
+  panel.querySelectorAll('.twkp-seg[data-tw="coverFinish"] button').forEach(function(b){
+    b.addEventListener('click', function(){ setTweak('coverFinish', b.dataset.v); });
+  });
+  if(sec){
+    sec.querySelectorAll('.bk-switch button').forEach(function(b){
+      b.addEventListener('click', function(){ setTweak('coverFinish', b.dataset.finish); });
+    });
+  }
+  document.getElementById('twkp-pm').addEventListener('click', function(){ setTweak('price', Math.max(0, (+t.price||0)-1)); });
+  document.getElementById('twkp-pp').addEventListener('click', function(){ setTweak('price', (+t.price||0)+1); });
+  panel.querySelector('.twkp-sel[data-tw="statusLabel"]').addEventListener('change', function(e){ setTweak('statusLabel', e.target.value); });
+
+  // host protocol
+  window.addEventListener('message', function(e){
+    var ty=e&&e.data&&e.data.type;
+    if(ty==='__activate_edit_mode') panel.classList.add('open');
+    else if(ty==='__deactivate_edit_mode') panel.classList.remove('open');
+  });
+  try{ window.parent.postMessage({type:'__edit_mode_available'}, '*'); }catch(e){}
+
+  document.getElementById('twkp-x').addEventListener('click', function(){
+    panel.classList.remove('open');
+    try{ window.parent.postMessage({type:'__edit_mode_dismissed'}, '*'); }catch(e){}
+  });
+
+  // drag the panel by its header
+  (function(){
+    var hd=document.getElementById('twkp-hd'), dx, dy, dragging=false;
+    hd.addEventListener('mousedown', function(e){
+      if(e.target.id==='twkp-x') return;
+      dragging=true; var r=panel.getBoundingClientRect();
+      dx=e.clientX-r.left; dy=e.clientY-r.top;
+      panel.style.right='auto'; panel.style.bottom='auto';
+      panel.style.left=r.left+'px'; panel.style.top=r.top+'px';
+      e.preventDefault();
+    });
+    window.addEventListener('mousemove', function(e){
+      if(!dragging) return;
+      panel.style.left=Math.max(6, Math.min(window.innerWidth-60, e.clientX-dx))+'px';
+      panel.style.top=Math.max(6, Math.min(window.innerHeight-40, e.clientY-dy))+'px';
+    });
+    window.addEventListener('mouseup', function(){ dragging=false; });
+  })();
+
+  apply();
+})();
+</script>
+</body>
+</html>
