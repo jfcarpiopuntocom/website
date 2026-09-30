@@ -1063,8 +1063,8 @@ function getVisibleViewportHeight(){
 function size(){
  H=getVisibleViewportHeight();
  const mobile=matchMedia('(max-width:760px)').matches;
- const slideRatio=mobile?.84:.8;
- const gapRatio=mobile?.04:.05;
+ const slideRatio=mobile?0.84:0.8;
+ const gapRatio=mobile?0.04:0.05;
  SH=H*slideRatio;
  P=H*(slideRatio+gapRatio);
  TP=(H-SH)/2;
