@@ -58,7 +58,7 @@ jobs:
           fail=0
           for f in $FILES; do
             [ -f "$f" ] || { echo "skip: $f (not present)"; continue; }
-            count=$(grep -c '<!DOCTYPE' "$f" || true)
+            count=$(grep -ci '<!doctype' "$f" || true)
             if [ "$count" -ne 1 ]; then
               echo "FAIL: $f has $count DOCTYPE (must be exactly 1)"
               fail=1
