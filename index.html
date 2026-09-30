@@ -152,7 +152,7 @@ document.documentElement.classList.add('reel','js-rv');
    - SUPUESTOS A VERIFICAR con JFC: enlace de "Rumbo a la independencia financiera" = /l/independenciafinanciera (viene de las7formas, no de la lista pegada);
      el enlace /l/guiagratis de la lista pegada NO se uso (no coincide con ningun titulo). Las 7 formas enlaza a /las7formas/.
    - Publico: cualquier persona educada. NO decirlo en el sitio. Nunca "economista" para JFC. */
-/* MASTER STYLE BLOCK — v2.3 (v1.138 SCROLL AZUL + v1.137 GRATIS + POLISH + v1.136 PERFIL + v1.135 VISORES + v1.134 ESCUELA + v1.133 FIT) · 2026-09-30 · reel vertical cinematográfico (ver NOTAS al inicio del <body> y notas/REEL-NOTAS-2026-09-29.md)
+/* MASTER STYLE BLOCK — v2.3 (v1.139 PISO LECTURA + v1.138 SCROLL AZUL + v1.137 GRATIS + POLISH + v1.136 PERFIL + v1.135 VISORES + v1.134 ESCUELA + v1.133 FIT) · 2026-09-30 · reel vertical cinematográfico (ver NOTAS al inicio del <body> y notas/REEL-NOTAS-2026-09-29.md)
    Paleta = la del sitio de julio 2026 (commit 9f550ca): fondo blanco, texto #0A0A0A, acentos dorado/naranja/verde/azul.
    --c = acento CLARO (sobre el fondo oscuro de la foto). --cd = acento OSCURO (sobre blanco: paneles, etiquetas). Contrastes >= 4.5:1. */
 :root{--ink:#0A0A0A;--navy:#060E1D;--px:7.5dvh;--c:#E8A020;--cd:#755000}
@@ -1089,6 +1089,13 @@ html:not(.reel) .thr{position:static;height:60px}html:not(.reel) .thr path{strok
 .pips button.on::after{background:#255FB8;box-shadow:0 0 0 2px #fff,0 0 0 4px #060E1D}
 .pips span{color:#060E1D}
 .hm{background:#255FB8}
+/* v1.139 piso de lectura .82rem en tablet y color solido en citas (JFC: nada de texto gris/opaco/chico) */
+.slide :is(.ab b,.apd,.story-tag,.ft,.ft a,.ft span,cite,.seo-deck,.kick){font-size:max(.82rem,13.12px)!important}
+#portada .bl .btn{font-size:max(.82rem,13.12px)!important}
+#clientes cite{color:#fff!important}
+@media(max-width:900px){.cap .story-proof{display:none}}
+@media(min-width:901px) and (max-height:700px){#escuela .rr .ri:nth-child(n+3){display:none}#perfil .rr .ri span{display:none}#gratis .rr .ri:nth-child(n+3){display:none}#visores .rr .ri:nth-child(3){display:none}}
+@media(max-width:640px){#gumroad .front h2.long{font-size:clamp(1.2rem,3.2dvh,1.7rem)}}
 </style>
 </head>
 <body>
