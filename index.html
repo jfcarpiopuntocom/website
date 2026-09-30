@@ -152,7 +152,7 @@ document.documentElement.classList.add('reel','js-rv');
    - SUPUESTOS A VERIFICAR con JFC: enlace de "Rumbo a la independencia financiera" = /l/independenciafinanciera (viene de las7formas, no de la lista pegada);
      el enlace /l/guiagratis de la lista pegada NO se uso (no coincide con ningun titulo). Las 7 formas enlaza a /las7formas/.
    - Publico: cualquier persona educada. NO decirlo en el sitio. Nunca "economista" para JFC. */
-/* MASTER STYLE BLOCK — v2.3 (v1.150 LA 21 COMO LA 18 + VOZ DE EQUIPO EN CONTACTO + A/B EN INGLES + v1.149 BOLA DE NIEVE EN 18 SLIDES + CONTADOR + v1.148 BOLA DE NIEVE + PAGINAS POR SECCION + v1.147 NAVEGACION + v1.140 PORTADA + v1.139 PISO LECTURA + v1.138 SCROLL AZUL + v1.137 GRATIS + POLISH + v1.136 PERFIL + v1.135 VISORES + v1.134 ESCUELA + v1.133 FIT) · 2026-09-30 · reel vertical cinematográfico (ver NOTAS al inicio del <body> y notas/REEL-NOTAS-2026-09-29.md)
+/* MASTER STYLE BLOCK — v2.3 (v1.152 MICRO-MEJORAS 1-7 y 14 + v1.150 LA 21 COMO LA 18 + VOZ DE EQUIPO EN CONTACTO + A/B EN INGLES + v1.149 BOLA DE NIEVE EN 18 SLIDES + CONTADOR + v1.148 BOLA DE NIEVE + PAGINAS POR SECCION + v1.147 NAVEGACION + v1.140 PORTADA + v1.139 PISO LECTURA + v1.138 SCROLL AZUL + v1.137 GRATIS + POLISH + v1.136 PERFIL + v1.135 VISORES + v1.134 ESCUELA + v1.133 FIT) · 2026-09-30 · reel vertical cinematográfico (ver NOTAS al inicio del <body> y notas/REEL-NOTAS-2026-09-29.md)
    Paleta = la del sitio de julio 2026 (commit 9f550ca): fondo blanco, texto #0A0A0A, acentos dorado/naranja/verde/azul.
    --c = acento CLARO (sobre el fondo oscuro de la foto). --cd = acento OSCURO (sobre blanco: paneles, etiquetas). Contrastes >= 4.5:1. */
 :root{--ink:#0A0A0A;--navy:#060E1D;--px:7.5dvh;--c:#E8A020;--cd:#755000}
@@ -1202,6 +1202,18 @@ html:not(.reel) .thr{position:static;height:60px}html:not(.reel) .thr path{strok
 /* v1.151 visores: en movil SI se muestra que evita cada visor (es el argumento de venta). */
 @media(max-width:640px){#visores .front .ri span{display:block!important;font-size:max(.82rem,14px);line-height:1.35;margin-top:4px}#visores .front .lead{display:block!important}#visores .front .tx{padding-bottom:28px}}
 @media(max-width:640px) and (max-height:700px){#visores .front .lead{display:none!important}}
+/* v1.152 MICRO-MEJORAS (JFC aprobo las 15, 2026-09-30):
+   1-2 encabezado de slide blanco, legible, sin recuadro · 3 sin numero grande repetido (ya esta el contador lateral)
+   4 consecuencia completa en movil · 5 "B" junto al contador = negocio B (la 6 NO: JFC la rechazo)
+   7 la franja lleva a la 21 (pila completa) · 14 etiqueta Gratis en el Indice */
+.front .top .kick{border:0!important;background:none!important;box-shadow:none!important;padding:0!important;font-weight:700!important;font-size:max(.82rem,14px)!important;color:#fff!important;letter-spacing:.14em!important}
+.front .top .no{display:none!important}
+.snow .cnt::before{content:"B";margin-right:5px;font-weight:700}
+.front>.snow{pointer-events:auto;cursor:pointer}
+.front>.snow:hover .cnt,.front>.snow:focus-visible .cnt{box-shadow:0 0 0 3px #fff}
+.front>.snow:focus-visible{outline:3px solid #E8A020;outline-offset:4px}
+@media(max-width:640px){.snow{flex-wrap:wrap!important;white-space:normal!important}.snow .c{white-space:normal!important;overflow:visible!important;text-overflow:clip!important}}
+.idx .free{margin-left:8px;padding:2px 8px;border-radius:99px;background:#E8A020;color:#060E1D;font:700 max(.82rem,13px)/1.4 'Space Mono',ui-monospace,monospace;font-style:normal;letter-spacing:.06em;text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -1419,7 +1431,7 @@ function go(n){
 }
 /* ---- indice de secciones (teclado: I o M) ---- */
 const ix=$('#idx'),ixl=$('#idxl');let ixFrom=null;
-function buildIdx(){ixl.innerHTML='';S.forEach((s,i)=>{const li=document.createElement('li'),b=document.createElement('button');b.type='button';b.dataset.i=i;const ii=document.createElement('i');ii.textContent=String(i+1).padStart(2,'0');const sp=document.createElement('span');sp.textContent=s.dataset['name'+(lang==='en'?'En':'Es')];b.append(ii,sp);if(i===idx){b.classList.add('on');b.setAttribute('aria-current','true')}b.onclick=()=>{closeIdx(true);go(i)};li.append(b);ixl.append(li)})}
+function buildIdx(){ixl.innerHTML='';S.forEach((s,i)=>{const li=document.createElement('li'),b=document.createElement('button');b.type='button';b.dataset.i=i;const ii=document.createElement('i');ii.textContent=String(i+1).padStart(2,'0');const sp=document.createElement('span');sp.textContent=s.dataset['name'+(lang==='en'?'En':'Es')];b.append(ii,sp);if(s.id==='visores'||s.id==='gratis'){const g=document.createElement('em');g.className='free';g.textContent=lang==='en'?'Free':'Gratis';b.append(g)}if(i===idx){b.classList.add('on');b.setAttribute('aria-current','true')}b.onclick=()=>{closeIdx(true);go(i)};li.append(b);ixl.append(li)})}
 function openIdx(){if(auto||open>=0||!ix.hidden)return;buildIdx();ix.hidden=false;document.body.classList.add('modal');ixFrom=document.activeElement;S.forEach(s=>{s.inert=true});setTimeout(()=>{const c=$('.on',ixl)||$('button',ixl);if(c)c.focus({preventScroll:false})},40)}
 function closeIdx(skip){if(ix.hidden)return;ix.hidden=true;document.body.classList.remove('modal');S.forEach(s=>{s.inert=false});if(!skip&&ixFrom&&ixFrom.focus)ixFrom.focus({preventScroll:true})}
 $('#idxb').onclick=openIdx;$('#cntb').onclick=openIdx;$('#idxx').onclick=()=>closeIdx();
@@ -1523,6 +1535,7 @@ else{if(scan)scan.style.display='none';y=ty=TP-idx*P;if(!introOn)show(idx);hud()
 if(introOn){const it=$('#intro');it.hidden=false;let cl=false;const fin=()=>{if(cl)return;cl=true;it.classList.add('out');setTimeout(()=>{it.hidden=true;show(idx)},800);removeEventListener('keydown',fin)};
  it.addEventListener('pointerdown',fin);addEventListener('keydown',fin);setTimeout(fin,5600)}
 requestAnimationFrame(tick);
+document.querySelectorAll('.front>.snow').forEach(e=>{e.tabIndex=0;e.setAttribute('role','link');e.setAttribute('aria-label',lang==='en'?'See all consequences':'Ver todas las consecuencias');const t=()=>go(S.findIndex(x=>x.id==='c9'));e.addEventListener('click',t);e.addEventListener('keydown',ev=>{if(ev.key==='Enter')t()})});
 window.__reel={go,op,cl,get idx(){return idx},get auto(){return auto},get lang(){return lang},N};
 }catch(err){try{console.error('[reel]',err)}catch(_){}R.classList.remove('reel','auto','js-rv')}
 })();
