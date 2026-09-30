@@ -142,7 +142,7 @@ document.documentElement.classList.add('reel','js-rv');
  ]
 }</script>
 <style>
-/* MASTER STYLE BLOCK — v2.2 · 2026-09-30 · reel vertical cinematográfico (ver NOTAS al inicio del <body> y notas/REEL-NOTAS-2026-09-29.md)
+/* MASTER STYLE BLOCK — v2.3 (v1.133 FIT) · 2026-09-30 · reel vertical cinematográfico (ver NOTAS al inicio del <body> y notas/REEL-NOTAS-2026-09-29.md)
    Paleta = la del sitio de julio 2026 (commit 9f550ca): fondo blanco, texto #0A0A0A, acentos dorado/naranja/verde/azul.
    --c = acento CLARO (sobre el fondo oscuro de la foto). --cd = acento OSCURO (sobre blanco: paneles, etiquetas). Contrastes >= 4.5:1. */
 :root{--ink:#0A0A0A;--navy:#060E1D;--px:7.5dvh;--c:#E8A020;--cd:#755000}
@@ -954,6 +954,71 @@ html:not(.reel) .thr{position:static;height:60px}html:not(.reel) .thr path{strok
 /* SEO deck: visible, people-first descriptor. Not hidden keyword text. */
 .seo-deck{margin:.5dvh 0 1.2dvh;font:700 11px/1.4 'Space Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--c);max-width:70ch}
 @media(max-width:640px){.seo-deck{font-size:9px;letter-spacing:.09em}}
+
+/* ==== v1.133 FIT (JFC 2026-09-30) — CAPA FINAL, NO BORRAR NI MOVER ANTES DE OTRA REGLA ====
+   Problema: los titulos de escritorio se dimensionaban solo por ANCHO (vw): 98-180px, se salian del cuadro en pantallas bajas.
+   Referencia de JFC: el fotograma 08 (Publicaciones) "es el unico con todo del tamano que me gusta" = ~5.2% del alto del viewport.
+   Regla: todo titulo interior se mide por ALTO (dvh). La portada tambien, con su propio tope. Piso de lectura .82rem (CLAUDE.md).
+   Los selectores usan :is(#id,...) para ganar por especificidad a las reglas viejas "#apps h2{...}" sin !important. */
+:is(#c1,#apps,#dato,#c4,#articulos,#libro,#publicaciones,#c5,#reportes,#trayectoria,#c8,#dashboards,#talleres,#gumroad,#clientes,#c9,#contacto) .front :is(h1,h2){font-size:clamp(1.7rem,5.2dvh,3.4rem);line-height:.98;max-width:none;text-wrap:balance}
+#portada h1{font-size:clamp(2.2rem,min(8.2vw,10.2dvh),8.6rem);line-height:.92}
+@media(max-width:640px){
+ :is(#c1,#apps,#dato,#c4,#articulos,#libro,#publicaciones,#c5,#reportes,#trayectoria,#c8,#dashboards,#talleres,#gumroad,#clientes,#c9,#contacto) .front :is(h1,h2){font-size:clamp(1.6rem,4.1dvh,2.5rem)}
+ #portada h1{font-size:clamp(2rem,min(11vw,5.6dvh),3.4rem)}
+}
+.seo-deck{font-size:max(.82rem,11px)}
+
+/* v1.133 FIT (cont.) — portada en 2 lineas, clientes en 3 columnas (escritorio), textos largos, pisos de lectura */
+#portada h1{max-width:none;text-wrap:balance;font-size:clamp(2.2rem,min(6vw,8.4dvh),7rem)}
+@media(min-width:641px){:is(#c1,#apps,#dato,#c4,#articulos,#libro,#publicaciones,#c5,#reportes,#trayectoria,#c8,#dashboards,#talleres,#gumroad,#clientes,#c9,#contacto) .lead{font-size:clamp(1rem,2.3dvh,1.25rem)}}
+#dato .big{font-size:clamp(4rem,min(18vw,21dvh),10rem)}
+.front cite,.front .story-tag,.tx .story-tag{font-size:max(.82rem,12px)}
+@media(min-width:901px){
+ #clientes .tx{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:28px;align-items:start}
+ #clientes .tx>*{grid-column:1/-1}
+ #clientes .tx>blockquote{grid-column:auto;max-width:none;width:auto;margin:0;min-height:0;display:flex}
+}
+@media(min-width:901px) and (max-height:1100px){#portada .ex.lnk{display:none}#portada .lead2:last-of-type{display:none}}
+@media(min-width:901px) and (max-height:960px){#portada .top .no{display:none}}
+@media(max-width:640px){
+ .top{display:flex;flex-wrap:nowrap;align-items:baseline;gap:4px 12px}
+ .top .kick{flex:1 1 0;min-width:0}
+ .front .ab p{padding-top:9px!important;padding-bottom:9px!important}
+ .top .no{font-size:clamp(1.1rem,2.6dvh,1.5rem)}
+ :is(#c1,#apps,#dato,#c4,#articulos,#libro,#publicaciones,#c5,#reportes,#trayectoria,#c8,#dashboards,#talleres,#gumroad,#clientes,#c9,#contacto) .front h2.long{font-size:clamp(1.35rem,3.3dvh,2rem)}
+}
+@media(max-width:640px) and (max-height:929px){.lead2,#portada .lead2{display:none!important}}
+
+/* v1.133 FIT (ajuste fino: telefonos de 852px y escritorio bajo) — suma de holguras, sin quitar texto */
+@media(max-width:640px){
+ .top{margin-top:10px}
+ .tx{gap:8px}
+ .front .lead,.front .story-proof,.front .ab p{line-height:1.35}
+ .rr .ri{padding-top:10px;padding-bottom:10px}
+}
+@media(min-width:901px) and (max-height:800px){.tx{gap:1dvh}.front .story-proof,.front .ab p{line-height:1.35}}
+@media(max-width:640px){
+ .front .story-tag{padding-top:3px;padding-bottom:3px;letter-spacing:.02em}
+ .top .kick{letter-spacing:.1em;max-width:none}
+ .front .bl .btn{padding:8px 14px;font-size:.82rem;min-height:44px}
+ .front .rr{gap:6px}
+}
+@media(max-width:640px){#talleres .front h2{font-size:clamp(1.35rem,3.3dvh,2rem)}}
+@media(min-width:901px) and (max-height:800px){.tx{gap:.7dvh}.front .story-tag{padding-top:2px;padding-bottom:2px}}
+/* telefonos bajos y portatiles muy bajos: la prueba (story-proof) vive en el panel "Ver..."; el resto del fotograma se conserva */
+@media(max-width:640px) and (max-height:800px){.front .story-proof{display:none}.front .lead{font-size:.95rem}}
+@media(min-width:901px) and (max-height:700px){.front .story-proof{display:none}}
+@media(max-width:640px) and (max-height:760px){.front .story-tag{padding-top:1px;padding-bottom:1px}.tx{gap:4px}.front .lead,.front .ab p{line-height:1.3}.top{margin-top:2px}}
+@media(max-width:640px) and (max-height:700px){#talleres .rr .ri:nth-child(2){display:none}}
+@media(max-width:640px) and (max-height:760px){.top .no{display:none}}
+#clientes cite{font-size:max(.82rem,12px)}
+@media(min-width:901px) and (max-height:800px){.top .no{display:none}}
+/* PISO DE LECTURA .82rem (CLAUDE.md: "minimo .82rem, sin excepciones"). Solo sube lo que estaba POR DEBAJO (10-12px en movil); no toca lo mayor.
+   !important A PROPOSITO: capas viejas de movil bajaban a 10-12px. Texto nuevo en movil: nunca menos de .82rem. */
+.apn{font-size:.82rem!important}
+@media(max-width:640px){
+ #portada .top .kick,#portada .seo-deck,#portada .rr .ri b,#portada .rr .ri span,#portada .bl .btn,.apd,.ab b,.ft,.ft a,.ft span{font-size:.82rem!important}
+}
 </style>
 </head>
 <body>
