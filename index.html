@@ -155,10 +155,12 @@ a{color:inherit}
 .skip:focus{top:8px}
 [data-k=g]{--c:#E8A020;--cd:#755000}[data-k=o]{--c:#FF8A6B;--cd:#B73318}[data-k=v]{--c:#28ECAA;--cd:#08764E}[data-k=b]{--c:#7FB0FF;--cd:#255FB8}
 
-/* ---- escenario: el track sube y baja; cada .slide mide 80dvh (NUNCA vh: en iOS Safari rompe el cuadre con innerHeight) ---- */
-.stage{position:fixed;inset:0;overflow:hidden}
+/* ---- escenario: reel centrado contra el VISUAL viewport real.
+   X/Twitter, Safari e in-app browsers pueden reportar un layout viewport distinto de lo visible.
+   JS sincroniza --reel-vh/--slide-h/--slide-gap desde window.visualViewport; dvh queda como fallback. ---- */
+.stage{position:fixed;left:0;right:0;top:0;height:var(--reel-vh,100dvh);overflow:hidden}
 .track{position:absolute;left:0;right:0;top:0;padding:0 var(--px);will-change:transform}
-.slide{height:80dvh;margin-bottom:5dvh}
+.slide{height:var(--slide-h,80dvh);margin-bottom:var(--slide-gap,5dvh)}
 .frame{position:relative;height:100%;border-radius:40px;overflow:hidden;background:var(--navy);perspective:2000px;isolation:isolate;box-shadow:0 30px 70px -30px rgba(6,14,29,.5)}
 .face{position:absolute;inset:0;transform-origin:0 50%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.22,1,.36,1);touch-action:none}
 .open .face{transform:rotateY(15deg)}
@@ -829,6 +831,50 @@ html:not(.reel) .thr{position:static;height:60px}html:not(.reel) .thr path{strok
 }
 
 /* móviles bajos: se preserva contenido reduciendo decoracion, no mutilando copy */
+
+/* ==== MOBILE LIQUID / IN-APP BROWSER HARDENING · 2026-09-30 ====
+   Target: iPhone 12+ Safari + embedded browsers such as X.
+   VisualViewport drives reel geometry; this final mobile layer prevents a tall layout viewport
+   from pushing the first frame below the actually visible window. */
+@media(max-width:760px){
+  :root{--px:14px}
+  .stage{height:var(--reel-vh,100dvh)}
+  .slide{height:var(--slide-h,84dvh);margin-bottom:var(--slide-gap,4dvh)}
+  .frame{border-radius:clamp(24px,7vw,34px)}
+  .bar{
+    padding-top:max(10px,env(safe-area-inset-top));
+    padding-left:max(14px,env(safe-area-inset-left));
+    padding-right:max(14px,env(safe-area-inset-right));
+  }
+  .front{padding-left:16px;padding-right:16px;padding-bottom:max(18px,env(safe-area-inset-bottom))}
+  .tx{margin-left:-16px;margin-right:-16px;margin-bottom:calc(-1 * max(18px,env(safe-area-inset-bottom)));padding-left:18px;padding-right:18px}
+  #portada .top{margin-top:12px}
+  #portada .top .no{font-size:clamp(1.8rem,7vw,2.4rem)}
+  #portada .top .kick{font-size:clamp(10px,2.7vw,12px);line-height:1.25;letter-spacing:.16em}
+  #portada h1{font-size:clamp(2.45rem,12vw,4.25rem);line-height:.91;max-width:9ch}
+  #portada .seo-deck{font-size:clamp(10px,2.7vw,12px);line-height:1.35;letter-spacing:.12em;margin:.15rem 0 .3rem}
+  /* En móvil, la portada es una cubierta completa, no un desktop reducido:
+     el ensayo sigue en DOM/Reader y en el panel, pero no empuja CTA/contenido fuera del viewport. */
+  .reel #portada .lead{display:none!important}
+  #portada .rr{display:grid!important;gap:5px;margin:.25rem 0}
+  #portada .rr .ri{display:none!important}
+  #portada .rr .ri:first-child{display:block!important}
+  #portada .rr .ri b,#portada .rr .ri span{font-size:12px;line-height:1.3}
+  #portada .bl{gap:8px;margin-top:.25rem}
+  #portada .bl .btn{min-height:42px;padding:9px 14px;font-size:12px}
+  #portada .bl .btn:nth-child(n+2){display:none}
+  .nx{right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom))}
+  .bar .wa{left:max(14px,env(safe-area-inset-left));bottom:max(14px,env(safe-area-inset-bottom))}
+}
+@media(max-width:430px){
+  #portada h1{font-size:clamp(2.2rem,11.4vw,3.5rem)}
+}
+@media(max-width:390px){
+  #portada .top .kick{font-size:10px}
+  #portada h1{font-size:clamp(2rem,11vw,3rem)}
+  #portada .seo-deck{font-size:10px}
+}
+
 @media(max-width:640px) and (max-height:720px){
   .cap .thr{display:none}
   .cap .top{margin-bottom:.4dvh}
@@ -1009,7 +1055,24 @@ S.forEach((s,i)=>{
  const b=document.createElement('button');b.type='button';b.onclick=()=>go(i);pp.append(b);
 });
 
-function size(){H=innerHeight;P=H*.85;SH=H*.8;TP=H*.1;if(!auto){ty=TP-idx*P;y=ty}}
+function getVisibleViewportHeight(){
+ const vv=window.visualViewport;
+ const h=(vv&&Number.isFinite(vv.height)&&vv.height>0)?vv.height:(document.documentElement.clientHeight||window.innerHeight||0);
+ return Math.max(320,Math.round(h));
+}
+function size(){
+ H=getVisibleViewportHeight();
+ const mobile=matchMedia('(max-width:760px)').matches;
+ const slideRatio=mobile?.84:.8;
+ const gapRatio=mobile?.04:.05;
+ SH=H*slideRatio;
+ P=H*(slideRatio+gapRatio);
+ TP=(H-SH)/2;
+ R.style.setProperty('--reel-vh',H+'px');
+ R.style.setProperty('--slide-h',SH+'px');
+ R.style.setProperty('--slide-gap',(H*gapRatio)+'px');
+ if(!auto){ty=TP-idx*P;y=ty}
+}
 function hud(){
  [...pp.children].forEach((b,i)=>b.classList.toggle('on',i===idx));
  const c=COL[S[idx].dataset.k];pp.parentNode.style.setProperty('--pc',c[1]);
@@ -1096,7 +1159,14 @@ $$('[data-go]').forEach(a=>a.addEventListener('click',e=>{
  const id=(a.getAttribute('href')||'').slice(1),i=S.findIndex(s=>s.id===id);if(i<0)return;e.preventDefault();cl();go(i);
 }));
 nx.onclick=()=>go(idx===N-1?0:idx+1);
-addEventListener('resize',size);
+let sizeRAF=0;
+const scheduleSize=()=>{cancelAnimationFrame(sizeRAF);sizeRAF=requestAnimationFrame(size)};
+addEventListener('resize',scheduleSize,{passive:true});
+addEventListener('orientationchange',scheduleSize,{passive:true});
+if(window.visualViewport){
+ visualViewport.addEventListener('resize',scheduleSize,{passive:true});
+ visualViewport.addEventListener('scroll',scheduleSize,{passive:true});
+}
 $$('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
 $$('.chip').forEach(c=>c.onclick=()=>{const on=c.getAttribute('aria-pressed')==='true';$$('.chip').forEach(x=>x.setAttribute('aria-pressed','false'));c.setAttribute('aria-pressed',on?'false':'true')});
 $('#send').onclick=()=>{
