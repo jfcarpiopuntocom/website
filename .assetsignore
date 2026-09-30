@@ -22,3 +22,6 @@ scripts
 entities.json
 # Apuntes internos (JFC 2026-09-27): no se publican.
 notas
+
+# Puente Gumroad (JFC 2026-09-30): codigo aparte, no se publica como pagina.
+gumroad-bridge

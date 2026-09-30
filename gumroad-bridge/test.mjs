@@ -1,0 +1,23 @@
+// Prueba local sin red:  node gumroad-bridge/test.mjs
+import w, { publicProduct, imgAllowed } from "./worker.mjs";
+import assert from "node:assert/strict";
+const calls = [];
+globalThis.fetch = async (u, o) => { calls.push([String(u), o?.headers?.authorization]);
+  if (String(u).endsWith("/products")) return new Response(JSON.stringify({ products: [{ id: "a", name: "P1", short_url: "https://x.gumroad.com/l/p1", price: 899, currency: "usd", thumbnail_url: "https://public-files.gumroad.com/t.png", description: "<b>Hola</b> mundo", published: true, secret_field: "NO" }, { id: "b", name: "Oculto", published: false }] }));
+  if (String(u).includes("/sales")) return new Response(JSON.stringify({ sales: [{ product_name: "P1", price: 899, email: "x@y.z" }, { product_name: "P1", price: 899, email: "q@y.z" }] }));
+  return new Response("img", { headers: { "content-type": "image/png" } }); };
+const env = { GUMROAD_TOKEN_JFC: "tj", GUMROAD_TOKEN_ESCUELA: "te", BRIDGE_KEY: "k" };
+const get = (p, h = {}) => w.fetch(new Request("https://jfcarpio.com" + p, { headers: h }), env);
+let r = await get("/api/gumroad/products.json?store=all"); let b = await r.json();
+assert.equal(r.status, 200); assert.equal(b.length, 2); assert.equal(b[0].name, "P1"); assert.equal(b[0].description, "Hola mundo"); assert.ok(!("secret_field" in b[0]));
+assert.deepEqual(calls.map(c => c[1]), ["Bearer tj", "Bearer te"]);
+assert.equal((await get("/api/gumroad/sales-summary")).status, 401);
+r = await get("/api/gumroad/sales-summary?store=jfc", { "x-bridge-key": "k" }); const s = await r.json();
+assert.deepEqual(s.jfc.P1, { ventas: 2, centavos: 1798 }); assert.ok(!JSON.stringify(s).includes("@"));
+assert.equal((await get("/api/gumroad/img?u=" + encodeURIComponent("http://evil.com/a.png"))).status, 400);
+assert.equal((await get("/api/gumroad/img?u=" + encodeURIComponent("https://evil.com/a.png"))).status, 400);
+assert.equal((await get("/api/gumroad/img?u=" + encodeURIComponent("https://public-files.gumroad.com/t.png"))).status, 200);
+assert.equal((await get("/api/gumroad/products.json?store=zzz")).status, 400);
+assert.equal((await w.fetch(new Request("https://jfcarpio.com/api/gumroad/products.json", { method: "POST" }), env)).status, 405);
+assert.ok(imgAllowed("https://assets.gumroad.com/x.png") && !imgAllowed("https://assets.gumroad.com.evil.com/x.png"));
+console.log("OK: 10 comprobaciones");
