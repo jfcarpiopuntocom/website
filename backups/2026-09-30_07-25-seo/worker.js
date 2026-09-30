@@ -56,13 +56,6 @@ export default {
       url.hostname = url.hostname.slice(4);
       return Response.redirect(url.toString(), 301);
     }
-    // 1b. Canonical puntual: el asset layer ya normaliza este .html a la URL limpia con 307.
-    // Hacemos la señal permanente y explícita para usuarios y buscadores.
-    if (url.pathname === "/working-paper-hidden-cost.html") {
-      url.pathname = "/working-paper-hidden-cost";
-      return Response.redirect(url.toString(), 301);
-    }
-
     // 2. Archivos del sitio desde Cloudflare (sin volver a GitHub)
     const res = await env.ASSETS.fetch(request);
     // 3. Cabeceras de seguridad en todo
