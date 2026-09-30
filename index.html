@@ -1180,7 +1180,7 @@ function tick(now){
  S.forEach((s,i)=>{
   const dy=i*P+y+SH/2-H/2,dn=Math.abs(dy)/SH;
   if(dn>1.5){if(s._v){s._v=0;s._f.style.opacity=0;$$('.reveal.in',s).forEach(e=>{e.style.transitionDelay='0s';e.classList.remove('in')})}return}
-  s._v=1;s._b.style.transform='translate3d(0,'+(-dy/1.2).toFixed(1)+'px,0)';
+  s._v=1;if(s._b)s._b.style.transform='translate3d(0,'+(-dy/1.2).toFixed(1)+'px,0)';
   let o=0,bl=16,c=0;
   if(!auto){
    if(i===idx){const u=Math.max(0,Math.min(1,1-dn/.55));o=u*u*(3-2*u);bl=(1-o)*14;c=(1-o)*64*Math.sign(dy||1)}
