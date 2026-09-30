@@ -193,6 +193,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/friendly123/consignment-commissions/"/>
   </url>
 
+  <!-- LAS 7 FORMAS (La Escuela del Dinero) -->
+  <url>
+    <loc>https://jfcarpio.com/las7formas/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- SLIDE-PAGES-START -->
   <url>
     <loc>https://jfcarpio.com/historia-de-dos-negocios/dos-maneras-de-operar/</loc>
@@ -211,15 +219,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/apps/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/apps/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/apps/"/>
-  </url>
-  <url>
-    <loc>https://jfcarpio.com/el-dato/</loc>
-    <lastmod>2026-09-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/el-dato/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/the-data-point/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/el-dato/"/>
   </url>
   <url>
     <loc>https://jfcarpio.com/historia-de-dos-negocios/la-informacion-sola-no-basta/</loc>
@@ -283,15 +282,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/datos-no-es-ver/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/tale-of-two-businesses/data-is-not-seeing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/historia-de-dos-negocios/datos-no-es-ver/"/>
-  </url>
-  <url>
-    <loc>https://jfcarpio.com/dashboards/</loc>
-    <lastmod>2026-09-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/dashboards/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/dashboards/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/dashboards/"/>
   </url>
   <url>
     <loc>https://jfcarpio.com/visores/</loc>
@@ -384,15 +374,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/apps/"/>
   </url>
   <url>
-    <loc>https://jfcarpio.com/en/the-data-point/</loc>
-    <lastmod>2026-09-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/el-dato/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/the-data-point/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/el-dato/"/>
-  </url>
-  <url>
     <loc>https://jfcarpio.com/en/tale-of-two-businesses/information-alone-is-not-enough/</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -454,15 +435,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/datos-no-es-ver/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/tale-of-two-businesses/data-is-not-seeing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/historia-de-dos-negocios/datos-no-es-ver/"/>
-  </url>
-  <url>
-    <loc>https://jfcarpio.com/en/dashboards/</loc>
-    <lastmod>2026-09-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/dashboards/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/dashboards/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/dashboards/"/>
   </url>
   <url>
     <loc>https://jfcarpio.com/en/business-viewers/</loc>
