@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script>
+/* Reel pre-paint gate: activate the cinematic layout before first paint.
+   If the reel engine throws, its catch removes both classes and the complete stacked fallback remains visible. */
+document.documentElement.classList.add('reel','js-rv');
+</script>
 <title>JFCarpio.com | Investigación económica, reportes, dashboards y talleres</title>
 <meta name="description" content="Investigación económica y empresarial para decidir mejor: reportes, dashboards, herramientas y talleres del equipo de JFCarpio.com. Ecuador y proyectos internacionales.">
 <meta name="author" content="Juan Fernando Carpio">
