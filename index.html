@@ -1110,6 +1110,12 @@ html:not(.reel) .thr{position:static;height:60px}html:not(.reel) .thr path{strok
 .cap .story-proof{background:none;border-left:3px solid #E8A020;padding:4px 0 4px 12px}
 :is(#articulos,#gumroad,#escuela,#gratis,#visores) .rr{counter-reset:ri}
 :is(#articulos,#gumroad,#escuela,#gratis,#visores) .ri::before{counter-increment:ri;content:counter(ri,decimal-leading-zero);display:block;margin-bottom:6px;font:700 max(.82rem,13.12px)/1 'Space Mono',ui-monospace,monospace;letter-spacing:.18em;color:#E8A020}
+@media(max-width:640px){:is(#articulos,#gumroad,#escuela,#gratis,#visores) .ri::before{display:none}}
+@media(max-width:640px) and (max-height:700px){:is(#gumroad,#escuela,#articulos) .rr .ri:nth-child(n+2){display:none}}
+@media(max-width:640px) and (max-height:860px){#escuela .rr .ri:nth-child(n+2){display:none}}
+@media(max-width:640px) and (max-height:700px){:is(#gumroad,#escuela) .rr{display:none}}
+@media(max-width:640px){#escuela .ri span{display:none}}
+@media(min-width:641px) and (max-width:900px){#libro .lead2{display:none!important}}
 </style>
 </head>
 <body>
