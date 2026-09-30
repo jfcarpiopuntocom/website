@@ -71,3 +71,38 @@ arrastre, 12 paneles, idioma, hash `#libro`, `?lang=en`, reduced-motion y sin Ja
 jfcarpio.com lo sirve el Worker de Cloudflare `website`. El 2026-09-29 ese Worker estaba conectado (Workers Builds) al repo
 `friendly-123` en vez de a este repo: cada fusión en friendly-123 publicó la app encima de la página. Hasta que JFC lo reconecte
 (Settings > Build > Disconnect; Connect > `jfcarpiopuntocom/website`, rama `main`) y haga Rollback, fusionar aquí NO cambia la web.
+
+---
+
+## 2026-09-30 00:xx Ecuador — Reel compartimentado v2.1: cada fotorama como micro-website
+
+### Para Juan
+- Pedido: llevar a fondo la idea aprobada de que **cada fotorama principal sea casi su propio website**, sin perder el reel vertical ni convertir todo en una sola plantilla.
+- Regla visual vigente: **Publicaciones es la referencia de belleza/calidad y su paleta es la del sitio; NO obliga a copiar su diagramación.** Dashboards mantiene identidad data-product propia.
+- Historia de dos negocios sigue siendo la columna vertebral. Sus cinco capítulos ya no comparten la misma diagramación:
+  - c1 Herramientas = **dos carriles** (observar antes de decidir vs reconstruir tarde).
+  - c4 Talleres = **mesa de trabajo** (titular ancho + prácticas compartidas).
+  - c5 Reportes = **dossier de inteligencia** (lectura interna vs señales externas).
+  - c8 Dashboards = **cockpit editorial** con retícula/sensores visuales, sin copiar la slide de Dashboards.
+  - c9 Desenlace = **conclusión a dos columnas** y una franja de consecuencia final.
+- Los fotoramas principales conservan las identidades del pase anterior: portada cinematográfica, Apps product wall, Dato como póster numérico, Artículos como índice editorial, Libro como jacket, Reportes como briefs, Trayectoria como exhibit, Talleres como agenda, Gumroad como storefront, Clientes como galería de testimonios y Contacto como cierre silencioso.
+- En móvil no se escala desktop: hay una composición específica por capítulo y un fallback para pantallas bajas. **No se elimina copy aprobado** para hacerlo caber.
+- Se corrigieron restos visuales oro/carmesí en los capítulos: el story usa la paleta aprobada de Publicaciones (#060E1D, #7FB0FF, #255FB8, blanco).
+- Este pase fue deliberadamente de **dirección de arte**, no de copy: no se reescribió el wording aprobado.
+
+### Para Claude / Codex / siguiente asistente
+- Repo: jfcarpiopuntocom/website
+- Rama: design/reel-compartmentalized-v2
+- PR: #44
+- Archivo visual: index.html
+- Backup previo: backups/2026-09-30_00-19-34/index.html
+- Commit visual: 6c8e84fbffbe2dd11501c1b9f83aa451fa9f4d7e
+- Versión interna del master style: v2.1 · 2026-09-30
+- Validación PR: GitHub Actions Validate HTML + JSON-LD, run 36673274594, conclusión success.
+- Preflight adicional de Codex sobre la rama: 1 DOCTYPE; 0 Juan%20Fernando; 0 src relativos; 18 slides reales; bloque CSS v2 balanceado; cero uso público prohibido de economist.
+- Hardrule nueva añadida al código: HARDRULE COMPARTIMENTACION JFC 2026-09-30.
+- NO revertir a una única cuadrícula/plantilla común. Si una sección nueva aparece, preguntarse primero cuál es su propia gramática visual.
+- NO tocar el wording institucional “el equipo de JFCarpio.com” durante pases visuales.
+- NO usar foto de JFC como fondo o retrato grande en slides.
+- NO convertir Publicaciones en template universal: es referencia de calidad y paleta, no diagrama obligatorio.
+- El test Playwright local scripts/test-reel.cjs no pudo ejecutarse desde este entorno porque el contenedor no resuelve GitHub para clonar el repo. No presentar esa prueba como corrida. La validación HTML/JSON-LD sí está verificada en Actions.
