@@ -1,0 +1,8 @@
+# Worker APARTE del sitio. NO conectar a Workers Builds del repo "website" (incidente 29-09):
+# se despliega a mano con:  cd gumroad-bridge && npx wrangler deploy
+name = "gumroad-bridge"
+main = "worker.mjs"
+compatibility_date = "2025-09-27"
+workers_dev = false
+# La ruta mas especifica gana sobre jfcarpio.com/* del Worker "website".
+routes = [ { pattern = "jfcarpio.com/api/gumroad/*", zone_name = "jfcarpio.com" } ]

@@ -1,0 +1,28 @@
+// Prueba local sin red:  node gumroad-bridge/test.mjs   (respuestas simuladas con la forma de las docs oficiales)
+import w, { imgAllowed } from "./worker.mjs";
+import assert from "node:assert/strict";
+const calls = [];
+globalThis.fetch = async (u, o) => { u = String(u); calls.push([u, o?.headers?.authorization]);
+  if (u.endsWith("/.json")) return new Response(JSON.stringify({ products: [{ id: "a", permalink: "p1", name: "P1", url: "https://x.gumroad.com/l/p1", price_cents: 899, currency_code: "usd", price_formatted: "$8.99", thumbnail_url: "https://public-files.gumroad.com/t", ratings: { count: 3, average: 4, percentages: [0, 0, 0, 100, 0] }, native_type: "digital", email_secreto: "NO" }] }));
+  if (u.includes("/l/p1.json")) return new Response(JSON.stringify({ id: "a", permalink: "p1", name: "P1", url: "https://x.gumroad.com/l/p1", description_html: "<p>Hola <b>mundo</b></p>", covers: [{ url: "https://public-files.gumroad.com/c", original_url: "https://public-files.gumroad.com/o", type: "image", width: 1, height: 1 }], attributes: [], is_published: true }));
+  if (u.startsWith("https://api.gumroad.com/v2/sales")) return new Response(JSON.stringify(u.includes("page_key") ? { sales: [{ product_name: "P1", price: 100, utm_campaign: "escuela", email: "z@z.z" }] } : { sales: [{ product_name: "P1", price: 899, utm_campaign: "escuela", email: "x@y.z" }, { product_name: "P1", price: 899, refunded: true }], next_page_key: "K1" }));
+  return new Response("img", { headers: { "content-type": "image/png" } }); };
+const env = { GUMROAD_TOKEN_JFC: "tj", GUMROAD_TOKEN_ESCUELA: "te", BRIDGE_KEY: "k" };
+const get = (p, h = {}) => w.fetch(new Request("https://jfcarpio.com" + p, { headers: h }), env);
+let r = await get("/api/gumroad/products.json?store=all"); let b = await r.json();
+assert.equal(r.status, 200); assert.equal(b.length, 2); assert.equal(b[0].price, "$8.99"); assert.equal(b[0].ratings.average, 4);
+assert.ok(!JSON.stringify(b).includes("email_secreto")); assert.ok(calls.every((c) => c[1] === undefined), "los productos NO usan token");
+r = await get("/api/gumroad/product?store=jfc&permalink=p1"); b = await r.json();
+assert.equal(b.description, "Hola mundo"); assert.equal(b.covers[0].url, "https://public-files.gumroad.com/c");
+assert.equal((await get("/api/gumroad/product?store=jfc&permalink=../x")).status, 400);
+assert.equal((await get("/api/gumroad/sales-summary")).status, 401);
+r = await get("/api/gumroad/sales-summary?store=jfc&after=2026-01-01", { "x-bridge-key": "k" }); const s = await r.json();
+assert.deepEqual(s.jfc.por_producto.P1, { ventas: 2, centavos: 999 }); assert.deepEqual(s.jfc.por_utm_campaign.escuela, { ventas: 2, centavos: 999 });
+assert.ok(!JSON.stringify(s).includes("@")); assert.ok(calls.some((c) => c[1] === "Bearer tj"));
+assert.equal((await get("/api/gumroad/sales-summary?after=hoy", { "x-bridge-key": "k" })).status, 400);
+assert.equal((await get("/api/gumroad/img?u=" + encodeURIComponent("https://evil.com/a.png"))).status, 400);
+assert.equal((await get("/api/gumroad/img?u=" + encodeURIComponent("https://public-files.gumroad.com/t.png"))).status, 200);
+assert.equal((await get("/api/gumroad/products.json?store=zzz")).status, 400);
+assert.equal((await w.fetch(new Request("https://jfcarpio.com/api/gumroad/products.json", { method: "POST" }), env)).status, 405);
+assert.ok(imgAllowed("https://assets.gumroad.com/x.png") && !imgAllowed("https://assets.gumroad.com.evil.com/x.png"));
+console.log("OK: 15 comprobaciones");
