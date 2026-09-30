@@ -175,7 +175,7 @@ def main():
                     body.append(f'<p class="{"a" if "pa" in p.cls() else "b"}"><strong>{html.escape(head)}</strong> {html.escape(txt)}</p>')
                 body.append("</div>")
         # bola de nieve
-        sn = find(root, cls="snow")
+        sn = find(root, cls="snow") or find(root, cls="sum")
         if sn:
             chips = [tx(c) for c in find_all(sn, cls="c")]
             lab = tx(find(sn, cls="sl"))
