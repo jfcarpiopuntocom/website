@@ -1,11 +1,12 @@
 
 <!DOCTYPE html>
-<html lang="es" style="--visor-img: url(https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg);"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- saved from url=(0036)https://jfcarpio.com/visorgerencial/ -->
+<html lang="es" style="--visor-img: url(https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg);"><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js" id="eppiocemhmnlbhjplcgkofciiegomcon"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script bis_use="true" type="text/javascript" charset="utf-8" data-bis-config="{&quot;blacklistIframeSrc&quot;:[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//www.google.com/recaptcha/enterprise/anchor&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.net/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,&quot;challenges.cloudflare.com/&quot;,&quot;ogs.google.com&quot;,&quot;//www.ukrnafta.com/data/map/&quot;,&quot;//maps.google.com/maps&quot;,&quot;//www.openstreetmap.org/export/embed.html&quot;,&quot;//www.google.com/maps/d/u/3/embed&quot;,&quot;//itm.ebaydesc.com/itmdesc&quot;,&quot;//books.google.com/books&quot;,&quot;//embed.podcasts.apple.com&quot;,&quot;//www.paypal.com/smartchat&quot;,&quot;//www.centurylink.com/assets/includes/common/sfChatiFrame.html&quot;,&quot;//macmillan-prod-gen.ada.support/embed&quot;,&quot;//macmillan-prod-gen.ada.support/chat&quot;,&quot;//ctl-consumer.my.site.com/&quot;],&quot;whitelistDomainsForPostBody&quot;:[&quot;youtube.com&quot;]}" data-dynamic-id="cd83dcea-fd9f-4995-9cc5-0ad975c18d3e" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js" id="eppiocemhmnlbhjplcgkofciiegomcon"></script><script bis_use="true" type="text/javascript" charset="utf-8" nonce="" data-dynamic-id="cd83dcea-fd9f-4995-9cc5-0ad975c18d3e" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/101.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><script bis_use="true" type="text/javascript" charset="utf-8" data-bis-config="{&quot;blacklistIframeSrc&quot;:[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//www.google.com/recaptcha/enterprise/anchor&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.net/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,&quot;challenges.cloudflare.com/&quot;,&quot;ogs.google.com&quot;,&quot;//www.ukrnafta.com/data/map/&quot;,&quot;//maps.google.com/maps&quot;,&quot;//www.openstreetmap.org/export/embed.html&quot;,&quot;//www.google.com/maps/d/u/3/embed&quot;,&quot;//itm.ebaydesc.com/itmdesc&quot;,&quot;//books.google.com/books&quot;,&quot;//embed.podcasts.apple.com&quot;,&quot;//www.paypal.com/smartchat&quot;,&quot;//www.centurylink.com/assets/includes/common/sfChatiFrame.html&quot;,&quot;//macmillan-prod-gen.ada.support/embed&quot;,&quot;//macmillan-prod-gen.ada.support/chat&quot;,&quot;//ctl-consumer.my.site.com/&quot;],&quot;whitelistDomainsForPostBody&quot;:[&quot;youtube.com&quot;]}" data-dynamic-id="aaa77d40-73b2-4f73-ba44-696504527d0e" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Visor Gerencial | 7 tableros gratuitos para gerentes</title>
+<title>7 Tableros Gerenciales Gratuitos para Gerentes de Área | Visor Gerencial — Avatiun</title>
   <!-- SEO + Open Graph + WhatsApp/LinkedIn/Twitter -->
-<meta name="description" content="Siete tableros gerenciales gratuitos para leer entorno económico y apoyar decisiones. Benchmarks para Ecuador, Colombia, Perú y Chile. Sin registro.">
+<meta name="description" content="Suite de 7 tableros gerenciales gratuitos: análisis de entorno económico para toma de decisiones. Benchmarks para Ecuador, Colombia, Perú y Chile. Sin registro.">
   <meta name="keywords" content="visor gerencial, tablero de control gerente, KPI gerenciales, indicadores gerenciales latinoamerica, dashboard gerente area, herramienta gerencial gratis, KPI marketing, KPI ventas, KPI finanzas, KPI operaciones, gerente de area, management dashboard latin america, free management dashboard, tablero gratis gerente, Avatiun Consult, GrowthOS">
   <meta name="author" content="Avatiun Consult — Juan Fernando Carpio">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -21,7 +22,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Visor Gerencial — Avatiun Consult">
-  <meta property="og:title" content="Visor Gerencial | 7 tableros gratuitos para gerentes">
+  <meta property="og:title" content="7 Tableros Gerenciales Gratuitos — Marketing, Ventas, Finanzas y más | Avatiun">
   <meta property="og:description" content="7 tableros en uno: Marketing, Ventas, Finanzas, Operaciones, Talento, Logística y Tecnología. Calculadoras en vivo, benchmarks LatAm. Gratis para siempre, sin registro.">
   <meta property="og:image" content="https://placehold.co/1200x630/030609/00FF87/png?text=Visor+Gerencial+%7C+7+Areas">
   <meta property="og:image:width" content="1200">
@@ -35,7 +36,7 @@
   <meta property="og:locale" content="es_EC">
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Visor Gerencial | 7 tableros gratuitos para gerentes">
+  <meta name="twitter:title" content="7 Tableros Gerenciales Gratuitos — Marketing, Ventas, Finanzas y más">
   <meta name="twitter:description" content="Suite de 7 tableros gerenciales gratuitos con calculadoras en vivo y benchmarks LatAm. Sin registro. Avatiun Consult.">
   <meta name="twitter:image" content="https://placehold.co/1200x630/030609/00FF87/png?text=Visor+Gerencial+%7C+7+Areas">
   <meta name="twitter:site" content="@avatiun">
@@ -1333,87 +1334,87 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   ]
 }
 </script>
-</head>
-<body __processed_9542346e-a914-4bac-80b4-21e554189973__="true" cz-shortcut-listen="true" __processed_0c821e2c-7f2b-40ef-8525-c06171587e6b__="true">
+<script bis_use="true" type="text/javascript" charset="utf-8" nonce="" data-dynamic-id="aaa77d40-73b2-4f73-ba44-696504527d0e" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/101.js"></script></head>
+<body __processed_9542346e-a914-4bac-80b4-21e554189973__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZW5hYmxlZCIsIkNPTkZJRyI6ImRpc2FibGVkIn0sInZlcnNpb24iOiIyLjAuNDciLCJzY29yZSI6MjAwNDcwfV0=" cz-shortcut-listen="true" __processed_0c821e2c-7f2b-40ef-8525-c06171587e6b__="true">
 <img id="vi" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg"  style="display:none" loading="eager">
 
-<div class="orb orb-1"></div><div class="orb orb-2"></div>
-<div class="orb orb-3"></div><div class="orb orb-4"></div>
+<div class="orb orb-1" bis_skin_checked="1"></div><div class="orb orb-2" bis_skin_checked="1"></div>
+<div class="orb orb-3" bis_skin_checked="1"></div><div class="orb orb-4" bis_skin_checked="1"></div>
 
 <!-- HEADER -->
 <header>
-  <div class="brand">
-    <div class="logo" style="background:var(--visor-img) center/cover;border:1.5px solid rgba(0,255,135,.4);box-shadow:0 0 12px rgba(0,255,135,.2);overflow:hidden;font-size:0"></div>
-    <div>
-      <div class="brand-name">Visor Gerencial</div>
-      <div class="brand-sub">Avatiun Consult × GrowthOS · LatAm</div>
+  <div class="brand" bis_skin_checked="1">
+    <div class="logo" style="background:var(--visor-img) center/cover;border:1.5px solid rgba(0,255,135,.4);box-shadow:0 0 12px rgba(0,255,135,.2);overflow:hidden;font-size:0" bis_skin_checked="1"></div>
+    <div bis_skin_checked="1">
+      <div class="brand-name" bis_skin_checked="1">Visor Gerencial</div>
+      <div class="brand-sub" bis_skin_checked="1">Avatiun Consult × GrowthOS · LatAm</div>
     </div>
   </div>
-  <div class="hright">
-    <div class="lang-sw">
+  <div class="hright" bis_skin_checked="1">
+    <div class="lang-sw" bis_skin_checked="1">
       <button type="button" class="lb la" id="btn-es" onclick="setLang(&#39;es&#39;)">ES</button>
       <button type="button" class="lb" id="btn-pt" onclick="setLang(&#39;pt&#39;)">PT</button>
     </div>
-    <div class="hbadge"><span class="dot"></span><span id="live-lbl">1 de 7 · En vivo</span></div>
+    <div class="hbadge" bis_skin_checked="1"><span class="dot"></span><span id="live-lbl">1 de 7 · En vivo</span></div>
   </div>
 </header>
 
 <main>
 
 <!-- HERO -->
-<div class="hero">
+<div class="hero" bis_skin_checked="1">
 
   <!-- Visor Frame -->
   <img class="visor-hero-img" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor Gerencial" loading="lazy">
 
-  <div class="eyebrow"><span class="dot"></span><span id="ey-txt">Herramientas libres · Para la comunidad gerencial latinoamericana</span></div>
+  <div class="eyebrow" bis_skin_checked="1"><span class="dot"></span><span id="ey-txt">Herramientas libres · Para la comunidad gerencial latinoamericana</span></div>
   <h1 class="hero-h1">
     <span id="h1-a">Los 7 visores gerenciales</span><br>
     <span class="grad-text" id="h1-b">que tu equipo estaba esperando.</span>
   </h1>
   <p class="hero-series">Serie <em id="serie-txt">Luciéndome como Gerente de Área</em> · Avatiun Consult × GrowthOS · 2026</p>
   <p class="hero-sub" id="hero-sub">Cada área tiene un idioma. El directorio tiene otro. Estos tableros son el traductor — gratuito, para siempre — que convierte tu trabajo en números que mueven presupuestos, abren puertas y consolidan tu posición estratégica. (Como mereces).</p>
-  <div class="stats">
-    <div class="stat"><div class="stat-n">7</div><div class="stat-l" id="s1">Áreas gerenciales</div></div>
-    <div class="stat"><div class="stat-n">6+</div><div class="stat-l" id="s2">Indicadores por visor</div></div>
-    <div class="stat"><div class="stat-n">$0</div><div class="stat-l" id="s3">Para siempre</div></div>
-    <div class="stat"><div class="stat-n">LatAm</div><div class="stat-l" id="s4">Diseñado aquí</div></div>
+  <div class="stats" bis_skin_checked="1">
+    <div class="stat" bis_skin_checked="1"><div class="stat-n" bis_skin_checked="1">7</div><div class="stat-l" id="s1" bis_skin_checked="1">Áreas gerenciales</div></div>
+    <div class="stat" bis_skin_checked="1"><div class="stat-n" bis_skin_checked="1">6+</div><div class="stat-l" id="s2" bis_skin_checked="1">Indicadores por visor</div></div>
+    <div class="stat" bis_skin_checked="1"><div class="stat-n" bis_skin_checked="1">$0</div><div class="stat-l" id="s3" bis_skin_checked="1">Para siempre</div></div>
+    <div class="stat" bis_skin_checked="1"><div class="stat-n" bis_skin_checked="1">LatAm</div><div class="stat-l" id="s4" bis_skin_checked="1">Diseñado aquí</div></div>
   </div>
 </div>
 
 <!-- ARMORY LABEL -->
-<div class="sh">
-  <div class="sh-ico">◈</div>
+<div class="sh" bis_skin_checked="1">
+  <div class="sh-ico" bis_skin_checked="1">◈</div>
   <span class="sh-text" id="sh-txt">Elige tu área — abre el visor</span>
 </div>
 
 <!-- ARMORY GRID -->
-<div class="armory">
+<div class="armory" bis_skin_checked="1">
 
   <!-- 1. MARKETING — LIVE -->
-  <div class="vc vc-mkt live" onclick="location.href=&#39;/visordemarketing/&#39;" tabindex="0">
-    <div class="scanline"></div>
-    <div class="vc-glow"></div>
-    <div class="vc-top">
+  <div class="vc vc-mkt live" onclick="location.href=&#39;/visordemarketing/&#39;" tabindex="0" bis_skin_checked="1">
+    <div class="scanline" bis_skin_checked="1"></div>
+    <div class="vc-glow" bis_skin_checked="1"></div>
+    <div class="vc-top" bis_skin_checked="1">
       <span class="vc-icon">📊</span>
-      <div class="vc-badges">
+      <div class="vc-badges" bis_skin_checked="1">
         <span class="badge badge-live">● <span class="t" data-es="Disponible ahora" data-pt="Disponível agora">Disponible ahora</span></span>
         <span class="badge-q" style="color:var(--amber);font-size:8px;letter-spacing:.06em">6 indicadores · Live</span>
       </div>
     </div>
-    <div>
-      <div class="vc-area"><span class="t" data-es="Gerencia de" data-pt="Gestão de">Gerencia de</span> <span class="vc-area-color">Marketing</span></div>
-      <div class="vc-name">Visor Gerencial · Marketing</div>
+    <div bis_skin_checked="1">
+      <div class="vc-area" bis_skin_checked="1"><span class="t" data-es="Gerencia de" data-pt="Gestão de">Gerencia de</span> <span class="vc-area-color">Marketing</span></div>
+      <div class="vc-name" bis_skin_checked="1">Visor Gerencial · Marketing</div>
     </div>
     <p class="vc-desc t" data-es="El tablero que convierte campañas, retención y reactivación en el único idioma que mueve presupuestos — el de la caja. Calculadoras en tiempo real, semáforo de visibilidad y benchmark sectorial latinoamericano." data-pt="O painel que converte campanhas, retenção e reativação na única linguagem que move orçamentos — a do caixa. Calculadoras em tempo real, semáforo de visibilidade e benchmark sectorial latino-americano.">El tablero que convierte campañas, retención y reactivación en el único idioma que mueve presupuestos — el de la caja. Calculadoras en tiempo real, semáforo de visibilidad y benchmark sectorial latinoamericano.</p>
     <!-- Mini metrics dashboard -->
-    <div class="md">
-      <div class="mm"><span class="mm-v">3.4×</span><span class="mm-l">CAP</span></div>
-      <div class="mm"><span class="mm-v">+12%</span><span class="mm-l">MVV</span></div>
-      <div class="mm"><span class="mm-v">28%</span><span class="mm-l">LGI</span></div>
-      <div class="mm"><span class="mm-v">22%</span><span class="mm-l">PDI</span></div>
-      <div class="mm"><span class="mm-v">1.4×</span><span class="mm-l">CLE</span></div>
-      <div class="mm"><span class="mm-v">0.17</span><span class="mm-l">CPR/CPA</span></div>
+    <div class="md" bis_skin_checked="1">
+      <div class="mm" bis_skin_checked="1"><span class="mm-v">3.4×</span><span class="mm-l">CAP</span></div>
+      <div class="mm" bis_skin_checked="1"><span class="mm-v">+12%</span><span class="mm-l">MVV</span></div>
+      <div class="mm" bis_skin_checked="1"><span class="mm-v">28%</span><span class="mm-l">LGI</span></div>
+      <div class="mm" bis_skin_checked="1"><span class="mm-v">22%</span><span class="mm-l">PDI</span></div>
+      <div class="mm" bis_skin_checked="1"><span class="mm-v">1.4×</span><span class="mm-l">CLE</span></div>
+      <div class="mm" bis_skin_checked="1"><span class="mm-v">0.17</span><span class="mm-l">CPR/CPA</span></div>
     </div>
     <!-- Sparkline trend -->
     <svg class="spark" viewBox="0 0 280 30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -1421,133 +1422,133 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
       <circle cx="280" cy="4" r="3" fill="#FFB830" opacity=".9"></circle>
       <circle cx="280" cy="4" r="6" fill="none" stroke="rgba(255,184,48,.3)" stroke-width="1"></circle>
     </svg>
-    <div class="vc-footer">
+    <div class="vc-footer" bis_skin_checked="1">
       <span class="vc-tag t" data-es="✓ Gratis · Sin registro · Sin tarjeta" data-pt="✓ Grátis · Sem registo · Sem cartão">✓ Gratis · Sin registro · Sin tarjeta</span>
       <button type="button" class="vc-btn" onclick="event.stopPropagation();location.href=&#39;/visordemarketing/&#39;"><span class="t" data-es="Abrir el Visor →" data-pt="Abrir o Visor →">Abrir el Visor →</span></button>
     </div>
   </div>
 
   <!-- 2. VENTAS -->
-  <div class="vc vc-ven soon" onclick="openModal(&#39;Ventas&#39;)" tabindex="0">
-    <div class="vc-glow"></div>
-    <div class="vc-top">
+  <div class="vc vc-ven soon" onclick="openModal(&#39;Ventas&#39;)" tabindex="0" bis_skin_checked="1">
+    <div class="vc-glow" bis_skin_checked="1"></div>
+    <div class="vc-top" bis_skin_checked="1">
       <span class="vc-icon">💼</span>
-      <div class="vc-badges"><span class="badge badge-soon t" data-es="Próximamente" data-pt="Em breve">Próximamente</span><span class="badge-q">Q3 · 2026</span></div>
+      <div class="vc-badges" bis_skin_checked="1"><span class="badge badge-soon t" data-es="Próximamente" data-pt="Em breve">Próximamente</span><span class="badge-q">Q3 · 2026</span></div>
     </div>
-    <div>
-      <div class="vc-area"><span class="t" data-es="Gerencia de" data-pt="Gestão de">Gerencia de</span> <span class="vc-area-color t" data-es="Ventas" data-pt="Vendas">Ventas</span></div>
-      <div class="vc-name">Visor Gerencial · <span class="t" data-es="Ventas" data-pt="Vendas">Ventas</span></div>
+    <div bis_skin_checked="1">
+      <div class="vc-area" bis_skin_checked="1"><span class="t" data-es="Gerencia de" data-pt="Gestão de">Gerencia de</span> <span class="vc-area-color t" data-es="Ventas" data-pt="Vendas">Ventas</span></div>
+      <div class="vc-name" bis_skin_checked="1">Visor Gerencial · <span class="t" data-es="Ventas" data-pt="Vendas">Ventas</span></div>
     </div>
     <p class="vc-desc t" data-es="Pipeline real, conversión por etapa, ticket promedio y rentabilidad por canal. Deja de defender cuotas — empieza a negociarlas. El gerente comercial que habla de margen gana la sala." data-pt="Pipeline real, conversão por etapa, ticket médio e rentabilidade por canal. Deixe de defender quotas — comece a negociá-las. O gestor comercial que fala de margem ganha a sala.">Pipeline real, conversión por etapa, ticket promedio y rentabilidad por canal. Deja de defender cuotas — empieza a negociarlas. El gerente comercial que habla de margen gana la sala.</p>
-    <div class="vc-kpis">
+    <div class="vc-kpis" bis_skin_checked="1">
       <span class="kpi kpi-dim">CVP</span><span class="kpi kpi-dim">TCV</span><span class="kpi kpi-dim">RFC</span><span class="kpi kpi-dim">CPV</span><span class="kpi kpi-dim">+3</span>
     </div>
-    <div class="vc-footer">
+    <div class="vc-footer" bis_skin_checked="1">
       <span class="vc-tag t" data-es="Avísame al lanzar" data-pt="Avise-me no lançamento">Avísame al lanzar</span>
       <button type="button" class="vc-soon-btn t" data-es="Notificarme →" data-pt="Notificar-me →">Notificarme →</button>
     </div>
   </div>
 
   <!-- 3. FINANZAS -->
-  <div class="vc vc-fin soon" onclick="openModal(&#39;Finanzas&#39;)" tabindex="0">
-    <div class="vc-glow"></div>
-    <div class="vc-top">
+  <div class="vc vc-fin soon" onclick="openModal(&#39;Finanzas&#39;)" tabindex="0" bis_skin_checked="1">
+    <div class="vc-glow" bis_skin_checked="1"></div>
+    <div class="vc-top" bis_skin_checked="1">
       <span class="vc-icon">📈</span>
-      <div class="vc-badges"><span class="badge badge-soon t" data-es="Próximamente" data-pt="Em breve">Próximamente</span><span class="badge-q">Q3 · 2026</span></div>
+      <div class="vc-badges" bis_skin_checked="1"><span class="badge badge-soon t" data-es="Próximamente" data-pt="Em breve">Próximamente</span><span class="badge-q">Q3 · 2026</span></div>
     </div>
-    <div>
-      <div class="vc-area"><span class="t" data-es="Gerencia" data-pt="Gestão">Gerencia</span> <span class="vc-area-color t" data-es="Financiera" data-pt="Financeira">Financiera</span></div>
-      <div class="vc-name">Visor Gerencial · <span class="t" data-es="Finanzas" data-pt="Finanças">Finanzas</span></div>
+    <div bis_skin_checked="1">
+      <div class="vc-area" bis_skin_checked="1"><span class="t" data-es="Gerencia" data-pt="Gestão">Gerencia</span> <span class="vc-area-color t" data-es="Financiera" data-pt="Financeira">Financiera</span></div>
+      <div class="vc-name" bis_skin_checked="1">Visor Gerencial · <span class="t" data-es="Finanzas" data-pt="Finanças">Finanzas</span></div>
     </div>
     <p class="vc-desc t" data-es="EBITDA operativo, flujo de caja libre, rotación de activos y retorno sobre capital. Para el CFO o gerente financiero que quiere hablarle al directorio con autoridad real — no con reportes." data-pt="EBITDA operacional, fluxo de caixa livre, rotação de ativos e retorno sobre capital. Para o CFO ou gestor financeiro que quer falar ao conselho com autoridade real — não com relatórios.">EBITDA operativo, flujo de caja libre, rotación de activos y retorno sobre capital. Para el CFO o gerente financiero que quiere hablarle al directorio con autoridad real — no con reportes.</p>
-    <div class="vc-kpis">
+    <div class="vc-kpis" bis_skin_checked="1">
       <span class="kpi kpi-dim">EBITDA</span><span class="kpi kpi-dim">FCL</span><span class="kpi kpi-dim">ROCE</span><span class="kpi kpi-dim">DSO</span><span class="kpi kpi-dim">+3</span>
     </div>
-    <div class="vc-footer">
+    <div class="vc-footer" bis_skin_checked="1">
       <span class="vc-tag t" data-es="Avísame al lanzar" data-pt="Avise-me no lançamento">Avísame al lanzar</span>
       <button type="button" class="vc-soon-btn t" data-es="Notificarme →" data-pt="Notificar-me →">Notificarme →</button>
     </div>
   </div>
 
   <!-- 4. OPERACIONES -->
-  <div class="vc vc-ops soon" onclick="openModal(&#39;Operaciones&#39;)" tabindex="0">
-    <div class="vc-glow"></div>
-    <div class="vc-top">
+  <div class="vc vc-ops soon" onclick="openModal(&#39;Operaciones&#39;)" tabindex="0" bis_skin_checked="1">
+    <div class="vc-glow" bis_skin_checked="1"></div>
+    <div class="vc-top" bis_skin_checked="1">
       <span class="vc-icon">⚙️</span>
-      <div class="vc-badges"><span class="badge badge-soon t" data-es="Próximamente" data-pt="Em breve">Próximamente</span><span class="badge-q">Q4 · 2026</span></div>
+      <div class="vc-badges" bis_skin_checked="1"><span class="badge badge-soon t" data-es="Próximamente" data-pt="Em breve">Próximamente</span><span class="badge-q">Q4 · 2026</span></div>
     </div>
-    <div>
-      <div class="vc-area"><span class="t" data-es="Gerencia de" data-pt="Gestão de">Gerencia de</span> <span class="vc-area-color t" data-es="Operaciones" data-pt="Operações">Operaciones</span></div>
-      <div class="vc-name">Visor Gerencial · <span class="t" data-es="Operaciones" data-pt="Operações">Operaciones</span></div>
+    <div bis_skin_checked="1">
+      <div class="vc-area" bis_skin_checked="1"><span class="t" data-es="Gerencia de" data-pt="Gestão de">Gerencia de</span> <span class="vc-area-color t" data-es="Operaciones" data-pt="Operações">Operaciones</span></div>
+      <div class="vc-name" bis_skin_checked="1">Visor Gerencial · <span class="t" data-es="Operaciones" data-pt="Operações">Operaciones</span></div>
     </div>
     <p class="vc-desc t" data-es="OEE, costo por unidad, nivel de servicio y tiempo de ciclo. Transforma tu área de centro de costo a fuente de ventaja competitiva medible — antes de que alguien más lo haga por ti." data-pt="OEE, custo por unidade, nível de serviço e tempo de ciclo. Transforma a sua área de centro de custo em fonte de vantagem competitiva mensurável — antes que alguém o faça por si.">OEE, costo por unidad, nivel de servicio y tiempo de ciclo. Transforma tu área de centro de costo a fuente de ventaja competitiva medible — antes de que alguien más lo haga por ti.</p>
-    <div class="vc-kpis">
+    <div class="vc-kpis" bis_skin_checked="1">
       <span class="kpi kpi-dim">OEE</span><span class="kpi kpi-dim">CPU</span><span class="kpi kpi-dim">NSC</span><span class="kpi kpi-dim">TCO</span><span class="kpi kpi-dim">+3</span>
     </div>
-    <div class="vc-footer">
+    <div class="vc-footer" bis_skin_checked="1">
       <span class="vc-tag t" data-es="Avísame al lanzar" data-pt="Avise-me no lançamento">Avísame al lanzar</span>
       <button type="button" class="vc-soon-btn t" data-es="Notificarme →" data-pt="Notificar-me →">Notificarme →</button>
     </div>
   </div>
 
   <!-- 5. TALENTO HUMANO -->
-  <div class="vc vc-tal soon" onclick="openModal(&#39;Talento Humano&#39;)" tabindex="0">
-    <div class="vc-glow"></div>
-    <div class="vc-top">
+  <div class="vc vc-tal soon" onclick="openModal(&#39;Talento Humano&#39;)" tabindex="0" bis_skin_checked="1">
+    <div class="vc-glow" bis_skin_checked="1"></div>
+    <div class="vc-top" bis_skin_checked="1">
       <span class="vc-icon">👥</span>
-      <div class="vc-badges"><span class="badge badge-soon t" data-es="Próximamente" data-pt="Em breve">Próximamente</span><span class="badge-q">Q4 · 2026</span></div>
+      <div class="vc-badges" bis_skin_checked="1"><span class="badge badge-soon t" data-es="Próximamente" data-pt="Em breve">Próximamente</span><span class="badge-q">Q4 · 2026</span></div>
     </div>
-    <div>
-      <div class="vc-area"><span class="t" data-es="Gerencia de" data-pt="Gestão de">Gerencia de</span> <span class="vc-area-color t" data-es="Talento Humano" data-pt="Talento Humano">Talento Humano</span></div>
-      <div class="vc-name">Visor Gerencial · <span class="t" data-es="RRHH" data-pt="RH">RRHH</span></div>
+    <div bis_skin_checked="1">
+      <div class="vc-area" bis_skin_checked="1"><span class="t" data-es="Gerencia de" data-pt="Gestão de">Gerencia de</span> <span class="vc-area-color t" data-es="Talento Humano" data-pt="Talento Humano">Talento Humano</span></div>
+      <div class="vc-name" bis_skin_checked="1">Visor Gerencial · <span class="t" data-es="RRHH" data-pt="RH">RRHH</span></div>
     </div>
     <p class="vc-desc t" data-es="Rotación real, costo de reemplazo, productividad por colaborador y clima en números. El talento es el activo más valioso — y el menos medido. Hasta ahora." data-pt="Rotatividade real, custo de substituição, produtividade por colaborador e clima em números. O talento é o ativo mais valioso — e o menos medido. Até agora.">Rotación real, costo de reemplazo, productividad por colaborador y clima en números. El talento es el activo más valioso — y el menos medido. Hasta ahora.</p>
-    <div class="vc-kpis">
+    <div class="vc-kpis" bis_skin_checked="1">
       <span class="kpi kpi-dim">TRP</span><span class="kpi kpi-dim">CRE</span><span class="kpi kpi-dim">IPE</span><span class="kpi kpi-dim">ENE</span><span class="kpi kpi-dim">+3</span>
     </div>
-    <div class="vc-footer">
+    <div class="vc-footer" bis_skin_checked="1">
       <span class="vc-tag t" data-es="Avísame al lanzar" data-pt="Avise-me no lançamento">Avísame al lanzar</span>
       <button type="button" class="vc-soon-btn t" data-es="Notificarme →" data-pt="Notificar-me →">Notificarme →</button>
     </div>
   </div>
 
   <!-- 6. LOGÍSTICA -->
-  <div class="vc vc-log soon" onclick="openModal(&#39;Logística&#39;)" tabindex="0">
-    <div class="vc-glow"></div>
-    <div class="vc-top">
+  <div class="vc vc-log soon" onclick="openModal(&#39;Logística&#39;)" tabindex="0" bis_skin_checked="1">
+    <div class="vc-glow" bis_skin_checked="1"></div>
+    <div class="vc-top" bis_skin_checked="1">
       <span class="vc-icon">🚛</span>
-      <div class="vc-badges"><span class="badge badge-soon t" data-es="Próximamente" data-pt="Em breve">Próximamente</span><span class="badge-q">Q1 · 2027</span></div>
+      <div class="vc-badges" bis_skin_checked="1"><span class="badge badge-soon t" data-es="Próximamente" data-pt="Em breve">Próximamente</span><span class="badge-q">Q1 · 2027</span></div>
     </div>
-    <div>
-      <div class="vc-area"><span class="t" data-es="Gerencia de" data-pt="Gestão de">Gerencia de</span> <span class="vc-area-color t" data-es="Logística" data-pt="Logística">Logística</span></div>
-      <div class="vc-name">Visor Gerencial · <span class="t" data-es="Logística" data-pt="Logística">Logística</span></div>
+    <div bis_skin_checked="1">
+      <div class="vc-area" bis_skin_checked="1"><span class="t" data-es="Gerencia de" data-pt="Gestão de">Gerencia de</span> <span class="vc-area-color t" data-es="Logística" data-pt="Logística">Logística</span></div>
+      <div class="vc-name" bis_skin_checked="1">Visor Gerencial · <span class="t" data-es="Logística" data-pt="Logística">Logística</span></div>
     </div>
     <p class="vc-desc t" data-es="Costo por entrega, RTI, quiebre de stock y rendimiento de última milla. La cadena de suministro como argumento estratégico — no como problema operativo que &#39;ya se está resolviendo&#39;." data-pt="Custo por entrega, RTI, rutura de stock e desempenho de última milha. A cadeia de abastecimento como argumento estratégico — não como problema operacional que &#39;já está a ser resolvido&#39;.">Costo por entrega, RTI, quiebre de stock y rendimiento de última milla. La cadena de suministro como argumento estratégico — no como problema operativo que "ya se está resolviendo".</p>
-    <div class="vc-kpis">
+    <div class="vc-kpis" bis_skin_checked="1">
       <span class="kpi kpi-dim">CPE</span><span class="kpi kpi-dim">RTI</span><span class="kpi kpi-dim">QST</span><span class="kpi kpi-dim">CLM</span><span class="kpi kpi-dim">+3</span>
     </div>
-    <div class="vc-footer">
+    <div class="vc-footer" bis_skin_checked="1">
       <span class="vc-tag t" data-es="Avísame al lanzar" data-pt="Avise-me no lançamento">Avísame al lanzar</span>
       <button type="button" class="vc-soon-btn t" data-es="Notificarme →" data-pt="Notificar-me →">Notificarme →</button>
     </div>
   </div>
 
   <!-- 7. TECNOLOGÍA -->
-  <div class="vc vc-tec soon" onclick="openModal(&#39;Tecnología&#39;)" tabindex="0">
-    <div class="vc-glow"></div>
-    <div class="vc-top">
+  <div class="vc vc-tec soon" onclick="openModal(&#39;Tecnología&#39;)" tabindex="0" bis_skin_checked="1">
+    <div class="vc-glow" bis_skin_checked="1"></div>
+    <div class="vc-top" bis_skin_checked="1">
       <span class="vc-icon">🖥️</span>
-      <div class="vc-badges"><span class="badge badge-soon t" data-es="Próximamente" data-pt="Em breve">Próximamente</span><span class="badge-q">Q1 · 2027</span></div>
+      <div class="vc-badges" bis_skin_checked="1"><span class="badge badge-soon t" data-es="Próximamente" data-pt="Em breve">Próximamente</span><span class="badge-q">Q1 · 2027</span></div>
     </div>
-    <div>
-      <div class="vc-area"><span class="t" data-es="Gerencia de" data-pt="Gestão de">Gerencia de</span> <span class="vc-area-color t" data-es="Tecnología" data-pt="Tecnologia">Tecnología</span></div>
-      <div class="vc-name">Visor Gerencial · TI</div>
+    <div bis_skin_checked="1">
+      <div class="vc-area" bis_skin_checked="1"><span class="t" data-es="Gerencia de" data-pt="Gestão de">Gerencia de</span> <span class="vc-area-color t" data-es="Tecnología" data-pt="Tecnologia">Tecnología</span></div>
+      <div class="vc-name" bis_skin_checked="1">Visor Gerencial · TI</div>
     </div>
     <p class="vc-desc t" data-es="Uptime real, costo por usuario, velocidad de entrega y ROI digital. El gerente de TI que habla de impacto en el negocio — no de tickets abiertos — tiene una conversación diferente con el CEO." data-pt="Uptime real, custo por utilizador, velocidade de entrega e ROI digital. O gestor de TI que fala de impacto no negócio — não de tickets abertos — tem uma conversa diferente com o CEO.">Uptime real, costo por usuario, velocidad de entrega y ROI digital. El gerente de TI que habla de impacto en el negocio — no de tickets abiertos — tiene una conversación diferente con el CEO.</p>
-    <div class="vc-kpis">
+    <div class="vc-kpis" bis_skin_checked="1">
       <span class="kpi kpi-dim">SLA</span><span class="kpi kpi-dim">CPU-TI</span><span class="kpi kpi-dim">TTD</span><span class="kpi kpi-dim">ROI-D</span><span class="kpi kpi-dim">+3</span>
     </div>
-    <div class="vc-footer">
+    <div class="vc-footer" bis_skin_checked="1">
       <span class="vc-tag t" data-es="Avísame al lanzar" data-pt="Avise-me no lançamento">Avísame al lanzar</span>
       <button type="button" class="vc-soon-btn t" data-es="Notificarme →" data-pt="Notificar-me →">Notificarme →</button>
     </div>
@@ -1557,68 +1558,68 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 
 <!-- RACK DE VISORES — BOTTOM -->
 <section class="armory-rack" id="armory-rack">
-  <div class="rack-hype">
-    <div class="rack-hype-eyebrow" id="rack-hype-eyebrow">▲ EN DESARROLLO &nbsp;·&nbsp; SISTEMA MODULAR</div>
+  <div class="rack-hype" bis_skin_checked="1">
+    <div class="rack-hype-eyebrow" id="rack-hype-eyebrow" bis_skin_checked="1">▲ EN DESARROLLO &nbsp;·&nbsp; SISTEMA MODULAR</div>
     <h2 class="rack-hype-title" id="rack-hype-title">Compártelo con tu equipo.<br><span class="rack-hype-accent">Que brillen todos.</span></h2>
     <p class="rack-hype-sub" id="rack-hype-sub">Tú ya tienes el Visor de Marketing. Tus colegas de Ventas, Finanzas, Ops, Talento, Logística y Tecnología pronto tendrán el suyo. El equipo que habla con datos no tiene competencia.</p>
   </div>
 
-  <div class="rack-topbar">
-    <div class="visor-dots"><div class="vd vd-r"></div><div class="vd vd-a"></div><div class="vd vd-g"></div></div>
+  <div class="rack-topbar" bis_skin_checked="1">
+    <div class="visor-dots" bis_skin_checked="1"><div class="vd vd-r" bis_skin_checked="1"></div><div class="vd vd-a" bis_skin_checked="1"></div><div class="vd vd-g" bis_skin_checked="1"></div></div>
     <span class="rack-title" id="rack-title">◈ RACK DE VISORES — 7 ÁREAS GERENCIALES</span>
     <span class="rack-badge" id="rack-badge">1 / 7 EN VIVO</span>
   </div>
-  <div class="rack-rail-bar"><div class="rack-rail-inner">
-    <div class="rail-bolt" style="left:7%"></div><div class="rail-bolt" style="left:21%"></div>
-    <div class="rail-bolt" style="left:35%"></div><div class="rail-bolt" style="left:50%"></div>
-    <div class="rail-bolt" style="left:65%"></div><div class="rail-bolt" style="left:79%"></div>
-    <div class="rail-bolt" style="left:93%"></div>
+  <div class="rack-rail-bar" bis_skin_checked="1"><div class="rack-rail-inner" bis_skin_checked="1">
+    <div class="rail-bolt" style="left:7%" bis_skin_checked="1"></div><div class="rail-bolt" style="left:21%" bis_skin_checked="1"></div>
+    <div class="rail-bolt" style="left:35%" bis_skin_checked="1"></div><div class="rail-bolt" style="left:50%" bis_skin_checked="1"></div>
+    <div class="rail-bolt" style="left:65%" bis_skin_checked="1"></div><div class="rail-bolt" style="left:79%" bis_skin_checked="1"></div>
+    <div class="rail-bolt" style="left:93%" bis_skin_checked="1"></div>
   </div></div>
-  <div class="rack-row" id="rack-row">
-    <div class="rack-item rack-live" style="--gc:#FFB830;--gc-rgb:255,184,48;--gf:grayscale(1) sepia(1) saturate(5) brightness(1.1)" onclick="location.href=&#39;/visordemarketing/&#39;" tabindex="0">
-      <div class="rack-hanger"></div>
-      <div class="rack-goggle"><img class="rack-gimg" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor MKT" loading="lazy"></div>
-      <div class="rack-info"><span class="rack-abbr" style="color:#FFB830">MKT</span><span class="rack-area">Marketing</span><span class="rack-status live-badge">● LIVE</span></div>
+  <div class="rack-row" id="rack-row" bis_skin_checked="1">
+    <div class="rack-item rack-live" style="--gc:#FFB830;--gc-rgb:255,184,48;--gf:grayscale(1) sepia(1) saturate(5) brightness(1.1)" onclick="location.href=&#39;/visordemarketing/&#39;" tabindex="0" bis_skin_checked="1">
+      <div class="rack-hanger" bis_skin_checked="1"></div>
+      <div class="rack-goggle" bis_skin_checked="1"><img class="rack-gimg" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor MKT" loading="lazy"></div>
+      <div class="rack-info" bis_skin_checked="1"><span class="rack-abbr" style="color:#FFB830">MKT</span><span class="rack-area">Marketing</span><span class="rack-status live-badge">● LIVE</span></div>
     </div>
-    <div class="rack-item rack-soon" style="--gc:#FF2040;--gc-rgb:255,32,64;--gf:grayscale(1) sepia(1) hue-rotate(310deg) saturate(6) brightness(1.1)" onclick="openModal(&#39;Ventas&#39;)" tabindex="0">
-      <div class="rack-hanger"></div>
-      <div class="rack-goggle"><img class="rack-gimg" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor VEN" loading="lazy"></div>
-      <div class="rack-info"><span class="rack-abbr" style="color:#FB923C">VEN</span><span class="rack-area">Ventas</span><span class="rack-status soon-badge">Q3 2026</span></div>
+    <div class="rack-item rack-soon" style="--gc:#FF2040;--gc-rgb:255,32,64;--gf:grayscale(1) sepia(1) hue-rotate(310deg) saturate(6) brightness(1.1)" onclick="openModal(&#39;Ventas&#39;)" tabindex="0" bis_skin_checked="1">
+      <div class="rack-hanger" bis_skin_checked="1"></div>
+      <div class="rack-goggle" bis_skin_checked="1"><img class="rack-gimg" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor VEN" loading="lazy"></div>
+      <div class="rack-info" bis_skin_checked="1"><span class="rack-abbr" style="color:#FB923C">VEN</span><span class="rack-area">Ventas</span><span class="rack-status soon-badge">Q3 2026</span></div>
     </div>
-    <div class="rack-item rack-soon" style="--gc:#00D4FF;--gc-rgb:0,212,255;--gf:grayscale(1) sepia(1) hue-rotate(150deg) saturate(6) brightness(1.2)" onclick="openModal(&#39;Finanzas&#39;)" tabindex="0">
-      <div class="rack-hanger"></div>
-      <div class="rack-goggle"><img class="rack-gimg" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor FIN" loading="lazy"></div>
-      <div class="rack-info"><span class="rack-abbr" style="color:#00D4FF">FIN</span><span class="rack-area">Finanzas</span><span class="rack-status soon-badge">Q3 2026</span></div>
+    <div class="rack-item rack-soon" style="--gc:#00D4FF;--gc-rgb:0,212,255;--gf:grayscale(1) sepia(1) hue-rotate(150deg) saturate(6) brightness(1.2)" onclick="openModal(&#39;Finanzas&#39;)" tabindex="0" bis_skin_checked="1">
+      <div class="rack-hanger" bis_skin_checked="1"></div>
+      <div class="rack-goggle" bis_skin_checked="1"><img class="rack-gimg" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor FIN" loading="lazy"></div>
+      <div class="rack-info" bis_skin_checked="1"><span class="rack-abbr" style="color:#00D4FF">FIN</span><span class="rack-area">Finanzas</span><span class="rack-status soon-badge">Q3 2026</span></div>
     </div>
-    <div class="rack-item rack-soon" style="--gc:#00FF87;--gc-rgb:0,255,135;--gf:grayscale(1) sepia(1) hue-rotate(107deg) saturate(6) brightness(1.2)" onclick="openModal(&#39;Operaciones&#39;)" tabindex="0">
-      <div class="rack-hanger"></div>
-      <div class="rack-goggle"><img class="rack-gimg" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor OPS" loading="lazy"></div>
-      <div class="rack-info"><span class="rack-abbr" style="color:#00FF87">OPS</span><span class="rack-area">Operaciones</span><span class="rack-status soon-badge">Q4 2026</span></div>
+    <div class="rack-item rack-soon" style="--gc:#00FF87;--gc-rgb:0,255,135;--gf:grayscale(1) sepia(1) hue-rotate(107deg) saturate(6) brightness(1.2)" onclick="openModal(&#39;Operaciones&#39;)" tabindex="0" bis_skin_checked="1">
+      <div class="rack-hanger" bis_skin_checked="1"></div>
+      <div class="rack-goggle" bis_skin_checked="1"><img class="rack-gimg" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor OPS" loading="lazy"></div>
+      <div class="rack-info" bis_skin_checked="1"><span class="rack-abbr" style="color:#00FF87">OPS</span><span class="rack-area">Operaciones</span><span class="rack-status soon-badge">Q4 2026</span></div>
     </div>
-    <div class="rack-item rack-soon" style="--gc:#A78BFA;--gc-rgb:167,139,250;--gf:grayscale(1) sepia(1) hue-rotate(225deg) saturate(4) brightness(1.1)" onclick="openModal(&#39;Talento Humano&#39;)" tabindex="0">
-      <div class="rack-hanger"></div>
-      <div class="rack-goggle"><img class="rack-gimg" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor TAL" loading="lazy"></div>
-      <div class="rack-info"><span class="rack-abbr" style="color:#A78BFA">TAL</span><span class="rack-area">Talento</span><span class="rack-status soon-badge">Q4 2026</span></div>
+    <div class="rack-item rack-soon" style="--gc:#A78BFA;--gc-rgb:167,139,250;--gf:grayscale(1) sepia(1) hue-rotate(225deg) saturate(4) brightness(1.1)" onclick="openModal(&#39;Talento Humano&#39;)" tabindex="0" bis_skin_checked="1">
+      <div class="rack-hanger" bis_skin_checked="1"></div>
+      <div class="rack-goggle" bis_skin_checked="1"><img class="rack-gimg" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor TAL" loading="lazy"></div>
+      <div class="rack-info" bis_skin_checked="1"><span class="rack-abbr" style="color:#A78BFA">TAL</span><span class="rack-area">Talento</span><span class="rack-status soon-badge">Q4 2026</span></div>
     </div>
-    <div class="rack-item rack-soon" style="--gc:#84CC16;--gc-rgb:132,204,22;--gf:grayscale(1) sepia(1) hue-rotate(47deg) saturate(5) brightness(1.15)" onclick="openModal(&#39;Logística&#39;)" tabindex="0">
-      <div class="rack-hanger"></div>
-      <div class="rack-goggle"><img class="rack-gimg" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor LOG" loading="lazy"></div>
-      <div class="rack-info"><span class="rack-abbr" style="color:#84CC16">LOG</span><span class="rack-area">Logística</span><span class="rack-status soon-badge">Q1 2027</span></div>
+    <div class="rack-item rack-soon" style="--gc:#84CC16;--gc-rgb:132,204,22;--gf:grayscale(1) sepia(1) hue-rotate(47deg) saturate(5) brightness(1.15)" onclick="openModal(&#39;Logística&#39;)" tabindex="0" bis_skin_checked="1">
+      <div class="rack-hanger" bis_skin_checked="1"></div>
+      <div class="rack-goggle" bis_skin_checked="1"><img class="rack-gimg" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor LOG" loading="lazy"></div>
+      <div class="rack-info" bis_skin_checked="1"><span class="rack-abbr" style="color:#84CC16">LOG</span><span class="rack-area">Logística</span><span class="rack-status soon-badge">Q1 2027</span></div>
     </div>
-    <div class="rack-item rack-soon" style="--gc:#60A5FA;--gc-rgb:96,165,250;--gf:grayscale(1) sepia(1) hue-rotate(178deg) saturate(4) brightness(1.2)" onclick="openModal(&#39;Tecnología&#39;)" tabindex="0">
-      <div class="rack-hanger"></div>
-      <div class="rack-goggle"><img class="rack-gimg" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor TEC" loading="lazy"></div>
-      <div class="rack-info"><span class="rack-abbr" style="color:#60A5FA">TEC</span><span class="rack-area">Tecnología</span><span class="rack-status soon-badge">Q1 2027</span></div>
+    <div class="rack-item rack-soon" style="--gc:#60A5FA;--gc-rgb:96,165,250;--gf:grayscale(1) sepia(1) hue-rotate(178deg) saturate(4) brightness(1.2)" onclick="openModal(&#39;Tecnología&#39;)" tabindex="0" bis_skin_checked="1">
+      <div class="rack-hanger" bis_skin_checked="1"></div>
+      <div class="rack-goggle" bis_skin_checked="1"><img class="rack-gimg" src="https://jfcarpio.com/visordemarketing/assets/visor-mkt.jpg" alt="Visor TEC" loading="lazy"></div>
+      <div class="rack-info" bis_skin_checked="1"><span class="rack-abbr" style="color:#60A5FA">TEC</span><span class="rack-area">Tecnología</span><span class="rack-status soon-badge">Q1 2027</span></div>
     </div>
   </div>
 </section>
 
 <!-- BOTTOM CTA -->
-<div class="bridge">
+<div class="bridge" bis_skin_checked="1">
   <span class="br-kicker t" data-es="La comunidad primero · La herramienta es tuya" data-pt="A comunidade primeiro · A ferramenta é sua">La comunidad primero · La herramienta es tuya</span>
   <h2 class="br-h"><span class="t" data-es="¿Tienes una presentación importante" data-pt="Tem uma apresentação importante">¿Tienes una presentación importante</span><br><span class="t" data-es="en los próximos" data-pt="nos próximos">en los próximos</span> <span class="ac">30 <span class="t" data-es="días?" data-pt="dias?">días?</span></span></h2>
   <p class="br-sub t" data-es="Escríbenos y te enviamos materiales de apoyo para que tu próxima junta sea la que cambia tu conversación con el directorio. Sin costo, sin compromiso. Es nuestra forma de servir a la comunidad gerencial latinoamericana." data-pt="Escreva-nos e enviamos materiais de apoio para que a sua próxima reunião seja aquela que muda a sua conversa com o conselho. Sem custo, sem compromisso. É a nossa forma de servir a comunidade de gestores latino-americanos.">Escríbenos y te enviamos materiales de apoyo para que tu próxima junta sea la que cambia tu conversación con el directorio. Sin costo, sin compromiso. Es nuestra forma de servir a la comunidad gerencial latinoamericana.</p>
-  <div class="br-btns">
+  <div class="br-btns" bis_skin_checked="1">
     <button type="button" class="btn-pri" onclick="openModal(&#39;&#39;)"><span class="t" data-es="Quiero los materiales de apoyo →" data-pt="Quero os materiais de apoio →">Quiero los materiales de apoyo →</span></button>
     <button type="button" class="btn-sec" onclick="location.href=&#39;/visordemarketing/&#39;"><span class="t" data-es="Empezar con Marketing" data-pt="Começar com Marketing">Empezar con Marketing</span></button>
   </div>
@@ -1627,15 +1628,15 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 
 <!-- SIG -->
 <!-- SIGNATURE -->
-<div class="sig reveal visible">
-  <div class="sig-left">
-    <div class="sig-nodata"><span class="dot"></span><span id="sig-nodata">NO DATA POLICY — tus datos nunca salen de tu dispositivo</span></div>
-    <div class="sig-name">Avatiun Consult × GrowthOS</div>
-    <div class="sig-title">Marcelo Vega · Juan Fernando Carpio</div>
+<div class="sig reveal visible" bis_skin_checked="1">
+  <div class="sig-left" bis_skin_checked="1">
+    <div class="sig-nodata" bis_skin_checked="1"><span class="dot"></span><span id="sig-nodata">NO DATA POLICY — tus datos nunca salen de tu dispositivo</span></div>
+    <div class="sig-name" bis_skin_checked="1">Avatiun Consult × GrowthOS</div>
+    <div class="sig-title" bis_skin_checked="1">Marcelo Vega · Juan Fernando Carpio</div>
     <p class="sig-desc" id="sig-desc">El Visor Gerencial es parte de <em>Luciéndome como Gerente de Área</em> — una serie de 7 tableros construidos para el gerente departamental latinoamericano de 2026. Tus datos se procesan en tu dispositivo y se borran al cerrar la pestaña. Nunca salen a servidores externos. Es la promesa Avatiun.</p>
-    <div class="sig-tags"><span class="sig-tag">Ecuador</span><span class="sig-tag">Latinoamérica</span><span class="sig-tag">USA</span><span class="sig-tag">Retail · Supermercados · E-commerce</span><span class="sig-tag">GDPR Compliant · Privacidad EU &amp; USA</span><span class="sig-tag">Herramienta libre · Comunidad primero</span></div>
+    <div class="sig-tags" bis_skin_checked="1"><span class="sig-tag">Ecuador</span><span class="sig-tag">Latinoamérica</span><span class="sig-tag">USA</span><span class="sig-tag">Retail · Supermercados · E-commerce</span><span class="sig-tag">GDPR Compliant · Privacidad EU &amp; USA</span><span class="sig-tag">Herramienta libre · Comunidad primero</span></div>
   </div>
-  <div class="sig-right">
+  <div class="sig-right" bis_skin_checked="1">
     <button type="button" class="sig-cta" id="sig-cta">Quiero el Visor Premium →</button>
     <span class="sig-ver" id="sig-copy">© 2026 Avatiun Consult. Todos los derechos reservados.</span>
     <span class="sig-ver" style="margin-top:4px;opacity:.5">Visor Gerencial · Tablerus by Avatiun · Serie: Luciéndome como gerente de área</span>
@@ -1644,17 +1645,17 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 </main>
 
 <!-- MODAL -->
-<div class="modal-bg" id="modal" onclick="if(event.target===this)closeModal()">
-  <div class="modal">
+<div class="modal-bg" id="modal" onclick="if(event.target===this)closeModal()" bis_skin_checked="1">
+  <div class="modal" bis_skin_checked="1">
     <span class="modal-close" onclick="closeModal()">×</span>
     <span class="modal-kicker t" data-es="Materiales de apoyo · Sin costo" data-pt="Materiais de apoio · Sem custo">Materiales de apoyo · Sin costo</span>
     <h3 class="modal-h t" data-es="Te enviamos tu kit para la próxima junta." data-pt="Enviamos o seu kit para a próxima reunião.">Te enviamos tu kit para la próxima junta.</h3>
     <p class="modal-sub t" data-es="Déjanos tu correo y recibe materiales de apoyo para el Visor Gerencial de tu área — listos para usar antes de tu próxima presentación. (Así de simple.)" data-pt="Deixe o seu e-mail e receba materiais de apoio para o Visor Gerencial da sua área — prontos a usar antes da sua próxima apresentação. (Assim tão simples.)">Déjanos tu correo y recibe materiales de apoyo para el Visor Gerencial de tu área — listos para usar antes de tu próxima presentación. (Así de simple.)</p>
-    <div class="field">
+    <div class="field" bis_skin_checked="1">
       <label class="t" data-es="Tu correo" data-pt="O seu e-mail">Tu correo</label>
       <input type="email" id="m-email" placeholder="gerente@empresa.com" autocomplete="email">
     </div>
-    <div class="field">
+    <div class="field" bis_skin_checked="1">
       <label class="t" data-es="Tu área" data-pt="A sua área">Tu área</label>
       <input type="text" id="m-area" placeholder="Marketing, Finanzas, Ventas…">
     </div>
@@ -1663,7 +1664,7 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   </div>
 </div>
 
-<div class="wmark">Visor Gerencial · Avatiun</div>
+<div class="wmark" bis_skin_checked="1">Visor Gerencial · Avatiun</div>
 
 <script>
 var LANG='es';

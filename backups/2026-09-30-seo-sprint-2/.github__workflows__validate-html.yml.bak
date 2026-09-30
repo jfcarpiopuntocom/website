@@ -11,12 +11,6 @@ on:
     paths:
       - 'las7formas/**/*.html'
       - 'visorantiquiebra/**/*.html'
-      - 'publicaciones/**/*.html'
-      - 'working-paper-hidden-cost.html'
-      - 'visorgerencial/**/*.html'
-      - 'friendly123/**/*.html'
-      - 'talleres/**/*.html'
-      - 'sitemap.xml'
       - 'index.html'
       - 'worker.js'
       - '.github/workflows/validate-html.yml'
@@ -24,12 +18,6 @@ on:
     paths:
       - 'las7formas/**/*.html'
       - 'visorantiquiebra/**/*.html'
-      - 'publicaciones/**/*.html'
-      - 'working-paper-hidden-cost.html'
-      - 'visorgerencial/**/*.html'
-      - 'friendly123/**/*.html'
-      - 'talleres/**/*.html'
-      - 'sitemap.xml'
       - 'index.html'
       - 'worker.js'
       - '.github/workflows/validate-html.yml'
@@ -39,7 +27,7 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     env:
-      FILES: "index.html las7formas/index.html visorantiquiebra/index.html visorgerencial/index.html publicaciones/index.html working-paper-hidden-cost.html friendly123/index.html talleres/index.html"
+      FILES: "index.html las7formas/index.html visorantiquiebra/index.html"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -58,7 +46,7 @@ jobs:
           fail=0
           for f in $FILES; do
             [ -f "$f" ] || { echo "skip: $f (not present)"; continue; }
-            count=$(grep -ci '<!doctype' "$f" || true)
+            count=$(grep -c '<!DOCTYPE' "$f" || true)
             if [ "$count" -ne 1 ]; then
               echo "FAIL: $f has $count DOCTYPE (must be exactly 1)"
               fail=1
@@ -95,30 +83,6 @@ jobs:
             fi
           done
           [ "$fail" -eq 0 ]
-
-      - name: Canonical present on SEO-maintained pages
-        run: |
-          set -e
-          SEO_FILES="publicaciones/index.html working-paper-hidden-cost.html visorgerencial/index.html visorantiquiebra/index.html friendly123/index.html talleres/index.html"
-          for f in $SEO_FILES; do
-            grep -qi 'rel="canonical"' "$f" || { echo "FAIL: $f has no canonical"; exit 1; }
-          done
-
-      - name: No legacy www/http internal links on publications
-        run: |
-          set -e
-          if grep -qi 'http://www.jfcarpio.com/' publicaciones/index.html; then
-            echo "FAIL: publicaciones has redirect-chain internal links"
-            exit 1
-          fi
-
-      - name: Sitemap parses as XML
-        run: |
-          python3 - <<'PYEOF'
-          import xml.etree.ElementTree as ET
-          ET.parse("sitemap.xml")
-          print("sitemap.xml: OK")
-          PYEOF
 
       - name: JSON-LD blocks parse as valid JSON
         run: |
