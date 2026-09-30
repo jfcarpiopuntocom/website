@@ -51,15 +51,18 @@ export default {
     if (url.hostname === "blog.jfcarpio.com") {
       return Response.redirect("https://jfcarpio.com/blog/", 301);
     }
-    // 1. Canonico: www -> apex
+    // 1. Canonicalizacion en un solo salto: www -> apex y legacy .html -> URL limpia.
+    // Evita cadenas de redirects (p. ej. www + .html) y concentra autoridad SEO.
+    let canonicalRedirect = false;
     if (url.hostname.startsWith("www.")) {
       url.hostname = url.hostname.slice(4);
-      return Response.redirect(url.toString(), 301);
+      canonicalRedirect = true;
     }
-    // 1b. Canonical puntual: el asset layer ya normaliza este .html a la URL limpia con 307.
-    // Hacemos la señal permanente y explícita para usuarios y buscadores.
     if (url.pathname === "/working-paper-hidden-cost.html") {
       url.pathname = "/working-paper-hidden-cost";
+      canonicalRedirect = true;
+    }
+    if (canonicalRedirect) {
       return Response.redirect(url.toString(), 301);
     }
 
