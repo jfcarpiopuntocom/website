@@ -1,0 +1,112 @@
+name: Validate HTML + JSON-LD
+
+# Scope: las7formas/, visorantiquiebra/, and root index.html only.
+# Other subdirectories may have legacy browser-save artifacts that
+# JFC will clean separately. Update FILES below when adding new
+# actively-maintained landing pages.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'las7formas/**/*.html'
+      - 'visorantiquiebra/**/*.html'
+      - 'index.html'
+      - '.github/workflows/validate-html.yml'
+  pull_request:
+    paths:
+      - 'las7formas/**/*.html'
+      - 'visorantiquiebra/**/*.html'
+      - 'index.html'
+      - '.github/workflows/validate-html.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    env:
+      FILES: "index.html las7formas/index.html visorantiquiebra/index.html"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: DOCTYPE count = 1 (browser-save catastrophe detector)
+        run: |
+          set -e
+          fail=0
+          for f in $FILES; do
+            [ -f "$f" ] || { echo "skip: $f (not present)"; continue; }
+            count=$(grep -c '<!DOCTYPE' "$f" || true)
+            if [ "$count" -ne 1 ]; then
+              echo "FAIL: $f has $count DOCTYPE (must be exactly 1)"
+              fail=1
+            else
+              echo "OK:   $f"
+            fi
+          done
+          [ "$fail" -eq 0 ]
+
+      - name: No URL-encoded directory paths (browser-save signature)
+        run: |
+          set -e
+          fail=0
+          for f in $FILES; do
+            [ -f "$f" ] || continue
+            hits=$(grep -c 'Juan%20Fernando\|index_files/' "$f" || true)
+            if [ "$hits" -ne 0 ]; then
+              echo "FAIL: $f has $hits URL-encoded path references"
+              fail=1
+            fi
+          done
+          [ "$fail" -eq 0 ]
+
+      - name: No chrome-extension references (browser-save signature)
+        run: |
+          set -e
+          fail=0
+          for f in $FILES; do
+            [ -f "$f" ] || continue
+            hits=$(grep -c 'chrome-extension://' "$f" || true)
+            if [ "$hits" -ne 0 ]; then
+              echo "FAIL: $f has $hits chrome-extension references"
+              fail=1
+            fi
+          done
+          [ "$fail" -eq 0 ]
+
+      - name: JSON-LD blocks parse as valid JSON
+        run: |
+          set -e
+          for f in $FILES; do
+            [ -f "$f" ] || continue
+            echo "==> $f"
+            python3 - "$f" <<'PYEOF'
+          import re, sys, json
+          path = sys.argv[1]
+          with open(path, encoding="utf-8") as fp:
+              html = fp.read()
+          blocks = re.findall(
+              r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+              html,
+              re.DOTALL | re.IGNORECASE,
+          )
+          if not blocks:
+              print("  (no JSON-LD blocks)")
+              sys.exit(0)
+          errors = 0
+          for i, block in enumerate(blocks, 1):
+              try:
+                  json.loads(block.strip())
+                  print(f"  JSON-LD block {i}: OK")
+              except json.JSONDecodeError as e:
+                  print(f"  JSON-LD block {i}: FAILED — {e}")
+                  errors += 1
+          if errors:
+              sys.exit(2)
+          PYEOF
+          done
