@@ -113,7 +113,12 @@ jobs:
           fi
 
       - name: Sitemap parses as XML
-        run: python3 -c "import xml.etree.ElementTree as ET; ET.parse('sitemap.xml'); print('sitemap.xml: OK')"
+        run: |
+          python3 - <<'PYEOF'
+          import xml.etree.ElementTree as ET
+          ET.parse("sitemap.xml")
+          print("sitemap.xml: OK")
+          PYEOF
 
       - name: JSON-LD blocks parse as valid JSON
         run: |
