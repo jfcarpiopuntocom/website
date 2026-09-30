@@ -55,7 +55,7 @@ UI = {
            "hub_desc": "Dos negocios nacieron el mismo año. Cinco capítulos que muestran cómo se acumulan las consecuencias de decidir con o sin herramientas, talleres, reportes y dashboards.",
            "idx_h": "Cada sección tiene su propia página", "pdf": "Descargar las 17 consecuencias (PDF)"},
     "en": {"reel": "See it in the interactive reel →", "home": "Home", "nav": "Next and previous", "other": "Español", "blog": "Blog (ES)",
-           "talleres": "Workshops (ES)", "pubs": "Publications (ES)", "contact": "Contact", "wa": "Message us on WhatsApp", "faq": "Frequently asked questions",
+           "talleres": "Workshops", "pubs": "Publications (ES)", "contact": "Contact", "wa": "Message us on WhatsApp", "faq": "Frequently asked questions",
            "quote": "What real clients say", "start": "Start the story", "loc": "en_US",
            "hub_h1": "Two businesses were born the same year.", "hub_lead": "Same idea. Same effort. Same first day. This is their story. It is illustrative: the data is not.",
            "hub_desc": "Two businesses were born the same year. Five chapters showing how consequences pile up when you decide with or without tools, workshops, reports and dashboards.",
@@ -68,12 +68,12 @@ FAQ = {
         "es": [("¿Los visores son gratuitos?", "Sí. El Visor Gerencial (tablero de Marketing) y el Visor Antiquiebra son gratuitos y sin registro."),
                ("¿Qué áreas cubre el Visor Gerencial?", "Hoy está disponible Marketing, con calculadoras en vivo de CAC, LTV y ROI. Ventas, Finanzas, Operaciones, RRHH, Logística y TI llegan próximamente."),
                ("¿Con qué países me compara?", "Con benchmarks de Ecuador, Colombia, Perú y Chile."),
-               ("¿Qué me evita el Visor Antiquiebra?", "Descubrir tarde que el negocio solo aguanta: detecta daños internos antes de que aprieten la caja."),
+               ("¿Qué me evita el Visor Antiquiebra?", "Descubrir tarde que el negocio solo aguanta. Está hecho para atravesar el Valle de la Muerte (meses 6 a 24): ocho indicadores, las 3 Cs y semáforo de riesgo en 15 minutos semanales."),
                ("¿Qué pasa si necesito más que el diagnóstico?", "Al final puedes pasar al Kit (USD 97) o a una sesión de revisión con el equipo de JFCarpio.com (USD 197).")],
         "en": [("Are the viewers free?", "Yes. The Management Viewer (Marketing dashboard) and the Anti-bankruptcy Viewer are free, with no sign-up."),
                ("Which areas does the Management Viewer cover?", "Marketing is live today, with live CAC, LTV and ROI calculators. Sales, Finance, Operations, HR, Logistics and IT are coming soon."),
                ("Which countries does it compare me with?", "With benchmarks for Ecuador, Colombia, Peru and Chile."),
-               ("What does the Anti-bankruptcy Viewer save me from?", "Finding out too late that the business is only holding on: it spots internal damage before it squeezes cash."),
+               ("What does the Anti-bankruptcy Viewer save me from?", "Finding out too late that the business is only holding on. It is built to cross the Valley of Death (months 6 to 24): eight indicators, the 3 Cs and a risk traffic light in 15 minutes a week."),
                ("What if I need more than the diagnosis?", "At the end you can move on to the Kit (USD 97) or a review session with the JFCarpio.com team (USD 197).")],
     }
 }
@@ -199,8 +199,8 @@ def main():
 
         def chrome(reel, alt_url, body, nav=""):
             ft = (f'<footer class="ft"><nav><a href="{home}">{U["home"]}</a> · <a href="/{HUB[lang][0]}/">{esc(HUB[lang][1])}</a> · '
-                  f'<a href="/blog/">{U["blog"]}</a> · <a href="/talleres/">{U["talleres"]}</a> · <a href="/publicaciones/">{U["pubs"]}</a> · '
-                  f'<a href="/{slug("contacto", lang)}/">{U["contact"]}</a></nav>'
+                  f'<a href="/blog/">{U["blog"]}</a> · <a href="{"/talleres/" if lang == "es" else "/workshops/"}">{U["talleres"]}</a> · <a href="/publicaciones/">{U["pubs"]}</a> · '
+                  f'<a href="/{slug("contacto", lang)}/">{U["contact"]}</a>' + (' · <a href="/market-intelligence-latam/">Latin America Market Intelligence</a> · <a href="/pacific-basin/">Pacific Basin Intelligence Unit</a>' if lang == "en" else "") + '</nav>'
                   f'<p class="loc"><a class="wa" href="{WA}" rel="noopener">{U["wa"]}</a> · <span>{ADDR}</span></p>'
                   f'<p>© 2026 JFCarpio.com</p></footer>')
             hd = (f'<header class="hd"><a class="brand" href="{home}">JFCarpio.com</a><span class="hr">'
@@ -364,9 +364,9 @@ def main():
     def links(lang):
         out = f'<li><a href="/{HUB[lang][0]}/" hreflang="{lang}">{esc(HUB[lang][1])}</a></li>'
         return out + "".join(f'<li><a href="/{slug(s, lang)}/" hreflang="{lang}">{esc(name(s, lang))}</a></li>' for s in page_list)
-    extra = "".join(f'<li><a href="{u}">{esc(n)}</a></li>' for n, u in [("Talleres", "/talleres/"), ("Publicaciones", "/publicaciones/"), ("Perfil", "/juan-fernando-carpio/")])
+    extra = "".join(f'<li><a href="{u}">{esc(n)}</a></li>' for n, u in [("Talleres corporativos de cambio rápido", "/talleres/"), ("Publicaciones", "/publicaciones/"), ("Perfil", "/juan-fernando-carpio/")])
     blk = (f'<!--PAGES-START--><nav class="idxp" aria-label="Páginas del sitio"><h3 data-t="k520">{UI["es"]["idx_h"]}</h3><ul>{links("es")}{extra}</ul>'
-           f'<h3 lang="en">In English</h3><ul lang="en">{links("en")}</ul></nav><!--PAGES-END-->')
+           f'<h3 lang="en">In English</h3><ul lang="en">{links("en")}<li><a href="/workshops/">Rapid-change corporate workshops</a></li><li><a href="/market-intelligence-latam/">Latin America Market Intelligence</a></li><li><a href="/pacific-basin/">Pacific Basin Intelligence Unit</a></li></ul></nav><!--PAGES-END-->')
     if "<!--PAGES-START-->" in src:
         src = re.sub(r"<!--PAGES-START-->.*?<!--PAGES-END-->", lambda m: blk, src, flags=re.S)
     else:
