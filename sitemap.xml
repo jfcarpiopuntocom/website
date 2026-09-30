@@ -8,15 +8,14 @@
     <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://jfcarpio.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/"/>
   </url>
 
   <!-- TALLERES CORPORATIVOS -->
   <url>
     <loc>https://jfcarpio.com/talleres/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/talleres/"/>
@@ -48,17 +47,27 @@
   <!-- PUBLICACIONES -->
   <url>
     <loc>https://jfcarpio.com/publicaciones/</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/publicaciones/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/publicaciones/"/>
   </url>
 
+  <!-- WORKING PAPER -->
+  <url>
+    <loc>https://jfcarpio.com/working-paper-hidden-cost.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/working-paper-hidden-cost.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/working-paper-hidden-cost.html"/>
+  </url>
+
   <!-- VISOR GERENCIAL -->
   <url>
     <loc>https://jfcarpio.com/visorgerencial/</loc>
-    <lastmod>2026-04-21</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/visorgerencial/"/>
@@ -78,7 +87,7 @@
   <!-- VISOR ANTI-QUIEBRA -->
   <url>
     <loc>https://jfcarpio.com/visorantiquiebra/</loc>
-    <lastmod>2026-04-21</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/visorantiquiebra/"/>
@@ -111,7 +120,7 @@
        misma landing con el articulo abierto (friendly123/generar-urls-seo.mjs). hreflang aqui. -->
   <url>
     <loc>https://jfcarpio.com/friendly123/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/friendly123/"/>
