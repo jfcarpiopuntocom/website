@@ -926,8 +926,19 @@ html:not(.reel) .thr{position:static;height:60px}html:not(.reel) .thr path{strok
 }
 @media(max-width:390px){
   #portada h1{font-size:clamp(1.95rem,10.3vw,2.72rem)}
-  #portada .seo-deck{font-size:9.5px}
+  #portada .seo-deck{font-size:12px;line-height:1.32;letter-spacing:.08em}
 }
+@media(max-width:760px){
+  .bar .wa{
+    bottom:max(14px,calc(env(safe-area-inset-bottom) + 10px));
+    left:max(14px,env(safe-area-inset-left));
+  }
+  .nx{
+    bottom:max(14px,calc(env(safe-area-inset-bottom) + 10px));
+    right:max(14px,env(safe-area-inset-right));
+  }
+}
+
 /* Hardrule: on mobile, never vertically center the active reel frame. The top offset is
    a deliberate UI slot for the logo/language controls and survives Safari/X browser chrome. */
 
@@ -1109,8 +1120,10 @@ function size(){
  H=getVisibleViewportHeight();
  const mobile=matchMedia('(max-width:760px)').matches;
  if(mobile){
-  const top=Math.max(78,Math.min(118,H*.11));
-  const bottom=Math.max(70,Math.min(104,H*.10));
+  const bar=$('.bar');
+  const barBottom=bar?Math.ceil(bar.getBoundingClientRect().bottom):68;
+  const top=Math.max(74,Math.min(118,barBottom+10));
+  const bottom=Math.max(72,Math.min(104,H*.095));
   SH=Math.max(420,H-top-bottom);
   const gap=Math.max(22,Math.min(34,H*.035));
   P=SH+gap;
