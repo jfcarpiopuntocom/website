@@ -1,0 +1,2454 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Talleres corporativos de cambio rápido — JFCarpio.com</title>
+<meta name="description" content="Intervenciones corporativas premium de 2 horas para el estrés financiero, las decisiones personales de dinero y la cultura de empresa privada. Para equipos en Latinoamérica, globales y bilingües.">
+<meta name="author" content="Juan Fernando Carpio">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#060E1D">
+
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+
+<link rel="canonical" href="https://jfcarpio.com/talleres/">
+<link rel="alternate" hreflang="es" href="https://jfcarpio.com/talleres/">
+<link rel="alternate" hreflang="en" href="https://jfcarpio.com/workshops/">
+<link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/workshops/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jfcarpio.com/talleres/">
+<meta property="og:title" content="Talleres corporativos de cambio rápido — JFCarpio.com">
+<meta property="og:description" content="Dos talleres premium de 2 horas para equipos: estrés financiero y decisiones personales de dinero; cultura de empresa privada y sentido de propiedad. Para equipos en Latinoamérica, globales y bilingües.">
+<meta property="og:image" content="https://jfcarpio.com/assets/og-talleres.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Equipo corporativo trabajando en una sesión ejecutiva de cambio rápido">
+<meta property="og:locale" content="es_EC">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="JFCarpio.com">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@jfcarpio">
+<meta name="twitter:title" content="Talleres corporativos de cambio rápido — JFCarpio.com">
+<meta name="twitter:description" content="Dos intervenciones corporativas premium de 2 horas: estrés financiero y cultura de empresa privada. Para equipos en Latinoamérica, globales y bilingües.">
+<meta name="twitter:image" content="https://jfcarpio.com/assets/og-talleres.jpg">
+<meta name="twitter:image:alt" content="Equipo corporativo trabajando en una sesión ejecutiva de cambio rápido">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' fill='%23060E1D'/&gt;&lt;text y='22' x='4' font-family='Arial' font-weight='900' font-size='16' fill='%23E86040'&gt;JFC&lt;/text&gt;&lt;/svg&gt;">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "@id":"https://jfcarpio.com/talleres/#service",
+  "name":"Talleres corporativos de cambio rápido para equipos en Latinoamérica, globales y bilingües",
+  "alternateName":[
+    "Talleres empresariales de cambio rápido",
+    "Talleres corporativos de cambio rápido",
+    "Talleres corporativos virtuales",
+    "Taller de dinero y finanzas familiares",
+    "Taller de apreciación de la empresa privada"
+  ],
+  "url":"https://jfcarpio.com/talleres/",
+  "image":"https://jfcarpio.com/assets/og-talleres.jpg",
+  "provider":{
+    "@type":"Person",
+    "name":"Juan Fernando Carpio",
+    "url":"https://jfcarpio.com/",
+    "jobTitle":"Investigador en Economía y negocios y capacitador corporativo",
+    "knowsAbout":["Finanzas personales y familiares","Economía de la empresa privada","Cambio de comportamiento","Capacitación corporativa","MindOS"]
+  },
+  "serviceType":[
+    "Capacitación corporativa",
+    "Taller de cambio de comportamiento",
+    "Dinero y finanzas familiares",
+    "Cultura de empresa privada"
+  ],
+  "areaServed":[
+    {"@type":"Place","name":"Latinoamérica"},
+    {"@type":"Place","name":"Internacional"}
+  ],
+  "availableChannel":{
+    "@type":"ServiceChannel",
+    "serviceUrl":"https://jfcarpio.com/talleres/",
+    "availableLanguage":["Spanish","English"]
+  },
+  "description":"Dos talleres corporativos independientes: dinero y finanzas personales/familiares, y apreciación de la empresa privada. Cada taller tiene su propio ROI de negocio."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "@id":"https://jfcarpio.com/talleres/#breadcrumb",
+  "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"J.F. Carpio",
+      "item":"https://jfcarpio.com/"
+    },
+    {
+      "@type":"ListItem",
+      "position":2,
+      "name":"Talleres corporativos",
+      "item":"https://jfcarpio.com/talleres/"
+    }
+  ]
+}
+</script>
+
+<style>
+/* jfcarpio.com/workshops v1.195 - 2026-06-03 */
+/* v1.205 (2026-06-03): added a second named case — Multicines / Santiago Cárdenas (then marketing mgr) for Workshop 2 (Private Enterprise), publicly endorsed twice on X; corrected Hallo to 23 people + Workshop 1 (Money) financial wellness; reframed social proof to "a named result per workshop, real corporate rooms"; updated tesis + roi-foot accordingly. */
+/* v1.204 (2026-06-03): reframed the Hallo +4 as a CFO-citeable metric (named client, pre/post measured, board-defensible) in the result-callout + added his name to the proofbar; added "modular" framing to the workshops map (take one, the other, or both). Visible "module" copy already gone (only CSS class names remain). */
+/* v1.203 (2026-06-03): tightened the gap between the agitate line and the rapid-change band (room-timeline margin-top 42-72px -> 14-22px, padding trimmed, wk-open bottom padding 14 -> 4) — it had leftover end-of-page spacing. */
+/* v1.202 (2026-06-03): naming correction per JFC — they are WORKSHOPS, not modules. Renamed all visible "Module A/B" -> "Workshop 1/2" and "module(s)" -> "workshop(s)" across copy, schema, FAQ, pricing, and the wa-message (CSS class names left intact). "financial wellness" confirmed. */
+/* v1.201 (2026-06-03): 15 micro-fixes — killed the stale "180 hours"; +4% -> +4 pts (Hallo measured points, not percent); ROI scenario aligned to the 3h PwC baseline; unified naming to Workshop 1/B (dropped "Workshop 1/2"); voice to third person (epiphany + scarcity); de-duplicated the 4-step re-listings + payroll motif; tightened teamcheck intro, cut "In other words", "same workshop"->"same program", CTA eyebrow de-echoed, closing image de-duplicated. */
+/* v1.200 (2026-06-03): cleaned PAS opening — stripped module talk from the pain columns (removed "What changes" + "See the module" links so Problem stays Problem); unglued the label (now the eyebrow of the solution section, with its own spacing); rewrote the solution intro to actually introduce the product: "Introducing the rapid-change workshops: two hours...". */
+/* v1.199 (2026-06-03): PAS opening — columns reframed from "Workshop 1/B" to the reader's costs (Problem); added an invisible Agitate beat (the invisible line-item cost) + moved the "Corporate Behavior-Change Workshops · 2 hours" label to AFTER the diagnosis columns as the bridge to the Solution timeline; dropped the timeline's redundant eyebrow. */
+/* v1.198 (2026-06-03): removed the spoiler opener ("these two compact interventions" before they exist); tightness pass — fixed stale "6-point lift" -> matches Hallo +4 (now "focused work returning"), tightened the McKinsey stat and the MindOS sequence line. */
+/* v1.197 (2026-06-03): moved the rapid-change sequence (boundary/behavior/intellect/decision) from the end to right after the two pain columns — sells the solution immediately; reframed its heading for that position (no cold MindOS reference) and excluded it from scroll-reveal so it shows instantly near the top. */
+/* v1.196 (2026-06-03): corrected Hallo result to +4% wellbeing/motivation (was +6%/+15%); removed the inflated +15% sales claim; added an honest illustrative-ROI section (two representative scenarios + PwC 3-7hrs and 5-20% study ranges); enriched cta-math with the 5-20% recovery range. */
+/* v1.195 (2026-06-03): replaced the closing room-timeline with a sales-oriented MindOS timeline explaining why two hours can move behavior quickly. */
+/* v1.194 (2026-06-03): added closing room-timeline after FAQ to replace blank space with real delivery formats and JFC's 22-70 interaction preference. */
+/* v1.193 (2026-06-02): magnificent visual layer — full-bleed light/dark bands on .mech (MindOS) and .social-proof (content centered at reading width), plus scroll-reveal motion using the sanctioned js-rv gate (content fully visible without JS; respects reduced-motion). WhatsApp/iOS legibility stack untouched. */
+/* v1.192 (2026-06-02): visual depth + 2 minor lifts (no structural change) — body radial-gradient depth (kills flat navy, base+dark), gradient hairline dividers, larger editorial section numerals; surfaced the free-diagnosis + guarantee risk-reversal in the early CTA; removed reader-facing meta-commentary from the closing cta-note. */
+/* v1.191 (2026-06-02): added early diagnosis CTA, internal-buyer proof language, a buyer-fit grid for CEO/HR/CFO/L&D, and a sharper payroll-leakage opening for USA/global B2B conversion. */
+/* v1.190 (2026-06-02): repositioned the page as the USA/global flagship, removed the forbidden old label from schema, tightened metadata, and reframed CTA around requesting the team diagnosis. */
+/* v1.167: quantified Fernando Hallo testimonial (+6% financial wellness, team of 25); world cases (PwC/Gallup/McKinsey) + projection, USA-focused for the buyer's team. */
+/* v1.168: deslop of AI-generated blocks (no "isn't X: it's Y" antithesis, no filler); E-E-A-T: jobTitle + knowsAbout on the Service Person for 2026 author SEO. */
+/* v1.169: port talleres B2B opening — two parallel pain columns (quick-path) + early proofbar replace the old hero; hidden SEO h1 added; jump anchors #workshop-finance/#workshop-enterprise/#mindos. Kicker/list/outcome sizes raised to >=13px/16px to honor min font rule. */
+/* v1.170: min-font legibility floor. Figcaptions raised 12 to 13px (kicker/list/outcome already compliant in v1.169). WhatsApp-preview verified: og:image 200, iOS anti-dark-mode stack intact. */
+/* v1.171: breathing room between the proof bar (quick-proofbar) and the lede; margin-bottom 30px so they no longer touch. */
+/* v1.189 (2026-06-01): un-rowed JFC's 3 photos (were clustered in the proof-gallery). Distributed: jfc-studio -> bio/About portrait; jfc-campo -> closing-visual before the CTA (last third); fotojfc -> stays alone in the proof-gallery. */
+/* v1.206 (2026-06-10): LIQUID GLASS pass on 4 surfaces only (topbar, stats, MindOS room-stops, pricing). Teamcheck deliberately NOT glassed (checkbox affordance contrast). All rules APPENDED at end of <style> as one block; do not interleave into older sections. */
+/* v1.207 (2026-06-10): DASHING pass (CSS-only, zero copy changes, zero grid/layout changes). Glass+glow film on quick-cards (pain columns: GRID UNTOUCHED, left accent identity kept), proofbar -> display-number glass chips, eyebrows -> glass pills, h2 em glow, photo frames rounded+hover zoom, roi/buyer/b2b cards -> glass with hover lift, pull quotes -> glass slabs, CTA pill radius+glow (button bg colors untouched for contrast safety). Reduced-motion guard + @supports fallback included. */
+/* v1.208 (2026-06-10): SPRINKLE pass — photo redistribution only, zero copy/caption changes. hero-gallery 3->1 (cinematic 21:10 solo); Workshop1 gallery 5->3; Workshop2 gallery 5->3. The 6 freed figures became standalone .sprinkle figures placed by caption theme: charts->before module-map, facilitator->before buyer-fit, piggy->before stats, debt-graphs->between W1/W2, participants->after que-cambia, exec-table->before FAQ. Accent: orange=money theme, sp-green=enterprise/both. */
+/* v1.209 (2026-06-10): GLASS INTENSITY pass ported from JFC's github-glass-badge reference (bubbbly WebGL card). CSS-only re-spec of existing glass surfaces, no new elements: fills .05->.08-.10, borders .12->.26-.45, blur up to 22px, baked-in top lighting gradient (the shader's gradient term as a background layer, NOT a pseudo-element - avoids paint-order/text-wash issues), inner edge ring via second inset shadow (shader's rb2 ring), radii 16->20-26px, drop shadows deepened to 24px/60px class, ambient glow fields boosted so saturate() has color to pull. Own @supports fallback at end. */
+/* v1.188 (2026-06-01): removed the redundant bottom "Quick diagnosis" (.diag) section; kept the interactive top self-check and renamed its eyebrow from "30-second gut-check" to "Where your team actually stands". */
+/* v1.187 (2026-06-01): killed the large sleazy hero; opening is now a restrained consultant-tone question that opens BOTH pain columns ("losing ground: how they handle money, or how they see the company"), max 31px, no orange accent. */
+/* v1.186 (2026-06-01): hero = option 3 question only ("partner, or an adversary that happens to pay them?"); removed the sub and the bridge line JFC rejected; flow is now question -> two pain columns -> rest. Topics are kept separate (only share MindOS). */
+/* v1.185 (2026-06-01): hero reframed per JFC — opens with a GLOBAL question ("Which two costs are already inside your payroll?") covering BOTH domains (personal money + relationship with the company), not just money stress; sub names both; leads straight into the two pain columns. */
+/* v1.184 (2026-06-01): visual de-boring #1 — dramatic hero. The page was flat navy with every h2 at 52px (no hierarchy). New .wk-hero headline clamps to 92px with an orange italic accent, creating a real first-impression moment distinct from section heads. */
+/* v1.183 (2026-06-01): P1 de-boring — converted the static pain-hook into an INTERACTIVE team self-check (checkbox quiz with live count + verdict, las7formas-style, B2B-adapted, glyph eyebrow). */
+/* v1.182 (2026-06-01): P0 elegance — numbered editorial spine (01-08) in eyebrows (.eyebrow b orange number) a la las7formas; MindOS h2 unified to setup + italic payoff pattern. */
+/* v1.181 (2026-06-01): added two real JFC photos (jfc-studio.jpg navy studio, jfc-campo.jpg outdoors) to the proof gallery with the .jfc-grayfade gray->color effect; kept fotojfc. */
+/* v1.180 (2026-05-31): added FAQ reframing the 22-70 cap as JFC's favorite format because of interaction, while respecting large-audience and 500-person formats he has delivered successfully. */
+/* v1.179 (2026-05-31): applied the index.html grayscale->color hover effect (.jfc-grayfade: grayscale(100%) -> hover grayscale(30%) sepia(15%)) to the two JFC photos (bio + proof-gallery portrait). */
+/* v1.178 (2026-05-31): push to ~90+ — restored JFC photos (small, per request); added visible promise headline above quick-path (clarity lever); added US-companies FAQ converting international track record into a trust asset. */
+/* v1.177 (2026-05-31): removed JFC face photos per request (bio-photo + proof-gallery portrait); rewrote About with confident, charismatic copy using 4 writing frameworks (show-don't-tell specificity, third-party social proof, rule of three, reader-anchored ethos). */
+/* v1.176 (2026-05-31): expanded About/bio with real CV (E-E-A-T fix) — kept low-profile per JFC: degrees (PhD cand. SMC Switzerland, M.E.E. UFM/Boston U), USFQ track founder, 2,500 trained, Florida exec-coaching, book link, Mises contributor; clients as initials + categories; added Pablo Lucio-Paredes (Dir. Institute of Economics USFQ) endorsement pull-quote. */
+/* v1.175 (2026-05-31): replaced disliked Menger pull-quote with the Marx->Menger voyage thesis; added per-workshop subtitles (.ventana-sub) — Workshop 1: chaos/anxiety -> control/confidence; Workshop 2: Marx -> Menger / win-lose -> win-win. */
+/* talleres (es) v1.0 (2026-06-10): LatAm pricing: un taller $3,690, ambos $6,060; capacity 22-70 + Enterprise for 70+; primary CTA Email (staff@jfcarpio.com) + Calendly secondary; cta-math for 22 people. Adapted from /workshops design. */
+/* v1.172: soft prompt at the motivation peak (link "Let's talk about where to start" after the projection, jumps to the CTA #lets-talk); secondary CTA points to Calendly /20minutos (matches "Schedule 20 minutes"); essay links open in a new tab (target=_blank rel=noopener) so the reader is not lost. */
+/* v1.173: more human, hypnotic copy in good taste (Joe Vitale, no gimmick): sentence-connector em dashes removed from visible copy and schema. Periods for the beat, colons for the payoff, parentheses for asides. Format/Optional material labels switched to colons. No design or approved-content changes. */
+/* English mirror of talleres v1.166 */
+/* ─── ROOT — light only, anti iOS auto-dark ─── */
+:root {
+  color-scheme: light only;
+  forced-color-adjust: none;
+  --bg: #060E1D;
+  --ink: #FFFFFF;
+  --ink-2: #FFFFFF;
+  --ink-3: #FFFFFF;
+  --orange: #E86040;
+  --green: #28ECAA;
+  --rule: rgba(255,255,255,.10);
+  --card: #0B1729;
+  --muted: #E6E6E6;
+  --serif: "Fraunces", "Instrument Serif", Georgia, "Times New Roman", serif;
+  --display: "Instrument Serif", "Fraunces", Georgia, serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+html {
+  background: var(--bg);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg) !important;
+  background: radial-gradient(135% 85% at 50% -6%, #0D1C34 0%, #081326 32%, var(--bg) 60%) !important;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+h1, h2, h3, p, li, a, span, em, strong, blockquote, figcaption, time, label, dt, dd {
+  color: var(--ink);
+  -webkit-text-fill-color: var(--ink);
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ─── SCROLL PROGRESS ─── */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 2px;
+  background: rgba(255,255,255,.06);
+  z-index: 900;
+}
+.scroll-progress-fill {
+  height: 100%; width: 0;
+  background: linear-gradient(90deg, var(--orange), #E8A020);
+  transition: width .1s linear;
+}
+
+/* ─── TOPBAR ─── */
+.topbar {
+  position: sticky; top: 0; z-index: 800;
+  background: rgba(6,14,29,.86);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 22px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: .08em;
+}
+.topbar a {
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 44px;
+}
+.topbar-home::before {
+  content: '←';
+  color: var(--orange) !important;
+  -webkit-text-fill-color: var(--orange) !important;
+  margin-right: 4px;
+}
+.topbar-mark {
+  color: var(--ink-2) !important;
+  -webkit-text-fill-color: var(--ink-2) !important;
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+/* ─── WRAP ─── */
+.wrap {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ─── HERO ─── */
+.hero {
+  width: 100%;
+  max-width: 840px;
+  padding: 56px 0 40px;
+}
+
+.eyebrow {
+  display: inline-block;
+  max-width: 100%;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  color: var(--green) !important;
+  -webkit-text-fill-color: var(--green) !important;
+  border: 1px solid var(--green);
+  padding: 6px 12px;
+  border-radius: 2px;
+  margin-bottom: 28px;
+}
+
+.h1 {
+  font-family: var(--display);
+  font-size: 29px;
+  line-height: 1.02;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 24px;
+  font-style: italic;
+  max-width: 100%;
+  overflow-wrap: normal;
+  word-break: normal;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+.h1 span,
+.h1 em {
+  display: block;
+}
+.h1 em {
+  color: var(--orange) !important;
+  -webkit-text-fill-color: var(--orange) !important;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.lede {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 22px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.byline {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: .14em;
+  color: var(--ink-2) !important;
+  -webkit-text-fill-color: var(--ink-2) !important;
+  text-transform: uppercase;
+}
+
+/* ─── EDITORIAL PHOTO SYSTEM ─── */
+.photo-wrap,
+.program-media .img-wrap {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: #0B1729;
+}
+.photo-wrap::after,
+.program-media .img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6,14,29,0) 0%, rgba(6,14,29,.12) 100%);
+  pointer-events: none;
+}
+.photo-wrap img,
+.program-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-gallery,
+.editorial-band,
+.proof-gallery,
+.closing-visual {
+  display: grid;
+  gap: 14px;
+}
+.hero-gallery { margin: 0 0 36px; }
+.hero-gallery figure,
+.editorial-band figure,
+.proof-gallery figure,
+.closing-visual figure { margin: 0; }
+.hero-gallery .photo-wrap { aspect-ratio: 4 / 3; }
+.hero-gallery figcaption,
+.editorial-band figcaption,
+.proof-gallery figcaption,
+.closing-visual figcaption {
+  display: block;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: .06em;
+  line-height: 1.55;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  border-left: 2px solid var(--orange);
+  padding-left: 10px;
+  margin-top: 12px;
+}
+.hero-gallery figure:nth-child(2) figcaption,
+.proof-gallery figure:nth-child(2) figcaption,
+.closing-visual figcaption { border-left-color: var(--green); }
+.editorial-band { margin: 0 0 56px; }
+.editorial-band .photo-wrap { aspect-ratio: 3 / 4; }
+.editorial-note,
+.closing-note {
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.015) 100%),
+    var(--card);
+  padding: 20px 18px;
+}
+.editorial-note .eyebrow,
+.closing-note .eyebrow { margin-bottom: 16px; }
+.editorial-note h3,
+.closing-note h3 {
+  font-family: var(--display);
+  font-size: 30px;
+  line-height: 1.04;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 14px;
+}
+.editorial-note p,
+.closing-note p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 14px;
+}
+.editorial-note p:last-child,
+.closing-note p:last-child { margin-bottom: 0; }
+.editorial-note dl { display: grid; gap: 12px; margin: 0; }
+.editorial-note div { border-top: 1px dashed var(--rule); padding-top: 12px; }
+.editorial-note dt {
+  font-family: var(--mono);
+  font-size: .82rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--orange) !important;
+  -webkit-text-fill-color: var(--orange) !important;
+  margin-bottom: 6px;
+}
+.editorial-note dd {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+}
+.proof-gallery { margin: 28px 0 0; }
+.proof-gallery .photo-wrap { aspect-ratio: 5 / 4; }
+.closing-visual { margin: 0 0 28px; }
+.closing-visual .photo-wrap { aspect-ratio: 16 / 10; }
+
+/* ─── SECTION RULE ─── */
+.rule {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rule) 16%, rgba(232,96,64,.30) 50%, var(--rule) 84%, transparent);
+  margin: 56px 0;
+}
+
+/* ─── MODULE MAP ─── */
+.module-map {
+  display: grid;
+  gap: 18px;
+  margin: 0 0 56px;
+}
+.module-map-head {
+  max-width: 860px;
+}
+.module-map-head .eyebrow { margin-bottom: 18px; }
+.module-map-head .h2 { margin-bottom: 14px; }
+.module-map-head p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-2) !important;
+  -webkit-text-fill-color: var(--ink-2) !important;
+}
+.module-cards {
+  display: grid;
+  gap: 14px;
+}
+.module-card {
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--orange);
+  background: var(--card);
+  border-radius: 4px;
+  padding: 22px 20px;
+}
+.module-card.ep { border-left-color: var(--green); }
+.module-card-kicker {
+  font-family: var(--sans);
+  font-size: .82rem;
+  line-height: 1.2;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--green) !important;
+  -webkit-text-fill-color: var(--green) !important;
+}
+.module-card.ep .module-card-kicker {
+  color: var(--orange) !important;
+  -webkit-text-fill-color: var(--orange) !important;
+}
+.module-card h3 {
+  font-family: var(--display);
+  font-size: 2.15rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: 0;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin: 10px 0 12px;
+}
+.module-card p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-2) !important;
+  -webkit-text-fill-color: var(--ink-2) !important;
+  margin-bottom: 14px;
+}
+.module-card p:last-child { margin-bottom: 0; }
+.module-roi {
+  display: block;
+  font-family: var(--mono);
+  font-size: .86rem;
+  line-height: 1.45;
+  letter-spacing: .04em;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  border-top: 1px dashed var(--rule);
+  padding-top: 14px;
+}
+.module-roi strong {
+  color: var(--orange) !important;
+  -webkit-text-fill-color: var(--orange) !important;
+}
+
+/* ─── TESIS ─── */
+.tesis { max-width: 780px; }
+.tesis p {
+  font-size: 17px;
+  line-height: 1.75;
+  margin-bottom: 18px;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+}
+.tesis p:last-child { margin-bottom: 0; }
+.tesis strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; font-weight: 700; }
+.tesis em { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; font-style: italic; }
+
+/* ─── OFFER STACK ─── */
+.offer-stack { display: grid; gap: 16px; margin: 0; }
+.offer-head { max-width: 780px; }
+.offer-head .eyebrow { margin-bottom: 18px; }
+.offer-head .h2 { margin-bottom: 14px; }
+.offer-head p {
+  font-size: 17px; line-height: 1.7;
+  color: var(--ink-2) !important; -webkit-text-fill-color: var(--ink-2) !important;
+}
+.offer-items { display: grid; gap: 12px; list-style: none; padding: 0; margin: 0; }
+.offer-items li { border-top: 1px solid var(--rule); padding: 16px 0; }
+.offer-items strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 8px;
+}
+.offer-items span {
+  display: block; font-size: 16px; line-height: 1.6;
+  color: var(--ink-2) !important; -webkit-text-fill-color: var(--ink-2) !important;
+}
+
+/* ─── PROGRAM MEDIA ─── */
+.program-media { display: grid; gap: 28px; margin: 0 0 26px; min-width: 0; max-width: 100%; }
+.program-media figure { min-width: 0; max-width: 100%; }
+.program-media .img-wrap { aspect-ratio: 4 / 3; background: #2A1408; }
+.program-media figcaption {
+  display: block;
+  font-family: var(--mono); font-size: 13px; letter-spacing: .06em; line-height: 1.5;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border-left: 2px solid var(--orange); padding-left: 10px; margin-top: 12px;
+}
+.ventana.ep .program-media figcaption { border-left-color: var(--green); }
+.ventana.ep .program-media figure { background: #082A14; }
+.program-media figure.is-wide .img-wrap { aspect-ratio: 16 / 10; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ─── VENTANA ─── */
+.ventana {
+  background: var(--card); border-left: 3px solid var(--orange);
+  border-radius: 4px; padding: 30px 24px; margin: 0;
+}
+.ventana.ep { border-left-color: var(--green); }
+.ventana-label {
+  font-family: var(--sans); font-size: 13px; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  margin-bottom: 14px; display: block;
+}
+.ventana.ep .ventana-label { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.ventana-sub {
+  font-size: 17px; font-size: clamp(17px, 2vw, 20px); font-weight: 600;
+  font-style: italic; line-height: 1.35; margin: 8px 0 0; display: block;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+}
+.ventana.ep .ventana-sub { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+
+.h2 {
+  font-family: var(--display); font-size: 34px; font-style: italic; font-weight: 400;
+  line-height: 1.05; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 14px; letter-spacing: 0;
+}
+
+.ventana-lede {
+  font-size: 16px; line-height: 1.6;
+  color: var(--ink-2) !important; -webkit-text-fill-color: var(--ink-2) !important;
+  margin-bottom: 26px; font-style: italic;
+}
+
+.layers { list-style: none; padding: 0; margin: 0 0 24px; }
+.layers li {
+  padding: 16px 0; border-top: 1px solid var(--rule);
+  display: grid; grid-template-columns: 1fr; gap: 6px;
+}
+.layers li:last-child { border-bottom: 1px solid var(--rule); }
+.layer-tag {
+  font-family: var(--mono); font-size: 13px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+}
+.ventana.ep .layer-tag { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.layer-body { font-size: 16px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.layer-body strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+
+.format {
+  font-family: var(--mono); font-size: 13px; line-height: 1.7; letter-spacing: .04em;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border-top: 1px dashed var(--rule); padding-top: 18px; margin-bottom: 8px;
+}
+.format + .format { border-top: none; padding-top: 0; margin-bottom: 22px; }
+.format strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+
+.ensayo-link {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px;
+  font-family: var(--sans); font-size: 13px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  border-bottom: 1px solid var(--orange); padding: 4px 0;
+}
+.ventana.ep .ensayo-link {
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
+  border-bottom-color: var(--green);
+}
+
+/* ─── STATS ─── */
+.stats {
+  display: grid; grid-template-columns: 1fr; gap: 26px;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 36px 0;
+}
+.stat-num {
+  font-family: var(--display); font-size: 72px; font-style: italic; font-weight: 400;
+  line-height: 1; letter-spacing: 0;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  margin-bottom: 10px;
+}
+.stat-desc {
+  font-family: var(--serif); font-size: 16px; line-height: 1.5;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 10px;
+}
+.stat-src {
+  font-family: var(--mono); font-size: 13px; letter-spacing: .06em; line-height: 1.5;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.stat-src em { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; font-style: italic; }
+
+/* ─── PULL QUOTE ─── */
+.pull {
+  border-left: 3px solid var(--orange); padding: 18px 22px; margin: 32px 0;
+  font-family: var(--display); font-style: italic; font-size: 26px; line-height: 1.24;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.pull-attr {
+  display: block; margin-top: 10px;
+  font-family: var(--mono); font-size: 13px; font-style: normal; letter-spacing: .08em;
+  color: var(--ink-2) !important; -webkit-text-fill-color: var(--ink-2) !important;
+}
+
+/* ─── BIO ─── */
+.bio p {
+  max-width: 780px; font-size: 16px; line-height: 1.7; margin-bottom: 8px;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.bio a {
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  border-bottom: 1px solid var(--orange);
+}
+
+/* ─── CTA ─── */
+.cta {
+  max-width: 900px; background: var(--card); border: 1px solid var(--rule);
+  border-radius: 4px; padding: 36px 28px; text-align: left;
+}
+.cta-eyebrow {
+  font-family: var(--sans); font-size: 13px; font-weight: 700;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
+  margin-bottom: 14px; display: block;
+}
+.cta p {
+  font-family: var(--display); font-size: 28px; font-style: italic; line-height: 1.18;
+  margin-bottom: 24px;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+}
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 48px;
+  appearance: none; border: 0; background: var(--orange);
+  color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;
+  font-family: var(--sans); font-size: 14px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; padding: 12px 22px;
+  border-radius: 3px; cursor: pointer; transition: transform .15s ease, background .15s ease;
+}
+.cta-btn:hover { background: #D4502E; transform: translateY(-1px); }
+.cta-btn::after { content: '→'; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; }
+.cta noscript p { font-family: var(--mono); font-size: .82rem; font-style: normal; line-height: 1.5; margin: 16px 0 0; }
+.cta noscript a { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; border-bottom: 1px solid var(--green); }
+
+/* ─── FOOTER ─── */
+.foot {
+  border-top: 1px solid var(--rule); margin-top: 64px; padding: 28px 22px;
+  display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between;
+  font-family: var(--mono); font-size: 13px; letter-spacing: .08em;
+  color: var(--ink-2) !important; -webkit-text-fill-color: var(--ink-2) !important;
+}
+.foot a { color: var(--ink-2) !important; -webkit-text-fill-color: var(--ink-2) !important; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 18px; }
+.foot-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 599px) {
+  .wrap { width: calc(100vw - 56px); max-width: calc(100vw - 56px); padding-left: 0; padding-right: 0; }
+}
+@media (min-width: 600px) {
+  .wrap { padding: 0 36px 100px; }
+  .hero { padding: 80px 0 56px; }
+  .h1 { font-size: 64px; }
+  .lede { font-size: 20px; }
+  .h2 { font-size: 44px; }
+  .ventana { padding: 36px 32px; }
+  .module-map { gap: 24px; margin-bottom: 76px; }
+  .module-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .offer-stack { grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); gap: 34px; align-items: start; }
+  .offer-items { gap: 0; }
+  .program-media { grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: start; max-width: 100%; gap: 32px; }
+  .program-media figure { min-height: 220px; grid-column: span 3; }
+  .program-media figure.is-wide { grid-column: 1 / -1; }
+  .layers li { grid-template-columns: 130px 1fr; gap: 16px; padding: 18px 0; }
+  .bio-flex { grid-template-columns: 96px 1fr; gap: 24px; }
+  .speaker-bar { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .cta { padding: 44px 36px; }
+  .cta p { font-size: 36px; }
+  .stats { grid-template-columns: repeat(3, 1fr); gap: 36px; padding: 44px 0; }
+  .stat-num { font-size: 86px; }
+  .hero-gallery { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); grid-auto-rows: minmax(0, auto); gap: 16px; }
+  .hero-gallery .hero-gallery-main { grid-row: span 2; }
+  .hero-gallery .hero-gallery-main .photo-wrap { aspect-ratio: 1 / 1.02; }
+  .quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .quick-proofbar { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .quick-decision { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+  .b2b-proof { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .buyer-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .editorial-band { grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); gap: 18px; }
+  .editorial-band .editorial-note { grid-column: 1 / -1; }
+  .proof-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .closing-visual { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 18px; align-items: start; }
+  .room-track { grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--rule); }
+  .room-stop { display: block; border-top: none; border-left: 1px solid var(--rule); padding: 24px 18px 4px; }
+  .room-stop:nth-child(odd) { border-left: none; }
+  .room-stop:nth-child(n+3) { border-top: 1px solid var(--rule); }
+  .room-num { margin-bottom: 16px; }
+}
+@media (min-width: 900px) {
+  .h1 { font-size: 84px; }
+  .h2 { font-size: 52px; }
+  .ventana { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); column-gap: 34px; align-items: start; }
+  .ventana-label, .ventana .h2, .ventana-sub, .ventana-lede, .program-media, .say-fig, .ensayo-link { grid-column: 1 / -1; }
+  .layers { grid-column: 1 / -1; }
+  .format { grid-column: span 1; }
+  .editorial-band { grid-template-columns: minmax(0, .95fr) minmax(0, .85fr) minmax(0, .95fr); align-items: center; }
+  .editorial-band .editorial-note { grid-column: span 1; }
+  .room-track { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .room-stop,
+  .room-stop:nth-child(n+3) { border-top: none; border-left: 1px solid var(--rule); }
+  .room-stop:first-child { border-left: none; }
+}
+
+/* ─── QUICK PATH (B2B opening: two pain columns + early proof) — ported from /talleres v1.171–v1.178 ─── */
+.quick-path { display: grid; gap: 18px; margin: 0 0 34px; }
+.quick-intro { max-width: 860px; }
+.quick-intro p { font-size: 18px; line-height: 1.7; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin: 0; }
+.quick-grid { display: grid; gap: 14px; }
+.quick-card { border: 1px solid var(--rule); border-left: 3px solid var(--orange); border-radius: 4px; background: linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.015) 100%), var(--card); padding: 20px 18px; }
+.quick-card.ep { border-left-color: var(--green); }
+.quick-card-kicker { display: block; font-family: var(--mono); font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-2) !important; -webkit-text-fill-color: var(--ink-2) !important; margin-bottom: 10px; }
+.quick-card h3 { font-family: var(--display); font-size: 30px; line-height: 1.05; font-style: italic; font-weight: 400; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 12px; }
+.quick-card p { font-size: 16px; line-height: 1.7; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 10px; }
+.quick-card p:last-child { margin-bottom: 0; }
+.quick-card strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.quick-list { list-style: none; padding: 0; margin: 0 0 14px; }
+.quick-list li { font-size: 16px; line-height: 1.65; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; padding: 6px 0 6px 22px; position: relative; border-top: 1px solid var(--rule); }
+.quick-list li:first-child { border-top: none; }
+.quick-list li::before { content: '—'; position: absolute; left: 0; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.quick-card.ep .quick-list li::before { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.quick-jump { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 2px; }
+.quick-jump::after { content: '↓'; }
+.quick-outcome { font-size: 16px; line-height: 1.65; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; border-top: 1px solid var(--rule); padding-top: 12px; margin: 0 0 14px; }
+.quick-proofbar { display: grid; gap: 12px; border-top: 1px solid var(--rule); padding-top: 16px; margin-bottom: 30px; }
+.quick-proofmini { border-left: 2px solid var(--orange); padding-left: 12px; }
+.quick-proofmini:nth-child(2) { border-left-color: var(--green); }
+.quick-proofmini:nth-child(3) { border-left-color: var(--blue, #3B7EE8); }
+.quick-proofmini strong { display: block; font-family: var(--display); font-size: 28px; line-height: 1; font-style: italic; font-weight: 400; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 6px; }
+.quick-proofmini span { display: block; font-size: 13px; line-height: 1.55; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.quick-decision { display: grid; gap: 18px; border: 1px solid var(--rule); border-left: 3px solid var(--green); background: linear-gradient(180deg, rgba(40,236,170,.08), rgba(255,255,255,.015)), var(--card); border-radius: 4px; padding: 20px 18px; margin: 0 0 34px; }
+.quick-decision p { font-size: 17px; line-height: 1.65; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin: 0; }
+.quick-decision strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.quick-decision .cta-btns { margin-top: 2px; }
+.b2b-proof { display: grid; gap: 16px; margin: 36px 0; }
+.b2b-proof-card { border-top: 1px solid var(--rule); padding-top: 16px; }
+.b2b-proof-kicker { display: block; font-family: var(--mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; margin-bottom: 8px; }
+.b2b-proof-card p { font-size: 16px; line-height: 1.65; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin: 0; }
+.buyer-fit { margin: 44px 0; }
+.buyer-fit .h2 { margin-bottom: 16px; }
+.buyer-grid { display: grid; gap: 12px; }
+.buyer-card { border: 1px solid var(--rule); border-radius: 4px; background: var(--card); padding: 18px 16px; }
+.buyer-card span { display: block; font-family: var(--mono); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; margin-bottom: 8px; }
+.buyer-card p { font-size: 15px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin: 0; }
+
+/* ─── PAIN HOOK ─── */
+.pain-hook {
+  background: var(--card); border-left: 3px solid var(--orange);
+  border-radius: 4px; padding: 24px 22px; margin: 32px 0 0; max-width: 780px;
+}
+.pain-hook-lead {
+  font-family: var(--display); font-size: 22px; font-style: italic; line-height: 1.22;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 14px;
+}
+.pain-signals { list-style: none; padding: 0; margin: 0 0 14px; }
+.pain-signals li {
+  font-size: 15px; line-height: 1.6;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  padding: 5px 0 5px 22px; position: relative;
+}
+.pain-signals li::before {
+  content: '—'; position: absolute; left: 0;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; font-style: normal;
+}
+.pain-hook-out {
+  font-family: var(--mono); font-size: .86rem; letter-spacing: .04em; line-height: 1.6;
+  color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important;
+}
+
+/* ─── SOCIAL PROOF ─── */
+.social-proof { max-width: 860px; }
+.social-proof > .eyebrow { margin-bottom: 18px; }
+.social-proof > .h2 { margin-bottom: 0; }
+.speaker-bar {
+  display: grid; gap: 20px;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  padding: 28px 0; margin-top: 20px;
+}
+.speaker-item { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; }
+.speaker-num {
+  font-family: var(--display); font-size: 2.8rem; font-style: italic; font-weight: 400; line-height: 1;
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; min-width: 72px;
+}
+.speaker-desc {
+  font-family: var(--serif); font-size: 15px; line-height: 1.55;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; padding-top: 6px;
+}
+.speaker-desc em { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; font-style: italic; }
+
+/* ─── CLOSING MINDOS TIMELINE ─── */
+.room-timeline {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: clamp(26px, 4.5vw, 40px) 0;
+  margin: clamp(14px, 2.2vw, 22px) 0 0;
+}
+.room-timeline .eyebrow { margin-bottom: 16px; }
+.room-timeline .h2 { margin-bottom: 26px; max-width: 860px; }
+.room-track { display: grid; gap: 0; }
+.room-stop {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  gap: 18px;
+  padding: 20px 0;
+  border-top: 1px solid var(--rule);
+}
+.room-stop:first-child { border-top: none; }
+.room-num {
+  font-family: var(--display);
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  font-style: italic;
+  line-height: .95;
+  color: var(--green) !important;
+  -webkit-text-fill-color: var(--green) !important;
+}
+.room-stop:nth-child(2) .room-num,
+.room-stop:nth-child(4) .room-num {
+  color: var(--orange) !important;
+  -webkit-text-fill-color: var(--orange) !important;
+}
+.room-copy h3 {
+  font-family: var(--display);
+  font-size: clamp(1.45rem, 4vw, 2rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.08;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin-bottom: 8px;
+}
+.room-copy p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  margin: 0;
+}
+
+/* ─── BIO WITH PHOTO ─── */
+.bio-flex { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: start; }
+.bio-photo { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 2px solid var(--orange); display: block; }
+.jfc-grayfade {
+  -webkit-filter: grayscale(100%) contrast(1.1);
+  filter: grayscale(100%) contrast(1.1);
+  -webkit-transition: filter .45s ease, -webkit-filter .45s ease;
+  transition: filter .45s ease;
+}
+.jfc-grayfade:hover,
+.proof-gallery figure:hover .jfc-grayfade {
+  -webkit-filter: grayscale(30%) sepia(15%) contrast(1.05);
+  filter: grayscale(30%) sepia(15%) contrast(1.05);
+}
+
+/* ─── TEAM SELF-CHECK (interactive) ─── */
+.teamcheck { margin: 60px 0; }
+.teamcheck .h2 { margin-bottom: 12px; }
+.teamcheck-intro { font-size: 17px; line-height: 1.6; max-width: 640px; color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important; }
+.teamcheck-set { border: 0; padding: 0; margin: 0; min-inline-size: 0; }
+.teamcheck-list { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 10px; }
+.teamcheck-list label { display: flex; gap: 13px; align-items: flex-start; min-height: 44px; padding: 14px 16px; background: var(--card); border: 1px solid var(--rule); border-radius: 12px; cursor: pointer; font-size: 16px; line-height: 1.5; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; transition: border-color .25s ease, background .25s ease; }
+.teamcheck-list label:hover { border-color: var(--green); }
+.teamcheck-list label:has(.tc-box:checked) { border-color: var(--orange); background: #10203A; }
+.tc-box { -webkit-appearance: none; appearance: none; width: 24px; height: 24px; flex: none; margin-top: 1px; border: 2px solid var(--green); border-radius: 6px; background: transparent; cursor: pointer; position: relative; }
+.tc-box:checked { background: var(--green); }
+.tc-box:checked::after { content: "✓"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #060E1D; font-size: 15px; font-weight: 700; }
+.teamcheck-result { margin-top: 22px; font-family: var(--sans); font-size: 18px; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.tc-count { font-family: var(--display); font-size: 32px; font-weight: 700; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; margin-right: 2px; }
+.tc-verdict { display: block; margin-top: 8px; font-size: 17px; line-height: 1.55; color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important; }
+
+/* ─── OPENING QUESTION (consultant tone, restrained) ─── */
+.wk-open { padding: 22px 0 4px; max-width: 720px; }
+.wk-open .eyebrow { margin-bottom: 18px; }
+.wk-open-q {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 24px;
+  font-size: clamp(24px, 3.2vw, 31px);
+  line-height: 1.34;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+}
+
+/* ─── PRICING RACK ─── */
+.pricing-rack { border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; margin-bottom: 28px; }
+.price-anchor { padding: 12px 18px; border-bottom: 1px solid var(--rule); display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.price-anchor-label {
+  font-family: var(--mono); font-size: .82rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important;
+}
+.price-anchor-val {
+  font-family: var(--display); font-size: 28px; font-style: italic;
+  color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important;
+  text-decoration: line-through;
+}
+.price-anchor-desc {
+  font-family: var(--serif); font-size: 13px; line-height: 1.4;
+  color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important;
+}
+.price-options { display: grid; grid-template-columns: 1fr 1fr; }
+.price-opt { padding: 16px 18px; border-right: 1px solid var(--rule); }
+.price-opt:last-child { border-right: none; }
+.price-opt-name {
+  display: block; font-family: var(--mono); font-size: .82rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important; margin-bottom: 6px;
+}
+.price-opt-val {
+  display: block; font-family: var(--display); font-size: 40px; font-style: italic; font-weight: 400; line-height: 1;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 6px;
+}
+.price-opt.featured .price-opt-val { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.price-opt-desc {
+  display: block; font-family: var(--serif); font-size: 13px; line-height: 1.45;
+  color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important;
+}
+.price-guarantee {
+  font-family: var(--mono); font-size: .86rem; letter-spacing: .03em; line-height: 1.55;
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
+  border-top: 1px solid var(--rule); padding: 12px 18px; margin: 0;
+}
+
+/* ─── CTA BUTTONS ─── */
+.cta-btns { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.cta-btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 48px;
+  background: transparent;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  font-family: var(--sans); font-size: 14px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; padding: 12px 22px;
+  border-radius: 3px; border: 1px solid var(--rule); cursor: pointer; text-decoration: none;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.cta-btn-secondary:hover { border-color: var(--ink); transform: translateY(-1px); }
+.cta-btn-secondary::after { content: '→'; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* ─── MECHANISM FLAG ─── */
+.mech { max-width: 820px; margin: 32px 0 0; }
+.mech .eyebrow { margin-bottom: 18px; }
+.mech .h2 { margin-bottom: 16px; }
+.mech-name { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; font-style: italic; }
+.mech p { font-size: 17px; line-height: 1.7; margin-bottom: 16px; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.mech-epiphany { border-left: 3px solid var(--green); padding: 4px 0 4px 18px; font-family: var(--display); font-style: italic; font-size: 19px; line-height: 1.4; }
+.mech-layers { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; }
+.mech-layers li {
+  font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border: 1px solid var(--rule); border-left: 3px solid var(--orange); border-radius: 3px; padding: 10px 14px;
+}
+.mech-layers li span { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; margin-right: 8px; }
+
+/* ─── RESULT CALLOUT ─── */
+.result-callout {
+  max-width: 820px; background: var(--card); border: 1px solid var(--rule);
+  border-left: 3px solid var(--green); border-radius: 4px; padding: 26px 24px; margin: 0; display: grid; gap: 12px;
+}
+.result-num { font-family: var(--display); font-style: italic; font-weight: 400; font-size: 56px; line-height: 1; color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.result-body { font-family: var(--serif); font-size: 18px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+
+/* ─── ILLUSTRATIVE ROI CASES ─── */
+.roi-cases { margin: 44px 0; }
+.roi-cases .h2 { margin-bottom: 12px; }
+.roi-intro { font-size: 16px; line-height: 1.65; max-width: 720px; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.roi-intro strong { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.roi-grid { display: grid; gap: 14px; margin: 22px 0 18px; }
+.roi-card { background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--orange); border-radius: 4px; padding: 18px; }
+.roi-tag { display: block; font-family: var(--mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; margin-bottom: 10px; }
+.roi-card p { font-size: 15.5px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin: 0 0 8px; }
+.roi-card p:last-child { margin-bottom: 0; }
+.roi-card strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.roi-foot { font-size: 14px; line-height: 1.6; font-style: italic; max-width: 720px; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.roi-foot strong { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+@media (min-width: 700px) { .roi-grid { grid-template-columns: 1fr 1fr; } }
+.result-attr { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+
+/* ─── CTA STACK + MATH + SCARCITY ─── */
+.cta-math {
+  font-family: var(--serif); font-size: 17px; line-height: 1.65; font-style: normal;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border-left: 3px solid var(--orange); padding-left: 16px; margin-bottom: 22px;
+}
+.cta-math strong { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.cta-math em { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.cta-stack-label {
+  font-family: var(--sans); font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; display: block; margin-bottom: 12px;
+}
+.cta-stack { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 0; }
+.cta-stack li {
+  font-family: var(--serif); font-size: 17px; line-height: 1.5;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border-top: 1px solid var(--rule); padding: 12px 0 12px 26px; position: relative;
+}
+.cta-stack li:last-child { border-bottom: 1px solid var(--rule); }
+.cta-stack li::before { content: '✓'; position: absolute; left: 0; color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; font-weight: 700; }
+.cta-stack li em { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.cta-scarcity {
+  font-family: var(--mono); font-size: .9rem; line-height: 1.55; letter-spacing: .03em;
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  border: 1px dashed var(--orange); border-radius: 3px; padding: 12px 16px; margin-bottom: 22px;
+}
+.cta-note {
+  font-family: var(--mono); font-size: .9rem; line-height: 1.5; letter-spacing: .04em;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  margin-top: 14px;
+}
+.cta-note + .cta-scarcity { margin-top: 16px; }
+
+/* ─── DIAGNÓSTICO / DIAGNOSIS ─── */
+.diag { max-width: 820px; background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--orange); border-radius: 4px; padding: 28px 24px; margin: 0; }
+.diag-lead { font-family: var(--display); font-size: 22px; font-style: italic; line-height: 1.22; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 18px; }
+.diag-items { list-style: none; padding: 0; margin: 0 0 20px; }
+.diag-items li { font-size: 15px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; padding: 8px 0 8px 28px; position: relative; border-top: 1px solid var(--rule); }
+.diag-items li:first-child { border-top: none; }
+.diag-items li::before { content: '☐'; position: absolute; left: 0; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; font-size: 14px; top: 9px; }
+.diag-score { font-family: var(--mono); font-size: .86rem; line-height: 1.7; letter-spacing: .03em; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; border-top: 1px dashed var(--rule); padding-top: 16px; }
+.diag-score strong { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.diag-score em { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; font-style: normal; }
+
+/* ─── WHAT CHANGES ─── */
+.que-cambia { max-width: 860px; }
+.que-cambia .h2 { margin-bottom: 6px; }
+.que-cambia-sub { font-family: var(--mono); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important; margin-bottom: 28px; display: block; }
+.cambios { display: grid; gap: 14px; }
+.cambio { background: var(--card); border: 1px solid var(--rule); border-radius: 4px; padding: 20px 22px; }
+.cambio-mod { font-family: var(--mono); font-size: .82rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; display: block; margin-bottom: 12px; }
+.cambio.ep .cambio-mod { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+.cambio ul { list-style: none; padding: 0; margin: 0; }
+.cambio ul li { font-family: var(--serif); font-size: 15px; line-height: 1.6; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; padding: 5px 0 5px 20px; position: relative; }
+.cambio ul li::before { content: '→'; position: absolute; left: 0; color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+.cambio.ep ul li::before { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+@media (min-width: 600px) { .cambios { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ─── FAQ ─── */
+.faq { max-width: 820px; }
+.faq .eyebrow { margin-bottom: 18px; }
+.eyebrow b { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; font-weight: 700; font-size: 1.18em; margin-right: 9px; letter-spacing: .1em; }
+.faq .h2 { margin-bottom: 0; }
+.faq-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.faq-item { border-top: 1px solid var(--rule); padding: 20px 0; }
+.faq-item:last-child { border-bottom: 1px solid var(--rule); }
+.faq-q { font-family: var(--display); font-size: 19px; font-style: italic; line-height: 1.3; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; margin-bottom: 10px; }
+.faq-a { font-family: var(--serif); font-size: 16px; line-height: 1.65; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+.faq-a strong { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+
+/* ─── ANTI iOS AUTO-DARK ─── */
+@media (prefers-color-scheme: dark) {
+  html { background: var(--bg) !important; }
+  body { background: radial-gradient(135% 85% at 50% -6%, #0D1C34 0%, #081326 32%, var(--bg) 60%) !important; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+  h1, h2, h3, p, li, a, span, em, strong, blockquote, figcaption, time, label, dt, dd { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+  .h1 em, .tesis em, .layer-tag, .ventana-label, .ventana-sub, .ensayo-link, .bio a { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+  .ventana.ep .layer-tag, .ventana.ep .ventana-label, .ventana.ep .ventana-sub, .ventana.ep .ensayo-link, .eyebrow, .cta-eyebrow { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+  .lede, .byline, .ventana-lede, .format, .pull-attr, .topbar-mark, .foot, .foot a { color: var(--ink-2) !important; -webkit-text-fill-color: var(--ink-2) !important; }
+  .ventana-lede, .format strong, .layer-body, .layer-body strong, .tesis strong, .bio p, .cta p { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+  .cta-btn, .cta-btn::after { color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; }
+  .speaker-num { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+  .price-anchor-label, .price-anchor-val, .price-anchor-desc, .price-opt-name, .price-opt-desc, .pain-hook-out { color: var(--muted) !important; -webkit-text-fill-color: var(--muted) !important; }
+  .price-opt.featured .price-opt-val { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+  .price-guarantee { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+  .cta-btn-secondary, .cta-btn-secondary::after { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+  .mech-name, .mech-layers li span, .cta-math strong, .cta-scarcity { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+  .result-num, .cta-stack-label, .cta-stack li::before { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+  .mech p, .mech-epiphany, .result-body, .result-attr, .cta-math, .cta-math em, .cta-stack li, .cta-stack li em { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+  .diag-lead, .diag-items li, .diag-score, .faq-q, .faq-a, .faq-a strong, .cambio ul li, .que-cambia-sub { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
+  .diag-items li::before, .diag-score strong, .cambio-mod, .cambio ul li::before { color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important; }
+  .cambio.ep .cambio-mod, .cambio.ep ul li::before, .diag-score em { color: var(--green) !important; -webkit-text-fill-color: var(--green) !important; }
+}
+/* ─── FULL-BLEED BANDS (light/dark scroll rhythm) ─── */
+.band {
+  --half: 536px;
+  max-width: 100vw !important;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding-top: 58px;
+  padding-bottom: 58px;
+  padding-left: max(24px, calc(50vw - var(--half)));
+  padding-right: max(24px, calc(50vw - var(--half)));
+  background: var(--card);
+}
+.mech.band { --half: 410px; margin-top: 40px; }
+.social-proof.band { --half: 430px; }
+
+/* ─── SCROLL REVEAL (content visible by default; animates only when js-rv is set) ─── */
+.js-rv .rv { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1); }
+.js-rv .rv-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js-rv .rv { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   v1.206 · LIQUID GLASS LAYER (2026-06-10)
+   AI-NOTES — READ BEFORE EDITING, DO NOT DELETE:
+   1. Glass is applied ONLY to: .topbar, .stats cards, .room-stop
+      (MindOS 01-04), and the pricing rack. The .teamcheck checklist
+      is INTENTIONALLY not glassed: its green checkbox states carry
+      meaning and need full contrast. Do not "complete the set."
+   2. Blur is invisible over flat navy. The ::before AMBIENT GLOW
+      fields under .stats / .room-timeline / .pricing-rack are what
+      make the glass read. Removing them kills the whole effect.
+   3. Palette locked to page colors: orange #E86040, green #28ECAA,
+      white. No greys on glass — text stays #FFF / orange / green.
+   4. .room-stop border uses !important on purpose: three breakpoint
+      variants (base / 600px / 900px) re-add divider borders.
+   5. @supports fallback at the bottom gives solid backgrounds to
+      browsers without backdrop-filter. Keep it last in this block.
+   6. Perf: blur ≤18px, saturate ≤160%. Do not raise. Do not add
+      more glass surfaces without removing one.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── 1. Topbar: floating chrome ── */
+.topbar {
+  background: linear-gradient(180deg, rgba(12,22,42,.74), rgba(6,14,29,.52));
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid rgba(255,255,255,.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 8px 24px rgba(0,0,0,.25);
+}
+
+/* ── 2. Ambient glow fields (the light the glass refracts) ── */
+.stats, .pricing-rack, .room-timeline { position: relative; }
+.stats::before, .pricing-rack::before, .room-timeline::before {
+  content: ""; position: absolute; inset: -28px -8px;
+  pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(440px 280px at 12% 18%, rgba(232,96,64,.15), transparent 70%),
+    radial-gradient(480px 300px at 88% 82%, rgba(40,236,170,.11), transparent 70%),
+    radial-gradient(380px 260px at 55% 50%, rgba(255,255,255,.045), transparent 70%);
+}
+.stats > div, .pricing-rack > *, .room-timeline > * { position: relative; z-index: 1; }
+
+/* ── 3. Stats band → three glass cards ── */
+.stats { border-top: none; border-bottom: none; padding: 40px 0; }
+.stats > div {
+  background: rgba(255,255,255,.055);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 18px;
+  padding: 26px 24px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12),
+              inset 0 -1px 0 rgba(255,255,255,.04),
+              0 14px 34px rgba(0,0,0,.30);
+}
+
+/* ── 4. MindOS 01-04 → subtle glass cards ── */
+.room-track { gap: 14px; }
+.room-stop,
+.room-stop:first-child,
+.room-stop:nth-child(odd),
+.room-stop:nth-child(n+3) {
+  border: 1px solid rgba(255,255,255,.11) !important;
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  border-radius: 16px;
+  padding: 22px 20px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.09);
+}
+
+/* ── 5. Pricing rack → glass panels, featured gets the rim light ── */
+.pricing-rack { border: none; overflow: visible; border-radius: 0; }
+.price-anchor {
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  background: rgba(255,255,255,.045);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  margin-bottom: 14px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10);
+}
+.price-options { gap: 14px; }
+.price-opt, .price-opt:last-child {
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 16px;
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(14px) saturate(155%);
+  -webkit-backdrop-filter: blur(14px) saturate(155%);
+  padding: 20px 18px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 12px 30px rgba(0,0,0,.28);
+}
+.price-opt.featured {
+  border-color: rgba(232,96,64,.55);
+  background: linear-gradient(180deg, rgba(232,96,64,.12), rgba(255,255,255,.05));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16),
+              0 0 0 1px rgba(232,96,64,.25),
+              0 16px 40px rgba(232,96,64,.18);
+}
+
+/* ── 6. Fallback: no backdrop-filter → solid panels, identical layout ── */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .topbar { background: rgba(6,14,29,.97); }
+  .stats > div, .price-opt, .price-anchor { background: rgba(13,26,47,.96); }
+  .room-stop, .room-stop:first-child, .room-stop:nth-child(odd), .room-stop:nth-child(n+3) { background: rgba(13,26,47,.96); }
+  .price-opt.featured { background: rgba(38,22,24,.96); }
+}
+/* ═══ END v1.206 LIQUID GLASS LAYER ═══ */
+
+/* ═══════════════════════════════════════════════════════════════
+   v1.207 · DASHING LAYER (2026-06-10)
+   AI-NOTES — READ BEFORE EDITING, DO NOT DELETE:
+   1. PROTECTED: .quick-grid two-column layout (the parallel pain
+      columns) — JFC explicitly requires them side by side at
+      >=600px. This block styles .quick-card SURFACES only and must
+      NEVER set display/grid-template/columns on .quick-grid.
+   2. CSS-only. No copy was added or changed. Keep it that way.
+   3. CTA button BACKGROUND COLORS are deliberately untouched
+      (white-on-orange contrast already tuned). Only radius,
+      shadow, and hover lift were added here.
+   4. .quick-card / .roi-card keep their 3px LEFT accent border
+      (orange = money, green = enterprise). That color coding is
+      a concept, not decoration.
+   5. Text stays #FFF / orange / green / #6BA8FF. No greys.
+   6. All hover transforms are disabled under
+      prefers-reduced-motion. Keep that guard.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── 1. Pain columns: glass film, identity borders kept, grid untouched ── */
+.quick-card {
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255,255,255,.12);
+  border-left: 3px solid var(--orange);
+  border-radius: 16px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 12px 30px rgba(0,0,0,.25);
+}
+.quick-card.ep { border-left-color: var(--green); }
+
+/* ── 2. Early proofbar: numbers become the show ── */
+.quick-proofbar { gap: 14px; border-top: none; padding-top: 4px; }
+.quick-proofmini {
+  border-left: none;
+  padding: 16px 18px;
+  background: rgba(255,255,255,.045);
+  backdrop-filter: blur(10px) saturate(145%);
+  -webkit-backdrop-filter: blur(10px) saturate(145%);
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 14px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.09);
+}
+.quick-proofmini strong {
+  font-size: clamp(34px, 4.4vw, 44px);
+  color: var(--orange) !important; -webkit-text-fill-color: var(--orange) !important;
+  text-shadow: 0 0 22px rgba(232,96,64,.35);
+}
+.quick-proofmini:nth-child(2) strong {
+  color: var(--green) !important; -webkit-text-fill-color: var(--green) !important;
+  text-shadow: 0 0 22px rgba(40,236,170,.30);
+}
+.quick-proofmini:nth-child(3) strong {
+  color: #6BA8FF !important; -webkit-text-fill-color: #6BA8FF !important;
+  text-shadow: 0 0 22px rgba(107,168,255,.30);
+}
+
+/* ── 3. Eyebrows: square tags become glass pills ── */
+.eyebrow {
+  background: rgba(40,236,170,.08);
+  border: 1px solid rgba(40,236,170,.45);
+  border-radius: 999px;
+  padding: 7px 16px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+/* ── 4. Display italics get a soft stage light ── */
+.h2 em { text-shadow: 0 0 26px rgba(232,96,64,.40); }
+
+/* ── 5. Photography: rounded frames + slow hover zoom ── */
+.photo-wrap, .program-media .img-wrap {
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 14px 34px rgba(0,0,0,.32);
+}
+.photo-wrap img, .program-media img { transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.photo-wrap:hover img, .program-media .img-wrap:hover img { transform: scale(1.035); }
+
+/* ── 6. ROI scenarios, buyer-fit, and case cards: glass + hover lift ── */
+.roi-card, .buyer-card, .b2b-proof-card {
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 12px 30px rgba(0,0,0,.25);
+  transition: transform .25s ease, border-color .25s ease;
+}
+.b2b-proof-card { padding: 16px 18px; }
+.roi-card { border-left: 3px solid var(--orange); }
+.roi-card:nth-child(2) { border-left-color: var(--green); }
+.roi-card:hover, .buyer-card:hover, .b2b-proof-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,.28);
+}
+
+/* ── 7. Pull quotes: editorial glass slabs ── */
+.pull {
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  border: 1px solid rgba(255,255,255,.11);
+  border-left: 3px solid var(--orange);
+  border-radius: 16px;
+  padding: 26px 28px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.09);
+}
+
+/* ── 8. CTAs: pill + glow + lift (background colors untouched) ── */
+.cta-btn-primary, a.cta-btn, .cta-btn {
+  border-radius: 999px;
+  box-shadow: 0 10px 26px rgba(232,96,64,.30), inset 0 1px 0 rgba(255,255,255,.28);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.cta-btn-primary:hover, a.cta-btn:hover, .cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(232,96,64,.45), inset 0 1px 0 rgba(255,255,255,.34);
+}
+.cta-btn-secondary {
+  border-radius: 999px;
+  border-color: rgba(255,255,255,.22);
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08); /* overrides .cta-btn orange glow on combined class */
+}
+.cta-btn-secondary:hover { box-shadow: inset 0 1px 0 rgba(255,255,255,.12); }
+
+/* ── 9. Motion respect ── */
+@media (prefers-reduced-motion: reduce) {
+  .photo-wrap img, .program-media img,
+  .roi-card, .buyer-card, .b2b-proof-card,
+  .cta-btn-primary, a.cta-btn, .cta-btn { transition: none; }
+  .photo-wrap:hover img, .program-media .img-wrap:hover img,
+  .roi-card:hover, .buyer-card:hover, .b2b-proof-card:hover,
+  .cta-btn-primary:hover, a.cta-btn:hover, .cta-btn:hover { transform: none; }
+}
+
+/* ── 10. No-backdrop-filter fallback for the new surfaces ── */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .quick-card, .quick-proofmini, .roi-card, .buyer-card,
+  .b2b-proof-card, .pull, .cta-btn-secondary { background: rgba(13,26,47,.96); }
+}
+/* ═══ END v1.207 DASHING LAYER ═══ */
+
+/* ═══════════════════════════════════════════════════════════════
+   v1.208 · SPRINKLE LAYER (2026-06-10)
+   AI-NOTES — READ BEFORE EDITING, DO NOT DELETE:
+   1. Six figures were MOVED (not added/removed) out of the three
+      photo clusters into text-heavy zones. Captions untouched and
+      thematically matched to their new neighbors. Do not re-cluster.
+   2. .sprinkle = standalone cinematic figure (21:9). sp-green flips
+      the caption accent to green for enterprise-themed images
+      (orange = money theme). This follows the page's color concept.
+   3. hero-gallery now holds ONE wide figure; the 1fr override below
+      defeats the old 2-col grid at >=600px. If photos are ever added
+      back there, remove that override first.
+   4. program-media galleries now hold 3 figures each (1 wide + 2):
+      balanced on the 6-col grid. Keep them at 3.
+   ═══════════════════════════════════════════════════════════════ */
+.hero-gallery { grid-template-columns: 1fr; }
+.hero-gallery .hero-gallery-main .photo-wrap { aspect-ratio: 21 / 10; }
+.sprinkle { margin: 52px 0; }
+.sprinkle .photo-wrap { aspect-ratio: 21 / 9; }
+.sprinkle figcaption {
+  display: block;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: .06em;
+  line-height: 1.55;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  border-left: 2px solid var(--orange);
+  padding-left: 10px;
+  margin-top: 12px;
+  max-width: 760px;
+}
+.sprinkle.sp-green figcaption { border-left-color: var(--green); }
+/* ═══ END v1.208 SPRINKLE LAYER ═══ */
+
+/* ═══════════════════════════════════════════════════════════════
+   v1.209 · GLASS INTENSITY LAYER (2026-06-10)
+   Source of the recipe: JFC's github-glass-badge.html reference
+   (WebGL liquid-glass card). The shader itself was NOT ported —
+   wrong tool for a content/SEO page. Its visual terms were:
+     · lighting gradient (brighter above card center)
+         → baked into `background` as a top white gradient layer.
+           DO NOT convert to ::before/::after — positioned pseudos
+           paint over static text and wash it out.
+     · rb2 edge ring → second inset 0 0 0 1px shadow.
+     · bold spec: fill .07-.10, border .30-.45, blur 22, r26.
+   AI-NOTES:
+   1. This layer only RE-SPECS surfaces created in v1.206/v1.207.
+      Selectors must stay in sync with those layers.
+   2. Text colors untouched. No greys. Legibility rule intact.
+   3. Keep the @supports fallback LAST in this layer: the gradient
+      backgrounds here override the older fallbacks in the cascade.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Shared loud-glass recipe on all card surfaces ── */
+.stats > div, .price-opt, .price-anchor,
+.quick-card, .quick-proofmini,
+.roi-card, .buyer-card, .b2b-proof-card,
+.pull, .room-stop,
+.room-stop:first-child, .room-stop:nth-child(odd), .room-stop:nth-child(n+3) {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,0) 46%),
+    rgba(255,255,255,.085);
+  backdrop-filter: blur(20px) saturate(165%);
+  -webkit-backdrop-filter: blur(20px) saturate(165%);
+  border-color: rgba(255,255,255,.30);
+  border-radius: 20px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.38),
+    inset 0 0 0 1px rgba(255,255,255,.07),
+    0 24px 60px rgba(0,0,0,.26);
+}
+/* identity left-accents survive the border-color re-spec */
+.quick-card { border-left: 3px solid var(--orange); }
+.quick-card.ep { border-left-color: var(--green); }
+.roi-card { border-left: 3px solid var(--orange); }
+.roi-card:nth-child(2) { border-left-color: var(--green); }
+.pull { border-left: 3px solid var(--orange); }
+
+/* featured price: loudest object on the page */
+.price-opt.featured {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,0) 46%),
+    linear-gradient(180deg, rgba(232,96,64,.16), rgba(255,255,255,.06));
+  border-color: rgba(232,96,64,.65);
+  border-radius: 24px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.42),
+    inset 0 0 0 1px rgba(232,96,64,.20),
+    0 0 0 1px rgba(232,96,64,.30),
+    0 26px 64px rgba(232,96,64,.22);
+}
+
+/* topbar: deeper lens */
+.topbar {
+  backdrop-filter: blur(22px) saturate(165%);
+  -webkit-backdrop-filter: blur(22px) saturate(165%);
+  border-bottom: 1px solid rgba(255,255,255,.22);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 10px 30px rgba(0,0,0,.30);
+}
+
+/* eyebrow pills + secondary CTA: reference-grade .45 borders */
+.eyebrow { border-color: rgba(40,236,170,.55); background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,0) 55%), rgba(40,236,170,.09); }
+.cta-btn-secondary { border-color: rgba(255,255,255,.45); background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,0) 55%), rgba(255,255,255,.07); }
+
+/* ambient glow fields: more color for saturate() to refract */
+.stats::before, .pricing-rack::before, .room-timeline::before {
+  background:
+    radial-gradient(460px 300px at 12% 18%, rgba(232,96,64,.22), transparent 70%),
+    radial-gradient(500px 320px at 88% 82%, rgba(40,236,170,.17), transparent 70%),
+    radial-gradient(400px 280px at 55% 50%, rgba(255,255,255,.06), transparent 70%);
+}
+
+/* ── Fallback: no backdrop-filter → solid, same geometry ── */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .stats > div, .price-opt, .price-anchor,
+  .quick-card, .quick-proofmini,
+  .roi-card, .buyer-card, .b2b-proof-card,
+  .pull, .room-stop,
+  .room-stop:first-child, .room-stop:nth-child(odd), .room-stop:nth-child(n+3),
+  .cta-btn-secondary { background: rgba(15,29,52,.97); }
+  .price-opt.featured { background: rgba(42,24,26,.97); }
+}
+/* ═══ END v1.209 GLASS INTENSITY LAYER ═══ */
+
+/* SAY-FIG: Marx vs Say diagram + Say's surplus stats */
+.say-fig{margin:10px 0 4px}
+.say-fig-head{font-family:var(--mono);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;text-align:center;margin:0 0 12px;color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important}
+.say-compare{display:grid;grid-template-columns:1fr;gap:14px;align-items:stretch}
+.say-col{border:1px solid var(--rule);border-top:4px solid var(--rule);border-radius:6px;padding:16px 16px 8px;background:#0C1A2F;display:flex;flex-direction:column}
+.say-col.myth{border-top-color:#E86040}
+.say-col.real{border-top-color:#28ECAA}
+.say-col h4{font-family:var(--mono);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin:0;color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important}
+.say-col .say-sub{font-family:var(--serif);font-size:14px;line-height:1.4;margin:5px 0 10px;color:#CCCCCC !important;-webkit-text-fill-color:#CCCCCC !important}
+.say-col ul{list-style:none;margin:0;padding:0;flex:1 1 auto;display:flex;flex-direction:column;justify-content:space-between}
+.say-col li{font-family:var(--serif);font-size:15px;line-height:1.45;padding:10px 0;border-top:1px solid var(--rule);color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important}
+.say-col li:first-child{border-top:none}
+.say-vs{justify-self:center;align-self:center;font-family:var(--mono);font-weight:700;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:#060E1D !important;-webkit-text-fill-color:#060E1D !important;background:#E8A020;border-radius:999px;padding:5px 13px}
+.say-stats{display:grid;grid-template-columns:1fr;gap:12px;margin-top:16px}
+.say-stat{border:1px solid var(--rule);border-radius:6px;padding:14px 16px;background:#0C1A2F}
+.say-stat-num{display:block;font-family:var(--display);font-style:italic;font-size:34px;line-height:1;color:#28ECAA !important;-webkit-text-fill-color:#28ECAA !important;margin-bottom:6px}
+.say-stat-desc{display:block;font-family:var(--serif);font-size:14px;line-height:1.45;color:#CCCCCC !important;-webkit-text-fill-color:#CCCCCC !important}
+.say-cap{font-family:var(--mono);font-size:.82rem;letter-spacing:.04em;text-align:center;margin:14px 0 0;color:#CCCCCC !important;-webkit-text-fill-color:#CCCCCC !important}
+@media(min-width:760px){.say-compare{grid-template-columns:1fr auto 1fr}.say-stats{grid-template-columns:1fr 1fr}}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"¿Por qué funciona esta capacitación cuando otras no lo han hecho?",
+      "acceptedAnswer":{"@type":"Answer","text":"Porque interviene en la capa correcta del cerebro. La mayoría de los programas enseñan técnicas nuevas sobre creencias que nadie examinó. El cambio dura lo que dura el entusiasmo. Estos talleres siguen la secuencia del modelo MindOS del Dr. Paul Dobransky: primero límite y comportamiento, luego intelecto y decisión. Rompe el orden y no hay cambio sostenido."}
+    },
+    {
+      "@type":"Question",
+      "name":"¿Necesito contratar los dos talleres?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. Cada taller tiene su propio ROI y se puede contratar por separado. Si el problema principal es el estrés financiero personal que se filtra al trabajo, empieza con el Taller 1. Si el problema es el bajo sentido de propiedad o una relación tensa con la empresa, empieza con el Taller 2. Tomados en secuencia, los participantes suelen descubrir que el mismo patrón opera en ambos dominios."}
+    },
+    {
+      "@type":"Question",
+      "name":"¿Cuánto cuesta y qué incluye?",
+      "acceptedAnswer":{"@type":"Answer","text":"Un taller: $3,690. Ambos talleres: $6,060. Para 22 a 70 participantes; por encima de 70 es una cotización Enterprise a medida. Incluye diagnóstico de equipo previo, taller en vivo de 2 horas con ejercicios sobre números reales, sesión de preguntas, material de seguimiento curado y acceso directo al facilitador por 30 días. Garantía: si no hay cambio observable en el equipo, la segunda sesión es sin costo."}
+    },
+    {
+      "@type":"Question",
+      "name":"¿Qué es MindOS?",
+      "acceptedAnswer":{"@type":"Answer","text":"El modelo del psiquiatra Dr. Paul Dobransky sobre cómo funciona la mente. Describe cuatro capas del cerebro en orden: límite, comportamiento, intelecto y decisión. Una capacitación que entra directo por el intelecto, con información nueva sobre creencias intactas, no produce cambio sostenido. La secuencia importa."}
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="scroll-progress"><div class="scroll-progress-fill" id="spFill"></div></div>
+
+<nav class="topbar">
+  <a href="/" class="topbar-home">jfcarpio.com</a>
+  <a href="/workshops/" class="topbar-mark" hreflang="en" lang="en">EN · Workshops</a>
+</nav>
+
+<main class="wrap">
+
+  <h1 class="visually-hidden">Talleres corporativos de cambio rápido para el estrés financiero y la cultura de empresa privada</h1>
+
+  <!-- ─── QUICK PATH (P: dos columnas de dolor = los costos del lector) ─── -->
+  <section class="quick-path" aria-label="Ruta rápida para decidir si estos talleres encajan con tu equipo">
+    <div class="quick-grid">
+      <article class="quick-card">
+        <span class="quick-card-kicker">El costo del estrés por dinero</span>
+        <h3>Sin educación financiera en el equipo</h3>
+        <ul class="quick-list">
+          <li>El sueldo sube, pero el estrés financiero no baja.</li>
+          <li>La jornada de trabajo se contamina con deudas, emergencias y mala liquidez.</li>
+          <li>Los aumentos no compran foco ni tranquilidad.</li>
+          <li>La empresa paga por el tiempo, la atención y la energía que nunca recupera.</li>
+        </ul>
+      </article>
+      <article class="quick-card ep">
+        <span class="quick-card-kicker">El costo del bajo sentido de propiedad</span>
+        <h3>Las ideas anti-empresa que circulan y enfrían la relación con el trabajo</h3>
+        <ul class="quick-list">
+          <li>"La empresa gana porque alguien pierde": la utilidad se ve como algo arrebatado, no como algo que el equipo ayuda a crear.</li>
+          <li>"El sueldo es lo mínimo que te pueden pagar": el salario se toma como una concesión tacaña, nunca como un intercambio.</li>
+          <li>"El capital es del dueño, no mío": las herramientas, el inventario y el margen se cuidan como ajenos, o no se cuidan.</li>
+          <li>"Esforzarse de más solo engorda el bolsillo de otro": se trabaja para cumplir, no para cuidar, proponer ni construir.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <div class="wk-open">
+    <p class="wk-open-q">Ninguno de los dos costos aparece como una línea contable. Ambos salen directamente del foco, la iniciativa y la buena voluntad que hacen que un equipo valga más que la suma de sus integrantes.</p>
+  </div>
+
+  <section class="room-timeline" aria-label="Los talleres corporativos de cambio rápido">
+    <span class="eyebrow">Talleres corporativos de cambio rápido · 2 horas</span>
+    <h2 class="h2">Presentamos los talleres de cambio rápido: <em>dos horas, en el único orden que hace que el nuevo comportamiento perdure.</em></h2>
+    <div class="room-track">
+      <article class="room-stop">
+        <span class="room-num">01</span>
+        <div class="room-copy">
+          <h3>Límite</h3>
+          <p>La sala deja de tratar el síntoma como normal. El estrés financiero, el resentimiento o el bajo sentido de propiedad se vuelven visibles como un costo que la empresa venía absorbiendo sin nombrarlo.</p>
+        </div>
+      </article>
+      <article class="room-stop">
+        <span class="room-num">02</span>
+        <div class="room-copy">
+          <h3>Comportamiento</h3>
+          <p>Los participantes identifican la acción repetida: la decisión de endeudarse, el hábito con el dinero, el problema de cuidado de activos, la forma en que se toman el salario o la utilidad.</p>
+        </div>
+      </article>
+      <article class="room-stop">
+        <span class="room-num">03</span>
+        <div class="room-copy">
+          <h3>Intelecto</h3>
+          <p>Solo entonces entra la explicación económica. Cala porque el participante ya vio dónde le estaba costando su vieja creencia.</p>
+        </div>
+      </article>
+      <article class="room-stop">
+        <span class="room-num">04</span>
+        <div class="room-copy">
+          <h3>Decisión</h3>
+          <p>El taller cierra con una elección con fecha: un número, un criterio, una próxima acción. Por eso dos horas pueden convertirse en comportamiento observable.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="quick-proofbar" aria-label="Prueba temprana y autoridad">
+    <div class="quick-proofmini">
+      <strong>+4 pts</strong>
+      <span>medidos pre/post en el equipo de 23 personas de Fernando Hallo, Quito (bienestar financiero).</span>
+    </div>
+    <div class="quick-proofmini">
+      <strong>4.800+</strong>
+      <span>estudiantes en 14 años como profesor universitario de Economía y entorno de negocios (USFQ).</span>
+    </div>
+    <div class="quick-proofmini">
+      <strong>3 países</strong>
+      <span>probado en equipos corporativos, aulas universitarias y charlas invitadas en Brasil y Turquía.</span>
+    </div>
+  </div>
+
+  <div class="quick-decision" aria-label="Solicita el diagnóstico breve de tu equipo">
+    <p><strong>Si una de las dos columnas ya te suena conocida, tu empresa ya está pagando esos costos invisibles.</strong> El primer paso no es una llamada de ventas. Es un diagnóstico breve: ¿qué costo se está fugando ahora, el estrés financiero o el bajo sentido de propiedad? El diagnóstico es gratis, y el trabajo lleva garantía: si la primera sesión no produce un cambio observable, la segunda es sin costo.</p>
+    <div class="cta-btns">
+      <a class="cta-btn" href="mailto:staff@jfcarpio.com?subject=Diagn%C3%B3stico%20de%20equipo%20para%20talleres">Solicita el diagnóstico de equipo</a>
+    </div>
+  </div>
+
+  <p class="lede">Estos talleres se diseñaron para equipos en Latinoamérica, globales y bilingües, que ya sienten el costo en la productividad, el criterio y el clima interno, aunque todavía no lo hayan nombrado con precisión. Son dos talleres separados: uno ordena la vida financiera personal del participante; el otro corrige cómo el equipo entiende el salario, la empresa, la utilidad, el riesgo y los activos. Ambos se apoyan en el mismo mecanismo, <a href="#mindos">MindOS</a>, pero abordan problemas distintos y se pueden contratar por separado.</p>
+  <p class="byline">J.F. Carpio · Investigador en Economía y entorno de negocios · 2026</p>
+
+  <section class="b2b-proof" aria-label="Por qué un comprador puede defenderlo internamente">
+    <article class="b2b-proof-card">
+      <span class="b2b-proof-kicker">El argumento de negocio</span>
+      <p>PwC documenta el estrés financiero como un problema de productividad. Esta página no le pide a la empresa comprar el lenguaje del "bienestar". Muestra dónde se está perdiendo la atención que ya se paga.</p>
+    </article>
+    <article class="b2b-proof-card">
+      <span class="b2b-proof-kicker">El argumento cultural</span>
+      <p>Gallup encuentra una y otra vez el mismo patrón: el engagement cambia el desempeño. El segundo taller trabaja sobre las creencias económicas que moldean el sentido de propiedad, el cuidado y la iniciativa.</p>
+    </article>
+    <article class="b2b-proof-card">
+      <span class="b2b-proof-kicker">El argumento del cambio</span>
+      <p>El punto de fracaso que mide McKinsey es conocido: los procesos cambian, la mentalidad no. MindOS es el mecanismo que evita que esto se vuelva otro pico de entusiasmo de dos semanas.</p>
+    </article>
+  </section>
+
+  <section class="hero-gallery" aria-label="Escenas del tipo de intervención que crean estos talleres">
+    <figure class="hero-gallery-main">
+      <div class="photo-wrap">
+        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=1200" srcset="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w" sizes="(min-width: 900px) 44vw, 100vw" width="1200" height="800" loading="eager" decoding="async" alt="Equipo ejecutivo trabajando alrededor de una mesa de decisión">
+      </div>
+      <figcaption>El punto no es "entregar contenido". Es cambiar cómo el equipo entiende una decisión antes de repetirla cien veces.</figcaption>
+    </figure>
+    </section>
+
+  <!-- ─── TEAM SELF-CHECK (interactivo) ─── -->
+  <section class="teamcheck" id="teamcheck" aria-label="Un autodiagnóstico rápido para tu equipo">
+    <span class="eyebrow"><b>◐</b> Dónde está parado tu equipo en realidad</span>
+    <h2 class="h2">¿Cuántas de estas <em>ya muestra</em> tu equipo?</h2>
+    <p class="teamcheck-intro">Marca las que reconozcas. Cada una es un costo silencioso, y nombrarlo es el primer paso para eliminarlo.</p>
+    <fieldset class="teamcheck-set">
+      <ul class="teamcheck-list">
+        <li><label><input type="checkbox" class="tc-box"><span>Los sueldos subieron, pero el estrés financiero del equipo no bajó.</span></label></li>
+        <li><label><input type="checkbox" class="tc-box"><span>Las preocupaciones por el dinero siguen a la gente, de forma visible, durante toda la jornada.</span></label></li>
+        <li><label><input type="checkbox" class="tc-box"><span>Parte de tu nómina se evapora en silencio en deudas, arriendo o una jubilación postergada, aunque el P&amp;L nunca lo registre.</span></label></li>
+        <li><label><input type="checkbox" class="tc-box"><span>La gente trata el inventario, las herramientas o el margen como si fueran ajenos.</span></label></li>
+        <li><label><input type="checkbox" class="tc-box"><span>El salario se toma como una concesión tacaña, no como un intercambio.</span></label></li>
+        <li><label><input type="checkbox" class="tc-box"><span>La última capacitación creó entusiasmo, pero ni una sola decisión con fecha.</span></label></li>
+      </ul>
+      <p class="teamcheck-result" data-score="0" aria-live="polite"><span class="tc-count">0</span><span class="tc-of"> de 6 reconocidas.</span> <span class="tc-verdict">Marca las que veas. La mayoría de los gerentes reconoce tres o cuatro de entrada.</span></p>
+    </fieldset>
+  </section>
+
+  <!-- ─── MECHANISM ─── -->
+  <section class="mech band" aria-label="El mecanismo: MindOS" id="mindos">
+    <span class="eyebrow"><b>01</b> El mecanismo</span>
+    <h2 class="h2"><span class="mech-name">MindOS</span>: el sistema operativo que decide <em>si una capacitación se queda, o se desvanece en semanas.</em></h2>
+    <p>MindOS es el modelo desarrollado por el psiquiatra Dr. Paul Dobransky sobre cómo funciona la mente. Todo comportamiento se apoya en cuatro capas del cerebro, en orden: límite, comportamiento, intelecto y decisión. La capacitación convencional entra por el intelecto con información nueva, aterrizando sobre un límite y creencias que nadie examinó. Por eso dura lo que dura el entusiasmo. La intervención sostenible respeta la secuencia de Dobransky: desde la capa fundacional y emocional hasta la capa donde se toman las decisiones.</p>
+    <p class="mech-epiphany">Carpio lo vio tras catorce años en el aula, capacitando equipos en tres ciudades de Ecuador y hablando como invitado en Brasil y Turquía: la gente no fallaba porque no supiera. Fallaba porque la idea nueva aterrizaba encima de una creencia vieja e intacta, sobre el dinero, sobre la empresa, sobre el salario. Cambió el orden de la intervención, y el cambio empezó a perdurar.</p>
+    <ul class="mech-layers" aria-label="Las cuatro capas del cerebro en el modelo de Dobransky">
+      <li><span>1</span>Límite</li>
+      <li><span>2</span>Comportamiento</li>
+      <li><span>3</span>Intelecto</li>
+      <li><span>4</span>Decisión</li>
+    </ul>
+  </section>
+
+  <!-- ─── MODULE MAP ─── -->
+  <figure class="sprinkle">
+      <div class="photo-wrap">
+        <img src="https://jfcarpio.com/las7formas/img/pexels-1051838-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-1051838-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-1051838-w1800.jpg 1800w" sizes="(min-width: 900px) 24vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Gráficos impresos y una laptop sobre una mesa de trabajo">
+      </div>
+      <figcaption>Cuando cambia el criterio, también cambia la forma en que la gente interpreta reportes, prioridades y costos ocultos.</figcaption>
+    </figure>
+
+
+    <section class="module-map" aria-label="Dos talleres independientes con retornos separados">
+    <div class="module-map-head">
+      <span class="eyebrow"><b>02</b> No es un paquete confuso</span>
+      <h2 class="h2">Dos talleres independientes y modulares. <em>Toma uno, el otro, o ambos, y cada uno recompensa a la empresa por un camino distinto.</em></h2>
+      <p>La empresa puede contratar uno, el otro, o ambos. El Taller 1 reduce la fricción financiera personal que se filtra al trabajo. El Taller 2 cambia cómo el empleado interpreta la empresa, el salario, el riesgo y el capital a su alrededor.</p>
+    </div>
+    <div class="module-cards">
+      <article class="module-card">
+        <span class="module-card-kicker">Taller 1 · bienestar financiero</span>
+        <h3>Dinero y Finanzas Personales y Familiares</h3>
+        <p>Para equipos que llegan al trabajo cargando deudas, el peso de la inflación, mala liquidez y decisiones financieras familiares postergadas que les ocupan la cabeza.</p>
+        <span class="module-roi"><strong>ROI propio:</strong> menos estrés financiero durante la jornada, mejores decisiones de deuda/ahorro y una hoja de ruta práctica para liquidez, inversión y protección del patrimonio.</span>
+      </article>
+      <article class="module-card ep">
+        <span class="module-card-kicker">Taller 2 · cultura de empresa</span>
+        <h3>Apreciación de la Empresa Privada</h3>
+        <p>Para equipos que heredaron una narrativa de suma cero: "la empresa gana porque el trabajador pierde". Esa idea afecta el cuidado, la lealtad, la iniciativa y cómo interpretan el P&amp;L.</p>
+        <span class="module-roi"><strong>ROI propio:</strong> mejor relación con los activos, el salario, la utilidad, el riesgo del negocio y la cooperación interna. No es motivación. Es comprensión económica aplicada.</span>
+      </article>
+    </div>
+  </section>
+
+  <figure class="sprinkle sp-green">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Facilitador guiando una conversación de negocios" sizes="(min-width: 600px) 45vw, 100vw">
+        </div>
+        <figcaption>El papel del taller es ordenar el descubrimiento: dejar que el participante vea el sistema que estaba corriendo sin saberlo.</figcaption>
+      </figure>
+
+
+    <section class="buyer-fit" aria-label="Cómo distintos compradores internos defienden el taller">
+    <span class="eyebrow">Por tipo de comprador</span>
+    <h2 class="h2">Distintos ejecutivos pueden defender el mismo programa <em>sin usar el mismo argumento.</em></h2>
+    <div class="buyer-grid">
+      <article class="buyer-card">
+        <span>CEO</span>
+        <p>Fuga de nómina, iniciativa débil, bajo sentido de propiedad y una relación más fría con la empresa.</p>
+      </article>
+      <article class="buyer-card">
+        <span>RR.HH. / Personas</span>
+        <p>Estrés financiero, engagement, riesgo de rotación y una intervención práctica que no infantiliza al empleado.</p>
+      </article>
+      <article class="buyer-card">
+        <span>CFO</span>
+        <p>Horas pagadas perdidas por distracción, malas decisiones de dinero personal y fricción evitable alrededor del salario, la utilidad y el margen.</p>
+      </article>
+      <article class="buyer-card">
+        <span>Capacitación / L&amp;D</span>
+        <p>Cambio de comportamiento con trabajo previo, una sesión densa de dos horas, tarea y resultados observables al final, en lugar de la entrega de contenido genérico.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ─── STATS ─── -->
+  <figure class="sprinkle sp-green">
+      <div class="photo-wrap">
+        <img src="https://jfcarpio.com/las7formas/img/pexels-3943723-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-3943723-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-3943723-w1800.jpg 1800w" sizes="(min-width: 900px) 24vw, 100vw" width="900" height="1200" loading="lazy" decoding="async" alt="Una mano colocando una moneda en una alcancía rodeada de monedas">
+      </div>
+      <figcaption>Un taller aborda la fricción financiera privada. El otro corrige cómo el equipo interpreta a la empresa misma.</figcaption>
+    </figure>
+
+
+    <section class="stats" aria-label="Por qué la inversión rinde">
+    <h2 class="visually-hidden">Por qué la inversión rinde</h2>
+    <div>
+      <div class="stat-num">3 h</div>
+      <p class="stat-desc">por semana pierde en el trabajo el empleado promedio por estrés financiero personal.</p>
+      <p class="stat-src"><em>PwC Employee Financial Wellness Survey</em></p>
+    </div>
+    <div>
+      <div class="stat-num">+23%</div>
+      <p class="stat-desc">de rentabilidad en empresas con equipos altamente comprometidos frente al resto de la industria.</p>
+      <p class="stat-src"><em>Gallup, State of the Global Workplace</em></p>
+    </div>
+    <div>
+      <div class="stat-num">70%</div>
+      <p class="stat-desc">de las transformaciones organizacionales fracasan, casi siempre porque cambiaron procesos y acciones sin tocar nunca la mentalidad.</p>
+      <p class="stat-src"><em>McKinsey, Why Transformations Fail</em></p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ─── WORLD CASES + PROJECTION ─── -->
+  <section class="tesis" aria-label="Evidencia global y una proyección para tu equipo">
+    <p>PwC lo mide en trabajadores estadounidenses, Gallup en más de cien países, McKinsey en cientos de transformaciones corporativas. Los tres llegan al mismo punto, y es el que se movió en Quito: el equipo de 23 personas de Fernando Hallo subió su <strong>bienestar financiero alrededor de 4 puntos</strong>.</p>
+    <p><strong>Proyección para tu equipo:</strong> 25 personas pierden hoy unas 3 horas a la semana por estrés financiero (PwC). Recupera siquiera una parte y tu nómina libera alrededor de <strong>150 horas-persona al mes</strong> que ya estás pagando. Es trabajo enfocado que vuelve, y se nota a lo largo de los dos trimestres siguientes.</p>
+    <a href="#lets-talk" class="ensayo-link">Hablemos de por dónde empezar →</a>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ─── THESIS ─── -->
+  <section class="tesis">
+    <p>Esos números no describen un problema de talento. Describen una intervención mal apuntada. La mayoría de los programas corporativos enseñan habilidades nuevas sobre creencias que nadie examinó; dos semanas después, el viejo sistema operativo retoma el control. <strong>No por falta de voluntad. Por falta de intervención en la capa correcta del cerebro.</strong></p>
+    <p>La secuencia correcta empieza con una grieta reconocible: un hábito mensual con el dinero, o un supuesto que se carga todos los días sobre la empresa. Luego entra el marco: <strong>límite, comportamiento, intelecto y decisión.</strong> Los dos talleres aplican esa secuencia al dinero personal y a la empresa privada. Se pueden tomar por separado; juntos, revelan el mismo patrón en ambos dominios.</p>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ─── OFFER ─── -->
+  <section class="offer-stack" aria-label="Lo que compra la empresa">
+    <div class="offer-head">
+      <span class="eyebrow"><b>03</b> Lo que compra la empresa</span>
+      <h2 class="h2">No es una charla bonita. <em>Es una intervención de dos horas.</em></h2>
+      <p>Diseñamos cada sesión para que el participante no solo "entienda" una idea. La vea operando en sus propios hábitos, números y decisiones de trabajo. Lo que la empresa compra no es inspiración. Es una secuencia capaz de mover al participante desde una grieta reconocible hasta una decisión observable.</p>
+    </div>
+    <ol class="offer-items">
+      <li><strong>Un diagnóstico que no humilla.</strong><span>La gente baja la guardia porque no se la está acusando. Se le muestra el sistema que ya venía operando sin que se diera cuenta.</span></li>
+      <li><strong>Un mecanismo que el gerente puede reconocer.</strong><span>El taller conecta el dinero personal, el criterio de trabajo, la productividad y la relación con la empresa, sin convertirlo en un sermón corporativo.</span></li>
+      <li><strong>Una salida observable.</strong><span>Cada participante debe salir con acciones con fecha, no con entusiasmo genérico. La empresa compra cambio de comportamiento, no aplausos.</span></li>
+    </ol>
+  </section>
+
+  <section class="editorial-band" aria-label="Cómo se ve una intervención bien apuntada">
+    <figure>
+      <div class="photo-wrap">
+        <picture>
+          <source srcset="https://jfcarpio.com/network-pacific.webp" type="image/webp">
+          <img src="https://jfcarpio.com/network-pacific.jpg" width="1512" height="672" loading="lazy" decoding="async" alt="Visualización abstracta de una red conectada sobre una superficie azul">
+        </picture>
+      </div>
+      <figcaption>MindOS no entra como retórica. Entra como estructura: primero un límite, luego un comportamiento, luego una explicación, y al final una decisión.</figcaption>
+    </figure>
+    <aside class="editorial-note">
+      <span class="eyebrow"><b>04</b> Cómo se siente en vivo</span>
+      <h3>Dos horas de densidad de trabajo, no cosmética motivacional.</h3>
+      <p>La sesión empieza donde el gerente ya siente el problema: distracción, bajo sentido de propiedad, decisiones postergadas, resentimiento mal explicado. Luego se ordena el descubrimiento.</p>
+      <dl>
+        <div>
+          <dt>Primero</dt>
+          <dd>Una escena reconocible que baja las defensas y hace visible el costo real.</dd>
+        </div>
+        <div>
+          <dt>Luego</dt>
+          <dd>Una explicación económica y neuroconductual que el participante puede contrastar con sus propios números.</dd>
+        </div>
+        <div>
+          <dt>Al final</dt>
+          <dd>Una decisión con fecha que la empresa puede observar, no solo un "me gustó".</dd>
+        </div>
+      </dl>
+    </aside>
+    <figure>
+      <div class="photo-wrap">
+        <img src="https://jfcarpio.com/las7formas/img/pexels-8927648-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-8927648-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-8927648-w1800.jpg 1800w" sizes="(min-width: 900px) 31vw, 100vw" width="900" height="1200" loading="lazy" decoding="async" alt="Documentos financieros y una lupa sobre un escritorio">
+      </div>
+      <figcaption>El comprador correcto no necesita una charla "bonita". Necesita una intervención que sobreviva a la revisión, al costo y al seguimiento.</figcaption>
+    </figure>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ─── WORKSHOP 1 — Dinero ─── -->
+  <section class="ventana" id="workshop-finance">
+    <span class="ventana-label">Taller 1 · 2 horas · Independiente</span>
+    <h2 class="h2">Dinero y Finanzas Personales y Familiares</h2>
+    <p class="ventana-sub">Del caos financiero y la ansiedad al control, una nueva confianza y verdadera tranquilidad financiera.</p>
+    <p class="ventana-lede">El participante llega con un sistema financiero heredado: ideas sobre el dinero, el ahorro, la deuda, la inversión y la seguridad familiar, formadas antes de tener las herramientas para evaluarlas.</p>
+
+    <ol class="layers">
+      <li>
+        <span class="layer-tag">Límite</span>
+        <span class="layer-body"><strong>Dibujar el mapa real.</strong> De dónde sale el dinero (la teoría de la mercancía de Carl Menger frente a la de los coleccionables de Nick Szabo), sus tres roles (medio de cambio, unidad de cuenta y reserva de valor) y la liquidez como su rasgo definitivo. El ahorro como lo definió Menger: abstención voluntaria del consumo presente. Sin este mapa, todo consejo financiero queda flotando.</span>
+      </li>
+      <li>
+        <span class="layer-tag">Comportamiento</span>
+        <span class="layer-body"><strong>Ver los patrones que ya operan.</strong> El ciclo gasto-deuda-estrés, pagar el mínimo de la tarjeta, gastar "lo que sobra", confundir activos con pasivos financieros (mucho "activo" contable en realidad le saca dinero del bolsillo) y el lugar de cada persona en el cuadrante del flujo: empleado, autoempleado, dueño o inversionista. No son fallas morales: son automatismos corregibles.</span>
+      </li>
+      <li>
+        <span class="layer-tag">Intelecto</span>
+        <span class="layer-body"><strong>Entregar las herramientas, con su porqué.</strong> La inversión como producción "rodeada" de Böhm-Bawerk; el interés compuesto a favor o en contra, con el tiempo como multiplicador; buena deuda contra mala deuda; "págate primero a ti mismo"; la bola de nieve de Dave Ramsey; fondos indexados frente a value investing (estilo Buffett); y el Portafolio Permanente de Harry Browne: 25% acciones, 25% bonos largos, 25% oro y 25% efectivo, hecho para resistir prosperidad, inflación, deflación o pánico.</span>
+      </li>
+      <li>
+        <span class="layer-tag">Decisión</span>
+        <span class="layer-body"><strong>Compromisos concretos con fecha.</strong> El taller cierra con dos o tres decisiones por persona: su liquidez mínima, qué deuda atacar primero, el porcentaje de ahorro automático, su primer criterio de inversión. Fecha, número, próxima acción.</span>
+      </li>
+    </ol>
+
+    <div class="program-media" aria-label="Dinero y finanzas personales en el taller">
+      <figure class="is-wide">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=1000" srcset="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w" sizes="(min-width: 600px) 45vw, 100vw" width="1000" height="667" loading="lazy" decoding="async" alt="Datos financieros y gráficos de desempeño en una pantalla">
+        </div>
+        <figcaption>El taller empieza con tu balance real, no con teoría: qué entra, qué se queda, a dónde se va.</figcaption>
+      </figure>
+      <figure>
+        <div class="img-wrap">
+          <img src="https://jfcarpio.com/las7formas/img/pexels-3943716-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-3943716-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-3943716-w1800.jpg 1800w" sizes="(min-width: 600px) 45vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Una mano colocando una moneda en una alcancía negra con monedas dispersas">
+        </div>
+        <figcaption>El ahorro, la liquidez y la reserva de valor dejan de ser palabras sueltas en cuanto el participante les da orden y números.</figcaption>
+      </figure>
+      <figure>
+        <div class="img-wrap">
+          <img src="https://jfcarpio.com/las7formas/img/pexels-164527-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-164527-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-164527-w1800.jpg 1800w" sizes="(min-width: 600px) 45vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Billetes de dólar enrollados sobre una superficie clara">
+        </div>
+        <figcaption>El dinero deja de sentirse como niebla mensual y vuelve a entenderse como flujo, costo de oportunidad y protección familiar.</figcaption>
+      </figure>
+    </div>
+
+    <p class="format"><strong>Dentro del taller:</strong> el origen del dinero (Menger y Szabo) · los tres roles y la liquidez · la Ley de Gresham y el Efecto Cantillon · ahorro e inversión desde la escuela austríaca (Menger, Böhm-Bawerk) · el interés compuesto · activos contra pasivos financieros · buena deuda y mala deuda · el cuadrante del flujo · págate primero · la bola de nieve de Ramsey · indexados contra value investing · el Portafolio Permanente de Harry Browne · la tranquilidad financiera (qué es y cómo lograrla) · bancos, mutualistas, cooperativas y cajas de ahorro · los seguros y la lotería negativa · la paradoja de la Seguridad Social · oportunidades de inversión en Ecuador 2025-2030.</p>
+    <p class="format"><strong>Formato:</strong> taller de 110 min con ejercicios en vivo · 10 min de preguntas. Se puede contratar sin el taller de empresa privada.</p>
+    <p class="format"><strong>Material opcional:</strong> lecturas breves, videos y <em>tarea</em> quirúrgica al final, a criterio de cada participante. Nada largo, nada genérico.</p>
+
+    <a href="/mindos-talleres.html" class="ensayo-link" target="_blank" rel="noopener noreferrer">Leer el ensayo completo →</a>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ─── WORKSHOP 2 — Empresa Privada ─── -->
+  <figure class="sprinkle">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Gráficos financieros y datos sobre una mesa de trabajo" sizes="(min-width: 600px) 45vw, 100vw">
+        </div>
+        <figcaption>Deuda buena vs deuda mala, interés compuesto trabajando a favor o en contra: la aritmética que nadie enseñó en la escuela.</figcaption>
+      </figure>
+
+
+    <section class="ventana ep" id="workshop-enterprise">
+    <span class="ventana-label">Taller 2 · 2 horas · Independiente</span>
+    <h2 class="h2">Apreciación de la Empresa Privada</h2>
+    <p class="ventana-sub">De Karl Marx a Carl Menger: de la suma cero a la ganancia mutua.</p>
+    <p class="ventana-lede">El sistema operativo heredado, en la mayoría de los casos, es un marco de suma cero: el empleador gana porque el empleado pierde, la utilidad es despojo, el capital no aporta nada y exigir más siempre es justo porque "ellos tienen de sobra". Esas ideas llegan antes del contrato, las refuerzan las redes y buena parte de la universidad, y casi nunca se corrigen con aritmética real.</p>
+
+    <ol class="layers">
+      <li>
+        <span class="layer-tag">Límite</span>
+        <span class="layer-body"><strong>De la suma cero a la ganancia mutua.</strong> Primero cae el error histórico: el capitalismo no es la etapa que sigue al feudalismo, es su rival, y nace en los burgos y ciudades mercantiles (la Liga Hanseática, las ciudades-estado italianas, las Provincias Unidas, Manchester), nunca en las capitales del poder. Y su efecto es medible: la humanidad fue igual de pobre durante 200.000 años, y solo en los últimos tres siglos empezó a salir, más gente en los últimos 40 años que en los 400 previos. El empleo existe porque ambas partes prefieren el intercambio a no tenerlo. El límite no es político: es aritmético.</span>
+      </li>
+      <li>
+        <span class="layer-tag">Comportamiento</span>
+        <span class="layer-body"><strong>Ver el marco en acción.</strong> Esfuerzo discrecional retenido, activos de la empresa tratados como ajenos, información que no se comparte, lealtad que se evapora a la primera tensión. No son rasgos de carácter: son consecuencias de una mala teoría de la empresa, la que supone que "sin el patrón habría salario igual". No lo habría: sin el capitalista que contrata y asume el riesgo, el salario fijo no existe.</span>
+      </li>
+      <li>
+        <span class="layer-tag">Intelecto</span>
+        <span class="layer-body"><strong>El balance completo.</strong> Aquí cae la plusvalía marxista, un error que no es de Marx sino de Adam Smith, que confundió al inversionista con el gerente. Si hay pérdidas el asalariado no aporta; si hay ganancias no las comparte, porque no compartió el riesgo: la ganancia no es salario retenido. Lo que sí existe es la Plusvalía de Say (1803, sesenta y cuatro años antes de Marx): el capitalista aporta herramientas, equipo, visión y, sobre todo, la clientela y la marca, el activo más valioso de cualquier firma, y con eso multiplica la productividad del trabajador. Say y Reisman dan los fundamentos; cada participante arma su propio P&amp;L de empleo y lo ve en números.</span>
+      </li>
+      <li>
+        <span class="layer-tag">Decisión</span>
+        <span class="layer-body"><strong>Un marco distinto, decisiones distintas.</strong> El empleado que entiende la Plusvalía de Say (la empresa como multiplicadora de su productividad, no como explotadora) cuida los activos de otra manera, habla de la utilidad sin resentimiento y responde mejor ante la adversidad, y valora su empleo como lo que es: una oportunidad de bajo riesgo, un ingreso estable sin cargar el riesgo que asume el dueño. Y entiende la cataláctica: los intercambios libres se repiten justamente porque benefician a las dos partes.</span>
+      </li>
+    </ol>
+
+    <div class="say-fig" aria-label="Marx frente a Say: el empleo no extrae, potencia">
+      <p class="say-fig-head">Dos teorías incompatibles del trabajo asalariado</p>
+      <div class="say-compare">
+        <div class="say-col myth">
+          <h4>La plusvalía marxista</h4>
+          <p class="say-sub">El mito de la explotación · un error de Adam Smith</p>
+          <ul>
+            <li>La empresa gana porque el trabajador pierde: suma cero.</li>
+            <li>La ganancia es salario robado al trabajador.</li>
+            <li>El capital no aporta nada; solo el trabajo crea valor.</li>
+            <li>El empleo es una servidumbre moderna.</li>
+          </ul>
+        </div>
+        <span class="say-vs">vs</span>
+        <div class="say-col real">
+          <h4>La Plusvalía de Say</h4>
+          <p class="say-sub">La realidad del intercambio · Say (1803) + Reisman</p>
+          <ul>
+            <li>El intercambio libre beneficia a las dos partes: win-win.</li>
+            <li>Sin el capitalista que asume el riesgo, no existe el salario fijo.</li>
+            <li>El capital aporta herramientas, clientela y marca, y multiplica la productividad.</li>
+            <li>El empleo es un pacto de riesgo: uno lo asume, el otro recibe un ingreso fijo.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="say-stats">
+        <div class="say-stat">
+          <span class="say-stat-num">$1 : $45</span>
+          <span class="say-stat-desc">De cada dólar que retiene el capitalista, alrededor de 45 llegan al resto de la sociedad (Nordhaus, 2004; Henrekson, 2017).</span>
+        </div>
+        <div class="say-stat">
+          <span class="say-stat-num">5×–6×</span>
+          <span class="say-stat-desc">La productividad de la misma persona bajo una marca fuerte, frente a trabajar por su cuenta. Esa diferencia es la Plusvalía de Say.</span>
+        </div>
+      </div>
+      <p class="say-cap">Marx contra Say: el empleo no extrae, potencia.</p>
+    </div>
+
+    <div class="program-media" aria-label="Apreciación de la empresa privada en el taller">
+      <figure class="is-wide">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=1000" srcset="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=900 900w, https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&q=90&w=1400 1400w" sizes="(min-width: 600px) 45vw, 100vw" width="1000" height="667" loading="lazy" decoding="async" alt="Equipo de negocios trabajando junto en una pizarra">
+        </div>
+        <figcaption>El marco de suma cero se vuelve visible cuando el equipo construye su propio P&amp;L de empleo en tiempo real.</figcaption>
+      </figure>
+      <figure>
+        <div class="img-wrap">
+          <img src="https://jfcarpio.com/las7formas/img/pexels-164634-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-164634-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-164634-w1800.jpg 1800w" sizes="(min-width: 600px) 45vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Una fila de vehículos en un concesionario">
+        </div>
+        <figcaption>El capital, el inventario, la marca y las herramientas dejan de verse como "las cosas del dueño" y vuelven a entenderse como verdaderos multiplicadores de productividad.</figcaption>
+      </figure>
+      <figure>
+        <div class="img-wrap">
+          <img src="https://jfcarpio.com/las7formas/img/pexels-590016-w900.jpg" srcset="https://jfcarpio.com/las7formas/img/pexels-590016-w900.jpg 900w, https://jfcarpio.com/las7formas/img/pexels-590016-w1800.jpg 1800w" sizes="(min-width: 600px) 45vw, 100vw" width="900" height="675" loading="lazy" decoding="async" alt="Gráficos impresos sobre una mesa junto a una laptop">
+        </div>
+        <figcaption>El taller baja la conversación de la ideología vaga a una comprensión concreta del margen, el salario fijo, el riesgo absorbido y la cooperación.</figcaption>
+      </figure>
+    </div>
+
+    <p class="format"><strong>Dentro del taller:</strong> el error histórico (el capitalismo como rival del feudalismo, no su heredero) · el error teórico de Adam Smith · por qué sin capitalista no hay salario · el pacto del riesgo · por qué la plusvalía marxista no existe · la Plusvalía de Say (1803) · la clientela y la marca como el activo más valioso · la empresa como multiplicadora de productividad · la cataláctica y el intercambio win-win · la cita de Say sobre la propiedad de la propia industria.</p>
+    <p class="format"><strong>Formato:</strong> taller de 110 min con ejercicios en vivo · 10 min de preguntas. Se puede contratar sin el taller financiero.</p>
+    <p class="format"><strong>Material opcional:</strong> lecturas breves, videos y <em>tarea</em> quirúrgica al final, a criterio de cada participante. Nada largo, nada genérico.</p>
+
+    <a href="/mindos-talleres.html" class="ensayo-link" target="_blank" rel="noopener noreferrer">Leer el ensayo completo →</a>
+  </section>
+
+  <!-- ─── ROI ILUSTRATIVO ─── -->
+  <section class="roi-cases" aria-label="Escenarios ilustrativos de ROI">
+    <span class="eyebrow"><b>◇</b> La matemática, ilustrada</span>
+    <h2 class="h2">Dos compromisos representativos, <em>vistos como números.</em></h2>
+    <p class="roi-intro">Veamos dos ejemplos ilustrados: PwC ubica la productividad perdida por estrés financiero entre <strong>3 y 7 horas</strong> por empleado por semana, y los estudios sobre programas de bienestar financiero y engagement reportan recuperaciones de entre el <strong>5 y el 20%</strong>. El extremo conservador alcanza para pagar la sala.</p>
+    <div class="roi-grid">
+      <article class="roi-card">
+        <span class="roi-tag">Escenario A · equipo de 40 personas</span>
+        <p><strong>La fuga:</strong> 40 personas × 3 horas distraídas por semana ≈ <strong>480 horas-persona al mes</strong> que ya están en tu nómina, drenadas por el estrés financiero.</p>
+        <p><strong>El retorno:</strong> recupera apenas el 10% y son ~48 horas de trabajo enfocado de vuelta cada mes. El programa completo ($6,060) se cubre con una porción pequeña de ese foco recuperado, y el resto se acumula trimestre a trimestre.</p>
+      </article>
+      <article class="roi-card">
+        <span class="roi-tag">Escenario B · equipo de 60 personas, ambos talleres</span>
+        <p><strong>La fuga:</strong> el bajo sentido de propiedad y el resentimiento sobre salario, utilidad y margen se manifiestan como esfuerzo discrecional débil, el costo que ninguna línea del P&amp;L nombra.</p>
+        <p><strong>El retorno:</strong> eleva el esfuerzo comprometido aunque sea un 5% (bien dentro de la brecha entre engagement y desempeño que Gallup mide una y otra vez) y el retorno empequeñece un costo único de $6,060.</p>
+      </article>
+    </div>
+    <p class="roi-foot">Dos resultados con nombre hasta ahora, uno por taller: el equipo de 23 personas de Fernando Hallo elevó su bienestar financiero alrededor de <strong>4 puntos</strong> (Quito), y <strong>Multicines</strong> respaldó públicamente el taller de empresa privada a través de su gerente de marketing. La lista de resultados nombrados seguirá creciendo a medida que cierren nuevos equipos.</p>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ─── QUÉ CAMBIA DESPUÉS ─── -->
+  <section class="que-cambia" aria-label="Resultados observables después del taller">
+    <span class="eyebrow"><b>05</b> Qué cambia después</span>
+    <h2 class="h2">No entusiasmo. <em>Comportamiento distinto.</em></h2>
+    <span class="que-cambia-sub">Comportamientos observables en las semanas siguientes al taller</span>
+    <div class="cambios">
+      <div class="cambio">
+        <span class="cambio-mod">Taller 1 · Finanzas personales</span>
+        <ul>
+          <li>Deja de usar la tarjeta para cubrir el mes. Tiene un número de liquidez mínima y lo conoce.</li>
+          <li>Distingue la deuda productiva de la deuda de consumo antes de firmar.</li>
+          <li>Ahorra primero, gasta lo que queda. No al revés.</li>
+        </ul>
+      </div>
+      <div class="cambio ep">
+        <span class="cambio-mod">Taller 2 · Empresa privada</span>
+        <ul>
+          <li>Cuida los activos de la empresa como sus propias herramientas, porque entiende que lo son.</li>
+          <li>Habla de la utilidad y el margen sin resentimiento. Entiende qué parte del P&amp;L depende de él.</li>
+          <li>El esfuerzo discrecional sube. No por lealtad. Por lógica económica comprendida.</li>
+          <li>Aparece lealtad genuina hacia la empresa: no la exigida, sino la que nace de entender el valor que recibe.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <figure class="sprinkle">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Participantes revisando notas durante una sesión de trabajo" sizes="(min-width: 600px) 45vw, 100vw">
+        </div>
+        <figcaption>Cada participante sale con dos o tres decisiones con fecha: liquidez mínima, deuda a atacar, porcentaje de ahorro automático.</figcaption>
+      </figure>
+
+
+  <hr class="rule">
+
+  <!-- ─── SINERGIA ─── -->
+  <section class="tesis">
+    <blockquote class="pull">
+      Nada es más cierto que el grado de progreso económico de la humanidad estará en proporción al grado de progreso del conocimiento humano.
+      <span class="pull-attr">— Carl Menger, <em>Principios de Economía,</em> 1871</span>
+    </blockquote>
+    <p>La transformación real no ocurre porque el participante lea un punto y piense "tiene sentido". Ocurre porque <strong>durante el taller</strong> descubre esos puntos en sus propios números, con su propia calculadora, en tiempo real. Su salario, su empresa, su dinero, su futuro: todo funcionando distinto de lo que le enseñaron. Y eso no se olvida porque no fue una directriz motivacional. Fue aritmética.</p>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ─── PRUEBA SOCIAL ─── -->
+  <section class="social-proof band" aria-label="Experiencias de clientes y audiencias">
+    <span class="eyebrow"><b>06</b> Quién ha pasado por aquí</span>
+    <h2 class="h2">Un resultado con nombre por cada taller. <em>Salas corporativas reales, no afirmaciones de catálogo.</em></h2>
+
+    <blockquote class="pull" style="border-left-color:var(--green)">
+      "Bastante buena experiencia. La gente me ha dado comentarios muy positivos. El mensaje central quedó mucho más claro: lo teníamos como idea, pero no estaba afilado. Funciona bien para brokers, aseguradoras y casi cualquier negocio con gestión de ventas activa."
+      <span class="pull-attr">— Fernando Hallo · Bróker de seguros Top-50, Quito · Ecuador · 2024</span>
+    </blockquote>
+
+    <section class="result-callout" aria-label="Resultado medido en el equipo de un cliente">
+      <span class="result-num">+4 pts</span>
+      <p class="result-body"><strong>Taller 1 — Dinero.</strong> El único número con un nombre detrás: <strong>el equipo de 23 personas de Fernando Hallo tomó el taller de finanzas personales y midió un nuevo nivel de bienestar financiero, un alza de alrededor de 4 puntos pre/post</strong>, en una empresa real en Quito (2024). Hallo mismo elogió el resultado. El tipo de número nombrado y atribuible que un CFO puede llevar a un directorio, no una afirmación inflada de proveedor.</p>
+      <span class="result-attr">Fernando Hallo · Correduría de seguros Top-50 · equipo de 23 · Quito · 2024</span>
+    </section>
+
+    <section class="result-callout" aria-label="Caso con nombre para el taller de empresa privada">
+      <span class="result-num">2×</span>
+      <p class="result-body"><strong>Taller 2 — Empresa Privada.</strong> Respaldado en público, <strong>dos veces en X, a miles</strong>. <strong>Multicines</strong>, una importante cadena de cines ecuatoriana, contrató el taller de Apreciación de la Empresa Privada a través de su entonces gerente de marketing <strong>Santiago Cárdenas</strong>. En dos horas reencuadró el salario, la utilidad y el sentido de propiedad, y desactivó la narrativa de suma cero y conflicto; quedó lo bastante satisfecho como para recomendarlo en público, con nombre.</p>
+      <span class="result-attr">Santiago Cárdenas · entonces Gerente de Marketing, Multicines · Taller 2 · Quito</span>
+    </section>
+
+    <blockquote class="pull">
+      "500 personas capacitadas en una sola mañana en manejo del estrés emocional usando técnicas de neurociencia."
+      <span class="pull-attr">— Evaluación de capacitación corporativa · Mutualista Pichincha · Coord.: Arianna Cevallos · Quito, 2017</span>
+    </blockquote>
+
+    <blockquote class="pull">
+      "Genial esta capacitación. Información que no me esperaba y que me prepara conscientemente, además de ser aplicable y práctica. Está de lujo tener los fundamentos de una estrategia y una perspectiva de largo plazo."
+      <span class="pull-attr">— M. Muñoz · diseñador de espacios y muebles · Quito, Ecuador</span>
+    </blockquote>
+
+    <blockquote class="pull">
+      "Con el tercer video de 8-10 minutos ya estaba pagada la inversión; están repletos de información importante."
+      <span class="pull-attr">— Carlos Rodríguez · Loja, Ecuador · sobre la formación financiera de J.F. Carpio</span>
+    </blockquote>
+
+    <div class="proof-gallery" aria-label="Escenas de método y facilitación">
+      <figure>
+        <div class="photo-wrap">
+          <picture>
+            <source srcset="https://jfcarpio.com/network-intel.webp" type="image/webp">
+            <img src="https://jfcarpio.com/network-intel.jpg" width="1512" height="672" loading="lazy" decoding="async" alt="Visual abstracto de red con nodos iluminados en varios colores">
+          </picture>
+        </div>
+        <figcaption>El verdadero trabajo del taller es conectar creencias, comportamiento, capital y decisión sin perder claridad ejecutiva.</figcaption>
+      </figure>
+      <figure>
+        <div class="photo-wrap">
+          <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&q=90&w=900" width="900" height="600" loading="lazy" decoding="async" alt="Facilitador guiando una conversación de negocios">
+        </div>
+        <figcaption>Cuando la sesión está bien llevada, la objeción del gerente cambia de "¿esto funcionará?" a "¿con cuál taller debería empezar?".</figcaption>
+      </figure>
+    </div>
+
+    <div class="speaker-bar" aria-label="Historial de conferencista internacional">
+      <div class="speaker-item">
+        <span class="speaker-num">3.000</span>
+        <span class="speaker-desc">asistentes · <em>Forum da Liberdade</em> · Porto Alegre, Brasil · 2014</span>
+      </div>
+      <div class="speaker-item">
+        <span class="speaker-num">PFS</span>
+        <span class="speaker-desc">Conferencista invitado · <em>Property &amp; Freedom Society</em> · Bodrum, Turquía · 2021</span>
+      </div>
+      <div class="speaker-item">
+        <span class="speaker-num">4.800+</span>
+        <span class="speaker-desc">estudiantes en 14 años como profesor de Economía y entorno de negocios · USFQ · Quito</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ─── BIO ─── -->
+  <section class="bio">
+    <div class="bio-flex">
+      <img src="https://jfcarpio.com/workshops/jfc-studio.jpg" alt="J.F. Carpio" class="bio-photo jfc-grayfade" width="96" height="96" loading="lazy">
+      <div class="bio-text">
+        <p><strong>Juan Fernando Carpio</strong> ha pasado dos décadas convirtiendo la Economía en decisiones sobre las que la gente puede actuar. Catorce de ellas frente a un aula: 4.800+ estudiantes en la USFQ, el segundo profesor más solicitado del departamento de Economía, donde fundó la primera línea de Economía Austriaca e Institucional del Ecuador. Tiene una Maestría en Economía Empresarial por la UFM y Boston University, y cursó estudios doctorales en Economía en Suiza, actualmente en pausa en la etapa de tesis/disertación.</p>
+        <p>Fuera del aula, el mismo método ha capacitado a 2.500 profesionales en firmas como Mutualista Pichincha, y ha sostenido 30+ proyectos de consultoría con ROI documentado. También participó en un programa de coaching ejecutivo de alto nivel en Florida (Pompano Beach). Ha traducido a Hoppe y Kinsella al español, escribe para el Mises Institute y fue conferencista principal del Forum da Liberdade en Brasil ante una audiencia de 3.000 personas. Su libro, <a href="https://jfcarpio.gumroad.com/l/10LeccionesdeEconomia"><em>10 Lecciones de Economía</em></a>, destila el marco dentro del cual tu equipo se sentará durante dos horas.</p>
+        <p>Nada de esto es decoración. Es la razón por la que el taller cambia el comportamiento en vez de desvanecerse. Tu equipo no recibe a un conferencista motivacional. Recibe a alguien que ha pasado veinte años haciendo que la aritmética del dinero y la empresa privada haga clic en gente que nunca creyó que lo haría.</p>
+        <p><strong>Credenciales:</strong> estudios doctorales en Economía, SMC University (Suiza) — etapa de tesis/disertación, en pausa · M.E.E., UFM / Boston University · B.A., USFQ · colaborador del Mises Institute · autor y traductor (Hoppe, Kinsella).</p>
+        <p><strong>Clientes seleccionados:</strong> empresas (ExpoEventos, HPP · Países Bajos, Mutualista Pichincha, el Municipio de Quito, Florería La Orquídea) y profesionales e inversionistas independientes en asesoría 1:1 (F. Hallo, D. Peñaherrera, C. Albornoz, L. Loor, C. Wirth, P. Jaramillo, J.A. Bueno).</p>
+        <p>Más en <a href="/">jfcarpio.com</a> · Publicaciones, reportes y dashboards.</p>
+      </div>
+    </div>
+    <blockquote class="pull">
+      "Creo sinceramente que hay pocas personas tan apasionadas, dedicadas y hambrientas de conocimiento como Juan Fernando."
+      <span class="pull-attr">— Pablo Lucio-Paredes · Director, Instituto de Economía, USFQ · 2023</span>
+    </blockquote>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ─── FRACASO EVITADO ─── -->
+  <section class="tesis">
+    <p>El ejecutivo que no aborda esto sigue pagando esa fuga, mes tras mes. Y la próxima capacitación dará el mismo resultado que la anterior: dos semanas de entusiasmo, y luego el viejo sistema operativo retoma el control. No porque el proveedor fuera malo. Porque <strong>nadie intervino en la capa correcta del cerebro.</strong></p>
+  </section>
+
+  <hr class="rule">
+
+  <section class="closing-visual" aria-label="Escena previa a la conversación de diagnóstico">
+    <figure>
+      <div class="photo-wrap">
+        <picture>
+          <source srcset="https://jfcarpio.com/network-intel.webp" type="image/webp">
+          <img src="https://jfcarpio.com/network-intel.jpg" width="1512" height="672" loading="lazy" decoding="async" alt="Red abstracta de nodos iluminados en varios colores">
+        </picture>
+      </div>
+      <figcaption>Antes de contratar, la empresa necesita ver dónde se está fugando el costo: atención, liquidez, sentido de propiedad, margen o la interpretación del riesgo.</figcaption>
+    </figure>
+    <aside class="closing-note">
+      <span class="eyebrow"><b>07</b> Qué viene después</span>
+      <h3>La conversación correcta no es "si capacitar". Es qué retorno desbloqueas primero.</h3>
+      <p>Si el problema dominante es el estrés financiero invadiendo la jornada, empieza con el Taller 1. Si el problema dominante es una interpretación distorsionada del salario, la utilidad, el capital y la empresa, empieza con el Taller 2.</p>
+      <p>Si ambos síntomas aparecen juntos, la secuencia completa suele rendir más, porque el segundo taller aterriza sobre un cerebro ya reordenado por el primero.</p>
+    </aside>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ─── CTA ─── -->
+  <section class="cta" id="lets-talk">
+    <span class="cta-eyebrow">El siguiente paso</span>
+    <p>Si esto ya suena como una conversación que tu empresa viene postergando, solicita el diagnóstico breve de equipo y conversamos cuál taller tiene el mejor ROI ahora mismo: finanzas personales y familiares, apreciación de la empresa privada, o una secuencia con ambos.</p>
+    <p class="cta-math">El empleado promedio pierde 3 horas por semana por estrés financiero personal (PwC, <em>Employee Financial Wellness Survey</em>). Veintidós personas, cuatro semanas: <strong>264 horas al mes</strong> que salen de tu nómina. Recupera siquiera entre un <strong>5 y un 20%</strong> de eso, el rango que los estudios asignan a los programas de bienestar financiero y engagement, y un taller se paga solo dentro del primer mes.</p>
+    <span class="cta-stack-label">Lo que recibe la empresa</span>
+    <ul class="cta-stack">
+      <li>Diagnóstico de equipo previo: encuesta breve antes de la sesión</li>
+      <li>Taller en vivo de 2 horas con ejercicios sobre números reales</li>
+      <li>Sesión de preguntas en vivo</li>
+      <li>Material de seguimiento curado: lecturas, videos y <em>tarea</em> quirúrgica</li>
+      <li>Acceso directo al facilitador por 30 días</li>
+    </ul>
+    <div class="pricing-rack">
+      <div class="price-anchor">
+        <span class="price-anchor-label">Precio internacional · EE.UU.</span>
+        <span class="price-anchor-val">$5,500 · $9,900</span>
+        <span class="price-anchor-desc">Lo que paga una empresa en Estados Unidos por este mismo taller. <span style="display:inline-block;background:#28ECAA;color:#060E1D;-webkit-text-fill-color:#060E1D;font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.04em;padding:3px 11px;border-radius:999px;">En Latinoamérica pagas al menos 1/3 menos</span></span>
+      </div>
+      <div class="price-options">
+        <div class="price-opt">
+          <span class="price-opt-name">Un taller</span>
+          <span class="price-opt-val">$3,690</span>
+          <span class="price-opt-desc">2 horas · Taller 1 o 2 · 22-70 participantes · ≈ $92 por persona (grupo de 40)</span>
+        </div>
+        <div class="price-opt featured">
+          <span class="price-opt-name">Ambos talleres</span>
+          <span class="price-opt-val">$6,060</span>
+          <span class="price-opt-desc">Dos sesiones de 2 horas · Talleres 1 + 2 · ≈ $151 por persona (grupo de 40)</span>
+        </div>
+        <div class="price-opt">
+          <span class="price-opt-name">Enterprise</span>
+          <span class="price-opt-val">Hablemos</span>
+          <span class="price-opt-desc">70+ participantes · multi-equipo o multi-sesión · cotización a medida</span>
+        </div>
+      </div>
+      <div class="price-guarantee">Garantía: si no hay cambio observable en el equipo, la segunda sesión es sin costo.</div>
+    </div>
+    <p class="cta-note">En la sala, tu equipo trabaja el mismo orden de cuatro pasos sobre sus propios números, hasta que sale una elección con fecha.</p>
+    <p class="cta-scarcity">Diagnóstico situacional gratis sólo para los 3 cupos del mes, hablemos a la brevedad posible.</p>
+    <div class="cta-btns">
+      <a class="cta-btn" href="mailto:staff@jfcarpio.com?subject=Diagn%C3%B3stico%20de%20equipo%20para%20talleres">Solicita el diagnóstico de equipo</a>
+      <a href="https://calendly.com/jfcarpio/20minutos" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">Agenda 20 minutos</a>
+    </div>
+    <p class="cta-note">Sin compromiso.</p>
+    <noscript><p><a href="mailto:staff@jfcarpio.com?subject=Diagn%C3%B3stico%20de%20equipo%20para%20talleres">Escríbeme sobre el diagnóstico de equipo</a></p></noscript>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ─── FAQ ─── -->
+  <figure class="sprinkle sp-green">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=90&w=1000" width="1000" height="667" loading="lazy" decoding="async" alt="Equipo ejecutivo trabajando en una mesa de decisión" sizes="(min-width: 600px) 45vw, 100vw">
+        </div>
+        <figcaption>No es motivación. Es aritmética del intercambio. La empresa como multiplicadora de productividad, no como explotadora.</figcaption>
+      </figure>
+
+
+    <section class="faq" aria-label="Preguntas frecuentes">
+    <span class="eyebrow"><b>08</b> Preguntas frecuentes</span>
+    <h2 class="h2">Lo que el gerente <em>suele preguntar antes de decidir.</em></h2>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <p class="faq-q">¿Por qué funciona esta capacitación cuando otras no lo han hecho?</p>
+        <p class="faq-a">Porque interviene en la <strong>capa correcta del cerebro</strong>. La mayoría de los programas enseñan técnicas nuevas sobre creencias que nadie examinó. El cambio dura lo que dura el entusiasmo. Estos talleres siguen la secuencia del modelo MindOS del Dr. Paul Dobransky: primero límite y comportamiento, luego intelecto y decisión. Rompe el orden y no hay cambio sostenido.</p>
+      </li>
+      <li class="faq-item">
+        <p class="faq-q">¿Necesito contratar los dos talleres?</p>
+        <p class="faq-a">No. Cada taller tiene su propio ROI y se puede contratar por separado. Si el problema principal es el estrés financiero personal filtrándose al trabajo, empieza con el Taller 1. Si el problema es el bajo sentido de propiedad o una relación tensa con la empresa, empieza con el Taller 2. Tomados en secuencia, los participantes suelen descubrir que el mismo patrón opera en ambos dominios, lo que hace la segunda sesión bastante más rápida.</p>
+      </li>
+      <li class="faq-item">
+        <p class="faq-q">¿Cuánto cuesta y qué incluye exactamente?</p>
+        <p class="faq-a">Un taller: <strong>$3,690.</strong> Ambos talleres: <strong>$6,060.</strong> Para 22 a 70 participantes; por encima de 70 es una cotización Enterprise a medida. Incluye diagnóstico de equipo previo, taller en vivo de 2 horas con ejercicios sobre números reales, sesión de preguntas, material de seguimiento curado y acceso directo al facilitador por 30 días. Si no hay cambio observable en el equipo, la segunda sesión es sin costo.</p>
+      </li>
+      <li class="faq-item">
+        <p class="faq-q">¿Por qué de 22 a 70 participantes, y no una sala llena?</p>
+        <p class="faq-a">Porque, honestamente, es el formato que más me gusta para este taller. Hablarle a <strong>3.000 personas</strong> o capacitar a <strong>500 en una sola mañana</strong> son formatos que he hecho con éxito y a plena satisfacción de la audiencia o los participantes. Una sala de <strong>22 a 70</strong> es simplemente mi favorita aquí: lo bastante grande para que afloren casos reales, reacciones e interacción; lo bastante pequeña para que cada uno trabaje sus propios números y sea escuchado. La banda no es un juicio sobre otros formatos. Es una preferencia para esta intervención.</p>
+      </li>
+      <li class="faq-item">
+        <p class="faq-q">¿Qué es MindOS?</p>
+        <p class="faq-a">El modelo del psiquiatra <strong>Dr. Paul Dobransky</strong> sobre cómo funciona la mente. Describe cuatro capas del cerebro en orden: límite, comportamiento, intelecto y decisión. Una capacitación que entra directo por el intelecto, con información nueva sobre creencias intactas, no produce cambio sostenido. La secuencia importa.</p>
+      </li>
+      <li class="faq-item">
+        <p class="faq-q">¿Trabajas con empresas de toda la región, presencial o virtual?</p>
+        <p class="faq-a">Sí. Las sesiones se dictan en <strong>español o inglés</strong>, presenciales o virtuales. He dictado este tipo de trabajo en salas muy distintas: coaching ejecutivo en Florida, una conferencia ante 3.000 personas en Brasil, una charla invitada en Turquía, grandes capacitaciones corporativas y catorce años de docencia universitaria. Para un equipo en cualquier país de la región, el punto práctico es simple: la aritmética del dinero y de la empresa viaja bien, y la sesión se adapta a la sala.</p>
+      </li>
+    </ul>
+  </section>
+
+  <hr class="rule">
+
+  <section class="tesis" aria-label="Recomendación final">
+    <p><strong>Lo único que de verdad sale caro es no hacer nada.</strong> El foco que se fuga y el resentimiento que enfría al equipo no se corrigen solos: se pagan mes tras mes, hasta que alguien interviene en la capa correcta del cerebro. Dos horas bien apuntadas cambian eso. Empieza por el diagnóstico de equipo: es gratis, y te dice exactamente por dónde.</p>
+    <div class="cta-btns">
+      <a class="cta-btn" href="mailto:staff@jfcarpio.com?subject=Diagn%C3%B3stico%20de%20equipo%20para%20talleres">Solicita el diagnóstico de equipo</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <a href="/" class="foot-copy">© 2026 J.F. Carpio · Quito, Ecuador</a>
+  <nav class="foot-links">
+    <a href="/"><span class="foot-dot" style="background:#FFFFFF;"></span>Inicio</a>
+    <a href="/publicaciones/"><span class="foot-dot" style="background:#E86040;"></span>Publicaciones</a>
+    <a href="/mindos-talleres.html"><span class="foot-dot" style="background:#28ECAA;"></span>Ensayo MindOS</a>
+    <a href="/workshops/" hreflang="en" lang="en"><span class="foot-dot" style="background:#3B7EE8;"></span>English</a>
+  </nav>
+</footer>
+
+<script>
+(function(){
+  /* scroll reveal — opt-in only; if this never runs, content stays fully visible */
+  var els = Array.prototype.slice.call(document.querySelectorAll('main > section')).filter(function(el){ return !el.classList.contains('quick-path') && !el.classList.contains('room-timeline'); });
+  if (('IntersectionObserver' in window) && els.length && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    document.documentElement.classList.add('js-rv');
+    els.forEach(function(el){ el.classList.add('rv'); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('rv-in'); io.unobserve(e.target); } });
+    }, { threshold: 0.06, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function(el){ io.observe(el); });
+  }
+})();
+(function(){
+  var boxes = document.querySelectorAll('.tc-box');
+  if (!boxes.length) return;
+  var countEl = document.querySelector('.tc-count');
+  var verdictEl = document.querySelector('.tc-verdict');
+  var resultEl = document.querySelector('.teamcheck-result');
+  var verdicts = {
+    0: "Marca las que veas. La mayoría de los gerentes reconoce tres o cuatro de entrada.",
+    1: "Una ya es un costo. Es el tipo de grieta que el primer taller cierra más rápido.",
+    2: "Dos es un patrón formándose. Suelen moverse juntas una vez que el equipo ve la raíz.",
+    3: "Esta es la sala típica. El mismo sistema operativo suele impulsar a la mayoría.",
+    4: "Esta es la sala típica. El mismo sistema operativo suele impulsar a la mayoría.",
+    5: "Esto no es un problema de talento. Es un sistema operativo sin examinar.",
+    6: "Esto no es un problema de talento. Es exactamente lo que estas dos horas reconstruyen."
+  };
+  function update(){
+    var n = 0; boxes.forEach(function(b){ if (b.checked) n++; });
+    countEl.textContent = n;
+    verdictEl.textContent = verdicts[n];
+    resultEl.setAttribute('data-score', n);
+  }
+  boxes.forEach(function(b){ b.addEventListener('change', update); });
+})();
+(function(){
+  var fill = document.getElementById('spFill');
+  function onScroll(){
+    var d = document.documentElement;
+    var h = d.scrollHeight - d.clientHeight;
+    if (h <= 0) return;
+    var pct = d.scrollTop / h * 100;
+    fill.style.width = Math.min(pct, 100) + '%';
+  }
+  if(fill) {
+    window.addEventListener('scroll', onScroll, {passive: true});
+    onScroll();
+  }
+
+  function waNumber(){
+    return [53,57,51,57,57,57,57,48,53,48,56,48].map(function(c){
+      return String.fromCharCode(c);
+    }).join('');
+  }
+  function openWA(){
+    var msg = 'Hola JFC, vi la página de talleres y me gustaría conversar sobre qué taller tendría el mejor ROI para mi empresa.';
+    window.open('https://w' + 'a.me/' + waNumber() + '?text=' + encodeURIComponent(msg), '_blank', 'noopener,noreferrer');
+  }
+  document.querySelectorAll('[data-wa]').forEach(function(btn){
+    btn.addEventListener('click', openWA);
+  });
+})();
+</script>
+
+</body>
+</html>
