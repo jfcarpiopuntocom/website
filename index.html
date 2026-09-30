@@ -152,7 +152,7 @@ document.documentElement.classList.add('reel','js-rv');
    - SUPUESTOS A VERIFICAR con JFC: enlace de "Rumbo a la independencia financiera" = /l/independenciafinanciera (viene de las7formas, no de la lista pegada);
      el enlace /l/guiagratis de la lista pegada NO se uso (no coincide con ningun titulo). Las 7 formas enlaza a /las7formas/.
    - Publico: cualquier persona educada. NO decirlo en el sitio. Nunca "economista" para JFC. */
-/* MASTER STYLE BLOCK — v2.3 (v1.137 GRATIS + POLISH + v1.136 PERFIL + v1.135 VISORES + v1.134 ESCUELA + v1.133 FIT) · 2026-09-30 · reel vertical cinematográfico (ver NOTAS al inicio del <body> y notas/REEL-NOTAS-2026-09-29.md)
+/* MASTER STYLE BLOCK — v2.3 (v1.138 SCROLL AZUL + v1.137 GRATIS + POLISH + v1.136 PERFIL + v1.135 VISORES + v1.134 ESCUELA + v1.133 FIT) · 2026-09-30 · reel vertical cinematográfico (ver NOTAS al inicio del <body> y notas/REEL-NOTAS-2026-09-29.md)
    Paleta = la del sitio de julio 2026 (commit 9f550ca): fondo blanco, texto #0A0A0A, acentos dorado/naranja/verde/azul.
    --c = acento CLARO (sobre el fondo oscuro de la foto). --cd = acento OSCURO (sobre blanco: paneles, etiquetas). Contrastes >= 4.5:1. */
 :root{--ink:#0A0A0A;--navy:#060E1D;--px:7.5dvh;--c:#E8A020;--cd:#755000}
@@ -1083,6 +1083,12 @@ html:not(.reel) .thr{position:static;height:60px}html:not(.reel) .thr path{strok
 .cap .story-proof{font-size:max(.95rem,15px);padding:8px 12px;background:rgba(6,14,29,.55);max-width:60ch}
 @media(max-width:640px){.cap .story-proof{display:none}#gumroad .rr .ri:nth-child(n+3),#articulos .rr .ri:nth-child(n+3){display:none}}
 @media(max-width:640px){:is(#articulos,#talleres,#gumroad) .rr{grid-template-columns:1fr}#talleres .ri{padding-left:50px}#talleres .ri::before{left:14px;top:10px}#gumroad .front h2.long{font-size:clamp(1.35rem,3.6dvh,1.9rem)}}
+/* v1.138 indicador de scroll del reel (JFC 2026-09-30: odia el rojo y el amarillo ahi; quiere los azules marino oscuros de la primera slide). No usar #E8A020 ni #B0183E en .pips/.hm */
+.pips::before{background:linear-gradient(#255FB8 var(--p,0%),#9DB7E0 var(--p,0%))}
+.pips button::after{background:#060E1D}
+.pips button.on::after{background:#255FB8;box-shadow:0 0 0 2px #fff,0 0 0 4px #060E1D}
+.pips span{color:#060E1D}
+.hm{background:#255FB8}
 </style>
 </head>
 <body>
