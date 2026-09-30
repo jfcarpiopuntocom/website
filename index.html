@@ -449,6 +449,13 @@ a.ap:hover .apd{color:#E8A020}
 @media(max-width:640px){.tx .rr{display:none}#portada .tx .rr,#apps .tx .rr{display:grid}}
 @media(max-width:640px) and (min-height:800px){.lead2{display:block!important}#portada .lead2{display:block!important}.tx:has(.rr) .lead{display:block}}
 
+/* HARDRULE DIRECCION DE ARTE JFC 2026-09-30:
+   El reel NO debe parecer una plantilla repetida. Cada fotorama principal funciona como una micro-landing/micro-website:
+   misma familia tipografica/paleta/calidad, pero composicion propia segun su contenido.
+   Publicaciones = referencia de belleza/calidad, NO plantilla de diagramacion.
+   Dashboards = identidad data-product propia.
+   No reescribir wording aprobado durante pases puramente visuales.
+*/
 /* HARDRULE TEMA JFC 2026-09-30:
    EL TEMA DEL REEL ES "HISTORIA DE DOS NEGOCIOS". Debe abrir desde el fotograma 01 y funcionar como hilo conductor.
    "el equipo de JFCarpio.com" es el wording institucional obligatorio para la oficina/equipo.
@@ -561,6 +568,141 @@ html:not(.reel) .thr{position:static;height:60px}html:not(.reel) .thr path{strok
 
 @media(prefers-reduced-motion:reduce){.face,.panel,.veil,.js-rv .reveal{transition-duration:.01s}}
 
+
+/* ==== FOTORAMA ART-DIRECTION PASS 2026-09-30 ====
+   Cada slide principal se trata como una micro-landing dentro del reel.
+   Se preservan el reel, el contenido y la paleta; cambia la DIRECCION DE ARTE y la jerarquia.
+   Publicaciones conserva su composición de referencia. Dashboards conserva su identidad propia. */
+@media(min-width:901px){
+  /* common: more air, less template */
+  .slide:not(#dashboards) .front{padding:5.8dvh 5.4vw 5.4dvh}
+  .slide:not(#dashboards) .top{align-items:flex-start}
+  .slide:not(#dashboards) h1,.slide:not(#dashboards) h2{letter-spacing:-.025em;line-height:.92}
+  .slide:not(#dashboards) .lead{line-height:1.48}
+  .slide:not(#dashboards) .bl{margin-top:1.2dvh}
+
+  /* 01 — cinematic prologue: not a résumé */
+  #portada .sc{background:linear-gradient(90deg,rgba(6,14,29,.96) 0%,rgba(6,14,29,.74) 46%,rgba(6,14,29,.12) 78%)}
+  #portada .tx{width:min(880px,67vw);max-width:none;margin-top:auto;margin-bottom:1.5dvh}
+  #portada h1{font-size:clamp(66px,8.2vw,138px);max-width:8ch;text-wrap:balance}
+  #portada .lead{max-width:48ch;font-size:clamp(18px,1.35vw,24px)}
+  #portada .lead2{max-width:55ch;font-size:clamp(14px,1vw,18px)}
+  #portada .rr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:780px}
+  #portada .ri{min-height:82px;padding:13px 15px;border-top:2px solid var(--c);border-radius:0 0 12px 12px}
+
+  /* 03 — apps: product wall, not brochure */
+  #apps .sc{background:linear-gradient(90deg,rgba(6,14,29,.97) 0%,rgba(6,14,29,.83) 44%,rgba(6,14,29,.30) 70%,rgba(6,14,29,.08) 100%)}
+  #apps .tx{width:100%;max-width:none;display:grid;grid-template-columns:minmax(360px,.8fr) minmax(500px,1.2fr);grid-template-rows:auto auto auto;column-gap:4vw;align-items:start}
+  #apps h2,#apps>.frame .tx>.lead,#apps>.frame .tx>.lead2,#apps .bl{grid-column:1}
+  #apps h2{font-size:clamp(58px,6.6vw,112px);max-width:8ch}
+  #apps .rr{grid-column:2;grid-row:1/5;display:grid;grid-template-columns:1fr;gap:12px;align-self:center}
+  #apps .ap{display:grid;grid-template-columns:42px 180px 1fr;align-items:center;gap:16px;padding:18px;background:rgba(6,14,29,.88);border:1px solid rgba(127,176,255,.34);border-radius:18px;box-shadow:0 18px 44px rgba(0,0,0,.22)}
+  #apps .ap:hover{transform:translateY(-3px);border-color:var(--c)}
+  #apps .apn{font-size:12px;opacity:.7}
+  #apps .apd{font-size:14px;line-height:1.35}
+
+  /* 04 — the datum: one number owns the frame */
+  #dato .sc{background:radial-gradient(circle at 72% 48%,rgba(37,95,184,.12),rgba(6,14,29,.08) 25%,rgba(6,14,29,.92) 72%)}
+  #dato .tx{width:100%;max-width:none;display:grid;grid-template-columns:1.05fr .95fr;grid-template-rows:auto auto auto;gap:1.5dvh 6vw;align-items:center}
+  #dato .big{grid-column:1;grid-row:1/4;font-size:clamp(140px,20vw,330px);line-height:.72;letter-spacing:-.075em;color:#fff;text-shadow:0 24px 70px rgba(0,0,0,.28)}
+  #dato .lead,#dato .lead2,#dato .bl{grid-column:2}
+  #dato .lead{font-size:clamp(22px,1.7vw,30px);max-width:32ch;border-left:3px solid var(--c);padding-left:24px}
+
+  /* 06 — articles: editorial contents page */
+  #articulos .tx{width:100%;max-width:none;display:grid;grid-template-columns:.8fr 1.2fr;grid-template-rows:auto auto auto;column-gap:5vw}
+  #articulos h2,#articulos>.frame .tx>.lead,#articulos>.frame .tx>.lead2,#articulos .bl{grid-column:1}
+  #articulos h2{font-size:clamp(86px,11vw,180px)}
+  #articulos .rr{grid-column:2;grid-row:1/5;display:grid;gap:0;align-self:center;border-top:1px solid rgba(255,255,255,.36)}
+  #articulos .ri{padding:22px 4px;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.28);border-radius:0}
+  #articulos .ri b{font:800 clamp(24px,2.1vw,38px)/1.05 'Barlow Condensed',sans-serif}
+  #articulos .ri span{font-size:14px;opacity:.76}
+
+  /* 07 — book: jacket-like editorial block */
+  #libro .tx{width:min(920px,68vw);max-width:none;padding:28px 32px;border-left:4px solid var(--c);background:linear-gradient(90deg,rgba(6,14,29,.93),rgba(6,14,29,.62) 74%,transparent);box-shadow:-18px 0 60px rgba(0,0,0,.18)}
+  #libro h2{font-size:clamp(62px,7.2vw,122px);max-width:10ch}
+  #libro h2 .sub{display:block;margin-top:10px;font:500 clamp(18px,1.6vw,28px)/1.2 'Lora',serif;letter-spacing:0}
+  #libro .rr{display:flex;gap:10px;flex-wrap:wrap}
+  #libro .ri{flex:1 1 180px;min-height:76px}
+
+  /* 08 — PUBLICACIONES stays the compositional reference. No special override. */
+
+  /* 10 — reports: analyst's desk / decision briefs */
+  #reportes .tx{width:100%;max-width:none;display:grid;grid-template-columns:.72fr 1.28fr;gap:1.2dvh 5vw}
+  #reportes h2,#reportes>.frame .tx>.lead,#reportes>.frame .tx>.lead2,#reportes .bl{grid-column:1}
+  #reportes h2{font-size:clamp(82px,10vw,165px)}
+  #reportes .rr{grid-column:2;grid-row:1/6;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-self:center}
+  #reportes .ri{min-height:150px;padding:24px;border:1px solid rgba(127,176,255,.35);border-radius:3px;background:rgba(6,14,29,.88);position:relative}
+  #reportes .ri::after{content:"DECISION BRIEF";position:absolute;right:14px;top:12px;font:600 9px 'Space Mono',monospace;letter-spacing:.14em;color:var(--c);opacity:.8}
+
+  /* 11 — trajectory: visual map is the exhibit */
+  #trayectoria .tx{width:min(620px,47vw);max-width:none;margin-right:auto}
+  #trayectoria h2{font-size:clamp(58px,6.4vw,108px)}
+  #trayectoria .journey-cta{max-width:560px}
+  #trayectoria .journey-art{object-position:72% 50%;opacity:.94}
+
+  /* 14 — workshops: agenda board */
+  #talleres .tx{width:100%;max-width:none;display:grid;grid-template-columns:.9fr 1.1fr;gap:1.4dvh 5vw}
+  #talleres h2,#talleres>.frame .tx>.lead,#talleres>.frame .tx>.lead2,#talleres .bl{grid-column:1}
+  #talleres h2{font-size:clamp(72px,8.8vw,145px);max-width:8ch}
+  #talleres .rr{grid-column:2;grid-row:1/5;display:grid;gap:14px;align-self:center;counter-reset:workshop}
+  #talleres .ri{counter-increment:workshop;min-height:150px;padding:28px 28px 24px 82px;position:relative;border-radius:20px;background:rgba(6,14,29,.88);border:1px solid rgba(127,176,255,.32)}
+  #talleres .ri::before{content:"0" counter(workshop);position:absolute;left:24px;top:20px;font:800 34px 'Barlow Condensed',sans-serif;color:var(--c)}
+  #talleres .ri b{font-size:clamp(25px,2vw,36px);line-height:1.05}
+
+  /* 15 — Gumroad: compact storefront */
+  #gumroad .tx{width:100%;max-width:none;display:grid;grid-template-columns:.9fr 1.1fr;gap:1.2dvh 5vw}
+  #gumroad h2,#gumroad>.frame .tx>.lead,#gumroad .bl{grid-column:1}
+  #gumroad h2{font-size:clamp(52px,5.8vw,98px);max-width:12ch}
+  #gumroad .rr{grid-column:2;grid-row:1/5;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-self:center}
+  #gumroad .ri{min-height:126px;padding:22px;border-radius:18px;background:rgba(6,14,29,.88);border:1px solid rgba(127,176,255,.3)}
+  #gumroad .ri b{font-size:24px}
+
+  /* 16 — testimonials: quote gallery */
+  #clientes .tx{width:100%;max-width:none}
+  #clientes h2{font-size:clamp(62px,7vw,116px);max-width:12ch}
+  #clientes blockquote{display:inline-flex;vertical-align:top;flex-direction:column;justify-content:space-between;width:31%;min-height:210px;margin:1.2dvh 1% 1.2dvh 0;padding:24px;border:1px solid rgba(127,176,255,.32);border-radius:18px;background:rgba(6,14,29,.84);font-size:clamp(17px,1.25vw,22px)}
+  #clientes blockquote span::before{content:"“";display:block;font:900 56px/.55 'Lora',serif;color:var(--c)}
+  #clientes cite{margin-top:20px;font-size:11px;line-height:1.4;color:rgba(255,255,255,.7)}
+
+  /* 18 — contact: a quiet final page */
+  #contacto .sc{background:linear-gradient(90deg,rgba(6,14,29,.96),rgba(6,14,29,.66) 52%,rgba(6,14,29,.18))}
+  #contacto .tx{width:min(880px,68vw);max-width:none;margin-top:auto;margin-bottom:auto}
+  #contacto h2{font-size:clamp(72px,9vw,150px);max-width:9ch}
+  #contacto .lead{font-size:clamp(21px,1.6vw,29px);max-width:38ch}
+  #contacto .ft{display:flex;gap:16px;flex-wrap:wrap;padding-top:18px;border-top:1px solid rgba(255,255,255,.28)}
+}
+@media(max-width:900px){
+  /* Mobile is intentionally its own art direction, not a shrunken desktop. */
+  .slide:not(#dashboards) .front{padding:2.2dvh 4vw 3dvh}
+  #portada h1,#apps h2,#articulos h2,#reportes h2,#talleres h2,#contacto h2{font-size:clamp(44px,13vw,72px);line-height:.9}
+  #portada .tx,#apps .tx,#dato .tx,#articulos .tx,#libro .tx,#reportes .tx,#trayectoria .tx,#talleres .tx,#gumroad .tx,#clientes .tx,#contacto .tx{width:100%;max-width:100%;display:block}
+  #portada .rr{display:none}
+  #apps .rr,#articulos .rr,#reportes .rr,#talleres .rr,#gumroad .rr{display:grid;grid-template-columns:1fr;gap:8px;margin:1.2dvh 0}
+  #apps .ap{display:grid;grid-template-columns:32px 120px 1fr;gap:9px;padding:10px;border-radius:13px}
+  #apps .apd{font-size:11px}
+  #dato .big{font-size:clamp(94px,30vw,150px);line-height:.8;margin-bottom:2dvh}
+  #dato .lead{border-left:3px solid var(--c);padding-left:14px}
+  #articulos .ri{padding:10px 2px;background:transparent;border-radius:0}
+  #libro .tx{padding:16px;border-left:3px solid var(--c)}
+  #libro h2{font-size:clamp(42px,12vw,64px)}
+  #reportes .rr .ri:nth-child(n+3),#gumroad .rr .ri:nth-child(n+3){display:none}
+  #reportes .ri,#talleres .ri,#gumroad .ri{min-height:auto;padding:12px 14px;border-radius:13px}
+  #talleres .ri{padding-left:50px}
+  #talleres .ri::before{left:14px;top:10px;font-size:24px}
+  #clientes blockquote{display:flex;width:100%;min-height:auto;margin:8px 0;padding:13px 15px;font-size:14px}
+  #clientes blockquote:nth-of-type(3){display:none}
+  #clientes blockquote span::before{font-size:32px}
+  #contacto .ft{font-size:10px;gap:8px}
+}
+
+/* story interludes: same reel, stronger chapter identity */
+.cap .front{isolation:isolate}
+.cap .story-tag{border-radius:3px}
+.cap .ab{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cap .ab p{min-height:116px;border-radius:14px;padding:18px}
+.cap .pa{border-top:3px solid var(--c)!important}
+.cap .pb{border-top:3px solid rgba(255,255,255,.34)!important}
+@media(max-width:640px){.cap .ab{grid-template-columns:1fr}.cap .ab p{min-height:auto;padding:10px 12px}}
 </style>
 </head>
 <body>
