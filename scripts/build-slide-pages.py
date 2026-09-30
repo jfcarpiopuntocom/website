@@ -268,6 +268,7 @@ def main():
     urls = [(HUB[0], "0.8")] + [(PAGES[s][0], "0.7") for s in page_list]
     block = "\n  <!-- SLIDE-PAGES-START -->\n" + "".join(
         f"  <url>\n    <loc>{SITE}/{u}/</loc>\n    <lastmod>{DATE}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>{pr}</priority>\n  </url>\n" for u, pr in urls) + "  <!-- SLIDE-PAGES-END -->\n"
+    sm = re.sub(r"\s*</urlset>\s*$", "\n</urlset>\n", sm)
     sm = sm.replace("</urlset>", block + "</urlset>")
     open(sm_path, "w", encoding="utf-8").write(sm)
 
