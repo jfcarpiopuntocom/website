@@ -16,7 +16,7 @@ button{cursor:pointer}
 .top{position:fixed;z-index:100;inset:0 0 auto;height:calc(var(--top) + env(safe-area-inset-top));padding:env(safe-area-inset-top) max(14px,env(safe-area-inset-right)) 0 max(14px,env(safe-area-inset-left));display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;background:var(--paper);border-bottom:3px solid var(--ink);box-shadow:0 7px 0 #051225}
 .brand{font:700 clamp(19px,2.2vw,28px)/1 var(--serif)}.route{height:4px;background:var(--gold);border:1px solid var(--ink);transform:skewX(-18deg)}.lang{display:flex;border:2px solid var(--ink);border-radius:999px;overflow:hidden;font:800 10px/1 var(--mono);letter-spacing:.12em}.lang span{padding:9px 10px}.lang span:first-child{background:var(--ink);color:#fff}
 .viewport{position:fixed;z-index:1;inset:calc(var(--top) + env(safe-area-inset-top)) 0 calc(var(--bottom) + env(safe-area-inset-bottom));overflow:hidden}
-.track{position:absolute;inset:0 auto 0 0;width:2000vw;display:flex;will-change:transform;transition:transform 1s cubic-bezier(.22,1,.36,1)}
+.track{position:absolute;inset:0 auto 0 0;width:2000vw;display:flex;will-change:transform;transform:translate3d(0,0,0)}
 .scene{position:relative;flex:0 0 100vw;width:100vw;height:100%;overflow:hidden;background:var(--navy);isolation:isolate}
 .skygrain{position:absolute;inset:0;background:radial-gradient(circle at 15% 22%,#315d8c 0 2px,transparent 3px) 0 0/26px 26px,linear-gradient(180deg,#173c68 0 55%,#102d51 55% 100%);z-index:0}
 .cut{position:absolute;border:3px solid var(--ink);box-shadow:8px 9px 0 #051225;z-index:2}
@@ -50,7 +50,7 @@ button{cursor:pointer}
 /* make scene set pieces shift with camera */
 .scene.active .far{animation:driftFar 8s linear infinite alternate}.scene.active .mid{animation:driftMid 6s linear infinite alternate}.scene.active .near{animation:driftNear 4.5s linear infinite alternate}@keyframes driftFar{to{transform:translateX(-2.2vw)}}@keyframes driftMid{to{transform:translateX(-4vw)}}@keyframes driftNear{to{transform:translateX(-6vw)}}
 #flightfx{position:fixed;z-index:45;left:0;right:0;top:calc(var(--top) + env(safe-area-inset-top));height:36vh;overflow:hidden;pointer-events:none}.streak{position:absolute;height:4px;background:var(--paper);border:1px solid var(--ink);box-shadow:3px 4px 0 #051225;will-change:transform}.scrap{position:absolute;width:24px;height:12px;background:var(--gold);border:2px solid var(--ink);will-change:transform}.fxcloud{position:absolute;width:100px;height:30px;border:3px solid var(--ink);border-radius:999px;background:var(--paper);box-shadow:6px 7px 0 #051225;will-change:transform}
-#heli{position:fixed;z-index:60;left:0;top:0;width:clamp(160px,16vw,245px);pointer-events:none;will-change:transform;filter:drop-shadow(8px 9px 0 #051225)}#heli svg{display:block;width:100%;overflow:visible}.hb{fill:#193e69;stroke:var(--ink);stroke-width:5}.hf{fill:#2b5b8f;stroke:var(--ink);stroke-width:4}.hc{fill:#f0ce77;stroke:var(--ink);stroke-width:5}.sk{fill:none;stroke:var(--ink);stroke-width:7;stroke-linecap:round}.rot{fill:var(--ink)}.hlab{fill:#fff;font:900 24px var(--sans);letter-spacing:.01em}.hsub{fill:#fff;font:800 9px var(--mono);letter-spacing:.12em}.stitch{fill:none;stroke:#f1d58c;stroke-width:2;stroke-dasharray:7 5}
+#heli{position:fixed;z-index:60;left:0;top:0;width:clamp(145px,14vw,215px);pointer-events:none;will-change:transform;filter:drop-shadow(8px 9px 0 #051225)}#heli svg{display:block;width:100%;overflow:visible}.hb{fill:#193e69;stroke:var(--ink);stroke-width:5}.hf{fill:#2b5b8f;stroke:var(--ink);stroke-width:4}.hc{fill:#f0ce77;stroke:var(--ink);stroke-width:5}.sk{fill:none;stroke:var(--ink);stroke-width:7;stroke-linecap:round}.rot{fill:var(--ink)}.hlab{fill:#fff;font:900 24px var(--sans);letter-spacing:.01em}.hsub{fill:#fff;font:800 9px var(--mono);letter-spacing:.12em}.stitch{fill:none;stroke:#f1d58c;stroke-width:2;stroke-dasharray:7 5}
 .controls{position:fixed;z-index:100;inset:auto 0 0;min-height:calc(var(--bottom) + env(safe-area-inset-bottom));padding:8px max(14px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));display:grid;grid-template-columns:auto auto minmax(120px,1fr) auto auto auto;gap:8px;align-items:center;background:var(--paper);border-top:3px solid var(--ink);box-shadow:0 -7px 0 #051225;color:var(--ink)}.controls button{min-width:44px;height:44px;border:2px solid var(--ink);background:#fff;border-radius:11px;font-weight:800}.controls .play{background:var(--ink);color:#fff}.controls .audio{color:var(--red);border-color:var(--red)}.controls input{width:100%;accent-color:var(--red)}.count{font:800 11px var(--mono)}
 @media(max-width:900px){:root{--bottom:100px}.story{top:auto;bottom:14px;transform:none;left:12px!important;right:12px!important;width:auto;padding:18px 17px 17px;clip-path:polygon(0 3%,4% 0,10% 2%,17% 0,24% 2%,31% 0,39% 2%,48% 0,57% 2%,66% 0,75% 2%,84% 0,92% 2%,100% 0,98% 25%,100% 50%,98% 75%,100% 100%,90% 98%,80% 100%,70% 98%,60% 100%,50% 98%,40% 100%,30% 98%,20% 100%,10% 98%,0 100%,2% 75%,0 50%,2% 25%);border-radius:0}.story h2{font-size:clamp(30px,9vw,48px)}.story p{font-size:14px;margin-bottom:12px}.story a{min-height:44px;padding:9px 13px;font-size:12px}#heli{width:clamp(125px,33vw,175px)}.prop{transform:scale(.75)}.photo{width:64vw;left:5%;top:12%}.controls{grid-template-columns:auto auto auto 1fr auto;grid-template-rows:auto auto}.controls input{grid-column:1/-1;grid-row:1}.count{grid-column:5;grid-row:2}}
 @media(max-width:480px){:root{--top:54px;--bottom:106px}.brand{font-size:19px}.story{padding:15px 14px}.eyebrow{font-size:9px;margin-bottom:7px}.story h2{font-size:clamp(28px,9.2vw,40px);margin-bottom:6px}.story p{font-size:13px;line-height:1.34}.story a{font-size:10px}#heli{width:min(25vw,112px)}.cut.cloud{transform:scale(.56)}.sun{width:74px;height:74px}.prop{transform:scale(.62);transform-origin:left top}.controls{gap:5px}.controls button{padding:0 7px;font-size:10px}}
@@ -304,21 +304,68 @@ button{cursor:pointer}
 <div id="flightfx" aria-hidden="true"></div>
 <div id="heli" aria-hidden="true"><div id="rig"><svg viewBox="0 0 340 210"><path class="hb" d="M100 96L20 78L11 94L104 123Z"/><path class="hf" d="M22 80L10 42L36 50L39 87Z"/><circle cx="22" cy="72" r="18" fill="#f8f0dc" stroke="#07172e" stroke-width="5"/><g id="tailRotor"><rect class="rot" x="19" y="48" width="6" height="48" rx="3"/><rect class="rot" x="-2" y="69" width="48" height="6" rx="3"/></g><path class="hb" d="M96 103C99 63 143 49 202 53C255 57 291 82 294 115C296 144 270 162 240 162H126C108 162 93 138 96 103Z"/><path class="hf" d="M108 90C138 65 178 59 219 63L207 116L102 116C101 106 103 97 108 90Z"/><path class="hc" d="M217 64C260 68 286 89 290 115H210Z"/><path class="sk" d="M122 182H259M143 159L136 182M230 159L238 182M259 182Q282 182 279 166"/><rect class="rot" x="197" y="31" width="9" height="27"/><g id="mainRotor"><rect class="rot" x="59" y="23" width="284" height="10" rx="4"/><rect class="rot" x="149" y="24" width="104" height="8" rx="4" transform="rotate(8 201 28)"/></g><path class="stitch" d="M111 115H206M207 65V160"/><text class="hlab" x="161" y="108" text-anchor="middle">TU NEGOCIO</text><text class="hsub" x="163" y="129" text-anchor="middle">EN VUELO</text></svg></div></div>
 <audio id="audio" preload="none" loop playsinline><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg"></audio>
-<nav class="controls"><button id="prev" aria-label="Anterior">‹</button><button id="play" class="play">Pausar</button><input id="range" type="range" min="0" max="19" value="0" step="1" aria-label="Sección"><button id="next" aria-label="Siguiente">›</button><button id="audioBtn" class="audio">Audio</button><span id="count" class="count">01 / 20</span></nav>
+<nav class="controls"><button id="prev" aria-label="Anterior">‹</button><button id="play" class="play">Pausar</button><input id="range" type="range" min="0" max="19" value="0" step="0.001" aria-label="Recorrido"><button id="next" aria-label="Siguiente">›</button><button id="audioBtn" class="audio">Audio</button><span id="count" class="count">01 / 20</span></nav>
 <script>
 (function(){
 const track=document.getElementById('track'),scenes=[...document.querySelectorAll('.scene')],heli=document.getElementById('heli'),rig=document.getElementById('rig'),fx=document.getElementById('flightfx'),range=document.getElementById('range'),count=document.getElementById('count'),prev=document.getElementById('prev'),next=document.getElementById('next'),play=document.getElementById('play'),audio=document.getElementById('audio'),audioBtn=document.getElementById('audioBtn'),mainRotor=document.getElementById('mainRotor'),tailRotor=document.getElementById('tailRotor'),reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
-let index=0,auto=!reduce,timer=0,boost=0,last=performance.now(),flightStart=performance.now();
-function paint(){track.style.transform='translate3d('+(-index*100)+'vw,0,0)';range.value=index;count.textContent=String(index+1).padStart(2,'0')+' / 20';scenes.forEach((s,j)=>s.classList.toggle('active',j===index));}
-function setAuto(v){auto=v;play.textContent=v?'Pausar':'Volar';clearInterval(timer);if(v)timer=setInterval(()=>{if(index>=19){setAuto(false);return}go(index+1,false)},6800)}
-function go(n,user=true){const ni=Math.max(0,Math.min(19,n));if(ni!==index){boost=1;flightStart=performance.now()-700;}index=ni;paint();if(user)setAuto(false)}
-prev.onclick=()=>go(index-1);next.onclick=()=>go(index+1);range.oninput=()=>go(+range.value);play.onclick=()=>setAuto(!auto);
-let sx=0;addEventListener('pointerdown',e=>sx=e.clientX,{passive:true});addEventListener('pointerup',e=>{const d=e.clientX-sx;if(Math.abs(d)>65&&!e.target.closest('.controls'))go(index+(d<0?1:-1))},{passive:true});addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(index+1);else if(e.key==='ArrowLeft')go(index-1);else if(e.key===' '&&!/BUTTON|INPUT|A/.test(e.target.tagName)){e.preventDefault();setAuto(!auto)}});
+let progress=0,target=0,playing=!reduce,scrubbing=false,last=performance.now(),boost=0;
+const N=20,SECONDS_PER_SCENE=5.15,AUTO_SPEED=1/SECONDS_PER_SCENE;
+function clamp(n,a,b){return Math.max(a,Math.min(b,n))}
+function sceneIndex(){return clamp(Math.round(progress),0,N-1)}
+function updateUI(){
+  const i=sceneIndex();
+  range.value=progress.toFixed(3);
+  count.textContent=String(i+1).padStart(2,'0')+' / 20';
+  scenes.forEach((s,j)=>s.classList.toggle('active',j===i));
+}
+function snapTo(n){target=progress=clamp(n,0,N-1);boost=1;updateWorld();updateUI()}
+function updateWorld(){track.style.transform='translate3d('+(-progress*100)+'vw,0,0)'}
+function setPlaying(v){playing=!!v;play.textContent=playing?'Pausar':'Volar'}
+prev.onclick=()=>{setPlaying(false);snapTo(Math.floor(progress-.02))};
+next.onclick=()=>{setPlaying(false);snapTo(Math.ceil(progress+.02))};
+play.onclick=()=>setPlaying(!playing);
+range.addEventListener('pointerdown',()=>{scrubbing=true;setPlaying(false)});
+range.addEventListener('input',()=>{progress=target=+range.value;boost=.8;updateWorld();updateUI()});
+range.addEventListener('change',()=>{scrubbing=false});
+let sx=0;
+addEventListener('pointerdown',e=>{if(!e.target.closest('.controls'))sx=e.clientX},{passive:true});
+addEventListener('pointerup',e=>{if(e.target.closest('.controls'))return;const d=e.clientX-sx;if(Math.abs(d)>70){setPlaying(false);snapTo(sceneIndex()+(d<0?1:-1))}},{passive:true});
+addEventListener('keydown',e=>{if(e.key==='ArrowRight'){setPlaying(false);snapTo(sceneIndex()+1)}else if(e.key==='ArrowLeft'){setPlaying(false);snapTo(sceneIndex()-1)}else if(e.key===' '&&!/BUTTON|INPUT|A/.test(e.target.tagName)){e.preventDefault();setPlaying(!playing)}});
 audio.volume=.16;audioBtn.onclick=()=>{if(audio.paused)audio.play().then(()=>audioBtn.textContent='Audio · apagar').catch(()=>audioBtn.textContent='Audio · bloqueado');else{audio.pause();audioBtn.textContent='Audio'}};
 function mk(cls){const e=document.createElement('i');e.className=cls;fx.appendChild(e);return e}function rnd(a,b){return a+Math.random()*(b-a)}
-const streaks=[],scraps=[],clouds=[];if(!reduce){for(let i=0;i<(innerWidth<600?10:20);i++)streaks.push({e:mk('streak'),x:rnd(0,innerWidth),y:rnd(12,Math.max(70,innerHeight*.30)),v:rnd(360,720),w:rnd(55,170)});for(let i=0;i<(innerWidth<600?4:8);i++)scraps.push({e:mk('scrap'),x:rnd(0,innerWidth),y:rnd(50,innerHeight-170),v:rnd(130,260),r:rnd(-18,18)});for(let i=0;i<(innerWidth<600?2:4);i++)clouds.push({e:mk('fxcloud'),x:rnd(0,innerWidth),y:rnd(40,innerHeight*.45),v:rnd(28,60),s:rnd(.55,1.05)})}
-function frame(t){const dt=Math.min(.04,(t-last)/1000);last=t;boost=Math.max(0,boost-dt*1.4);if(!reduce){const vw=innerWidth,vh=innerHeight,hw=heli.offsetWidth||220;const dur=9800-boost*2600;const p=((t-flightStart)%dur)/dur;const x=-hw*.55+p*(vw+hw*1.15);const y=(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--top'))||58)+vh*(innerWidth<700?.085:.10)+Math.sin(t/520)*8+Math.sin(t/1800)*7;const pitch=-5+Math.sin(t/630)*2-boost*6;heli.style.transform='translate3d('+x+'px,'+y+'px,0) rotate('+pitch+'deg)';rig.style.transform='translateY('+Math.sin(t/210)*2+'px)';mainRotor.style.transformOrigin='201px 28px';mainRotor.style.transform='rotate('+((t*(1.35+boost*1.7))%360)+'deg)';tailRotor.style.transformOrigin='22px 72px';tailRotor.style.transform='rotate('+((t*(2.1+boost*2.2))%360)+'deg)';for(const s of streaks){s.x-=s.v*dt*(1+boost*2.2);if(s.x<-s.w-30){s.x=vw+rnd(40,280);s.y=rnd(12,Math.max(70,vh*.30));s.w=rnd(55,170)}s.e.style.width=s.w+'px';s.e.style.transform='translate3d('+s.x+'px,'+s.y+'px,0) skewX(-24deg) scaleX('+(1+boost*1.7)+')'}for(const q of scraps){q.x-=q.v*dt*(1+boost);q.r-=dt*50;if(q.x<-50){q.x=vw+rnd(50,350);q.y=rnd(35,Math.max(80,vh*.30))}q.e.style.transform='translate3d('+q.x+'px,'+q.y+'px,0) rotate('+q.r+'deg)'}for(const c of clouds){c.x-=c.v*dt*(1+boost*.5);if(c.x<-150){c.x=vw+rnd(100,450);c.y=rnd(28,vh*.27)}c.e.style.transform='translate3d('+c.x+'px,'+c.y+'px,0) scale('+c.s+')'}}requestAnimationFrame(frame)}
-paint();setAuto(auto);requestAnimationFrame(frame);
+const streaks=[],scraps=[],clouds=[];
+if(!reduce){
+  for(let i=0;i<(innerWidth<600?8:16);i++)streaks.push({e:mk('streak'),x:rnd(0,innerWidth),y:rnd(12,Math.max(70,innerHeight*.30)),v:rnd(280,580),w:rnd(45,135)});
+  for(let i=0;i<(innerWidth<600?3:7);i++)scraps.push({e:mk('scrap'),x:rnd(0,innerWidth),y:rnd(42,Math.max(80,innerHeight*.30)),v:rnd(100,210),r:rnd(-18,18)});
+  for(let i=0;i<(innerWidth<600?2:4);i++)clouds.push({e:mk('fxcloud'),x:rnd(0,innerWidth),y:rnd(35,innerHeight*.24),v:rnd(22,48),s:rnd(.5,.95)});
+}
+function frame(t){
+  const dt=Math.min(.04,(t-last)/1000);last=t;
+  if(playing){
+    progress+=AUTO_SPEED*dt;
+    if(progress>=N-1){progress=N-1;setPlaying(false)}
+    target=progress;
+  } else if(!scrubbing && Math.abs(target-progress)>.0005){progress+=(target-progress)*Math.min(1,dt*8)}
+  boost=Math.max(0,boost-dt*1.25);
+  updateWorld();updateUI();
+  if(!reduce){
+    const vw=innerWidth,vh=innerHeight,hw=heli.offsetWidth||190;
+    const baseX=innerWidth<700?vw*.18:vw*.27;
+    const flyX=baseX+Math.sin(t/1550)*vw*.025;
+    const flyY=(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--top'))||58)+vh*(innerWidth<700?.075:.085)+Math.sin(t/510)*7+Math.sin(t/1900)*5;
+    const pitch=-5+Math.sin(t/630)*1.8-boost*5;
+    heli.style.transform='translate3d('+(flyX-hw*.5)+'px,'+flyY+'px,0) rotate('+pitch+'deg)';
+    rig.style.transform='translateY('+Math.sin(t/210)*1.8+'px)';
+    mainRotor.style.transformOrigin='201px 28px';mainRotor.style.transform='rotate('+((t*(1.35+boost*1.5))%360)+'deg)';
+    tailRotor.style.transformOrigin='22px 72px';tailRotor.style.transform='rotate('+((t*(2.1+boost*2))%360)+'deg)';
+    const worldSpeed=(playing?1:.22)+boost*1.6;
+    for(const s of streaks){s.x-=s.v*dt*worldSpeed;if(s.x<-s.w-30){s.x=vw+rnd(40,260);s.y=rnd(12,Math.max(70,vh*.30));s.w=rnd(45,135)}s.e.style.width=s.w+'px';s.e.style.transform='translate3d('+s.x+'px,'+s.y+'px,0) skewX(-24deg) scaleX('+(1+boost*1.2)+')'}
+    for(const q of scraps){q.x-=q.v*dt*worldSpeed;q.r-=dt*45;if(q.x<-45){q.x=vw+rnd(50,300);q.y=rnd(30,Math.max(80,vh*.28))}q.e.style.transform='translate3d('+q.x+'px,'+q.y+'px,0) rotate('+q.r+'deg)'}
+    for(const c of clouds){c.x-=c.v*dt*(playing?1:.15);if(c.x<-140){c.x=vw+rnd(120,420);c.y=rnd(25,vh*.22)}c.e.style.transform='translate3d('+c.x+'px,'+c.y+'px,0) scale('+c.s+')'}
+  }
+  requestAnimationFrame(frame)
+}
+updateWorld();updateUI();setPlaying(playing);requestAnimationFrame(frame);
 })();
 </script>
 </body></html>
