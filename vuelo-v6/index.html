@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07172e">
+<title>JFCarpio.com · Tu Negocio en vuelo</title>
+<meta name="description" content="Recorre JFCarpio.com: ideas, publicaciones, reportes, talleres, visores y apps.">
+<style>
+:root{--ink:#07172e;--navy:#0b2443;--blue:#214d7c;--blue2:#3b6f9d;--paper:#fff6df;--paper2:#ead5ae;--gold:#d8a43a;--sun:#f3cf66;--red:#c3154a;--green:#4fa86a;--orange:#e78d35;--white:#fffaf0;--hud:48px;--serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--ink);font-family:var(--sans);color:var(--ink)}
+a,button,input{font:inherit}
+button{cursor:pointer}
+.stage{position:fixed;inset:0 0 calc(var(--hud) + env(safe-area-inset-bottom));overflow:hidden;background:var(--navy);isolation:isolate}
+.sky-track,.world-back,.world-mid,.world,.world-front{position:absolute;left:0;top:0;height:100%;width:2000vw;will-change:transform}
+.sky-track{z-index:0;background:
+linear-gradient(90deg,
+#173c68 0%,#173c68 22%,#244e76 26%,#244e76 43%,#163d63 48%,#163d63 67%,#23486e 73%,#23486e 88%,#102f55 94%,#102f55 100%)}
+.sky-track:after{content:"";position:absolute;inset:0;background:
+radial-gradient(circle at 20px 20px,#3a6795 0 2px,transparent 3px) 0 0/34px 34px}
+.clouds{position:absolute;inset:0;z-index:1}
+.cloud{position:absolute;width:118px;height:34px;border:3px solid var(--ink);border-radius:999px;background:var(--paper);box-shadow:7px 8px 0 #051225;transform:scale(var(--s))}
+.cloud:before,.cloud:after{content:"";position:absolute;border:3px solid var(--ink);border-radius:50%;background:var(--paper)}
+.cloud:before{width:46px;height:46px;left:14px;top:-23px}
+.cloud:after{width:58px;height:58px;left:48px;top:-31px}
+.paper-edge{filter:drop-shadow(8px 10px 0 #051225)}
+.world-back{z-index:2;bottom:16%;top:auto;height:52%;background:#315f8a;clip-path:polygon(0% 100%,0% 72%,0.00% 43.76%,1.25% 59.47%,2.50% 67.07%,3.75% 36.54%,5.00% 31.38%,6.25% 38.36%,7.50% 61.77%,8.75% 33.99%,10.00% 32.92%,11.25% 41.55%,12.50% 47.85%,13.75% 66.53%,15.00% 28.33%,16.25% 40.69%,17.50% 34.75%,18.75% 68.08%,20.00% 46.54%,21.25% 66.01%,22.50% 62.26%,23.75% 71.67%,25.00% 33.90%,26.25% 67.10%,27.50% 50.39%,28.75% 62.73%,30.00% 37.88%,31.25% 44.75%,32.50% 47.77%,33.75% 42.43%,35.00% 46.85%,36.25% 64.72%,37.50% 73.34%,38.75% 59.78%,40.00% 45.21%,41.25% 34.20%,42.50% 59.13%,43.75% 48.40%,45.00% 32.66%,46.25% 52.04%,47.50% 39.65%,48.75% 49.14%,50.00% 37.10%,51.25% 34.02%,52.50% 50.58%,53.75% 38.83%,55.00% 32.47%,56.25% 44.86%,57.50% 31.37%,58.75% 57.96%,60.00% 36.96%,61.25% 61.07%,62.50% 70.92%,63.75% 29.99%,65.00% 46.54%,66.25% 66.55%,67.50% 57.40%,68.75% 35.35%,70.00% 47.97%,71.25% 68.76%,72.50% 64.95%,73.75% 37.34%,75.00% 36.62%,76.25% 60.96%,77.50% 34.30%,78.75% 72.68%,80.00% 44.62%,81.25% 37.74%,82.50% 56.39%,83.75% 54.72%,85.00% 36.27%,86.25% 61.47%,87.50% 43.70%,88.75% 41.58%,90.00% 43.73%,91.25% 33.16%,92.50% 38.38%,93.75% 31.18%,95.00% 40.79%,96.25% 52.99%,97.50% 29.79%,98.75% 48.22%,100.00% 30.13%,100% 72%,100% 100%)}
+.world-back:after{content:"";position:absolute;inset:7px 0 -7px;background:#264b70;clip-path:inherit;z-index:-1}
+.world-mid{z-index:4;bottom:5%;top:auto;height:43%;background:#1d446e;clip-path:polygon(0% 100%,0% 72%,0.00% 50.83%,1.25% 79.94%,2.50% 43.43%,3.75% 37.14%,5.00% 41.99%,6.25% 51.87%,7.50% 73.11%,8.75% 42.80%,10.00% 45.79%,11.25% 37.42%,12.50% 78.05%,13.75% 61.50%,15.00% 54.13%,16.25% 71.19%,17.50% 69.53%,18.75% 65.56%,20.00% 34.29%,21.25% 80.77%,22.50% 64.85%,23.75% 46.14%,25.00% 42.11%,26.25% 65.22%,27.50% 67.80%,28.75% 59.16%,30.00% 43.41%,31.25% 48.50%,32.50% 69.97%,33.75% 78.70%,35.00% 46.73%,36.25% 42.17%,37.50% 67.96%,38.75% 46.72%,40.00% 38.15%,41.25% 80.48%,42.50% 34.72%,43.75% 71.43%,45.00% 47.78%,46.25% 53.96%,47.50% 48.78%,48.75% 55.01%,50.00% 42.46%,51.25% 51.32%,52.50% 71.51%,53.75% 42.53%,55.00% 46.39%,56.25% 58.83%,57.50% 42.16%,58.75% 70.69%,60.00% 36.19%,61.25% 50.24%,62.50% 36.75%,63.75% 50.50%,65.00% 40.10%,66.25% 60.68%,67.50% 67.10%,68.75% 48.39%,70.00% 46.32%,71.25% 62.12%,72.50% 77.53%,73.75% 44.40%,75.00% 47.30%,76.25% 76.94%,77.50% 66.89%,78.75% 34.19%,80.00% 53.13%,81.25% 48.22%,82.50% 63.48%,83.75% 38.66%,85.00% 43.86%,86.25% 56.11%,87.50% 34.17%,88.75% 77.00%,90.00% 51.81%,91.25% 63.81%,92.50% 44.89%,93.75% 43.21%,95.00% 41.90%,96.25% 52.42%,97.50% 76.24%,98.75% 50.55%,100.00% 38.40%,100% 72%,100% 100%);filter:drop-shadow(0 -6px 0 #08182b)}
+.world-front{z-index:8;bottom:-2%;top:auto;height:30%;background:#092541;clip-path:polygon(0% 100%,0% 72%,0.00% 52.86%,1.25% 52.97%,2.50% 62.20%,3.75% 69.88%,5.00% 49.86%,6.25% 60.38%,7.50% 52.20%,8.75% 81.48%,10.00% 64.30%,11.25% 47.39%,12.50% 44.40%,13.75% 63.50%,15.00% 61.30%,16.25% 83.90%,17.50% 67.61%,18.75% 57.79%,20.00% 54.58%,21.25% 55.84%,22.50% 58.75%,23.75% 44.02%,25.00% 45.05%,26.25% 52.65%,27.50% 72.51%,28.75% 72.52%,30.00% 58.57%,31.25% 80.84%,32.50% 87.46%,33.75% 88.52%,35.00% 52.07%,36.25% 50.25%,37.50% 63.86%,38.75% 51.93%,40.00% 61.33%,41.25% 54.83%,42.50% 75.82%,43.75% 76.13%,45.00% 62.61%,46.25% 77.73%,47.50% 65.74%,48.75% 87.42%,50.00% 44.78%,51.25% 77.27%,52.50% 74.62%,53.75% 44.19%,55.00% 57.58%,56.25% 61.41%,57.50% 49.82%,58.75% 81.64%,60.00% 56.78%,61.25% 54.17%,62.50% 68.92%,63.75% 73.73%,65.00% 62.46%,66.25% 54.44%,67.50% 84.63%,68.75% 77.02%,70.00% 46.06%,71.25% 79.79%,72.50% 59.22%,73.75% 85.40%,75.00% 50.47%,76.25% 78.05%,77.50% 54.01%,78.75% 67.05%,80.00% 62.37%,81.25% 50.55%,82.50% 86.27%,83.75% 60.64%,85.00% 44.91%,86.25% 53.71%,87.50% 46.91%,88.75% 54.22%,90.00% 59.07%,91.25% 49.33%,92.50% 48.90%,93.75% 65.11%,95.00% 54.43%,96.25% 60.39%,97.50% 74.62%,98.75% 49.77%,100.00% 56.22%,100% 72%,100% 100%);filter:drop-shadow(0 -8px 0 #041020)}
+.world{z-index:6;top:0}
+.chapter{position:absolute;left:calc(var(--i) * 100vw);top:0;width:100vw;height:100%;overflow:visible}
+.set-piece{position:absolute;inset:0;pointer-events:none}
+.paper-sign{position:absolute;z-index:14;top:56%;width:min(32vw,450px);padding:17px 19px 16px;background:var(--paper);border:4px solid var(--ink);clip-path:polygon(0 5%,4% 0,13% 3%,22% 0,31% 2%,41% 0,51% 3%,61% 0,72% 2%,83% 0,93% 3%,100% 0,98% 20%,100% 40%,98% 60%,100% 80%,98% 100%,88% 97%,77% 100%,66% 97%,55% 100%,44% 97%,33% 100%,22% 97%,11% 100%,0 97%,2% 80%,0 60%,2% 40%,0 20%);transform:translateY(-50%) rotate(var(--r,-1.5deg));}
+.chapter.left .paper-sign{left:7vw;--r:-2deg}
+.chapter.right .paper-sign{right:7vw;--r:2deg}
+.chapter-no{display:inline-grid;place-items:center;width:42px;height:31px;background:var(--gold);border:2px solid var(--ink);font:900 11px var(--mono);transform:rotate(-4deg);margin-right:8px}
+.chapter-kicker{font:800 10px/1.2 var(--mono);letter-spacing:.17em;text-transform:uppercase}
+.paper-sign h2{margin:10px 0 7px;font:700 clamp(30px,3.8vw,54px)/.92 var(--serif);letter-spacing:-.035em;max-width:12ch}
+.paper-sign p{margin:0 0 11px;font-size:clamp(13px,1.15vw,16px);line-height:1.35;max-width:34ch}
+.paper-sign a{display:inline-flex;align-items:center;gap:9px;min-height:38px;padding:8px 11px;background:var(--red);border:2px solid var(--ink);box-shadow:4px 5px 0 #75102d;color:#fff;text-decoration:none;font-weight:850;font-size:12px}
+.paper-sign a b{font-size:18px}
+/* set pieces */
+.set-piece>*{position:absolute;border:4px solid var(--ink);box-shadow:8px 10px 0 #051225;background:var(--paper)}
+.right .set-piece>*{left:7vw} .left .set-piece>*{right:7vw}
+.skyline{bottom:20%;width:31vw;height:185px;background:#d1aa62;clip-path:polygon(0 20%,14% 20%,14% 0,36% 0,36% 34%,53% 34%,53% 12%,73% 12%,73% 30%,100% 30%,100% 100%,0 100%)}
+.skyline i{display:inline-block;width:38px;height:48px;margin:105px 18px 0;background:#163a65;border:3px solid var(--ink)}
+.ribbon{top:18%;padding:10px 14px;font:900 11px var(--mono);letter-spacing:.1em;background:var(--paper2);transform:rotate(-4deg)}
+.photo-cut{top:13%;width:34vw;padding:8px;background:var(--paper);transform:rotate(4deg);clip-path:polygon(0 4%,4% 0,16% 2%,30% 0,44% 3%,60% 0,74% 2%,88% 0,100% 4%,98% 25%,100% 50%,98% 75%,100% 100%,75% 98%,50% 100%,25% 98%,0 100%,2% 75%,0 50%,2% 25%)}
+.photo-cut img{display:block;width:100%;height:clamp(180px,36vh,360px);object-fit:cover;filter:saturate(.72) contrast(1.08)}
+.timeline{bottom:19%;width:30vw;height:14px;background:var(--gold);border-radius:99px}
+.timeline i{position:relative;display:inline-block;width:18px;height:18px;margin:-5px 2.4vw 0;border-radius:50%;background:var(--paper);border:3px solid var(--ink)}
+.paper-stack{top:14%;width:30vw;min-height:220px;padding:22px;transform:rotate(-4deg)}
+.paper-stack b{display:block;font:700 clamp(30px,4vw,50px)/.95 var(--serif);margin-bottom:14px}
+.paper-stack span{display:block;padding:7px 0;border-top:2px solid var(--ink);font:800 10px var(--mono);letter-spacing:.09em}
+.book-spine{top:10%;width:250px;height:360px;padding:26px 22px;background:#e5b94f;transform:rotate(5deg)}
+.book-spine small{font:800 9px var(--mono);letter-spacing:.12em} .book-spine b{display:block;margin-top:22px;font:700 43px/.9 var(--serif)}
+.shelf{bottom:16%;width:34vw;height:190px;padding:20px;display:flex;align-items:flex-end;gap:10px;background:#956237}
+.shelf i{display:block;width:42px;border:3px solid var(--ink);background:var(--gold)} .shelf i:nth-child(1){height:130px} .shelf i:nth-child(2){height:90px;background:#2b6796} .shelf i:nth-child(3){height:150px;background:var(--red)} .shelf i:nth-child(4){height:112px} .shelf i:nth-child(5){height:138px;background:var(--green)}
+.label{top:16%;padding:11px 15px;font:900 11px var(--mono);letter-spacing:.08em;transform:rotate(-3deg)}
+.ticket{padding:11px 14px;font:900 13px var(--mono);background:#fff8e9} .tickets .t1{top:17%;transform:rotate(-8deg)} .tickets .t2{top:31%;transform:rotate(6deg)} .tickets .t3{top:45%;transform:rotate(-4deg)} .gift{bottom:18%;width:150px;height:125px;padding:46px 12px 0;text-align:center;color:#fff;background:var(--red);font-weight:900}
+.gift:before{content:"";position:absolute;left:63px;top:-18px;width:18px;height:150px;background:var(--gold);border:3px solid var(--ink)}
+.ore{width:88px;height:88px;border-radius:46% 54% 42% 58%;display:grid;place-items:center;background:#c58c46;font:900 30px var(--serif)} .o1{top:19%;transform:rotate(-12deg)} .o2{top:38%;transform:rotate(8deg);background:#b87333} .map-tag{bottom:22%;padding:12px 15px;font:900 12px var(--mono);letter-spacing:.08em;transform:rotate(-3deg)}
+.globe{top:14%;width:210px;height:210px;border-radius:50%;background:conic-gradient(#315b87 0 22%,#d9b869 22% 35%,#315b87 35% 58%,#d9b869 58% 70%,#315b87 70% 100%)}
+.flags{bottom:22%;padding:10px;display:flex;gap:7px} .flags i{font:900 10px var(--mono);padding:6px;border:2px solid var(--ink);background:#fff}
+.chart{top:14%;width:310px;height:230px;padding:25px;display:flex;align-items:flex-end;gap:13px;background:#102b4f} .chart i{width:48px;height:var(--h);background:var(--gold);border:3px solid #fff}
+.metric{bottom:26%;padding:10px 13px;border-radius:99px;font:900 16px var(--mono)} .metric.m2{bottom:18%;transform:translateX(110px)} .metric.m3{bottom:10%;transform:translateX(210px)}
+.audience{bottom:13%;width:32vw;height:165px;background:transparent;border:none;box-shadow:none;display:flex;align-items:flex-end;gap:12px} .audience i{display:block;width:52px;height:98px;background:#e6c79b;border:4px solid var(--ink);border-radius:50% 50% 16px 16px;box-shadow:6px 7px 0 #051225}
+.flip{top:14%;width:180px;height:225px;padding:20px;background:#fff} .flip b,.flip span{display:block;margin:10px 0}
+.factory{bottom:14%;width:320px;height:170px;background:#c49c61;clip-path:polygon(0 36%,22% 36%,22% 17%,42% 33%,42% 15%,65% 32%,65% 0,79% 0,79% 38%,100% 38%,100% 100%,0 100%)} .factory i{display:inline-block;width:34px;height:42px;margin:91px 9px 0 18px;background:#173a63;border:3px solid var(--ink)} .gear{top:18%;width:100px;height:100px;border-radius:50%;display:grid;place-items:center;background:var(--gold);font:900 38px var(--serif)} .strip{top:48%;padding:10px 13px;font:900 10px var(--mono);letter-spacing:.06em}
+.schoolhouse{bottom:14%;width:300px;height:210px;padding:58px 18px 0;text-align:center;background:#e0c691;clip-path:polygon(0 35%,20% 35%,50% 0,80% 35%,100% 35%,100% 100%,0 100%)} .schoolhouse b{font:700 29px/1.05 var(--serif)} .coin{top:18%;width:80px;height:80px;border-radius:50%;display:grid;place-items:center;background:var(--gold);font:900 32px var(--serif)} .books{bottom:14%;width:170px;background:transparent;border:none;box-shadow:none} .books i{display:block;height:25px;margin:4px;background:var(--red);border:3px solid var(--ink);transform:rotate(-3deg)}
+.stall{bottom:13%;width:300px;height:210px;padding:26px;background:#dfc28a;clip-path:polygon(0 18%,10% 0,20% 18%,30% 0,40% 18%,50% 0,60% 18%,70% 0,80% 18%,90% 0,100% 18%,100% 100%,0 100%)} .stall span{display:block;margin:17px 0;font:900 20px var(--sans)} .parcel{top:20%;width:80px;height:70px;background:#c99349} .parcel.p2{top:35%;transform:translateX(100px) rotate(7deg)}
+.monitor{top:13%;width:330px;height:235px;padding:20px;background:#102c52;color:#fff} .monitor b{font:900 26px var(--sans)} .monitor div{display:flex;gap:12px;align-items:flex-end;height:130px} .monitor i{width:58px;height:var(--h);background:var(--gold);border:3px solid #fff} .gauge{bottom:18%;width:106px;height:106px;border-radius:50%;background:conic-gradient(#49a56d 0 38%,#e6c152 38% 66%,#c84b57 66% 100%)}
+.tower{top:15%;width:140px;height:240px;padding:30px 12px;text-align:center;background:#e2c78f} .tower b{font:900 80px/1 var(--serif)} .tower span{display:block;font:800 11px var(--mono)} .lights{top:18%;transform:translateX(175px);width:82px;height:225px;padding:18px;background:#101e32} .lights i{display:block;width:45px;height:45px;border-radius:50%;margin:10px auto;border:3px solid var(--ink)} .lights i:nth-child(1){background:#c84b57} .lights i:nth-child(2){background:#e6c152} .lights i:nth-child(3){background:#49a56d}
+.phone{top:10%;width:225px;padding:8px;border-radius:28px;background:#0b213d;transform:rotate(-5deg)} .phone>div{height:205px;border:3px solid var(--paper);border-radius:20px;padding:18px 14px;background:#102c52} .phone b{display:block;font:900 18px var(--sans);margin-bottom:16px} .phone i{display:block;height:18px;border:2px solid var(--ink);border-radius:999px;margin:10px 0} .phone .green{width:88%;background:#58a966} .phone .gold{width:63%;background:#dfbd4f} .phone .red{width:46%;background:#c84b57} .pin{bottom:23%;width:75px;height:75px;border-radius:50%;display:grid;place-items:center;background:var(--gold);font:900 24px var(--mono)}
+.lg-f{color:#d3a420}.lg1{color:#cb2149}.lg2{color:#f4951f}.lg3{color:#2461d6}
+.market{bottom:13%;width:300px;height:205px;padding:26px;background:#dfc28a;clip-path:polygon(0 18%,8% 0,16% 18%,24% 0,32% 18%,40% 0,48% 18%,56% 0,64% 18%,72% 0,80% 18%,88% 0,96% 18%,100% 16%,100% 100%,0 100%)} .market b{display:block;font-size:19px} .market i{display:inline-block;width:62px;height:78px;margin:76px 6px 0;background:#315a80;border:3px solid var(--ink)}
+.clinic{bottom:14%;width:250px;height:195px;display:grid;place-items:center;background:#f1e1c1;color:var(--red);font:900 100px var(--sans)} .calendar{top:14%;width:195px;padding:16px;background:#fff} .calendar b,.calendar span{display:block;margin:9px 0}
+.people{bottom:14%;width:310px;height:175px;background:transparent;border:none;box-shadow:none;display:flex;gap:12px;align-items:flex-end} .people i{display:block;width:78px;height:120px;background:#e4c79b;border:4px solid var(--ink);border-radius:50% 50% 16px 16px;box-shadow:6px 7px 0 #051225} .quote{top:17%;padding:12px 16px;font:700 17px var(--serif);transform:rotate(-4deg)}
+.runway{bottom:13%;width:38vw;height:82px;background:#e2d4b9;transform:perspective(300px) rotateX(55deg);border-radius:18px} .runway:before{content:"";position:absolute;left:49%;top:8px;bottom:8px;border-left:5px dashed #fff} .tower2{top:18%;width:88px;height:168px;display:grid;place-items:center;background:#d9bd83;font:900 28px var(--serif)} .landing{bottom:30%;padding:11px 15px;font:900 12px var(--mono);letter-spacing:.08em}
+/* minimal HUD */
+.hud{position:fixed;z-index:100;left:10px;right:10px;bottom:calc(6px + env(safe-area-inset-bottom));height:42px;padding:4px 6px;display:grid;grid-template-columns:auto minmax(100px,1fr) auto auto;gap:6px;align-items:center;background:var(--paper);border:2px solid var(--ink);box-shadow:4px 5px 0 #051225;border-radius:12px}
+.hud button{height:31px;min-width:34px;border:1.5px solid var(--ink);border-radius:8px;background:#fff;color:var(--ink);font:800 10px var(--mono)} .hud .play{background:var(--ink);color:#fff} .hud .audio{color:var(--red);border-color:var(--red)} .hud input{width:100%;accent-color:var(--red)} .count{font:800 9px var(--mono);white-space:nowrap}
+/* flight */
+#flightfx{position:fixed;z-index:11;left:0;right:0;top:0;height:28vh;overflow:hidden;pointer-events:none}
+.streak{position:absolute;height:4px;background:var(--paper);border:1px solid var(--ink);box-shadow:3px 4px 0 #051225;will-change:transform}
+.scrap{position:absolute;width:22px;height:11px;background:var(--gold);border:2px solid var(--ink);will-change:transform}
+#heli{position:fixed;z-index:18;left:0;top:0;width:clamp(108px,9vw,148px);pointer-events:none;will-change:transform;filter:drop-shadow(7px 8px 0 #051225)}
+#heli svg{display:block;width:100%;overflow:visible} .hb{fill:#193e69;stroke:var(--ink);stroke-width:5} .hf{fill:#2b5b8f;stroke:var(--ink);stroke-width:4} .hc{fill:#f0ce77;stroke:var(--ink);stroke-width:5} .sk{fill:none;stroke:var(--ink);stroke-width:7;stroke-linecap:round} .rot{fill:var(--ink)} .hlab{fill:#fff;font:900 24px var(--sans)} .hsub{fill:#fff;font:800 9px var(--mono);letter-spacing:.12em} .stitch{fill:none;stroke:#f1d58c;stroke-width:2;stroke-dasharray:7 5}
+@media(max-width:900px){
+.paper-sign{top:auto;bottom:13%;width:min(58vw,310px);padding:12px 13px 11px}
+.chapter.left .paper-sign{left:7vw} .chapter.right .paper-sign{right:7vw}
+.paper-sign h2{font-size:clamp(24px,7.5vw,34px);margin:7px 0 4px} .paper-sign p{font-size:11.5px;line-height:1.28;margin-bottom:7px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden} .paper-sign a{min-height:34px;padding:6px 8px;font-size:9px} .chapter-kicker{font-size:8px} .chapter-no{width:31px;height:23px;font-size:9px}
+#heli{width:min(20vw,90px)} .set-piece>*{transform:scale(.58);transform-origin:left top} .chapter.left .set-piece>*{transform-origin:right top}
+.photo-cut{width:58vw} .runway{width:46vw}
+}
+@media(max-width:480px){
+.paper-sign{bottom:12%;width:min(64vw,276px);padding:10px 11px}
+.paper-sign h2{font-size:clamp(22px,7.1vw,30px)} .paper-sign p{font-size:10.8px} .paper-sign a{font-size:8.5px}
+#heli{width:min(18vw,78px)} .set-piece>*{transform:scale(.48)} .chapter.left .set-piece>*{transform-origin:right top}
+.hud{left:7px;right:7px;bottom:calc(5px + env(safe-area-inset-bottom));height:39px;grid-template-columns:auto minmax(80px,1fr) auto auto}
+.hud button{height:29px;min-width:31px;font-size:9px} .count{font-size:8px}
+}
+@media(max-height:650px) and (orientation:landscape){
+.paper-sign{top:50%;bottom:auto;transform:translateY(-50%) rotate(var(--r,-1.5deg));width:min(34vw,390px);padding:11px 13px} .paper-sign h2{font-size:clamp(23px,4vw,34px)} .paper-sign p{font-size:11px} #heli{width:min(9vw,120px)}
+}
+@media(prefers-reduced-motion:reduce){#flightfx{display:none}}
+</style>
+</head>
+<body>
+<main class="stage" aria-label="Recorrido por JFCarpio.com">
+  <div id="skyTrack" class="sky-track"><div class="clouds"><i class="cloud" style="left:6.13%;top:9.7%;--s:0.82"></i>
+<i class="cloud" style="left:11.55%;top:34.9%;--s:0.58"></i>
+<i class="cloud" style="left:53.55%;top:17.3%;--s:1.12"></i>
+<i class="cloud" style="left:16.65%;top:17.5%;--s:0.77"></i>
+<i class="cloud" style="left:25.03%;top:7.1%;--s:0.84"></i>
+<i class="cloud" style="left:9.59%;top:25.5%;--s:0.60"></i>
+<i class="cloud" style="left:31.91%;top:20.9%;--s:1.16"></i>
+<i class="cloud" style="left:10.09%;top:11.4%;--s:1.08"></i>
+<i class="cloud" style="left:3.08%;top:35.2%;--s:0.93"></i>
+<i class="cloud" style="left:27.00%;top:33.0%;--s:1.07"></i>
+<i class="cloud" style="left:34.66%;top:31.8%;--s:0.69"></i>
+<i class="cloud" style="left:60.67%;top:23.3%;--s:1.09"></i>
+<i class="cloud" style="left:31.90%;top:19.3%;--s:1.07"></i>
+<i class="cloud" style="left:51.25%;top:28.2%;--s:0.98"></i>
+<i class="cloud" style="left:66.33%;top:34.6%;--s:0.88"></i>
+<i class="cloud" style="left:66.51%;top:18.6%;--s:0.57"></i>
+<i class="cloud" style="left:74.91%;top:12.6%;--s:1.10"></i>
+<i class="cloud" style="left:90.54%;top:27.4%;--s:0.66"></i>
+<i class="cloud" style="left:34.02%;top:19.1%;--s:0.60"></i>
+<i class="cloud" style="left:45.76%;top:24.8%;--s:0.78"></i>
+<i class="cloud" style="left:19.53%;top:9.7%;--s:0.97"></i>
+<i class="cloud" style="left:2.26%;top:17.9%;--s:0.70"></i>
+<i class="cloud" style="left:53.14%;top:29.4%;--s:1.16"></i>
+<i class="cloud" style="left:63.60%;top:37.7%;--s:1.20"></i>
+<i class="cloud" style="left:62.74%;top:14.2%;--s:0.87"></i>
+<i class="cloud" style="left:18.40%;top:37.8%;--s:0.85"></i>
+<i class="cloud" style="left:74.66%;top:8.4%;--s:0.64"></i>
+<i class="cloud" style="left:19.93%;top:14.9%;--s:0.79"></i>
+<i class="cloud" style="left:27.65%;top:20.5%;--s:0.83"></i>
+<i class="cloud" style="left:11.64%;top:8.9%;--s:0.79"></i>
+<i class="cloud" style="left:9.70%;top:20.4%;--s:0.56"></i>
+<i class="cloud" style="left:53.51%;top:9.3%;--s:1.02"></i>
+<i class="cloud" style="left:40.61%;top:37.5%;--s:0.73"></i>
+<i class="cloud" style="left:47.31%;top:30.3%;--s:0.77"></i></div></div>
+  <div id="worldBack" class="world-back paper-edge"></div>
+  <div id="worldMid" class="world-mid paper-edge"></div>
+  <div id="world" class="world">
+    <section class="chapter kind-billboard right" style="--i:0" data-index="0">
+      <div class="set-piece"><div class="decor skyline"><i></i><i></i><i></i></div><div class="ribbon">HISTORIA DE DOS NEGOCIOS</div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">01</span>
+        <span class="chapter-kicker">PRÓLOGO</span>
+        <h2>Dos negocios nacieron el mismo año.</h2>
+        <p>Misma idea. Mismo esfuerzo. Mismo primer día. Esta es su historia.</p>
+        <a href="https://jfcarpio.com/#c1" target="_blank" rel="noopener noreferrer">Empezar <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-portrait left" style="--i:1" data-index="1">
+      <div class="set-piece"><figure class="photo-cut"><img src="https://jfcarpio.com/trayectoria-jfcarpio.jpg" alt=""></figure><div class="timeline"><i></i><i></i><i></i><i></i></div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">02</span>
+        <span class="chapter-kicker">TRAYECTORIA</span>
+        <h2>Ideas, mercados y herramientas</h2>
+        <p>Más de 25 años entre economía, investigación, docencia, consultoría y herramientas.</p>
+        <a href="https://jfcarpio.com/juan-fernando-carpio/" target="_blank" rel="noopener noreferrer">Ver trayectoria <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-newspaper right" style="--i:2" data-index="2">
+      <div class="set-piece"><div class="paper-stack"><b>EMPRESA PRIVADA</b><span>INSTITUCIONES</span><span>CAPITAL</span><span>HISTORIA ECONÓMICA</span></div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">03</span>
+        <span class="chapter-kicker">BLOG</span>
+        <h2>Economía aplicada</h2>
+        <p>Ensayos sobre empresa privada, instituciones, capital e historia económica.</p>
+        <a href="https://jfcarpio.com/blog/" target="_blank" rel="noopener noreferrer">Leer el blog <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-book left" style="--i:3" data-index="3">
+      <div class="set-piece"><div class="book-spine"><small>JUAN FERNANDO CARPIO</small><b>10<br>LECCIONES<br>DE ECONOMÍA</b></div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">04</span>
+        <span class="chapter-kicker">LIBRO</span>
+        <h2>10 Lecciones de Economía</h2>
+        <p>Artículos reunidos como curso intensivo de economía aplicada.</p>
+        <a href="https://jfcarpio.gumroad.com/l/10LeccionesdeEconomia" target="_blank" rel="noopener noreferrer">Conseguir el libro <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-shelf right" style="--i:4" data-index="4">
+      <div class="set-piece"><div class="shelf"><i></i><i></i><i></i><i></i><i></i></div><div class="label">LIBRO · COLUMNAS · RADIO</div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">05</span>
+        <span class="chapter-kicker">PUBLICACIONES</span>
+        <h2>Publicaciones</h2>
+        <p>Libro, columnas en prensa y programas de radio sobre economía aplicada.</p>
+        <a href="https://jfcarpio.com/publicaciones/" target="_blank" rel="noopener noreferrer">Ver publicaciones <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-tickets left" style="--i:5" data-index="5">
+      <div class="set-piece"><div class="ticket t1">GUÍA</div><div class="ticket t2">QUIZ</div><div class="ticket t3">SEMÁFORO</div><div class="gift">GRATIS</div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">06</span>
+        <span class="chapter-kicker">RECURSOS</span>
+        <h2>Todo lo gratuito</h2>
+        <p>Blog, guías, quiz y semáforo financiero en un solo lugar.</p>
+        <a href="https://jfcarpio.gumroad.com/l/10modelosdenegociossinempleados" target="_blank" rel="noopener noreferrer">Ver recursos <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-minerals right" style="--i:6" data-index="6">
+      <div class="set-piece"><div class="ore o1">Li</div><div class="ore o2">Cu</div><div class="map-tag">AMÉRICA LATINA</div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">07</span>
+        <span class="chapter-kicker">REPORTE</span>
+        <h2>Minerales críticos</h2>
+        <p>América Latina, riesgo regulatorio 2025–2026.</p>
+        <a href="https://brilla-group.com/reportes.html" target="_blank" rel="noopener noreferrer">Ver reporte <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-map left" style="--i:7" data-index="7">
+      <div class="set-piece"><div class="globe"></div><div class="flags"><i>CL</i><i>EC</i><i>PE</i><i>CO</i></div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">08</span>
+        <span class="chapter-kicker">REPORTE</span>
+        <h2>Macro 2025–2026</h2>
+        <p>Chile, Ecuador, Perú y Colombia. Un mapa compacto del entorno económico regional.</p>
+        <a href="https://brilla-group.com/reportes.html" target="_blank" rel="noopener noreferrer">Ver reporte <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-chart right" style="--i:8" data-index="8">
+      <div class="set-piece"><div class="chart"><i style="--h:42%"></i><i style="--h:68%"></i><i style="--h:86%"></i><i style="--h:58%"></i></div><div class="metric">MRR</div><div class="metric m2">CAC</div><div class="metric m3">CHURN</div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">09</span>
+        <span class="chapter-kicker">BENCHMARKS</span>
+        <h2>MRR · CAC · Churn</h2>
+        <p>Referencias de Ecuador y Latam para comparar tu negocio con contexto útil.</p>
+        <a href="https://brilla-group.com/reportes.html" target="_blank" rel="noopener noreferrer">Ver benchmarks <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-workshop left" style="--i:9" data-index="9">
+      <div class="set-piece"><div class="audience"><i></i><i></i><i></i><i></i></div><div class="flip"><b>DINERO</b><span>AHORRO</span><span>INVERSIÓN</span><span>PROTECCIÓN</span></div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">10</span>
+        <span class="chapter-kicker">TALLER</span>
+        <h2>Dinero y finanzas</h2>
+        <p>Ahorro, inversión y protección patrimonial. Dos horas para equipos.</p>
+        <a href="https://jfcarpio.com/talleres/" target="_blank" rel="noopener noreferrer">Ver taller <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-factory right" style="--i:10" data-index="10">
+      <div class="set-piece"><div class="factory"><i></i><i></i><i></i></div><div class="gear">$</div><div class="strip">SALARIO · RIESGO · UTILIDAD</div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">11</span>
+        <span class="chapter-kicker">TALLER</span>
+        <h2>Empresa privada</h2>
+        <p>Salario, riesgo, utilidad y cooperación. Dos horas para equipos.</p>
+        <a href="https://jfcarpio.com/talleres/" target="_blank" rel="noopener noreferrer">Ver taller <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-school left" style="--i:11" data-index="11">
+      <div class="set-piece"><div class="schoolhouse"><b>ESCUELA<br>DEL DINERO</b></div><div class="coin">$</div><div class="books"><i></i><i></i><i></i></div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">12</span>
+        <span class="chapter-kicker">EDUCACIÓN</span>
+        <h2>La Escuela del Dinero</h2>
+        <p>Cursos, ebooks y asesoría para tomar el control de tu dinero.</p>
+        <a href="https://escuela-dinero.gumroad.com/" target="_blank" rel="noopener noreferrer">Entrar <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-store right" style="--i:12" data-index="12">
+      <div class="set-piece"><div class="stall"><span>LIBROS</span><span>REPORTES</span><span>GUÍAS</span></div><div class="parcel p1"></div><div class="parcel p2"></div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">13</span>
+        <span class="chapter-kicker">CATÁLOGO</span>
+        <h2>Tienda en Gumroad</h2>
+        <p>Libros, reportes, guías gratuitas y servicios en un solo catálogo.</p>
+        <a href="https://jfcarpio.gumroad.com/" target="_blank" rel="noopener noreferrer">Abrir tienda <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-dashboard left" style="--i:13" data-index="13">
+      <div class="set-piece"><div class="monitor"><b>VISOR</b><div><i style="--h:74%"></i><i style="--h:48%"></i><i style="--h:88%"></i></div></div><div class="gauge"></div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">14</span>
+        <span class="chapter-kicker">VISOR</span>
+        <h2>Visor Gerencial</h2>
+        <p>Compara CAC, LTV y ROI con benchmarks de la región. Gratis y sin registro.</p>
+        <a href="https://jfcarpio.com/visorgerencial/" target="_blank" rel="noopener noreferrer">Abrir visor <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-semaphore right" style="--i:14" data-index="14">
+      <div class="set-piece"><div class="tower"><b>8</b><span>INDICADORES</span></div><div class="lights"><i></i><i></i><i></i></div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">15</span>
+        <span class="chapter-kicker">VISOR</span>
+        <h2>Visor Antiquiebra</h2>
+        <p>Ocho indicadores y un semáforo de riesgo en 15 minutos semanales.</p>
+        <a href="https://jfcarpio.com/visorantiquiebra/" target="_blank" rel="noopener noreferrer">Abrir visor <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-friendly left" style="--i:15" data-index="15">
+      <div class="set-piece"><div class="phone"><div><b><span class="lg-f">friendly-</span><span class="lg1">1</span><span class="lg2">2</span><span class="lg3">3</span></b><i class="green"></i><i class="gold"></i><i class="red"></i></div></div><div class="pin">456</div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">16</span>
+        <span class="chapter-kicker">APP</span>
+        <h2>friendly-123</h2>
+        <p>Inventario, ventas y consignación. Funciona sin internet. Demo PIN 456.</p>
+        <a href="https://jfcarpio.com/friendly123/" target="_blank" rel="noopener noreferrer">Probar demo <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-market right" style="--i:16" data-index="16">
+      <div class="set-piece"><div class="market"><b><span class="lg-f">amigable-</span><span class="lg1">1</span><span class="lg2">2</span><span class="lg3">3</span></b><i></i><i></i><i></i></div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">17</span>
+        <span class="chapter-kicker">APP</span>
+        <h2>amigable-123</h2>
+        <p>Inventario, clientes y comisiones para pequeños negocios, en español.</p>
+        <a href="https://jfcarpiopuntocom.github.io/AMIGABLE/" target="_blank" rel="noopener noreferrer">Abrir app <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-clinic left" style="--i:17" data-index="17">
+      <div class="set-piece"><div class="clinic">+</div><div class="calendar"><b>consultorio-123</b><span>AGENDA</span><span>PACIENTES</span><span>FINANZAS</span></div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">18</span>
+        <span class="chapter-kicker">APP</span>
+        <h2>consultorio-123</h2>
+        <p>Finanzas, pacientes y agenda de citas para doctores, dentistas y veterinarios.</p>
+        <a href="https://jfcarpiopuntocom.github.io/consultorio-123/" target="_blank" rel="noopener noreferrer">Abrir app <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-people right" style="--i:18" data-index="18">
+      <div class="set-piece"><div class="people"><i></i><i></i><i></i></div><div class="quote">“claridad para decidir”</div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">19</span>
+        <span class="chapter-kicker">CLIENTES</span>
+        <h2>Lo que se llevan</h2>
+        <p>Experiencias de empresarios y profesionales que trabajaron con estas herramientas.</p>
+        <a href="https://jfcarpio.com/#clientes" target="_blank" rel="noopener noreferrer">Ver clientes <b>→</b></a>
+      </article>
+    </section>
+
+    <section class="chapter kind-runway left" style="--i:19" data-index="19">
+      <div class="set-piece"><div class="runway"></div><div class="tower2">JFC</div><div class="landing">ATERRIZA AQUÍ</div></div>
+      <article class="paper-sign paper-edge">
+        <span class="chapter-no">20</span>
+        <span class="chapter-kicker">CONTACTO</span>
+        <h2>¿Qué problema quieres resolver?</h2>
+        <p>Cuéntanos tu caso en una línea y respondemos por WhatsApp.</p>
+        <a href="https://wa.me/593999905080?text=Hola%2C%20quiero%20agendar%20un%20diagn%C3%B3stico." target="_blank" rel="noopener noreferrer">Agendar diagnóstico <b>→</b></a>
+      </article>
+    </section></div>
+  <div id="worldFront" class="world-front paper-edge"></div>
+</main>
+
+<div id="flightfx" aria-hidden="true"></div>
+<div id="heli" aria-hidden="true"><div id="rig"><svg viewBox="0 0 340 210">
+<path class="hb" d="M100 96L20 78L11 94L104 123Z"/><path class="hf" d="M22 80L10 42L36 50L39 87Z"/><circle cx="22" cy="72" r="18" fill="#fff6df" stroke="#07172e" stroke-width="5"/>
+<g id="tailRotor"><rect class="rot" x="19" y="48" width="6" height="48" rx="3"/><rect class="rot" x="-2" y="69" width="48" height="6" rx="3"/></g>
+<path class="hb" d="M96 103C99 63 143 49 202 53C255 57 291 82 294 115C296 144 270 162 240 162H126C108 162 93 138 96 103Z"/><path class="hf" d="M108 90C138 65 178 59 219 63L207 116L102 116C101 106 103 97 108 90Z"/><path class="hc" d="M217 64C260 68 286 89 290 115H210Z"/><path class="sk" d="M122 182H259M143 159L136 182M230 159L238 182M259 182Q282 182 279 166"/><rect class="rot" x="197" y="31" width="9" height="27"/>
+<g id="mainRotor"><rect class="rot" x="59" y="23" width="284" height="10" rx="4"/><rect class="rot" x="149" y="24" width="104" height="8" rx="4" transform="rotate(8 201 28)"/></g>
+<path class="stitch" d="M111 115H206M207 65V160"/><text class="hlab" x="161" y="108" text-anchor="middle">TU NEGOCIO</text><text class="hsub" x="163" y="129" text-anchor="middle">EN VUELO</text>
+</svg></div></div>
+
+<audio id="audio" preload="none" loop playsinline><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg"></audio>
+<nav class="hud" aria-label="Controles">
+  <button id="play" class="play" type="button" aria-pressed="true">Pausar</button>
+  <input id="range" type="range" min="0" max="19" value="0" step="0.001" aria-label="Recorrido">
+  <button id="audioBtn" class="audio" type="button" aria-pressed="false">Audio</button>
+  <span id="count" class="count">01 / 20</span>
+</nav>
+<script>
+(function(){
+const N=20,SECONDS_PER_CHAPTER=5.1,SPEED=1/SECONDS_PER_CHAPTER;
+const sky=document.getElementById('skyTrack'),back=document.getElementById('worldBack'),mid=document.getElementById('worldMid'),world=document.getElementById('world'),front=document.getElementById('worldFront');
+const chapters=[...document.querySelectorAll('.chapter')],heli=document.getElementById('heli'),rig=document.getElementById('rig'),fx=document.getElementById('flightfx'),range=document.getElementById('range'),count=document.getElementById('count'),play=document.getElementById('play'),audio=document.getElementById('audio'),audioBtn=document.getElementById('audioBtn'),mainRotor=document.getElementById('mainRotor'),tailRotor=document.getElementById('tailRotor');
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+let progress=0,playing=!reduce,scrubbing=false,last=performance.now();
+function clamp(n,a,b){return Math.max(a,Math.min(b,n))}
+function chapterIndex(){return clamp(Math.round(progress),0,N-1)}
+function paint(){
+  sky.style.transform='translate3d('+(-progress*76)+'vw,0,0)';
+  back.style.transform='translate3d('+(-progress*82)+'vw,0,0)';
+  mid.style.transform='translate3d('+(-progress*91)+'vw,0,0)';
+  world.style.transform='translate3d('+(-progress*100)+'vw,0,0)';
+  front.style.transform='translate3d('+(-progress*108)+'vw,0,0)';
+  const idx=chapterIndex();
+  range.value=progress.toFixed(3);
+  count.textContent=String(idx+1).padStart(2,'0')+' / 20';
+  chapters.forEach((c,i)=>c.dataset.active=(i===idx?'1':'0'));
+}
+function setPlaying(v){playing=!!v;play.textContent=playing?'Pausar':'Volar';play.setAttribute('aria-pressed',String(playing))}
+range.addEventListener('pointerdown',()=>{scrubbing=true;setPlaying(false)});
+range.addEventListener('input',()=>{progress=+range.value;paint()});
+range.addEventListener('change',()=>{scrubbing=false});
+play.addEventListener('click',()=>setPlaying(!playing));
+let sx=0;
+addEventListener('pointerdown',e=>{if(!e.target.closest('.hud'))sx=e.clientX},{passive:true});
+addEventListener('pointerup',e=>{if(e.target.closest('.hud'))return;const d=e.clientX-sx;if(Math.abs(d)>65){setPlaying(false);progress=clamp(Math.round(progress)+(d<0?1:-1),0,N-1);paint()}},{passive:true});
+addEventListener('keydown',e=>{if(e.key==='ArrowRight'){setPlaying(false);progress=clamp(Math.round(progress)+1,0,N-1);paint()}else if(e.key==='ArrowLeft'){setPlaying(false);progress=clamp(Math.round(progress)-1,0,N-1);paint()}else if(e.key===' '&&!/INPUT|BUTTON|A/.test(e.target.tagName)){e.preventDefault();setPlaying(!playing)}});
+audio.volume=.15;
+audioBtn.addEventListener('click',()=>{if(audio.paused)audio.play().then(()=>{audioBtn.textContent='Silencio';audioBtn.setAttribute('aria-pressed','true')}).catch(()=>{audioBtn.textContent='Audio'});else{audio.pause();audioBtn.textContent='Audio';audioBtn.setAttribute('aria-pressed','false')}});
+function mk(cls){const e=document.createElement('i');e.className=cls;fx.appendChild(e);return e}
+function rnd(a,b){return a+Math.random()*(b-a)}
+const streaks=[],scraps=[];
+if(!reduce){
+  for(let i=0;i<(innerWidth<600?6:11);i++)streaks.push({e:mk('streak'),x:rnd(0,innerWidth),y:rnd(18,innerHeight*.24),v:rnd(260,520),w:rnd(38,110)});
+  for(let i=0;i<(innerWidth<600?2:5);i++)scraps.push({e:mk('scrap'),x:rnd(0,innerWidth),y:rnd(20,innerHeight*.23),v:rnd(90,170),r:rnd(-20,20)});
+}
+function frame(t){
+  const dt=Math.min(.04,(t-last)/1000);last=t;
+  if(playing){progress+=SPEED*dt;if(progress>=N-1){progress=N-1;setPlaying(false)}paint()}
+  if(!reduce){
+    const vw=innerWidth,vh=innerHeight,hw=heli.offsetWidth||120;
+    const bx=innerWidth<700?vw*.23:vw*.28;
+    const x=bx+Math.sin(t/1700)*vw*.018-hw*.5;
+    const y=vh*(innerWidth<700?.065:.075)+Math.sin(t/520)*6+Math.sin(t/1900)*4;
+    heli.style.transform='translate3d('+x+'px,'+y+'px,0) rotate('+(-5+Math.sin(t/700)*1.8)+'deg)';
+    rig.style.transform='translateY('+Math.sin(t/220)*1.6+'px)';
+    mainRotor.style.transformOrigin='201px 28px';mainRotor.style.transform='rotate('+((t*1.42)%360)+'deg)';
+    tailRotor.style.transformOrigin='22px 72px';tailRotor.style.transform='rotate('+((t*2.18)%360)+'deg)';
+    const speed=playing?1:.12;
+    for(const s of streaks){s.x-=s.v*dt*speed;if(s.x<-s.w){s.x=vw+rnd(30,190);s.y=rnd(14,vh*.22);s.w=rnd(38,110)}s.e.style.width=s.w+'px';s.e.style.transform='translate3d('+s.x+'px,'+s.y+'px,0) skewX(-25deg)'}
+    for(const q of scraps){q.x-=q.v*dt*speed;q.r-=dt*36;if(q.x<-40){q.x=vw+rnd(40,250);q.y=rnd(20,vh*.22)}q.e.style.transform='translate3d('+q.x+'px,'+q.y+'px,0) rotate('+q.r+'deg)'}
+  }
+  requestAnimationFrame(frame)
+}
+paint();setPlaying(playing);requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
