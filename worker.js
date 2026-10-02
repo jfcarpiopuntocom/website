@@ -56,6 +56,31 @@ export default {
       url.hostname = url.hostname.slice(4);
       return Response.redirect(url.toString(), 301);
     }
+    // OpenAI plugin domain verification for Business Survival Score (2026-10-02).
+    // The submission portal allows an eligible parent origin of the MCP hostname.
+    if (url.pathname === "/.well-known/openai-apps-challenge") {
+      const token = "YcAqQF2X6HWUHvVRd7hImDU0OxzFolxRJIeWMTpoX4s";
+      if (request.method === "GET") {
+        return new Response(token, {
+          status: 200,
+          headers: {
+            "Content-Type": "text/plain; charset=utf-8",
+            "Cache-Control": "no-store",
+          },
+        });
+      }
+      if (request.method === "HEAD") {
+        return new Response(null, {
+          status: 200,
+          headers: {
+            "Content-Type": "text/plain; charset=utf-8",
+            "Cache-Control": "no-store",
+          },
+        });
+      }
+      return new Response("Method Not Allowed", { status: 405, headers: { "Allow": "GET, HEAD" } });
+    }
+
     // 1b. Canonical puntual: el asset layer ya normaliza este .html a la URL limpia con 307.
     // Hacemos la señal permanente y explícita para usuarios y buscadores.
     if (url.pathname === "/working-paper-hidden-cost.html") {
