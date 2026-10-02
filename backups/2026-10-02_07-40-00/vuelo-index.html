@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#08192f">
+<title>JFCarpio.com · Tu Negocio en vuelo</title>
+<meta name="description" content="Recorre JFCarpio.com: ideas, publicaciones, reportes, talleres, visores y apps.">
+<meta property="og:image" content="https://jfcarpio.com/og-jfcarpio-v2.png">
+<style>
+:root{--ink:#07172e;--navy:#0c2748;--blue:#214d7c;--blue2:#3a6795;--paper:#f8f0dc;--paper2:#ead9b9;--gold:#d49c2f;--sun:#f1c95e;--red:#bd1645;--green:#49a56d;--white:#fffaf0;--top:58px;--bottom:70px;--serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--ink);font-family:var(--sans);color:var(--ink)}
+a,button,input{font:inherit}
+button{cursor:pointer}
+.top{position:fixed;z-index:100;inset:0 0 auto;height:calc(var(--top) + env(safe-area-inset-top));padding:env(safe-area-inset-top) max(14px,env(safe-area-inset-right)) 0 max(14px,env(safe-area-inset-left));display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;background:var(--paper);border-bottom:3px solid var(--ink);box-shadow:0 7px 0 #051225}
+.brand{font:700 clamp(19px,2.2vw,28px)/1 var(--serif)}.route{height:4px;background:var(--gold);border:1px solid var(--ink);transform:skewX(-18deg)}.lang{display:flex;border:2px solid var(--ink);border-radius:999px;overflow:hidden;font:800 10px/1 var(--mono);letter-spacing:.12em}.lang span{padding:9px 10px}.lang span:first-child{background:var(--ink);color:#fff}
+.viewport{position:fixed;z-index:1;inset:calc(var(--top) + env(safe-area-inset-top)) 0 calc(var(--bottom) + env(safe-area-inset-bottom));overflow:hidden}
+.track{position:absolute;inset:0 auto 0 0;width:2000vw;display:flex;will-change:transform;transform:translate3d(0,0,0)}
+.scene{position:relative;flex:0 0 100vw;width:100vw;height:100%;overflow:hidden;background:var(--navy);isolation:isolate}
+.skygrain{position:absolute;inset:0;background:radial-gradient(circle at 15% 22%,#315d8c 0 2px,transparent 3px) 0 0/26px 26px,linear-gradient(180deg,#173c68 0 55%,#102d51 55% 100%);z-index:0}
+.cut{position:absolute;border:3px solid var(--ink);box-shadow:8px 9px 0 #051225;z-index:2}
+.cloud{width:150px;height:42px;border-radius:999px;background:var(--paper)}.cloud:before,.cloud:after{content:"";position:absolute;border:3px solid var(--ink);border-radius:50%;background:var(--paper)}.cloud:before{width:58px;height:58px;left:18px;top:-28px}.cloud:after{width:72px;height:72px;left:66px;top:-38px}.c1{left:7%;top:16%;transform:rotate(-3deg)}.c2{right:10%;top:27%;transform:scale(.7) rotate(4deg)}
+.sun{right:7%;top:10%;width:110px;height:110px;border-radius:50%;background:var(--sun);box-shadow:10px 11px 0 #7c5a16}
+.layer{position:absolute;left:-4%;right:-4%;border-top:4px solid var(--ink);will-change:transform}.far{z-index:1;bottom:22%;height:45%;background:#315a80;clip-path:polygon(0 100%,0 72%,6% 58%,11% 69%,17% 35%,23% 64%,31% 47%,39% 70%,47% 29%,55% 63%,63% 41%,72% 68%,80% 31%,87% 62%,94% 43%,100% 66%,100% 100%)}.mid{z-index:3;bottom:8%;height:40%;background:#1c4169;clip-path:polygon(0 100%,0 68%,8% 55%,14% 72%,22% 38%,29% 67%,38% 50%,46% 76%,57% 35%,67% 72%,75% 47%,84% 75%,93% 43%,100% 64%,100% 100%);box-shadow:0 -6px 0 #0a1b32}.near{z-index:5;bottom:-3%;height:28%;background:#0a223e;clip-path:polygon(0 100%,0 48%,8% 61%,18% 35%,29% 68%,40% 48%,50% 73%,63% 31%,76% 67%,87% 42%,100% 62%,100% 100%);box-shadow:0 -7px 0 #051225}
+.set{position:absolute;top:0;bottom:0;width:46vw;z-index:6;pointer-events:none;overflow:visible}
+.scene:has(.story.right) .set{left:0;right:auto}
+.scene:has(.story.left) .set{left:54vw;right:0}.prop{position:absolute;border:4px solid var(--ink);background:var(--paper);box-shadow:9px 11px 0 #051225;color:var(--ink);font-family:var(--serif)}.prop:after{content:"";position:absolute;inset:5px;border:1px dashed #b69659;pointer-events:none}
+.story{position:absolute;z-index:50;top:50%;transform:translateY(-50%);width:min(36vw,510px);padding:24px 26px 23px;background:var(--paper);border:4px solid var(--ink);box-shadow:14px 16px 0 #051225;clip-path:polygon(0 3%,3% 0,8% 2%,14% 0,20% 2%,26% 0,32% 2%,38% 0,44% 2%,51% 0,58% 2%,65% 0,72% 2%,79% 0,86% 2%,93% 0,100% 3%,98% 14%,100% 27%,98% 39%,100% 51%,98% 64%,100% 77%,98% 89%,100% 97%,92% 100%,81% 98%,70% 100%,58% 98%,47% 100%,35% 98%,24% 100%,12% 98%,0 100%,2% 89%,0 77%,2% 64%,0 51%,2% 39%,0 27%,2% 14%)}.story.left{left:clamp(18px,5vw,78px)}.story.right{right:clamp(18px,5vw,78px)}
+.eyebrow{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;font:800 11px/1.2 var(--mono);letter-spacing:.13em;text-transform:uppercase}.eyebrow span{display:grid;place-items:center;width:42px;height:30px;background:var(--gold);border:2px solid var(--ink);transform:rotate(-4deg)}.story h2{margin:0 0 12px;font:700 clamp(38px,5vw,72px)/.92 var(--serif);letter-spacing:-.035em;max-width:12ch}.story p{margin:0 0 18px;font-size:clamp(16px,1.45vw,20px);line-height:1.45;max-width:34ch}.story a{display:inline-flex;align-items:center;gap:12px;min-height:50px;padding:12px 18px;background:var(--red);color:#fff;text-decoration:none;border:3px solid var(--ink);box-shadow:5px 6px 0 #6f0d2b;font-weight:800}.story a em{font-size:22px;font-style:normal}
+/* visual set pieces */
+.city{left:8%;bottom:22%;width:210px;height:190px;padding:18px;background:#d6b06b;clip-path:polygon(0 12%,13% 12%,13% 0,38% 0,38% 20%,52% 20%,52% 8%,71% 8%,71% 25%,100% 25%,100% 100%,0 100%)}.city b,.city span{display:block;margin:7px 0;font:800 18px/1 var(--mono)}.road{left:3%;bottom:7%;width:42%;height:70px;background:#e1d3b8;transform:rotate(6deg);border-radius:50%}.signboard{padding:12px 16px;background:#ead9b9;font:800 12px/1.2 var(--mono);letter-spacing:.08em}
+.photo{left:7%;top:17%;width:min(39vw,520px);padding:9px;transform:rotate(-4deg)}.photo img{width:100%;display:block;filter:saturate(.78) contrast(1.08)}.timeline{left:11%;bottom:14%;width:38%;height:30px;border:none;background:transparent;box-shadow:none}.timeline:after{display:none}.timeline i{position:relative;display:inline-block;width:18px;height:18px;margin-right:44px;border-radius:50%;background:var(--gold);border:3px solid var(--ink);box-shadow:0 0 0 6px var(--paper)}
+.newspaper{width:260px;min-height:220px;padding:20px;transform:rotate(-5deg)}.newspaper small,.newspaper b,.newspaper span{display:block;margin-bottom:12px}.newspaper b{font-size:44px}.newspaper.p1{left:10%;top:18%}.newspaper.p2{left:25%;top:31%;transform:rotate(5deg)}
+.bigbook{left:9%;top:14%;width:280px;height:390px;padding:28px;background:#e8bd58;transform:rotate(-5deg)}.bigbook b{display:block;font-size:48px;line-height:.93;margin:22px 0}.bigbook small,.bigbook span{font:800 11px/1.4 var(--mono)}
+.bookshelf{left:7%;bottom:16%;width:42%;height:210px;padding:22px;display:flex;align-items:flex-end;gap:10px;background:#9b6838}.bookshelf i{display:block;width:42px;border:3px solid var(--ink);background:var(--gold)}.bookshelf i:nth-child(1){height:145px}.bookshelf i:nth-child(2){height:110px;background:#2a5d8e}.bookshelf i:nth-child(3){height:165px;background:#b31d45}.bookshelf i:nth-child(4){height:126px}.bookshelf i:nth-child(5){height:152px;background:#37694d}.press{left:31%;top:18%;padding:18px;transform:rotate(4deg)}.press b,.press span{display:block}
+.ticket{padding:13px 18px;font:900 18px/1 var(--mono);background:#fff6df}.ticket.p1{left:9%;top:20%;transform:rotate(-8deg)}.ticket.p2{left:24%;top:36%;transform:rotate(7deg)}.ticket.p3{left:12%;top:54%;transform:rotate(-3deg)}.gift{left:31%;bottom:14%;width:160px;height:140px;padding:48px 16px 0;text-align:center;background:#c91d4d;color:#fff;font-weight:900}.gift:before{content:"";position:absolute;left:68px;top:-18px;width:20px;height:180px;background:var(--gold);border:3px solid var(--ink)}
+.ore{width:100px;height:100px;border-radius:47% 53% 44% 56%;display:grid;place-items:center;background:#c98f47;font:900 32px var(--serif)}.ore.p1{left:11%;top:23%;transform:rotate(-12deg)}.ore.p2{left:27%;top:40%;background:#b87333;transform:rotate(8deg)}.mapcard{left:17%;bottom:31%;padding:16px 20px;transform:rotate(-4deg)}.mapcard b,.mapcard span{display:block}
+.globe{left:10%;top:18%;width:220px;height:220px;border-radius:50%;background:conic-gradient(#315b87 0 22%,#d9b869 22% 35%,#315b87 35% 58%,#d9b869 58% 70%,#315b87 70% 100%)}.flagrow{left:8%;bottom:16%;display:flex;gap:7px;padding:13px;background:#fff0ce}.flagrow span{font:800 10px var(--mono);padding:7px;border:2px solid var(--ink)}
+.dash{left:8%;top:18%;width:360px;height:250px;padding:20px;background:#102b4f;color:#fff;display:flex;align-items:flex-end;gap:14px}.dash b{position:absolute;left:18px;top:18px;font:900 28px var(--sans)}.dash i{width:44px;height:var(--h);background:var(--gold);border:3px solid #fff}.badge{padding:13px 17px;border-radius:999px;font:900 18px var(--mono)}.badge.p2{left:34%;top:27%}.badge.p3{left:30%;top:48%;background:#f0c75e}
+.audience{left:8%;bottom:13%;width:41%;height:190px;background:transparent;border:none;box-shadow:none;display:flex;align-items:flex-end;gap:16px}.audience:after{display:none}.audience i{display:block;width:58px;height:110px;background:#e6c79b;border:4px solid var(--ink);border-radius:50% 50% 18px 18px;box-shadow:7px 8px 0 #051225}.flipchart{left:29%;top:17%;width:190px;height:240px;padding:22px;background:#fff}.flipchart b,.flipchart span{display:block;margin:12px 0}
+.factory{left:8%;bottom:12%;width:350px;height:180px;background:#c49c61;clip-path:polygon(0 36%,22% 36%,22% 17%,42% 33%,42% 15%,65% 32%,65% 0,79% 0,79% 38%,100% 38%,100% 100%,0 100%)}.factory i{display:inline-block;width:35px;height:45px;margin:95px 10px 0 18px;background:#173a63;border:3px solid var(--ink)}.gear{left:32%;top:20%;width:110px;height:110px;border-radius:50%;display:grid;place-items:center;background:var(--gold);font:900 42px var(--serif)}.scene-workshop-enterprise .signboard{left:16%;top:52%;width:310px}
+.school{left:8%;bottom:13%;width:330px;height:230px;padding:60px 20px 0;text-align:center;background:#e0c691;clip-path:polygon(0 35%,20% 35%,50% 0,80% 35%,100% 35%,100% 100%,0 100%)}.school b{font:900 30px/1.05 var(--serif)}.coin{left:34%;top:24%;width:92px;height:92px;border-radius:50%;display:grid;place-items:center;background:var(--gold);font:900 38px var(--serif)}.bookstack{left:29%;bottom:14%;width:180px;height:95px;background:transparent;border:none;box-shadow:none}.bookstack:after{display:none}.bookstack i{display:block;height:28px;border:3px solid var(--ink);background:#b31d45;margin:4px;transform:rotate(-3deg)}
+.stall{left:9%;bottom:13%;width:300px;height:230px;padding:28px;background:#e0c58f;clip-path:polygon(0 18%,10% 0,20% 18%,30% 0,40% 18%,50% 0,60% 18%,70% 0,80% 18%,90% 0,100% 18%,100% 100%,0 100%)}.stall b,.stall span{display:block;margin:20px 0;font:900 22px var(--sans)}.parcel{width:90px;height:78px;background:#c99349}.parcel.p2{left:31%;top:28%;transform:rotate(8deg)}.parcel.p3{left:37%;top:44%;transform:rotate(-5deg)}
+.console{left:7%;top:16%;width:390px;height:270px;padding:22px;background:#102c52;color:#fff}.console b{font:900 28px var(--sans)}.console div{display:flex;gap:12px;align-items:flex-end;height:130px}.console i{display:block;width:62px;background:var(--gold);border:3px solid #fff}.console i:nth-child(1){height:70%}.console i:nth-child(2){height:42%;background:#49a56d}.console i:nth-child(3){height:86%;background:#c84b57}.console span{font:800 12px var(--mono)}.gauge{left:36%;bottom:15%;width:120px;height:120px;border-radius:50%;background:conic-gradient(#49a56d 0 38%,#e6c152 38% 66%,#c84b57 66% 100%)}
+.tower{left:10%;top:19%;width:150px;height:260px;padding:34px 15px;text-align:center;background:#e2c78f}.tower b{font:900 88px/1 var(--serif)}.tower span{display:block;font:800 12px var(--mono)}.semaphore{left:29%;top:20%;width:90px;height:250px;padding:22px;background:#101e32}.semaphore i{display:block;width:48px;height:48px;border-radius:50%;margin:11px auto;border:3px solid var(--ink)}.semaphore i:nth-child(1){background:#c84b57}.semaphore i:nth-child(2){background:#e6c152}.semaphore i:nth-child(3){background:#49a56d}.scene-antiquiebra .signboard{left:18%;bottom:14%}
+.phone{left:8%;top:13%;width:250px;padding:8px;border-radius:28px;background:#0b213d;transform:rotate(-5deg)}.phoneUI{height:210px;border:3px solid var(--paper);border-radius:20px;padding:22px 16px;background:#102c52;color:#fff}.phoneUI b,.phoneUI small{display:block}.phoneUI b{font:900 20px var(--sans);margin-bottom:18px}.phoneUI small{font:800 9px/1.4 var(--mono);margin-top:16px}.phoneUI .u{display:block;height:20px;border:2px solid var(--ink);border-radius:999px;margin:10px 0}.phoneUI .green{width:88%;background:#58a966}.phoneUI .gold{width:63%;background:#dfbd4f}.phoneUI .red{width:46%;background:#c84b57}.applogo{left:29%;top:22%;padding:12px;background:#fff}.brandtext{display:block;font:900 20px/1 var(--sans);white-space:nowrap;color:#d9a929;text-shadow:1px 1px 0 #07172e}.brandtext b{color:#cb244c}.brandtext i{font-style:normal;color:#ef941d}.brandtext em{font-style:normal;color:#2b67ce}.shelves{left:26%;bottom:12%;width:230px;height:145px;padding:18px;background:#eadcc3}.shelves i{display:block;height:23px;margin:10px;border:3px solid var(--ink);border-radius:999px}.shelves i:nth-child(1){background:#58a966}.shelves i:nth-child(2){background:#dfbd4f}.shelves i:nth-child(3){background:#c84b57}
+.market{left:8%;bottom:12%;width:340px;height:220px;padding:30px;background:#dfc28a;clip-path:polygon(0 20%,8% 0,16% 20%,24% 0,32% 20%,40% 0,48% 20%,56% 0,64% 20%,72% 0,80% 20%,88% 0,96% 20%,100% 16%,100% 100%,0 100%)}.market span{display:inline-block;width:70px;height:90px;margin:80px 9px 0;background:#315a80;border:3px solid var(--ink)}.price{left:33%;top:25%;width:85px;height:85px;border-radius:50%;display:grid;place-items:center;background:var(--gold);font:900 34px var(--serif)}
+.clinic{left:9%;bottom:13%;width:280px;height:220px;display:grid;place-items:center;background:#f1e1c1}.clinic b{font:900 110px/1 var(--sans);color:#b61c44}.calendar{left:28%;top:18%;width:210px;padding:18px;background:#fff}.calendar b,.calendar span{display:block;margin:10px 0}.scene-consultorio .applogo{left:28%;top:auto;bottom:13%}
+.person{width:145px;height:190px;padding:18px 10px 10px;text-align:center;background:#ead2ab}.person i{display:block;width:62px;height:62px;margin:0 auto 18px;border-radius:50%;background:#1d456f;border:3px solid var(--ink)}.person b{font:900 12px var(--mono)}.person.p1{left:8%;top:22%;transform:rotate(-5deg)}.person.p2{left:22%;top:34%;transform:rotate(4deg)}.person.p3{left:35%;top:18%;transform:rotate(-2deg)}
+.runway{left:4%;right:48%;bottom:11%;height:85px;background:#e2d4b9;transform:perspective(300px) rotateX(55deg);border-radius:20px}.runway:before{content:"";position:absolute;left:49%;top:10px;bottom:10px;border-left:6px dashed #fff}.tower2{left:35%;top:19%;width:100px;height:190px;display:grid;place-items:center;background:#d9bd83}.tower2 b{font:900 34px var(--serif)}.scene-contact .signboard{left:12%;top:24%;width:300px}
+/* make scene set pieces shift with camera */
+.scene:not(.active) .story{visibility:hidden}
+.scene.active .far{animation:driftFar 8s linear infinite alternate}.scene.active .mid{animation:driftMid 6s linear infinite alternate}.scene.active .near{animation:driftNear 4.5s linear infinite alternate}@keyframes driftFar{to{transform:translateX(-2.2vw)}}@keyframes driftMid{to{transform:translateX(-4vw)}}@keyframes driftNear{to{transform:translateX(-6vw)}}
+#flightfx{position:fixed;z-index:14;left:0;right:0;top:calc(var(--top) + env(safe-area-inset-top));height:22vh;overflow:hidden;pointer-events:none}.streak{position:absolute;height:4px;background:var(--paper);border:1px solid var(--ink);box-shadow:3px 4px 0 #051225;will-change:transform}.scrap{position:absolute;width:24px;height:12px;background:var(--gold);border:2px solid var(--ink);will-change:transform}.fxcloud{position:absolute;width:100px;height:30px;border:3px solid var(--ink);border-radius:999px;background:var(--paper);box-shadow:6px 7px 0 #051225;will-change:transform}
+#heli{position:fixed;z-index:32;left:0;top:0;width:clamp(125px,11vw,178px);pointer-events:none;will-change:transform;filter:drop-shadow(8px 9px 0 #051225)}#heli svg{display:block;width:100%;overflow:visible}.hb{fill:#193e69;stroke:var(--ink);stroke-width:5}.hf{fill:#2b5b8f;stroke:var(--ink);stroke-width:4}.hc{fill:#f0ce77;stroke:var(--ink);stroke-width:5}.sk{fill:none;stroke:var(--ink);stroke-width:7;stroke-linecap:round}.rot{fill:var(--ink)}.hlab{fill:#fff;font:900 24px var(--sans);letter-spacing:.01em}.hsub{fill:#fff;font:800 9px var(--mono);letter-spacing:.12em}.stitch{fill:none;stroke:#f1d58c;stroke-width:2;stroke-dasharray:7 5}
+.controls{position:fixed;z-index:100;inset:auto 0 0;min-height:calc(var(--bottom) + env(safe-area-inset-bottom));padding:8px max(14px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));display:grid;grid-template-columns:auto auto minmax(120px,1fr) auto auto auto;gap:8px;align-items:center;background:var(--paper);border-top:3px solid var(--ink);box-shadow:0 -7px 0 #051225;color:var(--ink)}.controls button{min-width:44px;height:44px;border:2px solid var(--ink);background:#fff;border-radius:11px;font-weight:800}.controls .play{background:var(--ink);color:#fff}.controls .audio{color:var(--red);border-color:var(--red)}.controls input{width:100%;accent-color:var(--red)}.count{font:800 11px var(--mono)}
+@media(max-width:900px){:root{--bottom:100px}.set{left:0!important;right:0!important;top:0;bottom:auto;width:100vw;height:48%;overflow:hidden}.story{top:auto;bottom:14px;transform:none;left:12px!important;right:12px!important;width:auto;max-height:44%;overflow:auto;padding:17px 16px 16px;clip-path:polygon(0 3%,4% 0,10% 2%,17% 0,24% 2%,31% 0,39% 2%,48% 0,57% 2%,66% 0,75% 2%,84% 0,92% 2%,100% 0,98% 25%,100% 50%,98% 75%,100% 100%,90% 98%,80% 100%,70% 98%,60% 100%,50% 98%,40% 100%,30% 98%,20% 100%,10% 98%,0 100%,2% 75%,0 50%,2% 25%);border-radius:0}.story h2{font-size:clamp(30px,9vw,48px)}.story p{font-size:14px;margin-bottom:12px}.story a{min-height:44px;padding:9px 13px;font-size:12px}#heli{width:clamp(105px,26vw,145px)}.prop{transform:scale(.75)}.photo{width:64vw;left:5%;top:12%}.controls{grid-template-columns:auto auto auto 1fr auto;grid-template-rows:auto auto}.controls input{grid-column:1/-1;grid-row:1}.count{grid-column:5;grid-row:2}}
+@media(max-width:480px){:root{--top:54px;--bottom:106px}.brand{font-size:19px}.set{height:46%}.story{padding:13px 12px;max-height:43%;}.eyebrow{font-size:8px;margin-bottom:5px}.story h2{font-size:clamp(25px,8.4vw,36px);margin-bottom:5px}.story p{font-size:12.2px;line-height:1.3;margin-bottom:9px}.story a{min-height:40px;padding:7px 10px;font-size:9px}#heli{width:min(21vw,92px)}.cut.cloud{transform:scale(.48)}.sun{width:64px;height:64px}.prop{transform:scale(.52);transform-origin:left top}.controls{gap:5px}.controls button{padding:0 7px;font-size:10px}}
+@media(max-height:650px) and (orientation:landscape){:root{--top:50px;--bottom:66px}.story{top:50%;bottom:auto;transform:translateY(-50%);width:48vw;left:auto!important;right:15px!important;padding:15px 17px}.story h2{font-size:clamp(27px,5vw,44px)}.story p{font-size:13px}#heli{width:min(12vw,150px)}.controls{grid-template-columns:auto auto 1fr auto auto auto;grid-template-rows:auto}.controls input{grid-column:3;grid-row:1}.count{grid-column:auto;grid-row:auto}}
+@media(prefers-reduced-motion:reduce){.track{transition:none}.scene.active .far,.scene.active .mid,.scene.active .near{animation:none}#flightfx{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="brand">JFCarpio.com</div><div class="route"></div><div class="lang"><span>ES</span><span>EN</span></div></header>
+<main class="viewport"><div id="track" class="track"><section class="scene scene-overview" data-i="0">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop city p1"><b>IDEAS</b><span>herramientas</span><span>reportes</span></div><div class="prop road p2"></div><div class="prop signboard p3">HISTORIA DE DOS NEGOCIOS</div></div>
+      <article class="story right">
+        <div class="eyebrow"><span>01</span><b>Inicio</b></div>
+        <h2>Inicio</h2>
+        <p>Educación financiera para no destruirte a ti mismo/a. Educación económica para no destruir tu país.</p>
+        <a href="https://jfcarpio.com/" target="_blank" rel="noopener">Entrar a JFCarpio.com <em>→</em></a>
+      </article>
+    </section><section class="scene scene-trajectory" data-i="1">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop photo p1"><img src="https://jfcarpio.com/trayectoria-jfcarpio.jpg" alt="Trayectoria profesional"></div><div class="prop timeline p2"><i></i><i></i><i></i><i></i></div></div>
+      <article class="story left">
+        <div class="eyebrow"><span>02</span><b>Trayectoria</b></div>
+        <h2>Trayectoria</h2>
+        <p>Más de 25 años entre economía, investigación, docencia, consultoría y herramientas.</p>
+        <a href="https://jfcarpio.com/juan-fernando-carpio/" target="_blank" rel="noopener">Ver la trayectoria <em>→</em></a>
+      </article>
+    </section><section class="scene scene-blog" data-i="2">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop newspaper p1"><small>JFCARPÍO.COM</small><b>BLOG</b><span>empresa privada</span><span>instituciones</span><span>capital</span></div><div class="prop newspaper p2"><small>ENSAYOS</small><b>ECONOMÍA</b><span>historia económica</span></div></div>
+      <article class="story right">
+        <div class="eyebrow"><span>03</span><b>Blog</b></div>
+        <h2>Blog</h2>
+        <p>Ensayos sobre empresa privada, instituciones, capital e historia económica.</p>
+        <a href="https://jfcarpio.com/blog/" target="_blank" rel="noopener">Leer el blog <em>→</em></a>
+      </article>
+    </section><section class="scene scene-book" data-i="3">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop bigbook p1"><small>JUAN FERNANDO CARPIO</small><b>10<br>LECCIONES<br>DE ECONOMÍA</b><span>que los gobiernos quisieran ocultarle</span></div></div>
+      <article class="story left">
+        <div class="eyebrow"><span>04</span><b>10 Lecciones de Economía</b></div>
+        <h2>10 Lecciones de Economía</h2>
+        <p>Artículos reunidos como curso intensivo de economía aplicada. Lo que los gobiernos quisieran ocultarle.</p>
+        <a href="https://jfcarpio.gumroad.com/l/10LeccionesdeEconomia" target="_blank" rel="noopener">Conseguir el libro <em>→</em></a>
+      </article>
+    </section><section class="scene scene-publications" data-i="4">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop bookshelf p1"><i></i><i></i><i></i><i></i><i></i></div><div class="prop press p2"><b>PUBLICACIONES</b><span>libro · columnas · radio</span></div></div>
+      <article class="story right">
+        <div class="eyebrow"><span>05</span><b>Publicaciones</b></div>
+        <h2>Publicaciones</h2>
+        <p>Libro, columnas en prensa y programas de radio sobre economía aplicada.</p>
+        <a href="https://jfcarpio.com/publicaciones/" target="_blank" rel="noopener">Ver publicaciones <em>→</em></a>
+      </article>
+    </section><section class="scene scene-free" data-i="5">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop ticket p1">GUÍA GRATIS</div><div class="prop ticket p2">QUIZ</div><div class="prop ticket p3">SEMÁFORO</div><div class="prop gift p4">10 MODELOS</div></div>
+      <article class="story left">
+        <div class="eyebrow"><span>06</span><b>Todo lo gratuito</b></div>
+        <h2>Todo lo gratuito</h2>
+        <p>Blog, guías, quiz y semáforo financiero en un solo lugar.</p>
+        <a href="https://jfcarpio.gumroad.com/l/10modelosdenegociossinempleados" target="_blank" rel="noopener">Bajar la guía gratis <em>→</em></a>
+      </article>
+    </section><section class="scene scene-minerals" data-i="6">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop ore p1">Li</div><div class="prop ore p2">Cu</div><div class="prop mapcard p3"><b>AMÉRICA LATINA</b><span>riesgo regulatorio</span></div></div>
+      <article class="story right">
+        <div class="eyebrow"><span>07</span><b>Minerales críticos</b></div>
+        <h2>Minerales críticos</h2>
+        <p>América Latina, riesgo regulatorio 2025–2026.</p>
+        <a href="https://brilla-group.com/reportes.html" target="_blank" rel="noopener">Ver el reporte <em>→</em></a>
+      </article>
+    </section><section class="scene scene-macro" data-i="7">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop globe p1"></div><div class="prop flagrow p2"><span>CHILE</span><span>ECUADOR</span><span>PERÚ</span><span>COLOMBIA</span></div></div>
+      <article class="story left">
+        <div class="eyebrow"><span>08</span><b>Macro 2025–2026</b></div>
+        <h2>Macro 2025–2026</h2>
+        <p>Chile, Ecuador, Perú y Colombia. Un mapa compacto del entorno económico regional.</p>
+        <a href="https://brilla-group.com/reportes.html" target="_blank" rel="noopener">Ver el reporte <em>→</em></a>
+      </article>
+    </section><section class="scene scene-benchmarks" data-i="8">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop dash p1"><b>MRR</b><i style="--h:72%"></i><i style="--h:48%"></i><i style="--h:86%"></i><i style="--h:61%"></i></div><div class="prop badge p2">CAC</div><div class="prop badge p3">CHURN</div></div>
+      <article class="story right">
+        <div class="eyebrow"><span>09</span><b>Benchmarks</b></div>
+        <h2>Benchmarks</h2>
+        <p>MRR, CAC y churn en Ecuador y Latam para comparar tu negocio con referencias útiles.</p>
+        <a href="https://brilla-group.com/reportes.html" target="_blank" rel="noopener">Ver benchmarks <em>→</em></a>
+      </article>
+    </section><section class="scene scene-workshop-finance" data-i="9">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop audience p1"><i></i><i></i><i></i><i></i><i></i></div><div class="prop flipchart p2"><b>DINERO</b><span>ahorro</span><span>inversión</span><span>protección</span></div></div>
+      <article class="story left">
+        <div class="eyebrow"><span>10</span><b>Dinero y finanzas</b></div>
+        <h2>Dinero y finanzas</h2>
+        <p>Ahorro, inversión y protección patrimonial. Dos horas para equipos.</p>
+        <a href="https://jfcarpio.com/talleres/" target="_blank" rel="noopener">Ver el taller <em>→</em></a>
+      </article>
+    </section><section class="scene scene-workshop-enterprise" data-i="10">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop factory p1"><i></i><i></i><i></i></div><div class="prop gear p2">$</div><div class="prop signboard p3">SALARIO · RIESGO · UTILIDAD · COOPERACIÓN</div></div>
+      <article class="story right">
+        <div class="eyebrow"><span>11</span><b>Empresa privada</b></div>
+        <h2>Empresa privada</h2>
+        <p>Salario, riesgo, utilidad y cooperación. Dos horas para equipos.</p>
+        <a href="https://jfcarpio.com/talleres/" target="_blank" rel="noopener">Ver el taller <em>→</em></a>
+      </article>
+    </section><section class="scene scene-school" data-i="11">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop school p1"><b>LA ESCUELA<br>DEL DINERO</b></div><div class="prop coin p2">$</div><div class="prop bookstack p3"><i></i><i></i><i></i></div></div>
+      <article class="story left">
+        <div class="eyebrow"><span>12</span><b>La Escuela del Dinero</b></div>
+        <h2>La Escuela del Dinero</h2>
+        <p>Cursos, ebooks y asesoría para tomar el control de tu dinero.</p>
+        <a href="https://escuela-dinero.gumroad.com/" target="_blank" rel="noopener">Abrir la Escuela <em>→</em></a>
+      </article>
+    </section><section class="scene scene-store" data-i="12">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop stall p1"><b>GUMROAD</b><span>libros</span><span>reportes</span><span>guías</span></div><div class="prop parcel p2"></div><div class="prop parcel p3"></div></div>
+      <article class="story right">
+        <div class="eyebrow"><span>13</span><b>Tienda en Gumroad</b></div>
+        <h2>Tienda en Gumroad</h2>
+        <p>Libros, reportes, guías gratuitas y servicios en un solo catálogo.</p>
+        <a href="https://jfcarpio.gumroad.com/" target="_blank" rel="noopener">Abrir la tienda <em>→</em></a>
+      </article>
+    </section><section class="scene scene-visor" data-i="13">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop console p1"><b>VISOR GERENCIAL</b><div><i></i><i></i><i></i></div><span>CAC · LTV · ROI</span></div><div class="prop gauge p2"></div></div>
+      <article class="story left">
+        <div class="eyebrow"><span>14</span><b>Visor Gerencial</b></div>
+        <h2>Visor Gerencial</h2>
+        <p>Compara tu CAC, LTV y ROI con benchmarks de la región. Gratis y sin registro.</p>
+        <a href="https://jfcarpio.com/visorgerencial/" target="_blank" rel="noopener">Abrir el visor <em>→</em></a>
+      </article>
+    </section><section class="scene scene-antiquiebra" data-i="14">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop tower p1"><b>8</b><span>indicadores</span></div><div class="prop semaphore p2"><i></i><i></i><i></i></div><div class="prop signboard p3">15 MINUTOS SEMANALES</div></div>
+      <article class="story right">
+        <div class="eyebrow"><span>15</span><b>Visor Antiquiebra</b></div>
+        <h2>Visor Antiquiebra</h2>
+        <p>Ocho indicadores y un semáforo de riesgo en 15 minutos semanales.</p>
+        <a href="https://jfcarpio.com/visorantiquiebra/" target="_blank" rel="noopener">Abrir el visor <em>→</em></a>
+      </article>
+    </section><section class="scene scene-friendly" data-i="15">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop phone p1"><div class="phoneUI"><b>INVENTARIO</b><span class="u green"></span><span class="u gold"></span><span class="u red"></span><small>clientes · ventas · comisiones</small></div></div><div class="prop applogo p2"><span class="brandtext friendlyBrand">friendly-<b>1</b><i>2</i><em>3</em></span></div><div class="prop shelves p3"><i></i><i></i><i></i></div></div>
+      <article class="story left">
+        <div class="eyebrow"><span>16</span><b>friendly-123</b></div>
+        <h2>friendly-123</h2>
+        <p>Inventario, ventas y consignación. Funciona sin internet. Prueba la demo con el PIN 456.</p>
+        <a href="https://jfcarpio.com/friendly123/" target="_blank" rel="noopener">Probar la demo <em>→</em></a>
+      </article>
+    </section><section class="scene scene-amigable" data-i="16">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop market p1"><span></span><span></span><span></span></div><div class="prop applogo p2"><span class="brandtext friendlyBrand">amigable-<b>1</b><i>2</i><em>3</em></span></div><div class="prop price p3">$</div></div>
+      <article class="story right">
+        <div class="eyebrow"><span>17</span><b>amigable-123</b></div>
+        <h2>amigable-123</h2>
+        <p>Inventario, clientes y comisiones para cualquier pequeño negocio, en español.</p>
+        <a href="https://jfcarpiopuntocom.github.io/AMIGABLE/" target="_blank" rel="noopener">Ver amigable-123 <em>→</em></a>
+      </article>
+    </section><section class="scene scene-consultorio" data-i="17">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop clinic p1"><b>+</b></div><div class="prop calendar p2"><b>AGENDA</b><span>08:30</span><span>10:00</span><span>11:30</span></div><div class="prop applogo p3"><span class="brandtext friendlyBrand">consultorio-<b>1</b><i>2</i><em>3</em></span></div></div>
+      <article class="story left">
+        <div class="eyebrow"><span>18</span><b>consultorio-123</b></div>
+        <h2>consultorio-123</h2>
+        <p>Finanzas, pacientes y agenda de citas para doctores, dentistas y veterinarios.</p>
+        <a href="https://jfcarpiopuntocom.github.io/consultorio-123/" target="_blank" rel="noopener">Ver consultorio-123 <em>→</em></a>
+      </article>
+    </section><section class="scene scene-clients" data-i="18">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop person p1"><i></i><b>QUITO</b></div><div class="prop person p2"><i></i><b>MULTIMEDIA</b></div><div class="prop person p3"><i></i><b>ORLANDO</b></div></div>
+      <article class="story right">
+        <div class="eyebrow"><span>19</span><b>Clientes</b></div>
+        <h2>Clientes</h2>
+        <p>Un CEO en Quito, un diseñador multimedia y una empresaria de ecommerce en Orlando cuentan qué se llevaron.</p>
+        <a href="https://jfcarpio.com/" target="_blank" rel="noopener">Ver el sitio <em>→</em></a>
+      </article>
+    </section><section class="scene scene-contact" data-i="19">
+      <div class="skygrain"></div>
+      <div class="cut cloud c1"></div><div class="cut cloud c2"></div>
+      <div class="cut sun"></div>
+      <div class="layer far"></div><div class="layer mid"></div><div class="layer near"></div>
+      <div class="set"><div class="prop runway p1"></div><div class="prop tower2 p2"><b>JF</b></div><div class="prop signboard p3">CUÉNTANOS TU CASO EN UNA LÍNEA</div></div>
+      <article class="story left">
+        <div class="eyebrow"><span>20</span><b>Agendar un diagnóstico</b></div>
+        <h2>Agendar un diagnóstico</h2>
+        <p>Cuéntanos tu caso en una línea y respondemos por WhatsApp.</p>
+        <a href="https://wa.me/593999905080?text=Hola%2C%20quiero%20agendar%20un%20diagn%C3%B3stico." target="_blank" rel="noopener">Escribir por WhatsApp <em>→</em></a>
+      </article>
+    </section></div></main>
+<div id="flightfx" aria-hidden="true"></div>
+<div id="heli" aria-hidden="true"><div id="rig"><svg viewBox="0 0 340 210"><path class="hb" d="M100 96L20 78L11 94L104 123Z"/><path class="hf" d="M22 80L10 42L36 50L39 87Z"/><circle cx="22" cy="72" r="18" fill="#f8f0dc" stroke="#07172e" stroke-width="5"/><g id="tailRotor"><rect class="rot" x="19" y="48" width="6" height="48" rx="3"/><rect class="rot" x="-2" y="69" width="48" height="6" rx="3"/></g><path class="hb" d="M96 103C99 63 143 49 202 53C255 57 291 82 294 115C296 144 270 162 240 162H126C108 162 93 138 96 103Z"/><path class="hf" d="M108 90C138 65 178 59 219 63L207 116L102 116C101 106 103 97 108 90Z"/><path class="hc" d="M217 64C260 68 286 89 290 115H210Z"/><path class="sk" d="M122 182H259M143 159L136 182M230 159L238 182M259 182Q282 182 279 166"/><rect class="rot" x="197" y="31" width="9" height="27"/><g id="mainRotor"><rect class="rot" x="59" y="23" width="284" height="10" rx="4"/><rect class="rot" x="149" y="24" width="104" height="8" rx="4" transform="rotate(8 201 28)"/></g><path class="stitch" d="M111 115H206M207 65V160"/><text class="hlab" x="161" y="108" text-anchor="middle">TU NEGOCIO</text><text class="hsub" x="163" y="129" text-anchor="middle">EN VUELO</text></svg></div></div>
+<audio id="audio" preload="none" loop playsinline><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg"></audio>
+<nav class="controls"><button id="prev" aria-label="Anterior">‹</button><button id="play" class="play">Pausar</button><input id="range" type="range" min="0" max="19" value="0" step="0.001" aria-label="Recorrido"><button id="next" aria-label="Siguiente">›</button><button id="audioBtn" class="audio">Audio</button><span id="count" class="count">01 / 20</span></nav>
+<script>
+(function(){
+const track=document.getElementById('track'),scenes=[...document.querySelectorAll('.scene')],heli=document.getElementById('heli'),rig=document.getElementById('rig'),fx=document.getElementById('flightfx'),range=document.getElementById('range'),count=document.getElementById('count'),prev=document.getElementById('prev'),next=document.getElementById('next'),play=document.getElementById('play'),audio=document.getElementById('audio'),audioBtn=document.getElementById('audioBtn'),mainRotor=document.getElementById('mainRotor'),tailRotor=document.getElementById('tailRotor'),reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+let progress=0,target=0,playing=!reduce,scrubbing=false,last=performance.now(),boost=0;
+const N=20,SECONDS_PER_SCENE=5.15,AUTO_SPEED=1/SECONDS_PER_SCENE;
+function clamp(n,a,b){return Math.max(a,Math.min(b,n))}
+function sceneIndex(){return clamp(Math.round(progress),0,N-1)}
+function updateUI(){
+  const i=sceneIndex();
+  range.value=progress.toFixed(3);
+  count.textContent=String(i+1).padStart(2,'0')+' / 20';
+  scenes.forEach((s,j)=>s.classList.toggle('active',j===i));
+}
+function snapTo(n){target=progress=clamp(n,0,N-1);boost=1;updateWorld();updateUI()}
+function updateWorld(){track.style.transform='translate3d('+(-progress*100)+'vw,0,0)'}
+function setPlaying(v){playing=!!v;play.textContent=playing?'Pausar':'Volar'}
+prev.onclick=()=>{setPlaying(false);snapTo(Math.floor(progress-.02))};
+next.onclick=()=>{setPlaying(false);snapTo(Math.ceil(progress+.02))};
+play.onclick=()=>setPlaying(!playing);
+range.addEventListener('pointerdown',()=>{scrubbing=true;setPlaying(false)});
+range.addEventListener('input',()=>{progress=target=+range.value;boost=.45;updateWorld();updateUI()});
+range.addEventListener('change',()=>{scrubbing=false});
+let sx=0;
+addEventListener('pointerdown',e=>{if(!e.target.closest('.controls'))sx=e.clientX},{passive:true});
+addEventListener('pointerup',e=>{if(e.target.closest('.controls'))return;const d=e.clientX-sx;if(Math.abs(d)>70){setPlaying(false);snapTo(sceneIndex()+(d<0?1:-1))}},{passive:true});
+addEventListener('keydown',e=>{if(e.key==='ArrowRight'){setPlaying(false);snapTo(sceneIndex()+1)}else if(e.key==='ArrowLeft'){setPlaying(false);snapTo(sceneIndex()-1)}else if(e.key===' '&&!/BUTTON|INPUT|A/.test(e.target.tagName)){e.preventDefault();setPlaying(!playing)}});
+audio.volume=.16;audioBtn.onclick=()=>{if(audio.paused)audio.play().then(()=>audioBtn.textContent='Audio · apagar').catch(()=>audioBtn.textContent='Audio · bloqueado');else{audio.pause();audioBtn.textContent='Audio'}};
+function mk(cls){const e=document.createElement('i');e.className=cls;fx.appendChild(e);return e}function rnd(a,b){return a+Math.random()*(b-a)}
+const streaks=[],scraps=[],clouds=[];
+if(!reduce){
+  for(let i=0;i<(innerWidth<600?8:16);i++)streaks.push({e:mk('streak'),x:rnd(0,innerWidth),y:rnd(12,Math.max(70,innerHeight*.30)),v:rnd(280,580),w:rnd(45,135)});
+  for(let i=0;i<(innerWidth<600?3:7);i++)scraps.push({e:mk('scrap'),x:rnd(0,innerWidth),y:rnd(42,Math.max(80,innerHeight*.30)),v:rnd(100,210),r:rnd(-18,18)});
+  for(let i=0;i<(innerWidth<600?2:4);i++)clouds.push({e:mk('fxcloud'),x:rnd(0,innerWidth),y:rnd(35,innerHeight*.24),v:rnd(22,48),s:rnd(.5,.95)});
+}
+function frame(t){
+  const dt=Math.min(.04,(t-last)/1000);last=t;
+  if(playing){
+    progress+=AUTO_SPEED*dt;
+    if(progress>=N-1){progress=N-1;setPlaying(false)}
+    target=progress;
+  } else if(!scrubbing && Math.abs(target-progress)>.0005){progress+=(target-progress)*Math.min(1,dt*8)}
+  boost=Math.max(0,boost-dt*1.25);
+  updateWorld();updateUI();
+  if(!reduce){
+    const vw=innerWidth,vh=innerHeight,hw=heli.offsetWidth||190;
+    const baseX=innerWidth<700?vw*.16:vw*.22;
+    const flyX=baseX+Math.sin(t/1550)*vw*.025;
+    const flyY=(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--top'))||58)+vh*(innerWidth<700?.075:.085)+Math.sin(t/510)*7+Math.sin(t/1900)*5;
+    const pitch=-5+Math.sin(t/630)*1.8-boost*5;
+    heli.style.transform='translate3d('+(flyX-hw*.5)+'px,'+flyY+'px,0) rotate('+pitch+'deg)';
+    rig.style.transform='translateY('+Math.sin(t/210)*1.8+'px)';
+    mainRotor.style.transformOrigin='201px 28px';mainRotor.style.transform='rotate('+((t*(1.35+boost*1.5))%360)+'deg)';
+    tailRotor.style.transformOrigin='22px 72px';tailRotor.style.transform='rotate('+((t*(2.1+boost*2))%360)+'deg)';
+    const worldSpeed=(playing?1:.22)+boost*1.6;
+    for(const s of streaks){s.x-=s.v*dt*worldSpeed;if(s.x<-s.w-30){s.x=vw+rnd(40,260);s.y=rnd(12,Math.max(70,vh*.30));s.w=rnd(45,135)}s.e.style.width=s.w+'px';s.e.style.transform='translate3d('+s.x+'px,'+s.y+'px,0) skewX(-24deg) scaleX('+(1+boost*1.2)+')'}
+    for(const q of scraps){q.x-=q.v*dt*worldSpeed;q.r-=dt*45;if(q.x<-45){q.x=vw+rnd(50,300);q.y=rnd(30,Math.max(80,vh*.28))}q.e.style.transform='translate3d('+q.x+'px,'+q.y+'px,0) rotate('+q.r+'deg)'}
+    for(const c of clouds){c.x-=c.v*dt*(playing?1:.15);if(c.x<-140){c.x=vw+rnd(120,420);c.y=rnd(25,vh*.22)}c.e.style.transform='translate3d('+c.x+'px,'+c.y+'px,0) scale('+c.s+')'}
+  }
+  requestAnimationFrame(frame)
+}
+updateWorld();updateUI();setPlaying(playing);requestAnimationFrame(frame);
+})();
+</script>
+</body></html>
