@@ -1,0 +1,4 @@
+2026-09-30 22:56 -05:00
+Planned new file: friendly123/chatgpt-app/privacy/index.html
+No prior file existed on main, so there are no bytes to copy.
+Scope: Stock Semaphore privacy + terms page only.
