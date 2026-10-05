@@ -9,7 +9,9 @@ const index = read('index.html');
 const build = read('scripts/build-slide-pages.py');
 const buildOg = read('scripts/build-og.cjs');
 const manifest = JSON.parse(read('og/manifest.json'));
-const stage = index.slice(index.indexOf('<main class="stage"'));
+const stageStart = index.indexOf('<main class="stage"');
+const stageEnd = index.indexOf('</main>', stageStart);
+const stage = index.slice(stageStart, stageEnd >= 0 ? stageEnd + 7 : index.length);
 
 ok(index.includes('HAY DOS TIPOS DE CREADORES DE NEGOCIOS.'), 'hero usa el headline aprobado literalmente');
 ok(index.includes('Los que se enteran después (con dolores y hasta quiebras).'), 'hero conserva la primera línea aprobada');
