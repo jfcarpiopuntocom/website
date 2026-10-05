@@ -223,8 +223,14 @@ def main():
             if len(title) > 68: title = f"{short} | JFCarpio.com"
             canon = f"{SITE}/{sl}/"
             alt_es, alt_en = f"{SITE}/{slug(sid, 'es')}/", f"{SITE}/{slug(sid, 'en')}/"
-            og = f"{SITE}/{ogfile(sid, lang)}"
-            manifest.append({"file": ogfile(sid, lang), "kick": kick_t, "title": title_h, "lang": lang})
+            # Narrative pages temporarily use the stable site OG card so the retired
+            # "Historia de dos negocios" artwork can never leak back into shares.
+            narrative_ids = {"c1", "c4", "c5", "c8", "c9"}
+            if sid in narrative_ids:
+                og = f"{SITE}/og-jfcarpio-v2.png"
+            else:
+                og = f"{SITE}/{ogfile(sid, lang)}"
+                manifest.append({"file": ogfile(sid, lang), "kick": kick_t, "title": title_h, "lang": lang})
             prv = page_list[i - 1] if i > 0 else None
             nxt = page_list[i + 1] if i < len(page_list) - 1 else None
 
@@ -312,8 +318,8 @@ def main():
         chs = [sid for sid in page_list if slug(sid, lang).startswith(HUB[lang][0] + "/")]
         items = "".join(f'<li><a href="/{slug(s, lang)}/"><h2>{esc(name(s, lang))}</h2><p>{esc(tx(find(secs[s], "h2")))}</p></a></li>' for s in chs)
         hc = f"{SITE}/{HUB[lang][0]}/"; he, hen = f"{SITE}/{HUB['es'][0]}/", f"{SITE}/{HUB['en'][0]}/"
-        og = f"{SITE}/{ogfile('historia', lang)}"
-        manifest.append({"file": ogfile("historia", lang), "kick": HUB[lang][1], "title": U["hub_h1"], "lang": lang})
+        # Keep the legacy URL, but never serve the retired narrative OG artwork.
+        og = f"{SITE}/og-jfcarpio-v2.png"
         ld = {"@context": "https://schema.org", "@graph": [
             {"@type": "CollectionPage", "@id": hc + "#page", "url": hc, "name": HUB[lang][1] + " | JFCarpio.com", "description": U["hub_desc"], "inLanguage": lang,
              "isPartOf": {"@type": "WebSite", "name": "JFCarpio.com", "url": SITE + "/"}, "primaryImageOfPage": og},
@@ -327,17 +333,7 @@ def main():
 
     os.makedirs(os.path.join(ROOT, "og"), exist_ok=True)
     json.dump(manifest, open(os.path.join(ROOT, "og", "manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    # PDF de las 17 consecuencias: fuente HTML (lo imprime build-og.cjs)
-    c9 = secs["c9"]
-    for lang in ("es", "en"):
-        T = TT[lang]
-        chips = [T[c.attrs["data-t"]] for c in find_all(c9, cls="c") if c.attrs.get("data-t") in T]
-        lab = T[find(c9, cls="sl").attrs["data-t"]]
-        hub_url = f"{SITE}/{HUB[lang][0]}/"
-        open(os.path.join(ROOT, "og", f"pdf-{lang}.html"), "w", encoding="utf-8").write(PDF_TPL.format(
-            lang=lang, h=esc(UI[lang]["hub_h1"]), lab=esc(lab), n=len(chips), hub=hub_url,
-            items="".join(f"<li>{esc(c)}</li>" for c in chips),
-            foot=("El equipo de JFCarpio.com · " if lang == "es" else "The JFCarpio.com team · ") + f"{SITE} · WhatsApp +593 99 990 5080"))
+    # The old accumulated-consequences PDF was retired with the 2026-10-05 narrative pivot.
 
     # sitemap
     sm_path = os.path.join(ROOT, "sitemap.xml"); sm = open(sm_path, encoding="utf-8").read()
