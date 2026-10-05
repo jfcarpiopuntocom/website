@@ -1,20 +1,8 @@
 [
  {
-  "file": "og/c1-es.png",
-  "kick": "Historia de dos negocios · 01",
-  "title": "Los problemas pequeños todavía parecen pequeños.",
-  "lang": "es"
- },
- {
   "file": "og/apps-es.png",
   "kick": "Producto propio",
   "title": "Ni Excel ni cuadernito.",
-  "lang": "es"
- },
- {
-  "file": "og/c4-es.png",
-  "kick": "Historia de dos negocios · 02",
-  "title": "Un equipo puede tener datos y seguir decidiendo igual.",
   "lang": "es"
  },
  {
@@ -30,12 +18,6 @@
   "lang": "es"
  },
  {
-  "file": "og/c5-es.png",
-  "kick": "Historia de dos negocios · 03",
-  "title": "El mercado cambia aunque tu operación interna esté en orden.",
-  "lang": "es"
- },
- {
   "file": "og/reportes-es.png",
   "kick": "Benchmarks y análisis sectoriales",
   "title": "Reportes",
@@ -45,12 +27,6 @@
   "file": "og/trayectoria-es.png",
   "kick": "J.F. Carpio · 25+ años detrás del trabajo",
   "title": "Ideas, mercados y herramientas para decidir mejor",
-  "lang": "es"
- },
- {
-  "file": "og/c8-es.png",
-  "kick": "Historia de dos negocios · 04",
-  "title": "Cuando todo importa, nada destaca.",
   "lang": "es"
  },
  {
@@ -84,39 +60,15 @@
   "lang": "es"
  },
  {
-  "file": "og/c9-es.png",
-  "kick": "Historia de dos negocios · 05",
-  "title": "No es una historia de héroes y torpes.",
-  "lang": "es"
- },
- {
   "file": "og/contacto-es.png",
   "kick": "Talleres · disponibilidad limitada",
   "title": "Si el caso no cabe en una herramienta",
   "lang": "es"
  },
  {
-  "file": "og/historia-es.png",
-  "kick": "Historia de dos negocios",
-  "title": "Dos negocios nacieron el mismo año.",
-  "lang": "es"
- },
- {
-  "file": "og/c1-en.png",
-  "kick": "A tale of two businesses · 01",
-  "title": "Small problems still look small.",
-  "lang": "en"
- },
- {
   "file": "og/apps-en.png",
   "kick": "Our own product",
   "title": "Neither Excel nor a notebook.",
-  "lang": "en"
- },
- {
-  "file": "og/c4-en.png",
-  "kick": "A tale of two businesses · 02",
-  "title": "A team can have data and keep deciding the same way.",
   "lang": "en"
  },
  {
@@ -132,12 +84,6 @@
   "lang": "en"
  },
  {
-  "file": "og/c5-en.png",
-  "kick": "A tale of two businesses · 03",
-  "title": "The market changes even if your internal operation is in order.",
-  "lang": "en"
- },
- {
   "file": "og/reportes-en.png",
   "kick": "Benchmarks and sector analysis",
   "title": "Reports",
@@ -147,12 +93,6 @@
   "file": "og/trayectoria-en.png",
   "kick": "J.F. Carpio · 25+ years behind the work",
   "title": "Ideas, markets and tools for better decisions",
-  "lang": "en"
- },
- {
-  "file": "og/c8-en.png",
-  "kick": "A tale of two businesses · 04",
-  "title": "When everything matters, nothing stands out.",
   "lang": "en"
  },
  {
@@ -186,21 +126,9 @@
   "lang": "en"
  },
  {
-  "file": "og/c9-en.png",
-  "kick": "A tale of two businesses · 05",
-  "title": "This is not a story of heroes and fools.",
-  "lang": "en"
- },
- {
   "file": "og/contacto-en.png",
   "kick": "Workshops · limited availability",
   "title": "If the case does not fit a tool",
-  "lang": "en"
- },
- {
-  "file": "og/historia-en.png",
-  "kick": "A tale of two businesses",
-  "title": "Two businesses were born the same year.",
   "lang": "en"
  }
 ]
