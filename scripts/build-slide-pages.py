@@ -50,14 +50,14 @@ UI = {
            "talleres": "Talleres", "pubs": "Publicaciones", "contact": "Contacto", "wa": "Escríbenos por WhatsApp", "faq": "Preguntas frecuentes",
            "quote": "Lo que dicen clientes reales", "start": "Ver la diferencia", "loc": "es_EC",
            "hub_h1": "HAY DOS TIPOS DE CREADORES DE NEGOCIOS.", "hub_lead": "Los que se enteran después (con dolores y hasta quiebras). Y los que encuentran maneras de ver con claridad mucho antes.",
-           "hub_desc": "Dos maneras de dirigir un negocio: enterarse cuando el problema ya duele o construir sistemas para verlo antes, usando herramientas, talleres, reportes y dashboards como apoyo.",
-           "idx_h": "Cada sección tiene su propia página", "pdf": "Descargar las 15 consecuencias (PDF)"},
+           "hub_desc": "HAY DOS TIPOS DE CREADORES DE NEGOCIOS. Cinco contrastes para ver antes, decidir con claridad y dirigir mejor con herramientas, talleres y reportes.",
+           "idx_h": "Cada sección tiene su propia página"},
     "en": {"reel": "See it in the interactive reel →", "home": "Home", "nav": "Next and previous", "other": "Español", "blog": "Blog (ES)",
            "talleres": "Workshops", "pubs": "Publications (ES)", "contact": "Contact", "wa": "Message us on WhatsApp", "faq": "Frequently asked questions",
            "quote": "What real clients say", "start": "See the difference", "loc": "en_US",
            "hub_h1": "TWO KINDS OF BUSINESS BUILDERS.", "hub_lead": "Those who find out later, through pain and sometimes even failure. And those who find ways to see clearly much earlier.",
-           "hub_desc": "Two ways to run a business: finding out after the problem hurts, or building systems to see it earlier with tools, workshops, reports and dashboards as support.",
-           "idx_h": "Each section has its own page", "pdf": "Download the 15 consequences (PDF)"},
+           "hub_desc": "TWO KINDS OF BUSINESS BUILDERS. Five contrasts for seeing earlier, deciding clearly and leading better with tools, workshops and reports.",
+           "idx_h": "Each section has its own page"},
 }
 
 # Preguntas frecuentes (solo hechos confirmados por JFC): se muestran en la pagina Y van como FAQPage.
@@ -404,9 +404,8 @@ HEAD_TPL = """<!DOCTYPE html>
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{og}">
 <meta name="theme-color" content="#060E1D">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Lora:wght@400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" as="font" href="/assets/fonts/jost-latin-wght-normal.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/assets/fonts/playfair-display-latin-wght-normal.woff2" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/slide-page.css">
 <script type="application/ld+json">{ld}</script>
 </head>
@@ -415,11 +414,11 @@ HEAD_TPL = """<!DOCTYPE html>
 """
 
 PDF_TPL = """<!DOCTYPE html><html lang="{lang}"><head><meta charset="UTF-8"><style>
-@page{{size:A4;margin:18mm}}body{{font:12pt/1.5 'Lora',serif;color:#060E1D}}
-h1{{font:800 30pt/1 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:0 0 8pt}}
-.l{{font:700 11pt 'Space Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9A5B00;margin:0 0 14pt}}
+@page{{size:A4;margin:18mm}}body{{font:12pt/1.5 'Jost',Arial,sans-serif;color:#060E1D}}
+h1{{font:800 30pt/1 'Playfair Display',Georgia,serif;text-transform:uppercase;margin:0 0 8pt}}
+.l{{font:700 11pt 'Jost',Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#9A5B00;margin:0 0 14pt}}
 .n{{display:inline-block;background:#E8A020;color:#060E1D;border-radius:99px;padding:2pt 10pt;margin-right:8pt}}
-ol{{columns:2;column-gap:14mm;padding-left:18pt}}li{{margin:0 0 7pt;break-inside:avoid}}li::marker{{font:700 11pt 'Space Mono',monospace;color:#9A5B00}}
+ol{{columns:2;column-gap:14mm;padding-left:18pt}}li{{margin:0 0 7pt;break-inside:avoid}}li::marker{{font:700 11pt 'Jost',Arial,sans-serif;color:#9A5B00}}
 .f{{margin-top:18pt;border-top:2px solid #E8A020;padding-top:8pt;font-size:10.5pt}}a{{color:#060E1D}}
 </style></head><body><h1>{h}</h1><p class="l"><span class="n">B {n}</span>{lab}</p><ol>{items}</ol>
 <p class="f"><a href="{hub}">{hub}</a><br>{foot}</p></body></html>"""
