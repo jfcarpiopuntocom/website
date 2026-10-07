@@ -2,12 +2,18 @@
 # era publico: /CLAUDE.md, /AGENTS.md, /wrangler.toml, /worker.js daban 200.
 .git
 .git/**
+.github
+.github/**
+.wrangler
+.wrangler/**
 .assetsignore
 .gitignore
 .claude
 node_modules
 backups
+backups/**
 codex-backups
+codex-backups/**
 CLAUDE*.md
 AGENTS.md
 *.md
@@ -20,9 +26,11 @@ worker.js
 !llms.txt
 !c2d8b4e084c5a6e9498a037240f5da45.txt
 scripts
+scripts/**
 entities.json
 # Apuntes internos (JFC 2026-09-27): no se publican.
 notas
+notas/**
 
 # Puente Gumroad (JFC 2026-09-30): codigo aparte, no se publica como pagina.
 gumroad-bridge
