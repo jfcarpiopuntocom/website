@@ -141,7 +141,7 @@ const settle = p => p.waitForFunction(() => window.__reel && !window.__reel.auto
     await page.evaluate(() => { window.__reel.cl(); window.__reel.go(0); }); await page.waitForTimeout(1200);
     await page.click('.lang button[data-lang=en]'); await page.waitForTimeout(200);
     const en = await page.evaluate(() => ({ h1: document.querySelector('h1').textContent, lang: document.documentElement.lang, al: document.querySelector('.lang').getAttribute('aria-label'), alt: document.querySelector('.bgw img').alt, ph: document.querySelector('textarea').placeholder }));
-    en.h1.startsWith('TWO KINDS OF BUSINESS BUILDERS.') && en.lang === 'en' && en.al === 'Language' ? OK('idioma EN funciona (h1, lang, aria-label)') : F('EN: ' + JSON.stringify(en));
+    en.h1.startsWith('THERE ARE TWO KINDS OF BUSINESSES.') && en.lang === 'en' && en.al === 'Language' ? OK('idioma EN funciona (h1, lang, aria-label)') : F('EN: ' + JSON.stringify(en));
     await page.click('.lang button[data-lang=es]');
     // enlaces internos
     const links = await page.evaluate(() => [...document.querySelectorAll('a[href]')].map(a => a.getAttribute('href')).filter(h => !/^(https?:\/\/|\/|#|mailto:)/.test(h)));
@@ -173,7 +173,7 @@ const settle = p => p.waitForFunction(() => window.__reel && !window.__reel.auto
   { const { ctx, page } = await setup(browser, 1440, 900, false); await page.goto(BASE + '/index.html#libro'); await page.waitForTimeout(1200);
     const r = await page.evaluate(() => ({ idx: window.__reel.idx, expected: [...document.querySelectorAll('.slide')].findIndex(s => s.id === 'libro'), auto: window.__reel.auto })); r.idx === r.expected && !r.auto ? OK('#libro abre directo sin entrada animada') : F('hash: ' + JSON.stringify(r)); await ctx.close(); }
   // ?lang=en
-  { const { ctx, page } = await setup(browser, 1440, 900, false); await page.goto(BASE + '/index.html?lang=en'); await settle(page); const h = await page.evaluate(() => document.querySelector('h1').textContent); h.startsWith('TWO KINDS OF BUSINESS BUILDERS.') ? OK('?lang=en fuerza ingles') : F('lang param'); await ctx.close(); }
+  { const { ctx, page } = await setup(browser, 1440, 900, false); await page.goto(BASE + '/index.html?lang=en'); await settle(page); const h = await page.evaluate(() => document.querySelector('h1').textContent); h.startsWith('THERE ARE TWO KINDS OF BUSINESSES.') ? OK('?lang=en fuerza ingles') : F('lang param'); await ctx.close(); }
   // reduced motion: sin barrido
   { const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' }); await ctx.route('**/*', r => r.request().url().startsWith(BASE) ? r.continue() : r.abort()); const page = await ctx.newPage(); await page.goto(BASE + '/index.html'); await page.waitForTimeout(800); const a = await page.evaluate(() => window.__reel.auto); !a ? OK('reduced-motion: sin barrido de entrada') : F('reduced-motion sigue animando'); await ctx.close(); }
   // SIN JAVASCRIPT: todo visible y apilado

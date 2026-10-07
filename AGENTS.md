@@ -48,7 +48,7 @@ Branch for feature work: `Codex/high-contrast-white-design-VK5kk`. Base: `main`.
 ### Colors — Dark Theme
 - Background: `#060E1D`
 - Primary text: `#FFFFFF`
-- Secondary text: `#CCCCCC` minimum
+- Secondary text: `#F2F2F2` minimum; tertiary/helper text: `#E6E6E6` minimum. Never use opacity to make meaningful text faint.
 - Accents: `#E86040` (orange) · `#E8A020` (gold) · `#28ECAA` (green) · `#3B7EE8` (blue)
 
 ### Colors — White Theme (index-white-contrast.html)
@@ -58,7 +58,7 @@ Branch for feature work: `Codex/high-contrast-white-design-VK5kk`. Base: `main`.
 - Accents: same as dark theme
 
 ### Typography
-- Reel and generated slide pages (JFC request, 2026-10-06): `Playfair Display` for display headings, `Jost` for body, navigation, labels, and controls. Both are self-hosted as variable WOFF2 in `assets/fonts/`; do not restore the former five-family mix.
+- Reel, generated slide pages, and launch-review pages (JFC choice, 2026-10-07): `Barlow Condensed` for display headings, `Jost` for reading, and `Space Mono` for short labels and controls. These are self-hosted in `assets/fonts/`. Preserve the established `Publicaciones` typography and color contrasts on its own page. Do not restore Playfair Display to the reel or multiply font families.
 - Older standalone product pages retain their own approved styling until reviewed individually.
 - Minimum font size: `.82rem` — no exceptions, ever
 
@@ -81,6 +81,7 @@ Branch for feature work: `Codex/high-contrast-white-design-VK5kk`. Base: `main`.
 - Never edit, reorder, paraphrase, retimestamp, or "improve" those `data-video`, `.curr__txt`, or `.curr__ts` entries unless JFC explicitly asks for that exact block in the same turn.
 
 ### Animation (CRITICAL — breaking these hides content permanently)
+- JFC approved the motion lab on 2026-10-07. The reel uses lightweight photo drift, split-card entrances, card responses, editorial traces and data accents. Animate only `.is-current`; the added effects require a fine pointer, width above 640px and no reduced-motion preference. Preserve static content on old phones and without JS, and preserve fixed Open Graph metadata/images for sharing.
 - Reveal gate: `document.documentElement.className+=' js-rv'` must stay in script
 - Only `.js-rv .reveal { opacity:0 }` is safe — never set `opacity:0` on `.reveal` bare
 - Never re-add inline `revEl.style.opacity='0'` pattern

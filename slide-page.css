@@ -1,20 +1,23 @@
 /* Estilo de las paginas por fotograma (generado por scripts/build-slide-pages.py). Paleta: navy #060E1D, dorado #E8A020, carmesi #B0183E. Texto minimo .82rem, blanco sobre navy. */
 @font-face{font-family:'Jost';font-style:normal;font-weight:100 900;font-display:swap;src:url('/assets/fonts/jost-latin-wght-normal.woff2') format('woff2')}
 @font-face{font-family:'Jost';font-style:italic;font-weight:100 900;font-display:swap;src:url('/assets/fonts/jost-latin-wght-italic.woff2') format('woff2')}
-@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400 900;font-display:swap;src:url('/assets/fonts/playfair-display-latin-wght-normal.woff2') format('woff2')}
-@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400 900;font-display:swap;src:url('/assets/fonts/playfair-display-latin-wght-italic.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/barlow-condensed-700.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/barlow-condensed-800.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:900;font-display:swap;src:url('/assets/fonts/barlow-condensed-900.woff2') format('woff2')}
+@font-face{font-family:'Space Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/space-mono-400.woff2') format('woff2')}
+@font-face{font-family:'Space Mono';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/space-mono-700.woff2') format('woff2')}
 *{box-sizing:border-box}
 html{background:#060E1D}
 body{margin:0;background:#060E1D;color:#fff;font:400 1.125rem/1.65 'Jost',Arial,sans-serif}
 a{color:#fff}
 .hd{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:14px max(20px,5vw);border-bottom:1px solid #2F4670}
-.brand{font:700 1.4rem 'Playfair Display',Georgia,serif;letter-spacing:.02em;text-decoration:none}
+.brand{font:900 1.6rem 'Barlow Condensed','Arial Narrow',Arial,sans-serif;letter-spacing:.02em;text-decoration:none}
 .reel{font:700 .9rem 'Jost',Arial,sans-serif;letter-spacing:.06em;text-decoration:none;border:2px solid #fff;border-radius:99px;padding:10px 16px;min-height:44px;display:inline-flex;align-items:center}
 main{max-width:980px;margin:0 auto;padding:clamp(28px,6vw,64px) max(20px,5vw)}
 .kick{font:700 .875rem 'Jost',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#E8A020;margin:0 0 10px}
-h1{font:800 clamp(2.2rem,6vw,4rem)/1.02 'Playfair Display',Georgia,serif;text-transform:uppercase;letter-spacing:.01em;margin:0 0 18px}
-h2{font:800 1.5rem/1.1 'Playfair Display',Georgia,serif;margin:0 0 6px}
-h3{font:800 1.3rem/1.1 'Playfair Display',Georgia,serif;margin:0 0 6px}
+h1{font:900 clamp(2.6rem,6vw,4.8rem)/1.02 'Barlow Condensed','Arial Narrow',Arial,sans-serif;text-transform:uppercase;letter-spacing:.01em;margin:0 0 18px}
+h2{font:800 1.5rem/1.1 'Barlow Condensed','Arial Narrow',Arial,sans-serif;margin:0 0 6px}
+h3{font:800 1.3rem/1.1 'Barlow Condensed','Arial Narrow',Arial,sans-serif;margin:0 0 6px}
 .lead{font-size:1.2rem;max-width:64ch;margin:0 0 14px}
 .tiles{list-style:none;padding:0;margin:26px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
 .tiles li{background:#0B1F3F;border:1px solid #2F4670;border-radius:10px;padding:16px 18px;counter-increment:t}
@@ -60,3 +63,9 @@ a:focus-visible{outline:3px solid #E8A020;outline-offset:3px}
 .ft nav a,.ft .loc a{color:#fff}
 .ft .loc{margin:12px 0 0}
 .ft .wa{font-weight:600}
+
+/* JFC 2026-10-07: sistema B. Jost para lectura; Space Mono para controles y datos. */
+.reel,.kick,.tiles li::before,.pair strong,.snow strong,.btn,.card .tag,.pn a,.lang,.quote .ql,.snow .cnt{font-family:'Space Mono',Consolas,monospace;font-weight:700}
+.launch-offer{margin:32px 0;padding:clamp(22px,4vw,40px);background:#102442;border:2px solid #7FB0FF;border-radius:12px}
+.launch-offer h2{font-size:clamp(2rem,4vw,3.3rem);line-height:1;max-width:22ch;margin:0 0 12px;text-transform:uppercase}
+.launch-offer p:not(.kick){max-width:65ch;margin:0 0 20px;color:#fff}

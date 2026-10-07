@@ -28,7 +28,7 @@ ok(index.includes('"k529": "Sees earlier"'), 'la vía positiva EN se llama Sees 
 ok(index.includes('"k530": "Finds out later"'), 'la vía reactiva EN se llama Finds out later');
 
 ok(build.includes('("historia-de-dos-negocios", "Dos tipos de creadores")'), 'se conserva el slug ES y cambia sólo la etiqueta visible');
-ok(build.includes('("en/tale-of-two-businesses", "Two kinds of business builders")'), 'se conserva el slug EN y cambia sólo la etiqueta visible');
+ok(build.includes('("en/tale-of-two-businesses", "There are two kinds of businesses")'), 'se conserva el slug EN y la etiqueta usa una frase completa');
 ok(!build.includes('/consecuencias-{lang}.pdf'), 'el generador ya no enlaza el PDF retirado');
 ok(!build.includes('# PDF de las 17 consecuencias'), 'el generador ya no recrea la fuente del PDF retirado');
 ok(!buildOg.includes('consecuencias-'), 'build-og ya no regenera los PDFs retirados');
@@ -78,7 +78,7 @@ for (const p of generated) {
   ok(!/consecuencias-(?:es|en)\\.pdf/.test(html), p + ' no enlaza el PDF retirado');
 }
 ok(read('historia-de-dos-negocios/index.html').includes('HAY DOS TIPOS DE CREADORES DE NEGOCIOS.'), 'hub ES refleja el nuevo eje');
-ok(read('en/tale-of-two-businesses/index.html').includes('TWO KINDS OF BUSINESS BUILDERS.'), 'hub EN refleja el nuevo eje');
+ok(read('en/tale-of-two-businesses/index.html').includes('THERE ARE TWO KINDS OF BUSINESSES.'), 'hub EN refleja la frase completa');
 
 const retiredOg = /og\/(?:historia|c1|c4|c5|c8|c9)-(?:es|en)\.png/;
 ok(!manifest.some(x => retiredOg.test(x.file || '')), 'manifest no regenera tarjetas OG de la narrativa retirada');

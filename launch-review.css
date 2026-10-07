@@ -1,0 +1,57 @@
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/barlow-condensed-700.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/barlow-condensed-800.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:900;font-display:swap;src:url('/assets/fonts/barlow-condensed-900.woff2') format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:100 900;font-display:swap;src:url('/assets/fonts/jost-latin-wght-normal.woff2') format('woff2')}
+@font-face{font-family:'Space Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/space-mono-400.woff2') format('woff2')}
+@font-face{font-family:'Space Mono';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/space-mono-700.woff2') format('woff2')}
+:root{color-scheme:dark;background:#060E1D;color:#fff;font-family:'Jost',Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-width:320px;background:#060E1D;color:#fff}
+a{color:inherit}
+a:focus-visible{outline:3px solid #E8A020;outline-offset:4px}
+.skip{position:absolute;left:12px;top:-80px;z-index:20;background:#fff;color:#060E1D;padding:12px 16px;font:700 14px/1.2 'Space Mono',monospace}
+.skip:focus{top:12px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:78px;padding:14px max(20px,4vw);border-bottom:2px solid #7FB0FF;background:#060E1D}
+.brand{font:900 26px/1 'Barlow Condensed','Arial Narrow',sans-serif;text-decoration:none;white-space:nowrap}
+.bar nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:12px 24px}
+.bar nav a{font:700 14px/1.25 'Space Mono',monospace;text-underline-offset:5px}
+.bar nav a[aria-current=page]{color:#E8A020}
+.hero{position:relative;overflow:hidden;isolation:isolate;background:#060E1D}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#060E1D 0%,rgba(6,14,29,.95) 52%,rgba(6,14,29,.70) 100%),url('/network-pacific.jpg') center/cover}
+.hero-inner{max-width:1350px;margin:auto;padding:clamp(48px,7vw,100px) max(20px,4vw) clamp(54px,6vw,84px)}
+.eyebrow{margin:0 0 24px;color:#E8A020;font:700 14px/1.35 'Space Mono',monospace;letter-spacing:.02em}
+h1,h2,h3{font-family:'Barlow Condensed','Arial Narrow',sans-serif;letter-spacing:-.005em}
+h1{max-width:15ch;margin:0 0 22px;font-size:clamp(3.2rem,7.8vw,7.5rem);font-weight:900;line-height:.88;text-transform:uppercase;text-wrap:balance}
+.lead{max-width:68ch;margin:0 0 28px;color:#fff;font:500 clamp(18px,1.65vw,22px)/1.48 'Jost',sans-serif}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 21px;border:2px solid #E8A020;border-radius:8px;background:#E8A020;color:#060E1D;font:700 15px/1.3 'Space Mono',monospace;text-decoration:none}
+.button:hover,.button:focus-visible{background:#fff;border-color:#fff;color:#060E1D}
+.hero-note{font:700 14px/1.4 'Space Mono',monospace;color:#F2F2F2}
+main{max-width:1350px;margin:auto}
+.argument{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:28px 6vw;padding:clamp(36px,6vw,72px) max(20px,4vw);border-bottom:2px solid #7FB0FF}
+.argument h2,.scope h2,.bottom h2{margin:0;font-size:clamp(2.8rem,5vw,5.3rem);font-weight:900;line-height:.92;text-transform:uppercase}
+.argument p{max-width:67ch;margin:0;font:500 19px/1.58 'Jost',sans-serif;color:#fff}
+.argument p+p{margin-top:14px}
+.scope{padding:clamp(36px,5vw,64px) max(20px,4vw)}
+.scope-header{display:flex;align-items:end;justify-content:space-between;gap:16px 30px;margin-bottom:28px}
+.scope-header p{max-width:47ch;margin:0;font:500 17px/1.45 'Jost',sans-serif;color:#F2F2F2}
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid #E8A020}
+.group{padding:22px 24px 28px;border-right:1px solid #7FB0FF;border-bottom:1px solid #7FB0FF}
+.group:first-child{padding-left:0}
+.group:last-child{border-right:0}
+.group .number{display:block;margin-bottom:13px;color:#E8A020;font:700 14px/1.2 'Space Mono',monospace}
+.group h3{font-size:clamp(2rem,2.6vw,3rem);font-weight:800;line-height:1;margin:0 0 17px}
+.group ul{list-style:none;padding:0;margin:0}
+.group li{position:relative;padding:10px 0 10px 21px;border-top:1px solid #2F4670;color:#fff;font:500 16px/1.35 'Jost',sans-serif}
+.group li::before{content:"+";position:absolute;left:0;color:#E8A020;font:700 16px/1.3 'Space Mono',monospace}
+.bottom{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px 45px;align-items:center;padding:clamp(34px,5vw,60px) max(20px,4vw);background:#102442;border-top:2px solid #7FB0FF}
+.bottom h2{max-width:13ch}
+.bottom p{max-width:65ch;margin:14px 0 0;font:500 17px/1.45 'Jost',sans-serif;color:#F2F2F2}
+.bottom .button{max-width:350px;text-align:center}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px;padding:24px max(20px,4vw);border-top:1px solid #7FB0FF;font:700 14px/1.45 'Space Mono',monospace}
+.foot nav{display:flex;flex-wrap:wrap;gap:12px 25px}
+.foot a{text-underline-offset:4px}
+@media(max-width:900px){.argument{grid-template-columns:1fr}.scope-header{display:block}.scope-header p{margin-top:14px}.groups{grid-template-columns:1fr}.group,.group:first-child{padding:19px 0 24px;border-right:0}.bottom{grid-template-columns:1fr}}
+@media(max-width:600px){.bar{align-items:flex-start}.bar nav{gap:10px 15px}.bar nav a{font-size:14px}.brand{font-size:23px}.hero-inner{padding:50px 20px 62px}.hero::before{background:linear-gradient(90deg,rgba(6,14,29,.98),rgba(6,14,29,.80)),url('/network-pacific.jpg') center/cover}h1{font-size:clamp(3.3rem,12.5vw,5.2rem)}.eyebrow{font-size:14px}.lead{font-size:18px}.argument p{font-size:17px}.scope-header p{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

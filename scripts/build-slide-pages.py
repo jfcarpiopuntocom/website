@@ -19,12 +19,12 @@ from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://jfcarpio.com"
-DATE = "2026-09-30"
+DATE = "2026-10-07"
 WA = "https://wa.me/593999905080"
 ADDR = "General Torres #14, Cuenca, Ecuador"
 
 # id del fotograma -> (ruta ES, ruta EN, nombre ES, nombre EN)
-HUB = {"es": ("historia-de-dos-negocios", "Dos tipos de creadores"), "en": ("en/tale-of-two-businesses", "Two kinds of business builders")}
+HUB = {"es": ("historia-de-dos-negocios", "Dos tipos de creadores"), "en": ("en/tale-of-two-businesses", "There are two kinds of businesses")}
 PAGES = {
     "c1": ("historia-de-dos-negocios/dos-maneras-de-operar", "en/tale-of-two-businesses/two-ways-to-operate", "Contraste 1 · Ver antes de que duela", "Contrast 1 · See before it hurts"),
     "apps": ("apps", "en/apps", "Apps", "Apps"),
@@ -55,8 +55,8 @@ UI = {
     "en": {"reel": "See it in the interactive reel →", "home": "Home", "nav": "Next and previous", "other": "Español", "blog": "Blog (ES)",
            "talleres": "Workshops", "pubs": "Publications (ES)", "contact": "Contact", "wa": "Message us on WhatsApp", "faq": "Frequently asked questions",
            "quote": "What real clients say", "start": "See the difference", "loc": "en_US",
-           "hub_h1": "TWO KINDS OF BUSINESS BUILDERS.", "hub_lead": "Those who find out later, through pain and sometimes even failure. And those who find ways to see clearly much earlier.",
-           "hub_desc": "TWO KINDS OF BUSINESS BUILDERS. Five contrasts for seeing earlier, deciding clearly and leading better with tools, workshops and reports.",
+           "hub_h1": "THERE ARE TWO KINDS OF BUSINESSES.", "hub_lead": "Those who find out later, through pain and sometimes even failure. And those who find ways to see clearly much earlier.",
+           "hub_desc": "THERE ARE TWO KINDS OF BUSINESSES. Five contrasts for seeing earlier, deciding clearly and leading better with tools, workshops and reports.",
            "idx_h": "Each section has its own page"},
 }
 
@@ -290,6 +290,11 @@ def main():
                                 c += f'<a class="btn" href="{esc(href_to_page(a.attrs["href"]))}" rel="noopener">{esc(tx(a))}</a>'
                             body.append(c + "</div>")
                         body.append("</div>")
+            if sid == "apps":
+                if lang == "es":
+                    body.append('<section class="launch-offer" aria-labelledby="launch-offer-title"><p class="kick">Servicio pagado</p><h2 id="launch-offer-title">¿Vas a lanzar un producto hecho con vibecoding?</h2><p>Revisamos la experiencia, la presencia en buscadores y lo que ocurre cuando algo falla. Incluye móvil, metadatos, página 404, estados de carga, contacto y los demás detalles que una demo no muestra.</p><a class="btn" href="/revision-de-lanzamiento/">Ver la revisión de lanzamiento</a></section>')
+                else:
+                    body.append('<section class="launch-offer" aria-labelledby="launch-offer-title"><p class="kick">Paid service</p><h2 id="launch-offer-title">Launching a product built with vibe coding?</h2><p>We check the customer experience, search visibility and what happens when something fails. That includes mobile, metadata, a 404 page, loading states, contact paths and the details a demo can miss.</p><a class="btn" href="/en/launch-review/">See the launch review</a></section>')
             graph = [
                 {"@type": "WebPage", "@id": canon + "#page", "url": canon, "name": title, "description": desc, "inLanguage": lang,
                  "isPartOf": {"@type": "WebSite", "name": "JFCarpio.com", "url": SITE + "/"}, "primaryImageOfPage": og,
@@ -350,9 +355,9 @@ def main():
     def links(lang):
         out = f'<li><a href="/{HUB[lang][0]}/" hreflang="{lang}">{esc(HUB[lang][1])}</a></li>'
         return out + "".join(f'<li><a href="/{slug(s, lang)}/" hreflang="{lang}">{esc(name(s, lang))}</a></li>' for s in page_list)
-    extra = "".join(f'<li><a href="{u}">{esc(n)}</a></li>' for n, u in [("Talleres corporativos de cambio rápido", "/talleres/"), ("Publicaciones", "/publicaciones/"), ("Perfil", "/juan-fernando-carpio/")])
+    extra = "".join(f'<li><a href="{u}">{esc(n)}</a></li>' for n, u in [("Talleres corporativos de cambio rápido", "/talleres/"), ("Publicaciones", "/publicaciones/"), ("Revisión antes del lanzamiento · servicio pagado", "/revision-de-lanzamiento/"), ("Perfil", "/juan-fernando-carpio/")])
     blk = (f'<!--PAGES-START--><nav class="idxp" aria-label="Páginas del sitio"><h3 data-t="k520">{UI["es"]["idx_h"]}</h3><ul>{links("es")}{extra}</ul>'
-           f'<h3 lang="en">In English</h3><ul lang="en">{links("en")}<li><a href="/workshops/">Rapid-change corporate workshops</a></li><li><a href="/market-intelligence-latam/">Latin America Market Intelligence</a></li><li><a href="/pacific-basin/">Pacific Basin Intelligence Unit</a></li></ul></nav><!--PAGES-END-->')
+           f'<h3 lang="en">In English</h3><ul lang="en">{links("en")}<li><a href="/en/launch-review/">Pre-launch review · paid service</a></li><li><a href="/workshops/">Rapid-change corporate workshops</a></li><li><a href="/market-intelligence-latam/">Latin America Market Intelligence</a></li><li><a href="/pacific-basin/">Pacific Basin Intelligence Unit</a></li></ul></nav><!--PAGES-END-->')
     if "<!--PAGES-START-->" in src:
         src = re.sub(r"<!--PAGES-START-->.*?<!--PAGES-END-->", lambda m: blk, src, flags=re.S)
     else:
@@ -363,12 +368,14 @@ def main():
          "> Economic and business research team based in Cuenca, Ecuador, serving clients worldwide in English and Spanish: reports, dashboards, free decision tools and rapid-change corporate workshops. Investigación económica y empresarial: reportes, dashboards, herramientas gratuitas y talleres.", "",
          "Contact: WhatsApp +593 99 990 5080 · " + ADDR, "",
          "## English", "",
-         f"- [A tale of two businesses]({SITE}/{HUB['en'][0]}/): {UI['en']['hub_desc']}",
+         f"- [There are two kinds of businesses]({SITE}/{HUB['en'][0]}/): {UI['en']['hub_desc']}",
+         f"- [Pre-launch review]({SITE}/en/launch-review/): paid review of launch readiness for products built with vibe coding.",
          f"- [Rapid-change corporate workshops]({SITE}/workshops/): 2-hour corporate interventions for financial stress and private-enterprise culture.",
          f"- [Latin America Market Intelligence]({SITE}/market-intelligence-latam/): decision-focused research on pricing, competition, market entry and economic context.",
          f"- [Pacific Basin Intelligence Unit]({SITE}/pacific-basin/): macroeconomic intelligence on Chile, Ecuador, Peru and Colombia."]
     L += [f"- [{name(s, 'en')}]({SITE}/{slug(s, 'en')}/)" for s in page_list]
-    L += ["", "## Español", "", f"- [Historia de dos negocios]({SITE}/{HUB['es'][0]}/): {UI['es']['hub_desc']}",
+    L += ["", "## Español", "", f"- [Dos tipos de creadores de negocios]({SITE}/{HUB['es'][0]}/): {UI['es']['hub_desc']}",
+          f"- [Revisión antes del lanzamiento]({SITE}/revision-de-lanzamiento/): servicio pagado para productos y SaaS hechos con vibecoding.",
           f"- [Talleres corporativos de cambio rápido]({SITE}/talleres/)", f"- [Publicaciones]({SITE}/publicaciones/)",
           f"- [Las 7 formas de destruir tus finanzas personales y familiares]({SITE}/las7formas/)",
           f"- [Visor Antiquiebra · 6–24M]({SITE}/visorantiquiebra/): atravesar el Valle de la Muerte (meses 6 a 24), 15 minutos semanales.",
@@ -404,8 +411,9 @@ HEAD_TPL = """<!DOCTYPE html>
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{og}">
 <meta name="theme-color" content="#060E1D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23060E1D'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='33' font-weight='900' fill='%23E8A020'%3EJ%3C/text%3E%3C/svg%3E" type="image/svg+xml">
 <link rel="preload" as="font" href="/assets/fonts/jost-latin-wght-normal.woff2" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="/assets/fonts/playfair-display-latin-wght-normal.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/assets/fonts/barlow-condensed-900.woff2" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/slide-page.css">
 <script type="application/ld+json">{ld}</script>
 </head>
