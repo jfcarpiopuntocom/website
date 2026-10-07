@@ -107,7 +107,7 @@ const settle = p => p.waitForFunction(() => window.__reel && !window.__reel.auto
     await page.waitForTimeout(600);
     if (errs.length) F(`${name}: errores JS: ${errs.slice(0, 3).join(' | ')}`); else OK(`${name}: sin errores JS`);
     // colores de texto: nada gris (r=g=b entre 60 y 230) en texto de la pagina
-    const grays = await page.evaluate(() => { const bad = []; for (const e of document.querySelectorAll('.front *,.panel *,.bar *,.pips *,.count,.nx')) { if (![...e.childNodes].some(n => n.nodeType === 3 && n.textContent.trim())) continue; const m = getComputedStyle(e).color.match(/[\d.]+/g).map(Number); const a = m[3] == null ? 1 : m[3]; if (a < 1) bad.push(e.tagName + ' alpha ' + a); if (Math.abs(m[0] - m[1]) < 6 && Math.abs(m[1] - m[2]) < 6 && m[0] > 50 && m[0] < 235) bad.push(e.tagName + ' gris ' + m.join(',')); const op = +getComputedStyle(e).opacity; if (op < 1 && e.closest('.front')?.style.opacity === '') bad.push(e.tagName + ' opacity ' + op); } return bad.slice(0, 5); });
+    const grays = await page.evaluate(() => { const bad = []; for (const e of document.querySelectorAll('.front *,.panel *,.bar *,.pips *,.count,.nx')) { if (![...e.childNodes].some(n => n.nodeType === 3 && n.textContent.trim())) continue; if (e.closest('video') && !e.getClientRects().length) continue; const m = getComputedStyle(e).color.match(/[\d.]+/g).map(Number); const a = m[3] == null ? 1 : m[3]; if (a < 1) bad.push(e.tagName + ' alpha ' + a); if (Math.abs(m[0] - m[1]) < 6 && Math.abs(m[1] - m[2]) < 6 && m[0] > 50 && m[0] < 235) bad.push(e.tagName + ' gris ' + m.join(',')); const op = +getComputedStyle(e).opacity; if (op < 1 && e.closest('.front')?.style.opacity === '') bad.push(e.tagName + ' opacity ' + op); } return bad.slice(0, 5); });
     if (grays.length) F(`${name}: texto gris/translucido: ${grays.join('; ')}`); else OK(`${name}: sin texto gris ni translucido`);
     await ctx.close();
   }
@@ -150,10 +150,10 @@ const settle = p => p.waitForFunction(() => window.__reel && !window.__reel.auto
     await ctx.close(); }
 
   // Rutas directas: menu legible, destinos reales, foco y cambio de idioma.
-  { const { ctx, page, errs } = await setup(browser, 375, 667, true); await page.goto(BASE + '/index.html', { waitUntil: 'domcontentloaded' }); await settle(page);
+  { const { ctx, page, errs } = await setup(browser, 375, 667, true); await page.goto(BASE + '/index.html?lang=es', { waitUntil: 'domcontentloaded' }); await settle(page);
     await page.click('#idxb');
     const menu = await page.evaluate(() => ({ visible: !document.querySelector('#idx').hidden, expanded: document.querySelector('#idxb').getAttribute('aria-expanded'), links: [...document.querySelectorAll('.route-grid a,.route-contact')].map(a => a.getAttribute('href')), focus: document.activeElement.getAttribute('href'), label: document.querySelector('#idxb .it').textContent, overflow: document.documentElement.scrollWidth > innerWidth }));
-    menu.visible && menu.expanded === 'true' && menu.links.join(',') === '#apps,#reportes,#talleres,#escuela,#contacto' && menu.focus === '#apps' && menu.label === 'Explorar' && !menu.overflow ? OK('movil: Explorar muestra cinco rutas directas') : F('rutas movil: ' + JSON.stringify(menu));
+    menu.visible && menu.expanded === 'true' && menu.links.join(',') === '#apps,#reportes,#talleres,#visores,#contacto' && menu.focus === '#apps' && menu.label === 'Explorar' && !menu.overflow ? OK('movil: Explorar muestra cinco rutas directas') : F('rutas movil: ' + JSON.stringify(menu));
     await page.click('.route-grid a[href="#reportes"]');
     const moved = await page.evaluate(() => ({ idx: window.__reel.idx, expected: [...document.querySelectorAll('.slide')].findIndex(s => s.id === 'reportes'), hash: location.hash, hidden: document.querySelector('#idx').hidden, expanded: document.querySelector('#idxb').getAttribute('aria-expanded'), focus: document.activeElement.id }));
     moved.idx === moved.expected && moved.hash === '#reportes' && moved.hidden && moved.expanded === 'false' && moved.focus === 't-reportes' ? OK('ruta Reportes llega directo y devuelve el foco al contenido') : F('salto Reportes: ' + JSON.stringify(moved));

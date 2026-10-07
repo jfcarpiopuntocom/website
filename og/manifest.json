@@ -6,6 +6,18 @@
   "lang": "es"
  },
  {
+  "file": "og/reportes-es.png",
+  "kick": "USD 100 · Hasta 72 horas",
+  "title": "Una pregunta. Una decisión más clara.",
+  "lang": "es"
+ },
+ {
+  "file": "og/visores-es.png",
+  "kick": "Herramientas para decidir",
+  "title": "Dos visores",
+  "lang": "es"
+ },
+ {
   "file": "og/articulos-es.png",
   "kick": "Ensayos de economía, instituciones e historia",
   "title": "Artículos",
@@ -14,25 +26,13 @@
  {
   "file": "og/libro-es.png",
   "kick": "Primer libro",
-  "title": "10 Lecciones de Economía(que los gobiernos quisieran ocultarle)",
-  "lang": "es"
- },
- {
-  "file": "og/reportes-es.png",
-  "kick": "Benchmarks y análisis sectoriales",
-  "title": "Reportes",
+  "title": "10 Lessons of Economics(that governments would like to hide from you)",
   "lang": "es"
  },
  {
   "file": "og/trayectoria-es.png",
   "kick": "J.F. Carpio · 25+ años detrás del trabajo",
   "title": "Ideas, mercados y herramientas para decidir mejor",
-  "lang": "es"
- },
- {
-  "file": "og/visores-es.png",
-  "kick": "Herramientas para decidir",
-  "title": "Dos visores",
   "lang": "es"
  },
  {
@@ -54,21 +54,33 @@
   "lang": "es"
  },
  {
-  "file": "og/clientes-es.png",
-  "kick": "Casos reales. Contextos distintos, resultados variables.",
-  "title": "Lo que dicen clientes reales",
-  "lang": "es"
- },
- {
   "file": "og/contacto-es.png",
   "kick": "Talleres · disponibilidad limitada",
   "title": "Si el caso no cabe en una herramienta",
   "lang": "es"
  },
  {
+  "file": "og/clientes-es.png",
+  "kick": "Investigación anterior · contexto del testimonio",
+  "title": "Experiencias con la investigación",
+  "lang": "es"
+ },
+ {
   "file": "og/apps-en.png",
   "kick": "Our own product",
   "title": "Neither Excel nor a notebook.",
+  "lang": "en"
+ },
+ {
+  "file": "og/reportes-en.png",
+  "kick": "USD 100 · Up to 72 hours",
+  "title": "One question. A clearer decision.",
+  "lang": "en"
+ },
+ {
+  "file": "og/visores-en.png",
+  "kick": "Tools to decide",
+  "title": "Two viewers",
   "lang": "en"
  },
  {
@@ -80,25 +92,13 @@
  {
   "file": "og/libro-en.png",
   "kick": "First book",
-  "title": "10 Lecciones de Economía(que los gobiernos quisieran ocultarle)",
-  "lang": "en"
- },
- {
-  "file": "og/reportes-en.png",
-  "kick": "Benchmarks and sector analysis",
-  "title": "Reports",
+  "title": "10 Lessons of Economics(that governments would like to hide from you)",
   "lang": "en"
  },
  {
   "file": "og/trayectoria-en.png",
   "kick": "J.F. Carpio · 25+ years behind the work",
   "title": "Ideas, markets and tools for better decisions",
-  "lang": "en"
- },
- {
-  "file": "og/visores-en.png",
-  "kick": "Tools to decide",
-  "title": "Two viewers",
   "lang": "en"
  },
  {
@@ -120,15 +120,15 @@
   "lang": "en"
  },
  {
-  "file": "og/clientes-en.png",
-  "kick": "Real cases. Different contexts, varying results.",
-  "title": "What real clients say",
-  "lang": "en"
- },
- {
   "file": "og/contacto-en.png",
   "kick": "Workshops · limited availability",
   "title": "If the case does not fit a tool",
+  "lang": "en"
+ },
+ {
+  "file": "og/clientes-en.png",
+  "kick": "Earlier research · testimonial context",
+  "title": "Feedback on the research",
   "lang": "en"
  }
 ]

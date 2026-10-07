@@ -1,8 +1,19 @@
 # JFCarpio.com
 
-> Economic and business research team based in Cuenca, Ecuador, serving clients worldwide in English and Spanish: reports, dashboards, free decision tools and rapid-change corporate workshops. Investigación económica y empresarial: reportes, dashboards, herramientas gratuitas y talleres.
+> Business apps, focused consulting reports, corporate workshops and custom dashboards. Based in Cuenca, Ecuador; serving clients worldwide online in English and Spanish.
 
-Contact: WhatsApp +593 99 990 5080 · General Torres #14, Cuenca, Ecuador
+Contact: jfcarpio@gmail.com · WhatsApp +593 99 990 5080 · General Torres #14, Cuenca, Ecuador
+
+English home: https://jfcarpio.com/ · Spanish home: https://jfcarpio.com/es/
+
+## Core services
+
+- [Business apps](https://jfcarpio.com/en/apps/): sales, inventory and operational tools.
+- [Focused business reports](https://jfcarpio.com/en/reports/): USD 100 for one agreed business question. Questionnaire, 10-minute interview, written report within 72 hours after complete inputs and interview. Scope is confirmed before payment.
+- [Two corporate workshops](https://jfcarpio.com/workshops/): financial stress and private-enterprise culture.
+- [Dashboards](https://jfcarpio.com/en/business-viewers/): Antiquiebra, Gerencial and Marketing; custom work for private clients.
+
+Discovery note: this voluntary directory complements crawlable HTML and the XML sitemap. It does not guarantee indexing or AI recommendations.
 
 ## English
 
@@ -11,22 +22,22 @@ Contact: WhatsApp +593 99 990 5080 · General Torres #14, Cuenca, Ecuador
 - [Rapid-change corporate workshops](https://jfcarpio.com/workshops/): 2-hour corporate interventions for financial stress and private-enterprise culture.
 - [Latin America Market Intelligence](https://jfcarpio.com/market-intelligence-latam/): decision-focused research on pricing, competition, market entry and economic context.
 - [Pacific Basin Intelligence Unit](https://jfcarpio.com/pacific-basin/): macroeconomic intelligence on Chile, Ecuador, Peru and Colombia.
-- [Contrast 1 · See before it hurts](https://jfcarpio.com/en/tale-of-two-businesses/two-ways-to-operate/)
 - [Apps](https://jfcarpio.com/en/apps/)
-- [Contrast 2 · Build shared language](https://jfcarpio.com/en/tale-of-two-businesses/information-alone-is-not-enough/)
-- [Articles](https://jfcarpio.com/en/articles/)
-- [Book](https://jfcarpio.com/en/book/)
-- [Contrast 3 · Read the environment](https://jfcarpio.com/en/tale-of-two-businesses/what-happens-outside/)
+- [Contrast 1 · See before it hurts](https://jfcarpio.com/en/tale-of-two-businesses/two-ways-to-operate/)
+- [Contrast 2 · Read the environment](https://jfcarpio.com/en/tale-of-two-businesses/what-happens-outside/)
 - [Reports](https://jfcarpio.com/en/reports/)
-- [Track record](https://jfcarpio.com/en/track-record/)
+- [Contrast 3 · Build shared language](https://jfcarpio.com/en/tale-of-two-businesses/information-alone-is-not-enough/)
 - [Contrast 4 · See in time](https://jfcarpio.com/en/tale-of-two-businesses/data-is-not-seeing/)
 - [Business viewers](https://jfcarpio.com/en/business-viewers/)
+- [Articles](https://jfcarpio.com/en/articles/)
+- [Book](https://jfcarpio.com/en/book/)
+- [Track record](https://jfcarpio.com/en/track-record/)
 - [Gumroad store](https://jfcarpio.com/en/gumroad-store/)
 - [La Escuela del Dinero (Money School)](https://jfcarpio.com/en/money-school/)
 - [Free resources](https://jfcarpio.com/en/free-resources/)
-- [Clients](https://jfcarpio.com/en/clients/)
 - [Contrast 5 · The choice](https://jfcarpio.com/en/tale-of-two-businesses/the-decision/)
 - [Contact](https://jfcarpio.com/en/contact/)
+- [Clients](https://jfcarpio.com/en/clients/)
 
 ## Español
 
@@ -37,19 +48,19 @@ Contact: WhatsApp +593 99 990 5080 · General Torres #14, Cuenca, Ecuador
 - [Las 7 formas de destruir tus finanzas personales y familiares](https://jfcarpio.com/las7formas/)
 - [Visor Antiquiebra · 6–24M](https://jfcarpio.com/visorantiquiebra/): atravesar el Valle de la Muerte (meses 6 a 24), 15 minutos semanales.
 - [Visor Gerencial](https://jfcarpio.com/visorgerencial/): un tablero por área ejecutiva; Marketing ya disponible.
-- [Contraste 1 · Ver antes de que duela](https://jfcarpio.com/historia-de-dos-negocios/dos-maneras-de-operar/)
 - [Apps](https://jfcarpio.com/apps/)
-- [Contraste 2 · Crear lenguaje común](https://jfcarpio.com/historia-de-dos-negocios/la-informacion-sola-no-basta/)
-- [Artículos](https://jfcarpio.com/articulos/)
-- [Libro](https://jfcarpio.com/libro/)
-- [Contraste 3 · Leer el entorno](https://jfcarpio.com/historia-de-dos-negocios/lo-que-pasa-afuera/)
+- [Contraste 1 · Ver antes de que duela](https://jfcarpio.com/historia-de-dos-negocios/dos-maneras-de-operar/)
+- [Contraste 2 · Leer el entorno](https://jfcarpio.com/historia-de-dos-negocios/lo-que-pasa-afuera/)
 - [Reportes](https://jfcarpio.com/reportes/)
-- [Trayectoria](https://jfcarpio.com/trayectoria/)
+- [Contraste 3 · Crear lenguaje común](https://jfcarpio.com/historia-de-dos-negocios/la-informacion-sola-no-basta/)
 - [Contraste 4 · Ver a tiempo](https://jfcarpio.com/historia-de-dos-negocios/datos-no-es-ver/)
 - [Visores](https://jfcarpio.com/visores/)
+- [Artículos](https://jfcarpio.com/articulos/)
+- [Libro](https://jfcarpio.com/libro/)
+- [Trayectoria](https://jfcarpio.com/trayectoria/)
 - [Tienda Gumroad](https://jfcarpio.com/tienda-gumroad/)
 - [La Escuela del Dinero](https://jfcarpio.com/la-escuela-del-dinero/)
 - [Recursos gratuitos](https://jfcarpio.com/recursos-gratuitos/)
-- [Clientes](https://jfcarpio.com/clientes/)
 - [Contraste 5 · La elección](https://jfcarpio.com/historia-de-dos-negocios/la-decision/)
 - [Contacto](https://jfcarpio.com/contacto/)
+- [Clientes](https://jfcarpio.com/clientes/)

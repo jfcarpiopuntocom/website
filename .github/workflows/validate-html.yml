@@ -28,11 +28,25 @@ on:
       - 'en/launch-review/**/*.html'
       - 'launch-review.css'
       - 'slide-page.css'
+      - 'editorial.css'
+      - 'es/index.html'
+      - 'feed.xml'
+      - 'scripts/test-global-discovery.py'
+      - 'scripts/audit_discovery.py'
+      - 'scripts/build-home-locales.py'
+      - 'scripts/build-discovery.py'
+      - 'scripts/report_offer.py'
+      - 'scripts/homologate-interiors.py'
       - 'scripts/test-brand-offer.cjs'
       - 'scripts/test-narrative.cjs'
       - 'scripts/build-slide-pages.py'
       - 'scripts/build-og.cjs'
       - 'og/manifest.json'
+      - 'scripts/landing-*'
+      - 'scripts/media-range.mjs'
+      - 'scripts/test-media-ranges.mjs'
+      - 'scripts/test-landing-routing.cjs'
+      - 'scripts/apps_video.py'
       - 'worker.js'
       - '.github/workflows/validate-html.yml'
   pull_request:
@@ -55,11 +69,20 @@ on:
       - 'en/launch-review/**/*.html'
       - 'launch-review.css'
       - 'slide-page.css'
+      - 'editorial.css'
+      - 'es/index.html'
+      - 'feed.xml'
+      - 'scripts/**/*.py'
       - 'scripts/test-brand-offer.cjs'
       - 'scripts/test-narrative.cjs'
       - 'scripts/build-slide-pages.py'
       - 'scripts/build-og.cjs'
       - 'og/manifest.json'
+      - 'scripts/landing-*'
+      - 'scripts/media-range.mjs'
+      - 'scripts/test-media-ranges.mjs'
+      - 'scripts/test-landing-routing.cjs'
+      - 'scripts/apps_video.py'
       - 'worker.js'
       - '.github/workflows/validate-html.yml'
   workflow_dispatch:
@@ -86,6 +109,9 @@ jobs:
 
       - name: Brand and launch-service regression guard
         run: node scripts/test-brand-offer.cjs
+
+      - name: International discovery and focused-report contract
+        run: python3 scripts/test-global-discovery.py
 
       - name: DOCTYPE count = 1 (browser-save catastrophe detector)
         run: |
@@ -186,3 +212,9 @@ jobs:
               sys.exit(2)
           PYEOF
           done
+
+      - name: Dedicated landing routing and Friendly priority
+        run: node scripts/test-landing-routing.cjs
+
+      - name: Native video byte ranges
+        run: node scripts/test-media-ranges.mjs

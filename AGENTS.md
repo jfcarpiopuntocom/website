@@ -180,3 +180,14 @@ https://Codex.ai/code/session_[ID]
 - Prueba obligatoria tras cambiar la portada: `SITE=$PWD PW=<playwright> node scripts/test-reel.cjs white` (debe decir TODO OK).
 - El reel anterior (Codex) esta en `indexbackup28sept2026-reel-codex.html`; no borrar.
 - OJO despliegue: el Worker `website` debe estar conectado a ESTE repo (no a friendly-123). Ver la nota de despliegue en `notas/`.
+
+## Global market positioning — JFC, 2026-10-07
+- English is the initial home language; Spanish stays available explicitly. Revenue order: apps, USD 100 focused reports in up to 72 hours, the two workshops, private dashboards.
+- Interior pages use the shared Publicaciones-inspired editorial spacing, bold emphasis and colored underlines. Keep all text readable.
+- The large CV illustration is removed from the reel; professional history remains available on demand and in the original profile route. Testimonials belong to contextual research proof; earlier research is not a review of the new fixed-price offer.
+
+
+## JFC release authorization and separation — 2026-10-07
+- JFC authorized finishing and publishing jfcarpio.com. Do not modify friendly123.com, its landing, Worker friendly123-com, DNS or runtime while Claude works there; wait for an express new request.
+- Distinguish the arrival carousel, website content, the three-app overview landing, and the individual Friendly landing. Friendly is primary; Amigable and Consultorio stay secondary and accessible.
+- Apply the globally installed sloptrim skill to copy and notes, preserving facts and approved visual emphasis. Notion holds shared decisions and release evidence.

@@ -15,6 +15,8 @@ Volver a correr ambos scripts cada vez que cambie el texto de un fotograma. (JFC
 REGLAS: nunca "economista"; marca JFCarpio.com en voz de equipo; texto minimo .82rem; imagenes con URL absoluta.
 """
 import re, json, html, os
+from report_offer import report_body, report_schema
+from apps_video import apps_video
 from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,10 +30,10 @@ HUB = {"es": ("historia-de-dos-negocios", "Dos tipos de creadores"), "en": ("en/
 PAGES = {
     "c1": ("historia-de-dos-negocios/dos-maneras-de-operar", "en/tale-of-two-businesses/two-ways-to-operate", "Contraste 1 · Ver antes de que duela", "Contrast 1 · See before it hurts"),
     "apps": ("apps", "en/apps", "Apps", "Apps"),
-    "c4": ("historia-de-dos-negocios/la-informacion-sola-no-basta", "en/tale-of-two-businesses/information-alone-is-not-enough", "Contraste 2 · Crear lenguaje común", "Contrast 2 · Build shared language"),
+    "c4": ("historia-de-dos-negocios/la-informacion-sola-no-basta", "en/tale-of-two-businesses/information-alone-is-not-enough", "Contraste 3 · Crear lenguaje común", "Contrast 3 · Build shared language"),
     "articulos": ("articulos", "en/articles", "Artículos", "Articles"),
     "libro": ("libro", "en/book", "Libro", "Book"),
-    "c5": ("historia-de-dos-negocios/lo-que-pasa-afuera", "en/tale-of-two-businesses/what-happens-outside", "Contraste 3 · Leer el entorno", "Contrast 3 · Read the environment"),
+    "c5": ("historia-de-dos-negocios/lo-que-pasa-afuera", "en/tale-of-two-businesses/what-happens-outside", "Contraste 2 · Leer el entorno", "Contrast 2 · Read the environment"),
     "reportes": ("reportes", "en/reports", "Reportes", "Reports"),
     "trayectoria": ("trayectoria", "en/track-record", "Trayectoria", "Track record"),
     "c8": ("historia-de-dos-negocios/datos-no-es-ver", "en/tale-of-two-businesses/data-is-not-seeing", "Contraste 4 · Ver a tiempo", "Contrast 4 · See in time"),
@@ -76,7 +78,7 @@ FAQ = {
     }
 }
 # Testimonios reales (textos literales de la slide Clientes); se muestran en las paginas de estos capitulos.
-QUOTES = {"c5": ("k300", "k301"), "c4": ("k257", "k258"), "c9": ("k259", "k260")}
+QUOTES = {} # Proof is contextualized on reports and the earlier-work archive.
 
 
 class N:
@@ -159,13 +161,15 @@ def main():
     secs = {}
     for m in re.finditer(r'<section class="slide[^"]*" id="([a-z0-9]+)"[^>]*>.*?</section>', src, re.S):
         secs[m.group(1)] = parse(m.group(0))
+    archive = re.search(r'<template id="research-archive">(.*?)</template>', src, re.S)
+    if archive: secs["clientes"] = parse(archive.group(1))
     page_list = [sid for sid in secs if sid in PAGES]
     manifest = []
     sitemap_urls = []
 
     for lang in ("es", "en"):
         T = TT[lang]; U = UI[lang]; other = "en" if lang == "es" else "es"
-        home = SITE + ("/" if lang == "es" else "/?lang=en")
+        home = SITE + ("/es/" if lang == "es" else "/")
 
         def tx(n):
             k = n.attrs.get("data-t")
@@ -190,7 +194,7 @@ def main():
                                    og=og, loc=U["loc"], ld=json.dumps(ld, ensure_ascii=False))
 
         def org():
-            return {"@type": "ProfessionalService", "@id": SITE + "/#org", "name": "JFCarpio.com", "url": SITE + "/",
+            return {"@type": "ProfessionalService", "@id": SITE + "/#organization", "name": "JFCarpio.com", "url": SITE + "/",
                     "telephone": "+593999905080", "image": SITE + "/og-jfcarpio-v2.png",
                     "address": {"@type": "PostalAddress", "streetAddress": "General Torres #14", "addressLocality": "Cuenca", "addressCountry": "EC"},
                     "areaServed": "Worldwide"}
@@ -230,7 +234,8 @@ def main():
                 og = f"{SITE}/og-jfcarpio-v2.png"
             else:
                 og = f"{SITE}/{ogfile(sid, lang)}"
-                manifest.append({"file": ogfile(sid, lang), "kick": kick_t, "title": title_h, "lang": lang})
+                share_kick = ("USD 100 · Up to 72 hours" if lang == "en" else "USD 100 · Hasta 72 horas") if sid == "reportes" else kick_t
+                manifest.append({"file": ogfile(sid, lang), "kick": share_kick, "title": title_h, "lang": lang})
             prv = page_list[i - 1] if i > 0 else None
             nxt = page_list[i + 1] if i < len(page_list) - 1 else None
 
@@ -276,7 +281,7 @@ def main():
                     if ch.tag == "h3": body.append(f"<h2>{esc(tx(ch))}</h2>")
                     elif ch.tag == "p" and tx(ch): body.append(f"<p>{esc(tx(ch))}</p>")
                     elif "gd" in ch.cls():
-                        body.append('<div class="cards">')
+                        body.append('<div class="cards apps-fleet">' if sid == 'apps' else '<div class="cards">')
                         for cd in find_all(ch, cls="cd"):
                             b = find(cd, "b"); tg = find(cd, cls="tg"); pr = find(cd, cls="pr")
                             ps = [p for p in find_all(cd, "p") if "pr" not in p.cls()]
@@ -291,20 +296,31 @@ def main():
                             body.append(c + "</div>")
                         body.append("</div>")
             if sid == "apps":
+                body.append(apps_video(lang))
                 if lang == "es":
                     body.append('<section class="launch-offer" aria-labelledby="launch-offer-title"><p class="kick">Servicio pagado</p><h2 id="launch-offer-title">¿Vas a lanzar un producto hecho con vibecoding?</h2><p>Revisamos la experiencia, la presencia en buscadores y lo que ocurre cuando algo falla. Incluye móvil, metadatos, página 404, estados de carga, contacto y los demás detalles que una demo no muestra.</p><a class="btn" href="/revision-de-lanzamiento/">Ver la revisión de lanzamiento</a></section>')
                 else:
                     body.append('<section class="launch-offer" aria-labelledby="launch-offer-title"><p class="kick">Paid service</p><h2 id="launch-offer-title">Launching a product built with vibe coding?</h2><p>We check the customer experience, search visibility and what happens when something fails. That includes mobile, metadata, a 404 page, loading states, contact paths and the details a demo can miss.</p><a class="btn" href="/en/launch-review/">See the launch review</a></section>')
+            if sid == "reportes":
+                body = report_body(lang, body)
+                title = ("USD 100 Business Reports in 72 Hours" if lang == "en" else "Reportes empresariales de USD 100 en 72 horas") + " | JFCarpio.com"
+                desc = ("One business question, a questionnaire, a 10-minute online interview and a focused written report within 72 hours. USD 100. English and Spanish." if lang == "en" else "Una pregunta empresarial, un cuestionario, una entrevista online de 10 minutos y un reporte escrito en hasta 72 horas. USD 100. Inglés y español.")
+            if sid == "visores":
+                if lang == "en":
+                    body.append('<section class="accent-blue"><h2>A dashboard built around your business</h2><p>The free Antiquiebra and Gerencial tools show how we turn <strong>scattered data into useful decisions</strong>. Marketing is available now; the other executive areas are being developed.</p><p>For private clients, we can design a dashboard around the question, indicators and workflow that matter to their business. Scope and price are agreed for each project. Work is online, in English or Spanish.</p><a class="btn" href="/en/contact/">Discuss a custom dashboard</a></section>')
+                else:
+                    body.append('<section class="accent-blue"><h2>Un dashboard construido para tu negocio</h2><p>Las herramientas gratuitas Antiquiebra y Gerencial muestran cómo convertimos <strong>datos dispersos en decisiones útiles</strong>. Marketing ya está disponible; las demás áreas ejecutivas están en desarrollo.</p><p>Para clientes privados, podemos diseñar un dashboard alrededor de la pregunta, los indicadores y el proceso que importan en su negocio. El alcance y el precio se acuerdan por proyecto. Trabajamos online en inglés o español.</p><a class="btn" href="/contacto/">Conversemos sobre tu dashboard</a></section>')
             graph = [
                 {"@type": "WebPage", "@id": canon + "#page", "url": canon, "name": title, "description": desc, "inLanguage": lang,
                  "isPartOf": {"@type": "WebSite", "name": "JFCarpio.com", "url": SITE + "/"}, "primaryImageOfPage": og,
-                 "publisher": {"@id": SITE + "/#org"}},
+                 "publisher": {"@id": SITE + "/#organization"}},
                 {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": U["home"], "item": home}]
                  + ([{"@type": "ListItem", "position": 2, "name": HUB[lang][1], "item": f"{SITE}/{HUB[lang][0]}/"},
                      {"@type": "ListItem", "position": 3, "name": short, "item": canon}] if sl.startswith(HUB[lang][0] + "/")
                     else [{"@type": "ListItem", "position": 2, "name": short, "item": canon}])},
                 org(),
             ]
+            if sid == "reportes": graph.append(report_schema(lang, canon))
             if sid in FAQ:
                 qa = FAQ[sid][lang]
                 body.append(f'<section class="faq"><h2>{U["faq"]}</h2>' + "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in qa) + "</section>")
@@ -313,7 +329,7 @@ def main():
             nav += f'<a href="/{slug(prv, lang)}/">← {esc(name(prv, lang))}</a>' if prv else "<span></span>"
             nav += f'<a href="/{slug(nxt, lang)}/">{esc(name(nxt, lang))} →</a>' if nxt else "<span></span>"
             nav += "</nav>"
-            reel = f"{SITE}/{'?lang=en' if lang == 'en' else ''}#{sid}"
+            reel = f"{home}#{'reportes' if sid == 'clientes' else sid}"
             page = head(title, desc, canon, alt_es, alt_en, og, {"@context": "https://schema.org", "@graph": graph}) + \
                 chrome(reel, alt_en if lang == "es" else alt_es, "\n".join(body), nav) + "\n</body>\n</html>\n"
             write(sl, page)
@@ -346,7 +362,7 @@ def main():
     block = "\n  <!-- SLIDE-PAGES-START -->\n" + "".join(
         f'  <url>\n    <loc>{u}</loc>\n    <lastmod>{DATE}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>{pr}</priority>\n'
         f'    <xhtml:link rel="alternate" hreflang="es" href="{e}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="{n}"/>\n'
-        f'    <xhtml:link rel="alternate" hreflang="x-default" href="{e}"/>\n  </url>\n' for u, e, n, pr in sitemap_urls) + "  <!-- SLIDE-PAGES-END -->\n"
+        f'    <xhtml:link rel="alternate" hreflang="x-default" href="{n}"/>\n  </url>\n' for u, e, n, pr in sitemap_urls) + "  <!-- SLIDE-PAGES-END -->\n"
     sm = re.sub(r"\s*</urlset>\s*$", "\n</urlset>\n", sm)
     sm = sm.replace("</urlset>", block + "</urlset>")
     open(sm_path, "w", encoding="utf-8").write(sm)
@@ -365,8 +381,15 @@ def main():
     open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(src)
     # llms.txt: mapa del sitio para buscadores con IA (ChatGPT, Claude, Perplexity). Se regenera aqui.
     L = ["# JFCarpio.com", "",
-         "> Economic and business research team based in Cuenca, Ecuador, serving clients worldwide in English and Spanish: reports, dashboards, free decision tools and rapid-change corporate workshops. Investigación económica y empresarial: reportes, dashboards, herramientas gratuitas y talleres.", "",
-         "Contact: WhatsApp +593 99 990 5080 · " + ADDR, "",
+         "> Business apps, focused consulting reports, corporate workshops and custom dashboards. Based in Cuenca, Ecuador; serving clients worldwide online in English and Spanish.", "",
+         "Contact: jfcarpio@gmail.com · WhatsApp +593 99 990 5080 · " + ADDR, "",
+         "English home: https://jfcarpio.com/ · Spanish home: https://jfcarpio.com/es/", "",
+         "## Core services", "",
+         "- [Business apps](https://jfcarpio.com/en/apps/): sales, inventory and operational tools.",
+         "- [Focused business reports](https://jfcarpio.com/en/reports/): USD 100 for one agreed business question. Questionnaire, 10-minute interview, written report within 72 hours after complete inputs and interview. Scope is confirmed before payment.",
+         "- [Two corporate workshops](https://jfcarpio.com/workshops/): financial stress and private-enterprise culture.",
+         "- [Dashboards](https://jfcarpio.com/en/business-viewers/): Antiquiebra, Gerencial and Marketing; custom work for private clients.", "",
+         "Discovery note: this voluntary directory complements crawlable HTML and the XML sitemap. It does not guarantee indexing or AI recommendations.", "",
          "## English", "",
          f"- [There are two kinds of businesses]({SITE}/{HUB['en'][0]}/): {UI['en']['hub_desc']}",
          f"- [Pre-launch review]({SITE}/en/launch-review/): paid review of launch readiness for products built with vibe coding.",
@@ -396,7 +419,7 @@ HEAD_TPL = """<!DOCTYPE html>
 <link rel="canonical" href="{canon}">
 <link rel="alternate" hreflang="es" href="{alt_es}">
 <link rel="alternate" hreflang="en" href="{alt_en}">
-<link rel="alternate" hreflang="x-default" href="{alt_es}">
+<link rel="alternate" hreflang="x-default" href="{alt_en}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="{loc}">
 <meta property="og:site_name" content="JFCarpio.com">
@@ -415,9 +438,10 @@ HEAD_TPL = """<!DOCTYPE html>
 <link rel="preload" as="font" href="/assets/fonts/jost-latin-wght-normal.woff2" type="font/woff2" crossorigin>
 <link rel="preload" as="font" href="/assets/fonts/barlow-condensed-900.woff2" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/slide-page.css">
+<link rel="stylesheet" href="/editorial.css">
 <script type="application/ld+json">{ld}</script>
 </head>
-<body>
+<body class="editorial">
 <!-- Pagina generada por scripts/build-slide-pages.py desde index.html. NO editar a mano: cambia el fotograma en index.html y vuelve a correr el script. -->
 """
 
@@ -428,8 +452,14 @@ h1{{font:800 30pt/1 'Playfair Display',Georgia,serif;text-transform:uppercase;ma
 .n{{display:inline-block;background:#E8A020;color:#060E1D;border-radius:99px;padding:2pt 10pt;margin-right:8pt}}
 ol{{columns:2;column-gap:14mm;padding-left:18pt}}li{{margin:0 0 7pt;break-inside:avoid}}li::marker{{font:700 11pt 'Jost',Arial,sans-serif;color:#9A5B00}}
 .f{{margin-top:18pt;border-top:2px solid #E8A020;padding-top:8pt;font-size:10.5pt}}a{{color:#060E1D}}
-</style></head><body><h1>{h}</h1><p class="l"><span class="n">B {n}</span>{lab}</p><ol>{items}</ol>
+</style></head><body class="editorial"><h1>{h}</h1><p class="l"><span class="n">B {n}</span>{lab}</p><ol>{items}</ol>
 <p class="f"><a href="{hub}">{hub}</a><br>{foot}</p></body></html>"""
 
 if __name__ == "__main__":
+    from private_backup import snapshot
+    snapshot([str(p.relative_to(__import__("pathlib").Path(ROOT))) for p in __import__("pathlib").Path(ROOT).rglob("index.html") if "backups" not in p.parts and "codex-backups" not in p.parts], "page-generation")
     main()
+    import runpy
+    runpy.run_path(os.path.join(ROOT,"scripts","homologate-interiors.py"),run_name="__main__")
+    runpy.run_path(os.path.join(ROOT,"scripts","build-home-locales.py"),run_name="__main__")
+    runpy.run_path(os.path.join(ROOT,"scripts","build-discovery.py"),run_name="__main__")

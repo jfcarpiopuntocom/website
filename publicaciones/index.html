@@ -117,7 +117,7 @@ a { text-decoration:none; color:inherit; }
 .page-badge-dot { width:6px; height:6px; border-radius:50%; background:#E86040; -webkit-flex-shrink:0; flex-shrink:0; }
 .page-title { font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:clamp(32px,6vw,60px); font-weight:900; line-height:1.02; text-transform:uppercase; letter-spacing:-.01em; color:#FFFFFF; margin-bottom:16px; }
 .page-title span { color:#E86040; }
-.page-sub { font-family:'Lora',Georgia,serif; font-size:15px; color:#CCCCCC; line-height:1.7; max-width:560px; }
+.page-sub { font-family:'Lora',Georgia,serif; font-size:15px; color:#F2F2F2; line-height:1.7; max-width:560px; }
 
 /* ── SECTION BLOCKS ── */
 .pub-section { margin-top:52px; -webkit-animation:fadeUp .5s .2s both; animation:fadeUp .5s .2s both; }
@@ -139,8 +139,8 @@ a { text-decoration:none; color:inherit; }
 .featured-card:hover { border-color:rgba(232,96,64,.45); background:linear-gradient(135deg,rgba(232,96,64,.15) 0%,rgba(232,160,32,.09) 100%); }
 .fc-badge { font-family:'Space Mono','Courier New',monospace; font-size:9px; font-weight:700; color:#E86040; letter-spacing:.28em; text-transform:uppercase; margin-bottom:8px; }
 .fc-title { font-family:'Lora',Georgia,serif; font-size:clamp(15px,2vw,18px); font-weight:700; color:#FFFFFF; line-height:1.35; margin-bottom:10px; }
-.fc-desc { font-family:'Lora',Georgia,serif; font-size:13.5px; color:#CCCCCC; line-height:1.65; margin-bottom:14px; }
-.fc-meta { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:#888888; letter-spacing:.07em; }
+.fc-desc { font-family:'Lora',Georgia,serif; font-size:13.5px; color:#F2F2F2; line-height:1.65; margin-bottom:14px; }
+.fc-meta { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:#F2F2F2; letter-spacing:.07em; }
 .fc-arrow { position:absolute; top:26px; right:28px; font-size:17px; color:#E86040; opacity:.55; transition:opacity .2s, transform .2s; }
 .featured-card:hover .fc-arrow { opacity:1; transform:translate(3px,-3px); }
 
@@ -152,18 +152,18 @@ a { text-decoration:none; color:inherit; }
   gap:18px;
 }
 .paper-item:last-child { border-bottom:none; }
-.paper-num { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:rgba(255,255,255,.18); letter-spacing:.06em; -webkit-flex-shrink:0; flex-shrink:0; width:28px; padding-top:3px; }
+.paper-num { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:#FFFFFF; letter-spacing:.06em; -webkit-flex-shrink:0; flex-shrink:0; width:28px; padding-top:3px; }
 .paper-body { -webkit-flex:1; flex:1; min-width:0; }
 .paper-title { font-family:'Lora',Georgia,serif; font-size:15px; font-weight:600; color:#FFFFFF; line-height:1.45; margin-bottom:7px; }
-.paper-desc { font-family:'Lora',Georgia,serif; font-size:13px; color:#CCCCCC; line-height:1.6; margin-bottom:9px; }
-.paper-meta { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#CCCCCC; letter-spacing:.1em; }
+.paper-desc { font-family:'Lora',Georgia,serif; font-size:13px; color:#F2F2F2; line-height:1.6; margin-bottom:9px; }
+.paper-meta { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#F2F2F2; letter-spacing:.1em; }
 .paper-tags { display:-webkit-flex; display:flex; -webkit-flex-wrap:wrap; flex-wrap:wrap; gap:5px; margin-top:8px; }
-.ptag { font-family:'Space Mono','Courier New',monospace; font-size:9px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; border:1px solid rgba(255,255,255,.08); padding:2px 7px; color:#888888; }
+.ptag { font-family:'Space Mono','Courier New',monospace; font-size:9px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; border:1px solid rgba(255,255,255,.08); padding:2px 7px; color:#F2F2F2; }
 .ptag-eco  { color:#28ECAA; border-color:rgba(40,236,170,.18); }
 .ptag-inst { color:#3B7EE8; border-color:rgba(59,126,232,.18); }
 .ptag-emp  { color:#E86040; border-color:rgba(232,96,64,.18); }
 .ptag-gold { color:#E8A020; border-color:rgba(232,160,32,.18); }
-.paper-views { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#CCCCCC; letter-spacing:.1em; -webkit-flex-shrink:0; flex-shrink:0; padding-top:3px; }
+.paper-views { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#F2F2F2; letter-spacing:.1em; -webkit-flex-shrink:0; flex-shrink:0; padding-top:3px; }
 
 /* BLOG ANTERIOR - visible archive */
 .blog-toggle {
@@ -186,12 +186,12 @@ a { text-decoration:none; color:inherit; }
 /* ── BLOG ITEM ── */
 .blog-item { display:-webkit-flex; display:flex; gap:16px; padding:14px 0; border-bottom:1px solid rgba(255,255,255,.04); }
 .blog-item:last-child { border-bottom:none; }
-.blog-num { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:rgba(255,255,255,.15); -webkit-flex-shrink:0; flex-shrink:0; width:28px; padding-top:2px; }
+.blog-num { font-family:'Space Mono','Courier New',monospace; font-size:10px; color:#FFFFFF; -webkit-flex-shrink:0; flex-shrink:0; width:28px; padding-top:2px; }
 .blog-body { -webkit-flex:1; flex:1; min-width:0; }
-.blog-title { font-family:'Lora',Georgia,serif; font-size:14px; font-weight:600; color:#CCCCCC; line-height:1.4; margin-bottom:5px; }
+.blog-title { font-family:'Lora',Georgia,serif; font-size:14px; font-weight:600; color:#F2F2F2; line-height:1.4; margin-bottom:5px; }
 .blog-tags { display:-webkit-flex; display:flex; -webkit-flex-wrap:wrap; flex-wrap:wrap; gap:5px; }
-.btag { font-family:'Space Mono','Courier New',monospace; font-size:8px; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(255,255,255,.06); padding:1px 6px; color:#CCCCCC; }
-.blog-date { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#CCCCCC; -webkit-flex-shrink:0; flex-shrink:0; padding-top:2px; }
+.btag { font-family:'Space Mono','Courier New',monospace; font-size:8px; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(255,255,255,.06); padding:1px 6px; color:#F2F2F2; }
+.blog-date { font-family:'Space Mono','Courier New',monospace; font-size:9px; color:#F2F2F2; -webkit-flex-shrink:0; flex-shrink:0; padding-top:2px; }
 
 /* ── FOOTER ── */
 .foot { background:rgba(6,14,29,.98); border-top:1px solid rgba(255,255,255,.06); padding:22px 28px; display:-webkit-flex; display:flex; -webkit-align-items:center; align-items:center; -webkit-justify-content:space-between; justify-content:space-between; -webkit-flex-wrap:wrap; flex-wrap:wrap; gap:12px; position:relative; z-index:10; }
@@ -245,8 +245,9 @@ a { text-decoration:none; color:inherit; }
   .foot { padding:18px 16px; }
 }
 </style>
+<link rel="stylesheet" href="/editorial.css">
 </head>
-<body __processed_caf8dc78-8457-4046-a2b4-5bf6aafb1db9__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZW5hYmxlZCIsIkNPTkZJRyI6ImRpc2FibGVkIn0sInZlcnNpb24iOiIyLjAuNDUiLCJzY29yZSI6MjAwNDUwfV0=" cz-shortcut-listen="true">
+<body __processed_caf8dc78-8457-4046-a2b4-5bf6aafb1db9__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZW5hYmxlZCIsIkNPTkZJRyI6ImRpc2FibGVkIn0sInZlcnNpb24iOiIyLjAuNDUiLCJzY29yZSI6MjAwNDUwfV0=" cz-shortcut-listen="true" class="editorial publications-reading">
 
 <div class="scroll-progress"><div class="scroll-progress-fill" id="spFill" style="width: 0%;"></div></div>
 
@@ -407,8 +408,8 @@ a { text-decoration:none; color:inherit; }
     <div class="paper-item" style="opacity:.65;">
       <span class="paper-num">—</span>
       <div class="paper-body">
-        <div class="paper-title" style="color:#888888; font-style:italic;">Artículos en Diario Hoy y revistas gremiales y empresariales de Quito y Guayaquil</div>
-        <p class="paper-desc" style="color:#CCCCCC;">Columnas y ensayos publicados en medios del sector empresarial ecuatoriano. Índice en preparación.</p>
+        <div class="paper-title" style="color:#F2F2F2; font-style:italic;">Artículos en Diario Hoy y revistas gremiales y empresariales de Quito y Guayaquil</div>
+        <p class="paper-desc" style="color:#F2F2F2;">Columnas y ensayos publicados en medios del sector empresarial ecuatoriano. Índice en preparación.</p>
         <div class="paper-meta" style="margin-top:8px;">Próximamente</div>
       </div>
     </div>
@@ -446,14 +447,14 @@ a { text-decoration:none; color:inherit; }
   <!-- LIBRO EN PROCESO -->
   <div class="pub-section">
     <div class="sec-header">
-      <span class="sec-label" style="color:#E6E6E6;">Libro <span style="color:#CCCCCC;">en Proceso</span></span>
+      <span class="sec-label" style="color:#E6E6E6;">Libro <span style="color:#F2F2F2;">en Proceso</span></span>
       <span class="sec-count">Manuscrito en desarrollo · 2025–</span>
     </div>
     <div class="paper-item" style="opacity:.7;">
       <span class="paper-num">→</span>
       <div class="paper-body">
-        <div class="paper-title" style="color:#CCCCCC;">Principios de Economía: enfoque con instituciones y empresa</div>
-        <p class="paper-desc" style="color:#999999;">Texto universitario de economía que integra la tradición austriaca con la nueva economía institucional y la teoría de la empresa. Orientado a programas de negocios y economía en América Latina.</p>
+        <div class="paper-title" style="color:#F2F2F2;">Principios de Economía: enfoque con instituciones y empresa</div>
+        <p class="paper-desc" style="color:#F2F2F2;">Texto universitario de economía que integra la tradición austriaca con la nueva economía institucional y la teoría de la empresa. Orientado a programas de negocios y economía en América Latina.</p>
         <div class="paper-tags"><span class="ptag">Manuscrito</span><span class="ptag ptag-eco">Economía institucional</span><span class="ptag ptag-emp">Teoría de la empresa</span></div>
       </div>
     </div>
@@ -752,4 +753,4 @@ function toggleBlog(){ return true; }
 </script>
 
 
-</body></html>
+<nav class="commercial-nav" data-commercial-nav aria-label="Recursos para tu negocio"><a href="/es/">JFCarpio.com</a><a href="/apps/">Apps</a><a href="/reportes/">Reportes de USD 100</a><a href="/talleres/">Talleres</a><a href="/visores/">Dashboards</a></nav></body></html>

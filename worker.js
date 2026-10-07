@@ -1,3 +1,5 @@
+import { mediaRange } from './scripts/media-range.mjs';
+import { marketingResponse } from './scripts/landing-routing.mjs';
 // jfcarpio.com · Cloudflare Worker v5 (JFC 2026-09-30)
 // Todo el sitio sale de Cloudflare (static assets); GitHub solo guarda el codigo.
 // Antes (v3) el Worker pedia cada ruta a www.jfcarpio.com, que iba DIRECTO a
@@ -35,11 +37,12 @@ const SEC = {
 };
 const CSP =
   "default-src 'self'; " +
-  "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com; " + // Cloudflare Web Analytics + GA4
-  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
-  "font-src 'self' https://fonts.gstatic.com; " +
+  "script-src 'self' https://jfcarpio.com 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com; " + // Cloudflare Web Analytics + GA4
+  "style-src 'self' https://jfcarpio.com 'unsafe-inline' https://fonts.googleapis.com; " +
+  "font-src 'self' https://jfcarpio.com https://fonts.gstatic.com; " +
   "img-src 'self' data: https:; " +
   "connect-src 'self' https://api.anthropic.com https://cloudflareinsights.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com; " +
+  "media-src 'self' https://jfcarpio.com; " +
   "frame-ancestors 'self'; " +
   "upgrade-insecure-requests";
 
@@ -55,6 +58,19 @@ export default {
     if (url.hostname.startsWith("www.")) {
       url.hostname = url.hostname.slice(4);
       return Response.redirect(url.toString(), 301);
+    }
+    // Offer hosts serve only their corresponding marketing page. Friendly's
+    // own domain and runtime are outside this Worker's routes and this map.
+    const marketing = await marketingResponse(request, env);
+    if (marketing) {
+      const headers = new Headers(marketing.headers);
+      for (const [key, value] of Object.entries(SEC)) headers.set(key, value);
+      const html = (headers.get('Content-Type') || '').includes('text/html');
+      if (html) headers.set('Content-Security-Policy', CSP);
+      const secured = new Response(marketing.body, { status: marketing.status, headers });
+      return html && marketing.status === 200 && request.method === 'GET'
+        ? new HTMLRewriter().on('head', new GA4HeadInjector()).transform(secured)
+        : secured;
     }
     // OpenAI plugin domain verification for Business Survival Score (2026-10-02).
     // The submission portal allows an eligible parent origin of the MCP hostname.
@@ -95,7 +111,8 @@ export default {
     if (to) return Response.redirect("https://jfcarpio.com" + to, 301);
 
     // 2. Archivos del sitio desde Cloudflare (sin volver a GitHub)
-    const res = await env.ASSETS.fetch(request);
+    let res = await env.ASSETS.fetch(request);
+    if (url.pathname.endsWith('.mp4')) res = mediaRange(res, request);
     // 3. Cabeceras de seguridad en todo
     const h = new Headers(res.headers);
     for (const [k, v] of Object.entries(SEC)) h.set(k, v);

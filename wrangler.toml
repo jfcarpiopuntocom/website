@@ -4,6 +4,13 @@ routes = [
   { pattern = "jfcarpio.com/*", zone_name = "jfcarpio.com" },
   { pattern = "www.jfcarpio.com/*", zone_name = "jfcarpio.com" },
   { pattern = "blog.jfcarpio.com/*", zone_name = "jfcarpio.com" },
+  { pattern = "apps.jfcarpio.com", custom_domain = true },
+  { pattern = "consultor.jfcarpio.com", custom_domain = true },
+  { pattern = "workshops.jfcarpio.com", custom_domain = true },
+  { pattern = "launch-review.jfcarpio.com", custom_domain = true },
+  { pattern = "market-intelligence.jfcarpio.com", custom_domain = true },
+  { pattern = "pacific-basin.jfcarpio.com", custom_domain = true },
+  { pattern = "dinero.jfcarpio.com", custom_domain = true },
 ]
 compatibility_date = "2025-09-27"
 

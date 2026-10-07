@@ -20,3 +20,12 @@ User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://jfcarpio.com/sitemap.xml
+
+# Dedicated offer sitemaps
+Sitemap: https://apps.jfcarpio.com/sitemap.xml
+Sitemap: https://consultor.jfcarpio.com/sitemap.xml
+Sitemap: https://workshops.jfcarpio.com/sitemap.xml
+Sitemap: https://launch-review.jfcarpio.com/sitemap.xml
+Sitemap: https://market-intelligence.jfcarpio.com/sitemap.xml
+Sitemap: https://pacific-basin.jfcarpio.com/sitemap.xml
+Sitemap: https://dinero.jfcarpio.com/sitemap.xml

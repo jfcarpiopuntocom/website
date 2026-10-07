@@ -1,0 +1,59 @@
+/* Shared interior reading system. Content stays visible without scripts. */
+@font-face{font-family:Jost;font-style:normal;font-weight:100 900;font-display:swap;src:url('/assets/fonts/jost-latin-wght-normal.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:900;font-display:swap;src:url('/assets/fonts/barlow-condensed-900.woff2') format('woff2')}
+@font-face{font-family:'Space Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/space-mono-400.woff2') format('woff2')}
+body.editorial{--ink:#FFFFFF;--paper:#060E1D;--editorial-accent:#E8A020;color:var(--ink);background:var(--paper);font-family:Jost,Arial,sans-serif;font-size:17px;line-height:1.75}
+.editorial main,.editorial .page-wrap,.editorial article{overflow-wrap:break-word}
+.editorial h1,.editorial .page-title{font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;line-height:1.06}
+.editorial main h2,.editorial main h3{line-height:1.25;margin-top:1.8em;margin-bottom:.65em}
+.editorial main p{line-height:1.75;margin-bottom:1.25em;max-width:72ch}
+.editorial main section+section{margin-top:52px}
+.editorial main p strong,.editorial main li>strong,.editorial .pain{font-weight:700;color:#FFFFFF;text-decoration:underline;text-decoration-color:var(--editorial-accent);text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-skip-ink:auto}
+.editorial main p a:not(.btn),.editorial main li a:not(.btn),.editorial .paper-title a,.editorial .blog-title a{color:#FFFFFF;text-decoration:underline;text-decoration-color:var(--editorial-accent);text-decoration-thickness:2px;text-underline-offset:5px}
+.editorial main a:focus-visible,.editorial summary:focus-visible{outline:3px solid #28ECAA;outline-offset:5px}
+.editorial .accent-orange{--editorial-accent:#E86040}.editorial .accent-green{--editorial-accent:#28ECAA}.editorial .accent-blue{--editorial-accent:#7FB0FF}
+.editorial .section-intro{font-size:1.18rem;max-width:60ch;margin-bottom:2rem}
+.editorial .offer-line{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;border-top:1px solid #365479;border-bottom:1px solid #365479;padding:20px 0;margin:28px 0}
+.editorial .offer-line strong{font:900 clamp(2rem,5vw,3.8rem)/1 'Barlow Condensed',Arial,sans-serif;color:#E8A020}
+.editorial .offer-line span{font-size:1.05rem;color:#FFFFFF}
+.editorial .steps{padding-left:1.5em;margin:24px 0}.editorial .steps li{margin:0 0 22px;padding-left:8px;max-width:68ch}.editorial .steps li::marker{color:#E8A020;font-weight:700}
+.editorial .report-scope{border-left:3px solid #28ECAA;padding:6px 0 6px 24px;margin:34px 0}
+.editorial details{margin:24px 0;border-top:1px solid #365479;border-bottom:1px solid #365479;padding:8px 0}
+.editorial summary{font-weight:700;cursor:pointer;min-height:48px;padding:10px 0;color:#FFFFFF}
+.editorial .proof-context{font-size:1rem;color:#F2F2F2}
+.editorial .commercial-nav{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;padding:16px max(20px,5vw);border-bottom:1px solid #365479;background:#060E1D;color:#FFFFFF}
+.editorial .commercial-nav a{display:inline-flex;align-items:center;min-height:44px;text-underline-offset:5px;text-decoration-color:#E8A020;font-size:15px;font-weight:600}
+.editorial .commercial-nav a:first-child{font-family:'Barlow Condensed',Arial,sans-serif;font-size:24px;font-weight:900;text-decoration:none;margin-right:auto}
+/* Existing Publicaciones page keeps its established Lora reading family. */
+.editorial.publications-reading{font-family:Lora,Georgia,serif}
+.editorial .page-sub,.editorial .fc-desc,.editorial .paper-desc,.editorial .blog-title,.editorial .paper-meta,.editorial .blog-date,.editorial .fc-meta,.editorial .ptag,.editorial .btag,.editorial .paper-views,.editorial .paper-num,.editorial .blog-num{color:#F2F2F2;opacity:1;font-size:max(.875rem,14px)}
+.editorial .page-badge,.editorial .fc-badge,.editorial .sec-count,.editorial .foot-copy,.editorial .foot-links a,.editorial .blog-toggle-count,.editorial .blog-toggle-icon{font-size:max(.875rem,14px);color:#FFFFFF;opacity:1}
+.editorial .ptag-eco{color:#28ECAA}.editorial .ptag-inst{color:#7FB0FF}.editorial .ptag-emp{color:#E86040}.editorial .ptag-gold{color:#E8A020}
+.editorial .tiles li::before{display:none}.editorial .tiles li{border-radius:4px;background:transparent;border:0;border-top:1px solid #365479;padding:20px 0}
+.editorial .tiles h2,.editorial .cards h3{margin-top:0}
+.editorial .btn{max-width:100%;white-space:normal;overflow-wrap:anywhere;box-sizing:border-box}
+.editorial .btn.p{background:#255FB8;border-color:#7FB0FF;color:#FFFFFF}
+/* The money course keeps its paper layout with the approved font families. */
+body.editorial.money-reading{--ink:#1B1714;--paper:#F3ECDF;--ink-soft:#36302A;--ink-mute:#36302A;--serif:Jost,Arial,sans-serif;--display:'Barlow Condensed',Arial,sans-serif;--sans:Jost,Arial,sans-serif;--mono:'Space Mono',monospace;color:var(--ink);background:var(--paper)}
+.money-reading main p strong,.money-reading main li>strong,.money-reading main p a:not(.btn),.money-reading main li a:not(.btn){color:#1B1714}
+.money-reading .hero h1{font-weight:900}
+.money-reading .hero__dek,.money-reading .hero__line--bot{font-weight:400}
+.money-reading [data-reveal]{opacity:1}
+.money-reading .commercial-nav a{color:#FFFFFF}
+.money-reading .pullquote__cite,.money-reading .closing__epigraph{opacity:1}
+@media(max-width:640px){body.editorial{font-size:16px}.editorial main section+section{margin-top:38px}.editorial .offer-line{gap:12px}.editorial .commercial-nav{gap:4px 16px}.editorial .commercial-nav a:first-child{flex-basis:100%}}
+@media(prefers-reduced-motion:reduce){.editorial,.editorial *,.editorial *::before,.editorial *::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+.apps-fleet>.card:first-child{grid-column:1/-1;border-top:4px solid #28ECAA}.apps-fleet{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+/* v2.7: Friendly leads the three-app overview; the other products remain accessible. */
+
+#pn-apps .gd>.cd:first-child{grid-column:1/-1;border-top:4px solid #28ECAA}
+#apps .ap.flagship{border-left:4px solid #28ECAA;padding-left:12px;background:#0B1F3F}
+.friendly-explainers{margin-top:28px;max-width:72ch}
+.friendly-explainers h2{font-size:clamp(28px,4vw,44px);line-height:1.15}
+.friendly-explainers details{border-top:1px solid #7FB0FF;margin-top:16px;padding-top:12px}
+.friendly-explainers summary{cursor:pointer;color:#fff;font-weight:700;padding:8px 0}
+.friendly-explainers video{display:block;width:100%;height:auto;aspect-ratio:16/9;margin-top:16px;background:#060E1D;border-radius:8px}
+.friendly-explainers a{color:#7FB0FF}
+@media(max-width:600px){#pn-apps .gd{grid-template-columns:1fr}}

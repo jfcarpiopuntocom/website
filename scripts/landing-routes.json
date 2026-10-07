@@ -1,0 +1,9 @@
+[
+  {"host":"apps.jfcarpio.com","en":"/en/apps/","es":"/apps/"},
+  {"host":"consultor.jfcarpio.com","en":"/en/reports/","es":"/reportes/"},
+  {"host":"workshops.jfcarpio.com","en":"/workshops/","es":"/talleres/"},
+  {"host":"launch-review.jfcarpio.com","en":"/en/launch-review/","es":"/revision-de-lanzamiento/"},
+  {"host":"market-intelligence.jfcarpio.com","en":"/market-intelligence-latam/","es":null},
+  {"host":"pacific-basin.jfcarpio.com","en":"/pacific-basin/","es":null},
+  {"host":"dinero.jfcarpio.com","en":null,"es":"/las7formas/"}
+]
