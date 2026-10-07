@@ -4,7 +4,7 @@ Genera una pagina HTML propia por cada fotograma del reel, en ESPANOL y en INGLE
 a partir de index.html. Uso:  python3 scripts/build-slide-pages.py   y luego   node scripts/build-og.cjs
 
 - Lee index.html (fuente unica de verdad: textos ES y EN del diccionario T).
-- ES: /<slug>/index.html      EN: /en/<slug-en>/index.html      (+ indice de la historia en ambos idiomas)
+- ES: /<slug>/index.html      EN: /en/<slug-en>/index.html      (+ indice de los contrastes en ambos idiomas)
 - Cada pagina: titulo, descripcion, canonical, hreflang es/en/x-default, imagen propia al compartir
   (og/<clave>-<lang>.png, la dibuja scripts/build-og.cjs desde og/manifest.json), JSON-LD
   (WebPage + BreadcrumbList + ProfessionalService con direccion en Cuenca; FAQPage en visores).
@@ -24,23 +24,23 @@ WA = "https://wa.me/593999905080"
 ADDR = "General Torres #14, Cuenca, Ecuador"
 
 # id del fotograma -> (ruta ES, ruta EN, nombre ES, nombre EN)
-HUB = {"es": ("historia-de-dos-negocios", "Historia de dos negocios"), "en": ("en/tale-of-two-businesses", "A tale of two businesses")}
+HUB = {"es": ("historia-de-dos-negocios", "Dos tipos de creadores"), "en": ("en/tale-of-two-businesses", "Two kinds of business builders")}
 PAGES = {
-    "c1": ("historia-de-dos-negocios/dos-maneras-de-operar", "en/tale-of-two-businesses/two-ways-to-operate", "Historia 1 · Dos maneras de operar", "Story 1 · Two ways to operate"),
+    "c1": ("historia-de-dos-negocios/dos-maneras-de-operar", "en/tale-of-two-businesses/two-ways-to-operate", "Contraste 1 · Ver antes de que duela", "Contrast 1 · See before it hurts"),
     "apps": ("apps", "en/apps", "Apps", "Apps"),
-    "c4": ("historia-de-dos-negocios/la-informacion-sola-no-basta", "en/tale-of-two-businesses/information-alone-is-not-enough", "Historia 2 · La información sola no basta", "Story 2 · Information alone is not enough"),
+    "c4": ("historia-de-dos-negocios/la-informacion-sola-no-basta", "en/tale-of-two-businesses/information-alone-is-not-enough", "Contraste 2 · Crear lenguaje común", "Contrast 2 · Build shared language"),
     "articulos": ("articulos", "en/articles", "Artículos", "Articles"),
     "libro": ("libro", "en/book", "Libro", "Book"),
-    "c5": ("historia-de-dos-negocios/lo-que-pasa-afuera", "en/tale-of-two-businesses/what-happens-outside", "Historia 3 · Lo que pasa afuera", "Story 3 · What happens outside"),
+    "c5": ("historia-de-dos-negocios/lo-que-pasa-afuera", "en/tale-of-two-businesses/what-happens-outside", "Contraste 3 · Leer el entorno", "Contrast 3 · Read the environment"),
     "reportes": ("reportes", "en/reports", "Reportes", "Reports"),
     "trayectoria": ("trayectoria", "en/track-record", "Trayectoria", "Track record"),
-    "c8": ("historia-de-dos-negocios/datos-no-es-ver", "en/tale-of-two-businesses/data-is-not-seeing", "Historia 4 · Datos no es ver", "Story 4 · Data is not seeing"),
+    "c8": ("historia-de-dos-negocios/datos-no-es-ver", "en/tale-of-two-businesses/data-is-not-seeing", "Contraste 4 · Ver a tiempo", "Contrast 4 · See in time"),
     "visores": ("visores", "en/business-viewers", "Visores", "Business viewers"),
     "gumroad": ("tienda-gumroad", "en/gumroad-store", "Tienda Gumroad", "Gumroad store"),
     "escuela": ("la-escuela-del-dinero", "en/money-school", "La Escuela del Dinero", "La Escuela del Dinero (Money School)"),
     "gratis": ("recursos-gratuitos", "en/free-resources", "Recursos gratuitos", "Free resources"),
     "clientes": ("clientes", "en/clients", "Clientes", "Clients"),
-    "c9": ("historia-de-dos-negocios/la-decision", "en/tale-of-two-businesses/the-decision", "Historia 5 · La decisión", "Story 5 · The decision"),
+    "c9": ("historia-de-dos-negocios/la-decision", "en/tale-of-two-businesses/the-decision", "Contraste 5 · La elección", "Contrast 5 · The choice"),
     "contacto": ("contacto", "en/contact", "Contacto", "Contact"),
 }
 EXISTING = {"talleres": "/talleres/", "publicaciones": "/publicaciones/", "perfil": "/juan-fernando-carpio/"}
@@ -48,16 +48,16 @@ EXISTING = {"talleres": "/talleres/", "publicaciones": "/publicaciones/", "perfi
 UI = {
     "es": {"reel": "Ver en el reel interactivo →", "home": "Inicio", "nav": "Siguiente y anterior", "other": "English", "blog": "Blog",
            "talleres": "Talleres", "pubs": "Publicaciones", "contact": "Contacto", "wa": "Escríbenos por WhatsApp", "faq": "Preguntas frecuentes",
-           "quote": "Lo que dicen clientes reales", "start": "Empezar la historia", "loc": "es_EC",
-           "hub_h1": "Dos negocios nacieron el mismo año.", "hub_lead": "Misma idea. Mismo esfuerzo. Mismo primer día. Esta es su historia. Es ilustrativa: los datos, no.",
-           "hub_desc": "Dos negocios nacieron el mismo año. Cinco capítulos que muestran cómo se acumulan las consecuencias de decidir con o sin herramientas, talleres, reportes y dashboards.",
-           "idx_h": "Cada sección tiene su propia página", "pdf": "Descargar las 15 consecuencias (PDF)"},
+           "quote": "Lo que dicen clientes reales", "start": "Ver la diferencia", "loc": "es_EC",
+           "hub_h1": "HAY DOS TIPOS DE CREADORES DE NEGOCIOS.", "hub_lead": "Los que se enteran después (con dolores y hasta quiebras). Y los que encuentran maneras de ver con claridad mucho antes.",
+           "hub_desc": "HAY DOS TIPOS DE CREADORES DE NEGOCIOS. Cinco contrastes para ver antes, decidir con claridad y dirigir mejor con herramientas, talleres y reportes.",
+           "idx_h": "Cada sección tiene su propia página"},
     "en": {"reel": "See it in the interactive reel →", "home": "Home", "nav": "Next and previous", "other": "Español", "blog": "Blog (ES)",
            "talleres": "Workshops", "pubs": "Publications (ES)", "contact": "Contact", "wa": "Message us on WhatsApp", "faq": "Frequently asked questions",
-           "quote": "What real clients say", "start": "Start the story", "loc": "en_US",
-           "hub_h1": "Two businesses were born the same year.", "hub_lead": "Same idea. Same effort. Same first day. This is their story. It is illustrative: the data is not.",
-           "hub_desc": "Two businesses were born the same year. Five chapters showing how consequences pile up when you decide with or without tools, workshops, reports and dashboards.",
-           "idx_h": "Each section has its own page", "pdf": "Download the 15 consequences (PDF)"},
+           "quote": "What real clients say", "start": "See the difference", "loc": "en_US",
+           "hub_h1": "TWO KINDS OF BUSINESS BUILDERS.", "hub_lead": "Those who find out later, through pain and sometimes even failure. And those who find ways to see clearly much earlier.",
+           "hub_desc": "TWO KINDS OF BUSINESS BUILDERS. Five contrasts for seeing earlier, deciding clearly and leading better with tools, workshops and reports.",
+           "idx_h": "Each section has its own page"},
 }
 
 # Preguntas frecuentes (solo hechos confirmados por JFC): se muestran en la pagina Y van como FAQPage.
@@ -223,8 +223,14 @@ def main():
             if len(title) > 68: title = f"{short} | JFCarpio.com"
             canon = f"{SITE}/{sl}/"
             alt_es, alt_en = f"{SITE}/{slug(sid, 'es')}/", f"{SITE}/{slug(sid, 'en')}/"
-            og = f"{SITE}/{ogfile(sid, lang)}"
-            manifest.append({"file": ogfile(sid, lang), "kick": kick_t, "title": title_h, "lang": lang})
+            # Narrative pages temporarily use the stable site OG card so the retired
+            # "Historia de dos negocios" artwork can never leak back into shares.
+            narrative_ids = {"c1", "c4", "c5", "c8", "c9"}
+            if sid in narrative_ids:
+                og = f"{SITE}/og-jfcarpio-v2.png"
+            else:
+                og = f"{SITE}/{ogfile(sid, lang)}"
+                manifest.append({"file": ogfile(sid, lang), "kick": kick_t, "title": title_h, "lang": lang})
             prv = page_list[i - 1] if i > 0 else None
             nxt = page_list[i + 1] if i < len(page_list) - 1 else None
 
@@ -251,12 +257,6 @@ def main():
                         txt = tx(spn) if spn else re.sub(r"\s+", " ", p.text()).strip()
                         body.append(f'<p class="{"a" if "pa" in p.cls() else "b"}"><strong>{esc(hd_)}</strong> {esc(txt)}</p>')
                     body.append("</div>")
-            sn = find(root, cls="snow") or find(root, cls="sum")
-            if sn:
-                chips = [tx(c) for c in find_all(sn, cls="c")]
-                lab = tx(find(sn, cls="sl"))
-                body.append(f'<div class="snow"><p><b class="cnt">B {len(chips)}</b> <strong>{esc(lab)}</strong></p><ol>'
-                            + "".join(f"<li>{esc(c)}</li>" for c in chips) + "</ol></div>")
             if sid in QUOTES:
                 q, a = QUOTES[sid]
                 body.append(f'<figure class="quote"><figcaption class="ql">{U["quote"]}</figcaption><blockquote>{esc(T[q])}</blockquote><p class="qa">{esc(T[a])}</p></figure>')
@@ -268,8 +268,6 @@ def main():
                     if not h: continue
                     ext = h.startswith("http") and "jfcarpio.com" not in h
                     btns.append(f'<a class="btn{" p" if "p" in a.cls() else ""}" href="{esc(href_to_page(h))}"' + (' rel="noopener"' if ext else "") + f">{esc(tx(a))}</a>")
-            if sid == "c9":
-                btns.append(f'<a class="btn" href="/consecuencias-{lang}.pdf" download>{U["pdf"]}</a>')
             if btns: body.append('<p class="cta">' + " ".join(btns) + "</p>")
             panel = find(root, cls="panel")
             if panel:
@@ -316,12 +314,12 @@ def main():
             write(sl, page)
             sitemap_urls.append((canon, alt_es, alt_en, "0.7"))
 
-        # indice de la historia
+        # indice de los contrastes
         chs = [sid for sid in page_list if slug(sid, lang).startswith(HUB[lang][0] + "/")]
         items = "".join(f'<li><a href="/{slug(s, lang)}/"><h2>{esc(name(s, lang))}</h2><p>{esc(tx(find(secs[s], "h2")))}</p></a></li>' for s in chs)
         hc = f"{SITE}/{HUB[lang][0]}/"; he, hen = f"{SITE}/{HUB['es'][0]}/", f"{SITE}/{HUB['en'][0]}/"
-        og = f"{SITE}/{ogfile('historia', lang)}"
-        manifest.append({"file": ogfile("historia", lang), "kick": HUB[lang][1], "title": U["hub_h1"], "lang": lang})
+        # Keep the legacy URL, but never serve the retired narrative OG artwork.
+        og = f"{SITE}/og-jfcarpio-v2.png"
         ld = {"@context": "https://schema.org", "@graph": [
             {"@type": "CollectionPage", "@id": hc + "#page", "url": hc, "name": HUB[lang][1] + " | JFCarpio.com", "description": U["hub_desc"], "inLanguage": lang,
              "isPartOf": {"@type": "WebSite", "name": "JFCarpio.com", "url": SITE + "/"}, "primaryImageOfPage": og},
@@ -335,17 +333,7 @@ def main():
 
     os.makedirs(os.path.join(ROOT, "og"), exist_ok=True)
     json.dump(manifest, open(os.path.join(ROOT, "og", "manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    # PDF de las 17 consecuencias: fuente HTML (lo imprime build-og.cjs)
-    c9 = secs["c9"]
-    for lang in ("es", "en"):
-        T = TT[lang]
-        chips = [T[c.attrs["data-t"]] for c in find_all(c9, cls="c") if c.attrs.get("data-t") in T]
-        lab = T[find(c9, cls="sl").attrs["data-t"]]
-        hub_url = f"{SITE}/{HUB[lang][0]}/"
-        open(os.path.join(ROOT, "og", f"pdf-{lang}.html"), "w", encoding="utf-8").write(PDF_TPL.format(
-            lang=lang, h=esc(UI[lang]["hub_h1"]), lab=esc(lab), n=len(chips), hub=hub_url,
-            items="".join(f"<li>{esc(c)}</li>" for c in chips),
-            foot=("El equipo de JFCarpio.com · " if lang == "es" else "The JFCarpio.com team · ") + f"{SITE} · WhatsApp +593 99 990 5080"))
+    # The old accumulated-consequences PDF was retired with the 2026-10-05 narrative pivot.
 
     # sitemap
     sm_path = os.path.join(ROOT, "sitemap.xml"); sm = open(sm_path, encoding="utf-8").read()
@@ -416,9 +404,8 @@ HEAD_TPL = """<!DOCTYPE html>
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{og}">
 <meta name="theme-color" content="#060E1D">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Lora:wght@400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" as="font" href="/assets/fonts/jost-latin-wght-normal.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/assets/fonts/playfair-display-latin-wght-normal.woff2" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/slide-page.css">
 <script type="application/ld+json">{ld}</script>
 </head>
@@ -427,11 +414,11 @@ HEAD_TPL = """<!DOCTYPE html>
 """
 
 PDF_TPL = """<!DOCTYPE html><html lang="{lang}"><head><meta charset="UTF-8"><style>
-@page{{size:A4;margin:18mm}}body{{font:12pt/1.5 'Lora',serif;color:#060E1D}}
-h1{{font:800 30pt/1 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:0 0 8pt}}
-.l{{font:700 11pt 'Space Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9A5B00;margin:0 0 14pt}}
+@page{{size:A4;margin:18mm}}body{{font:12pt/1.5 'Jost',Arial,sans-serif;color:#060E1D}}
+h1{{font:800 30pt/1 'Playfair Display',Georgia,serif;text-transform:uppercase;margin:0 0 8pt}}
+.l{{font:700 11pt 'Jost',Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#9A5B00;margin:0 0 14pt}}
 .n{{display:inline-block;background:#E8A020;color:#060E1D;border-radius:99px;padding:2pt 10pt;margin-right:8pt}}
-ol{{columns:2;column-gap:14mm;padding-left:18pt}}li{{margin:0 0 7pt;break-inside:avoid}}li::marker{{font:700 11pt 'Space Mono',monospace;color:#9A5B00}}
+ol{{columns:2;column-gap:14mm;padding-left:18pt}}li{{margin:0 0 7pt;break-inside:avoid}}li::marker{{font:700 11pt 'Jost',Arial,sans-serif;color:#9A5B00}}
 .f{{margin-top:18pt;border-top:2px solid #E8A020;padding-top:8pt;font-size:10.5pt}}a{{color:#060E1D}}
 </style></head><body><h1>{h}</h1><p class="l"><span class="n">B {n}</span>{lab}</p><ol>{items}</ol>
 <p class="f"><a href="{hub}">{hub}</a><br>{foot}</p></body></html>"""

@@ -1,4 +1,4 @@
-// Dibuja la imagen al compartir (1200x630) de cada pagina por seccion y los PDF de las 17 consecuencias.
+// Dibuja la imagen al compartir (1200x630) de cada pagina por seccion.
 // Uso: python3 scripts/build-slide-pages.py && node scripts/build-og.cjs
 // Diseno (no "slop"): fondo navy plano, una sola idea, titular grande Barlow, kicker dorado, marca abajo. Sin degradados ni emojis.
 const fs=require('fs'),path=require('path');
@@ -16,5 +16,4 @@ h1{font:800 ${m.title.length>70?64:m.title.length>45?76:92}px/.98 'Barlow Conden
 (async()=>{const b=await pw.chromium.launch();const p=await b.newPage({viewport:{width:1200,height:630}});
 const man=JSON.parse(fs.readFileSync(path.join(R,'og/manifest.json'),'utf8'));
 for(const m of man){await p.setContent(card(m));await p.evaluate(()=>document.fonts.ready);await p.screenshot({path:path.join(R,m.file)})}
-for(const l of ['es','en']){const h=fs.readFileSync(path.join(R,`og/pdf-${l}.html`),'utf8').replace('<style>','<style>'+FONTS);await p.setContent(h);await p.evaluate(()=>document.fonts.ready);await p.pdf({path:path.join(R,`consecuencias-${l}.pdf`),format:'A4',printBackground:true})}
-console.log('imagenes',man.length,'pdf 2');await b.close()})();
+console.log('imagenes',man.length);await b.close()})();

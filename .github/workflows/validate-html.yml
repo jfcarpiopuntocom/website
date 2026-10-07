@@ -20,6 +20,14 @@ on:
       - 'talleres/**/*.html'
       - 'sitemap.xml'
       - 'index.html'
+      - 'historia-de-dos-negocios/**/*.html'
+      - 'en/tale-of-two-businesses/**/*.html'
+      - 'apps/index.html'
+      - 'en/apps/index.html'
+      - 'scripts/test-narrative.cjs'
+      - 'scripts/build-slide-pages.py'
+      - 'scripts/build-og.cjs'
+      - 'og/manifest.json'
       - 'worker.js'
       - '.github/workflows/validate-html.yml'
   pull_request:
@@ -34,6 +42,14 @@ on:
       - 'talleres/**/*.html'
       - 'sitemap.xml'
       - 'index.html'
+      - 'historia-de-dos-negocios/**/*.html'
+      - 'en/tale-of-two-businesses/**/*.html'
+      - 'apps/index.html'
+      - 'en/apps/index.html'
+      - 'scripts/test-narrative.cjs'
+      - 'scripts/build-slide-pages.py'
+      - 'scripts/build-og.cjs'
+      - 'og/manifest.json'
       - 'worker.js'
       - '.github/workflows/validate-html.yml'
   workflow_dispatch:
@@ -54,6 +70,9 @@ jobs:
 
       - name: Worker JavaScript parses
         run: node --check worker.js
+
+      - name: Narrative regression guard
+        run: node scripts/test-narrative.cjs
 
       - name: DOCTYPE count = 1 (browser-save catastrophe detector)
         run: |

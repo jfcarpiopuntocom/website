@@ -58,9 +58,8 @@ Branch for feature work: `Codex/high-contrast-white-design-VK5kk`. Base: `main`.
 - Accents: same as dark theme
 
 ### Typography
-- Body prose: `Lora` (serif)
-- UI / labels / monospace: `Space Mono`
-- Bento headlines: `Barlow Condensed`
+- Reel and generated slide pages (JFC request, 2026-10-06): `Playfair Display` for display headings, `Jost` for body, navigation, labels, and controls. Both are self-hosted as variable WOFF2 in `assets/fonts/`; do not restore the former five-family mix.
+- Older standalone product pages retain their own approved styling until reviewed individually.
 - Minimum font size: `.82rem` — no exceptions, ever
 
 ### Layout
