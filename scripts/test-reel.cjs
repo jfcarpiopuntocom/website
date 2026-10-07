@@ -149,6 +149,26 @@ const settle = p => p.waitForFunction(() => window.__reel && !window.__reel.auto
     const gh = await page.evaluate(() => [...document.querySelectorAll('a[data-go]')].filter(a => !document.getElementById(a.getAttribute('href').slice(1))).map(a => a.getAttribute('href'))); gh.length ? F('data-go sin destino: ' + gh) : OK('data-go apuntan a fotogramas existentes');
     await ctx.close(); }
 
+  // Rutas directas: menu legible, destinos reales, foco y cambio de idioma.
+  { const { ctx, page, errs } = await setup(browser, 375, 667, true); await page.goto(BASE + '/index.html', { waitUntil: 'domcontentloaded' }); await settle(page);
+    await page.click('#idxb');
+    const menu = await page.evaluate(() => ({ visible: !document.querySelector('#idx').hidden, expanded: document.querySelector('#idxb').getAttribute('aria-expanded'), links: [...document.querySelectorAll('.route-grid a,.route-contact')].map(a => a.getAttribute('href')), focus: document.activeElement.getAttribute('href'), label: document.querySelector('#idxb .it').textContent, overflow: document.documentElement.scrollWidth > innerWidth }));
+    menu.visible && menu.expanded === 'true' && menu.links.join(',') === '#apps,#reportes,#talleres,#escuela,#contacto' && menu.focus === '#apps' && menu.label === 'Explorar' && !menu.overflow ? OK('movil: Explorar muestra cinco rutas directas') : F('rutas movil: ' + JSON.stringify(menu));
+    await page.click('.route-grid a[href="#reportes"]');
+    const moved = await page.evaluate(() => ({ idx: window.__reel.idx, expected: [...document.querySelectorAll('.slide')].findIndex(s => s.id === 'reportes'), hash: location.hash, hidden: document.querySelector('#idx').hidden, expanded: document.querySelector('#idxb').getAttribute('aria-expanded'), focus: document.activeElement.id }));
+    moved.idx === moved.expected && moved.hash === '#reportes' && moved.hidden && moved.expanded === 'false' && moved.focus === 't-reportes' ? OK('ruta Reportes llega directo y devuelve el foco al contenido') : F('salto Reportes: ' + JSON.stringify(moved));
+    await page.click('.lang button[data-lang=en]'); await page.click('#idxb');
+    const enMenu = await page.evaluate(() => ({ title: document.querySelector('#idxt').textContent, label: document.querySelector('#idxb .it').textContent, route: document.querySelector('.route-grid strong').textContent }));
+    enMenu.title === 'Choose where to start' && enMenu.label === 'Explore' && enMenu.route === 'Apps for sales and inventory' ? OK('rutas directas traducidas al ingles') : F('rutas EN: ' + JSON.stringify(enMenu));
+    await page.keyboard.press('Escape');
+    const esc = await page.evaluate(() => ({ hidden: document.querySelector('#idx').hidden, focused: document.activeElement.id }));
+    esc.hidden && esc.focused === 'idxb' ? OK('Escape cierra Explorar y restaura el foco') : F('Escape indice: ' + JSON.stringify(esc));
+    errs.length ? F('rutas: errores JS ' + errs.join(' | ')) : OK('rutas: sin errores JS'); await ctx.close(); }
+  { const { ctx, page } = await setup(browser, 1280, 720, false); await page.goto(BASE + '/index.html', { waitUntil: 'domcontentloaded' }); await settle(page);
+    const visible = await page.locator('.jumpnav').isVisible(); await page.click('.jumpnav a[href="#talleres"]');
+    const dest = await page.evaluate(() => ({ hash: location.hash, idx: window.__reel.idx, expected: [...document.querySelectorAll('.slide')].findIndex(s => s.id === 'talleres') }));
+    visible && dest.hash === '#talleres' && dest.idx === dest.expected ? OK('escritorio: Talleres accesible desde cabecera') : F('acceso escritorio: ' + JSON.stringify({ visible, ...dest })); await ctx.close(); }
+
   // hash directo
   { const { ctx, page } = await setup(browser, 1440, 900, false); await page.goto(BASE + '/index.html#libro'); await page.waitForTimeout(1200);
     const r = await page.evaluate(() => ({ idx: window.__reel.idx, expected: [...document.querySelectorAll('.slide')].findIndex(s => s.id === 'libro'), auto: window.__reel.auto })); r.idx === r.expected && !r.auto ? OK('#libro abre directo sin entrada animada') : F('hash: ' + JSON.stringify(r)); await ctx.close(); }
