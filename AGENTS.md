@@ -81,7 +81,7 @@ Branch for feature work: `Codex/high-contrast-white-design-VK5kk`. Base: `main`.
 - Never edit, reorder, paraphrase, retimestamp, or "improve" those `data-video`, `.curr__txt`, or `.curr__ts` entries unless JFC explicitly asks for that exact block in the same turn.
 
 ### Animation (CRITICAL — breaking these hides content permanently)
-- JFC approved the motion lab on 2026-10-07. The reel uses lightweight photo drift, split-card entrances, card responses, editorial traces and data accents. Animate only `.is-current`; the added effects require a fine pointer, width above 640px and no reduced-motion preference. Preserve static content on old phones and without JS, and preserve fixed Open Graph metadata/images for sharing.
+- JFC approved the motion lab on 2026-10-07. The reel uses lightweight photo drift, split-card entrances, card responses, editorial traces and data accents. Animate only `.is-current`; the CSS effects run on phones too (JFC 2026-10-07: he saw no motion on mobile) and stop with reduced motion. REEL FX (Claude 2026-10-07): one WebGL canvas with a distinct scene per slide, plus colored-underline highlights (`HL` map, applied by setLang and build-home-locales.py). Preserve static content on old phones and without JS, and preserve fixed Open Graph metadata/images for sharing.
 - Reveal gate: `document.documentElement.className+=' js-rv'` must stay in script
 - Only `.js-rv .reveal { opacity:0 }` is safe — never set `opacity:0` on `.reveal` bare
 - Never re-add inline `revEl.style.opacity='0'` pattern
