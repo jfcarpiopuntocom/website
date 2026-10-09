@@ -1924,6 +1924,28 @@ vec2 d=abs(f)-vec2(.36,.28);float b=length(max(d,0.))+min(max(d.x,d.y),0.)-.06;
 float k=floor(h21(id)*5.);vec3 cc=k<1.?MINT:k<2.?BLUE:k<3.?CORAL:k<4.?CYAN:GOLD;
 float w=.5+.5*sin(t*1.6-id.x*.55-id.y*.9);float pop=smoothstep(id.x*.06+id.y*.05,id.x*.06+id.y*.05+.4,I*1.4);
 col=cc;a=(ln(b,.035)*.9+rs(.0,-.08,b)*.22*w)*pop*(.35+.65*w);`,
+/* Apps (producto principal, JFC 2026-10-07): lenguaje de la landing de friendly123.com, nada de tableros
+   financieros ("eso intimida"). Fondo calido verde-ambar con luciernagas en los cinco colores del metodo, y
+   tarjetas de producto que flotan con el borde del color de su estado (verde sano, dorado oportunidad,
+   naranja revisar, rojo urgente, claro = dormido); cada tanto una se vende: se vuelve verde y destella.
+   Velo navy propio para calmar la foto: este canvas mezcla en modo normal (ver BLEND_NORMAL). */
+apps:`float por=step(R.x,R.y);p*=mix(1.,1.7,por);vec3 navy=vec3(.02,.05,.11);vec3 em=vec3(0);float ins=0.;
+vec3 GRN=vec3(.18,.88,.45),ORG=vec3(1.,.55,.15),RED=vec3(.98,.24,.24),SLP=vec3(.82,.84,.9);
+float au=fbm(p*1.2+vec2(t*.03,0.));vec3 bg=mix(vec3(.05,.38,.2),vec3(.6,.36,.06),smoothstep(-.7,.9,p.x+au*.7));
+em+=bg*.32*smoothstep(-.3,.6,uv.y)*(.55+.45*au);
+for(int k=0;k<3;k++){float z=float(k);vec2 q=p*(4.+z*3.)+vec2(t*.04*(1.+z),t*.1*(1.+z*.5));vec2 id=floor(q);
+vec2 f=fract(q)-.5-.3*(h22(id+z)-.5);float r=length(f);float kk=floor(h21(id+z*3.)*5.);
+vec3 cc=kk<1.?GRN:kk<2.?GOLD:kk<3.?ORG:kk<4.?RED:SLP;float tw=.55+.45*sin(t*2.+h21(id)*30.);
+em+=cc*rs(.11-z*.025,0.,r)*step(.62,h21(id+7.))*tw*(.95-z*.25);}
+for(int i=0;i<6;i++){float fi=float(i);vec2 c=vec2(-.78+fi*.31+.04*sin(t*.2+fi),mix(.3,.36,por)+.05*sin(t*.6+fi*1.7));
+vec2 d=abs(rot(.1*sin(t*.4+fi))*(p-c))-vec2(.085,.105);float b=length(max(d,0.))+min(max(d.x,d.y),0.)-.02;
+float cyc=fract(t*.09+fi/6.);float sold=smoothstep(0.,.04,cyc)*(1.-smoothstep(.22,.3,cyc));
+float kk=mod(fi,5.);vec3 cc=kk<1.?GRN:kk<2.?GOLD:kk<3.?ORG:kk<4.?RED:SLP;cc=mix(cc,GRN,sold);
+float inC=step(b,0.);ins=max(ins,inC);
+vec2 lp=rot(.1*sin(t*.4+fi))*(p-c);float photo=inC*step(-.035,lp.y)*(.5+.5*fbm(lp*18.+fi*9.));
+em+=cc*(ln(b,.006)*1.5+exp(-max(b,0.)*28.)*.3*(1.+sold*2.5))+mix(cc,vec3(1.,.85,.6),.5)*photo*.22+cc*inC*step(lp.y,-.05)*step(-.075,lp.y)*step(abs(lp.x),.06)*.5;
+em+=GRN*exp(-length(p-c)*9.)*sold*.9*(1.-inC);}
+float veil=.26+.45*ins;a=clamp(veil+max(em.r,max(em.g,em.b)),0.,1.);col=(navy*veil+em)/max(a,.001);`,
 /* Contraste 1: radar. El barrido descubre senales antes de que crezcan (ver antes de que duela). */
 radar:`vec2 o=vec2(.15,.08)+m*.1;vec2 v=p-o;float r=length(v);float an=atan(v.y,v.x);float sw=mod(t*1.1,2.*PI)-PI;
 float da=mod(an-sw+2.*PI,2.*PI);float trail=exp(-da*2.2)*rs(.95,.1,r);
@@ -2003,8 +2025,10 @@ vec2 q=p*4.;vec2 id=floor(q);vec2 pt=id+.5+.35*(h22(id)-.5);float d=length(q-pt)
 col=mix(BLUE,MINT,w);a=w*.7+node*1.2+exp(-r*12.)*.6;`
 };
 /* Fotograma -> escena. Ids desconocidos usan 'flow' (nunca un fotograma sin efecto). */
-const MAP={portada:'flow',apps:'shelves',c1:'radar',c5:'topo',reportes:'bars',c4:'waves',talleres:'orbit',c8:'signal',visores:'hex',
+const MAP={portada:'flow',apps:'apps',c1:'radar',c5:'topo',reportes:'bars',c4:'waves',talleres:'orbit',c8:'signal',visores:'hex',
 articulos:'type',libro:'caustic',publicaciones:'graph',trayectoria:'path',perfil:'ripple',gumroad:'cards',escuela:'spiral',gratis:'rays',c9:'fork',contacto:'pulse',dashboards:'hex',dato:'signal'};
+/* Escenas con velo propio: mezclan en modo normal (pueden oscurecer la foto), el resto en screen (solo suman luz). */
+const BLEND_NORMAL={apps:1};
 const VS='attribute vec2 v;void main(){gl_Position=vec4(v,0.,1.);}';
 function sh(type,src){const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(s));return s}
 const vs=sh(gl.VERTEX_SHADER,VS),prog={};
@@ -2020,7 +2044,7 @@ const SCALE=coarse?.5:Math.min(devicePixelRatio||1,1.5)*.75,STEP=coarse?1000/30:
 function fit(){const f=cur&&cur.querySelector('.face');if(!f)return;const w=Math.max(2,Math.round(f.offsetWidth*SCALE)),h=Math.max(2,Math.round(f.offsetHeight*SCALE));if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h}}
 function place(){const s=SL.find(x=>x.classList.contains('is-current'));if(!s||s===cur)return;cur=s;scene=MAP[s.id]||'flow';
  const face=s.querySelector('.face');if(!face)return;const b=face.querySelector('.sc')||face.querySelector('.bgw');face.insertBefore(cv,b?b.nextSibling:face.firstChild);
- since=performance.now();cv.classList.remove('on');void cv.offsetWidth;cv.classList.add('on');fit();if(rm)draw(performance.now());}
+ cv.style.mixBlendMode=BLEND_NORMAL[scene]?'normal':'';since=performance.now();cv.classList.remove('on');void cv.offsetWidth;cv.classList.add('on');fit();if(rm)draw(performance.now());}
 function draw(now){const p=get(scene);if(!p){gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);return}
  tx+=(mx-tx)*.06;ty+=(my-ty)*.06;gl.viewport(0,0,cv.width,cv.height);gl.useProgram(p);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);
  gl.uniform2f(p.u.R,cv.width,cv.height);gl.uniform1f(p.u.T,rm?8.:((now-t0)/1000)%900);gl.uniform2f(p.u.M,tx,ty);gl.uniform1f(p.u.I,rm?1.:Math.min(1,(now-since)/1600));gl.drawArrays(gl.TRIANGLES,0,3)}
