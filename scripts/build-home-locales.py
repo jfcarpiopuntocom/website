@@ -4,11 +4,12 @@ import re,json,html,ast
 from private_backup import snapshot
 ROOT=Path(__file__).resolve().parents[1]
 def render(source,lang,T):
+ source=source.replace("url('assets/fonts/", "url('/assets/fonts/")
  HL=json.loads(re.search(r'const HL=(\{.*?\});\n',source,re.S)[1])
  def content(m):
   key=m['key'];text=html.escape(T[lang].get(key,html.unescape(re.sub(r'</?mark[^>]*>','',m['body']))))
   # Claude 2026-10-07: subrayados de color (HL en index.html), igual que jfcHL() del reel, para lectura sin JS.
-  for w,c in HL.get(lang,{}).get(key,[]):
+  for w,c in ([] if m['tag'] in ['h1','h2','h3','h4','h5','h6'] or re.search(r'<h[1-6][^>]*>[^<]*$',source[:m.start()]) else HL.get(lang,{}).get(key,[])):
    x=html.escape(w);i=text.find(x)
    if i>=0:text=text[:i]+'<mark class="hl hl-'+c+'">'+x+'</mark>'+text[i+len(x):]
   return m['open']+text+m['close']
