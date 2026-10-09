@@ -47,6 +47,10 @@ on:
       - 'scripts/test-media-ranges.mjs'
       - 'scripts/test-landing-routing.cjs'
       - 'scripts/apps_video.py'
+      - 'pacific-basin/**/*.html'
+      - 'assets/pbiu*'
+      - 'scripts/*pbiu*'
+      - 'scripts/test-offer-separation.cjs'
       - 'worker.js'
       - '.github/workflows/validate-html.yml'
   pull_request:
@@ -83,6 +87,10 @@ on:
       - 'scripts/test-media-ranges.mjs'
       - 'scripts/test-landing-routing.cjs'
       - 'scripts/apps_video.py'
+      - 'pacific-basin/**/*.html'
+      - 'assets/pbiu*'
+      - 'scripts/*pbiu*'
+      - 'scripts/test-offer-separation.cjs'
       - 'worker.js'
       - '.github/workflows/validate-html.yml'
   workflow_dispatch:
@@ -91,7 +99,7 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     env:
-      FILES: "index.html las7formas/index.html visorantiquiebra/index.html visorgerencial/index.html publicaciones/index.html working-paper-hidden-cost.html market-intelligence-latam/index.html juan-fernando-carpio/index.html friendly123/index.html talleres/index.html revision-de-lanzamiento/index.html en/launch-review/index.html"
+      FILES: "pacific-basin/index.html reportes/index.html en/reports/index.html index.html las7formas/index.html visorantiquiebra/index.html visorgerencial/index.html publicaciones/index.html working-paper-hidden-cost.html market-intelligence-latam/index.html juan-fernando-carpio/index.html friendly123/index.html talleres/index.html revision-de-lanzamiento/index.html en/launch-review/index.html"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -214,7 +222,10 @@ jobs:
           done
 
       - name: Dedicated landing routing and Friendly priority
-        run: node scripts/test-landing-routing.cjs
+        run: |
+          node scripts/test-landing-routing.cjs
+          node scripts/test-pbiu-fx.mjs
+          node scripts/test-offer-separation.cjs
 
       - name: Native video byte ranges
         run: node scripts/test-media-ranges.mjs

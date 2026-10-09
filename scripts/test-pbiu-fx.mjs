@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {exchangeRates,fxResponse} from './pbiu-fx.mjs';
+const primary={date:'2026-10-09',usd:{clp:920,pen:3.5,cop:4200}};
+assert.equal((await exchangeRates(async()=>Response.json(primary))).source,'Fawaz Ahmed Currency API');
+let calls=0;
+const fallback=await exchangeRates(async()=>++calls===1?Response.json({usd:{clp:-1},date:'fake'}):Response.json({rates:{CLP:920,PEN:3.5,COP:4200},time_last_update_unix:1791504000}));
+assert.equal(fallback.source,'ExchangeRate-API');assert.equal(calls,2);assert.equal(fallback.rates.PEN,3.5);
+await assert.rejects(exchangeRates(async()=>new Response('',{status:503})),/temporarily unavailable/);
+assert.equal((await fxResponse(new Request('https://jfcarpio.com/api/pbiu/fx',{method:'POST'}))).status,405);
+console.log('PBIU FX: primary, invalid-data fallback, outage and method guard OK');

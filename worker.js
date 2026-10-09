@@ -1,3 +1,4 @@
+import { fxResponse } from './scripts/pbiu-fx.mjs';
 import { mediaRange } from './scripts/media-range.mjs';
 import { marketingResponse } from './scripts/landing-routing.mjs';
 // jfcarpio.com · Cloudflare Worker v5 (JFC 2026-09-30)
@@ -49,6 +50,7 @@ const CSP =
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname === "/api/pbiu/fx") return fxResponse(request);
     // 0. blog.jfcarpio.com -> jfcarpio.com/blog/ (JFC 2026-09-25): antes iba a github.io y
     //    regalaba autoridad SEO a otro dominio. Redireccion permanente al blog del sitio.
     if (url.hostname === "blog.jfcarpio.com") {
