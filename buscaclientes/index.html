@@ -7,9 +7,9 @@
 <meta name="theme-color" content="#070b17">
 <meta name="color-scheme" content="dark">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="refresh" content="3;url=https://buscaclientes-web.buscaclientes.workers.dev/">
+<meta http-equiv="refresh" content="3;url=https://buscaclientes-web.buscaclientes.workers.dev/?entry=splash">
 <link rel="canonical" href="https://buscaclientes-web.buscaclientes.workers.dev/">
-<link rel="preload" href="/buscaclientes/brand-submarine-transparent.svg" as="image" type="image/svg+xml">
+<link rel="preload" href="/buscaclientes/brand-submarine-cutout-v2.svg" as="image" type="image/svg+xml">
 <title>BuscaClientes — El mundo está lleno de clientes</title>
 <meta name="description" content="BuscaClientes: descubre negocios, valida contactos públicos y convierte lugares en relaciones. 7 contactos validados gratis por semana.">
 <style>
@@ -53,7 +53,7 @@ h1 span{color:var(--aqua)}
   <p class="masthead">Tu próximo cliente está en algún lugar</p>
   <div class="visual">
     <div class="sonar" aria-hidden="true"></div>
-    <img src="/buscaclientes/brand-submarine-transparent.svg" width="590" height="265" alt="Submarino y sonar de BuscaClientes" fetchpriority="high">
+    <img src="/buscaclientes/brand-submarine-cutout-v2.svg" width="590" height="265" alt="Submarino y sonar de BuscaClientes" fetchpriority="high">
   </div>
   <h1 id="brand">Busca<span>Clientes</span></h1>
   <p class="promise">El mundo está lleno de clientes.</p>
@@ -62,7 +62,7 @@ h1 span{color:var(--aqua)}
   <div class="launch" aria-label="Abriendo BuscaClientes">
     <span class="launch-state">Preparando tu próxima oportunidad</span>
     <div class="progress" aria-hidden="true"></div>
-    <a id="enter" href="https://buscaclientes-web.buscaclientes.workers.dev/">Entrar ahora <span aria-hidden="true">↗</span></a>
+    <a id="enter" href="https://buscaclientes-web.buscaclientes.workers.dev/?entry=splash">Entrar ahora <span aria-hidden="true">↗</span></a>
   </div>
   <p class="corner">Made In Cuenca: intuitive business apps</p>
 </main>
@@ -70,7 +70,7 @@ h1 span{color:var(--aqua)}
 /* Real, deliberate 1.5-second introduction, then the existing public PWA.
    Meta refresh (3s) ensures a working redirect without JavaScript. */
 (function(){
-  var destination = "https://buscaclientes-web.buscaclientes.workers.dev/";
+  var destination = "https://buscaclientes-web.buscaclientes.workers.dev/?entry=splash";
   window.setTimeout(function(){window.location.replace(destination);},1500);
 })();
 </script>
