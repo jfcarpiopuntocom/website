@@ -47,8 +47,9 @@ h1 span{color:var(--aqua)}
 @media(max-width:450px){.masthead{font-size:9px;letter-spacing:.2em}.visual{height:175px}.visual img{max-height:186px}h1{letter-spacing:-.065em}.free{padding:10px 13px}.launch{margin-top:20px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.progress::after{transform:none}}
 </style>
+<link rel="stylesheet" href="/editorial.css">
 </head>
-<body>
+<body class="editorial">
 <main aria-labelledby="brand">
   <p class="masthead">Tu próximo cliente está en algún lugar</p>
   <div class="visual">
@@ -65,7 +66,7 @@ h1 span{color:var(--aqua)}
     <a id="enter" href="https://buscaclientes-web.buscaclientes.workers.dev/?entry=splash">Entrar ahora <span aria-hidden="true">↗</span></a>
   </div>
   <p class="corner">Made In Cuenca: intuitive business apps</p>
-</main>
+<nav class="commercial-nav" data-commercial-nav aria-label="Recursos para tu negocio"><a href="/es/">JFCarpio.com</a><a href="/apps/">Apps</a><a href="/reportes/">Reportes de USD 100</a><a href="/talleres/">Talleres</a><a href="/visores/">Dashboards</a></nav></main>
 <script>
 /* Real, deliberate 1.5-second introduction, then the existing public PWA.
    Meta refresh (3s) ensures a working redirect without JavaScript. */

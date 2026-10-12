@@ -2,7 +2,7 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),path=require('n
 const root=path.join(__dirname,'..'),read=name=>fs.readFileSync(path.join(root,name),'utf8');
 for(const name of ['index.html','es/index.html']){
  const source=read(name).replace(/<template\b[^>]*>.*?<\/template>/gs,''),ids=[...source.matchAll(/<section class="slide[^"]*" id="([a-z0-9]+)"/g)].map(m=>m[1]);
- assert.equal(ids.length,20);assert.equal(ids[ids.indexOf('apps')+1],'reportes');assert(ids.indexOf('pbiu')>ids.indexOf('publicaciones'));
+ assert.equal(ids.length,20);assert.equal(ids[ids.indexOf('apps')+1],'reportes');assert(ids.indexOf('pbiu')<ids.indexOf('publicaciones'));
  const micro=source.match(/<section class="slide[^"]*" id="reportes".*?<\/section>/s)[0];
  assert(!/Critical Minerals|Minerales Críticos|Macroeconomic research|Research macro|research-feedback|macroec[oó]n[oó]mic|brilla-group\.com/i.test(micro));
  assert(micro.includes('USD 100'));assert(micro.includes('72'));assert(micro.includes('10'));
@@ -16,4 +16,4 @@ const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Se
 for(const m of page.matchAll(/href="#([^"]+)"/g))assert(ids.includes(m[1]),'Missing internal destination '+m[1]);
 for(const m of page.matchAll(/(?:src|href)="(\/assets\/[^"?#]+)"/g))assert(fs.existsSync(path.join(root,m[1])),'Missing asset '+m[1]);
 assert(read('worker.js').includes('"/api/pbiu/fx"'));assert(!read('wrangler.toml').includes('friendly123.com'));
-console.log('Offer separation: 20 slides, adjacent microreports, lower PBIU, 15 complete documents, prices, anchors, assets and domain boundary OK');
+console.log('Offer separation: 20 slides, adjacent microreports, commercial PBIU, 15 complete documents, prices, anchors, assets and domain boundary OK');

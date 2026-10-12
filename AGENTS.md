@@ -1,5 +1,5 @@
 # AGENTS.md — jfcarpio.com
-v1.176 · 2026-05-21 · Author: JFC + Codex
+v1.276 · 2026-05-21 · Author: JFC + Codex
 
 ---
 
@@ -141,7 +141,7 @@ Sources checked 2026-05-06: Google Search Central helpful content + generative-A
 
 ## Versioning
 
-Current: **v1.176**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
+Current: **v1.276**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
 
 ---
 
@@ -191,3 +191,9 @@ https://Codex.ai/code/session_[ID]
 - JFC authorized finishing and publishing jfcarpio.com. Do not modify friendly123.com, its landing, Worker friendly123-com, DNS or runtime while Claude works there; wait for an express new request.
 - Distinguish the arrival carousel, website content, the three-app overview landing, and the individual Friendly landing. Friendly is primary; Amigable and Consultorio stay secondary and accessible.
 - Apply the globally installed sloptrim skill to copy and notes, preserving facts and approved visual emphasis. Notion holds shared decisions and release evidence.
+
+## Copy aprobado — JFC, 2026-10-12
+- Redacción natural por idioma; no traducción palabra por palabra.
+- Consulting/builder y entregables en los dos primeros tercios; publicaciones y trayectoria como respaldo al final.
+- Oferta, muestras y testimonios de reportes macro únicamente en PBIU; conservar los ensayos históricos en su archivo.
+- No convertir clics de WhatsApp en consultas o ventas registradas.

@@ -45,7 +45,7 @@ assert.match(read('en/apps/index.html'), /href="\/en\/launch-review\/"/);
 
 const es = read('revision-de-lanzamiento/index.html');
 const en = read('en/launch-review/index.html');
-for (const item of ['404','Meta title','Meta description','Favicon','robots.txt','sitemap.xml','Open Graph','Alt text','móvil','carga','error','Términos','Cookies','Analytics','contacto','WebP']) {
+for (const item of ['404','Meta title','Meta description','Favicon','robots.txt','sitemap.xml','Open Graph','Texto alternativo','móvil','carga','error','Términos','Cookies','Analítica','contacto','WebP']) {
   assert.ok(es.toLowerCase().includes(item.toLowerCase()), `ES missing: ${item}`);
 }
 for (const item of ['404','title','description','favicon','robots.txt','sitemap.xml','Open Graph','alt text','mobile','loading','error','terms','cookies','analytics','contact','WebP']) {

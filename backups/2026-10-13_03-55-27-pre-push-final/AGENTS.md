@@ -1,0 +1,199 @@
+# AGENTS.md — jfcarpio.com
+v1.276 · 2026-05-21 · Author: JFC + Codex
+
+---
+
+## Project
+
+Static website + Cloudflare Workers deployed at jfcarpio.com.
+Branch for feature work: `Codex/high-contrast-white-design-VK5kk`. Base: `main`.
+
+**Key files:**
+- `index.html` — Dark theme homepage (current production)
+- `index-white-contrast.html` — High-contrast white theme (B version)
+- `worker.js` + `wrangler.toml` — Cloudflare Worker
+- `network-*.jpg`, `fotojfc.png`, `og-jfcarpio.png` — Assets
+
+**Timestamped backups are intentional and must never be removed.**
+
+---
+
+## Backup Protocol
+
+- Before every file change, create timestamped backups to the second.
+- Before every `git pull`, create timestamped backups to the second of relevant working files and any modified files.
+- Before every `git push`, create timestamped backups to the second of all files being pushed.
+- When JFC or another tool/agent changes GitHub, the newest pulled state is authoritative. Always back up, pull, pre-flight, and read the latest code before judging or editing.
+- After JFC approves changes, default to completing the full loop: backup, stage specific files, commit, and push so the site is live. Only pause before pushing if there is a real blocker, destructive ambiguity, failing pre-flight, or JFC explicitly asks not to push.
+- Backup directories/files may accumulate locally and in GitHub. Do not delete or "clean up" them unless JFC explicitly asks.
+- Required local backup location: `backups/YYYY-MM-DD_HH-mm-ss/` inside the project root.
+- For `las7formas`, back up at least `las7formas/index.html`, `las7formas/styles.css`, `las7formas/app.js`, and any image/assets touched in that change.
+
+---
+
+## Absolute Rules (never change without JFC explicit approval)
+
+### JFC Identity / Public Bio (CRITICAL)
+- Never call JFC "Economista" or "economist" in public copy, bios, bylines, metadata, captions, headings, or internal copy guidance.
+- Preferred labels by context:
+  - `Investigador económico`
+  - `Investigador empresarial y económico`
+  - `Investigador y capacitador`
+- Choose the label that fits the project and buyer context. When in doubt for corporate/workshop pages, use `Investigador empresarial y económico`.
+- For workshops, speaking, corporate training and B2B landing pages, sprinkle `capacitador/speaker` or `trainer/speaker` naturally where it helps buyer comprehension.
+- Do not stack `Investigador empresarial y económico` and `capacitador/speaker` in the same byline if it becomes long or pompous. Prefer alternating labels by section: researcher in authority/bio contexts, trainer/speaker in delivery/format contexts.
+- Accurate speaking/training geography: JFC has trained in three cities in Ecuador and has been an invited speaker in Brazil and Turkey. Do not invent Peru, Colombia, Chile, LATAM, or other countries as training footprint unless JFC explicitly provides them for that page.
+- Do not use pompous credential-first framing. Lead with the work, the research angle, the business consequence, and the practical training outcome.
+
+### Colors — Dark Theme
+- Background: `#060E1D`
+- Primary text: `#FFFFFF`
+- Secondary text: `#F2F2F2` minimum; tertiary/helper text: `#E6E6E6` minimum. Never use opacity to make meaningful text faint.
+- Accents: `#E86040` (orange) · `#E8A020` (gold) · `#28ECAA` (green) · `#3B7EE8` (blue)
+
+### Colors — White Theme (index-white-contrast.html)
+- Background: `#FFFFFF`
+- Primary text: `#000000`
+- Secondary text: `#333333` minimum
+- Accents: same as dark theme
+
+### Typography
+- Reel, generated slide pages, and launch-review pages (JFC choice, 2026-10-07): `Barlow Condensed` for display headings, `Jost` for reading, and `Space Mono` for short labels and controls. These are self-hosted in `assets/fonts/`. Preserve the established `Publicaciones` typography and color contrasts on its own page. Do not restore Playfair Display to the reel or multiply font families.
+- Older standalone product pages retain their own approved styling until reviewed individually.
+- Minimum font size: `.82rem` — no exceptions, ever
+
+### Layout
+- Mobile-first: base styles target 320px, enhance up with `min-width`
+- Touch targets: 44px minimum
+- Content max-width: 1300px
+
+### Main Landing Visual Direction
+- JFC explicitly rejected these as bad directions for the main landing: reducing the hero's atmospheric identity, simplifying the H1 accent strategy just for restraint, and removing micro-ornaments broadly.
+- Approved micro-directions for the main landing: make the proof stats more sober and narrative, and make the bento less like oversized product cards and more like an editorial index.
+- When the page feels "atorrante", first improve the stats and bento hierarchy before touching hero identity, headline emphasis, or overall ornamental language.
+- Never put success-counter proof stats in the hero of the main landing. JFC hates that pattern. Put those figures near the trajectory/timeline where they read as accumulated work across decades.
+- Main timeline title approved by JFC: `Una trayectoria en defensa de la sociedad civil y la empresa privada`.
+- Newsletter/list naming: use `Lista de correos de jfcarpio.com`, not `Carta del Entorno`. Platform: Gumroad. URL: `https://jfcarpio.gumroad.com/`.
+- Main hero CTA should not lead with price-first sales copy. Prefer decision/diagnosis language; keep price details inside the relevant product/card.
+
+### Las7formas Curriculum Bullets (CRITICAL)
+- The timestamped video bullets in `las7formas/index.html` inside `<ul class="curr__list" id="currList">` are JFC-approved source copy.
+- Never edit, reorder, paraphrase, retimestamp, or "improve" those `data-video`, `.curr__txt`, or `.curr__ts` entries unless JFC explicitly asks for that exact block in the same turn.
+
+### Animation (CRITICAL — breaking these hides content permanently)
+- JFC approved the motion lab on 2026-10-07. The reel uses lightweight photo drift, split-card entrances, card responses, editorial traces and data accents. Animate only `.is-current`; the CSS effects run on phones too (JFC 2026-10-07: he saw no motion on mobile) and stop with reduced motion. REEL FX (Claude 2026-10-07): one WebGL canvas with a distinct scene per slide, plus colored-underline highlights (`HL` map, applied by setLang and build-home-locales.py). Preserve static content on old phones and without JS, and preserve fixed Open Graph metadata/images for sharing.
+- Reveal gate: `document.documentElement.className+=' js-rv'` must stay in script
+- Only `.js-rv .reveal { opacity:0 }` is safe — never set `opacity:0` on `.reveal` bare
+- Never re-add inline `revEl.style.opacity='0'` pattern
+
+### Image Paths (CRITICAL — must always be absolute URLs)
+- `fotojfc.png` → `https://jfcarpio.com/fotojfc.png` (NEVER URL-encoded filenames)
+- `network-*.jpg` → `https://jfcarpio.com/network-*.jpg`
+- `og-*.png` → `https://jfcarpio.com/og-*.png`
+- Pexels CSS backgrounds → `https://images.pexels.com/photos/XXXXXX/pexels-photo-XXXXXX.jpeg?auto=compress&cs=tinysrgb&w=1600`
+- Pexels pan-cover img tags (5 section cards) — canonical URLs, DO NOT TOUCH:
+  - photo 590022  → `https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800`
+  - photo 1108101 → `https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800`
+  - photo 1181396 → `https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=800`
+  - photo 256541  → `https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&w=800`
+  - photo 29713916 → `https://images.pexels.com/photos/29713916/pexels-photo-29713916.jpeg?auto=compress&cs=tinysrgb&w=800`
+
+**PRE-FLIGHT — run BOTH after every git pull, before touching anything:**
+```bash
+grep -c "<!DOCTYPE" index.html          # must be exactly 1
+grep -c 'Juan%20Fernando' index.html    # must be exactly 0
+grep -c 'src="[^h]' index.html          # must be exactly 0 (catches relative/local paths)
+```
+If any check fails: STOP. Do not edit. Revert with `git reset --hard HEAD~1`.
+
+### Browser-Saved HTML Files (CATASTROPHIC — FORBIDDEN — NEVER COMMIT)
+- **NEVER commit `index.html` if it was saved via browser "Save Page As"** — browsers append chrome-extension tags and URL-encoded directory names like `Juan%20Fernando...files/`
+- **Signature of browser-save:** contains `chrome-extension://`, `<!-- saved from url=`, URL-encoded paths, or multiple `<!DOCTYPE` declarations
+- **Prevention:** After any git pull, ALWAYS run: `grep -c "<!DOCTYPE" index.html` — should return exactly **1**, never more
+- **If found:** Kill the session. Do NOT edit. Revert to last clean commit. This is a landing page — any corruption breaks the entire site.
+- If you see multiple DOCTYPEs, duplication has occurred. DO NOT attempt to fix by editing. Revert immediately: `git reset --hard HEAD~1`
+
+### i18n
+- Every translatable element: `data-t="key"` attribute
+- Strings: `var T = { es:{...}, en:{...} }` — both objects must have identical keys
+- Textarea placeholders: `data-t-placeholder` (separate attribute)
+
+---
+
+## Deslop / Anti-AI-Slop Copy Rules
+
+Sources checked 2026-05-06: Google Search Central helpful content + generative-AI guidance, FTC Endorsement Guides, plus internal editorial/UX heuristics for web copy.
+
+- Treat AI output as unvetted source material. Verify every fact, statistic, quote, attribution, image caption, and named framework before publishing.
+- Never invent quotes. If paraphrasing a thinker, label it as a contemporary summary or interpretation.
+- Every serious claim needs at least one anchor: first-hand JFC experience, a named source, a concrete number, a buyer situation, or a visible example.
+- Remove generic AI cadence: "In today's fast-paced world", "unlock your potential", "game-changing", "transformative solutions", "comprehensive", "seamless", "empower", and similar plastic language.
+- Replace abstract nouns with observed behavior: what the buyer sees Monday morning, what changes in a meeting, what number appears, what decision is made.
+- Keep a clear human point of view. JFC copy should sound like a specific economic/business researcher and instructor with taste, judgment, humor, and stakes, not a neutral brochure.
+- One paragraph, one job. If a paragraph only sounds polished but adds no proof, tension, contrast, mechanism, or next step, cut or rewrite it.
+- Make pages scannable without becoming thin: strong headings, short paragraphs, captions that carry meaning, and mobile images only when they add information.
+- Do not over-disclose AI use in sales copy unless needed, but do preserve accountability: author, expertise, sources, dates, and contact path must be clear.
+- Final pass question: would JFC proudly say this sentence to a real CEO, family, or classroom, out loud, without sounding fake?
+- Testimonials may be anonymized or composite only when they summarize real client/student reactions from real workshops or programs. Do not invent a persona, company, metric, or outcome. If a quote merges several people, keep it internally marked as a real composite/synthesis and avoid naming a specific person unless JFC has permission.
+- For US/global funnels, FTC-safe testimonial rule: endorsements must be truthful, not misleading, and not imply typical results unless JFC can substantiate those results or clearly explain what a buyer can generally expect.
+
+---
+
+## Versioning
+
+Current: **v1.276**. Increment by 0.1 for each meaningful change. Update the CSS master block comment header on every version bump.
+
+---
+
+## Git
+
+```bash
+git status
+git diff index.html
+git log --oneline -10
+git add <specific-files>   # never git add -A blindly
+```
+
+Commit format:
+```
+vX.XXX: Short description of what changed
+
+- Why bullet
+- Why bullet
+
+https://Codex.ai/code/session_[ID]
+```
+
+---
+
+## Workflow rules for Codex
+
+1. **Propose before acting.** Present the plan, wait for JFC approval, then execute.
+2. **JFC's word is final** unless a request is genuinely technically impossible.
+3. **No unsolicited refactoring.** Only change what was asked.
+4. **No removing backups.** Timestamped files are intentional safety nets.
+5. **Commit after each version bump**, not in bulk.
+
+### Reel vertical de la portada (JFC 2026-09-29)
+- `index.html` es un reel vertical (12 fotogramas). Lee `notas/REEL-NOTAS-2026-09-29.md` y el comentario al inicio del `<body>` ANTES de tocar.
+- Colores/contenido = el sitio de julio 2026 (commit `9f550ca`); texto blanco sobre fondo navy propio; sin gris/translucido; `dvh`, nunca `vh`.
+- Prueba obligatoria tras cambiar la portada: `SITE=$PWD PW=<playwright> node scripts/test-reel.cjs white` (debe decir TODO OK).
+- El reel anterior (Codex) esta en `indexbackup28sept2026-reel-codex.html`; no borrar.
+- OJO despliegue: el Worker `website` debe estar conectado a ESTE repo (no a friendly-123). Ver la nota de despliegue en `notas/`.
+
+## Global market positioning — JFC, 2026-10-07
+- English is the initial home language; Spanish stays available explicitly. Revenue order: apps, USD 100 focused reports in up to 72 hours, the two workshops, private dashboards.
+- Interior pages use the shared Publicaciones-inspired editorial spacing, bold emphasis and colored underlines. Keep all text readable.
+- The large CV illustration is removed from the reel; professional history remains available on demand and in the original profile route. Testimonials belong to contextual research proof; earlier research is not a review of the new fixed-price offer.
+
+
+## JFC release authorization and separation — 2026-10-07
+- JFC authorized finishing and publishing jfcarpio.com. Do not modify friendly123.com, its landing, Worker friendly123-com, DNS or runtime while Claude works there; wait for an express new request.
+- Distinguish the arrival carousel, website content, the three-app overview landing, and the individual Friendly landing. Friendly is primary; Amigable and Consultorio stay secondary and accessible.
+- Apply the globally installed sloptrim skill to copy and notes, preserving facts and approved visual emphasis. Notion holds shared decisions and release evidence.
+
+## Copy aprobado — JFC, 2026-10-12
+- Redacción natural por idioma; no traducción palabra por palabra.
+- Consulting/builder y entregables en los dos primeros tercios; publicaciones y trayectoria como respaldo al final.
+- Oferta, muestras y testimonios de reportes macro únicamente en PBIU; conservar los ensayos históricos en su archivo.
+- No convertir clics de WhatsApp en consultas o ventas registradas.

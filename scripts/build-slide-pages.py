@@ -21,7 +21,7 @@ from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://jfcarpio.com"
-DATE = "2026-10-07"
+DATE = "2026-10-12"
 WA = "https://wa.me/593999905080"
 ADDR = "General Torres #14, Cuenca, Ecuador"
 
@@ -37,7 +37,7 @@ PAGES = {
     "reportes": ("reportes", "en/reports", "Reportes", "Reports"),
     "trayectoria": ("trayectoria", "en/track-record", "Trayectoria", "Track record"),
     "c8": ("historia-de-dos-negocios/datos-no-es-ver", "en/tale-of-two-businesses/data-is-not-seeing", "Contraste 4 · Ver a tiempo", "Contrast 4 · See in time"),
-    "visores": ("visores", "en/business-viewers", "Visores", "Business viewers"),
+    "visores": ("visores", "en/business-viewers", "Visores", "Business dashboards"),
     "gumroad": ("tienda-gumroad", "en/gumroad-store", "Tienda Gumroad", "Gumroad store"),
     "escuela": ("la-escuela-del-dinero", "en/money-school", "La Escuela del Dinero", "La Escuela del Dinero (Money School)"),
     "gratis": ("recursos-gratuitos", "en/free-resources", "Recursos gratuitos", "Free resources"),
@@ -68,13 +68,13 @@ FAQ = {
         "es": [("¿Los visores son gratuitos?", "Sí. El Visor Gerencial (tablero de Marketing) y el Visor Antiquiebra son gratuitos y sin registro."),
                ("¿Qué áreas cubre el Visor Gerencial?", "Hoy está disponible Marketing, con calculadoras en vivo de CAC, LTV y ROI. Ventas, Finanzas, Operaciones, RRHH, Logística y TI llegan próximamente."),
                ("¿Con qué países me compara?", "Con benchmarks de Ecuador, Colombia, Perú y Chile."),
-               ("¿Qué me evita el Visor Antiquiebra?", "Descubrir tarde que el negocio solo aguanta. Está hecho para atravesar el Valle de la Muerte (meses 6 a 24): ocho indicadores, las 3 Cs y semáforo de riesgo en 15 minutos semanales."),
-               ("¿Qué pasa si necesito más que el diagnóstico?", "Al final puedes pasar al Kit (USD 97) o a una sesión de revisión con el equipo de JFCarpio.com (USD 197).")],
+               ("¿Qué me evita el Visor Antiquiebra?", "Descubrir tarde que el negocio solo aguanta. Está hecho para atravesar el Valle de la Muerte (meses 6 a 24): ocho indicadores, las 3 Cs y semáforo de riesgo en 45 minutos al mes."),
+               ("¿Qué pasa si necesito más que el diagnóstico?", "Al final puedes pasar al Kit (USD 97) o al Kit con una sesión de revisión con el equipo de JFCarpio.com (USD 197).")],
         "en": [("Are the viewers free?", "Yes. The Management Viewer (Marketing dashboard) and the Anti-bankruptcy Viewer are free, with no sign-up."),
                ("Which areas does the Management Viewer cover?", "Marketing is live today, with live CAC, LTV and ROI calculators. Sales, Finance, Operations, HR, Logistics and IT are coming soon."),
                ("Which countries does it compare me with?", "With benchmarks for Ecuador, Colombia, Peru and Chile."),
-               ("What does the Anti-bankruptcy Viewer save me from?", "Finding out too late that the business is only holding on. It is built to cross the Valley of Death (months 6 to 24): eight indicators, the 3 Cs and a risk traffic light in 15 minutes a week."),
-               ("What if I need more than the diagnosis?", "At the end you can move on to the Kit (USD 97) or a review session with the JFCarpio.com team (USD 197).")],
+               ("What does the Anti-bankruptcy Viewer save me from?", "Finding out too late that the business is only holding on. It is built to cross the Valley of Death (months 6 to 24): eight indicators, the 3 Cs and a risk traffic light in 45 minutes a month."),
+               ("What if I need more than the diagnosis?", "At the end you can move on to the Kit (USD 97) or the Kit with a review session with the JFCarpio.com team (USD 197).")],
     }
 }
 # Testimonios reales (textos literales de la slide Clientes); se muestran en las paginas de estos capitulos.
@@ -174,12 +174,7 @@ def main():
         def tx(n):
             k = n.attrs.get("data-t")
             if k and k in T: return T[k].strip()
-            inner = [x for x in n.walk() if x is not n and x.attrs.get("data-t") in T]
-            if inner and not n.text().strip():
-                return inner[0].text().strip()
-            if inner and len(inner) == 1 and inner[0].text().strip() == n.text().strip():
-                return T[inner[0].attrs["data-t"]].strip()
-            return re.sub(r"\s+", " ", n.text()).strip()
+            return re.sub(r"\s+", " ", "".join(k if isinstance(k, str) else tx(k) for k in n.kids)).strip()
 
         def href_to_page(h):
             if h.startswith("#"):
@@ -295,6 +290,11 @@ def main():
                                 c += f'<a class="btn" href="{esc(href_to_page(a.attrs["href"]))}" rel="noopener">{esc(tx(a))}</a>'
                             body.append(c + "</div>")
                         body.append("</div>")
+            if sid == "clientes":
+                for q in find_all(root, "blockquote"):
+                    quote = find(q, "span"); cite = find(q, "cite")
+                    if quote and cite:
+                        body.append('<figure class="quote"><blockquote>' + esc(tx(quote)) + '</blockquote><figcaption>' + esc(tx(cite)) + '</figcaption></figure>')
             if sid == "apps":
                 body.append(apps_video(lang))
                 if lang == "es":
@@ -307,9 +307,9 @@ def main():
                 desc = ("One business question, a questionnaire, a 10-minute online interview and a focused written report within 72 hours. USD 100. English and Spanish." if lang == "en" else "Una pregunta empresarial, un cuestionario, una entrevista online de 10 minutos y un reporte escrito en hasta 72 horas. USD 100. Inglés y español.")
             if sid == "visores":
                 if lang == "en":
-                    body.append('<section class="accent-blue"><h2>A dashboard built around your business</h2><p>The free Antiquiebra and Gerencial tools show how we turn <strong>scattered data into useful decisions</strong>. Marketing is available now; the other executive areas are being developed.</p><p>For private clients, we can design a dashboard around the question, indicators and workflow that matter to their business. Scope and price are agreed for each project. Work is online, in English or Spanish.</p><a class="btn" href="/en/contact/">Discuss a custom dashboard</a></section>')
+                    body.append('<section class="accent-blue"><h2>A dashboard built around your business</h2><p>The free Antiquiebra and Gerencial tools show how we turn <strong>scattered data into useful decisions</strong>. Marketing is available now; the other executive areas are being developed.</p><p>For private clients, we can design a dashboard around the question, indicators and workflow that matter to their business. Start with the question your team needs to answer. We agree on the inputs, indicators and delivery format before beginning. Scope and price are set for each project; work is online in English or Spanish.</p><a class="btn" href="/en/contact/">Discuss a custom dashboard</a></section>')
                 else:
-                    body.append('<section class="accent-blue"><h2>Un dashboard construido para tu negocio</h2><p>Las herramientas gratuitas Antiquiebra y Gerencial muestran cómo convertimos <strong>datos dispersos en decisiones útiles</strong>. Marketing ya está disponible; las demás áreas ejecutivas están en desarrollo.</p><p>Para clientes privados, podemos diseñar un dashboard alrededor de la pregunta, los indicadores y el proceso que importan en su negocio. El alcance y el precio se acuerdan por proyecto. Trabajamos online en inglés o español.</p><a class="btn" href="/contacto/">Conversemos sobre tu dashboard</a></section>')
+                    body.append('<section class="accent-blue"><h2>Un dashboard construido para tu negocio</h2><p>Las herramientas gratuitas Antiquiebra y Gerencial muestran cómo convertimos <strong>datos dispersos en decisiones útiles</strong>. Marketing ya está disponible; las demás áreas ejecutivas están en desarrollo.</p><p>Para clientes privados, podemos diseñar un dashboard alrededor de la pregunta, los indicadores y el proceso que importan en su negocio. Primero definimos la pregunta, los datos disponibles y los indicadores que necesita tu equipo. Acordamos el formato de entrega, el alcance y el precio antes de empezar. Trabajamos online en inglés o español.</p><a class="btn" href="/contacto/">Conversemos sobre tu dashboard</a></section>')
             graph = [
                 {"@type": "WebPage", "@id": canon + "#page", "url": canon, "name": title, "description": desc, "inLanguage": lang,
                  "isPartOf": {"@type": "WebSite", "name": "JFCarpio.com", "url": SITE + "/"}, "primaryImageOfPage": og,
@@ -329,7 +329,7 @@ def main():
             nav += f'<a href="/{slug(prv, lang)}/">← {esc(name(prv, lang))}</a>' if prv else "<span></span>"
             nav += f'<a href="/{slug(nxt, lang)}/">{esc(name(nxt, lang))} →</a>' if nxt else "<span></span>"
             nav += "</nav>"
-            reel = f"{home}#{'reportes' if sid == 'clientes' else sid}"
+            reel = f"{home}#{'contacto' if sid == 'clientes' else sid}"
             page = head(title, desc, canon, alt_es, alt_en, og, {"@context": "https://schema.org", "@graph": graph}) + \
                 chrome(reel, alt_en if lang == "es" else alt_es, "\n".join(body), nav) + "\n</body>\n</html>\n"
             write(sl, page)
@@ -401,7 +401,7 @@ def main():
           f"- [Revisión antes del lanzamiento]({SITE}/revision-de-lanzamiento/): servicio pagado para productos y SaaS hechos con vibecoding.",
           f"- [Talleres corporativos de cambio rápido]({SITE}/talleres/)", f"- [Publicaciones]({SITE}/publicaciones/)",
           f"- [Las 7 formas de destruir tus finanzas personales y familiares]({SITE}/las7formas/)",
-          f"- [Visor Antiquiebra · 6–24M]({SITE}/visorantiquiebra/): atravesar el Valle de la Muerte (meses 6 a 24), 15 minutos semanales.",
+          f"- [Visor Antiquiebra · 6–24M]({SITE}/visorantiquiebra/): atravesar el Valle de la Muerte (meses 6 a 24), 45 minutos al mes.",
           f"- [Visor Gerencial]({SITE}/visorgerencial/): un tablero por área ejecutiva; Marketing ya disponible."]
     L += [f"- [{name(s, 'es')}]({SITE}/{slug(s, 'es')}/)" for s in page_list]
     open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write("\n".join(L) + "\n")

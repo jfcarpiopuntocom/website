@@ -1,0 +1,233 @@
+[
+  {
+    "url": "https://www.amazon.com/-/es/Juan-Fernando-Carpio-Tobar-Subia-ebook/dp/B08JQDXTDH",
+    "status": 503,
+    "final": "https://www.amazon.com/-/es/Juan-Fernando-Carpio-Tobar-Subia-ebook/dp/B08JQDXTDH",
+    "sources": [
+      "index.html",
+      "es/index.html"
+    ],
+    "exit": 0
+  },
+  {
+    "url": "https://www.goodreads.com/book/show/19326777-10-lecciones-de-econom-a",
+    "status": 202,
+    "final": "https://www.goodreads.com/book/show/19326777-10-lecciones-de-econom-a",
+    "sources": [
+      "index.html",
+      "es/index.html"
+    ],
+    "exit": 0
+  },
+  {
+    "url": "http://econ101.usfq.edu.ec/2014/10/resena.html",
+    "status": 502,
+    "final": "http://econ101.usfq.edu.ec/2014/10/resena.html",
+    "sources": [
+      "index.html",
+      "es/index.html"
+    ],
+    "exit": 0
+  },
+  {
+    "url": "https://medium.com/@jfcarpio/carl-menger-el-cop%C3%A9rnico-de-la-econom%C3%ADa-y-el-descubridor-de-los-juegos-ganar-ganar-e238a5d776e0",
+    "status": 403,
+    "final": "https://medium.com/@jfcarpio/carl-menger-el-cop%C3%A9rnico-de-la-econom%C3%ADa-y-el-descubridor-de-los-juegos-ganar-ganar-e238a5d776e0",
+    "sources": [
+      "blog/index.html"
+    ],
+    "exit": 0
+  },
+  {
+    "url": "https://medium.com/@jfcarpio/la-plusval%C3%ADa-de-say-la-refutaci%C3%B3n-final-a-la-teor%C3%ADa-de-la-explotaci%C3%B3n-de-karl-marx-feea2f52ec26",
+    "status": 403,
+    "final": "https://medium.com/@jfcarpio/la-plusval%C3%ADa-de-say-la-refutaci%C3%B3n-final-a-la-teor%C3%ADa-de-la-explotaci%C3%B3n-de-karl-marx-feea2f52ec26",
+    "sources": [
+      "blog/index.html"
+    ],
+    "exit": 0
+  },
+  {
+    "url": "https://medium.com/@jfcarpio",
+    "status": 403,
+    "final": "https://medium.com/@jfcarpio",
+    "sources": [
+      "blog/index.html",
+      "blog/index.html",
+      "blog/index.html"
+    ],
+    "exit": 0
+  },
+  {
+    "url": "https://www.linkedin.com/in/jfcarpio/",
+    "status": 999,
+    "final": "https://www.linkedin.com/in/jfcarpio/",
+    "sources": [
+      "juan-fernando-carpio/index.html"
+    ],
+    "exit": 0
+  },
+  {
+    "url": "chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js",
+    "status": 0,
+    "final": "chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js",
+    "sources": [
+      "visordemarketing/index.html",
+      "visordemarketing/index.html"
+    ],
+    "exit": 1
+  },
+  {
+    "url": "chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js",
+    "status": 0,
+    "final": "chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js",
+    "sources": [
+      "visordemarketing/index.html",
+      "visordemarketing/index.html"
+    ],
+    "exit": 1
+  },
+  {
+    "url": "chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js",
+    "status": 0,
+    "final": "chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js",
+    "sources": [
+      "visordemarketing/index.html",
+      "visordemarketing/index.html"
+    ],
+    "exit": 1
+  },
+  {
+    "url": "chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js",
+    "status": 0,
+    "final": "chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js",
+    "sources": [
+      "visordemarketing/index.html",
+      "visordemarketing/index.html"
+    ],
+    "exit": 1
+  },
+  {
+    "url": "chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/101.js",
+    "status": 0,
+    "final": "chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/101.js",
+    "sources": [
+      "visordemarketing/index.html",
+      "visordemarketing/index.html"
+    ],
+    "exit": 1
+  },
+  {
+    "url": "https://jfcarpiopuntocom.github.io/GrowthOS/GrowthOS_LAUNCH.html",
+    "status": 404,
+    "final": "https://jfcarpiopuntocom.github.io/GrowthOS/GrowthOS_LAUNCH.html",
+    "sources": [
+      "visorantiquiebra/index.html"
+    ],
+    "exit": 0
+  },
+  {
+    "url": "https://jfcarpiopuntocom.github.io/GrowthOS/GrowthOS_GROW.html",
+    "status": 404,
+    "final": "https://jfcarpiopuntocom.github.io/GrowthOS/GrowthOS_GROW.html",
+    "sources": [
+      "visorantiquiebra/index.html"
+    ],
+    "exit": 0
+  },
+  {
+    "url": "https://jfcarpiopuntocom.github.io/GrowthOS/GrowthOS_SCALE.html",
+    "status": 404,
+    "final": "https://jfcarpiopuntocom.github.io/GrowthOS/GrowthOS_SCALE.html",
+    "sources": [
+      "visorantiquiebra/index.html"
+    ],
+    "exit": 0
+  },
+  {
+    "url": "https://images.pexels.com/photos/1629141/pexels-photo-1629141.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "status": 404,
+    "final": "https://images.pexels.com/photos/1629141/pexels-photo-1629141.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "sources": [
+      "pacific-basin/index.html"
+    ],
+    "exit": 0
+  },
+  {
+    "url": "https://wa.me/593000000000?text=Hola%20PBIU%2C%20vi%20el%20teaser%20Pacific%20Basin%20Matrix%20y%20me%20gustar%C3%ADa%20más%20información.",
+    "status": 400,
+    "final": "https://wa.me/593000000000?text=Hola%20PBIU%2C%20vi%20el%20teaser%20Pacific%20Basin%20Matrix%20y%20me%20gustar%C3%ADa%20más%20información.",
+    "sources": [
+      "pacific-basin/index.html"
+    ],
+    "exit": 0
+  },
+  {
+    "url": "file:///reportes/",
+    "status": 0,
+    "final": "file:///reportes/",
+    "sources": [
+      "pacific-basin/index.html",
+      "pacific-basin/index.html",
+      "pacific-basin/index.html",
+      "pacific-basin/index.html",
+      "pacific-basin/index.html",
+      "pacific-basin/index.html"
+    ],
+    "exit": 37
+  },
+  {
+    "url": "file:///due-diligence-checklist/",
+    "status": 0,
+    "final": "file:///due-diligence-checklist/",
+    "sources": [
+      "pacific-basin/index.html"
+    ],
+    "exit": 37
+  },
+  {
+    "url": "file:///critical-minerals-outlook/",
+    "status": 0,
+    "final": "file:///critical-minerals-outlook/",
+    "sources": [
+      "pacific-basin/index.html"
+    ],
+    "exit": 37
+  },
+  {
+    "url": "file:///glosario.html",
+    "status": 0,
+    "final": "file:///glosario.html",
+    "sources": [
+      "pacific-basin/index.html"
+    ],
+    "exit": 37
+  },
+  {
+    "url": "file:///",
+    "status": 0,
+    "final": "file://(nil)",
+    "sources": [
+      "pacific-basin/index.html"
+    ],
+    "exit": 0
+  },
+  {
+    "url": "https://images.pexels.com/photos/1629141/pexels-photo-1629141.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&dpr=1",
+    "status": 404,
+    "final": "https://images.pexels.com/photos/1629141/pexels-photo-1629141.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&dpr=1",
+    "sources": [
+      "pacific-basin/index.html"
+    ],
+    "exit": 0
+  },
+  {
+    "url": "http://www.twitter.com/escuela_dinero",
+    "status": 520,
+    "final": "http://www.twitter.com/escuela_dinero",
+    "sources": [
+      "las7formas/index.html"
+    ],
+    "exit": 0
+  }
+]

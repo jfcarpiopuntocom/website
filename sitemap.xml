@@ -159,7 +159,7 @@
   <!-- SLIDE-PAGES-START -->
   <url>
     <loc>https://jfcarpio.com/historia-de-dos-negocios/dos-maneras-de-operar/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/dos-maneras-de-operar/"/>
@@ -167,17 +167,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/tale-of-two-businesses/two-ways-to-operate/"/>
   </url>
   <url>
-    <loc>https://jfcarpio.com/historia-de-dos-negocios/lo-que-pasa-afuera/</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/lo-que-pasa-afuera/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/tale-of-two-businesses/what-happens-outside/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/tale-of-two-businesses/what-happens-outside/"/>
-  </url>
-  <url>
     <loc>https://jfcarpio.com/historia-de-dos-negocios/la-informacion-sola-no-basta/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/la-informacion-sola-no-basta/"/>
@@ -186,7 +177,7 @@
   </url>
   <url>
     <loc>https://jfcarpio.com/historia-de-dos-negocios/datos-no-es-ver/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/datos-no-es-ver/"/>
@@ -195,7 +186,7 @@
   </url>
   <url>
     <loc>https://jfcarpio.com/visores/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/visores/"/>
@@ -203,8 +194,44 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/business-viewers/"/>
   </url>
   <url>
+    <loc>https://jfcarpio.com/historia-de-dos-negocios/lo-que-pasa-afuera/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/lo-que-pasa-afuera/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/tale-of-two-businesses/what-happens-outside/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/tale-of-two-businesses/what-happens-outside/"/>
+  </url>
+  <url>
+    <loc>https://jfcarpio.com/la-escuela-del-dinero/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/la-escuela-del-dinero/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/money-school/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/money-school/"/>
+  </url>
+  <url>
+    <loc>https://jfcarpio.com/tienda-gumroad/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/tienda-gumroad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/gumroad-store/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/gumroad-store/"/>
+  </url>
+  <url>
+    <loc>https://jfcarpio.com/historia-de-dos-negocios/la-decision/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/la-decision/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/tale-of-two-businesses/the-decision/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/tale-of-two-businesses/the-decision/"/>
+  </url>
+  <url>
     <loc>https://jfcarpio.com/articulos/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/articulos/"/>
@@ -213,7 +240,7 @@
   </url>
   <url>
     <loc>https://jfcarpio.com/libro/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/libro/"/>
@@ -222,7 +249,7 @@
   </url>
   <url>
     <loc>https://jfcarpio.com/trayectoria/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/trayectoria/"/>
@@ -230,26 +257,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/track-record/"/>
   </url>
   <url>
-    <loc>https://jfcarpio.com/tienda-gumroad/</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/tienda-gumroad/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/gumroad-store/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/gumroad-store/"/>
-  </url>
-  <url>
-    <loc>https://jfcarpio.com/la-escuela-del-dinero/</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/la-escuela-del-dinero/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/money-school/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/money-school/"/>
-  </url>
-  <url>
     <loc>https://jfcarpio.com/recursos-gratuitos/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/recursos-gratuitos/"/>
@@ -257,17 +266,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/free-resources/"/>
   </url>
   <url>
-    <loc>https://jfcarpio.com/historia-de-dos-negocios/la-decision/</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/la-decision/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/tale-of-two-businesses/the-decision/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/tale-of-two-businesses/the-decision/"/>
-  </url>
-  <url>
     <loc>https://jfcarpio.com/contacto/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/contacto/"/>
@@ -276,7 +276,7 @@
   </url>
   <url>
     <loc>https://jfcarpio.com/clientes/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/clientes/"/>
@@ -285,7 +285,7 @@
   </url>
   <url>
     <loc>https://jfcarpio.com/historia-de-dos-negocios/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/"/>
@@ -294,7 +294,7 @@
   </url>
   <url>
     <loc>https://jfcarpio.com/en/tale-of-two-businesses/two-ways-to-operate/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/dos-maneras-de-operar/"/>
@@ -302,17 +302,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/tale-of-two-businesses/two-ways-to-operate/"/>
   </url>
   <url>
-    <loc>https://jfcarpio.com/en/tale-of-two-businesses/what-happens-outside/</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/lo-que-pasa-afuera/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/tale-of-two-businesses/what-happens-outside/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/tale-of-two-businesses/what-happens-outside/"/>
-  </url>
-  <url>
     <loc>https://jfcarpio.com/en/tale-of-two-businesses/information-alone-is-not-enough/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/la-informacion-sola-no-basta/"/>
@@ -321,7 +312,7 @@
   </url>
   <url>
     <loc>https://jfcarpio.com/en/tale-of-two-businesses/data-is-not-seeing/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/datos-no-es-ver/"/>
@@ -330,7 +321,7 @@
   </url>
   <url>
     <loc>https://jfcarpio.com/en/business-viewers/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/visores/"/>
@@ -338,8 +329,44 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/business-viewers/"/>
   </url>
   <url>
+    <loc>https://jfcarpio.com/en/tale-of-two-businesses/what-happens-outside/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/lo-que-pasa-afuera/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/tale-of-two-businesses/what-happens-outside/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/tale-of-two-businesses/what-happens-outside/"/>
+  </url>
+  <url>
+    <loc>https://jfcarpio.com/en/money-school/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/la-escuela-del-dinero/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/money-school/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/money-school/"/>
+  </url>
+  <url>
+    <loc>https://jfcarpio.com/en/gumroad-store/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/tienda-gumroad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/gumroad-store/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/gumroad-store/"/>
+  </url>
+  <url>
+    <loc>https://jfcarpio.com/en/tale-of-two-businesses/the-decision/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/la-decision/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/tale-of-two-businesses/the-decision/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/tale-of-two-businesses/the-decision/"/>
+  </url>
+  <url>
     <loc>https://jfcarpio.com/en/articles/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/articulos/"/>
@@ -348,7 +375,7 @@
   </url>
   <url>
     <loc>https://jfcarpio.com/en/book/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/libro/"/>
@@ -357,7 +384,7 @@
   </url>
   <url>
     <loc>https://jfcarpio.com/en/track-record/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/trayectoria/"/>
@@ -365,26 +392,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/track-record/"/>
   </url>
   <url>
-    <loc>https://jfcarpio.com/en/gumroad-store/</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/tienda-gumroad/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/gumroad-store/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/gumroad-store/"/>
-  </url>
-  <url>
-    <loc>https://jfcarpio.com/en/money-school/</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/la-escuela-del-dinero/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/money-school/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/money-school/"/>
-  </url>
-  <url>
     <loc>https://jfcarpio.com/en/free-resources/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/recursos-gratuitos/"/>
@@ -392,17 +401,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/free-resources/"/>
   </url>
   <url>
-    <loc>https://jfcarpio.com/en/tale-of-two-businesses/the-decision/</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/la-decision/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/tale-of-two-businesses/the-decision/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/tale-of-two-businesses/the-decision/"/>
-  </url>
-  <url>
     <loc>https://jfcarpio.com/en/contact/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/contacto/"/>
@@ -411,7 +411,7 @@
   </url>
   <url>
     <loc>https://jfcarpio.com/en/clients/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/clientes/"/>
@@ -420,7 +420,7 @@
   </url>
   <url>
     <loc>https://jfcarpio.com/en/tale-of-two-businesses/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/historia-de-dos-negocios/"/>

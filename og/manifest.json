@@ -14,7 +14,19 @@
  {
   "file": "og/visores-es.png",
   "kick": "Herramientas para decidir",
-  "title": "Dos visores",
+  "title": "Tus cifras, en perspectiva.",
+  "lang": "es"
+ },
+ {
+  "file": "og/escuela-es.png",
+  "kick": "La Escuela del Dinero · escuela-dinero.gumroad.com",
+  "title": "La Escuela del Dinero",
+  "lang": "es"
+ },
+ {
+  "file": "og/gumroad-es.png",
+  "kick": "Gumroad · jfcarpio.gumroad.com",
+  "title": "Lecturas y herramientas para tu siguiente decisión",
   "lang": "es"
  },
  {
@@ -26,25 +38,13 @@
  {
   "file": "og/libro-es.png",
   "kick": "Primer libro",
-  "title": "10 Lessons of Economics(that governments would like to hide from you)",
+  "title": "10 Lecciones de Economía(que los gobiernos quisieran ocultarle)",
   "lang": "es"
  },
  {
   "file": "og/trayectoria-es.png",
   "kick": "J.F. Carpio · 25+ años detrás del trabajo",
-  "title": "Ideas, mercados y herramientas para decidir mejor",
-  "lang": "es"
- },
- {
-  "file": "og/gumroad-es.png",
-  "kick": "Gumroad · jfcarpio.gumroad.com",
-  "title": "Herramientas del siglo XXI para profesionales independientes y PYMES",
-  "lang": "es"
- },
- {
-  "file": "og/escuela-es.png",
-  "kick": "La Escuela del Dinero · escuela-dinero.gumroad.com",
-  "title": "La Escuela del Dinero",
+  "title": "Una trayectoria en defensa de la sociedad civil y la empresa privada",
   "lang": "es"
  },
  {
@@ -55,14 +55,14 @@
  },
  {
   "file": "og/contacto-es.png",
-  "kick": "Talleres · disponibilidad limitada",
-  "title": "Si el caso no cabe en una herramienta",
+  "kick": "Proyectos · inglés y español",
+  "title": "¿Qué necesitan decidir?",
   "lang": "es"
  },
  {
   "file": "og/clientes-es.png",
-  "kick": "Investigación anterior · contexto del testimonio",
-  "title": "Experiencias con la investigación",
+  "kick": "Experiencias · trabajo anterior",
+  "title": "El trabajo, visto por quienes lo recibieron",
   "lang": "es"
  },
  {
@@ -80,7 +80,19 @@
  {
   "file": "og/visores-en.png",
   "kick": "Tools to decide",
-  "title": "Two viewers",
+  "title": "Put your numbers in perspective.",
+  "lang": "en"
+ },
+ {
+  "file": "og/escuela-en.png",
+  "kick": "La Escuela del Dinero · escuela-dinero.gumroad.com",
+  "title": "La Escuela del Dinero",
+  "lang": "en"
+ },
+ {
+  "file": "og/gumroad-en.png",
+  "kick": "Gumroad · jfcarpio.gumroad.com",
+  "title": "Reading and tools for your next decision",
   "lang": "en"
  },
  {
@@ -98,19 +110,7 @@
  {
   "file": "og/trayectoria-en.png",
   "kick": "J.F. Carpio · 25+ years behind the work",
-  "title": "Ideas, markets and tools for better decisions",
-  "lang": "en"
- },
- {
-  "file": "og/gumroad-en.png",
-  "kick": "Gumroad · jfcarpio.gumroad.com",
-  "title": "21st-century tools for independent professionals and SMEs",
-  "lang": "en"
- },
- {
-  "file": "og/escuela-en.png",
-  "kick": "La Escuela del Dinero · escuela-dinero.gumroad.com",
-  "title": "La Escuela del Dinero",
+  "title": "A career in defense of civil society and private enterprise",
   "lang": "en"
  },
  {
@@ -121,14 +121,14 @@
  },
  {
   "file": "og/contacto-en.png",
-  "kick": "Workshops · limited availability",
-  "title": "If the case does not fit a tool",
+  "kick": "Projects · English and Spanish",
+  "title": "What does your team need to decide?",
   "lang": "en"
  },
  {
   "file": "og/clientes-en.png",
-  "kick": "Earlier research · testimonial context",
-  "title": "Feedback on the research",
+  "kick": "Experiences · earlier work",
+  "title": "The work, in the recipient’s words",
   "lang": "en"
  }
 ]
