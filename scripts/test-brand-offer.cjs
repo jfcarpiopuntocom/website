@@ -51,4 +51,18 @@ for (const item of ['404','Meta title','Meta description','Favicon','robots.txt'
 for (const item of ['404','title','description','favicon','robots.txt','sitemap.xml','Open Graph','alt text','mobile','loading','error','terms','cookies','analytics','contact','WebP']) {
   assert.ok(en.toLowerCase().includes(item.toLowerCase()), `EN missing: ${item}`);
 }
+// Brand typography regression: public product pages must preserve the exact casing.
+// Strategy / private business principles are intentionally NOT stored in this repo.
+const exactBrand = 'Made In Cuenca: intuitive business apps';
+for (const file of ['index.html', 'es/index.html', 'apps/index.html', 'en/apps/index.html', 'buscaclientes/index.html']) {
+  const html = read(file);
+  for (const match of html.matchAll(/\bMade\s+in\s+Cuenca(?::\s*intuitive\s+business\s+apps)?/gi)) {
+    assert.ok(match[0] === 'Made In Cuenca' || match[0] === exactBrand,
+      file + ': brand has invalid capitalisation: ' + match[0]);
+  }
+}
+for (const file of ['index.html', 'apps/index.html', 'en/apps/index.html']) {
+  assert.ok(read(file).includes(exactBrand), file + ': canonical brand line is missing');
+}
+console.log('Brand capitalisation: OK (Made In Cuenca)');
 console.log('brand + launch offer: OK');
