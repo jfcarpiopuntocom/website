@@ -70,7 +70,22 @@ h1 span{color:var(--aqua)}
 /* Real, deliberate 1.5-second introduction, then the existing public PWA.
    Meta refresh (3s) ensures a working redirect without JavaScript. */
 (function(){
-  var destination = "https://buscaclientes-web.buscaclientes.workers.dev/?entry=splash";
+  var query=new URLSearchParams(location.search);
+  var l=query.get('lang');
+  if(!['es','en','pt'].includes(l))l='es';
+  var translations={
+    es:['Busca','Clientes','Tu próximo cliente está en algún lugar','El mundo está lleno de clientes.','Explora ciudades, descubre contactos públicos y convierte nuevos lugares en relaciones.','7 contactos validados gratis por semana','Preparando tu próxima oportunidad','Entrar ahora ↗'],
+    en:['Find','Clients','Your next client is out there','The world is full of clients.','Explore cities, discover public business contacts, and start new relationships.','7 validated contacts free every week','Getting your next opportunity ready','Enter now ↗'],
+    pt:['Encontra','Clientes','O teu próximo cliente está algures','O mundo está cheio de clientes.','Explora cidades, descobre contactos públicos e cria novas relações.','7 contactos validados grátis por semana','A preparar a próxima oportunidade','Entrar agora ↗']
+  };
+  var w=translations[l];document.documentElement.lang=l;
+  for(var entry of [['.masthead',w[2]],['.promise',w[3]],['.subpromise',w[4]],['.free',w[5]],['.launch-state',w[6]],['#enter',w[7]]]){
+    var el=document.querySelector(entry[0]);if(el)el.textContent=entry[1];
+  }
+  var name=document.getElementById('brand');name.replaceChildren(document.createTextNode(w[0]));var suffix=document.createElement('span');suffix.textContent=w[1];name.appendChild(suffix);
+  document.title=w[0]+w[1]+' — '+w[3];
+  var destination="https://buscaclientes-web.buscaclientes.workers.dev/?entry=splash"+(l==='es'?'':'&lang='+l);
+  document.getElementById('enter').href=destination;
   window.setTimeout(function(){window.location.replace(destination);},1500);
 })();
 </script>
