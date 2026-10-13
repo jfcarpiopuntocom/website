@@ -63,6 +63,7 @@ const server = http.createServer((req, res) => {
         noHorizontalOverflow:document.documentElement.scrollWidth<=innerWidth+5
       }));
       assert(status.heading && status.noHorizontalOverflow, loc+': content/viewport failed: '+JSON.stringify(status));
+      if(process.env.BRAVE_PATH && !status.gl)throw new Error('Brave GPU context unavailable: this browser has NOT passed the WebGL test');
       if(status.gl){
         assert(status.fx && status.hasCanvas, loc+': WebGL available but FX not running');
         const compiled = await page.evaluate(()=>window.jfcFX.compileAll());
@@ -75,6 +76,7 @@ const server = http.createServer((req, res) => {
           const c=document.querySelector('canvas.fx'),gl=c?.getContext('webgl');
           const ext=gl?.getExtension('WEBGL_lose_context');
           if(!ext)return false;
+          window.__jfcGlLossExt=ext;
           ext.loseContext();
           return true;
         });
@@ -82,8 +84,7 @@ const server = http.createServer((req, res) => {
           await page.waitForFunction(()=>window.jfcFX?.status==='lost' || window.jfcFX?.status==='disabled',{timeout:3500});
           assert(await page.locator('#portada h1, #portada h2').count(),loc+': content gone on loss');
           await page.evaluate(()=>{
-            const gl=document.querySelector('canvas.fx')?.getContext('webgl');
-            gl?.getExtension('WEBGL_lose_context')?.restoreContext();
+            window.__jfcGlLossExt?.restoreContext();
           });
           await page.waitForFunction(()=>window.jfcFX?.status==='running',{timeout:8000});
           const resumed=await page.evaluate(()=>window.jfcFX.compileAll().every(([,ok])=>ok));
