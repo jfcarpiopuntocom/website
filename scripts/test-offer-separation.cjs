@@ -16,4 +16,26 @@ const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Se
 for(const m of page.matchAll(/href="#([^"]+)"/g))assert(ids.includes(m[1]),'Missing internal destination '+m[1]);
 for(const m of page.matchAll(/(?:src|href)="(\/assets\/[^"?#]+)"/g))assert(fs.existsSync(path.join(root,m[1])),'Missing asset '+m[1]);
 assert(read('worker.js').includes('"/api/pbiu/fx"'));assert(!read('wrangler.toml').includes('friendly123.com'));
+
+// Proof-first microconsulting landing: real clickable access to the existing,
+// clearly disclosed illustrative example, with NO fabricated client claims.
+for(const [file,cta,notice] of [
+ ['reportes/index.html','Lee una muestra','Ejemplo ilustrativo. No es un caso de cliente'],
+ ['en/reports/index.html','Read a worked example','Illustrative example. Not a customer case']
+]){
+ const html=read(file);
+ assert(html.includes('href="#report-example">'+cta+'</a>'),file+': example hero CTA missing');
+ assert(html.includes('<details id="report-example" data-report-example class="report-example" open>'),file+': example should be expanded and directly linked');
+ assert(html.includes(notice),file+': illustrative disclosure must remain visible');
+}
+// Site-level brand must NEVER be priced as a single USD 100 offer.
+for(const file of ['index.html','es/index.html']){
+ const head=read(file).split('</head>')[0];
+ const title=head.match(/<title>([^<]+)<\/title>/)?.[1]||'';
+ const descriptions=[...head.matchAll(/<meta\s+(?:name|property)="(?:description|og:description|twitter:description)"\s+content="([^"]+)"/g)].map(m=>m[1]);
+ assert(descriptions.length===3,file+': missing brand description metadata');
+ assert(!/(?:USD\s*100|\$\s*100)/i.test([title,...descriptions].join(' | ')),file+': offer pricing leaked into brand metadata');
+ assert(file==='index.html'?title.includes('Micro Consulting Reports'):title.includes('microconsultorías'),file+': microconsulting must read as a product');
+}
+
 console.log('Offer separation: 20 slides, adjacent microreports, commercial PBIU, 15 complete documents, prices, anchors, assets and domain boundary OK');

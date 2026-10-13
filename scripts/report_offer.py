@@ -39,7 +39,7 @@ def report_body(lang, old_body):
   f'<p class="section-intro">{intro}</p>',
   f'<div class="offer-line"><strong>USD 100</strong><span>{terms}</span></div>',
   f'<p class="report-clock">{"The 72 hours begin after the interview and receipt of all agreed inputs. Online, in English or Spanish, from any country." if en else "Las 72 horas empiezan después de la entrevista y de recibir toda la información acordada. Online, en inglés o español, desde cualquier país."}</p>',
-  f'<p class="cta"><a class="btn p" href="{email}">{cta}</a><a class="btn" href="#report-topics">{"Explore the questions" if en else "Explora las preguntas"}</a></p>',
+  f'<p class="cta"><a class="btn p" href="{email}">{cta}</a><a class="btn" href="#report-example">{"Read a worked example" if en else "Lee una muestra"}</a></p>',
   '</header>',
   '<section id="report-topics" class="report-topics accent-blue" aria-labelledby="topics-title">',
   '<h2 id="topics-title">' + ('Questions that connect the tools to your business' if en else 'Las preguntas que conectan las herramientas con tu negocio') + '</h2>',
@@ -56,7 +56,7 @@ def report_body(lang, old_body):
   '</section>'
  ]
  if en:
-  sample = '''<details data-report-example class="report-example"><summary>Read a worked example: the cost of a discount</summary>
+  sample = '''<details id="report-example" data-report-example class="report-example" open><summary>Read a worked example: the cost of a discount</summary>
 <p class="proof-context"><strong>Illustrative example. Not a customer case or a promised result.</strong></p>
 <h3>The question</h3><p>A shop sells a product for USD 20. Its variable cost is USD 12. Would a 10% discount help the business?</p>
 <h3>What the figures show</h3><p>At the current price, each unit contributes USD 8. At USD 18, it contributes USD 6. Selling 100 units leaves USD 800 before fixed expenses; at the discounted price, 100 units leave USD 600.</p>
@@ -64,7 +64,7 @@ def report_body(lang, old_body):
 <h3>What still needs checking</h3><p>The arithmetic does not tell us whether demand would rise that much. We would need to check stock, capacity, returns and any costs omitted from the USD 12. If clearing slow stock is the objective, the decision needs that context too.</p>
 <h3>A next step</h3><p>Compare a limited discount test with keeping the price and changing the offer. Define what you will measure before spending. A report on your business would use the agreed inputs and explain the limits of the recommendation.</p></details>'''
  else:
-  sample = '''<details data-report-example class="report-example"><summary>Lee una muestra: lo que cuesta un descuento</summary>
+  sample = '''<details id="report-example" data-report-example class="report-example" open><summary>Lee una muestra: lo que cuesta un descuento</summary>
 <p class="proof-context"><strong>Ejemplo ilustrativo. No es un caso de cliente ni un resultado prometido.</strong></p>
 <h3>La pregunta</h3><p>Una tienda vende un producto a USD 20. Su costo variable es USD 12. ¿Le conviene dar un 10% de descuento?</p>
 <h3>Lo que muestran las cifras</h3><p>Al precio actual, cada unidad aporta USD 8. A USD 18, aporta USD 6. Vender 100 unidades deja USD 800 antes de gastos fijos; con el descuento, 100 unidades dejan USD 600.</p>
