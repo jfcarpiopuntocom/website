@@ -91,7 +91,7 @@ h1 span{color:var(--aqua)}
   }
   var name=document.getElementById('brand');name.replaceChildren(document.createTextNode(w[0]));var suffix=document.createElement('span');suffix.textContent=w[1];name.appendChild(suffix);
   document.title=w[0]+w[1]+' — '+w[3];
-  var destination="https://buscaclientes-web.buscaclientes.workers.dev/?entry=splash"+(l==='es'?'':'&lang='+l);
+  var destination="https://buscaclientes-web.buscaclientes.workers.dev/?entry=splash&lang="+l;
   document.getElementById('enter').href=destination;
   window.setTimeout(function(){window.location.replace(destination);},1500);
 })();
