@@ -11,7 +11,7 @@
 <link rel="canonical" href="https://buscaclientes-web.buscaclientes.workers.dev/">
 <link rel="preload" href="/buscaclientes/brand-submarine-cutout-v2.svg" as="image" type="image/svg+xml">
 <title>BuscaClientes — El mundo está lleno de clientes</title>
-<meta name="description" content="BuscaClientes: descubre negocios, valida contactos públicos y convierte lugares en relaciones. 7 contactos validados gratis por semana.">
+<meta name="description" content="BuscaClientes: descubre negocios, valida contactos públicos y convierte lugares en relaciones. CRM: 7 contactos validados gratis por semana.">
 <style>
 :root{color-scheme:dark;--night:#070b17;--ink:#f3f9ff;--mist:#aec8d7;--aqua:#83f0e5;--orange:#e86040}
 *{box-sizing:border-box}
@@ -40,6 +40,12 @@ h1 span{color:var(--aqua)}
 .launch a{margin-top:4px;display:inline-block;padding:9px 14px;min-height:42px;color:#effffb;text-decoration:none;font-size:13px;font-weight:800;border:1px solid #87dacf55;border-radius:9px;background:#0d2633aa}
 .launch a:hover,.launch a:focus-visible{border-color:#a8ffdf;background:#17465a;outline:2px solid #6ee9dc;outline-offset:3px}
 .corner{margin:20px 0 0;color:#8da6b5;font-size:10px;letter-spacing:.13em}
+ /* Preserve useful hub navigation without the global editorial stylesheet and without affecting the centered splash geometry. */
+ .commercial-nav{position:fixed;bottom:8px;left:50%;width:min(calc(100vw - 26px),740px);transform:translateX(-50%);display:flex;flex-wrap:wrap;justify-content:center;gap:3px 14px;line-height:1.3}
+ .commercial-nav a{color:#9bbbc9;text-decoration:none;font-size:11px;font-weight:600;min-height:24px;display:inline-flex;align-items:center}
+ .commercial-nav a:hover,.commercial-nav a:focus-visible{color:#f3f9ff;text-decoration:underline;outline-offset:3px}
+ @media(max-height:620px){.commercial-nav{position:static;transform:none;margin-top:8px;width:100%}}
+
 @keyframes ring{0%{opacity:0;transform:translate(-50%,-50%) scale(.82)}25%{opacity:1}100%{opacity:.2;transform:translate(-50%,-50%) scale(1.06)}}
 @keyframes arrive{from{opacity:0;transform:translateY(12px) scale(.94)}to{opacity:1;transform:none}}
 @keyframes load{from{transform:scaleX(0)}to{transform:scaleX(1)}}
@@ -47,9 +53,9 @@ h1 span{color:var(--aqua)}
 @media(max-width:450px){.masthead{font-size:9px;letter-spacing:.2em}.visual{height:175px}.visual img{max-height:186px}h1{letter-spacing:-.065em}.free{padding:10px 13px}.launch{margin-top:20px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.progress::after{transform:none}}
 </style>
-<link rel="stylesheet" href="/editorial.css">
+<!-- Standalone cinematic handoff; global editorial typography must not override it. -->
 </head>
-<body class="editorial">
+<body>
 <main aria-labelledby="brand">
   <p class="masthead">Tu próximo cliente está en algún lugar</p>
   <div class="visual">
@@ -59,7 +65,7 @@ h1 span{color:var(--aqua)}
   <h1 id="brand">Busca<span>Clientes</span></h1>
   <p class="promise">El mundo está lleno de clientes.</p>
   <p class="subpromise">Explora ciudades, descubre contactos públicos y convierte nuevos lugares en relaciones.</p>
-  <p class="free">7 contactos <em>validados</em> gratis por semana</p>
+  <p class="free">CRM: 7 contactos <em>validados</em> gratis por semana</p>
   <div class="launch" aria-label="Abriendo BuscaClientes">
     <span class="launch-state">Preparando tu próxima oportunidad</span>
     <div class="progress" aria-hidden="true"></div>
@@ -75,9 +81,9 @@ h1 span{color:var(--aqua)}
   var l=query.get('lang');
   if(!['es','en','pt'].includes(l))l='es';
   var translations={
-    es:['Busca','Clientes','Tu próximo cliente está en algún lugar','El mundo está lleno de clientes.','Explora ciudades, descubre contactos públicos y convierte nuevos lugares en relaciones.','7 contactos validados gratis por semana','Preparando tu próxima oportunidad','Entrar ahora ↗'],
-    en:['Find','Clients','Your next client is out there','The world is full of clients.','Explore cities, discover public business contacts, and start new relationships.','7 validated contacts free every week','Getting your next opportunity ready','Enter now ↗'],
-    pt:['Encontra','Clientes','O teu próximo cliente está algures','O mundo está cheio de clientes.','Explora cidades, descobre contactos públicos e cria novas relações.','7 contactos validados grátis por semana','A preparar a próxima oportunidade','Entrar agora ↗']
+    es:['Busca','Clientes','Tu próximo cliente está en algún lugar','El mundo está lleno de clientes.','Explora ciudades, descubre contactos públicos y convierte nuevos lugares en relaciones.','CRM: 7 contactos validados gratis por semana','Preparando tu próxima oportunidad','Entrar ahora ↗'],
+    en:['Find','Clients','Your next client is out there','The world is full of clients.','Explore cities, discover public business contacts, and start new relationships.','CRM: 7 validated contacts free every week','Getting your next opportunity ready','Enter now ↗'],
+    pt:['Encontra','Clientes','O teu próximo cliente está algures','O mundo está cheio de clientes.','Explora cidades, descobre contactos públicos e cria novas relações.','CRM: 7 contactos validados grátis por semana','A preparar a próxima oportunidade','Entrar agora ↗']
   };
   var w=translations[l];document.documentElement.lang=l;
   for(var entry of [['.masthead',w[2]],['.promise',w[3]],['.subpromise',w[4]],['.free',w[5]],['.launch-state',w[6]],['#enter',w[7]]]){
