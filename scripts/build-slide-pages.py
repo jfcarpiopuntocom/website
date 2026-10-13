@@ -332,6 +332,8 @@ def main():
             reel = f"{home}#{'contacto' if sid == 'clientes' else sid}"
             page = head(title, desc, canon, alt_es, alt_en, og, {"@context": "https://schema.org", "@graph": graph}) + \
                 chrome(reel, alt_en if lang == "es" else alt_es, "\n".join(body), nav) + "\n</body>\n</html>\n"
+            if sid == "reportes":
+                page = page.replace('</head>', '<link rel="stylesheet" href="/report-offer.css">\n</head>', 1)
             write(sl, page)
             sitemap_urls.append((canon, alt_es, alt_en, "0.7"))
 

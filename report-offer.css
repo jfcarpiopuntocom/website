@@ -1,0 +1,21 @@
+/* Microreports use the established editorial system; styles stay scoped. */
+.microreport{color:#FFFFFF}
+.microreport .report-opening{max-width:76ch}
+.microreport h1{max-width:22ch;text-wrap:balance}
+.microreport .report-clock{color:#F2F2F2;font-size:1rem;max-width:65ch}
+.microreport section{scroll-margin-top:24px}
+.microreport .report-question-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px}
+.microreport .report-question{min-width:0;padding:22px 0;border-top:1px solid #7FB0FF;background:transparent;overflow-wrap:anywhere}
+.microreport .report-question .report-topic-label{font-weight:700;color:#FFFFFF;margin:0 0 10px;font-size:.9rem}
+.microreport .report-question h3{margin:0 0 12px;font:700 clamp(1.3rem,2vw,1.7rem)/1.25 Jost,Arial,sans-serif;text-wrap:balance}
+.microreport .report-question p{margin:0 0 14px}
+.microreport .report-question .report-resource{color:#F2F2F2;font-size:.95rem}
+.microreport .report-resource a{display:inline-flex;align-items:center;min-height:44px}
+.microreport .report-deliverable{border-left:3px solid #28ECAA;padding-left:24px}
+.microreport .report-deliverable li{margin:12px 0;max-width:68ch}
+.microreport .report-example{padding:12px 20px;border:1px solid #7FB0FF;background:#0B1F3F;max-width:74ch}
+.microreport .report-example summary{font-size:1.15rem}
+.microreport .report-example h3{font-size:1.2rem}
+.microreport .report-closing{border-top:2px solid #7FB0FF;padding-top:16px}
+.microreport .btn{font-family:Jost,Arial,sans-serif;text-transform:none;letter-spacing:0;font-size:1rem;min-height:48px}
+@media(max-width:640px){.microreport .report-question-list{grid-template-columns:1fr}.microreport .report-example{padding:10px 14px}.microreport .report-deliverable{padding-left:16px}.microreport h1{font-size:clamp(2.6rem,10vw,4rem)}}

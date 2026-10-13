@@ -159,7 +159,7 @@ const settle = p => p.waitForFunction(() => window.__reel && !window.__reel.auto
     moved.idx === moved.expected && moved.hash === '#reportes' && moved.hidden && moved.expanded === 'false' && moved.focus === 't-reportes' ? OK('ruta Reportes llega directo y devuelve el foco al contenido') : F('salto Reportes: ' + JSON.stringify(moved));
     await page.click('.lang button[data-lang=en]'); await page.click('#idxb');
     const enMenu = await page.evaluate(() => ({ title: document.querySelector('#idxt').textContent, label: document.querySelector('#idxb .it').textContent, route: document.querySelector('.route-grid strong').textContent }));
-    enMenu.title === 'Choose where to start' && enMenu.label === 'Explore' && enMenu.route === 'Apps for sales and inventory' ? OK('rutas directas traducidas al ingles') : F('rutas EN: ' + JSON.stringify(enMenu));
+    enMenu.title === 'Choose where to start' && enMenu.label === 'Explore' && enMenu.route === 'Apps for inventory, sales and commissions' ? OK('rutas directas traducidas al ingles') : F('rutas EN: ' + JSON.stringify(enMenu));
     await page.keyboard.press('Escape');
     const esc = await page.evaluate(() => ({ hidden: document.querySelector('#idx').hidden, focused: document.activeElement.id }));
     esc.hidden && esc.focused === 'idxb' ? OK('Escape cierra Explorar y restaura el foco') : F('Escape indice: ' + JSON.stringify(esc));
