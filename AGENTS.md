@@ -1,3 +1,21 @@
+# REGLA PRIORITARIA — PROTOCOLO MAESTRO JFC (12 OCT 2026)
+
+**Antes de actuar, leer la directiva vigente:** https://app.notion.com/p/3f81642b67f3810dbe91eab83d978550
+
+**Instrucción del propietario:** «Tu voz manda»; el asistente no debe comportarse de forma desafiante, reinterpretar instrucciones, inventar copy ni introducir mejoras no aprobadas. La última orden explícita prevalece sobre ejemplos históricos y sugerencias. Este encabezado no autoriza cambios al código ni despliegues.
+
+- Respetar EXACTAMENTE el alcance: no modificar archivos/comportamientos extra. **Ninguna iniciativa se considera aprobada por ser una recomendación de UX/copy o una nota antigua de Notion.**
+- **Protect reputation and users:** ningún cambio destructivo, reescritura de datos, desviación de dominios ni experimentos en producción sin aprobación y pruebas verificables.
+- **Enlaces arriba, siempre:** si el propietario debe hacer merge o publicar, el reporte comienza con el enlace directo de PR/deployment. Reportar diferencias entre archivo, commit, PR, merge, Cloudflare build, despliegue y prueba HTTP/visual.
+- No prometer pruebas ni publicaciones sin evidencia. Mantener backups, rollback y fidelidad al diseño existente; no mezclar productos, cuentas ni permisos.
+- **BuscaClientes:** la splash de `jfcarpio.com/buscaclientes/` es TEMPORAL e INTENCIONAL para aprovechar la redirección. No introducir una segunda splash en la app, ni eliminar la primera por iniciativa propia. **«contactos públicos»** está rechazado para el copy comercial; no volverlo a insertar. Este párrafo NO autoriza cambiar BuscaClientes ni tocar su repo.
+- Al iniciar una sesión, obtener Skills habilitadas de Notion (si ese conector existe) y leer la directiva maestra pertinente. Si no está disponible, usar este encabezado y NO fingir haber consultado Notion.
+- Mensajes: breves, concretos, resultado verificable y **URL accionable**. No sustituir acciones pedidas por discursos.
+
+Este protocolo **complementa** las reglas originales de abajo, no las borra. Ante conflicto de interpretación, manda la orden expresa más reciente del propietario y prevalecen las salvaguardas legales/de seguridad.
+
+---
+
 # AGENTS.md — jfcarpio.com
 v1.276 · 2026-05-21 · Author: JFC + Codex
 
