@@ -44,7 +44,7 @@ const server = http.createServer((req, res) => {
   try {
     browser = await playwright.chromium.launch({
       ...(process.env.BRAVE_PATH ? {executablePath:process.env.BRAVE_PATH}:{}),
-      headless: true,
+      headless: process.env.HEADFUL !== '1',
       args:['--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']
     });
     for(const loc of ['/index.html','/es/index.html']){
@@ -97,6 +97,29 @@ const server = http.createServer((req, res) => {
       assert.equal(await page.locator('canvas.fx').count(),0,loc+': fx=0 should keep original reel without WebGL');
       assert.equal(errors.length,0,loc+': JS errors '+errors.join(';'));
       await ctx.close();
+      // Actual moving reel (not only a static reduced-motion frame).
+      if(status.gl){
+        const motionCtx=await browser.newContext({viewport:{width:1365,height:800},reducedMotion:'no-preference'});
+        const motionPage=await motionCtx.newPage();
+        const motionErrors=[];
+        motionPage.on('pageerror',e=>motionErrors.push(e.message));
+        await motionPage.goto(base+loc+'?fx=1#portada',{waitUntil:'domcontentloaded'});
+        await motionPage.waitForFunction(()=>window.__reel && window.jfcFX?.status==='running',{timeout:15000});
+        await motionPage.evaluate(()=>window.__reel.go(1));
+        await motionPage.waitForTimeout(2100);
+        const moving=await motionPage.evaluate(()=>{
+          const slide=document.querySelector('#apps'),current=slide.classList.contains('is-current');
+          const active=slide.querySelector('canvas.fx');
+          const front=slide.querySelector('.front');
+          const styles=front&&getComputedStyle(front);
+          return {current,canvas:!!active,opacity:styles?Number(styles.opacity):0,
+                  overlap:document.documentElement.scrollWidth>innerWidth+5};
+        });
+        assert(moving.current && moving.canvas && moving.opacity>.95 && !moving.overlap,loc+': moving slide degraded: '+JSON.stringify(moving));
+        assert.deepEqual(motionErrors,[],loc+': animated reel errors');
+        await motionCtx.close();
+        console.log('PASS animated reel / Apps FX layer:',loc);
+      }
     }
   } finally {
     if(browser)await browser.close();
