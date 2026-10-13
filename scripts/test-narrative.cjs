@@ -103,6 +103,22 @@ ok(index.includes('friendly123/'), 'Apps permanece enlazada');
 ok(index.includes('/talleres/'), 'Talleres permanece enlazado');
 ok(index.includes('/publicaciones/'), 'Publicaciones permanece enlazada');
 
+
+// Reel motion vocabulary: restore historical warm cues without replacing
+// the WebGL engine or hiding static content in reduced-motion mode.
+for (const file of ['index.html', 'es/index.html']) {
+  const html = read(file);
+  ok((html.match(/<!DOCTYPE/gi) || []).length === 1, file + ' single DOCTYPE');
+  ok(html.includes('document.documentElement.classList.add(\'reel\',\'js-rv\')'), file + ' reel prepaint gate');
+  ok(html.includes('.reel .slide.is-current .frame::after'), file + ' animated rail remains scoped');
+  ok(html.includes('background:linear-gradient(90deg,transparent,#E8A020,transparent)'), file + ' golden motion accent restored');
+  ok(html.includes('@keyframes jfc-photo-breathe'), file + ' photo motion retained');
+  ok(html.includes('@media (prefers-reduced-motion:no-preference)'), file + ' motion preference honored');
+  ok(html.includes('navigator.webdriver&&!/[?&]fx=1/.test(location.search)'), file + ' WebGL test protection retained');
+  ok(html.includes('const MAP={portada:'), file + ' per-slide WebGL scenes remain');
+  ok(!html.includes('chrome-extension://') && !html.includes('Juan%20Fernando'), file + ' original HTML integrity');
+}
+
 if (failed) {
   console.error('\nRESUMEN: ' + failed + ' FALLAS');
   process.exit(1);
