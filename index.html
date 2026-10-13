@@ -3072,7 +3072,7 @@ window.__reel={go,op,cl,get idx(){return idx},get auto(){return auto},get lang()
    Para agregar un fotograma: sumar su id a SCN con una escena nueva (cuerpo GLSL que define col y a). */
 (()=>{try{
 const R=document.documentElement;
-if(!R.classList.contains('reel')||navigator.webdriver&&!/[?&]fx=1/.test(location.search))return;
+if(!R.classList.contains('reel')||/[?&]fx=0(?:&|$)/.test(location.search)||navigator.webdriver&&!/[?&]fx=1(?:&|$)/.test(location.search))return;
 const cv=document.createElement('canvas');cv.className='fx';cv.setAttribute('aria-hidden','true');
 const gl=cv.getContext('webgl',{alpha:true,antialias:false,premultipliedAlpha:true,powerPreference:'low-power',preserveDrawingBuffer:false});
 if(!gl)return;
@@ -3221,30 +3221,51 @@ articulos:'type',libro:'caustic',publicaciones:'graph',trayectoria:'path',perfil
 const BLEND_NORMAL={apps:1};
 const VS='attribute vec2 v;void main(){gl_Position=vec4(v,0.,1.);}';
 function sh(type,src){const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(s));return s}
-const vs=sh(gl.VERTEX_SHADER,VS),prog={};
+let vs,prog={};
 function get(name){if(prog[name]!==undefined)return prog[name];let p=null;try{
  p=gl.createProgram();gl.attachShader(p,vs);gl.attachShader(p,sh(gl.FRAGMENT_SHADER,HEAD+SCN[name]+TAIL));gl.bindAttribLocation(p,0,'v');gl.linkProgram(p);
  if(!gl.getProgramParameter(p,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(p));
  p.u={R:gl.getUniformLocation(p,'R'),T:gl.getUniformLocation(p,'T'),M:gl.getUniformLocation(p,'M'),I:gl.getUniformLocation(p,'I')};
 }catch(e){try{console.warn('[reel-fx]',name,e.message)}catch(_){}p=null}return prog[name]=p}
-const buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
-gl.enableVertexAttribArray(0);gl.vertexAttribPointer(0,2,gl.FLOAT,false,0,0);gl.enable(gl.BLEND);gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA);
-const SL=[...document.querySelectorAll('.reel .slide')];let cur=null,scene='flow',t0=performance.now(),since=t0,raf=0,last=0,mx=0,my=0,tx=0,ty=0;
+function initGL(){
+ prog={};vs=sh(gl.VERTEX_SHADER,VS);const buf=gl.createBuffer();if(!buf)throw new Error('WebGL buffer unavailable');
+ gl.bindBuffer(gl.ARRAY_BUFFER,buf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ gl.enableVertexAttribArray(0);gl.vertexAttribPointer(0,2,gl.FLOAT,false,0,0);gl.enable(gl.BLEND);gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA);
+}
+initGL();
+const SL=[...document.querySelectorAll('.reel .slide')];let cur=null,scene='flow',t0=performance.now(),since=t0,raf=0,last=0,mx=0,my=0,tx=0,ty=0,lost=false,disabled=false,contextLosses=0;
 const SCALE=coarse?.5:Math.min(devicePixelRatio||1,1.5)*.75,STEP=coarse?1000/30:0;
 function fit(){const f=cur&&cur.querySelector('.face');if(!f)return;const w=Math.max(2,Math.round(f.offsetWidth*SCALE)),h=Math.max(2,Math.round(f.offsetHeight*SCALE));if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h}}
-function place(){const s=SL.find(x=>x.classList.contains('is-current'));if(!s||s===cur)return;cur=s;scene=MAP[s.id]||'flow';
+function place(){if(disabled||lost)return;const s=SL.find(x=>x.classList.contains('is-current'));if(!s||s===cur)return;cur=s;scene=MAP[s.id]||'flow';
  const face=s.querySelector('.face');if(!face)return;const b=face.querySelector('.sc')||face.querySelector('.bgw');face.insertBefore(cv,b?b.nextSibling:face.firstChild);
- cv.style.mixBlendMode=BLEND_NORMAL[scene]?'normal':'';since=performance.now();cv.classList.remove('on');void cv.offsetWidth;cv.classList.add('on');fit();if(rm)draw(performance.now());}
+ if(!get(scene)){cv.classList.remove('on');cv.style.display='none';return;}
+ cv.style.display='';cv.style.mixBlendMode=BLEND_NORMAL[scene]?'normal':'';since=performance.now();cv.classList.remove('on');void cv.offsetWidth;cv.classList.add('on');fit();if(rm)draw(performance.now());}
 function draw(now){const p=get(scene);if(!p){gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);return}
  tx+=(mx-tx)*.06;ty+=(my-ty)*.06;gl.viewport(0,0,cv.width,cv.height);gl.useProgram(p);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);
  gl.uniform2f(p.u.R,cv.width,cv.height);gl.uniform1f(p.u.T,rm?8.:((now-t0)/1000)%900);gl.uniform2f(p.u.M,tx,ty);gl.uniform1f(p.u.I,rm?1.:Math.min(1,(now-since)/1600));gl.drawArrays(gl.TRIANGLES,0,3)}
-function loop(now){raf=requestAnimationFrame(loop);if(document.hidden||!cur||cur.classList.contains('open'))return;if(STEP&&now-last<STEP)return;last=now;draw(now)}
+function loop(now){if(disabled||lost){raf=0;return;}raf=requestAnimationFrame(loop);if(document.hidden||!cur||cur.classList.contains('open'))return;if(STEP&&now-last<STEP)return;last=now;try{draw(now)}catch(e){disableFx('render error',e)}}
 addEventListener('pointermove',e=>{if(!cur)return;const r=cur.getBoundingClientRect();mx=((e.clientX-r.left)/r.width-.5)*2;my=-((e.clientY-r.top)/r.height-.5)*2},{passive:true});
 addEventListener('resize',()=>{fit();if(rm)draw(performance.now())},{passive:true});
-cv.addEventListener('webglcontextlost',e=>{e.preventDefault();cancelAnimationFrame(raf);cv.remove()});
+function disableFx(reason,error){
+ disabled=true;lost=false;cancelAnimationFrame(raf);raf=0;cv.classList.remove('on');cv.style.display='none';
+ try{console.warn('[reel-fx] decorative canvas disabled:',reason,error||'')}catch(_){}
+}
+cv.addEventListener('webglcontextlost',e=>{
+ e.preventDefault();lost=true;contextLosses++;cancelAnimationFrame(raf);raf=0;
+ cv.classList.remove('on');cv.style.display='none';
+ // Keep the underlying photo and copy readable while the GPU is unavailable.
+ if(contextLosses>2)disableFx('repeated context loss');
+});
+cv.addEventListener('webglcontextrestored',()=>{
+ if(disabled)return;
+ try{
+  initGL();lost=false;cur=null;cv.style.display='';place();
+  if(!rm&&!raf)raf=requestAnimationFrame(loop);
+ }catch(e){disableFx('context restoration failed',e)}
+});
 new MutationObserver(place).observe(document.querySelector('.track')||document.body,{subtree:true,attributes:true,attributeFilter:['class']});
 place();if(!rm)raf=requestAnimationFrame(loop);
-window.jfcFX={scenes:Object.keys(SCN),compileAll:()=>Object.keys(SCN).map(n=>[n,!!get(n)])};
+window.jfcFX={scenes:Object.keys(SCN),get status(){return disabled?'disabled':lost?'lost':'running'},compileAll:()=>Object.keys(SCN).map(n=>[n,!disabled&&!lost&&!!get(n)])};
 }catch(err){try{console.warn('[reel-fx]',err);document.querySelectorAll('canvas.fx').forEach(c=>c.remove())}catch(_){}}})();
 </script>
 </body>
