@@ -1,0 +1,6 @@
+2026-10-01 — Additional Stock Semaphore launch pages
+New files only; no previous bytes existed on main:
+- friendly123/chatgpt-app/stock-semaphore/index.html
+- friendly123/chatgpt-app/support/index.html
+- friendly123/chatgpt-app/terms/index.html
+Purpose: satisfy current OpenAI public plugin listing URLs with factual, non-transactional pages.
