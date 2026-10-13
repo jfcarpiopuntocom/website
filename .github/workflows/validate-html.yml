@@ -39,6 +39,8 @@ on:
       - 'scripts/homologate-interiors.py'
       - 'scripts/test-brand-offer.cjs'
       - 'scripts/test-narrative.cjs'
+      - 'scripts/test-reel-fx-state.cjs'
+      - 'scripts/test-brave-webgl.cjs'
       - 'scripts/build-slide-pages.py'
       - 'scripts/build-og.cjs'
       - 'og/manifest.json'
@@ -79,6 +81,8 @@ on:
       - 'scripts/**/*.py'
       - 'scripts/test-brand-offer.cjs'
       - 'scripts/test-narrative.cjs'
+      - 'scripts/test-reel-fx-state.cjs'
+      - 'scripts/test-brave-webgl.cjs'
       - 'scripts/build-slide-pages.py'
       - 'scripts/build-og.cjs'
       - 'og/manifest.json'
@@ -114,6 +118,9 @@ jobs:
 
       - name: Narrative regression guard
         run: node scripts/test-narrative.cjs
+
+      - name: WebGL loss and recovery regression (no GPU dependency)
+        run: node scripts/test-reel-fx-state.cjs
 
       - name: Brand and launch-service regression guard
         run: node scripts/test-brand-offer.cjs
