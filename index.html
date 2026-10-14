@@ -3253,7 +3253,7 @@ function place(){if(disabled||lost)return;const s=SL.find(x=>x.classList.contain
 function draw(now){const p=get(scene);if(!p){gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);return}
  tx+=(mx-tx)*.06;ty+=(my-ty)*.06;gl.viewport(0,0,cv.width,cv.height);gl.useProgram(p);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);
  gl.uniform2f(p.u.R,cv.width,cv.height);gl.uniform1f(p.u.T,rm?8.:((now-t0)/1000)%900);gl.uniform2f(p.u.M,tx,ty);gl.uniform1f(p.u.I,rm?1.:Math.min(1,(now-since)/1600));gl.drawArrays(gl.TRIANGLES,0,3)}
-function loop(now){if(disabled||lost){raf=0;return;}raf=requestAnimationFrame(loop);if(document.hidden||!cur||cur.classList.contains('open'))return;if(STEP&&now-last<STEP)return;last=now;try{draw(now)}catch(e){disableFx('render error',e)}}
+function loop(now){if(disabled||lost){raf=0;return;}raf=requestAnimationFrame(loop);if(document.hidden||!cur||!scene||cur.classList.contains('open'))return;if(STEP&&now-last<STEP)return;last=now;try{draw(now)}catch(e){disableFx('render error',e)}}
 addEventListener('pointermove',e=>{if(!cur)return;const r=cur.getBoundingClientRect();mx=((e.clientX-r.left)/r.width-.5)*2;my=-((e.clientY-r.top)/r.height-.5)*2},{passive:true});
 addEventListener('resize',()=>{fit();if(rm)draw(performance.now())},{passive:true});
 function disableFx(reason,error){
