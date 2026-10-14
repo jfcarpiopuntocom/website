@@ -61,6 +61,19 @@ function run(html, search) {
 }
 for(const file of ['index.html','es/index.html']){
   const html=fs.readFileSync(path.join(root,file),'utf8');
+  // UI contract: a single smooth photo scrim and purposeful scenes on both languages.
+  assert(html.includes('.reel .slide:not(#dashboards) .tx::before{content:none!important}'),file+': rectangular text backdrop must not return');
+  assert(html.includes('.reel .slide:not(#dashboards) .top::before,'),file+': rectangular header backdrop must not return');
+  assert(html.includes('.reel #portada canvas.fx.on{opacity:.2}'),file+': cinematic opening FX restraint');
+  const map=(html.match(/const MAP=\{([\s\S]*?)\};/)||[])[1];
+  assert(map,file+': thematic motion map missing');
+  for(const [id,scene] of [['portada','graph'],['apps','shelves'],['reportes','bars'],['pbiu','topo']]){
+    assert(map.includes(id+":'"+scene+"'"),file+': mismatched scene '+id);
+  }
+  for(const id of ['articulos','libro','perfil','gumroad','escuela','gratis','contacto']){
+    assert(new RegExp('\\b'+id+':null\\b').test(map),file+': gratuitous FX on '+id);
+  }
+  assert(html.includes('if(document.hidden||!cur||!scene||cur.classList.contains(\'open\'))return;'),file+': no shader work on static slide');
   const off=run(html,'?fx=0');assert(!off.window.jfcFX&&off.placements===0,file+': no-FX fallback');
   const app=run(html,'?fx=1');assert.equal(app.window.jfcFX.status,'running');
   assert.equal(app.window.jfcFX.scenes.length,20,file+': FX scenes count');
