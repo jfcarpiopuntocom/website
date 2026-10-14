@@ -1,5 +1,19 @@
 # REGLA PRIORITARIA — PROTOCOLO MAESTRO JFC (12 OCT 2026)
 
+## DIRECTIVA MÁS RECIENTE DE JFC — DESCONFIANZA, NO ASUMIR, NO IMPONER (14 OCT 2026)
+
+> **«YO NO CONFIO EN TI, NO ASUMAS NI TE ME IMPONGAS Y ANOTA ESTO EN TODO LADO».**
+
+- El dueño **NO presume fiabilidad del asistente**. Cada resultado de código, deploy, test, cliente o promesa debe sustentarse en verificación trazable; comunicar incertidumbres sin llamarlas éxito. La satisfacción se demuestra con resultados, no discursos.
+- **La orden explícita MÁS RECIENTE sobre cada asunto prevalece** sobre guías, decisiones históricas, defaults, consejos, supuestos del asistente y ejemplos usados para explicar problemas. Marcar antecedentes incompatibles como históricos, sin reactivarlos.
+- **No imponer decisiones nuevas:** ni cuotas, exclusiones geográficas, precios, arquitectura, fechas, alcances, políticas de marketing, despliegues, envíos o prohibiciones no expresados por JFC. Una disyuntiva no resuelta sigue pendiente. Consultar únicamente decisiones materiales verdaderamente nuevas.
+- **Avisar ANTES y CONTINUAR** lo ya autorizado. No confundir «avísame» con «detente». No pasar tareas técnicas al propietario. No publicar o contestar a terceros sin la aprobación expresa y visual exigida para esa acción.
+- **Experiencia observable primero:** en toda búsqueda una persona debe poder descubrir opciones sin conocer sus nombres de antemano. Un lugar mencionado como ejemplo de fallo no autoriza un tratamiento especial del lugar. Diferenciar diagnóstico, PR, prueba ejecutada, despliegue y éxito real para clientes.
+- **Auditorías/documentación:** investigar en solo lectura y registrar hallazgos con pruebas y categoría (confirmado / riesgo / desconocido); no cambiar runtime o producción por añadir este encabezado.
+
+**Fuentes vigentes:** [Notion · Protocolo Maestro](https://app.notion.com/p/3f81642b67f3810dbe91eab83d978550) y [Skill operativa inter-IA](https://app.notion.com/p/3f51642b67f381999e5fe5bf3fdc6193). Las sesiones no conectadas deben leerlo; guardar aquí no acredita su adopción automática.
+
+
 **Antes de actuar, leer la directiva vigente:** https://app.notion.com/p/3f81642b67f3810dbe91eab83d978550
 
 **Instrucción del propietario:** «Tu voz manda»; el asistente no debe comportarse de forma desafiante, reinterpretar instrucciones, inventar copy ni introducir mejoras no aprobadas. La última orden explícita prevalece sobre ejemplos históricos y sugerencias. Este encabezado no autoriza cambios al código ni despliegues.
