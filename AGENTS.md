@@ -1,5 +1,11 @@
 # REGLA PRIORITARIA — PROTOCOLO MAESTRO JFC (12 OCT 2026)
 
+## AUDITORÍA DE LA ÚLTIMA JORNADA Y PRIORIDAD DE EXPERIENCIA (14 OCT 2026)
+- [Notion: auditoría verificable de 45 hallazgos — 38 comprobados / 7 riesgos](https://app.notion.com/p/3f91642b67f381c39a9efdadb132d079)
+- [GitHub: informe íntegro y fuentes](https://github.com/jfcarpiopuntocom/buscaclientes/blob/verify/shell-028-release-readiness/docs/AUDITORIA-24H-20261014-ERRORES-Y-CORRECCIONES.md)
+- No confundir «documentado» con «arreglado». La instrucción expresa y más reciente prevalece sobre ejemplos, planes y nuestras preferencias. No confiar en pruebas no reproducibles ni en PR/merge como garantía de clientes. Esta sección NO autoriza cambios de runtime ni despliegues por sí sola.
+
+
 ## DIRECTIVA MÁS RECIENTE DE JFC — DESCONFIANZA, NO ASUMIR, NO IMPONER (14 OCT 2026)
 
 > **«YO NO CONFIO EN TI, NO ASUMAS NI TE ME IMPONGAS Y ANOTA ESTO EN TODO LADO».**
