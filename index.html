@@ -1526,6 +1526,14 @@ mark.hl-blue{--reading-line:#A8BDDC}mark.hl-mint{--reading-line:#A9D4C5}mark.hl-
 @media(max-width:640px){.brand>span{font-size:22px!important}}
 
 #pbiu .front h2{font-size:clamp(1.6rem,4.6dvh,3rem);line-height:1.05}#pbiu .front .lead{max-width:60ch}#pbiu .rr{display:none}#pbiu .lead2{display:none}
+
+/* JFC UX · 2026-10-13: a single continuous full-photo scrim, not
+   two rectangular layers over the cinematic image. Existing .sc gradients
+   maintain contrast; apply only to desktop reel, never inner panels/mobile. */
+@media(min-width:901px){
+  .reel .slide:not(#dashboards) .top::before,
+  .reel .slide:not(#dashboards) .tx::before{content:none!important}
+}
 </style>
 <link rel="alternate" type="application/rss+xml" title="JFCarpio.com selected publications" href="https://jfcarpio.com/feed.xml">
 <link rel="icon" type="image/png" href="/assets/brand/jfc-approved-20261008.png">
@@ -3214,9 +3222,9 @@ pulse:`vec2 o=vec2(.35,.15)+m*.1;float r=length(p-o);float w=ln(fract(r*3.-t*.5)
 vec2 q=p*4.;vec2 id=floor(q);vec2 pt=id+.5+.35*(h22(id)-.5);float d=length(q-pt);float node=exp(-d*12.)*rs(.15,0.,abs(fract(r*3.-t*.5)-.5));
 col=mix(BLUE,MINT,w);a=w*.7+node*1.2+exp(-r*12.)*.6;`
 };
-/* Fotograma -> escena. Ids desconocidos usan 'flow' (nunca un fotograma sin efecto). */
-const MAP={portada:'flow',apps:'apps',c1:'radar',c5:'topo',pbiu:'topo',reportes:'bars',c4:'waves',talleres:'orbit',c8:'signal',visores:'hex',
-articulos:'type',libro:'caustic',publicaciones:'graph',trayectoria:'path',perfil:'ripple',gumroad:'cards',escuela:'spiral',gratis:'rays',c9:'fork',contacto:'pulse',dashboards:'hex',dato:'signal'};
+/* Motion design: scene must express the subject; null means still editorial photo. */
+const MAP={portada:'graph',apps:'shelves',c1:'radar',c5:'topo',pbiu:'topo',reportes:'bars',c4:'waves',talleres:'orbit',c8:'signal',visores:'hex',
+articulos:null,libro:null,publicaciones:'graph',trayectoria:'path',perfil:null,gumroad:null,escuela:null,gratis:null,c9:'fork',contacto:null,dashboards:'hex',dato:'signal'};
 /* Escenas con velo propio: mezclan en modo normal (pueden oscurecer la foto), el resto en screen (solo suman luz). */
 const BLEND_NORMAL={apps:1};
 const VS='attribute vec2 v;void main(){gl_Position=vec4(v,0.,1.);}';
@@ -3236,7 +3244,9 @@ initGL();
 const SL=[...document.querySelectorAll('.reel .slide')];let cur=null,scene='flow',t0=performance.now(),since=t0,raf=0,last=0,mx=0,my=0,tx=0,ty=0,lost=false,disabled=false,contextLosses=0;
 const SCALE=coarse?.5:Math.min(devicePixelRatio||1,1.5)*.75,STEP=coarse?1000/30:0;
 function fit(){const f=cur&&cur.querySelector('.face');if(!f)return;const w=Math.max(2,Math.round(f.offsetWidth*SCALE)),h=Math.max(2,Math.round(f.offsetHeight*SCALE));if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h}}
-function place(){if(disabled||lost)return;const s=SL.find(x=>x.classList.contains('is-current'));if(!s||s===cur)return;cur=s;scene=MAP[s.id]||'flow';
+function place(){if(disabled||lost)return;const s=SL.find(x=>x.classList.contains('is-current'));if(!s||s===cur)return;cur=s;scene=Object.prototype.hasOwnProperty.call(MAP,s.id)?MAP[s.id]:null;
+ // Themed scenes only: editorial/sales slides need no decorative shader.
+ if(!scene){cv.classList.remove('on');cv.style.display='none';return;}
  const face=s.querySelector('.face');if(!face)return;const b=face.querySelector('.sc')||face.querySelector('.bgw');face.insertBefore(cv,b?b.nextSibling:face.firstChild);
  if(!get(scene)){cv.classList.remove('on');cv.style.display='none';return;}
  cv.style.display='';cv.style.mixBlendMode=BLEND_NORMAL[scene]?'normal':'';since=performance.now();cv.classList.remove('on');void cv.offsetWidth;cv.classList.add('on');fit();if(rm)draw(performance.now());}
