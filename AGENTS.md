@@ -1,5 +1,16 @@
 # REGLA PRIORITARIA — PROTOCOLO MAESTRO JFC (12 OCT 2026)
 
+## ORDEN PERMANENTE P0 — NO USAR TINYFISH (JFC, reiterada 14 OCT 2026)
+
+**NO usar TinyFish bajo ninguna circunstancia en los proyectos de JFC.** Ni herramientas, API, navegación, sesiones/perfiles, wallet, recargas, pruebas, QA, scraping, integraciones, conectores ni sugerencias de pago. Quedan anuladas las recomendaciones antiguas y cualquier supuesta excepción por gratuidad, disponibilidad o crédito. **Esta orden tiene prioridad sobre documentación histórica**, incluso si menciona TinyFish como opción.
+
+**Alternativas expresamente seleccionadas por JFC:** (1) conectores oficiales con autorización real y APIs directas para GitHub, Cloudflare, Notion, Drive, etc.; (2) Firecrawl + Crawl4AI para crawling/scraping y extracción web autorizada; (3) Playwright + agent-browser para navegación web, pruebas UI y depuración; (4) SearXNG → Crawl4AI → n8n → Qwen/Laya para investigación local. Browser Use/E2B solo cuando sean accesibles, adecuados y autorizados. No simular acceso a cuentas ni pedir contraseñas en el chat. Ante bloqueo, comprobar al menos dos vías disponibles y pertinentes en vez de regresar a la herramienta prohibida.
+
+**Incidente registrado:** el asistente volvió a recomendar usar TinyFish para conectar Cloudflare y pidió una recarga después de la prohibición inequívoca anterior. Esto no debe repetirse. No confundir las cuentas Cloudflare de friendly-123, BuscaClientes y el sitio; no tocar producción o datos de clientes por cambiar documentación.
+
+**Fuentes operativas:** [Protocolo obligatorio de todas las IA](https://app.notion.com/p/3f51642b67f381999e5fe5bf3fdc6193), [Protocolo Maestro JFC](https://app.notion.com/p/3f81642b67f3810dbe91eab83d978550) y [AGENT LAYER REGISTRY](https://app.notion.com/p/3ef1642b67f381cbbbc1f0360b5217b3).
+
+
 ## AUDITORÍA DE LA ÚLTIMA JORNADA Y PRIORIDAD DE EXPERIENCIA (14 OCT 2026)
 - [Notion: auditoría verificable de 45 hallazgos — 38 comprobados / 7 riesgos](https://app.notion.com/p/3f91642b67f381c39a9efdadb132d079)
 - [GitHub: informe íntegro y fuentes](https://github.com/jfcarpiopuntocom/buscaclientes/blob/verify/shell-028-release-readiness/docs/AUDITORIA-24H-20261014-ERRORES-Y-CORRECCIONES.md)
