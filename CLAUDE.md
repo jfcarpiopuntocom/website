@@ -1,4 +1,12 @@
 # CLAUDE.md — jfcarpio.com
+
+## REGLA OPERATIVA P0 — TINYFISH PROHIBIDO (JFC, 14/15 OCT 2026)
+
+- **NO usar TinyFish nunca** para ningún proyecto, marca, cliente o backoffice de JFC. No invocar, recomendar, instalar, conectar perfiles, abrir sesiones, solicitar recargas de wallet ni buscar excepciones por coste cero/saldo. Directriz expresa anterior reiterada; las menciones antiguas quedan superadas.
+- **Herramientas aprobadas según el trabajo:** conectores oficiales/APIs directas ya autorizadas; Firecrawl y Crawl4AI para investigación/extracción de páginas públicas; Playwright + agent-browser para interacciones UI/QA; SearXNG + Crawl4AI + n8n + Qwen/Laya para motor local. Si una vía no está disponible, intentar dos alternativas reales apropiadas antes de declararse bloqueado. No usar scraping para sustituir autenticación, no pedir contraseñas ni ejecutar pagos sin autorización.
+- **Corrección histórica:** el asistente incumplió esta directriz al proponer un perfil de la herramienta prohibida para Cloudflare y solicitar una recarga. No repetir. No confundir cuentas Cloudflare/Workers de proyectos, no borrar datos ni desplegar por registrar esta norma.
+- **Fuente:** [Skill de todas las IA](https://app.notion.com/p/3f51642b67f381999e5fe5bf3fdc6193) / [Registro de agentes](https://app.notion.com/p/3ef1642b67f381cbbbc1f0360b5217b3).
+
 v1.131 · 2026-04-24 · Author: JFC + Claude
 
 ---
