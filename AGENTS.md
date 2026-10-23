@@ -1,3 +1,9 @@
+# DAILY CONTEXT / SPEC GOVERNANCE — JFCarpio.com (JFC owner)
+
+**Read at the start of EVERY session:** enabled Notion Skills, [canonical Scope Freeze + Spec Baseline](https://app.notion.com/p/4021642b67f381179e2ff62b1c2f7cc8), [JFC Master Protocol](https://app.notion.com/p/3f81642b67f3810dbe91eab83d978550), [verbatim latest owner prompts](https://app.notion.com/p/3f81642b67f38197a91ad3db8d594457), this website's approved specs, active Notion reservations and HEAD. When Notion isn't available, state that before interpreting requirements.
+
+**Prevent scope creep:** ISO 29148 (verifiable requirement), NASA baseline/change control, BABOK traceability, Scrum Definition of Done, ISO 25010 quality. These are procedures, NOT new requirements. Ideas/reviews are not authority. Only JFC approves feature, copy, pricing, UI, external messaging and architecture. For each fix: existing requirement → reproduced failure → smallest change → focused validation → independent review → STOP. Otherwise PARK it. No new unsolicited redesigns, no release on green CI alone. Don't change client data or send communications without visual approval. No TinyFish. Friendly-123 E1–E6 release freeze applies to friendly-123, not automatically to this website's approved scope.
+
 # REGLA PRIORITARIA — PROTOCOLO MAESTRO JFC (12 OCT 2026)
 
 ## AUDITORÍA DE LA ÚLTIMA JORNADA Y PRIORIDAD DE EXPERIENCIA (14 OCT 2026)
