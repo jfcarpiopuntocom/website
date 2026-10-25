@@ -29,5 +29,17 @@
       <guid>https://jfcarpio.com/articulos/</guid>
       <description>Selección de ensayos sobre desarrollo, reformas e instituciones.</description>
     </item>
+    <item>
+      <title>Descuentos y margen: ventas adicionales</title>
+      <link>https://jfcarpio.com/articulos/descuentos-margen-ventas-adicionales/</link>
+      <guid>https://jfcarpio.com/articulos/descuentos-margen-ventas-adicionales/</guid>
+      <description>Ejemplo matemático en español sobre contribución y descuentos.</description>
+    </item>
+    <item>
+      <title>Discounts and margin: extra sales</title>
+      <link>https://jfcarpio.com/en/articles/discounts-margin-extra-sales/</link>
+      <guid>https://jfcarpio.com/en/articles/discounts-margin-extra-sales/</guid>
+      <description>Illustrative mathematics of discounts and contribution in English.</description>
+    </item>
   </channel>
 </rss>
