@@ -17,6 +17,7 @@ REGLAS: nunca "economista"; marca JFCarpio.com en voz de equipo; texto minimo .8
 import re, json, html, os
 from report_offer import report_body, report_schema
 from apps_video import apps_video
+from landing_conversion import landing_addon
 from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -310,6 +311,8 @@ def main():
                     body.append('<section class="accent-blue"><h2>A dashboard built around your business</h2><p>The free Antiquiebra and Gerencial tools show how we turn <strong>scattered data into useful decisions</strong>. Marketing is available now; the other executive areas are being developed.</p><p>For private clients, we can design a dashboard around the question, indicators and workflow that matter to their business. Start with the question your team needs to answer. We agree on the inputs, indicators and delivery format before beginning. Scope and price are set for each project; work is online in English or Spanish.</p><a class="btn" href="/en/contact/">Discuss a custom dashboard</a></section>')
                 else:
                     body.append('<section class="accent-blue"><h2>Un dashboard construido para tu negocio</h2><p>Las herramientas gratuitas Antiquiebra y Gerencial muestran cómo convertimos <strong>datos dispersos en decisiones útiles</strong>. Marketing ya está disponible; las demás áreas ejecutivas están en desarrollo.</p><p>Para clientes privados, podemos diseñar un dashboard alrededor de la pregunta, los indicadores y el proceso que importan en su negocio. Primero definimos la pregunta, los datos disponibles y los indicadores que necesita tu equipo. Acordamos el formato de entrega, el alcance y el precio antes de empezar. Trabajamos online en inglés o español.</p><a class="btn" href="/contacto/">Conversemos sobre tu dashboard</a></section>')
+            if sid in ('contacto', 'trayectoria'):
+                body.append(landing_addon(sid, lang))
             graph = [
                 {"@type": "WebPage", "@id": canon + "#page", "url": canon, "name": title, "description": desc, "inLanguage": lang,
                  "isPartOf": {"@type": "WebSite", "name": "JFCarpio.com", "url": SITE + "/"}, "primaryImageOfPage": og,

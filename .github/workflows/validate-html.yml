@@ -47,6 +47,7 @@ on:
       - 'scripts/landing-*'
       - 'scripts/media-range.mjs'
       - 'scripts/test-media-ranges.mjs'
+      - 'scripts/test-section-conversion.cjs'
       - 'scripts/test-landing-routing.cjs'
       - 'scripts/apps_video.py'
       - 'pacific-basin/**/*.html'
@@ -89,6 +90,7 @@ on:
       - 'scripts/landing-*'
       - 'scripts/media-range.mjs'
       - 'scripts/test-media-ranges.mjs'
+      - 'scripts/test-section-conversion.cjs'
       - 'scripts/test-landing-routing.cjs'
       - 'scripts/apps_video.py'
       - 'pacific-basin/**/*.html'
@@ -236,3 +238,6 @@ jobs:
 
       - name: Native video byte ranges
         run: node scripts/test-media-ranges.mjs
+
+      - name: Section landings and consent-safe brief
+        run: node scripts/test-section-conversion.cjs

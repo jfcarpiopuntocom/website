@@ -55,3 +55,14 @@ main{max-width:1350px;margin:auto}
 @media(max-width:900px){.argument{grid-template-columns:1fr}.scope-header{display:block}.scope-header p{margin-top:14px}.groups{grid-template-columns:1fr}.group,.group:first-child{padding:19px 0 24px;border-right:0}.bottom{grid-template-columns:1fr}}
 @media(max-width:600px){.bar{align-items:flex-start}.bar nav{gap:10px 15px}.bar nav a{font-size:14px}.brand{font-size:23px}.hero-inner{padding:50px 20px 62px}.hero::before{background:linear-gradient(90deg,rgba(6,14,29,.98),rgba(6,14,29,.80)),url('/network-pacific.jpg') center/cover}h1{font-size:clamp(3.3rem,12.5vw,5.2rem)}.eyebrow{font-size:14px}.lead{font-size:18px}.argument p{font-size:17px}.scope-header p{font-size:16px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+/* Scoped, readable conversion narrative on the paid launch-review landings. */
+.editorial .conversion-process,.editorial .conversion-limits{padding:clamp(24px,4vw,56px) max(20px,5vw);border-top:1px solid #365479;color:#FFFFFF}
+.editorial .conversion-process h2,.editorial .conversion-limits h2{font-family:'Barlow Condensed',Arial,sans-serif;font-size:clamp(1.8rem,4vw,3rem);max-width:25ch;margin:12px 0 24px}
+.editorial .conversion-process ol{padding-left:1.5rem;max-width:850px;display:grid;gap:20px;line-height:1.7;font-size:1.05rem}
+.editorial .conversion-process li::marker{color:#E8A020;font-weight:700}
+.editorial .conversion-process strong,.editorial .conversion-limits strong{color:#FFFFFF}
+.editorial .conversion-cases{max-width:850px;margin-top:30px;border-left:3px solid #E8A020;padding:10px 0 10px 24px}
+.editorial .conversion-cases h3{font:900 1.5rem 'Barlow Condensed',Arial,sans-serif;margin:0 0 8px}
+.editorial .conversion-cases p,.editorial .conversion-limits p{font-size:1.05rem;line-height:1.7;max-width:75ch}
