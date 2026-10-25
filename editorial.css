@@ -57,3 +57,23 @@ body.editorial.money-reading{--ink:#1B1714;--paper:#F3ECDF;--ink-soft:#36302A;--
 .friendly-explainers video{display:block;width:100%;height:auto;aspect-ratio:16/9;margin-top:16px;background:#060E1D;border-radius:8px}
 .friendly-explainers a{color:#7FB0FF}
 @media(max-width:600px){#pn-apps .gd{grid-template-columns:1fr}}
+
+
+/* Conversion belongs on individual section pages; the cinematic reel remains an editorial invitation. */
+.editorial .conversion-intake,.editorial .proof-milestones{border-top:2px solid #E8A020;margin:56px 0 34px;padding-top:26px;max-width:900px}
+.editorial .conversion-intake form{display:grid;gap:18px;margin-top:18px}
+.editorial .intake-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.editorial .conversion-intake label{display:grid;gap:6px;font-weight:700;font-size:1rem;color:#FFFFFF}
+.editorial .conversion-intake input,.editorial .conversion-intake textarea,.editorial .conversion-intake select{display:block;width:100%;min-height:48px;box-sizing:border-box;border:1px solid #8CA9C9;border-radius:4px;background:#0C1D37;color:#FFFFFF;padding:12px;font:400 1rem/1.4 Jost,Arial,sans-serif}
+.editorial .conversion-intake textarea{min-height:116px;resize:vertical}
+.editorial .conversion-intake input::placeholder,.editorial .conversion-intake textarea::placeholder{color:#D0DCEB}
+.editorial .conversion-intake input:focus-visible,.editorial .conversion-intake textarea:focus-visible,.editorial .conversion-intake select:focus-visible{outline:3px solid #28ECAA;outline-offset:3px}
+.editorial .conversion-intake .intake-note{color:#E6E6E6;font-size:.94rem;max-width:75ch;margin:0}
+.editorial .conversion-intake button{cursor:pointer;min-height:48px;text-align:center;justify-self:start;font:700 1rem/1.3 Jost,Arial,sans-serif}
+.editorial .conversion-intake .intake-alt{display:inline-block;min-height:44px;align-content:center}
+.editorial .proof-milestones ol{list-style:none;margin:24px 0;padding:0}
+.editorial .proof-milestones li{display:grid;grid-template-columns:minmax(95px,155px) 1fr;gap:20px;border-top:1px solid #365479;padding:22px 0}
+.editorial .proof-milestones li>span{color:#E8A020;font:800 1.5rem 'Barlow Condensed',Arial,sans-serif}
+.editorial .proof-milestones li strong{font-size:1.12rem;color:#FFFFFF}
+.editorial .proof-milestones li p{margin:.4em 0 0}
+@media(max-width:640px){.editorial .intake-grid{grid-template-columns:1fr}.editorial .proof-milestones li{grid-template-columns:1fr;gap:6px}}
