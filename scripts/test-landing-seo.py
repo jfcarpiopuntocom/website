@@ -26,7 +26,7 @@ for sid, paths in langs.items():
         assert html.count("<!DOCTYPE html>")==1,path
         assert f'<meta name="description" content="{desc}">' in html,path
         assert f'<meta property="og:description" content="{desc}">' in html,path
-        block=re.search(r'<script type="application/ld\\+json">(.*?)</script>',html,re.S)
+        block=re.search(r'<script type="application/ld[+]json">(.*?)</script>',html,re.S)
         assert block,path
         graph=json.loads(block.group(1))["@graph"]
         page=next((x for x in graph if x.get("@type")=="WebPage"),None)
@@ -44,7 +44,7 @@ for sid, paths in langs.items():
             assert html.index('class="launch-offer"') < html.index('class="friendly-explainers"'),path
 for p in ("revision-de-lanzamiento/index.html","en/launch-review/index.html"):
     html=(root/p).read_text(encoding="utf-8")
-    graph=json.loads(re.search(r'<script type="application/ld\\+json">(.*?)</script>',html,re.S).group(1))["@graph"]
+    graph=json.loads(re.search(r'<script type="application/ld[+]json">(.*?)</script>',html,re.S).group(1))["@graph"]
     assert any(x.get("@type")=="Service" for x in graph),p
     assert not any(x.get("@type")=="SoftwareApplication" for x in graph),p
 ignore=(root/".assetsignore").read_text()
