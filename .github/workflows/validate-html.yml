@@ -42,6 +42,7 @@ on:
       - 'scripts/test-reel-fx-state.cjs'
       - 'scripts/test-brave-webgl.cjs'
       - 'scripts/build-slide-pages.py'
+      - 'scripts/test-landing-seo.py'
       - 'scripts/build-og.cjs'
       - 'og/manifest.json'
       - 'scripts/landing-*'
@@ -241,3 +242,6 @@ jobs:
 
       - name: Section landings and consent-safe brief
         run: node scripts/test-section-conversion.cjs
+
+      - name: Landing SEO and schema parity
+        run: python3 scripts/test-landing-seo.py
