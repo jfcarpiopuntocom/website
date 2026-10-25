@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss version="2.0">
+  <channel>
+    <title>JFCarpio.com — selected publications</title>
+    <link>https://jfcarpio.com/publicaciones/</link>
+    <description>A curated directory of first-party research and publications. Spanish resources are labeled in their original language.</description>
+    <language>es</language>
+    <item>
+      <title>Publicaciones, libros y papers</title>
+      <link>https://jfcarpio.com/publicaciones/</link>
+      <guid>https://jfcarpio.com/publicaciones/</guid>
+      <description>Archivo de investigación, columnas, libros y papers de Juan Fernando Carpio.</description>
+    </item>
+    <item>
+      <title>Working paper: hidden costs and productivity</title>
+      <link>https://jfcarpio.com/working-paper-hidden-cost</link>
+      <guid>https://jfcarpio.com/working-paper-hidden-cost</guid>
+      <description>Research on hidden costs and productivity.</description>
+    </item>
+    <item>
+      <title>10 Lecciones de Economía</title>
+      <link>https://jfcarpio.com/libro/</link>
+      <guid>https://jfcarpio.com/libro/</guid>
+      <description>Información sobre el libro de Juan Fernando Carpio.</description>
+    </item>
+    <item>
+      <title>Ensayos sobre economía y empresa</title>
+      <link>https://jfcarpio.com/articulos/</link>
+      <guid>https://jfcarpio.com/articulos/</guid>
+      <description>Selección de ensayos sobre desarrollo, reformas e instituciones.</description>
+    </item>
+  </channel>
+</rss>
