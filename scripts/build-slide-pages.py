@@ -111,7 +111,7 @@ META_DESCRIPTIONS = {
     }
 }
 
- (textos literales de la slide Clientes); se muestran en las paginas de estos capitulos.
+# Testimonios: citas provenientes de la slide Clientes cuando están verificadas.
 QUOTES = {} # Proof is contextualized on reports and the earlier-work archive.
 
 
