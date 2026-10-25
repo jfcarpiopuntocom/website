@@ -76,9 +76,42 @@ FAQ = {
                ("Which countries does it compare me with?", "With benchmarks for Ecuador, Colombia, Peru and Chile."),
                ("What does the Anti-bankruptcy Viewer save me from?", "Finding out too late that the business is only holding on. It is built to cross the Valley of Death (months 6 to 24): eight indicators, the 3 Cs and a risk traffic light in 45 minutes a month."),
                ("What if I need more than the diagnosis?", "At the end you can move on to the Kit (USD 97) or the Kit with a review session with the JFCarpio.com team (USD 197).")],
+    },
+    "contacto": {
+        "es": [("¿Qué proyectos podemos consultar?", "Reportes empresariales, dashboards a medida, talleres corporativos y revisiones antes de un lanzamiento. El alcance se acuerda según el caso."),
+               ("¿Qué información conviene incluir?", "Empresa o actividad, decisión pendiente y plazo aproximado. No compartas contraseñas ni datos privados de terceros."),
+               ("¿Enviar el formulario significa contratar?", "No. El formulario prepara un mensaje de WhatsApp para que lo revises y envíes. No confirma una contratación ni reserva una reunión.")],
+        "en": [("What kinds of projects can we ask about?", "Business reports, custom dashboards, corporate workshops and pre-launch reviews. Scope is agreed for each project."),
+               ("What should the first message include?", "Your business or activity, the decision you need to make and an approximate deadline. Do not share passwords or private customer data."),
+               ("Does submitting the form mean a booking or a purchase?", "No. The form prepares a WhatsApp message for your review and submission. It does not create a booking or a purchase.")],
     }
 }
-# Testimonios reales (textos literales de la slide Clientes); se muestran en las paginas de estos capitulos.
+# Testimonios reales
+# Search snippets are page-specific; the cinematic homepage remains editorial.
+META_DESCRIPTIONS = {
+    "apps": {
+        "es": "Prueba friendly-123 para gestionar inventario, ventas y consignación sin mensualidades. Conoce la demo y explora nuestras otras apps.",
+        "en": "Try friendly-123 for stock, sales and consignment without monthly fees. See the demo and explore the other business apps."
+    },
+    "visores": {
+        "es": "Abre gratis Visor Gerencial y Visor Antiquiebra. Revisa indicadores, caja y señales de riesgo sin registro; empieza por tu negocio.",
+        "en": "Open the free Management and Anti-bankruptcy viewers. Review metrics, cash and risk signals without signing up."
+    },
+    "reportes": {
+        "es": "Una pregunta de tu negocio, una entrevista online y un informe escrito por USD 100 en hasta 72 horas tras recibir la información. Conoce el proceso.",
+        "en": "One business question, a short online interview and a USD 100 written report within 72 hours after complete inputs. See how it works."
+    },
+    "contacto": {
+        "es": "Cuéntanos qué decisión tiene pendiente tu empresa. Prepara un breve mensaje por WhatsApp o escribe por email para definir el siguiente paso.",
+        "en": "Tell us which business decision is still open. Prepare a short WhatsApp brief or email us to discuss the next step."
+    },
+    "trayectoria": {
+        "es": "Conoce la docencia, publicaciones y herramientas detrás de JFCarpio.com. Explora una trayectoria dedicada a investigar y construir soluciones.",
+        "en": "Explore the teaching, publications and practical tools behind JFCarpio.com, connecting economic research with business decisions."
+    }
+}
+
+# Testimonios: citas provenientes de la slide Clientes cuando están verificadas.
 QUOTES = {} # Proof is contextualized on reports and the earlier-work archive.
 
 
@@ -297,11 +330,11 @@ def main():
                     if quote and cite:
                         body.append('<figure class="quote"><blockquote>' + esc(tx(quote)) + '</blockquote><figcaption>' + esc(tx(cite)) + '</figcaption></figure>')
             if sid == "apps":
-                body.append(apps_video(lang))
                 if lang == "es":
                     body.append('<section class="launch-offer" aria-labelledby="launch-offer-title"><p class="kick">Servicio pagado</p><h2 id="launch-offer-title">¿Vas a lanzar un producto hecho con vibecoding?</h2><p>Revisamos la experiencia, la presencia en buscadores y lo que ocurre cuando algo falla. Incluye móvil, metadatos, página 404, estados de carga, contacto y los demás detalles que una demo no muestra.</p><a class="btn" href="/revision-de-lanzamiento/">Ver la revisión de lanzamiento</a></section>')
                 else:
                     body.append('<section class="launch-offer" aria-labelledby="launch-offer-title"><p class="kick">Paid service</p><h2 id="launch-offer-title">Launching a product built with vibe coding?</h2><p>We check the customer experience, search visibility and what happens when something fails. That includes mobile, metadata, a 404 page, loading states, contact paths and the details a demo can miss.</p><a class="btn" href="/en/launch-review/">See the launch review</a></section>')
+                body.append(apps_video(lang))
             if sid == "reportes":
                 body = report_body(lang, body)
                 title = ("USD 100 Business Reports in 72 Hours" if lang == "en" else "Reportes empresariales de USD 100 en 72 horas") + " | JFCarpio.com"
@@ -313,6 +346,7 @@ def main():
                     body.append('<section class="accent-blue"><h2>Un dashboard construido para tu negocio</h2><p>Las herramientas gratuitas Antiquiebra y Gerencial muestran cómo convertimos <strong>datos dispersos en decisiones útiles</strong>. Marketing ya está disponible; las demás áreas ejecutivas están en desarrollo.</p><p>Para clientes privados, podemos diseñar un dashboard alrededor de la pregunta, los indicadores y el proceso que importan en su negocio. Primero definimos la pregunta, los datos disponibles y los indicadores que necesita tu equipo. Acordamos el formato de entrega, el alcance y el precio antes de empezar. Trabajamos online en inglés o español.</p><a class="btn" href="/contacto/">Conversemos sobre tu dashboard</a></section>')
             if sid in ('contacto', 'trayectoria'):
                 body.append(landing_addon(sid, lang))
+            desc = META_DESCRIPTIONS.get(sid, {}).get(lang, desc)
             graph = [
                 {"@type": "WebPage", "@id": canon + "#page", "url": canon, "name": title, "description": desc, "inLanguage": lang,
                  "isPartOf": {"@type": "WebSite", "name": "JFCarpio.com", "url": SITE + "/"}, "primaryImageOfPage": og,
@@ -324,6 +358,15 @@ def main():
                 org(),
             ]
             if sid == "reportes": graph.append(report_schema(lang, canon))
+            if sid == "apps":
+                graph.append({"@type": "SoftwareApplication",
+                    "name": "friendly-123", "url": SITE + "/friendly123/",
+                    "applicationCategory": "BusinessApplication", "operatingSystem": "Web",
+                    "description": ("Inventario, ventas y consignación para pequeños negocios; licencia de cinco años sin mensualidades."
+                                    if lang == "es" else "Stock, sales and consignment for small businesses; five-year license with no monthly fees."),
+                    "publisher": {"@id": SITE + "/#organization"},
+                    "offers": {"@type": "Offer", "price": "399", "priceCurrency": "USD",
+                               "url": SITE + "/friendly123/"}})
             if sid in FAQ:
                 qa = FAQ[sid][lang]
                 body.append(f'<section class="faq"><h2>{U["faq"]}</h2>' + "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in qa) + "</section>")
@@ -390,6 +433,7 @@ def main():
          "Contact: jfcarpio@gmail.com · WhatsApp +593 99 990 5080 · " + ADDR, "",
          "English home: https://jfcarpio.com/ · Spanish home: https://jfcarpio.com/es/", "",
          "## Core services", "",
+         "- [Public pricing snapshot](https://jfcarpio.com/pricing.md): confirmed offer prices and scope; custom work is quoted.",
          "- [Business apps](https://jfcarpio.com/en/apps/): sales, inventory and operational tools.",
          "- [Focused business reports](https://jfcarpio.com/en/reports/): USD 100 for one agreed business question. Questionnaire, 10-minute interview, written report within 72 hours after complete inputs and interview. Scope is confirmed before payment.",
          "- [Two corporate workshops](https://jfcarpio.com/workshops/): financial stress and private-enterprise culture.",
