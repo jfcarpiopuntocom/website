@@ -10,9 +10,9 @@ English home: https://jfcarpio.com/ · Spanish home: https://jfcarpio.com/es/
 
 - [Public pricing snapshot](https://jfcarpio.com/pricing.md): confirmed offer prices and scope; custom work is quoted.
 
-- [Business apps](https://jfcarpio.com/en/apps/): sales, inventory and operational tools.
-- [Focused business reports](https://jfcarpio.com/en/reports/): USD 100 for one agreed business question. Questionnaire, 10-minute interview, written report within 72 hours after complete inputs and interview. Scope is confirmed before payment.
-- [Two corporate workshops](https://jfcarpio.com/workshops/): financial stress and private-enterprise culture.
+- [Business apps](https://apps.jfcarpio.com/): sales, inventory and operational tools.
+- [Focused business reports](https://consultor.jfcarpio.com/): USD 100 for one agreed business question. Questionnaire, 10-minute interview, written report within 72 hours after complete inputs and interview. Scope is confirmed before payment.
+- [Two corporate workshops](https://workshops.jfcarpio.com/): financial stress and private-enterprise culture.
 - [Dashboards](https://jfcarpio.com/en/business-viewers/): Antiquiebra, Gerencial and Marketing; custom work for private clients.
 
 Discovery note: this voluntary directory complements crawlable HTML and the XML sitemap. It does not guarantee indexing or AI recommendations.
@@ -20,12 +20,12 @@ Discovery note: this voluntary directory complements crawlable HTML and the XML 
 ## English
 
 - [There are two kinds of businesses](https://jfcarpio.com/en/tale-of-two-businesses/): THERE ARE TWO KINDS OF BUSINESSES. Five contrasts for seeing earlier, deciding clearly and leading better with tools, workshops and reports.
-- [Pre-launch review](https://jfcarpio.com/en/launch-review/): paid review of launch readiness for products built with vibe coding.
-- [Rapid-change corporate workshops](https://jfcarpio.com/workshops/): 2-hour corporate interventions for financial stress and private-enterprise culture.
-- [Latin America Market Intelligence](https://jfcarpio.com/market-intelligence-latam/): decision-focused research on pricing, competition, market entry and economic context.
-- [Pacific Basin Intelligence Unit](https://jfcarpio.com/pacific-basin/): macroeconomic intelligence on Chile, Ecuador, Peru and Colombia.
-- [Apps](https://jfcarpio.com/en/apps/)
-- [Reports](https://jfcarpio.com/en/reports/)
+- [Pre-launch review](https://launch-review.jfcarpio.com/): paid review of launch readiness for products built with vibe coding.
+- [Rapid-change corporate workshops](https://workshops.jfcarpio.com/): 2-hour corporate interventions for financial stress and private-enterprise culture.
+- [Latin America Market Intelligence](https://market-intelligence.jfcarpio.com/): decision-focused research on pricing, competition, market entry and economic context.
+- [Pacific Basin Intelligence Unit](https://pacific-basin.jfcarpio.com/): macroeconomic intelligence on Chile, Ecuador, Peru and Colombia.
+- [Apps](https://apps.jfcarpio.com/)
+- [Reports](https://consultor.jfcarpio.com/)
 - [Contrast 1 · See before it hurts](https://jfcarpio.com/en/tale-of-two-businesses/two-ways-to-operate/)
 - [Contrast 3 · Build shared language](https://jfcarpio.com/en/tale-of-two-businesses/information-alone-is-not-enough/)
 - [Contrast 4 · See in time](https://jfcarpio.com/en/tale-of-two-businesses/data-is-not-seeing/)
@@ -44,14 +44,14 @@ Discovery note: this voluntary directory complements crawlable HTML and the XML 
 ## Español
 
 - [Dos tipos de creadores de negocios](https://jfcarpio.com/historia-de-dos-negocios/): HAY DOS TIPOS DE CREADORES DE NEGOCIOS. Cinco contrastes para ver antes, decidir con claridad y dirigir mejor con herramientas, talleres y reportes.
-- [Revisión antes del lanzamiento](https://jfcarpio.com/revision-de-lanzamiento/): servicio pagado para productos y SaaS hechos con vibecoding.
-- [Talleres corporativos de cambio rápido](https://jfcarpio.com/talleres/)
+- [Revisión antes del lanzamiento](https://launch-review.jfcarpio.com/es/): servicio pagado para productos y SaaS hechos con vibecoding.
+- [Talleres corporativos de cambio rápido](https://workshops.jfcarpio.com/es/)
 - [Publicaciones](https://jfcarpio.com/publicaciones/)
-- [Las 7 formas de destruir tus finanzas personales y familiares](https://jfcarpio.com/las7formas/)
+- [Las 7 formas de destruir tus finanzas personales y familiares](https://dinero.jfcarpio.com/)
 - [Visor Antiquiebra · 6–24M](https://jfcarpio.com/visorantiquiebra/): atravesar el Valle de la Muerte (meses 6 a 24), 45 minutos al mes.
 - [Visor Gerencial](https://jfcarpio.com/visorgerencial/): un tablero por área ejecutiva; Marketing ya disponible.
-- [Apps](https://jfcarpio.com/apps/)
-- [Reportes](https://jfcarpio.com/reportes/)
+- [Apps](https://apps.jfcarpio.com/es/)
+- [Reportes](https://consultor.jfcarpio.com/es/)
 - [Contraste 1 · Ver antes de que duela](https://jfcarpio.com/historia-de-dos-negocios/dos-maneras-de-operar/)
 - [Contraste 3 · Crear lenguaje común](https://jfcarpio.com/historia-de-dos-negocios/la-informacion-sola-no-basta/)
 - [Contraste 4 · Ver a tiempo](https://jfcarpio.com/historia-de-dos-negocios/datos-no-es-ver/)

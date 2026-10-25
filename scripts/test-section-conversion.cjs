@@ -9,15 +9,25 @@ for(const [section,lang,path] of pages){
  const page=fs.readFileSync(path,'utf8');
  assert.ok(page.includes(source.slice(i+anchor.length,end)),'Generator drift: '+path);
  assert.equal((page.match(/<!doctype/gi)||[]).length,1);
+ if(section==='contacto'){
+  assert.match(page,/<button[^>]*type="submit"[^>]* disabled/,'Unsafe form fallback: '+path);
+  const cta=page.match(/<p class="cta"><a[^>]*href="([^"]+)"/)[1];
+  assert.ok(decodeURIComponent(cta).includes(lang==='en'?'Hello, I have a project question.':'Hola, tengo una consulta sobre un proyecto.'),'Localized inquiry: '+path);
+ }
 }
 for(const p of ['revision-de-lanzamiento/index.html','en/launch-review/index.html']){
  const html=fs.readFileSync(p,'utf8');assert.match(html,/conversion-process/);assert.match(html,/conversion-limits/);
 }
-let listener,redirect,form={getAttribute:()=> 'es',addEventListener:(_,fn)=>listener=fn,reportValidity:()=>true};
+let listener,redirect,valid=false;
+const button={disabled:true};
+const form={getAttribute:()=> 'es',querySelector:()=>button,addEventListener:(_,fn)=>{assert.equal(button.disabled,true);listener=fn},reportValidity:()=>valid};
 class F{get(k){return {name:'Alex',decision:'Test project',project:'Dashboard'}[k]||''}}
 const env={document:{querySelectorAll:()=>[form]},FormData:F,window:{location:{assign:v=>redirect=v}}};
 vm.runInNewContext(fs.readFileSync('contact-brief.js','utf8'),env);
+assert.equal(button.disabled,false);
 assert.equal(redirect,undefined);listener({preventDefault(){}});
+assert.equal(redirect,undefined,'Invalid form must not navigate');
+valid=true;listener({preventDefault(){}});
 assert.match(redirect,/^https:\/\/wa\.me\/593999905080\?text=/);
 assert.ok(decodeURIComponent(redirect).includes('Test project'));
 console.log('Section landings ES/EN and deliberate form submit: OK');

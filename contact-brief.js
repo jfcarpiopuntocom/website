@@ -15,5 +15,7 @@
       });
       window.location.assign('https://wa.me/593999905080?text=' + encodeURIComponent(lines.join('\n')));
     });
+    // Keep native GET submission unavailable until the safe handler is attached.
+    form.querySelector('button[type="submit"]').disabled = false;
   });
 }());

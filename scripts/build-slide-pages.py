@@ -19,6 +19,7 @@ from report_offer import report_body, report_schema
 from apps_video import apps_video
 from landing_conversion import landing_addon
 from html.parser import HTMLParser
+from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://jfcarpio.com"
@@ -300,6 +301,8 @@ def main():
                 for a in find_all(bl, "a"):
                     h = a.attrs.get("href")
                     if not h: continue
+                    if sid == "contacto" and h.startswith(WA):
+                        h = WA + "?text=" + quote("Hello, I have a project question." if lang == "en" else "Hola, tengo una consulta sobre un proyecto.")
                     ext = h.startswith("http") and "jfcarpio.com" not in h
                     btns.append(f'<a class="btn{" p" if "p" in a.cls() else ""}" href="{esc(href_to_page(h))}"' + (' rel="noopener"' if ext else "") + f">{esc(tx(a))}</a>")
             if btns: body.append('<p class="cta">' + " ".join(btns) + "</p>")
@@ -453,7 +456,13 @@ def main():
           f"- [Visor Antiquiebra · 6–24M]({SITE}/visorantiquiebra/): atravesar el Valle de la Muerte (meses 6 a 24), 45 minutos al mes.",
           f"- [Visor Gerencial]({SITE}/visorgerencial/): un tablero por área ejecutiva; Marketing ya disponible."]
     L += [f"- [{name(s, 'es')}]({SITE}/{slug(s, 'es')}/)" for s in page_list]
-    open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write("\n".join(L) + "\n")
+    directory = "\n".join(L) + "\n"
+    for route in json.load(open(os.path.join(ROOT, "scripts/landing-routes.json"), encoding="utf-8")):
+        for locale in ("en", "es"):
+            if route[locale]:
+                destination = "https://" + route["host"] + ("/es/" if locale == "es" and route["en"] else "/")
+                directory = directory.replace(SITE + route[locale], destination)
+    open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write(directory)
     print("paginas:", len(sitemap_urls), "imagenes:", len(manifest))
 
 

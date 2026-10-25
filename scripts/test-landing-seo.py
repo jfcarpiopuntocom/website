@@ -52,4 +52,10 @@ assert "*.md" in ignore and "!pricing.md" in ignore
 assert (root/"pricing.md").exists()
 assert "jfcarpio.com/pricing.md" in (root/"llms.txt").read_text()
 assert "jfcarpio.com/pricing.md" in code
+directory=(root/"llms.txt").read_text(encoding="utf-8")
+for route in json.loads((root/"scripts/landing-routes.json").read_text(encoding="utf-8")):
+    for lang in ("en","es"):
+        if route[lang]:
+            assert "https://jfcarpio.com"+route[lang] not in directory,route
+            assert "https://"+route["host"]+("/es/" if lang=="es" and route["en"] else "/") in directory,route
 print("Bilingual metadata + FAQ + product/service schema + pricing snapshot: OK")
