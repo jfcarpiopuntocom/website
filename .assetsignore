@@ -38,3 +38,6 @@ gumroad-bridge
 scripts
 og/manifest.json
 og/pdf-*.html
+
+# Public, manually reviewed price summary for visitors and AI tools.
+!pricing.md

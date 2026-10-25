@@ -8,6 +8,8 @@ English home: https://jfcarpio.com/ · Spanish home: https://jfcarpio.com/es/
 
 ## Core services
 
+- [Public pricing snapshot](https://jfcarpio.com/pricing.md): confirmed offer prices and scope; custom work is quoted.
+
 - [Business apps](https://jfcarpio.com/en/apps/): sales, inventory and operational tools.
 - [Focused business reports](https://jfcarpio.com/en/reports/): USD 100 for one agreed business question. Questionnaire, 10-minute interview, written report within 72 hours after complete inputs and interview. Scope is confirmed before payment.
 - [Two corporate workshops](https://jfcarpio.com/workshops/): financial stress and private-enterprise culture.
