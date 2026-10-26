@@ -44,8 +44,8 @@ PHOTOS = {
 # Slugs as supplied to write() in build-slide-pages.py.
 # Avoid app/dashboard pages where a real video or product is the better visual.
 INSERTIONS = {
- "reportes": [('<section id="report-topics"', "market"), ('<section class="report-process', "meeting")],
- "en/reports": [('<section id="report-topics"', "market"), ('<section class="report-process', "meeting")],
+ "reportes": [('<section class="report-process', "meeting")],
+ "en/reports": [('<section class="report-process', "meeting")],
  "articulos": [('<ul class="tiles">', "books")],
  "en/articles": [('<ul class="tiles">', "books")],
  "libro": [('<ul class="tiles">', "books")],
@@ -60,22 +60,21 @@ INSERTIONS = {
  "en/launch-review": [('<section class="scope', "workstation")]
 }
 
-def photo_html(key, lang):
+def photo_html(key, lang, hero=False):
  p = PHOTOS[key]
  es = lang == "es"
- context = ("Fotografía ilustrativa; no representa clientes de JFCarpio.com."
-            if es else "Illustrative photo; not a JFCarpio.com client.")
- crop = "Encuadre recortado." if es else "Display cropped."
  w, h = p["size"]
  alt = p["alt_es" if es else "alt_en"]
+ # The linked Commons description provides the author and CC license.
+ # Make the same details accessible through the link without a long visible caption.
+ full = f'{p["title"]} · {p["author"]} · CC BY-SA 4.0 · ' + ("encuadre recortado" if es else "display cropped")
+ loading = 'loading="eager" fetchpriority="high"' if hero else 'loading="lazy"'
  return (f'<figure class="commons-editorial-photo">'
   f'<img src="{escape(p["image"], quote=True)}" width="{w}" height="{h}"'
-  f' loading="lazy" decoding="async" alt="{escape(alt, quote=True)}">'
-  f'<figcaption>{escape(context)} '
-  f'<a href="{escape(p["file"], quote=True)}" rel="noopener noreferrer">'
-  f'{escape(p["title"])}</a> · {escape(p["author"])} · '
-  f'<a href="{LICENCE}" rel="noopener noreferrer">CC BY-SA 4.0</a> · '
-  f'{escape(crop)} Wikimedia Commons.</figcaption></figure>\n')
+  f' {loading} decoding="async" alt="{escape(alt, quote=True)}">'
+  f'<figcaption><a href="{escape(p["file"], quote=True)}" rel="noopener noreferrer"'
+  f' title="{escape(full, quote=True)}" aria-label="Ph: Wikimedia Commons. {escape(full, quote=True)}">'
+  f'Ph: Wikimedia Commons</a></figcaption></figure>\n')
 
 def enhance_interior_page(slug, page):
  specs = INSERTIONS.get(slug, ())
@@ -84,6 +83,14 @@ def enhance_interior_page(slug, page):
  if 'class="commons-editorial-photo"' in page:
   raise ValueError(f"Duplicate Commons photo block in {slug}")
  lang = "en" if slug.startswith("en/") else "es"
+ if slug in ("reportes", "en/reports"):
+  opening = '<header class="report-opening">'
+  if page.count(opening) != 1: raise ValueError(f"Missing report opening {slug}")
+  page = page.replace(opening, opening + '\n<div class="report-hero-copy">', 1)
+  first = page.index(opening)
+  close = page.find('</header>', first)
+  if close < 0: raise ValueError(f"Missing report header close {slug}")
+  page = page[:close] + '</div>\n' + photo_html("market", lang, hero=True) + page[close:]
  for before, key in specs:
   if page.count(before) != 1:
    raise ValueError(f"Expected one exact photo anchor in {slug}: {before}")

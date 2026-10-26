@@ -86,3 +86,7 @@ body.editorial.money-reading{--ink:#1B1714;--paper:#F3ECDF;--ink-soft:#36302A;--
 .commons-editorial-photo figcaption a{color:#eef5ff;text-decoration:underline;text-decoration-color:#E8A020;text-underline-offset:3px}
 .commons-editorial-photo figcaption a:focus-visible{outline:3px solid #E8A020;outline-offset:2px}
 @media(max-width:640px){.commons-editorial-photo{margin:22px auto 28px}.commons-editorial-photo img{max-height:none;aspect-ratio:4/3;border-radius:8px}.commons-editorial-photo figcaption{font-size:.81rem;padding:8px 3px 2px}}
+
+/* Discreet Commons photography credit; the linked original file has full licensing details. */
+.commons-editorial-photo figcaption{padding:5px 3px 0;font-size:.74rem;line-height:1.25;text-align:right}
+.commons-editorial-photo figcaption a{font-weight:500;color:#c4d6e8;text-decoration:underline;text-decoration-color:#9eaebe;text-decoration-thickness:1px;text-underline-offset:3px}
