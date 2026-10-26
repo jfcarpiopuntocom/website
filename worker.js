@@ -42,7 +42,7 @@ const CSP =
   "style-src 'self' https://jfcarpio.com 'unsafe-inline' https://fonts.googleapis.com; " +
   "font-src 'self' https://jfcarpio.com https://fonts.gstatic.com; " +
   "img-src 'self' data: https:; " +
-  "connect-src 'self' https://api.anthropic.com https://cloudflareinsights.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com; " +
+  "connect-src 'self' https://jfcarpio.com https://api.rss2json.com https://stats.g.doubleclick.net https://api.anthropic.com https://cloudflareinsights.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com; " +
   "media-src 'self' https://jfcarpio.com; " +
   "frame-ancestors 'self'; " +
   "upgrade-insecure-requests";
@@ -118,6 +118,11 @@ export default {
     // 3. Cabeceras de seguridad en todo
     const h = new Headers(res.headers);
     for (const [k, v] of Object.entries(SEC)) h.set(k, v);
+    // Public brand fonts are reused across jfcarpio.com marketing subdomains.
+    // Browsers require an explicit CORS grant for cross-origin font requests.
+    if (/^\/assets\/fonts\/[^/]+\.(?:woff2?|ttf|otf)$/i.test(url.pathname)) {
+      h.set('Access-Control-Allow-Origin', '*');
+    }
     const ct = res.headers.get("Content-Type") ?? "";
     if (ct.includes("text/html")) {
       h.set("Content-Security-Policy", CSP);
