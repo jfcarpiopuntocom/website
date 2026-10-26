@@ -493,7 +493,7 @@ HEAD_TPL = """<!DOCTYPE html>
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{og}">
 <meta name="theme-color" content="#060E1D">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23060E1D'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='33' font-weight='900' fill='%23E8A020'%3EJ%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="icon" type="image/png" href="https://jfcarpio.com/assets/brand/jfc-approved-20261008.png">
 <link rel="preload" as="font" href="/assets/fonts/jost-latin-wght-normal.woff2" type="font/woff2" crossorigin>
 <link rel="preload" as="font" href="/assets/fonts/barlow-condensed-900.woff2" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/slide-page.css">
