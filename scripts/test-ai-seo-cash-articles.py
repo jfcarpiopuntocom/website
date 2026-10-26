@@ -49,7 +49,7 @@ for lang, (path, canonical) in URLS.items():
     reader = Reader()
     reader.feed(s)
     assert len(reader.h1) == 1, (path, reader.h1)
-    blocks = re.findall(r'<script[^>]*type="application/ld\\+json"[^>]*>(.*?)</script>', s, re.S)
+    blocks = re.findall(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', s, re.S)
     assert len(blocks) == 1, path
     graph = json.loads(blocks[0])["@graph"]
     article = next(row for row in graph if row["@type"] == "Article")
