@@ -1,0 +1,23 @@
+/* Asesorías Express 2026-10-25 · scoped to the reports offer landing only.
+   Preserves JFC editorial typography and does not touch home-reel FX / highlights. */
+.conversion-reports .express-offer{max-width:1120px;margin:0 auto 2.5rem;color:#f2f2f2}
+.conversion-reports .express-offer h1{font-family:'Barlow Condensed',Arial,sans-serif;font-size:clamp(2.4rem,6vw,5rem);line-height:1.06;max-width:20ch;margin:.45em 0}
+.conversion-reports .express-offer h2{font-family:'Barlow Condensed',Arial,sans-serif;font-size:clamp(1.8rem,3.1vw,2.65rem);line-height:1.15;margin:1.1em 0 .4em}
+.conversion-reports .express-offer h3{font-size:clamp(1.08rem,1.8vw,1.34rem);line-height:1.32;margin:1.1em 0 .35em;color:#fff}
+.conversion-reports .express-offer p{font-size:clamp(1rem,1.35vw,1.16rem);line-height:1.65;max-width:77ch}
+.conversion-reports .express-offer .express-hero{background:linear-gradient(140deg,#071428,#112a4a);padding:clamp(1.25rem,4vw,3.5rem);border:1px solid #45658b;border-radius:16px;margin:1.2rem 0 2.2rem}
+.conversion-reports .express-offer .express-hero h1{color:#fff}
+.conversion-reports .express-offer .express-price{font-size:clamp(1.03rem,2.2vw,1.35rem);font-weight:500;color:#fff}
+.conversion-reports .express-offer .express-price strong{color:#fff}
+.conversion-reports .express-offer .cta{display:flex;gap:.85rem;flex-wrap:wrap;align-items:center;margin:1.25rem 0}
+.conversion-reports .express-offer .express-topic{margin:1.25rem 0;padding:1.25rem clamp(1rem,2vw,2rem);border-left:4px solid #4673a8;border-top:1px solid #334963;background:#09182b;border-radius:8px}
+.conversion-reports .express-offer .express-topic h2{margin-top:.1em}
+.conversion-reports .express-offer .express-source-quote{margin:1.5rem 0;padding:1rem 1.25rem;border-left:3px solid #d9b16a;font-style:italic;max-width:80ch;line-height:1.5}
+.conversion-reports .express-offer .express-visual{margin:2rem 0}
+.conversion-reports .express-offer .express-visual img{max-width:100%;height:auto;border-radius:12px}
+.conversion-reports .express-secondary{margin:4rem auto 2rem;border-top:2px solid #47658c;padding-top:2rem;max-width:1120px}
+.conversion-reports .express-secondary>h2{font-family:'Barlow Condensed',Arial,sans-serif;font-size:clamp(1.6rem,3.2vw,2.7rem)}
+.conversion-reports .express-secondary details{border:1px solid #466181;border-radius:10px;padding:1rem 1.3rem;margin-top:1rem}
+.conversion-reports .express-secondary summary{cursor:pointer;font-size:1.08rem;color:#fff;font-weight:700;padding:.4rem 0}
+.conversion-reports .express-secondary details .microreport{margin-top:2rem}
+@media(max-width:540px){.conversion-reports .express-offer .express-hero{padding:1.15rem}.conversion-reports .express-offer .cta>a{max-width:100%}}

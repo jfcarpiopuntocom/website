@@ -131,6 +131,9 @@ jobs:
       - name: Brand and launch-service regression guard
         run: node scripts/test-brand-offer.cjs
 
+      - name: Express Advisory offer (original source, EN/ES, legacy report)
+        run: node scripts/test-asesorias-express.cjs
+
       - name: International discovery and focused-report contract
         run: python3 scripts/test-global-discovery.py
 

@@ -1,9 +1,9 @@
-"""Bilingual USD 100 microreports, connected to JFC's existing business resources.
-Keep the agreed question, price and delivery clock intact. Wider studies are
-scoped separately; examples illustrate analysis and never stand in for clients.
+"""Express Advisories lead; the preserved microreport is secondary.
+The owner-authored Gamma proposal is the source for the five advisory topics.
 """
 import html
 from urllib.parse import quote
+from asesorias_express import express_body, express_schema
 
 TOPICS = {
  'es': [
@@ -24,7 +24,7 @@ TOPICS = {
  ]
 }
 
-def report_body(lang, old_body):
+def _legacy_report_body(lang, old_body):
  en = lang == 'en'
  email = 'mailto:jfcarpio@gmail.com?subject=' + quote('Business microreport — USD 100' if en else 'Microreporte empresarial — USD 100')
  title = 'Your business has a question. Let’s investigate it.' if en else 'Tu negocio tiene una pregunta. Investiguémosla.'
@@ -89,5 +89,30 @@ def report_body(lang, old_body):
  ]
  return out
 
-def report_schema(lang, canon):
+def _legacy_report_schema(lang, canon):
  return {'@type':'Service','@id':canon+'#service','name':'Business microreport' if lang=='en' else 'Microreporte empresarial','serviceType':'Focused business research and consulting','provider':{'@id':'https://jfcarpio.com/#organization'},'areaServed':'Worldwide','availableLanguage':['English','Spanish'],'offers':{'@type':'Offer','price':'100','priceCurrency':'USD','url':canon,'description':'One agreed business question; questionnaire; 10-minute online interview; written report within 72 hours after interview and complete inputs.'}}
+
+
+# Owner decision, 2026-10-25: Asesorías Express are the PRIMARY service.
+# The former microreport product is preserved beneath the advisory offer and
+# opened only on demand. Never move this block above the five advisory areas.
+def report_body(lang, old_body):
+    en = lang == 'en'
+    legacy = '\n'.join(_legacy_report_body(lang, old_body))
+    legacy = legacy.replace('<h1>', '<h3>', 1).replace('</h1>', '</h3>', 1)
+    lead = ('A recommendations report is included with each Express Advisory. If you only need a narrowly scoped written analysis, the separate microreport is still available below.'
+            if en else
+            'Cada Asesoría Express incluye un reporte de recomendaciones. Si solo necesitas una investigación escrita sobre una pregunta delimitada, el microreporte independiente sigue disponible al final.')
+    return [
+        *express_body(lang),
+        '<section class="express-secondary" id="microreportes" aria-labelledby="microreport-title">',
+        '<h2 id="microreport-title">' + ('Secondary option: a written business microreport' if en else 'Opción secundaria: microreporte empresarial por escrito') + '</h2>',
+        '<p>' + lead + '</p>',
+        '<details><summary>' + ('View the separate USD 100 microreport (10-minute interview, up to 72 hours)' if en else 'Ver microreporte independiente de USD 100 (entrevista de 10 minutos, hasta 72 horas)') + '</summary>',
+        legacy,
+        '</details>',
+        '</section>'
+    ]
+
+def report_schema(lang, canon):
+    return express_schema(lang, canon)
