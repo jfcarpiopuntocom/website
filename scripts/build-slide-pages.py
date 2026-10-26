@@ -39,7 +39,7 @@ PAGES = {
     "articulos": ("articulos", "en/articles", "Artículos", "Articles"),
     "libro": ("libro", "en/book", "Libro", "Book"),
     "c5": ("historia-de-dos-negocios/lo-que-pasa-afuera", "en/tale-of-two-businesses/what-happens-outside", "Contraste 2 · Leer el entorno", "Contrast 2 · Read the environment"),
-    "reportes": ("reportes", "en/reports", "Reportes", "Reports"),
+    "reportes": ("reportes", "en/reports", "Asesorías Express", "Express Advisories"),
     "trayectoria": ("trayectoria", "en/track-record", "Trayectoria", "Track record"),
     "c8": ("historia-de-dos-negocios/datos-no-es-ver", "en/tale-of-two-businesses/data-is-not-seeing", "Contraste 4 · Ver a tiempo", "Contrast 4 · See in time"),
     "visores": ("visores", "en/business-viewers", "Visores", "Business dashboards"),
@@ -102,8 +102,8 @@ META_DESCRIPTIONS = {
         "en": "Open the free Management and Anti-bankruptcy viewers. Review metrics, cash and risk signals without signing up."
     },
     "reportes": {
-        "es": "Una pregunta de tu negocio, una entrevista online y un informe escrito por USD 100 en hasta 72 horas tras recibir la información. Conoce el proceso.",
-        "en": "One business question, a short online interview and a USD 100 written report within 72 hours after complete inputs. See how it works."
+        "es": "Cinco Asesorías Express para pequeños negocios: CX, estrategia comercial, transformación digital, finanzas y embudos de valor. USD 100 por asesoría.",
+        "en": "Five Express Business Advisories: customer experience, commercial strategy, digital transformation, finances and organic customer funnels. USD 100 each."
     },
     "contacto": {
         "es": "Cuéntanos qué decisión tiene pendiente tu empresa. Prepara un breve mensaje por WhatsApp o escribe por email para definir el siguiente paso.",
@@ -267,7 +267,7 @@ def main():
                 og = f"{SITE}/og-jfcarpio-v2.png"
             else:
                 og = f"{SITE}/{ogfile(sid, lang)}"
-                share_kick = ("USD 100 · Up to 72 hours" if lang == "en" else "USD 100 · Hasta 72 horas") if sid == "reportes" else kick_t
+                share_kick = ("Express Advisories · USD 100" if lang == "en" else "Asesorías Express · USD 100") if sid == "reportes" else kick_t
                 manifest.append({"file": ogfile(sid, lang), "kick": share_kick, "title": title_h, "lang": lang})
             prv = page_list[i - 1] if i > 0 else None
             nxt = page_list[i + 1] if i < len(page_list) - 1 else None
@@ -343,8 +343,8 @@ def main():
                 body.append(apps_video(lang))
             if sid == "reportes":
                 body = report_body(lang, body)
-                title = ("USD 100 Business Reports in 72 Hours" if lang == "en" else "Reportes empresariales de USD 100 en 72 horas") + " | JFCarpio.com"
-                desc = ("One business question, a questionnaire, a 10-minute online interview and a focused written report within 72 hours. USD 100. English and Spanish." if lang == "en" else "Una pregunta empresarial, un cuestionario, una entrevista online de 10 minutos y un reporte escrito en hasta 72 horas. USD 100. Inglés y español.")
+                title = ("5 Express Business Advisories · USD 100" if lang == "en" else "5 Asesorías Express · USD 100") + " | JFCarpio.com"
+                desc = ("Five Express Advisory sessions covering CX, sales strategy, digital transformation, finances and organic customer attraction. USD 100 per advisory. Reports included." if lang == "en" else "Cinco Asesorías Express: CX, estrategia comercial, transformación digital, finanzas y atracción orgánica de clientes. USD 100 por asesoría; incluye reporte.")
             if sid == "visores":
                 if lang == "en":
                     body.append('<section class="accent-blue"><h2>A dashboard built around your business</h2><p>The free Antiquiebra and Gerencial tools show how we turn <strong>scattered data into useful decisions</strong>. Marketing is available now; the other executive areas are being developed.</p><p>For private clients, we can design a dashboard around the question, indicators and workflow that matter to their business. Start with the question your team needs to answer. We agree on the inputs, indicators and delivery format before beginning. Scope and price are set for each project; work is online in English or Spanish.</p><a class="btn" href="/en/contact/">Discuss a custom dashboard</a></section>')
@@ -385,7 +385,7 @@ def main():
             page = head(title, desc, canon, alt_es, alt_en, og, {"@context": "https://schema.org", "@graph": graph}) + \
                 chrome(reel, alt_en if lang == "es" else alt_es, "\n".join(body), nav) + "\n</body>\n</html>\n"
             if sid == "reportes":
-                page = page.replace('</head>', '<link rel="stylesheet" href="/report-offer.css">\n</head>', 1)
+                page = page.replace('</head>', '<link rel="stylesheet" href="/report-offer.css">\n<link rel="stylesheet" href="/asesorias-express.css">\n</head>', 1)
             write(sl, page)
             sitemap_urls.append((canon, alt_es, alt_en, "0.7"))
 
