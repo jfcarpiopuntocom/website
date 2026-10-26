@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">REPORTE EMPRESARIAL — EJEMPLO ILUSTRATIVO</title><desc id="desc">Visual illustration of the sample focused business report with cover, chart and tabular recommendations.</desc>
+<defs>
+<linearGradient id="desk" x1="0" x2="1" y2="1"><stop stop-color="#09152A"/><stop offset="1" stop-color="#153457"/></linearGradient>
+<linearGradient id="paper" x1="0" x2=".8" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#DDE7F3"/></linearGradient>
+<filter id="sh" x="-20%" y="-30%" width="150%" height="180%"><feDropShadow dx="3" dy="15" stdDeviation="19" flood-color="#000" flood-opacity=".4"/></filter>
+<pattern id="fine" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#D9E1EE" stroke-opacity=".15"/></pattern>
+</defs>
+<rect width="1200" height="800" rx="28" fill="url(#desk)"/><rect width="1200" height="800" rx="28" fill="url(#fine)"/>
+<g transform="translate(130 110) rotate(-9 240 280)" filter="url(#sh)">
+<rect width="450" height="585" rx="11" fill="#F8FBFF"/>
+<rect x="35" y="37" width="210" height="13" rx="6" fill="#142E50"/>
+<rect x="35" y="70" width="325" height="8" rx="4" fill="#CAD6E8"/>
+<rect x="35" y="92" width="288" height="8" rx="4" fill="#CAD6E8"/>
+<path d="M40 340H407" stroke="#D4DFEB" stroke-width="2"/>
+<g stroke="#DAE2ED" stroke-width="2"><path d="M45 159H402M45 211H402M45 263H402M45 315H402"/></g>
+<g fill="#133E71"><rect x="70" y="241" width="38" height="98" rx="3"/><rect x="127" y="195" width="38" height="144" rx="3"/><rect x="184" y="226" width="38" height="113" rx="3"/></g>
+<g fill="#FFA51F"><rect x="241" y="176" width="38" height="163" rx="3"/><rect x="298" y="141" width="38" height="198" rx="3"/><rect x="355" y="196" width="38" height="143" rx="3"/></g>
+<rect x="42" y="398" width="365" height="8" rx="4" fill="#BBCDE0"/><rect x="42" y="423" width="306" height="8" rx="4" fill="#D5DFEB"/>
+<rect x="42" y="448" width="338" height="8" rx="4" fill="#D5DFEB"/><rect x="42" y="474" width="265" height="8" rx="4" fill="#D5DFEB"/>
+</g>
+<g transform="translate(650 100) rotate(9 225 282)" filter="url(#sh)">
+<rect width="430" height="580" rx="11" fill="#FBFCFF"/><rect x="30" y="34" width="370" height="13" rx="4" fill="#163759"/>
+<rect x="30" y="66" width="280" height="8" rx="4" fill="#C4D1E2"/>
+<g stroke="#D7E1EE" stroke-width="1.5"><path d="M30 140H398M30 195H398M30 250H398M30 305H398M30 360H398"/></g>
+<g stroke="#153C6A" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M39 303L100 277L153 289L221 239L278 209L341 181L395 146"/></g>
+<g fill="#FF990D"><circle cx="39" cy="303" r="9"/><circle cx="100" cy="277" r="9"/><circle cx="153" cy="289" r="9"/><circle cx="221" cy="239" r="9"/><circle cx="278" cy="209" r="9"/><circle cx="341" cy="181" r="9"/><circle cx="395" cy="146" r="9"/></g>
+<rect x="31" y="414" width="367" height="52" rx="8" fill="#ECF3FB"/>
+<rect x="48" y="432" width="190" height="8" rx="4" fill="#456680"/><rect x="298" y="423" width="82" height="27" rx="7" fill="#FFD07D"/>
+<rect x="31" y="493" width="310" height="8" rx="4" fill="#CCD9E5"/>
+<rect x="31" y="514" width="250" height="8" rx="4" fill="#CCD9E5"/>
+</g>
+<g transform="translate(375 61) rotate(-1.5 260 310)" filter="url(#sh)">
+<rect width="510" height="655" rx="14" fill="url(#paper)"/>
+<path d="M0 14Q0 0 14 0H496Q510 0 510 14V231H0Z" fill="#0E2949"/>
+<rect x="42" y="34" width="83" height="6" rx="3" fill="#FF9F19"/>
+<text x="42" y="101" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="38" font-weight="800">REPORTE EMPRESARIAL</text>
+<rect x="42" y="131" width="310" height="40" rx="7" fill="#FF980F"/>
+<text x="60" y="157" fill="#11233A" font-family="Arial, sans-serif" font-size="19" letter-spacing="2" font-weight="700">EJEMPLO ILUSTRATIVO</text>
+<text x="42" y="206" fill="#E2EAF5" font-family="Arial, sans-serif" font-size="24" font-weight="600">Precio y margen</text>
+<text x="42" y="278" fill="#223E5A" font-family="Arial, sans-serif" font-size="21" font-weight="700">Aporte por unidad</text>
+<text x="42" y="327" fill="#0E2949" font-family="Arial, sans-serif" font-size="51" font-weight="800">USD 8</text>
+<text x="267" y="278" fill="#223E5A" font-family="Arial, sans-serif" font-size="21" font-weight="700">Unidades necesarias</text>
+<text x="267" y="327" fill="#0E2949" font-family="Arial, sans-serif" font-size="51" font-weight="800">134</text>
+<path d="M42 356H468" stroke="#C8D7E5" stroke-width="3"/>
+<g fill="#173D65"><rect x="55" y="441" width="53" height="92" rx="3"/><rect x="132" y="410" width="53" height="123" rx="3"/><rect x="209" y="383" width="53" height="150" rx="3"/></g>
+<g fill="#FF990D"><rect x="286" y="420" width="53" height="113" rx="3"/><rect x="363" y="369" width="53" height="164" rx="3"/></g>
+<rect x="42" y="564" width="426" height="3" fill="#BCCCDD"/>
+<text x="47" y="602" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#405E77">PREGUNTA</text>
+<text x="161" y="602" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#405E77">EVIDENCIA</text>
+<text x="275" y="602" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#405E77">OPCIONES</text>
+<text x="389" y="602" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#405E77">SIGUIENTE PASO</text>
+</g>
+</svg>
