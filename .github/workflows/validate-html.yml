@@ -125,6 +125,9 @@ jobs:
       - name: WebGL loss and recovery regression (no GPU dependency)
         run: node scripts/test-reel-fx-state.cjs
 
+      - name: Orange and deep blue decorative WebGL regression
+        run: node scripts/test-reel-fx-duotone.cjs
+
       - name: Brand and launch-service regression guard
         run: node scripts/test-brand-offer.cjs
 
