@@ -24,14 +24,14 @@ for (const [file, lang, title] of [
 ]) {
   const h = read(file);
   assert.equal((h.match(/<!DOCTYPE html>/g) || []).length, 1, file + ': valid doctype');
-  assert.equal((h.match(/<h1(?:\\s|>)/g) || []).length, 1, file + ': one h1');
+  assert.equal((h.match(/<h1(?:\s|>)/g) || []).length, 1, file + ': one h1');
   assert(h.includes('<title>') && h.includes(title), file + ': advisory title');
   assert(h.includes('href="/asesorias-express.css"'), file + ': scoped CSS');
   const first = h.indexOf('class="express-offer"'), secondary = h.indexOf('class="express-secondary"');
   assert(first > 0 && secondary > first, file + ': advisory must lead; report last');
   assert(h.includes('id="microreportes"') && h.includes('<summary>') && h.includes('id="report-example"'), file + ': legacy report preserved');
   assert(h.includes('USD 100') && (lang === 'es' ? h.includes('2–3') : h.includes('2–3')), file + ': faithful session price and hours');
-  const script = (h.match(/<script type="application\\/ld\\+json">([\\s\\S]*?)<\\/script>/) || [])[1];
+  const script = (h.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/) || [])[1];
   assert(script, file + ': valid structured data must exist');
   const ld = JSON.parse(script);
   const service = ld['@graph'].find(n => n['@type'] === 'Service');
