@@ -54,5 +54,14 @@ export async function marketingResponse(request,env){
  }
  // Shared static assets only; unrelated hub HTML never appears on an offer host.
  if(/\.(?:css|js|woff2?|png|jpe?g|webp|svg|ico|mp4|vtt|pdf)$/i.test(url.pathname)){const response=await env.ASSETS.fetch(new Request(HUB+url.pathname+url.search,request));return url.pathname.endsWith('.mp4')?mediaRange(response,request):response;}
- return new Response('<!doctype html><html lang="en"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page not found | JFCarpio.com</title><body style="background:#060E1D;color:#fff;font:20px/1.6 sans-serif;padding:32px"><h1>That page is not here.</h1><p><a style="color:#7FB0FF" href="/">Return to this offer</a> or <a style="color:#7FB0FF" href="https://jfcarpio.com/">explore JFCarpio.com</a>.</p></body></html>',{status:404,headers:{'Content-Type':'text/html; charset=utf-8','X-Robots-Tag':'noindex'}});
+ // Respect the visitor's route language while keeping a real, noindex 404.
+ const isSpanishError = Boolean(route.es) && (url.pathname.startsWith('/es/') || !route.en);
+ const errorLanguage = isSpanishError ? 'es' : 'en';
+ const errorTitle = isSpanishError ? 'Página no encontrada' : 'Page not found';
+ const errorLead = isSpanishError ? 'Esta página no existe en esta sección.' : 'That page is not here.';
+ const errorBack = isSpanishError ? 'Volver a esta oferta' : 'Return to this offer';
+ const errorExplore = isSpanishError ? 'explorar JFCarpio.com' : 'explore JFCarpio.com';
+ const errorHome = landingURL(route,errorLanguage);
+ const errorHtml = `<!doctype html><html lang="${errorLanguage}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><title>${errorTitle} | JFCarpio.com</title></head><body style="background:#060E1D;color:#fff;font:20px/1.6 sans-serif;padding:32px"><main><h1>${errorTitle}</h1><p>${errorLead}</p><p><a style="color:#7FB0FF" href="${errorHome}">${errorBack}</a> · <a style="color:#7FB0FF" href="https://jfcarpio.com/">${errorExplore}</a>.</p></main></body></html>`;
+ return new Response(errorHtml,{status:404,headers:{'Content-Type':'text/html; charset=utf-8','X-Robots-Tag':'noindex'}});
 }
