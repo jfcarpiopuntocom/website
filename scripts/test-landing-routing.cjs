@@ -10,6 +10,8 @@ const ROOT=path.join(__dirname,'..');
  for(const route of routes){
   assert(!route.host.includes('friendly123.com'));const sitemap=await m.marketingResponse(new Request('https://'+route.host+'/sitemap.xml'),env);assert.equal(sitemap.status,200);
   const xml=await sitemap.text();assert(xml.includes('hreflang="x-default"'));assert(xml.includes(m.landingURL(route,route.en?'en':'es')));
+  const dates=[...xml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(v=>v[1]);
+  assert.equal(dates.length,route.en&&route.es?2:1);assert(dates.every(d=>d===(route.lastmod||'2026-10-07')),'Sitemap date must reflect an actual content change');
   for(const lang of ['en','es'])if(route[lang]){
    const canon=m.landingURL(route,lang);const res=await m.marketingResponse(new Request(canon),env);assert.equal(res.status,200);const html=await res.text();assert(html.includes('rel="canonical" href="'+canon+'"'),canon);assert(html.includes('<html lang="'+lang+'"'),canon);assert.equal((html.match(/<h1(?:\s|>)/g)||[]).length,1);assert(!/href="\/(?:editorial|slide-page)\.css"/.test(html),'Cross-host styles must resolve');
    for(const schema of html.matchAll(/type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g))JSON.parse(schema[1]);
@@ -17,7 +19,11 @@ const ROOT=path.join(__dirname,'..');
    if(route.en&&route.es){assert(html.includes('hreflang="en" href="'+m.landingURL(route,'en')+'"'));assert(html.includes('hreflang="es" href="'+m.landingURL(route,'es')+'"'));}
    pages++;
   }
-  assert.equal((await m.marketingResponse(new Request('https://'+route.host+'/publicaciones/'),env)).status,404,'Unrelated hub content must not be cloned');
+  const notFound=await m.marketingResponse(new Request('https://'+route.host+'/publicaciones/'),env);
+  assert.equal(notFound.status,404,'Unrelated hub content must not be cloned');
+  assert.equal(notFound.headers.get('X-Robots-Tag'),'noindex');
+  if(route.en){const err=await m.marketingResponse(new Request('https://'+route.host+'/not-here/'),env);const page=await err.text();assert.equal(err.status,404);assert(page.includes('<html lang="en">')&&page.includes('Page not found')&&page.includes(m.landingURL(route,'en')));}
+  if(route.es){const err=await m.marketingResponse(new Request('https://'+route.host+'/es/no-existe/'),env);const page=await err.text();assert.equal(err.status,404);assert(page.includes('<html lang="es">')&&page.includes('Página no encontrada')&&page.includes(m.landingURL(route,'es')));}
   assert.equal((await m.marketingResponse(new Request('https://'+route.host+'/',{method:'POST'}),env)).status,405);
  }
  assert.equal(await m.marketingResponse(new Request('https://friendly123.com/index.html'),env),null);
