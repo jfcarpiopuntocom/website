@@ -53,5 +53,7 @@
     <guid>https://jfcarpio.com/en/articles/sales-up-cash-down/</guid>
     <description>Illustrative cash-flow example: collections, inventory and cash paid to suppliers.</description>
   </item>
-</channel>
+    <item><title>Margen bruto, contribución y utilidad neta</title><link>https://jfcarpio.com/articulos/margen-bruto-contribucion-utilidad-neta/</link><guid>https://jfcarpio.com/articulos/margen-bruto-contribucion-utilidad-neta/</guid><description>Ejemplo económico original: fórmulas y tres indicadores distintos.</description></item>
+    <item><title>Gross, contribution and net margin</title><link>https://jfcarpio.com/en/articles/gross-margin-contribution-margin-net-profit/</link><guid>https://jfcarpio.com/en/articles/gross-margin-contribution-margin-net-profit/</guid><description>Original educational example: three margins and their formulas.</description></item>
+  </channel>
 </rss>
