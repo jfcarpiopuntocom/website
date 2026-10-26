@@ -1,6 +1,6 @@
 # JFCarpio.com
 
-> Business apps, focused consulting reports, corporate workshops and custom dashboards. Based in Cuenca, Ecuador; serving clients worldwide online in English and Spanish.
+> Business apps, Express Advisory sessions, corporate workshops and custom dashboards. Based in Cuenca, Ecuador; serving clients worldwide online in English and Spanish.
 
 Contact: jfcarpio@gmail.com · WhatsApp +593 99 990 5080 · General Torres #14, Cuenca, Ecuador
 
@@ -11,7 +11,8 @@ English home: https://jfcarpio.com/ · Spanish home: https://jfcarpio.com/es/
 - [Public pricing snapshot](https://jfcarpio.com/pricing.md): confirmed offer prices and scope; custom work is quoted.
 
 - [Business apps](https://apps.jfcarpio.com/): sales, inventory and operational tools.
-- [Focused business reports](https://consultor.jfcarpio.com/): USD 100 for one agreed business question. Questionnaire, 10-minute interview, written report within 72 hours after complete inputs and interview. Scope is confirmed before payment.
+- [Express business advisory sessions / Asesorías Express](https://consultor.jfcarpio.com/): FIVE advisory topics — customer experience, commercial strategy, digital transformation, business finances and organic customer acquisition funnels; USD 100 per advisory; phone/audio session with 2–3 hours of total work depending on the topic; recommendations report included. [Español](https://consultor.jfcarpio.com/es/). Source: original offer owned by JFC.
+- [Secondary written microreport](https://consultor.jfcarpio.com/#microreportes): one agreed question, 10-minute interview, written report in up to 72 hours after complete inputs. Separate optional product, not the headline service.
 - [Two corporate workshops](https://workshops.jfcarpio.com/): financial stress and private-enterprise culture.
 - [Dashboards](https://jfcarpio.com/en/business-viewers/): Antiquiebra, Gerencial and Marketing; custom work for private clients.
 
@@ -25,7 +26,7 @@ Discovery note: this voluntary directory complements crawlable HTML and the XML 
 - [Latin America Market Intelligence](https://market-intelligence.jfcarpio.com/): decision-focused research on pricing, competition, market entry and economic context.
 - [Pacific Basin Intelligence Unit](https://pacific-basin.jfcarpio.com/): macroeconomic intelligence on Chile, Ecuador, Peru and Colombia.
 - [Apps](https://apps.jfcarpio.com/)
-- [Reports](https://consultor.jfcarpio.com/)
+- [Express Advisories (reports available as a secondary option)](https://consultor.jfcarpio.com/)
 - [Contrast 1 · See before it hurts](https://jfcarpio.com/en/tale-of-two-businesses/two-ways-to-operate/)
 - [Contrast 3 · Build shared language](https://jfcarpio.com/en/tale-of-two-businesses/information-alone-is-not-enough/)
 - [Contrast 4 · See in time](https://jfcarpio.com/en/tale-of-two-businesses/data-is-not-seeing/)
@@ -51,7 +52,7 @@ Discovery note: this voluntary directory complements crawlable HTML and the XML 
 - [Visor Antiquiebra · 6–24M](https://jfcarpio.com/visorantiquiebra/): atravesar el Valle de la Muerte (meses 6 a 24), 45 minutos al mes.
 - [Visor Gerencial](https://jfcarpio.com/visorgerencial/): un tablero por área ejecutiva; Marketing ya disponible.
 - [Apps](https://apps.jfcarpio.com/es/)
-- [Reportes](https://consultor.jfcarpio.com/es/)
+- [Asesorías Express (incluyen reporte de recomendaciones)](https://consultor.jfcarpio.com/es/)
 - [Contraste 1 · Ver antes de que duela](https://jfcarpio.com/historia-de-dos-negocios/dos-maneras-de-operar/)
 - [Contraste 3 · Crear lenguaje común](https://jfcarpio.com/historia-de-dos-negocios/la-informacion-sola-no-basta/)
 - [Contraste 4 · Ver a tiempo](https://jfcarpio.com/historia-de-dos-negocios/datos-no-es-ver/)
