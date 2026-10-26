@@ -378,6 +378,9 @@ a{color:inherit}
 /* foto: 100vw x 120dvh, se mueve -dy/1.2 (parallax pesado). Si la foto falla, queda el fondo navy y el texto sigue legible. */
 .bgw{position:absolute;z-index:0;left:50%;top:50%;width:100vw;height:120dvh;margin:-60dvh 0 0 -50vw;will-change:transform}
 .bgw img{width:100%;height:100%;object-fit:cover;display:block}
+/* VEL-01: in reel mode, native lazy-loading sees only current + adjacent photos.
+   Do not change src/alt or the no-JS stacked fallback; keep hero eager. */
+html.reel .slide:not(.is-current):not(.reel-neighbor) .bgw img[loading="lazy"]{display:none}
 /* scrim: garantiza texto blanco legible aun sobre la foto mas clara (probado con foto 100% blanca) */
 .sc{position:absolute;z-index:1;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(6,14,29,.35) 0%,rgba(6,14,29,0) 34%)}
 .front{position:absolute;z-index:2;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 6dvh 5.5dvh;color:#fff;will-change:opacity,filter,transform}
@@ -2942,7 +2945,7 @@ function size(){
 }
 function hud(){
  [...pp.children].forEach((b,i)=>b.classList.toggle('on',i===idx));
- S.forEach((s,i)=>s.classList.toggle('is-current',i===idx));
+ S.forEach((s,i)=>{s.classList.toggle('is-current',i===idx);s.classList.toggle('reel-neighbor',Math.abs(i-idx)===1)});
  const c=COL[S[idx].dataset.k];pp.parentNode.style.setProperty('--pc',c[1]);
  $('#pn0').textContent=String(idx+1).padStart(2,'0');$('#cn').textContent=String(idx+1).padStart(2,'0');
  nx.textContent=idx===N-1?'↑':'↓';
