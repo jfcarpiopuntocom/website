@@ -26,7 +26,7 @@ TOPICS = {
 
 def _legacy_report_body(lang, old_body):
  en = lang == 'en'
- email = 'mailto:jfcarpio@gmail.com?subject=' + quote('Business microreport — USD 100' if en else 'Microreporte empresarial — USD 100')
+ email = 'mailto:staff@jfcarpio.com?subject=' + quote('Business microreport — USD 100' if en else 'Microreporte empresarial — USD 100')
  title = 'Your business has a question. Let’s investigate it.' if en else 'Tu negocio tiene una pregunta. Investiguémosla.'
  intro = ('A discount that sells more but leaves less. Stock tying up cash. A new market you want to understand before spending. Bring us <strong>one business question</strong>: we examine the evidence and write an analysis you can use to decide.' if en else 'Un descuento que vende más pero deja menos. Inventario que retiene tu dinero. Un mercado que quieres entender antes de gastar. Trae <strong>una pregunta de tu negocio</strong>: examinamos la evidencia y te entregamos un análisis escrito para decidir.')
  terms = 'One agreed question · 10-minute online interview · up to 72 hours' if en else 'Una pregunta acordada · entrevista online de 10 minutos · hasta 72 horas'

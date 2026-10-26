@@ -17,7 +17,7 @@ const assert=(ok,message)=>{if(!ok)throw Error(message)};
    assert(!result.overflow,route+' overflow '+width);assert(result.h1===1,route+' H1 count');assert(result.nav.length===5,route+' missing commercial path');
    if(route.includes('reports')||route==='/reportes/'){
     assert(await page.locator('main').innerText().then(t=>/USD 100/.test(t)&&/72/.test(t)&&/10/.test(t)),'report contract absent');
-    assert((await page.locator('main a[href^="mailto:"]').first().getAttribute('href')).startsWith('mailto:jfcarpio@gmail.com'),'report email missing');
+    assert((await page.locator('main a[href^="mailto:"]').first().getAttribute('href')).startsWith('mailto:staff@jfcarpio.com'),'report email missing');
     await page.locator('main details').first().locator('summary').click();assert(await page.locator('main details').first().getAttribute('open')!==null,'supporting research cannot expand');
     await page.locator('main details').first().locator('summary').click();
    }

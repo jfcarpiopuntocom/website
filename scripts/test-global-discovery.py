@@ -17,7 +17,7 @@ for name,lang,url in [('index.html','en','https://jfcarpio.com/'),('es/index.htm
  assert 'cv-jfc' not in trajectory.lower() and 'cv-map' not in trajectory.lower()
 for name in ['en/reports/index.html','reportes/index.html']:
  s=read(name)
- for text in ['USD 100','72','10','mailto:jfcarpio@gmail.com','editorial.css']:assert text in s,(name,text)
+ for text in ['USD 100','72','10','mailto:staff@jfcarpio.com','editorial.css']:assert text in s,(name,text)
  schemas=[json.loads(b) for b in re.findall(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>',s,re.S)]
  service=next(n for schema in schemas for n in schema.get('@graph',[schema]) if n.get('@type')=='Service')
  assert service['offers']['price']=='100' and service['offers']['priceCurrency']=='USD'
