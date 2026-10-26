@@ -5,7 +5,9 @@ for(const name of ['index.html','es/index.html']){
  assert.equal(ids.length,20);assert.equal(ids[ids.indexOf('apps')+1],'reportes');assert(ids.indexOf('pbiu')<ids.indexOf('publicaciones'));
  const micro=source.match(/<section class="slide[^"]*" id="reportes".*?<\/section>/s)[0];
  assert(!/Critical Minerals|Minerales Críticos|Macroeconomic research|Research macro|research-feedback|macroec[oó]n[oó]mic|brilla-group\.com/i.test(micro));
- assert(micro.includes('USD 100'));assert(micro.includes('72'));assert(micro.includes('10'));
+ assert(micro.includes('USD 100'));assert(micro.includes('2–3'));assert(/report|reporte/i.test(micro));
+ assert(/Express Advisories|Asesorías Express/.test(micro),'Advisory-first slide must match canonical landing');
+ assert(!/Written report in up to 72 hours|Reporte escrito en hasta 72 horas/.test(micro),'Old report-only promise still leads the reel');
 }
 for(const name of ['reportes/index.html','en/reports/index.html'])assert(!/research-feedback|Diego Peñaherrera|Critical Minerals/.test(read(name)));
 const page=read('pacific-basin/index.html');
@@ -35,7 +37,7 @@ for(const file of ['index.html','es/index.html']){
  const descriptions=[...head.matchAll(/<meta\s+(?:name|property)="(?:description|og:description|twitter:description)"\s+content="([^"]+)"/g)].map(m=>m[1]);
  assert(descriptions.length===3,file+': missing brand description metadata');
  assert(!/(?:USD\s*100|\$\s*100)/i.test([title,...descriptions].join(' | ')),file+': offer pricing leaked into brand metadata');
- assert(file==='index.html'?title.includes('Micro Consulting Reports'):title.includes('microconsultorías'),file+': microconsulting must read as a product');
+ assert(file==='index.html'?title.includes('Express Advisories'):title.includes('Asesorías Express'),file+': approved advisory-first positioning missing');
 }
 
-console.log('Offer separation: 20 slides, adjacent microreports, commercial PBIU, 15 complete documents, prices, anchors, assets and domain boundary OK');
+console.log('Offer separation: 20 slides, primary Express Advisories with preserved secondary microreports, commercial PBIU, 15 complete documents, prices, anchors, assets and domain boundary OK');
