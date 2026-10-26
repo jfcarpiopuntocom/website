@@ -10,6 +10,7 @@ on:
     branches: [main]
     paths:
       - 'las7formas/**/*.html'
+      - 'las7formas/**/*.css'
       - 'visorantiquiebra/**/*.html'
       - 'publicaciones/**/*.html'
       - 'working-paper-hidden-cost.html'
@@ -50,6 +51,7 @@ on:
       - 'scripts/test-media-ranges.mjs'
       - 'scripts/test-section-conversion.cjs'
       - 'scripts/test-landing-routing.cjs'
+      - 'scripts/test-dinero-faq-contrast.cjs'
       - 'scripts/apps_video.py'
       - 'pacific-basin/**/*.html'
       - 'assets/pbiu*'
@@ -60,6 +62,7 @@ on:
   pull_request:
     paths:
       - 'las7formas/**/*.html'
+      - 'las7formas/**/*.css'
       - 'visorantiquiebra/**/*.html'
       - 'publicaciones/**/*.html'
       - 'working-paper-hidden-cost.html'
@@ -93,6 +96,7 @@ on:
       - 'scripts/test-media-ranges.mjs'
       - 'scripts/test-section-conversion.cjs'
       - 'scripts/test-landing-routing.cjs'
+      - 'scripts/test-dinero-faq-contrast.cjs'
       - 'scripts/apps_video.py'
       - 'pacific-basin/**/*.html'
       - 'assets/pbiu*'
@@ -130,6 +134,9 @@ jobs:
 
       - name: Brand and launch-service regression guard
         run: node scripts/test-brand-offer.cjs
+
+      - name: Dinero FAQ WCAG AA focused contrast guard
+        run: node scripts/test-dinero-faq-contrast.cjs
 
       - name: Express Advisory offer (original source, EN/ES, legacy report)
         run: node scripts/test-asesorias-express.cjs
