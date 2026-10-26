@@ -19,6 +19,7 @@ from report_offer import report_body, report_schema
 from apps_video import apps_video
 from commons_editorial_photos import enhance_interior_page
 from conversion_interiors import enhance_conversion_interior
+from enrich_conversion_pages import enrich_page
 from landing_conversion import landing_addon
 from html.parser import HTMLParser
 from urllib.parse import quote
@@ -244,7 +245,7 @@ def main():
 
         def write(path, content):
             d = os.path.join(ROOT, path); os.makedirs(d, exist_ok=True)
-            open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(enhance_conversion_interior(path, enhance_interior_page(path, content)))
+            open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(enrich_page(path, enhance_conversion_interior(path, enhance_interior_page(path, content))))
 
         for i, sid in enumerate(page_list):
             root = secs[sid]
