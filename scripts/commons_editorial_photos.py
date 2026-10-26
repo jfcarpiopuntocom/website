@@ -9,12 +9,12 @@ from html import escape
 LICENCE = "https://creativecommons.org/licenses/by-sa/4.0/"
 PHOTOS = {
  "market": {
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Mercado_Artesanal_(Guayaquil).jpg/960px-Mercado_Artesanal_(Guayaquil).jpg",
-  "file": "https://commons.wikimedia.org/wiki/File:Mercado_Artesanal_(Guayaquil).jpg",
-  "title": "Mercado Artesanal (Guayaquil)",
-  "author": "Freddy eduardo", "size": (960, 723),
-  "alt_es": "Mercado artesanal de Guayaquil, Ecuador, con locales y comerciantes.",
-  "alt_en": "Artisan market in Guayaquil, Ecuador."
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Artisan_Market_-_Andes_Mountains_-_South_America%2C_Ecuador_Reserva_ecol%C3%B3gica_Cotacachi-Cayapasm%2C_n.jpg/960px-Artisan_Market_-_Andes_Mountains_-_South_America%2C_Ecuador_Reserva_ecol%C3%B3gica_Cotacachi-Cayapasm%2C_n.jpg",
+  "file": "https://commons.wikimedia.org/wiki/File:Artisan_Market_-_Andes_Mountains_-_South_America%2C_Ecuador_Reserva_ecol%C3%B3gica_Cotacachi-Cayapasm%2C_n.jpg",
+  "title": "Artisan Market - Andes Mountains - South America, Ecuador Reserva ecológica Cotacachi-Cayapasm, n.jpg",
+  "author": "JOJOtheWhale.bronxtale", "size": (960, 1280),
+  "alt_es": "Tejidos artesanales expuestos en un mercado andino de Ecuador.",
+  "alt_en": "Colorful textiles displayed at an artisan market in the Ecuadorian Andes."
  },
  "meeting": {
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Commercial_meeting%2C_an_example.jpg/960px-Commercial_meeting%2C_an_example.jpg",
