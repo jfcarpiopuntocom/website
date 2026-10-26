@@ -10,11 +10,17 @@ def main():
  ET.register_namespace('',ns);ET.register_namespace('xhtml',xn)
  raw=(ROOT/'sitemap.xml').read_text(encoding='utf8')
  homes=[SITE+'/',SITE+'/es/']
+ # Preserve the last verified content-change date when rebuilding the sitemap;
+ # a future rebuild must not roll the two home pages back to October 7.
+ home_lastmod={}
+ for home in homes:
+  current=re.search(r'<loc>'+re.escape(home)+r'</loc>\s*<lastmod>(\d{4}-\d{2}-\d{2})</lastmod>',raw)
+  if current:home_lastmod[home]=current.group(1)
  raw=re.sub(r'\s*<url\b[^>]*>.*?</url>',lambda m:'' if any('<loc>'+home+'</loc>' in m[0] for home in homes) else m[0],raw,flags=re.S)
  blocks=[]
  for home in reversed(homes):
   url=ET.Element('{'+ns+'}url');ET.SubElement(url,'{'+ns+'}loc').text=home
-  ET.SubElement(url,'{'+ns+'}lastmod').text='2026-10-07'
+  ET.SubElement(url,'{'+ns+'}lastmod').text=home_lastmod.get(home,'2026-10-25')
   for lang,href in [('en',homes[0]),('es',homes[1]),('x-default',homes[0])]:ET.SubElement(url,'{'+xn+'}link',{'rel':'alternate','hreflang':lang,'href':href})
   blocks.insert(0,ET.tostring(url,encoding='unicode'))
  raw=re.sub(r'(<urlset\b[^>]*>)',lambda m:m[1]+'\n  '+'\n  '.join(blocks),raw,count=1)
