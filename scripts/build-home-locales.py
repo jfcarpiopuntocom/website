@@ -21,8 +21,8 @@ def render(source,lang,T):
   return tag
  source=re.sub(r'<[^>]+data-ta-[^>]+>',attributes,source)
  source=re.sub(r'<html\b[^>]*>',f'<html lang="{lang}">',source,count=1)
- title='JFCarpio.com | Business apps, USD 100 reports and workshops' if lang=='en' else 'JFCarpio.com | Apps, reportes de USD 100 y talleres'
- desc='Business apps, focused USD 100 consulting reports delivered within 72 hours, corporate workshops and custom dashboards. Online in English and Spanish.' if lang=='en' else 'Apps, reportes empresariales de USD 100 entregados en hasta 72 horas, talleres corporativos y dashboards a medida. Trabajo online en inglés y español.'
+ title='JFCarpio.com | Business Apps, Express Advisories & Entrepreneurial Economics' if lang=='en' else 'JFCarpio.com | Apps, Asesorías Express y economía empresarial'
+ desc='Business apps, five Express Advisory sessions, entrepreneurial economics, dashboards and corporate workshops for clear business decisions.' if lang=='en' else 'Apps empresariales, cinco Asesorías Express, economía empresarial, visores y talleres corporativos para decidir mejor.'
  source=re.sub(r'<title>.*?</title>',f'<title>{title}</title>',source,count=1,flags=re.S)
  for attr,name,value in [('name','description',desc),('property','og:title',title),('property','og:description',desc),('name','twitter:title',title),('name','twitter:description',desc),('property','og:locale','en_US' if lang=='en' else 'es_EC')]:
   source=re.sub(r'<meta '+attr+'="'+name+r'" content="[^"]*">',f'<meta {attr}="{name}" content="{html.escape(value,quote=True)}">',source,count=1)
