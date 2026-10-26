@@ -1,6 +1,6 @@
 [
   {"host":"apps.jfcarpio.com","en":"/en/apps/","es":"/apps/"},
-  {"host":"consultor.jfcarpio.com","en":"/en/reports/","es":"/reportes/"},
+  {"host":"consultor.jfcarpio.com","en":"/en/reports/","es":"/reportes/","lastmod":"2026-10-25"},
   {"host":"workshops.jfcarpio.com","en":"/workshops/","es":"/talleres/"},
   {"host":"launch-review.jfcarpio.com","en":"/en/launch-review/","es":"/revision-de-lanzamiento/"},
   {"host":"market-intelligence.jfcarpio.com","en":"/market-intelligence-latam/","es":null},
