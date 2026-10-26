@@ -3087,19 +3087,19 @@ const cv=document.createElement('canvas');cv.className='fx';cv.setAttribute('ari
 const gl=cv.getContext('webgl',{alpha:true,antialias:false,premultipliedAlpha:true,powerPreference:'low-power',preserveDrawingBuffer:false});
 if(!gl)return;
 const rm=matchMedia('(prefers-reduced-motion:reduce)').matches,coarse=matchMedia('(pointer:coarse)').matches;
-/* Cabecera comun: ruido, fbm, lineas y la paleta del sitio (azul, menta, violeta, coral, oro solo de acento). */
+/* Cabecera comun: ruido, fbm, lineas y la paleta del sitio (azules vibrantes, naranja, menta, coral y oro). */
 const HEAD=`#ifdef GL_FRAGMENT_PRECISION_HIGH
 precision highp float;
 #else
 precision mediump float;
 #endif
 uniform vec2 R;uniform float T;uniform vec2 M;uniform float I;
-#define BLUE vec3(.16,.32,.53)
+#define BLUE vec3(.23,.45,.72)
 #define MINT vec3(.16,.93,.67)
-#define CYAN vec3(.08,.24,.40)
+#define CYAN vec3(.12,.43,.73)
 #define CORAL vec3(1.,.52,.4)
 #define GOLD vec3(.91,.63,.13)
-#define CRIM vec3(.07,.13,.22)
+#define CRIM vec3(.98,.53,.09)
 #define PI 3.14159265
 float h21(vec2 p){p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);return fract(p.x*p.y);}
 vec2 h22(vec2 p){float n=h21(p);return vec2(n,h21(p+n));}
