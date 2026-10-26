@@ -1,3 +1,9 @@
+# MAJOR DECISION · 25 OCT 2026 · CONSULTING OFFER PRIORITY
+- **ASESORÍAS EXPRESS FIRST** in the existing commercial /reportes/ and /en/reports/ pages and canonical consultor.jfcarpio.com/{/es/}. Five advisory topics exactly from owner original: https://asesorias-express-waacibw.gamma.site/ . Price USD 100 per advisory; audio/telephone working session (2–3 total hours depending on topic); recommendations report included.
+- Microreport remains ONLY at the bottom as an independent secondary product; existing 10-minute interview/72-hour report details may be preserved there. Never restore report-first hero or navigation through regeneration.
+- Source-of-truth and verbatim original text preserved at scripts/asesorias-express-gamma-source.md and https://app.notion.com/p/4051642b67f38114a06dfa8ce3c1dfd0 . Runtime pages are generated from scripts/report_offer.py and scripts/asesorias-express-content.json; edit owner before rebuilding.
+- No price/guarantee changes, new checkout, unverified figures/testimonials represented as independently verified, or homepage cinema-reel/FX restyling. Check canonical subdomains and localized pages after merge.
+
 # DAILY CONTEXT / SPEC GOVERNANCE — JFCarpio.com (JFC owner)
 
 **Read at the start of EVERY session:** enabled Notion Skills, [canonical Scope Freeze + Spec Baseline](https://app.notion.com/p/4021642b67f381179e2ff62b1c2f7cc8), [JFC Master Protocol](https://app.notion.com/p/3f81642b67f3810dbe91eab83d978550), [verbatim latest owner prompts](https://app.notion.com/p/3f81642b67f38197a91ad3db8d594457), this website's approved specs, active Notion reservations and HEAD. When Notion isn't available, state that before interpreting requirements.
