@@ -41,5 +41,17 @@
       <guid>https://jfcarpio.com/en/articles/discounts-margin-extra-sales/</guid>
       <description>Illustrative mathematics of discounts and contribution in English.</description>
     </item>
-  </channel>
+    <item>
+    <title>Ventas suben, caja baja</title>
+    <link>https://jfcarpio.com/articulos/ventas-suben-caja-baja/</link>
+    <guid>https://jfcarpio.com/articulos/ventas-suben-caja-baja/</guid>
+    <description>Ejemplo ilustrativo de la diferencia entre ventas, cobros e inventario y su impacto en caja.</description>
+  </item>
+  <item>
+    <title>Sales are up, cash is down</title>
+    <link>https://jfcarpio.com/en/articles/sales-up-cash-down/</link>
+    <guid>https://jfcarpio.com/en/articles/sales-up-cash-down/</guid>
+    <description>Illustrative cash-flow example: collections, inventory and cash paid to suppliers.</description>
+  </item>
+</channel>
 </rss>
