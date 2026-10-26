@@ -47,3 +47,55 @@
  .conversion-interior .conversion-hero .cta{margin:13px 0 0}
 }
 @media(prefers-reduced-motion:reduce){.conversion-interior .tiles>li{transition:none}}
+
+
+/* Editorial deep-pass: source-backed answers, no stock visual pretending to be a report. */
+.conversion-reports .report-product-visual{width:100%;max-width:none;margin:0;min-width:0;align-self:center}
+.conversion-reports .report-product-visual img{display:block;width:100%;height:auto;max-height:370px;aspect-ratio:3/2;object-fit:contain;border:1px solid #33506c;border-radius:12px;background:#0b1b32;box-shadow:0 14px 34px #0209146b}
+.conversion-reports .report-product-visual figcaption{color:#c5d3e2;text-align:right;font-size:.72rem;line-height:1.4;padding:6px 1px}
+.conversion-reports .report-question-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.conversion-reports .report-question{padding:20px;border:1px solid #314e6f;border-radius:11px;background:#0c1f39;min-width:0}
+.conversion-reports .report-question .report-topic-label{color:#ffb23e;font-size:.78rem;font-weight:750;text-transform:uppercase;letter-spacing:.05em}
+.conversion-reports .report-question h3{font-size:1.12rem;line-height:1.28;margin:7px 0 11px}
+.conversion-reports .report-question p{font-size:.92rem;line-height:1.55}
+.conversion-reports .report-deliverable{border:1px solid #355473;border-left:4px solid #FF980F;padding:24px 26px;border-radius:0 12px 12px 0;background:#0c213c}
+.conversion-reports .report-deliverable ul{columns:2;column-gap:25px}
+.conversion-reports .report-deliverable li{break-inside:avoid;font-size:.94rem;line-height:1.55;margin-bottom:13px}
+.evidence-brief{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:22px;border-radius:12px;border:1px solid #3a5878;padding:26px;background:linear-gradient(115deg,#112b4c,#0b1e35);margin:28px 0 18px}
+.evidence-brief h2{font-size:clamp(1.4rem,2vw,1.75rem);line-height:1.17;margin:0 0 10px}
+.evidence-brief p{font-size:.92rem;line-height:1.55;margin:0}
+.evidence-numbers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;align-items:center}
+.evidence-numbers span{min-width:0;padding:8px;border-left:2px solid #FF980F;display:grid;gap:7px}
+.evidence-numbers b{color:#ffb342;font-size:clamp(1.3rem,2.1vw,1.9rem);line-height:1}
+.evidence-numbers small{color:#d9e6f2;font-size:.72rem;line-height:1.3}
+.conversion-reports .report-example{max-width:none;padding:20px 25px;background:#0d243f;border:1px solid #3c5b7d;border-radius:12px}
+.conversion-reports .report-example summary{cursor:pointer;font-weight:700;font-size:1.15rem}
+.conversion-reports .report-example h3{color:#ffb23e;margin:16px 0 5px;font-size:1.05rem}
+.conversion-reports .report-process ol.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:0;list-style:none;counter-reset:process}
+.conversion-reports .report-process ol.steps li{counter-increment:process;min-width:0;margin:0;padding:17px;border:1px solid #304f71;border-radius:10px;background:#0d223b}
+.conversion-reports .report-process ol.steps li:before{content:counter(process,decimal-leading-zero);display:block;color:#ffb23e;font-weight:800;font-size:1.06rem;margin-bottom:10px}
+.conversion-reports .report-process li p{font-size:.89rem;line-height:1.55;margin:6px 0}
+.conversion-reports .report-scope{border:1px solid #2c4969;border-radius:10px;padding:17px 22px;background:#0b1a2e}
+.conversion-reports .report-scope p{font-size:.9rem}
+.conversion-reports .report-closing{border-top:3px solid #ff980f;padding-top:22px;margin-top:28px}
+.conversion-interior .answer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:19px 0}
+.conversion-interior .answer-grid article{min-width:0;padding:19px;border:1px solid #36516f;border-radius:11px;background:#0c203a}
+.conversion-interior .answer-grid h3{font:750 1rem/1.3 Jost,Arial,sans-serif;color:#ffb642;margin:0 0 9px}
+.conversion-interior .answer-grid p{font-size:.9rem;line-height:1.53;margin:0}
+.conversion-interior .scope-note{font-size:.81rem;color:#c0d0e0;margin:12px 0 22px}
+.conversion-interior .conversion-endcap{margin:32px 0 18px;padding:26px;border:1px solid #3a5474;border-top:3px solid #ff980f;border-radius:12px;background:#0c203a}
+.conversion-interior .conversion-endcap h2{font-size:clamp(1.4rem,2.2vw,1.95rem);margin:0 0 10px;line-height:1.2}
+.conversion-interior .conversion-endcap p{font-size:.95rem;line-height:1.6;margin:0 0 14px}
+.conversion-interior .conversion-endcap .cta{margin:17px 0 0;gap:10px}
+.conversion-track .proof-milestones ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;padding:0;list-style:none}
+.conversion-track .proof-milestones li{display:block;min-width:0;margin:0;padding:19px;border:1px solid #304b6c;background:#0c2039;border-radius:10px}
+.conversion-track .proof-milestones li span{color:#ffb23e;font-weight:750;font-size:1.15rem}
+.conversion-contact .conversion-intake{padding:26px;border-radius:12px;background:#0d233d;border:1px solid #345477;margin-top:24px}
+.conversion-contact .conversion-intake :is(input,textarea,select){background:#07182d;color:#fff;border:1px solid #53718c;border-radius:8px;min-height:44px;padding:10px;font:inherit}
+.conversion-contact .conversion-intake :is(input,textarea,select):focus-visible{outline:3px solid #FF980F;outline-offset:2px}
+.conversion-contact .faq details{padding:13px 17px;margin:8px 0;border:1px solid #324c6a;background:#0b2038;border-radius:9px}
+.conversion-contact .faq summary{cursor:pointer;font-weight:650}
+.conversion-articles .tiles li a{display:block;text-decoration:none;height:100%}
+.conversion-articles .tiles li a:focus-visible{outline:3px solid #FF980F;outline-offset:4px}
+@media(max-width:820px){.evidence-brief{grid-template-columns:1fr}.conversion-reports .report-deliverable ul{columns:1}.conversion-reports .report-process ol.steps,.conversion-track .proof-milestones ol,.conversion-interior .answer-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.conversion-reports .report-product-visual img{max-height:280px}.conversion-reports .report-question-list{grid-template-columns:1fr}.conversion-reports .report-question{padding:17px}.evidence-brief{padding:18px}.evidence-numbers b{font-size:1.25rem}.conversion-contact .conversion-intake{padding:17px}}
