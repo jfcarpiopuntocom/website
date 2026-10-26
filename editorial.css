@@ -77,3 +77,12 @@ body.editorial.money-reading{--ink:#1B1714;--paper:#F3ECDF;--ink-soft:#36302A;--
 .editorial .proof-milestones li strong{font-size:1.12rem;color:#FFFFFF}
 .editorial .proof-milestones li p{margin:.4em 0 0}
 @media(max-width:640px){.editorial .intake-grid{grid-template-columns:1fr}.editorial .proof-milestones li{grid-template-columns:1fr;gap:6px}}
+
+/* Verified Wikimedia Commons editorial photographs, with visible attribution.
+   Never used as proof of JFCarpio.com clients, workshops or deliverables. */
+.commons-editorial-photo{display:block;clear:both;max-width:930px;width:100%;margin:clamp(24px,4vw,44px) auto;padding:0}
+.commons-editorial-photo img{display:block;width:100%;height:auto;max-height:clamp(230px,35vw,410px);aspect-ratio:16/9;object-fit:cover;object-position:center center;border-radius:12px;border:1px solid #31465f;background:#14233b}
+.commons-editorial-photo figcaption{display:block;max-width:100%;padding:9px 2px 2px;margin:0;font:400 .84rem/1.5 Jost,Arial,sans-serif;color:#d9e3f1;letter-spacing:0}
+.commons-editorial-photo figcaption a{color:#eef5ff;text-decoration:underline;text-decoration-color:#E8A020;text-underline-offset:3px}
+.commons-editorial-photo figcaption a:focus-visible{outline:3px solid #E8A020;outline-offset:2px}
+@media(max-width:640px){.commons-editorial-photo{margin:22px auto 28px}.commons-editorial-photo img{max-height:none;aspect-ratio:4/3;border-radius:8px}.commons-editorial-photo figcaption{font-size:.81rem;padding:8px 3px 2px}}
