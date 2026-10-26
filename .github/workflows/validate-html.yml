@@ -23,6 +23,7 @@ on:
       - 'en/articles/**/*.html'
       - 'scripts/test-ai-seo-cash-articles.py'
       - 'scripts/test-ai-seo-margins.py'
+      - 'scripts/test-ai-seo-inventory.py'
       - 'sitemap.xml'
       - 'index.html'
       - 'historia-de-dos-negocios/**/*.html'
@@ -78,6 +79,7 @@ on:
       - 'en/articles/**/*.html'
       - 'scripts/test-ai-seo-cash-articles.py'
       - 'scripts/test-ai-seo-margins.py'
+      - 'scripts/test-ai-seo-inventory.py'
       - 'sitemap.xml'
       - 'index.html'
       - 'historia-de-dos-negocios/**/*.html'
@@ -157,6 +159,9 @@ jobs:
 
       - name: AI SEO bilingual margin article and economic formulas
         run: python3 scripts/test-ai-seo-margins.py
+
+      - name: AI SEO inventory and suppliers focused article math
+        run: python3 scripts/test-ai-seo-inventory.py
 
       - name: Compact landings ES/EN regression (12 pages only)
         run: python3 scripts/test-conversion-interiors.py
