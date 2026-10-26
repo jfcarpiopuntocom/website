@@ -1,0 +1,49 @@
+/* JFCarpio.com: compact editorial-to-action pages, ES + EN. Scoped to 12 pages.
+   No CSS impacts reel WebGL, text highlights, apps, workshops or client systems. */
+.conversion-interior{max-width:1180px;padding:clamp(18px,2.3vw,34px) clamp(18px,3.5vw,48px) 64px}
+.conversion-interior .conversion-hero{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(275px,.82fr);align-items:center;gap:clamp(18px,3.2vw,42px);margin:0 0 clamp(18px,2vw,30px)}
+.conversion-interior .conversion-hero-copy{min-width:0;max-width:650px}
+.conversion-interior .conversion-hero h1{font-family:'Barlow Condensed',Arial,sans-serif;font-size:clamp(2rem,3.5vw,3.3rem);font-weight:900;line-height:1.06;letter-spacing:.005em;max-width:none;text-transform:none;word-break:normal;overflow-wrap:normal;hyphens:none;margin:0 0 12px;text-wrap:balance}
+.conversion-interior .conversion-hero .kick{font-size:.78rem;margin-bottom:6px}
+.conversion-interior .conversion-hero .lead{font-size:clamp(.98rem,1.2vw,1.09rem);line-height:1.5;margin:0 0 13px;max-width:60ch}
+.conversion-interior .conversion-hero .cta{margin:16px 0 0;gap:9px}
+.conversion-interior .conversion-hero .btn{min-height:44px;padding:9px 17px;font-size:.87rem;letter-spacing:0;text-transform:none;white-space:normal;text-align:center}
+.conversion-interior .conversion-hero .commons-editorial-photo{margin:0;max-width:none;min-width:0}
+.conversion-interior .conversion-hero .commons-editorial-photo img{width:100%;height:clamp(205px,25vw,300px);max-height:300px;aspect-ratio:16/10;object-fit:cover;object-position:center;border-radius:12px}
+.conversion-interior .conversion-hero .commons-editorial-photo figcaption{font-size:.72rem;padding:5px 3px 0}
+.conversion-interior .conversion-support{border-left:3px solid #E8A020;padding:6px 16px;margin:16px 0 20px;background:#0b1930}
+.conversion-interior .conversion-support p{margin:0;font-size:.98rem;line-height:1.52}
+.conversion-interior .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin:18px 0 22px;padding:0}
+.conversion-interior .tiles>li{min-width:0;border:1px solid #314763;background:#0c1c34;border-radius:12px;padding:16px 18px;transition:border-color .15s ease}
+.conversion-interior .tiles>li:hover{border-color:#E8A020}
+.conversion-interior .tiles h2{font-family:Jost,Arial,sans-serif;font-size:1rem;line-height:1.28;margin:0 0 8px}
+.conversion-interior .tiles p{font-size:.91rem;line-height:1.5;margin:0}
+.conversion-interior .btn.p{background:#E8A020;border-color:#E8A020;color:#06101f}
+.conversion-interior .btn.p:hover,.conversion-interior .btn.p:focus-visible{background:#fff;border-color:#fff;color:#06101f}
+.conversion-interior .commercial-nav{margin-top:35px}
+.conversion-interior .conversion-hero-copy .cta+.cta{margin-top:8px}
+/* Report offer: defeat the previous 15ch / 4.35rem headline that fragmented words. */
+.conversion-reports .microreport .report-opening{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(255px,.8fr);align-items:center;gap:clamp(18px,3vw,34px);margin:0 0 25px;padding:0}
+.conversion-reports .microreport .report-hero-copy h1{font-size:clamp(2.15rem,3.4vw,3.05rem);font-weight:900;line-height:1.03;max-width:none;text-transform:none;letter-spacing:0;word-break:normal;overflow-wrap:normal;hyphens:none;text-wrap:balance;margin:0 0 12px}
+.conversion-reports .microreport .report-hero-copy .section-intro{font-size:1.01rem;line-height:1.52;margin:0 0 10px;max-width:56ch}
+.conversion-reports .microreport .report-hero-copy .offer-line{padding:9px 0;margin:11px 0}
+.conversion-reports .microreport .report-hero-copy .offer-line strong{font-size:clamp(1.9rem,3vw,2.8rem)}
+.conversion-reports .microreport .report-clock{font-size:.83rem;line-height:1.45;color:#d8e2f0;margin:0 0 8px;max-width:65ch}
+.conversion-reports .microreport .report-hero-copy .cta{margin:13px 0 0;gap:8px}
+.conversion-reports .microreport .report-hero-copy .btn{min-height:44px;font-size:.9rem;padding:9px 16px}
+.conversion-reports .microreport .report-opening .commons-editorial-photo img{height:clamp(205px,25vw,290px);max-height:290px;aspect-ratio:16/10}
+.conversion-reports .microreport .report-opening .commons-editorial-photo{align-self:center}
+.conversion-reports .microreport .report-question-list{gap:0 20px}
+.conversion-reports .microreport .report-question{padding:15px 0}
+.conversion-reports .microreport .report-question h3{font-size:1.12rem}
+.conversion-interior main h2,.conversion-interior h2{line-height:1.25}
+@media(max-width:760px){
+ .conversion-interior{padding:18px 19px 48px}
+ .conversion-interior .conversion-hero,.conversion-reports .microreport .report-opening{grid-template-columns:minmax(0,1fr);gap:16px}
+ .conversion-interior .conversion-hero h1,.conversion-reports .microreport .report-hero-copy h1{font-size:clamp(2.1rem,8vw,2.85rem);line-height:1.05}
+ .conversion-interior .conversion-hero .commons-editorial-photo img,.conversion-reports .microreport .report-opening .commons-editorial-photo img{width:100%;height:clamp(165px,46vw,245px);max-height:245px;aspect-ratio:16/9}
+ .conversion-reports .microreport .report-opening .commons-editorial-photo{order:initial}
+ .conversion-interior .tiles{grid-template-columns:minmax(0,1fr)}
+ .conversion-interior .conversion-hero .cta{margin:13px 0 0}
+}
+@media(prefers-reduced-motion:reduce){.conversion-interior .tiles>li{transition:none}}
