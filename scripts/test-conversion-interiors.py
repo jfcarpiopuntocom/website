@@ -35,7 +35,7 @@ for slug, kind in FAMILIES.items():
  html = path.read_text(encoding="utf8")
  p = CheckHTML();p.feed(html)
  assert p.h1 == p.main == 1, f"{slug}: H1 or main count"
- assert p.photo == (2 if kind=="reports" else 1), f"{slug}: editorial figures"
+ assert p.photo == 1, f"{slug}: retained contextual Commons photo count"
  assert html.count('>Ph: Wikimedia Commons</a>') == p.photo, f"{slug}: credits lost"
  assert not "Fotografía ilustrativa; no representa clientes" in html, f"{slug}: long caption"
  assert html.count('href="/conversion-interiors.css"')==1, f"{slug}: CSS missing"
@@ -48,6 +48,8 @@ for slug, kind in FAMILIES.items():
  if kind=="reports":
   assert 'class="report-hero-copy"' in html, f"{slug}: report hero"
   assert "15ch" not in html, f"{slug}: legacy narrow hero markup"
+  assert html.count('class="report-product-visual"')==1, f"{slug}: report sample missing"
+  assert "https://jfcarpio.com/assets/report-sample-" in html, f"{slug}: sample image absolute URL"
   assert "72" in html and "USD 100" in html and ("10 minutos" in html or "10-minute" in html), f"{slug}: offer contract"
   assert '#report-example' in html and '<details id="report-example"' in html, f"{slug}: sample"
  else:
