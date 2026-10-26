@@ -38,7 +38,7 @@ export async function marketingResponse(request,env){
  if(url.pathname==='/robots.txt')return new Response(`User-agent: *\nAllow: /\nSitemap: https://${route.host}/sitemap.xml\n`,{headers:{'Content-Type':'text/plain; charset=utf-8'}});
  if(url.pathname==='/sitemap.xml'){
   const links=pages.map(([lang])=>`<xhtml:link rel="alternate" hreflang="${lang}" href="${landingURL(route,lang)}"/>`).join('')+`<xhtml:link rel="alternate" hreflang="x-default" href="${landingURL(route,route.en?'en':'es')}"/>`;
-  const xml='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'+pages.map(([lang])=>`<url><loc>${landingURL(route,lang)}</loc><lastmod>2026-10-07</lastmod>${links}</url>`).join('')+'</urlset>';
+  const xml='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'+pages.map(([lang])=>`<url><loc>${landingURL(route,lang)}</loc><lastmod>${route.lastmod || "2026-10-07"}</lastmod>${links}</url>`).join('')+'</urlset>';
   return new Response(xml,{headers:{'Content-Type':'application/xml; charset=utf-8'}});
  }
  const lang=url.pathname==='/es/'&&route.en&&route.es?'es':url.pathname==='/'?(route.en?'en':'es'):null;
