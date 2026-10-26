@@ -131,6 +131,9 @@ jobs:
       - name: International discovery and focused-report contract
         run: python3 scripts/test-global-discovery.py
 
+      - name: Compact landings ES/EN regression (12 pages only)
+        run: python3 scripts/test-conversion-interiors.py
+
       - name: DOCTYPE count = 1 (browser-save catastrophe detector)
         run: |
           set -e
