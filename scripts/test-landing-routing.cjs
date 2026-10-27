@@ -28,6 +28,6 @@ const ROOT=path.join(__dirname,'..');
  }
  assert.equal(await m.marketingResponse(new Request('https://friendly123.com/index.html'),env),null);
  assert.equal(await m.marketingResponse(new Request('https://jfcarpio.com/friendly123/'),env),null);
- const home=fs.readFileSync(path.join(ROOT,'index.html'),'utf8').replace(/<!--[\s\S]*?-->/g,'');const ids=[...home.matchAll(/<section class="slide[^\"]*" id="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids[1],'apps');assert(home.includes('class="ap flagship"'));assert(!home.includes('up to 50–65%'));assert(home.includes('preload="none"'));assert(!/<video[^>]*autoplay/.test(home));
+ const home=fs.readFileSync(path.join(ROOT,'index.html'),'utf8').replace(/<!--[\s\S]*?-->/g,'');const ids=[...home.matchAll(/<section class="slide[^\"]*" id="([^"]+)"/g)].map(m=>m[1]);assert.deepEqual(ids.slice(1,4),['visores','apps','reportes']);assert(home.includes('class="ap flagship"'));assert(!home.includes('up to 50–65%'));assert(home.includes('preload="none"'));assert(!/<video[^>]*autoplay/.test(home));
  console.log(`Landing routing: OK — ${routes.length} hosts, ${pages} locale pages, schema, redirects, isolation and Friendly priority.`);
 })().catch(e=>{console.error(e);process.exit(1)});
