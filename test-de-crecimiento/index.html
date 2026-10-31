@@ -17,11 +17,18 @@
 <link rel="stylesheet" href="/assets/v2/tema.css">
 <style>
 main{max-width:1060px;margin:0 auto;padding:92px clamp(12px,4vw,28px) 32px}
-.hidden{display:none!important}main>section{padding:0}/* el relleno de section es para la portada larga, no para el test */
+.hidden{display:none!important}
+.stage{position:relative;overflow:hidden;background:#060E1D;--head:#F2F2F2}.stage .mono{color:#A8BDDC}.stage>canvas,.band>canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:0;transition:opacity 1.4s}.stage>canvas.on,.band>canvas.on{opacity:1}.stage>*:not(canvas),.band>*:not(canvas){position:relative;z-index:1}
+.band{position:relative;overflow:hidden;background:#060E1D;--head:#F2F2F2;margin:calc(-1*clamp(20px,3vw,32px)) calc(-1*clamp(20px,3vw,32px)) 16px;height:170px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:10px;border-radius:16px 16px 0 0}
+main>section{padding:0}/* el relleno de section es para la portada larga, no para el test */
 .box{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
 /* planta pixel que crece */
-.plant{image-rendering:pixelated;width:var(--s,180px);height:auto;display:block}
-.plant rect{transition:opacity .4s}
+.plant{width:var(--s,180px);aspect-ratio:1;position:relative;display:block}
+.plant img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(0,0,0,.28))}
+.plant img.bolsa{position:absolute;width:46%;height:46%;right:-6%;bottom:-2%}
+.plant.pop img{animation:crece .55s cubic-bezier(.2,1.4,.4,1)}
+@keyframes crece{from{transform:scale(.6) translateY(12%);opacity:.3}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.plant.pop img{animation:none}}
 /* portada */
 .intro{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:start}
 .intro h1{font-size:clamp(34px,3.8vw,54px);font-weight:800;margin:8px 0 12px}
@@ -62,8 +69,8 @@ main{max-width:1060px;margin:0 auto;padding:92px clamp(12px,4vw,28px) 32px}
 .res{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:start}
 .rcard{padding:clamp(20px,3vw,32px);border-top:8px solid var(--mint);position:relative}
 .rcard .mono{color:var(--mint)}
-.rcard h2{font-size:clamp(30px,3.4vw,46px);margin:10px 0 12px;padding-right:130px}
-.rcard .plant{position:absolute;right:18px;top:18px}
+.rcard h2{font-size:clamp(30px,3.4vw,46px);margin:10px 0 12px}
+
 .rcard .pct{font:800 64px/1 'Barlow Condensed';color:var(--head)}
 .rcard .pct small{display:block;font:700 11px 'Space Mono';letter-spacing:.12em;color:var(--mute);margin-top:6px;text-transform:uppercase}
 .rcard p{color:var(--soft)}
@@ -99,11 +106,11 @@ main{max-width:1060px;margin:0 auto;padding:92px clamp(12px,4vw,28px) 32px}
       <div>
         <span class="mono k">Test de crecimiento · JFCarpio.com</span>
         <h1>¿Cuál es tu siguiente paso para <span class="hl m">crecer?</span></h1>
-        <p>Son diez preguntas sobre tu negocio, tu dinero y tus decisiones. Al final, el equipo de JFCarpio.com te dice qué te conviene primero y cuánto cuesta.</p>
+        <p>Diez preguntas sobre tu negocio, tu dinero y tus decisiones. Al final, el equipo de JFCarpio.com te dice qué te conviene primero y cuánto cuesta.</p>
         <div class="facts"><span>10 preguntas</span><span>3 minutos</span><span>Sin registro</span></div>
         <button class="btn c" id="go" type="button">Empezar el test →</button>
       </div>
-      <div class="box stage"><svg class="plant" id="p0" style="--s:200px" viewBox="0 0 24 24" aria-hidden="true"></svg><span class="mono">Tu planta crece con cada respuesta</span></div>
+      <div class="box stage"><canvas id="fx0" aria-hidden="true"></canvas><div class="plant" id="p0" style="--s:200px" aria-hidden="true"></div><span class="mono">Tu planta crece con cada respuesta</span></div>
     </div>
     <div class="offers">
       <div style="--c:var(--coral)"><b>Ordenar</b>Apps para ventas, caja e inventario</div>
@@ -122,7 +129,7 @@ main{max-width:1060px;margin:0 auto;padding:92px clamp(12px,4vw,28px) 32px}
         <div class="bar"><i id="barf"></i></div>
         <div class="box qcard" id="qcard"><span class="mono" id="qcat"></span><h2 id="qtext"></h2><p class="hint" id="qhint"></p><div id="qopts"></div></div>
       </div>
-      <div class="box side"><svg class="plant" id="p1" style="--s:170px" viewBox="0 0 24 24" aria-hidden="true"></svg><b id="grow">0%</b><span class="mono">crecimiento</span></div>
+      <div class="box side"><div class="plant" id="p1" style="--s:170px" aria-hidden="true"></div><b id="grow">0%</b><span class="mono">crecimiento</span></div>
     </div>
   </section>
 
@@ -143,27 +150,22 @@ main{max-width:1060px;margin:0 auto;padding:92px clamp(12px,4vw,28px) 32px}
   </section>
 </main>
 
-<footer class="site"><div class="wrap"><div><a class="brand" href="/">JFCarpio<span>.com</span></a><p style="margin-top:10px">Tus respuestas se procesan en tu navegador y no se guardan.</p></div><div><b>Contacto</b><a href="https://wa.me/593999905080">WhatsApp +593 99 990 5080</a><a href="mailto:staff@jfcarpio.com">staff@jfcarpio.com</a></div><div><b>Oficina</b><p>General Torres #14, Cuenca, Ecuador</p></div></div></footer>
+<footer class="site"><div class="wrap"><div><a class="brand" href="/">JFCarpio<span>.com</span></a><p style="margin-top:10px">Tus respuestas se procesan en tu navegador y no se guardan.</p><p>Ilustraciones: Microsoft Fluent Emoji (licencia MIT).</p></div><div><b>Contacto</b><a href="https://wa.me/593999905080">WhatsApp +593 99 990 5080</a><a href="mailto:staff@jfcarpio.com">staff@jfcarpio.com</a></div><div><b>Oficina</b><p>General Torres #14, Cuenca, Ecuador</p></div></div></footer>
 <script src="/assets/v2/tema.js" defer></script>
+<script type="importmap">{"imports":{"three":"/assets/v2/vendor/three.module.min.js","postprocessing":"/assets/v2/vendor/postprocessing.js"}}</script>
+<script type="module">import { brillo } from '/assets/v2/brillo.js'; window.brilloFx = brillo; document.dispatchEvent(new Event('brillo-listo'));</script>
 <script>
 // ---------- planta pixel 24×24 que crece de semilla a árbol con frutos (etapa 0..10) ----------
-function plant(svg, st) {
-  const R = (x, y, w, h, c) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c}"/>`;
-  const ink = 'var(--head)', coin = '#E8A020', coin2 = '#B8780A', leaf = '#1FB88A', leaf2 = '#0B8A63', stem = '#5B7A3A', wine = '#9E1530';
-  let s = '';
-  // pila de monedas (maceta)
-  [[6, 21, 12], [7, 19, 10], [8, 17, 8]].forEach(([x, y, w]) => { s += R(x, y, w, 2, coin) + R(x, y + 1, w, 1, coin2) + R(x - 1, y, 1, 2, ink) + R(x + w, y, 1, 2, ink); });
-  s += R(5, 23, 14, 1, ink);
-  const h = Math.min(10, st) ; // altura del tallo
-  if (st > 0) s += R(11, 17 - h, 2, h, stem);
-  if (st === 0) s += R(11, 16, 2, 1, '#7A5A2A');
-  const leaves = [[2, 9, 15], [4, 14, 13], [6, 8, 11], [8, 15, 9]]; // [desde etapa, x, y]
-  leaves.forEach(([e, x, y]) => { if (st >= e) { const dir = x < 11 ? -1 : 1; s += R(x, y, 3, 2, leaf) + R(x + (dir < 0 ? 0 : 1), y - 1, 2, 1, leaf2); } });
-  if (st >= 9) { s += R(7, 3, 10, 6, leaf) + R(6, 4, 12, 4, leaf) + R(8, 2, 8, 1, leaf2) + R(7, 8, 10, 1, leaf2); }
-  if (st >= 10) [[8, 4], [13, 3], [10, 6], [15, 6]].forEach(([x, y], k) => { s += R(x, y, 2, 2, k % 2 ? wine : coin); });
-  svg.innerHTML = s; svg.setAttribute('shape-rendering', 'crispEdges');
+function plant(el, st) {
+  // Etapas con Microsoft Fluent Emoji 3D (MIT): brote → hierba → maceta → árbol → árbol con bolsa de dinero
+  const B = '/assets/v2/', img = st <= 2 ? 'brote' : st <= 5 ? 'hierba' : st <= 8 ? 'maceta' : 'arbol';
+  if (el.dataset.etapa === img + (st >= 10)) return; el.dataset.etapa = img + (st >= 10);
+  el.innerHTML = `<img src="${B}fluent-${img}.webp" alt="" width="256" height="256">` + (st >= 10 ? `<img class="bolsa" src="${B}fluent-bolsa-dinero.webp" alt="" width="256" height="256">` : '');
+  el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop');
 }
 plant(document.getElementById('p0'), 10);
+const fx0 = () => window.brilloFx && window.brilloFx(document.getElementById('fx0'), { modo: 'subir', cantidad: 90, colores: ['#E8A020', '#F2C14E', '#28ECAA', '#7FB0FF'] });
+window.brilloFx ? fx0() : document.addEventListener('brillo-listo', fx0, { once: true });
 
 // ---------- ofertas (texto y precios de jfcarpio.com) ----------
 const F = { N: ['Negocio', 'var(--coral)'], D: ['Datos', 'var(--link)'], P: ['Precios', 'var(--amber)'], E: ['Equipo', 'var(--mint)'], I: ['Patrimonio', 'var(--coral)'] };
@@ -219,8 +221,10 @@ function score(ans) {
 }
 function result() {
   show('s-r'); const r = score(A), t = r[0], o = O[t.k];
-  $('rcard').innerHTML = `<svg class="plant" style="--s:120px" viewBox="0 0 24 24" aria-hidden="true"></svg><span class="mono">Tu siguiente paso · ${o.k}</span><h2>${o.n}</h2><div class="pct">${t.pct}%<small>de afinidad con tus respuestas</small></div><p style="margin-top:12px">${o.d}</p><p style="margin-top:10px"><b>Primer paso:</b> ${o.s[0].toLowerCase() + o.s.slice(1)}</p><p class="price">${o.p}</p>`;
-  plant($('rcard').querySelector('svg'), 10);
+  $('rcard').innerHTML = `<div class="band"><canvas id="fx1" aria-hidden="true"></canvas><div class="plant" style="--s:140px" aria-hidden="true"></div></div><span class="mono">Tu siguiente paso · ${o.k}</span><h2>${o.n}</h2><div class="pct">${t.pct}%<small>de afinidad con tus respuestas</small></div><p style="margin-top:12px">${o.d}</p><p style="margin-top:10px"><b>Primer paso:</b> ${o.s[0].toLowerCase() + o.s.slice(1)}</p><p class="price">${o.p}</p>`;
+  plant($('rcard').querySelector('.plant'), 10);
+  const fx = () => window.brilloFx && window.brilloFx($('fx1'), { modo: 'estallido', cantidad: 120, colores: ['#E8A020', '#F2C14E', '#28ECAA', '#F2738F'] });
+  window.brilloFx ? fx() : document.addEventListener('brillo-listo', fx, { once: true });
   $('alts').innerHTML = r.slice(1, 3).map(x => `<a href="${O[x.k].u}" target="_blank" rel="noopener"><span>${O[x.k].n}<br><small style="font-weight:500;color:var(--mute)">${O[x.k].s}</small></span><em>${x.pct}%</em></a>`).join('');
   $('radio').innerHTML = Object.entries(MAD).map(([f, qs]) => { const v = qs.map(k => A[k] === 0 ? 1 : A[k]); const m = Math.round(100 * (v.reduce((a, b) => a + b, 0) / v.length - 1) / 4); return `<div><span>${F[f][0]}</span><span class="tr" style="--c:${F[f][1]}"><i data-w="${m}"></i></span><span>${m}</span></div>`; }).join('');
   requestAnimationFrame(() => requestAnimationFrame(() => document.querySelectorAll('#radio i').forEach(x => x.style.width = x.dataset.w + '%')));
