@@ -1,0 +1,1 @@
+!function(){"use strict";const e=e=>document.querySelector(e),n={es:"Herramientas",en:"Tools",pt:"Ferramentas"};function a(){const a=e("#bcToolbarSummary");a&&(a.innerHTML=n[function(){const a=e("#bcWorkspaceLanguage")?.value||"es";return n[a]?a:"es"}()]+' <span aria-hidden="true">⌄</span>')}a(),e("#bcWorkspaceLanguage")?.addEventListener("change",a)}();

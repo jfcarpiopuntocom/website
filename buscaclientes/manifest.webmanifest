@@ -1,0 +1,69 @@
+{
+  "id": "/buscaclientes/",
+  "name": "FindClients",
+  "short_name": "FindClients",
+  "description": "Descubre negocios por ciudad y organiza relaciones, notas y seguimientos en una Agenda Inteligente local.",
+  "lang": "es",
+  "dir": "ltr",
+  "start_url": "/buscaclientes/",
+  "scope": "/buscaclientes/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone"
+  ],
+  "background_color": "#070b17",
+  "theme_color": "#070b17",
+  "orientation": "any",
+  "categories": [
+    "business",
+    "productivity"
+  ],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/buscaclientes/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/buscaclientes/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/buscaclientes/brand-submarine.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Mi Agenda Inteligente",
+      "short_name": "Agenda Inteligente",
+      "url": "/buscaclientes/dashboard.html#crm",
+      "icons": [
+        {
+          "src": "/buscaclientes/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Buscar negocios",
+      "short_name": "Buscar",
+      "url": "/buscaclientes/#radar",
+      "icons": [
+        {
+          "src": "/buscaclientes/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

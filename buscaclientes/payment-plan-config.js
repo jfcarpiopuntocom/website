@@ -1,0 +1,1 @@
+!function(){"use strict";("undefined"!=typeof window?window:globalThis).BC_PLAN_CONFIG=Object.freeze({live:!1,paypalVerified:!1,entitlementBackendReady:!1,offers:Object.freeze({personal:Object.freeze({url:"",planId:"",label:"Personal",priceText:""}),team:Object.freeze({url:"",planId:"",label:"Equipos",priceText:""})})})}();

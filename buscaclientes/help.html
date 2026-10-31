@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<meta name="theme-color" content="#070B17">
+<title>Centro de ayuda · BuscaClientes: Búsqueda + Agenda Inteligente</title>
+<meta name="description" content="Cómo buscar clientes por ciudad, guardar contactos en tu Agenda Inteligente, exportar y entender de dónde sale cada dato.">
+<meta property="og:title" content="Centro de ayuda · BuscaClientes">
+<meta property="og:description" content="Busca negocios por ciudad, guárdalos en tu Agenda Inteligente y exporta tus resultados.">
+<meta property="og:image" content="https://buscaclientes-web.buscaclientes.workers.dev/icons/icon-512.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="./favicon-submarine.svg" type="image/svg+xml">
+
+<style>
+:root{color-scheme:light only;forced-color-adjust:none}
+*{box-sizing:border-box}
+html,body{margin:0;background:#070B17;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+body{font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3,p,li,a,span,strong,b,summary,small{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+main{max-width:920px;margin:0 auto;padding:20px 16px 64px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:28px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:22px;text-decoration:none}
+.brand span{color:#28ECAA!important;-webkit-text-fill-color:#28ECAA!important}
+.top-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 16px;border-radius:999px;border:2px solid #E86040;background:#1A1410;font-weight:800;font-size:16px;text-decoration:none}
+.btn.solid{background:#E86040}
+select{min-height:44px;border-radius:999px;border:2px solid #E8A020;background:#13263A;color:#FFFFFF;-webkit-text-fill-color:#FFFFFF;font-weight:800;font-size:16px;padding:0 14px}
+.hero{padding:24px 18px;border:2px solid #E86040;border-radius:22px;background:#0E1C2C;margin-bottom:24px}
+.eyebrow{font-size:14px;font-weight:800;letter-spacing:.04em;color:#E8A020!important;-webkit-text-fill-color:#E8A020!important}
+h1{font-size:32px;line-height:1.15;margin:8px 0 12px}
+.lead{font-size:18px;color:#CCCCCC!important;-webkit-text-fill-color:#CCCCCC!important;margin:0}
+.steps{display:grid;gap:12px;margin:20px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{display:flex;gap:14px;align-items:flex-start;padding:14px;border-radius:16px;background:#13263A;border:2px solid #33465C}
+.steps li::before{counter-increment:s;content:counter(s);flex:0 0 40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#E86040;color:#FFFFFF;-webkit-text-fill-color:#FFFFFF;font-weight:900;font-size:20px}
+.steps b{display:block;font-size:18px}
+.steps small{display:block;font-size:15px;color:#CCCCCC!important;-webkit-text-fill-color:#CCCCCC!important}
+.grid{display:grid;gap:12px;margin:0 0 24px}
+.card{padding:18px;border-radius:18px;background:#0E1C2C;border:2px solid #33465C}
+.card.o{border-color:#E86040}.card.g{border-color:#E8A020}.card.v{border-color:#28ECAA}
+.card h2{display:flex;align-items:center;gap:10px;font-size:20px;margin:0 0 8px}
+.card p{margin:0;color:#CCCCCC!important;-webkit-text-fill-color:#CCCCCC!important}
+.ic{font-size:26px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:6px 12px;border-radius:12px;background:#13263A;border:2px solid #33465C;font-size:15px;font-weight:700}
+.chip.p{border-color:#28ECAA}.chip.m{border-color:#E8A020}.chip.w{border-color:#E86040}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+h2.sec{font-size:24px;margin:32px 0 12px}
+details{border-radius:16px;background:#0E1C2C;border:2px solid #33465C;margin-bottom:10px}
+details[open]{border-color:#E86040}
+summary{cursor:pointer;min-height:56px;padding:14px 48px 14px 16px;font-weight:800;font-size:17px;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:26px;color:#E86040!important;-webkit-text-fill-color:#E86040!important}
+details[open] summary::after{content:"−"}
+details p{margin:0;padding:0 16px 16px;color:#CCCCCC!important;-webkit-text-fill-color:#CCCCCC!important}
+.search{width:100%;min-height:52px;border-radius:14px;border:2px solid #E8A020;background:#13263A;color:#FFFFFF;-webkit-text-fill-color:#FFFFFF;font-size:17px;padding:0 16px;margin:0 0 14px}
+.search::placeholder{color:#CCCCCC;-webkit-text-fill-color:#CCCCCC}
+.cta{display:grid;gap:10px;margin-top:28px}
+footer{margin-top:40px;border-top:2px solid #33465C;padding-top:18px;display:flex;gap:16px;flex-wrap:wrap;font-size:15px}
+footer a{min-height:44px;display:inline-flex;align-items:center}
+@media (prefers-color-scheme:dark){
+ html,body,h1,h2,h3,p,li,a,span,strong,b,summary,small{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+ .lead,.steps small,.card p,details p{color:#CCCCCC!important;-webkit-text-fill-color:#CCCCCC!important}
+ .eyebrow{color:#E8A020!important;-webkit-text-fill-color:#E8A020!important}
+ .brand span{color:#28ECAA!important;-webkit-text-fill-color:#28ECAA!important}
+}
+@media (min-width:720px){main{padding:32px 24px 80px}h1{font-size:44px}.hero{padding:32px}.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:repeat(3,1fr)}.cta{grid-template-columns:repeat(3,1fr)}}
+@media (prefers-reduced-motion:no-preference){.card,.steps li{transition:transform .15s ease}.card:hover,.steps li:hover{transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<main>
+ <header>
+  <a class="brand" href="./" id="brand">Busca<span>Clientes</span></a>
+  <div class="top-actions">
+   <select id="lang" aria-label="Idioma / Language"><option value="es">ES</option><option value="en">EN</option><option value="pt">PT</option></select>
+   <a class="btn solid" href="./" data-t="back">← Volver a buscar</a>
+  </div>
+ </header>
+ <section class="hero">
+  <span class="eyebrow" data-t="eyebrow">CENTRO DE AYUDA</span>
+  <h1 data-t="title">Encuentra clientes en cualquier ciudad, en tres pasos</h1>
+  <p class="lead" data-t="lead"></p>
+  <ol class="steps">
+   <li><span><b data-t="s1"></b><small data-t="s1d"></small></span></li>
+   <li><span><b data-t="s2"></b><small data-t="s2d"></small></span></li>
+   <li><span><b data-t="s3"></b><small data-t="s3d"></small></span></li>
+  </ol>
+ </section>
+
+ <div class="grid">
+  <article class="card o"><h2><span class="ic">📊</span><span data-t="c1"></span></h2><p data-t="c1d"></p>
+   <div class="chips"><span class="chip p">📞 <span data-t="chipPhone"></span></span><span class="chip m">✉️ <span data-t="chipMail"></span></span><span class="chip w">🌐 <span data-t="chipWeb"></span></span><span class="chip p">💬 WhatsApp</span></div></article>
+  <article class="card g"><h2><span class="ic">📒</span><span data-t="c2"></span></h2><p data-t="c2d"></p></article>
+  <article class="card v"><h2><span class="ic">🛰️</span><span data-t="c3"></span></h2><p data-t="c3d"></p></article>
+  <article class="card o"><h2><span class="ic">⬇️</span><span data-t="c4"></span></h2><p data-t="c4d"></p></article>
+ </div>
+
+ <h2 class="sec" data-t="faqTitle">Preguntas frecuentes</h2>
+ <input class="search" id="q" type="search" autocomplete="off">
+ <div id="faq"></div>
+
+ <div class="cta">
+  <a class="btn solid" href="./" data-t="ctaSearch"></a>
+  <a class="btn" href="./instalar.html" data-t="ctaInstall"></a>
+  <a class="btn" href="./kit-libre.html" data-t="ctaKit"></a>
+ </div>
+
+ <footer>
+  <a href="./about.html" data-t="fAbout">Acerca de</a><a href="./planes.html" data-t="fPlans">Planes</a><a href="./privacy.html" data-t="fPrivacy">Privacidad</a><a href="./terms.html" data-t="fTerms">Términos</a><a href="./migrar.html" data-t="fBackup">Respaldar mi Agenda Inteligente</a>
+ </footer>
+</main>
+<script>!function(){"use strict";var e={es:{brand:["Busca","Clientes"],back:"← Volver a buscar",eyebrow:"CENTRO DE AYUDA",title:"Encuentra clientes en cualquier ciudad, en tres pasos",lead:"BuscaClientes escanea la ciudad que elijas, junta varias fuentes de datos y te entrega negocios con teléfono, correo, web y WhatsApp cuando existen. Los que te interesan los guardas en tu Agenda Inteligente.",s1:"Elige país y ciudad",s1d:"Escribe la ciudad y elígela de la lista para que la búsqueda caiga en el lugar exacto.",s2:"Elige la actividad",s2d:"Abogados, dentistas, arquitectos, cafeterías y más de 50 actividades. La palabra clave es opcional.",s3:"Pulsa Explorar",s3d:'Verás "Escaneando la ciudad…" y en segundos aparece el resumen con cuántos negocios encontramos.',c1:"Qué vas a ver",c1d:"Arriba, el total y cuántos traen teléfono, web, correo o WhatsApp. En cada ficha, toca el teléfono para llamar, el correo para escribir o la web para visitarla. Hasta 600 resultados por búsqueda.",chipPhone:"Llamar",chipMail:"Escribir",chipWeb:"Visitar web",c2:"Tu Agenda Inteligente (CRM)",c2d:'Pulsa "Guardar contacto" y el negocio pasa a Guardados en mi Agenda. Ahí añades notas, etapas y próximos pasos. Gratis: 7 contactos nuevos por semana. Buscar y exportar no tienen límite.',c3:"Datos empresariales de todo el mundo",c3d:"Nuestro motor cruza varias bases de datos empresariales y profesionales internacionales y las une en una sola ficha por negocio, con la fecha en que se consultó.",chipDir:"Directorios profesionales",c4:"Exporta tus resultados",c4d:"Descarga los resultados en CSV o Excel, o cópialos al portapapeles para pegarlos en tu hoja de cálculo. También puedes exportar lo que guardaste en tu Agenda Inteligente.",faqTitle:"Preguntas frecuentes",q:"Busca en la ayuda: precio, Excel, WhatsApp…",faq:[["¿Cuánto cuesta?","Buscar y exportar resultados es gratis y sin límite. La Agenda Inteligente gratis guarda 7 contactos nuevos por semana. Los planes Plus (70) y Pro (250) están en preparación."],["¿Por qué mi ciudad trae pocos resultados?","Algunas ciudades y actividades tienen menos negocios registrados en las fuentes. Prueba una actividad cercana, una ciudad vecina más grande o quita la palabra clave. Seguimos sumando fuentes cada semana."],["¿Por qué la primera búsqueda en una ciudad tarda unos segundos?","La primera vez la app trae los datos de esa ciudad. Después, cambiar de actividad en la misma ciudad es casi instantáneo."],["¿Los teléfonos y correos están verificados?","Son los datos que cada negocio publicó en las fuentes. Pueden cambiar: confirma antes de enviar una propuesta. La fecha de consulta aparece en cada ficha."],["¿Dónde se guarda mi Agenda Inteligente?",'En tu propio dispositivo, dentro del navegador. No creamos una cuenta ni subimos tus contactos. Para cambiar de teléfono o computadora usa "Respaldar mi Agenda Inteligente".'],["¿Funciona en mi país?","Sí. La búsqueda cubre ciudades de todo el mundo. La cantidad de resultados depende de cada ciudad."],["¿Puedo instalarla como app?",'Sí, en el teléfono o la computadora, sin tienda de aplicaciones. Mira "Instalar la app".'],['¿Qué es "Encontrar contactos"?',"Una ayuda opcional que lee la web del negocio, abierta por ti, para completar datos que falten en la ficha."]],ctaSearch:"🔎 Buscar clientes ahora",ctaInstall:"📲 Instalar la app",ctaKit:"🎁 Kit gratuito",fAbout:"Acerca de",fPlans:"Planes",fPrivacy:"Privacidad",fTerms:"Términos",fBackup:"Respaldar mi Agenda Inteligente",doc:"Centro de ayuda · BuscaClientes: Búsqueda + Agenda Inteligente"},en:{brand:["Find","Clients"],back:"← Back to search",eyebrow:"HELP CENTER",title:"Find clients in any city, in three steps",lead:"FindClients scans the city you choose, combines several data sources and gives you businesses with phone, email, website and WhatsApp when available. Save the ones you like in your Smart Agenda.",s1:"Pick country and city",s1d:"Type the city and choose it from the list so the search lands on the exact place.",s2:"Pick the activity",s2d:"Lawyers, dentists, architects, cafés and 50+ more. The keyword is optional.",s3:"Press Explore",s3d:'You will see "Scanning the city…" and in seconds the summary shows how many businesses we found.',c1:"What you will see",c1d:"On top, the total and how many have phone, website, email or WhatsApp. On each card, tap the phone to call, the email to write or the website to visit. Up to 600 results per search.",chipPhone:"Call",chipMail:"Email",chipWeb:"Visit website",c2:"Your Smart Agenda (CRM)",c2d:'Press "Save contact" and the business goes to Saved in my Smart Agenda. Add notes, stages and next steps there. Free: 7 new contacts per week. Search and export are unlimited.',c3:"Worldwide business data",c3d:"Our engine cross-checks several international business and professional databases and merges them into one card per business, with the date it was looked up.",chipDir:"Professional directories",c4:"Export your results",c4d:"Download results as CSV or Excel, or copy them to the clipboard for your spreadsheet. You can also export what you saved in your Smart Agenda.",faqTitle:"Frequently asked questions",q:"Search help: price, Excel, WhatsApp…",faq:[["How much does it cost?","Searching and exporting are free and unlimited. The free Smart Agenda saves 7 new contacts per week. Plus (70) and Pro (250) plans are in preparation."],["Why does my city show few results?","Some cities and activities have fewer businesses listed in the sources. Try a related activity, a larger nearby city, or remove the keyword. We add sources every week."],["Why does the first search in a city take a few seconds?","The first time, the app brings that city's data. After that, switching activity in the same city is almost instant."],["Are phones and emails verified?","They are the details each business listed in the sources. They can change: confirm before sending a proposal. The lookup date appears on every card."],["Where is my Smart Agenda stored?",'On your own device, inside the browser. We do not create an account or upload your contacts. To switch devices use "Back up my Smart Agenda".'],["Does it work in my country?","Yes. Search covers cities worldwide. The number of results depends on each city."],["Can I install it as an app?",'Yes, on phone or computer, without an app store. See "Install the app".'],['What is "Find contacts"?',"An optional helper that reads the business website, opened by you, to fill missing details on the card."]],ctaSearch:"🔎 Find clients now",ctaInstall:"📲 Install the app",ctaKit:"🎁 Free kit",fAbout:"About",fPlans:"Plans",fPrivacy:"Privacy",fTerms:"Terms",fBackup:"Back up my Smart Agenda",doc:"Help center · FindClients: Search + Smart Agenda"},pt:{brand:["Encontra","Clientes"],back:"← Voltar à pesquisa",eyebrow:"CENTRO DE AJUDA",title:"Encontra clientes em qualquer cidade, em três passos",lead:"O EncontraClientes varre a cidade que escolheres, junta várias fontes de dados e entrega negócios com telefone, e-mail, site e WhatsApp quando existem. Guarda os que te interessam na tua Agenda Inteligente.",s1:"Escolhe país e cidade",s1d:"Escreve a cidade e escolhe-a na lista para a pesquisa cair no lugar exato.",s2:"Escolhe a atividade",s2d:"Advogados, dentistas, arquitetos, cafés e mais de 50 atividades. A palavra-chave é opcional.",s3:"Carrega em Explorar",s3d:'Verás "A varrer a cidade…" e em segundos aparece o resumo com quantos negócios encontrámos.',c1:"O que vais ver",c1d:"No topo, o total e quantos têm telefone, site, e-mail ou WhatsApp. Em cada ficha, toca no telefone para ligar, no e-mail para escrever ou no site para visitar. Até 600 resultados por pesquisa.",chipPhone:"Ligar",chipMail:"Escrever",chipWeb:"Visitar site",c2:"A tua Agenda Inteligente (CRM)",c2d:'Carrega em "Guardar contacto" e o negócio passa para Guardados na minha Agenda. Aí juntas notas, etapas e próximos passos. Grátis: 7 novos contactos por semana. Pesquisar e exportar não têm limite.',c3:"Dados empresariais de todo o mundo",c3d:"O nosso motor cruza várias bases de dados empresariais e profissionais internacionais e junta-as numa só ficha por negócio, com a data da consulta.",chipDir:"Diretórios profissionais",c4:"Exporta os teus resultados",c4d:"Descarrega os resultados em CSV ou Excel, ou copia-os para a tua folha de cálculo. Também podes exportar o que guardaste na tua Agenda Inteligente.",faqTitle:"Perguntas frequentes",q:"Pesquisa na ajuda: preço, Excel, WhatsApp…",faq:[["Quanto custa?","Pesquisar e exportar é grátis e sem limite. A Agenda Inteligente grátis guarda 7 novos contactos por semana. Os planos Plus (70) e Pro (250) estão em preparação."],["Porque é que a minha cidade traz poucos resultados?","Algumas cidades e atividades têm menos negócios registados nas fontes. Experimenta uma atividade próxima, uma cidade vizinha maior ou tira a palavra-chave. Juntamos fontes todas as semanas."],["Porque é que a primeira pesquisa numa cidade demora uns segundos?","Na primeira vez a app traz os dados dessa cidade. Depois, mudar de atividade na mesma cidade é quase instantâneo."],["Os telefones e e-mails estão verificados?","São os dados que cada negócio publicou nas fontes. Podem mudar: confirma antes de enviar uma proposta. A data da consulta aparece em cada ficha."],["Onde fica guardada a minha Agenda Inteligente?",'No teu próprio dispositivo, dentro do navegador. Não criamos conta nem enviamos os teus contactos. Para mudar de equipamento usa "Fazer cópia da minha Agenda Inteligente".'],["Funciona no meu país?","Sim. A pesquisa cobre cidades de todo o mundo. A quantidade de resultados depende de cada cidade."],["Posso instalar como app?",'Sim, no telemóvel ou no computador, sem loja de aplicações. Vê "Instalar a app".'],['O que é "Encontrar contactos"?',"Uma ajuda opcional que lê o site do negócio, aberto por ti, para completar dados em falta na ficha."]],ctaSearch:"🔎 Encontrar clientes agora",ctaInstall:"📲 Instalar a app",ctaKit:"🎁 Kit grátis",fAbout:"Sobre",fPlans:"Planos",fPrivacy:"Privacidade",fTerms:"Termos",fBackup:"Fazer cópia da minha Agenda Inteligente",doc:"Centro de ajuda · EncontraClientes: Busca + Agenda Inteligente"}},a=["es","en","pt"],s=new URLSearchParams(location.search).get("lang"),t="";try{t=localStorage.getItem("bc-lang")||""}catch(e){}var o=a.indexOf(s)>-1?s:a.indexOf(t)>-1?t:"es";function n(e){return String(e).replace(/[&<>"]/g,(function(e){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[e]}))}function i(){var a=e[o];document.documentElement.lang=o,document.title=a.doc,document.querySelectorAll("[data-t]").forEach((function(e){var s=a[e.getAttribute("data-t")];"string"==typeof s&&(e.textContent=s)})),document.getElementById("brand").innerHTML=n(a.brand[0])+"<span>"+n(a.brand[1])+"</span>";var s=document.getElementById("q");s.placeholder=a.q,s.setAttribute("aria-label",a.q),document.getElementById("faq").innerHTML=a.faq.map((function(e,a){return"<details"+(0===a?" open":"")+"><summary>"+n(e[0])+"</summary><p>"+n(e[1])+"</p></details>"})).join(""),document.getElementById("lang").value=o,r()}function r(){var e=document.getElementById("q").value.toLowerCase().trim();document.querySelectorAll("#faq details").forEach((function(a){var s=!e||a.textContent.toLowerCase().indexOf(e)>-1;a.hidden=!s,e&&s&&(a.open=!0)}))}document.getElementById("lang").addEventListener("change",(function(e){o=e.target.value;try{localStorage.setItem("bc-lang",o)}catch(e){}i()})),document.getElementById("q").addEventListener("input",r),i()}();</script>
+</body>
+</html>

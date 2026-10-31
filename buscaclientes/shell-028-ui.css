@@ -1,0 +1,23 @@
+
+.bc-extra-disclosure{margin:0 0 14px;border:1px solid #31516b;border-radius:14px;background:linear-gradient(120deg,#0d2235,#112c42);color:#dceefa}
+.bc-extra-disclosure>summary,.bc-export-disclosure>summary{cursor:pointer;list-style:none;min-height:43px;padding:12px 14px;font-weight:800;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bc-extra-disclosure>summary:after,.bc-export-disclosure>summary:after{content:"⌄";font-size:17px;color:#e8a020}
+.bc-extra-disclosure[open]>summary:after,.bc-export-disclosure[open]>summary:after{content:"⌃"}
+.bc-extra-disclosure summary::-webkit-details-marker,.bc-export-disclosure summary::-webkit-details-marker{display:none}
+.bc-extra-disclosure .filters-extra{margin:0 12px 12px;padding:12px;border:1px solid #385c72;border-radius:10px;background:#101f2e}
+.bc-export-disclosure{margin-top:13px;border:1px solid #345367;border-radius:12px;background:#0e2437;color:#f0faff}
+.bc-export-disclosure .bc-export-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:0 10px 12px}
+.bc-export-disclosure .bc-export-actions button{min-height:42px;margin:0!important;white-space:normal}
+.bc-extra-disclosure>summary:focus-visible,.bc-export-disclosure>summary:focus-visible{outline:3px solid #e86040;outline-offset:3px}
+#bcInstallApp[hidden],.bc-install-action[hidden],button[hidden]{display:none!important}
+.suggest .chip[data-country]{border-radius:999px;min-height:40px}
+@media(max-width:740px){.bc-export-disclosure .bc-export-actions{grid-template-columns:1fr}.bc-extra-disclosure .filters-extra{display:grid;grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.bc-extra-disclosure,.bc-export-disclosure{scroll-behavior:auto}}
+
+
+#radar .bc-results-refine{margin:0 0 12px;min-width:0}
+#radar .bc-results-refine .filters-extra{display:flex;align-items:end;flex-wrap:wrap;gap:8px;padding:0}
+#radar .bc-results-refine .filters-extra label{flex:1 1 160px;min-width:0}
+#radar .bc-results-refine .filters-extra select{width:100%;max-width:none;min-width:0;min-height:44px;font-size:13px}
+#radar .bc-results-refine .filters-extra>span{flex:1 0 100%;line-height:1.4}
+@media(max-width:740px){#radar .bc-results-refine .filters-extra{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}#radar .bc-results-refine .filters-extra label{min-width:0}#radar .bc-results-refine .filters-extra>span{grid-column:1/-1}}

@@ -112,6 +112,16 @@ export default {
     const to = GONE[url.pathname] || GONE[url.pathname + "/"];
     if (to) return Response.redirect("https://jfcarpio.com" + to, 301);
 
+    // 1d. Applet BuscaClientes (JFC 2026-10-31): el frontend vive en /buscaclientes/; búsquedas,
+    //     salud y datos de ciudades se reenvían al backend existente sin tocarlo.
+    const BC = "/buscaclientes/";
+    const BCO = "https://buscaclientes-web.buscaclientes.workers.dev";
+    // El backend solo acepta su propio origen; ambos son de JFC, así que el proxy lo declara.
+    const bcProxy = (p) => { const r = new Request(BCO + "/" + p + url.search, request); const hh = new Headers(r.headers); hh.set("Origin", BCO); hh.set("Referer", BCO + "/"); return fetch(new Request(r, { headers: hh })); };
+    if (url.pathname.startsWith(BC + "api/") || url.pathname === BC + "__health" || url.pathname.startsWith(BC + "cities/")) {
+      return bcProxy(url.pathname.slice(BC.length));
+    }
+
     // 2. Archivos del sitio desde Cloudflare (sin volver a GitHub)
     let res = await env.ASSETS.fetch(request);
     if (url.pathname.endsWith('.mp4')) res = mediaRange(res, request);
@@ -125,7 +135,7 @@ export default {
     }
     const ct = res.headers.get("Content-Type") ?? "";
     if (ct.includes("text/html")) {
-      h.set("Content-Security-Policy", CSP);
+      h.set("Content-Security-Policy", url.pathname.startsWith("/buscaclientes/") ? CSP.replace("connect-src 'self'", "connect-src 'self' https:").replace("default-src 'self';", "default-src 'self'; worker-src 'self' blob:;").replace("script-src 'self'", "script-src 'self' 'wasm-unsafe-eval'") : CSP);
       h.set("Cache-Control", "public, max-age=0, must-revalidate");
     } else if (/image\/|font\//.test(ct)) {
       h.set("Cache-Control", "public, max-age=2592000");
