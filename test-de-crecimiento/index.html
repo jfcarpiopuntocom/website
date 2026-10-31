@@ -18,6 +18,7 @@
 <style>
 main{max-width:1060px;margin:0 auto;padding:92px clamp(12px,4vw,28px) 32px}
 .hidden{display:none!important}
+.pains{margin-top:0}.pains button{text-align:left;cursor:pointer;font:inherit;padding:14px 16px;border:1px solid var(--line);border-left:5px solid var(--c);background:var(--panel);border-radius:12px;display:flex;flex-direction:column;gap:6px;transition:transform .2s var(--ease),box-shadow .2s;color:var(--text)}.pains button:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.pains b{font:700 17px/1.2 Jost;color:var(--head);text-transform:none}.pains span{font-size:14px;color:var(--mute);font-style:italic}
 .stage{position:relative;overflow:hidden;background:#060E1D;--head:#F2F2F2}.stage .mono{color:#A8BDDC}.stage>canvas,.band>canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:0;transition:opacity 1.4s}.stage>canvas.on,.band>canvas.on{opacity:1}.stage>*:not(canvas),.band>*:not(canvas){position:relative;z-index:1}
 .band{position:relative;overflow:hidden;background:#060E1D;--head:#F2F2F2;margin:calc(-1*clamp(20px,3vw,32px)) calc(-1*clamp(20px,3vw,32px)) 16px;height:170px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:10px;border-radius:16px 16px 0 0}
 main>section{padding:0}/* el relleno de section es para la portada larga, no para el test */
@@ -112,13 +113,14 @@ main>section{padding:0}/* el relleno de section es para la portada larga, no par
       </div>
       <div class="box stage"><canvas id="fx0" aria-hidden="true"></canvas><div class="plant" id="p0" style="--s:200px" aria-hidden="true"></div><span class="mono">Tu planta crece con cada respuesta</span></div>
     </div>
-    <div class="offers">
-      <div style="--c:var(--coral)"><b>Ordenar</b>Apps para ventas, caja e inventario</div>
-      <div style="--c:var(--link)"><b>Medir</b>Visores gratuitos de riesgo y marketing</div>
-      <div style="--c:var(--mint)"><b>Decidir</b>Asesorías express de USD 100</div>
-      <div style="--c:var(--amber)"><b>Formar</b>Talleres y La Escuela del Dinero</div>
-      <div style="--c:var(--coral)"><b>Cobrar mejor</b>«Ponle precio a tu trabajo»</div>
-      <div style="--c:var(--link)"><b>Anticipar</b>Investigación para invertir con evidencia</div>
+    <p class="mono k" style="margin:22px 0 10px">¿Te suena alguno de estos?</p>
+    <div class="offers pains">
+      <button type="button" style="--c:var(--coral)"><b>Cierras el mes y no sabes cuánto ganaste.</b><span>Quiero ver ventas, caja e inventario cada día para decidir sin adivinar.</span></button>
+      <button type="button" style="--c:var(--amber)"><b>Cobras lo mismo que hace dos años.</b><span>Quiero un precio que cubra mi tiempo, mis costos y mi margen.</span></button>
+      <button type="button" style="--c:var(--link)"><b>Pagas publicidad y no sabes cuánto te cuesta cada cliente.</b><span>Quiero saber cuánto me cuesta conseguir un cliente y cuánto me deja.</span></button>
+      <button type="button" style="--c:var(--mint)"><b>Si faltas una semana, el negocio se detiene.</b><span>Quiero un negocio que funcione sin depender de mí.</span></button>
+      <button type="button" style="--c:var(--coral)"><b>Tu equipo trabaja duro, pero no sabe cómo gana dinero la empresa.</b><span>Quiero que mi equipo decida con el mismo criterio que yo.</span></button>
+      <button type="button" style="--c:var(--link)"><b>Vas a invertir con datos de hace un año.</b><span>Quiero contrastar mis supuestos con evidencia antes de mover capital.</span></button>
     </div>
   </section>
 
@@ -207,6 +209,7 @@ function render() {
 }
 $('qopts').addEventListener('click', e => { const b = e.target.closest('button[data-v]'); if (!b) return; A[i] = +b.dataset.v; plant($('p1'), i + 1); setTimeout(() => { i < Q.length - 1 ? (i++, render()) : result(); }, 220); });
 addEventListener('keydown', e => { if ($('s-q').classList.contains('hidden')) return; const q = Q[i], n = +e.key; if (q.type === 'lk' && n >= 1 && n <= 5) $('qopts').querySelector(`[data-v="${n}"]`).click(); if (q.type === 'ch' && n >= 1 && n <= q.o.length) $('qopts').querySelector(`[data-v="${n - 1}"]`).click(); });
+document.querySelectorAll('.pains button').forEach(b => b.onclick = () => $('go').click());
 $('go').onclick = () => { i = 0; A = A.map(() => null); show('s-q'); render(); };
 $('back').onclick = () => { if (i) { i--; render(); } };
 $('leave').onclick = () => show('s-intro');
