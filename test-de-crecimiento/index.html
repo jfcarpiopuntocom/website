@@ -99,7 +99,7 @@ main{max-width:1060px;margin:0 auto;padding:92px clamp(12px,4vw,28px) 32px}
       <div>
         <span class="mono k">Test de crecimiento · JFCarpio.com</span>
         <h1>¿Cuál es tu siguiente paso para <span class="hl m">crecer?</span></h1>
-        <p>Diez preguntas sobre tu negocio, tu dinero y tus decisiones. Al final, el equipo de JFCarpio.com te dice qué te conviene primero y cuánto cuesta.</p>
+        <p>Son diez preguntas sobre tu negocio, tu dinero y tus decisiones. Al final, el equipo de JFCarpio.com te dice qué te conviene primero y cuánto cuesta.</p>
         <div class="facts"><span>10 preguntas</span><span>3 minutos</span><span>Sin registro</span></div>
         <button class="btn c" id="go" type="button">Empezar el test →</button>
       </div>
@@ -134,7 +134,7 @@ main{max-width:1060px;margin:0 auto;padding:92px clamp(12px,4vw,28px) 32px}
         <p class="small" id="copied" role="status"></p>
       </div>
       <div style="display:grid;gap:16px">
-        <div class="box panel"><h3>Tu mapa de crecimiento</h3><div class="radio" id="radio"></div><p class="small" style="margin-top:10px">Qué tan sólido está cada frente según tus respuestas, de 0 a 100.</p></div>
+        <div class="box panel"><h3>Tu mapa de crecimiento</h3><div class="radio" id="radio"></div><p class="small" style="margin-top:10px">Cada barra muestra qué tan sólido está ese frente según tus respuestas, en una escala de 0 a 100.</p></div>
         <div class="box panel"><h3>Por qué te lo recomendamos</h3><ul class="why" id="why"></ul></div>
         <div class="box panel"><h3>Después, te puede servir</h3><div class="alts" id="alts"></div></div>
       </div>
@@ -168,19 +168,19 @@ plant(document.getElementById('p0'), 10);
 // ---------- ofertas (texto y precios de jfcarpio.com) ----------
 const F = { N: ['Negocio', 'var(--coral)'], D: ['Datos', 'var(--link)'], P: ['Precios', 'var(--amber)'], E: ['Equipo', 'var(--mint)'], I: ['Patrimonio', 'var(--coral)'] };
 const O = {
-  APP: { n: 'friendly-123', k: 'Ordenar', d: 'Inventario, ventas, clientes y comisiones en una sola app. Amigable es la edición en español; Consultorio, para salud y veterinaria, está en beta.', p: '$399 · 5 años · demostración con PIN 456', u: 'https://jfcarpio.com/friendly123/' },
-  VAQ: { n: 'Visor Antiquiebra', k: 'Medir', d: 'Ocho indicadores para revisar caja, clientes y dependencia del fundador entre los meses 6 y 24. Una revisión mensual de unos 45 minutos.', p: 'Gratis', u: 'https://jfcarpio.com/visorantiquiebra/' },
-  VGE: { n: 'Visor Gerencial · Marketing', k: 'Medir', d: 'El área de marketing ya está disponible, con seis indicadores y calculadoras. Las otras seis áreas gerenciales están en desarrollo.', p: 'Gratis', u: 'https://jfcarpio.com/visorgerencial/' },
-  ASE: { n: 'Asesorías express', k: 'Decidir', d: 'Cinco temas: experiencia del cliente, estrategia comercial, transformación digital, finanzas del negocio y atracción orgánica. Trabajamos contigo en tu negocio.', p: 'USD 100 por asesoría · 2–3 horas · reporte incluido', u: 'https://jfcarpio.com/reportes/' },
-  LIB: { n: 'Ponle precio a tu trabajo', k: 'Cobrar mejor', d: 'El libro para cotizar un servicio sin olvidar tiempo, costos y margen.', p: 'Nuevo · 28 oct 2026', u: 'https://jfcarpio.com/libro/' },
-  TAL: { n: 'Talleres corporativos', k: 'Formar', d: 'Dos talleres de 2 horas: dinero y finanzas personales y familiares, y apreciación de la empresa privada. Cada participante se lleva un número, un criterio y una próxima acción.', p: 'Cotización · disponibilidad limitada', u: 'https://jfcarpio.com/talleres/' },
-  ESC: { n: 'La Escuela del Dinero', k: 'Formar', d: 'Ahorro, deuda, patrimonio y seguridad familiar, una decisión a la vez. Desde ebooks hasta un sistema completo con asesoría.', p: 'Desde USD 9.99 · Semáforo Financiero gratis', u: 'https://jfcarpio.com/la-escuela-del-dinero/' },
-  REV: { n: 'Revisión de lanzamiento', k: 'Lanzar', d: 'Antes de publicar tu producto o SaaS: que te encuentren, que funcione y que dé confianza. Recibes los problemas y un orden para corregirlos.', p: 'Alcance y precio según el proyecto', u: 'https://jfcarpio.com/revision-de-lanzamiento/' },
-  PBI: { n: 'Pacific Basin Intelligence Unit', k: 'Anticipar', d: 'Reportes de inteligencia de inversión sobre Chile, Ecuador, Perú y Colombia, con executive summary gratuito antes de comprar.', p: 'Desde USD 3,800', u: 'https://pacific-basin.jfcarpio.com/' }
+  APP: { n: 'friendly-123', k: 'Ordenar', d: 'friendly-123 reúne inventario, ventas, clientes y comisiones en una sola app. Amigable es la edición en español, y Consultorio, para salud y veterinaria, está en beta.', p: '$399 · 5 años · demostración con PIN 456', u: 'https://jfcarpio.com/friendly123/', s: 'Entra a la demostración con el PIN 456 y registra las ventas de una semana.' },
+  VAQ: { n: 'Visor Antiquiebra', k: 'Medir', d: 'El visor reúne ocho indicadores para revisar caja, clientes y dependencia del fundador entre los meses 6 y 24. Cada revisión mensual toma unos 45 minutos.', p: 'Gratis', u: 'https://jfcarpio.com/visorantiquiebra/', s: 'Haz tu primera revisión mensual con el visor; toma unos 45 minutos.' },
+  VGE: { n: 'Visor Gerencial · Marketing', k: 'Medir', d: 'El área de marketing ya está disponible, con seis indicadores y calculadoras. Las otras seis áreas gerenciales están en desarrollo.', p: 'Gratis', u: 'https://jfcarpio.com/visorgerencial/', s: 'Abre el área de marketing y calcula tus seis indicadores.' },
+  ASE: { n: 'Asesorías express', k: 'Decidir', d: 'Puedes elegir entre cinco temas: experiencia del cliente, estrategia comercial, transformación digital, finanzas del negocio y atracción orgánica. Trabajamos contigo en tu negocio.', p: 'USD 100 por asesoría · 2–3 horas · reporte incluido', u: 'https://jfcarpio.com/reportes/', s: 'Elige uno de los cinco temas y agenda tu asesoría.' },
+  LIB: { n: 'Ponle precio a tu trabajo', k: 'Cobrar mejor', d: 'Este libro te enseña a cotizar un servicio sin olvidar el tiempo, los costos y el margen.', p: 'Nuevo · 28 oct 2026', u: 'https://jfcarpio.com/libro/', s: 'Recalcula el precio de tu servicio principal con su tiempo, sus costos y su margen.' },
+  TAL: { n: 'Talleres corporativos', k: 'Formar', d: 'Ofrecemos dos talleres de 2 horas: dinero y finanzas personales y familiares, y apreciación de la empresa privada. Cada participante se lleva un número, un criterio y una próxima acción.', p: 'Cotización · disponibilidad limitada', u: 'https://jfcarpio.com/talleres/', s: 'Pide una cotización del taller que más le sirve a tu equipo.' },
+  ESC: { n: 'La Escuela del Dinero', k: 'Formar', d: 'La escuela te ayuda con el ahorro, la deuda, el patrimonio y la seguridad familiar, una decisión a la vez. La oferta va desde ebooks hasta un sistema completo con asesoría.', p: 'Desde USD 9.99 · Semáforo Financiero gratis', u: 'https://jfcarpio.com/la-escuela-del-dinero/', s: 'Empieza gratis con el Semáforo Financiero.' },
+  REV: { n: 'Revisión de lanzamiento', k: 'Lanzar', d: 'Revisamos tu producto o SaaS antes de publicarlo para que te encuentren, funcione bien y dé confianza. Recibes los problemas detectados y un orden para corregirlos.', p: 'Alcance y precio según el proyecto', u: 'https://jfcarpio.com/revision-de-lanzamiento/', s: 'Cuéntanos qué vas a lanzar y acordamos qué páginas y recorridos revisamos.' },
+  PBI: { n: 'Pacific Basin Intelligence Unit', k: 'Anticipar', d: 'Publicamos reportes de inteligencia de inversión sobre Chile, Ecuador, Perú y Colombia, con un executive summary gratuito antes de comprar.', p: 'Desde USD 3,800', u: 'https://pacific-basin.jfcarpio.com/', s: 'Pide el executive summary gratuito antes de comprar.' }
 };
 const Q = [
   { f: 'N', type: 'ch', t: '¿Quién eres hoy?', h: 'Elige lo más cercano.', o: [['Tengo un negocio pequeño', { APP: 2, ASE: 2, VAQ: 2 }], ['Dirijo un equipo o una empresa', { TAL: 3, ASE: 1, VGE: 1 }], ['Invierto o evalúo mercados', { PBI: 5 }], ['Estoy lanzando un producto o SaaS', { REV: 5 }], ['Quiero ordenar mi dinero personal', { ESC: 4, TAL: 1 }]] },
-  { f: 'N', type: 'ch', t: '¿Qué quieres que crezca primero?', h: 'Tu prioridad de los próximos seis meses.', o: [['Mis ventas y clientes', { ASE: 3, VGE: 2 }], ['Mi margen', { LIB: 3, ASE: 2 }], ['El orden del día a día', { APP: 4 }], ['Mi equipo', { TAL: 4 }], ['Mi patrimonio', { ESC: 4 }], ['Mi capital invertido', { PBI: 4 }]] },
+  { f: 'N', type: 'ch', t: '¿Qué quieres que crezca primero?', h: 'Piensa en los próximos seis meses.', o: [['Mis ventas y clientes', { ASE: 3, VGE: 2 }], ['Mi margen', { LIB: 3, ASE: 2 }], ['El orden del día a día', { APP: 4 }], ['Mi equipo', { TAL: 4 }], ['Mi patrimonio', { ESC: 4 }], ['Mi capital invertido', { PBI: 4 }]] },
   { f: 'D', type: 'lk', t: 'Sé cuánto vendí, cuánto cobré y qué inventario tengo, sin reconstruirlo a fin de mes.', w: { APP: 1 } },
   { f: 'P', type: 'lk', t: 'Mis precios cubren tiempo, costos y margen.', w: { LIB: 1, ASE: .4 } },
   { f: 'D', type: 'lk', t: 'Reviso cada mes la caja, los clientes y cuánto depende todo de mí.', w: { VAQ: 1 } },
@@ -188,7 +188,7 @@ const Q = [
   { f: 'E', type: 'lk', t: 'Mi equipo entiende cómo gana dinero la empresa.', w: { TAL: 1 } },
   { f: 'I', type: 'lk', t: 'Mis finanzas personales están separadas del negocio y tengo ahorro.', w: { ESC: 1, TAL: .3 } },
   { f: 'I', type: 'lk', t: 'Antes de invertir, contrasto mis supuestos con evidencia.', w: { PBI: .8, ASE: .2 } },
-  { f: 'P', type: 'ch', t: '¿Cuánto quieres invertir para empezar?', h: 'Puedes empezar gratis.', o: [['Nada por ahora', { VAQ: 2, VGE: 2, ESC: 1 }], ['Hasta USD 100', { ASE: 3, LIB: 2, ESC: 1 }], ['Entre USD 100 y 1.000', { APP: 3, TAL: 2 }], ['Más de USD 1.000', { PBI: 3, REV: 2, TAL: 1 }]] }
+  { f: 'P', type: 'ch', t: '¿Cuánto quieres invertir para empezar?', h: 'También puedes empezar gratis.', o: [['Nada por ahora', { VAQ: 2, VGE: 2, ESC: 1 }], ['Hasta USD 100', { ASE: 3, LIB: 2, ESC: 1 }], ['Entre USD 100 y 1.000', { APP: 3, TAL: 2 }], ['Más de USD 1.000', { PBI: 3, REV: 2, TAL: 1 }]] }
 ];
 const MAD = { N: [2], D: [4, 5], P: [3], E: [6], I: [7, 8] };
 const LK = [['Nada cierto', 'var(--wine)'], ['Poco', 'var(--coral)'], ['A medias', 'var(--amber)'], ['Bastante', 'var(--link)'], ['Totalmente', 'var(--mint)']];
@@ -219,13 +219,13 @@ function score(ans) {
 }
 function result() {
   show('s-r'); const r = score(A), t = r[0], o = O[t.k];
-  $('rcard').innerHTML = `<svg class="plant" style="--s:120px" viewBox="0 0 24 24" aria-hidden="true"></svg><span class="mono">Tu siguiente paso · ${o.k}</span><h2>${o.n}</h2><div class="pct">${t.pct}%<small>de afinidad con tus respuestas</small></div><p style="margin-top:12px">${o.d}</p><p class="price">${o.p}</p>`;
+  $('rcard').innerHTML = `<svg class="plant" style="--s:120px" viewBox="0 0 24 24" aria-hidden="true"></svg><span class="mono">Tu siguiente paso · ${o.k}</span><h2>${o.n}</h2><div class="pct">${t.pct}%<small>de afinidad con tus respuestas</small></div><p style="margin-top:12px">${o.d}</p><p style="margin-top:10px"><b>Primer paso:</b> ${o.s[0].toLowerCase() + o.s.slice(1)}</p><p class="price">${o.p}</p>`;
   plant($('rcard').querySelector('svg'), 10);
-  $('alts').innerHTML = r.slice(1, 3).map(x => `<a href="${O[x.k].u}" target="_blank" rel="noopener"><span>${O[x.k].n}</span><em>${x.pct}%</em></a>`).join('');
+  $('alts').innerHTML = r.slice(1, 3).map(x => `<a href="${O[x.k].u}" target="_blank" rel="noopener"><span>${O[x.k].n}<br><small style="font-weight:500;color:var(--mute)">${O[x.k].s}</small></span><em>${x.pct}%</em></a>`).join('');
   $('radio').innerHTML = Object.entries(MAD).map(([f, qs]) => { const v = qs.map(k => A[k] === 0 ? 1 : A[k]); const m = Math.round(100 * (v.reduce((a, b) => a + b, 0) / v.length - 1) / 4); return `<div><span>${F[f][0]}</span><span class="tr" style="--c:${F[f][1]}"><i data-w="${m}"></i></span><span>${m}</span></div>`; }).join('');
   requestAnimationFrame(() => requestAnimationFrame(() => document.querySelectorAll('#radio i').forEach(x => x.style.width = x.dataset.w + '%')));
   const lows = Q.map((q, k) => ({ q, k, v: A[k] })).filter(x => x.q.type === 'lk' && x.q.w[t.k]).sort((a, b) => (a.v || 0) - (b.v || 0)).slice(0, 2);
-  $('why').innerHTML = lows.map(x => `<li>Respondiste <b>${x.v === 0 ? 'No lo sé' : x.v + ' de 5'}</b> a «${x.q.t}»</li>`).join('') + `<li>Tu perfil: <b>${Q[0].o[A[0]][0].toLowerCase()}</b>; tu prioridad: <b>${Q[1].o[A[1]][0].toLowerCase()}</b>.</li>`;
+  $('why').innerHTML = lows.map(x => (x.v === 0 ? `<li>Respondiste <b>«No lo sé»</b> a la afirmación «${x.q.t}» Cuando algo no se mide, conviene empezar por ahí.</li>` : `<li>Calificaste con <b>${x.v} de 5</b> la afirmación «${x.q.t}»</li>`)).join('') + `<li>Elegiste <b>«${Q[0].o[A[0]][0]}»</b> como tu perfil y <b>«${Q[1].o[A[1]][0]}»</b> como tu prioridad.</li>`;
   $('wa').href = 'https://wa.me/593999905080?text=' + encodeURIComponent(`Hola, equipo de JFCarpio.com. Hice el test de crecimiento y mi siguiente paso es: ${o.n} (${t.pct}% de afinidad). ¿Me ayudan a empezar?`);
   $('go2').href = o.u; history.replaceState(null, '', '#r=' + A.join(''));
 }
