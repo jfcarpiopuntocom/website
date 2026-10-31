@@ -31,8 +31,12 @@ Branch for feature work: `claude/high-contrast-white-design-VK5kk`. Base: `main`
   autor/fundador (Person) como J.F. Carpio.
 - **Tono: SOLIDEZ, no lucimiento (JFC 2026-09-27).** "En mis 30s quería lucirme; ahora quiero
   darle solidez a mis negocios." Nada de efectos para impresionar: claridad, prueba y negocio.
-- **Jev pondera TODA mejora o cambio antes de proponerlo (orden de JFC, no opcional).** Sin Jev
-  (error o sin créditos) no se presenta como validado: se dice que falta la pasada de Jev.
+- **Revisión local de TODA mejora o cambio antes de proponerlo (JFC 2026-10-31; reemplaza a Jev).** Con lo que ya está enchufado en la laptop de JFC:
+  1. **Pruebas automáticas** (obligatorias, 0 fallas): https://github.com/jfcarpiopuntocom/JFCarpio.comTestSites/tree/main/qa — `qa-tema.cjs` (selector claro/oscuro, contraste WCAG AA, desborde, contadores y fotos en 1440/390/198 px), `qa-liquid.cjs` (6 anchos hasta Apple Watch), `qa-bloom.cjs` (WebGL/bloom con consola limpia), `qa-full.cjs` (capturas). Requieren Chrome + puppeteer-core.
+  2. **Laya local** (MCP `jfc-laya`, CPU, `model="multilingual"`): segunda opinión rápida para clasificar y priorizar riesgos de un cambio. Es consultiva: no decide copy, no verifica citas ni derechos, no reemplaza la revisión.
+  3. **Router local OmniRoute** (127.0.0.1:20129, `python C:\Users\JFC\llm-router\llm.py`): segunda lectura gratuita de textos públicos (claridad, calcos, tono). Nada sensible ni datos de clientes.
+  4. **Skills de redacción** (copy-editing, stop-slop): barrido de calcos del inglés y frases de IA antes de publicar.
+  Si alguna no está disponible, se dice cuál faltó; no se presenta como validado.
 - **MARCA = JFCarpio.com, voz de EQUIPO (JFC 2026-09-27, regla dura).** El sitio NO es sobre
   JFC: habla "el equipo de JFCarpio.com ha desarrollado...", en plural ("te devolvemos",
   "aceptamos"). Nunca "J.F. Carpio" como marca en títulos, metadatos, pie ni mensajes. Se
