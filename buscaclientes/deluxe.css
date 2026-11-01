@@ -13,3 +13,6 @@
 #bcFx.on{opacity:.85}
 #radar>*:not(#bcFx){position:relative;z-index:1}
 @media (prefers-reduced-motion:reduce){#bcFx{display:none}}
+.bc-migra{max-width:1296px;margin:0 auto 12px;padding:10px 16px;border:1px solid #2b4658;border-radius:12px;background:#0d2633cc;color:#cfe6ef;font-size:14px}
+.bc-migra a{color:#83F0E5;font-weight:700}
+.bc-migra button{float:right;background:none;border:0;color:#cfe6ef;font-size:18px;cursor:pointer;line-height:1}
