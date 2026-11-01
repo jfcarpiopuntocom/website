@@ -11,34 +11,10 @@
   <!-- CORPORATE WORKSHOPS -->
 
   <!-- BLOG -->
-  <url>
-    <loc>https://jfcarpio.com/blog/</loc>
-    <lastmod>2026-04-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/blog/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/blog/"/>
-  </url>
 
   <!-- PUBLICACIONES -->
-  <url>
-    <loc>https://jfcarpio.com/publicaciones/</loc>
-    <lastmod>2026-09-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/publicaciones/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/publicaciones/"/>
-  </url>
 
   <!-- AUTHOR / RESEARCHER PROFILE -->
-  <url>
-    <loc>https://jfcarpio.com/juan-fernando-carpio/</loc>
-    <lastmod>2026-09-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-EC" href="https://jfcarpio.com/juan-fernando-carpio/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/juan-fernando-carpio/"/>
-  </url>
 
   <!-- WORKING PAPER -->
   <url>
@@ -439,4 +415,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/en/tale-of-two-businesses/"/>
   </url>
   <!-- SLIDE-PAGES-END -->
+
+  <url><loc>https://jfcarpio.com/blog/</loc><lastmod>2026-11-01</lastmod><xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/blog/"/><xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/blog/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/blog/"/></url>
+  <url><loc>https://jfcarpio.com/en/blog/</loc><lastmod>2026-11-01</lastmod><xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/blog/"/><xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/blog/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/blog/"/></url>
+
+  <url><loc>https://jfcarpio.com/publicaciones/</loc><lastmod>2026-11-01</lastmod><xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/publicaciones/"/><xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/publications/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/publicaciones/"/></url>
+  <url><loc>https://jfcarpio.com/en/publications/</loc><lastmod>2026-11-01</lastmod><xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/publicaciones/"/><xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/publications/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/publicaciones/"/></url>
+
+  <url><loc>https://jfcarpio.com/juan-fernando-carpio/</loc><lastmod>2026-11-01</lastmod><xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/juan-fernando-carpio/"/><xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/juan-fernando-carpio/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/juan-fernando-carpio/"/></url>
+  <url><loc>https://jfcarpio.com/en/juan-fernando-carpio/</loc><lastmod>2026-11-01</lastmod><xhtml:link rel="alternate" hreflang="es" href="https://jfcarpio.com/juan-fernando-carpio/"/><xhtml:link rel="alternate" hreflang="en" href="https://jfcarpio.com/en/juan-fernando-carpio/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://jfcarpio.com/juan-fernando-carpio/"/></url>
 </urlset>
