@@ -1,0 +1,189 @@
+
+html{scroll-behavior:smooth;overflow-y:auto!important}
+body.bc-desktop-app{overflow:visible!important;height:auto!important;min-height:100vh;min-height:100svh}
+body.bc-desktop-app main#dashboard,body.bc-desktop-app #workspaceCRM{flex:none!important;height:auto!important;overflow:visible!important}
+body.bc-desktop-app .crm-workspace{height:auto!important;grid-template-rows:auto!important;align-items:start}
+body.bc-desktop-app .crm-inbox{height:auto!important;max-height:none!important;overflow:visible!important}
+body.bc-desktop-app #crmCards{flex:none!important;height:auto!important;max-height:none!important;overflow:visible!important}
+@media (min-width:900px){
+ body.bc-desktop-app .crm-workspace>:not(.crm-inbox){position:sticky;top:12px;align-self:start;max-height:calc(100vh - 24px);overflow:auto;overscroll-behavior:contain}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+body .bc-product-descriptor,body .crm-overline,body .crm-promise span,body .crm-stage,
+body .crm-date,body .index,body .minor,body .crm-footer span,body .crm-footer small,
+body .crm-footer a,body .tab small,body button small,body a small{font-size:12px!important;line-height:1.35}
+
+
+.crm-card-item.as-has-contacts .crm-contact-card{border-bottom-left-radius:0!important;border-bottom-right-radius:0!important}
+.as-contacts{display:flex;flex-wrap:wrap;gap:6px;padding:8px 10px 10px;margin:-2px 0 8px;border:1px solid #33465C;border-top:0;border-radius:0 0 14px 14px;background:#0E1C2C}
+.as-chip{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:6px 12px;border-radius:10px;background:#13263A;border:2px solid #33465C;font-size:14px;font-weight:700;text-decoration:none}
+.as-chip.phone,.as-chip.wa{border-color:#28ECAA}.as-chip.mail{border-color:#E8A020}.as-chip.web{border-color:#E86040}
+.as-contacts,.as-contacts *{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+
+.crm-stage.as-hide{display:none!important}
+.crm-date.as-follow{display:inline-flex;align-items:center;min-height:30px;padding:4px 10px;border-radius:999px;border:2px solid #E86040;background:#2A160F;font-weight:800;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+#crmDetail input[type=date].as-focus{outline:3px solid #E86040;outline-offset:3px}
+@media (prefers-color-scheme:dark){.as-contacts,.as-contacts *,.crm-date.as-follow{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}}
+@media (prefers-reduced-motion:no-preference){.as-chip{transition:transform .15s ease}.as-chip:hover{transform:translateY(-2px)}}
+
+
+.as-contacts{background:#FFFFFF!important;border:.8px solid #BED7E6!important;border-top:1px dashed #BED7E6!important;border-radius:0 0 15px 15px!important;box-shadow:0 5px 16px #0F3D5213}
+.as-chip{background:#FFFFFF!important}
+.as-chip.phone,.as-chip.wa{border-color:#13A97A!important}.as-chip.mail{border-color:#C9850F!important}.as-chip.web{border-color:#E86040!important}
+.as-contacts,.as-contacts *{color:#0E223E!important;-webkit-text-fill-color:#0E223E!important}
+.crm-date.as-follow{background:#E86040!important;border-color:#E86040!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+@media (prefers-color-scheme:dark){.as-contacts,.as-contacts *{color:#0E223E!important;-webkit-text-fill-color:#0E223E!important}.crm-date.as-follow{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}}
+
+
+#crmCards .crm-card-info small{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;color:#3A4A5C!important;-webkit-text-fill-color:#3A4A5C!important}
+
+
+.bc-weekbar.as-has-quota [data-week-word="week"],.bc-weekbar.as-has-quota #bcWeekCount,.bc-weekbar.as-has-quota .bc-grow{display:none!important}
+.as-quota{display:flex;align-items:center;gap:12px;flex:1 1 auto;min-width:0}
+.as-quota-text{font-size:15px;font-weight:800;white-space:nowrap;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+.as-quota-track{position:relative;flex:1 1 120px;max-width:260px;height:10px;border-radius:999px;background:#13263A;border:1px solid #33465C;overflow:hidden}
+.as-quota-track i{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:999px;background:#E86040}
+.as-quota.is-full .as-quota-text{color:#E8A020!important;-webkit-text-fill-color:#E8A020!important}
+@media (prefers-reduced-motion:no-preference){.as-quota-track i{transition:width .6s cubic-bezier(.2,.8,.2,1)}}
+@media (prefers-color-scheme:dark){.as-quota-text{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}.as-quota.is-full .as-quota-text{color:#E8A020!important;-webkit-text-fill-color:#E8A020!important}}
+
+
+.as-lang{display:flex;align-items:center;gap:8px;height:42px;padding:0 8px;border:.8px solid #435777;border-radius:11px;background:#10182B;flex:none}
+.as-lang .lang-flag{width:24px;height:16px;flex:none;border-radius:2px;overflow:hidden;box-shadow:0 0 0 1px #4A5468;position:relative}
+.as-lang .lang-flag[data-country='es']{background:#10182B url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 750 500'%3E%3Crect width='750' height='500' fill='%23AA151B'/%3E%3Crect y='125' width='750' height='250' fill='%23F1BF00'/%3E%3Cg transform='translate(150 175)'%3E%3Crect width='70' height='90' rx='10' fill='%23AA151B' stroke='%237A4E00' stroke-width='6'/%3E%3Crect x='35' width='35' height='45' fill='%23F1BF00'/%3E%3Crect y='45' width='35' height='45' fill='%23F1BF00'/%3E%3Cpath d='M-14 -16h98' stroke='%237A4E00' stroke-width='10'/%3E%3C/g%3E%3C/svg%3E") center/cover no-repeat}
+.as-lang .lang-flag[data-country='us']{background:#10182B url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7410 3900'%3E%3Crect width='7410' height='3900' fill='%23B22234'/%3E%3Cpath d='M0 450h7410M0 1050h7410M0 1650h7410M0 2250h7410M0 2850h7410M0 3450h7410' stroke='%23FFFFFF' stroke-width='300'/%3E%3Crect width='2964' height='2100' fill='%233C3B6E'/%3E%3Cg fill='%23FFFFFF'%3E%3Ccircle cx='300' cy='260' r='95'/%3E%3Ccircle cx='800' cy='260' r='95'/%3E%3Ccircle cx='1300' cy='260' r='95'/%3E%3Ccircle cx='1800' cy='260' r='95'/%3E%3Ccircle cx='2300' cy='260' r='95'/%3E%3Ccircle cx='2750' cy='260' r='95'/%3E%3Ccircle cx='550' cy='680' r='95'/%3E%3Ccircle cx='1050' cy='680' r='95'/%3E%3Ccircle cx='1550' cy='680' r='95'/%3E%3Ccircle cx='2050' cy='680' r='95'/%3E%3Ccircle cx='2500' cy='680' r='95'/%3E%3Ccircle cx='300' cy='1100' r='95'/%3E%3Ccircle cx='800' cy='1100' r='95'/%3E%3Ccircle cx='1300' cy='1100' r='95'/%3E%3Ccircle cx='1800' cy='1100' r='95'/%3E%3Ccircle cx='2300' cy='1100' r='95'/%3E%3Ccircle cx='2750' cy='1100' r='95'/%3E%3Ccircle cx='550' cy='1520' r='95'/%3E%3Ccircle cx='1050' cy='1520' r='95'/%3E%3Ccircle cx='1550' cy='1520' r='95'/%3E%3Ccircle cx='2050' cy='1520' r='95'/%3E%3Ccircle cx='2500' cy='1520' r='95'/%3E%3Ccircle cx='300' cy='1880' r='95'/%3E%3Ccircle cx='800' cy='1880' r='95'/%3E%3Ccircle cx='1300' cy='1880' r='95'/%3E%3Ccircle cx='1800' cy='1880' r='95'/%3E%3Ccircle cx='2300' cy='1880' r='95'/%3E%3Ccircle cx='2750' cy='1880' r='95'/%3E%3C/g%3E%3C/svg%3E") center/cover no-repeat}
+.as-lang .lang-flag[data-country='pt']{background:#10182B url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23FF0000'/%3E%3Crect width='240' height='400' fill='%23006600'/%3E%3Ccircle cx='240' cy='200' r='78' fill='none' stroke='%23FFCC00' stroke-width='22'/%3E%3Cpath d='M200 150h80v70a40 40 0 0 1-80 0z' fill='%23FF0000' stroke='%23FFFFFF' stroke-width='10'/%3E%3Cg fill='%230033A0'%3E%3Ccircle cx='240' cy='180' r='9'/%3E%3Ccircle cx='222' cy='200' r='9'/%3E%3Ccircle cx='258' cy='200' r='9'/%3E%3Ccircle cx='240' cy='220' r='9'/%3E%3Ccircle cx='240' cy='200' r='9'/%3E%3C/g%3E%3C/svg%3E") center/cover no-repeat}
+.as-lang select#bcWorkspaceLanguage{background:transparent!important;border:0!important;padding:9px 5px!important;border-radius:9px;font:400 16px "DM Sans",system-ui,sans-serif!important;height:auto!important;cursor:pointer;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+.as-lang select#bcWorkspaceLanguage option{background:#10182B;color:#FFFFFF}
+@media (prefers-color-scheme:dark){.as-lang select#bcWorkspaceLanguage{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}}
+
+
+body.bc-desktop-app .crm-workspace>:not(.crm-inbox),.crm-workspace>:not(.crm-inbox){position:static!important;max-height:none!important;overflow:visible!important;overscroll-behavior:auto!important}
+
+
+.crm-hero,.crm-helper{display:none!important}
+.crm-metrics{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important;margin:0 0 12px!important}
+.crm-metrics article{min-height:0!important;padding:10px 12px!important;display:flex!important;flex-direction:column;justify-content:center;gap:2px}
+.crm-metrics article>span{display:none!important}
+.crm-metrics article strong{font-size:26px!important;line-height:1.1!important}
+.crm-metrics article small{font-size:13px!important;line-height:1.25!important}
+@media (min-width:760px){.crm-metrics{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+.as-direct-tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px}
+.as-direct-tools .crm-search-cta{display:inline-flex!important;align-items:center;justify-content:center;min-height:44px!important;padding:0 16px!important;width:auto!important;margin:0!important}
+.as-direct-tools .bc-toolbar-menu{position:relative}
+
+.crm-cards{grid-template-columns:minmax(0,1fr)!important}
+@media (max-width:850px){.crm-workspace{grid-template-columns:minmax(0,1fr)!important}}
+.crm-inbox,.crm-cards,.crm-card-item,.crm-contact-card,.crm-card-top,.crm-card-info,.crm-card-bottom{min-width:0!important;max-width:100%!important}
+.crm-card-info strong,.crm-card-info small{overflow:hidden;text-overflow:ellipsis}
+.crm-filterbar{max-width:100%}
+#crmQuickSearch,#filter,.crm-edit input,.crm-edit select,.crm-edit textarea{font-size:16px!important}
+html,body{overflow-x:hidden}
+button,a,summary,select,input{touch-action:manipulation}
+
+@media (max-width:760px){
+ .bc-workspace-tabs{padding:6px!important;gap:6px!important;margin-bottom:10px!important}
+ .bc-workspace-tabs button{min-height:48px!important;padding:6px 10px!important}
+ .bc-workspace-tabs small,.bc-workspace-tabs .tab-glyph{display:none!important}
+ .bc-workspace-tabs b{font-size:15px!important;line-height:1.2!important}
+ .crm-metrics{gap:6px!important;margin-bottom:8px!important}
+ .crm-metrics article{padding:7px 10px!important}
+ .crm-metrics article strong{font-size:22px!important}
+ .as-direct-tools{flex-wrap:nowrap}
+ .as-direct-tools>*{flex:1 1 0;min-width:0}
+ .as-direct-tools .crm-search-cta{width:100%!important;padding:0 10px!important}
+ .as-direct-tools .bc-toolbar-menu summary{width:100%;min-height:44px;justify-content:center}
+}
+
+.crm-channel-link[href*="overturemaps"],.crm-channel-link[href*="openstreetmap"],.crm-channel-link[href*="wikidata"],
+.as-chip[href*="overturemaps"],.as-chip[href*="openstreetmap"],.as-chip[href*="wikidata"]{display:none!important}
+
+.crm-avatar.as-ring{position:relative;background:transparent!important;width:48px!important;height:48px!important;flex:0 0 48px!important;border-radius:50%!important;padding:0!important}
+.crm-avatar.as-ring svg{position:absolute;inset:0;width:48px;height:48px}
+.crm-avatar.as-ring b{position:relative;font-size:14px!important;font-weight:800;color:#0E223E!important;-webkit-text-fill-color:#0E223E!important}
+@media (min-width:760px){
+ .crm-contact-card{display:flex!important;align-items:center;gap:14px;padding:12px 14px!important}
+ .crm-contact-card .crm-card-top{flex:1 1 auto;min-width:0;margin:0!important}
+ .crm-contact-card .crm-card-bottom{display:flex!important;align-items:center;gap:10px;flex:0 0 auto;margin:0!important;padding:0!important;border:0!important}
+}
+@media (prefers-color-scheme:dark){.crm-avatar.as-ring b{color:#0E223E!important;-webkit-text-fill-color:#0E223E!important}}
+
+#bcToolbarMenu button,#bcToolbarMenu a,.bc-week-menu button,.bc-week-menu a{min-height:44px!important}
+
+#crmListCount{white-space:nowrap!important}
+#crmCards:not(:has(.crm-card-item)) strong{color:#0E223E!important;-webkit-text-fill-color:#0E223E!important}
+#crmCards:not(:has(.crm-card-item)) p{color:#0E223E!important;-webkit-text-fill-color:#0E223E!important;font-size:16px!important;line-height:1.45!important}
+#crmCards:not(:has(.crm-card-item)) a{color:#0E223E!important;-webkit-text-fill-color:#0E223E!important;font-size:16px!important;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+#liveState{color:#CCCCCC!important;-webkit-text-fill-color:#CCCCCC!important}
+@media (max-width:760px){#liveState{display:none!important}}
+@media (prefers-color-scheme:dark){#crmCards:not(:has(.crm-card-item)) strong,#crmCards:not(:has(.crm-card-item)) p,#crmCards:not(:has(.crm-card-item)) a{color:#0E223E!important;-webkit-text-fill-color:#0E223E!important}#liveState{color:#CCCCCC!important;-webkit-text-fill-color:#CCCCCC!important}}
+
+
+@font-face{font-family:"DM Sans";src:url(/clientfinder/fonts/dm-sans-latin.woff2) format("woff2");font-weight:400 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(/clientfinder/fonts/space-grotesk-latin.woff2) format("woff2");font-weight:500 700;font-style:normal;font-display:swap}
+
+html body,html body #dashboard,html body #workspaceCRM,html body button,html body input,html body select,html body textarea{font-family:"DM Sans",system-ui,sans-serif!important}
+html body #workspaceCRM h1,html body #workspaceCRM h2,html body #workspaceCRM h3,html body .crm-metrics strong,html body .bc-workspace-tabs b,html body .crm-detail h2{font-family:"Space Grotesk","DM Sans",sans-serif!important;letter-spacing:-.02em!important}
+html body .crm-metrics strong,html body .as-ring b,html body #crmListCount,html body .as-quota-text{font-variant-numeric:tabular-nums}
+html body .crm-detail-head .crm-overline{display:none!important}
+html body .bc-workspace-tabs .tab-glyph{display:none!important}
+html body #workspaceCRM *{box-shadow:none!important;text-shadow:none!important}
+html body .crm-section-heading .crm-overline{letter-spacing:.02em!important}
+html body .crm-contact-card,html body .as-chip,html body .crm-filterbar button,html body .crm-channel-link,html body button{transition:background-color .2s ease,transform .15s ease,color .2s ease}
+html body .crm-contact-card:active,html body .as-chip:active,html body .crm-filterbar button:active,html body .crm-channel-link:active{transform:translateY(1px)}
+@media (prefers-reduced-motion:reduce){html body #workspaceCRM *{transition:none!important}}
+
+html body{background:#EEF2F6!important}
+html body #workspaceCRM{background:transparent!important;border:0!important}
+html body .bc-workspace-tabs{background:transparent!important;border:0!important;padding:0!important}
+html body .bc-workspace-tabs button{background:#FFFFFF!important;border:0!important;border-radius:12px!important}
+html body .bc-workspace-tabs button b{color:#0E223E!important;-webkit-text-fill-color:#0E223E!important}
+html body .bc-workspace-tabs small{color:#3A3A3A!important;-webkit-text-fill-color:#3A3A3A!important}
+html body .bc-workspace-tabs button[aria-selected=true]{background:#0E223E!important}
+html body .bc-workspace-tabs button[aria-selected=true] b,html body .bc-workspace-tabs button[aria-selected=true] small{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+html body .crm-metrics{background:#FFFFFF!important;border-radius:16px!important;padding:18px 22px!important;gap:6px 28px!important}
+html body .crm-metrics article{background:transparent!important;border:0!important;padding:4px 0!important}
+html body .crm-metrics article strong{font-size:40px!important;color:#0E223E!important;-webkit-text-fill-color:#0E223E!important}
+html body .crm-metrics article small{color:#3A3A3A!important;-webkit-text-fill-color:#3A3A3A!important;font-size:14px!important}
+html body .bc-weekbar{background:#0E223E!important;border:0!important;border-radius:16px!important}
+html body .crm-inbox,html body .crm-detail{background:#FFFFFF!important;border:0!important;border-radius:18px!important}
+html body .crm-section-heading h2,html body .crm-detail h2{color:#0E223E!important;-webkit-text-fill-color:#0E223E!important}
+html body .crm-section-heading .crm-overline{color:#C2410C!important;-webkit-text-fill-color:#C2410C!important}
+html body #crmListCount{background:#EEF2F6!important;color:#0E223E!important;-webkit-text-fill-color:#0E223E!important;border:0!important}
+html body .crm-search-wrap,html body #crmQuickSearch{background:#EEF2F6!important;border:0!important;color:#0E223E!important;-webkit-text-fill-color:#0E223E!important;border-radius:12px!important}
+html body #crmQuickSearch::placeholder{color:#3A3A3A!important;-webkit-text-fill-color:#3A3A3A!important}
+html body .crm-filterbar button{background:#EEF2F6!important;border:0!important;color:#0E223E!important;-webkit-text-fill-color:#0E223E!important}
+html body .crm-filterbar button[aria-pressed=true],html body .crm-filterbar button.active,html body .crm-filterbar button.is-active{background:#0E223E!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+html body .crm-contact-card{background:#F5F8FB!important;border:0!important;border-radius:14px 14px 0 0!important}
+html body .crm-card-item:not(.as-has-contacts) .crm-contact-card{border-radius:14px!important}
+html body .crm-contact-card.is-selected{background:#E6EEF6!important;outline:2px solid #0E223E!important;outline-offset:-2px}
+html body .crm-card-info strong{color:#0E223E!important;-webkit-text-fill-color:#0E223E!important}
+html body .crm-card-info small{color:#3A3A3A!important;-webkit-text-fill-color:#3A3A3A!important}
+html body .as-contacts{background:#F5F8FB!important;border:0!important;border-radius:0 0 14px 14px!important;padding-top:4px!important}
+html body .as-contacts .as-chip{background:#FFFFFF!important;border:0!important;border-radius:10px!important;color:#0E223E!important;-webkit-text-fill-color:#0E223E!important}
+html body .as-contacts .as-chip:hover{background:#E6EEF6!important}
+html body .crm-stage{background:#E6EEF6!important;color:#0E223E!important;-webkit-text-fill-color:#0E223E!important;border:0!important;border-radius:8px!important}
+html body .crm-date.as-follow{background:#E86040!important;border-radius:8px!important}
+html body .crm-detail-head p{color:#3A3A3A!important;-webkit-text-fill-color:#3A3A3A!important}
+html body .crm-channel-link{background:#EEF2F6!important;border:0!important;color:#0E223E!important;-webkit-text-fill-color:#0E223E!important;border-radius:10px!important}
+html body .crm-outreach{background:#F5F8FB!important;border:0!important;border-radius:14px!important}
+html body .crm-detail input,html body .crm-detail select,html body .crm-detail textarea{background:#F5F8FB!important;border:0!important;color:#0E223E!important;-webkit-text-fill-color:#0E223E!important;border-radius:12px!important}
+html body .crm-detail button{border:0!important}
+html body .crm-detail button[type=submit],html body .crm-edit-form button:last-child{background:#E86040!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+html body .crm-list-footer,html body .crm-list-footer *{color:#3A3A3A!important;-webkit-text-fill-color:#3A3A3A!important}
+html body .crm-directory-disclosure,html body .crm-directory-disclosure summary{background:#FFFFFF!important;border:0!important;color:#0E223E!important;-webkit-text-fill-color:#0E223E!important}
+html body .as-direct-tools .crm-search-cta{background:#E86040!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;border:0!important;border-radius:12px!important}
+html body #bcToolbarSummary{background:#0E223E!important;border:0!important}
+html body #crmCards .crm-contact-card .crm-card-info small{color:#3A3A3A!important;-webkit-text-fill-color:#3A3A3A!important}
+html body #crmCards .crm-date.is-due{background:#E86040!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;border:0!important;border-radius:8px!important}
+html body #crmCards .crm-next-action{background:#FFFFFF!important;color:#0E223E!important;-webkit-text-fill-color:#0E223E!important;border:0!important;border-radius:10px!important}
+
+html body .bc-weekbar{position:relative!important;overflow:hidden!important;isolation:isolate}
+html body .bc-weekbar>canvas.bc-sonar{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important;pointer-events:none}
+html body .bc-weekbar>*:not(canvas){position:relative;z-index:1}
+
+
+
+html body #dashboard{visibility:visible!important}

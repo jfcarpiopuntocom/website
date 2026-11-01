@@ -41,3 +41,6 @@ if (radarEl && !localStorage.getItem('bc-migra-visto')) {
   n.querySelector('button').onclick = () => { localStorage.setItem('bc-migra-visto', '1'); n.remove(); };
   radarEl.before(n);
 }
+
+// Al cambiar el idioma con el selector, re-etiquetar los ejemplos.
+document.addEventListener('change', (e) => { if (e.target && e.target.id === 'lang') setTimeout(latam, 300); });

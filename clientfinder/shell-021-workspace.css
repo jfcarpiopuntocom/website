@@ -1,0 +1,35 @@
+
+#bcInstallApp,.bc-install-link{border:1px solid #70dacf!important;background:linear-gradient(135deg,#173f53,#08766f)!important;color:#f1fffc!important;border-radius:14px!important;padding:11px 18px!important;min-height:44px;box-shadow:0 5px 18px #093c4930;font-weight:800!important;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+#bcInstallApp:hover,.bc-install-link:hover{background:linear-gradient(135deg,#225c71,#088f7d)!important;transform:translateY(-1px)}
+#bcInstallApp:focus-visible,.bc-install-link:focus-visible{outline:3px solid #ef8a55;outline-offset:3px}
+.bc-weekbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:#0d2b47;color:#edfffa;border-radius:13px;padding:12px 16px;margin:10px 0;font-size:14px}
+.bc-weekbar strong{font-size:21px;color:#8fe5d5}.bc-weekbar a{color:#a8efe3}.bc-weekbar button{min-height:40px;border:1px solid #88c6c1;border-radius:10px;padding:8px 12px;background:#fff;color:#173b52;font-weight:750}
+.bc-weekbar progress{width:90px;accent-color:#9be4d8}.bc-weekbar .bc-grow{flex:1}
+.bc-search-dock{border:1px solid #cedde5;border-radius:14px;background:#fff;margin:10px 0 0;padding:12px 16px;min-width:0}
+.bc-search-dock summary{font-size:17px;font-weight:800;cursor:pointer;color:#124356;min-height:32px}.bc-search-dock form{display:grid;grid-template-columns:1fr .8fr 1fr 1fr auto;gap:10px;align-items:end;margin-top:12px}
+.bc-search-dock label{font-size:13px;color:#294a60;font-weight:700;min-width:0}.bc-search-dock input,.bc-search-dock select{width:100%;min-width:0;min-height:43px;display:block;border:1px solid #b8ced9;border-radius:9px;padding:8px;font:inherit;background:#f9fcfe;color:#102c42}
+.bc-search-dock button{min-height:43px;border:0;border-radius:9px;background:#12526a;color:#fff;padding:9px 13px;font-weight:800}.bc-search-dock p{font-size:13px;line-height:1.5;color:#456074;margin:9px 0}
+#bcSearchResults{display:grid;gap:8px;max-height:220px;overflow:auto;overscroll-behavior:contain}.bc-search-result{border:1px solid #d3e3e9;padding:12px;border-radius:10px;display:flex;justify-content:space-between;gap:12px}.bc-search-result b,.bc-search-result small{display:block}.bc-search-result small{color:#546c7d}.bc-search-result a{margin-right:10px}.bc-search-result button{flex-shrink:0;align-self:center}.bc-search-result button:disabled{opacity:.55}.bc-search-result div{min-width:0;overflow-wrap:anywhere}
+.bc-mission-strip{padding:15px 18px;border:1px solid #377072;border-radius:14px;background:#10283b;margin:20px 0;color:#dffaf2}.bc-mission-strip p{line-height:1.6;margin:6px 0}.bc-mission-strip a{color:#a6efd9}
+@media(min-width:900px){
+ body.bc-desktop-app{height:100dvh;min-height:0;overflow:hidden;display:flex;flex-direction:column;background:#edf4f8}
+ .bc-desktop-app>.top{position:relative;flex:none;padding:0}
+ .bc-desktop-app .top-inner{min-height:62px;padding:8px 20px;gap:12px;flex-wrap:nowrap}
+ .bc-desktop-app .shell-label,.bc-desktop-app #liveState{display:none}
+ .bc-desktop-app .tools{gap:6px}.bc-desktop-app .tools button{font-size:13px;padding:8px 11px;min-height:40px}
+ .bc-desktop-app #dashboard{width:100%;max-width:none;flex:1;min-height:0;display:flex;flex-direction:column;padding:0 16px 12px}
+ .bc-desktop-app .bc-workspace-tabs{margin:7px 0;gap:6px;padding:3px;flex:none}
+ .bc-desktop-app .bc-workspace-tabs button{min-height:46px;padding:6px 15px}.bc-desktop-app .bc-workspace-tabs small{display:none}.bc-desktop-app .tab-glyph{width:30px;height:30px;font-size:21px}
+ .bc-desktop-app #workspaceCRM{flex:1;min-height:0;display:flex;flex-direction:column;padding:10px;border-radius:14px;overflow:hidden}
+ .bc-desktop-app .crm-hero{display:none}.bc-desktop-app .crm-metrics{display:none}
+ .bc-desktop-app .bc-weekbar{flex:none;margin:0 0 8px;padding:9px 14px}
+ .bc-desktop-app .crm-workspace{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:12px;margin:0;align-items:stretch}
+ .bc-desktop-app .crm-inbox,.bc-desktop-app .crm-detail{min-height:0;overflow:auto;overscroll-behavior:contain;position:static;max-height:none;padding:14px}
+ .bc-desktop-app .crm-inbox{display:flex;flex-direction:column}.bc-desktop-app .crm-section-heading{flex:none;margin:0 0 7px}.bc-desktop-app .crm-section-heading h2{font-size:24px}.bc-desktop-app .crm-list-footer{flex:none;padding-top:7px}.bc-desktop-app .crm-section-heading .crm-overline,.bc-desktop-app .crm-helper{display:none}
+ .bc-desktop-app .crm-cards{min-height:100px;overflow:auto;flex:1;display:flex;flex-direction:column;gap:9px}.bc-desktop-app .crm-card-item{flex:none}.bc-desktop-app .crm-search-wrap{flex:none;margin:4px 0}.bc-desktop-app .crm-filterbar{flex:none;margin:7px 0;gap:5px}.bc-desktop-app .crm-filterbar button{font-size:12px;padding:8px}
+ .bc-desktop-app #cartera{display:block;flex:none;margin:5px 0 0}.bc-desktop-app #cartera .section-top{display:none}.bc-desktop-app #crmFullDirectory{padding:5px 10px;font-size:12px}.bc-desktop-app #crmFullDirectory[open]{position:fixed;inset:120px 28px 90px;z-index:100;background:white;overflow:auto;box-shadow:0 15px 70px #071c4860;border:2px solid #235870}.bc-desktop-app #crmFullDirectory[open] summary{position:sticky;top:0;background:white;padding:10px;z-index:1}.bc-desktop-app .crm-footer{margin:6px 0 0;padding:5px 0;font-size:12px;flex:none}.bc-desktop-app .crm-feedback:empty{display:none}
+ .bc-desktop-app .bc-search-dock{flex:none;margin-top:8px}.bc-desktop-app .bc-search-dock[open]{max-height:42vh;overflow:auto}.bc-desktop-app #workspaceIntel{flex:1;min-height:0;overflow:auto;padding:16px}
+}
+@media(max-width:899px){.bc-search-dock form{grid-template-columns:1fr 1fr}.bc-search-dock button{grid-column:1/-1}.bc-weekbar{gap:8px}.bc-search-result{flex-direction:column}.bc-search-result button{align-self:flex-start}}
+@media(max-height:620px) and (min-width:900px){.bc-desktop-app .bc-weekbar{font-size:12px;padding:5px 10px}.bc-desktop-app .crm-footer{display:none}.bc-desktop-app .bc-search-dock{padding:6px 12px}.bc-desktop-app .bc-workspace-tabs button{min-height:36px}}
+@media print{body.bc-desktop-app{height:auto;overflow:visible;display:block}.bc-desktop-app #dashboard,.bc-desktop-app #workspaceCRM,.bc-desktop-app .crm-workspace{display:block;overflow:visible}.bc-desktop-app .crm-inbox,.bc-desktop-app .crm-detail{overflow:visible}.bc-desktop-app #cartera{display:block}.bc-weekbar button,.bc-search-dock{display:none}}

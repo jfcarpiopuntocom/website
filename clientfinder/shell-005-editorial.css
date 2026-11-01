@@ -1,0 +1,30 @@
+
+:root{--bc-navy:#0b1730;--bc-cobalt:#2353a4;--bc-crimson:#a4233f;--bc-petrol:#168c97;--bc-ice:#e7ecf4;--bc-orange:#ff6900}
+.hero h1 em{position:relative;display:inline-block;color:var(--bc-ice);text-shadow:none}
+.hero h1 em::after{content:none;display:none} 
+.hero .kicker{color:#9edaff}
+.hero .kicker .dot{background:var(--bc-orange);box-shadow:0 0 0 4px #ff690025}
+.hero .swiss-search .panel-head{border-bottom:1px solid #3877b3}
+.hero .swiss-search .section-title::after{content:"";display:block;width:48px;height:3px;margin-top:6px;background:var(--bc-orange);border-radius:20px}
+.scope-mini{box-shadow:inset 3px 0 var(--bc-orange),0 13px 30px #0307177a!important}
+.scope-features>div:nth-child(1) svg{color:#7bcdff}
+.scope-features>div:nth-child(2) svg{color:#75d6db}
+.scope-features>div:nth-child(3) svg{color:#e8f3fc}
+.scope-features>div:focus-visible,.lead a:focus-visible,.lead button:focus-visible{outline:3px solid var(--bc-orange);outline-offset:3px}
+#radar .panel-head{border-bottom-color:#486fa9}
+#radar .section-title::after{content:"";display:block;width:40px;height:3px;margin-top:6px;background:var(--bc-orange);border-radius:20px}
+#radar .lead{border-color:#344f78}
+#radar .lead:hover{border-color:#2c97a8}
+#radar .num{color:#9ccaff}
+#radar .lead-class{border-color:#287e8d!important}
+.go:hover{box-shadow:0 5px 20px #ff690044}
+@media(prefers-reduced-motion:reduce){.hero h1 em::after{content:none;display:none}}
+
+
+@media(max-width:740px){.hero{align-items:stretch!important;width:100%}.hero .globe-wrap{width:100%;flex:none;min-width:0}}
+
+
+.bc-dashboard-shortcut{display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:7px 10px;border-radius:9px;border:1px solid #3F8CA0;background:#14304A;color:#BFF6EE;font-size:12px;font-weight:800;text-decoration:none;white-space:nowrap}
+.bc-dashboard-shortcut:hover{color:#fff;border-color:#F97316;background:#264268}
+.bc-dashboard-shortcut:focus-visible{outline:3px solid #F97316;outline-offset:2px}
+@media(max-width:740px){.top .menu{display:flex;flex-wrap:wrap;justify-content:flex-end}.bc-dashboard-shortcut{min-height:38px;padding:7px 8px;font-size:11px}}

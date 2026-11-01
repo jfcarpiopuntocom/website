@@ -1,0 +1,17 @@
+
+@media(min-width:900px) and (prefers-reduced-motion:no-preference){
+ .hero .globe-wrap{isolation:isolate;animation:bc-atmosphere-wake 1.15s ease-out both}
+ .hero .globe-wrap:after{content:"";position:absolute;inset:13% 9%;border-radius:50%;pointer-events:none;background:radial-gradient(ellipse,#8be8f218,transparent 64%);z-index:0;animation:bc-atmosphere-breathe 7s ease-in-out infinite}
+ .hero .globe-wrap.bc-is-scanning{filter:drop-shadow(0 0 26px #69d9ff75);transition:filter .35s ease}
+ .hero .globe-wrap.bc-is-focused{filter:drop-shadow(0 0 22px #86e0dd80)}
+ .hero .globe-wrap.bc-is-scanning .target-reticle{animation:bc-scan-turn 1.2s ease-in-out 1}
+ .hero .globe-wrap.bc-is-focused .target-reticle{animation:bc-focus-lock .7s cubic-bezier(.14,.7,.23,1) 1}
+ .bc-discovery-beacon{animation:bc-beacon-in .5s cubic-bezier(.2,.75,.3,1) both}
+ .bc-save-flight{position:fixed;z-index:9999;width:11px;height:11px;border-radius:50%;pointer-events:none;background:#9df3dc;box-shadow:0 0 0 8px #78e6f526,0 0 35px #85efdf}
+}
+@keyframes bc-atmosphere-wake{from{opacity:.35;transform:scale(.97)}to{opacity:1;transform:scale(1)}}
+@keyframes bc-atmosphere-breathe{0%,100%{opacity:.24;transform:scale(.98)}50%{opacity:.65;transform:scale(1.06)}}
+@keyframes bc-scan-turn{from{transform:scale(1.15) rotate(-14deg);opacity:.3}to{transform:scale(1) rotate(0);opacity:1}}
+@keyframes bc-focus-lock{0%{transform:scale(1.5);opacity:.15}70%{transform:scale(.92);opacity:1}100%{transform:scale(1)}}
+@keyframes bc-beacon-in{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(prefers-reduced-motion:reduce),(prefers-reduced-data:reduce){.hero .globe-wrap:after{display:none!important}.bc-discovery-beacon,.hero .globe-wrap{animation:none!important}}

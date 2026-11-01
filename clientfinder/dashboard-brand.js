@@ -1,0 +1,1 @@
+!function(){"use strict";let e="es";try{const t=localStorage.getItem("bc-lang");["es","en","pt"].includes(t)&&(e=t)}catch{}if(window.BC_BRAND){const t=window.BC_BRAND.apply(e);document.title=t+": "+window.BC_BRAND.descriptors[e]+" · "+{es:"Mi Agenda Inteligente",en:"My Smart Agenda",pt:"A minha Agenda Inteligente"}[e]}}();

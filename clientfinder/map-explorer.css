@@ -1,0 +1,33 @@
+
+.bc-map-filters{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin:9px 2px 11px}
+.bc-map-filters button{border:1px solid #C5D5E4;border-radius:8px;background:#F7FAFD;color:#30485F;font-weight:750;font-size:12px;min-height:38px;padding:8px 11px}
+.bc-map-filters button:hover{border-color:#5589A4;background:#E8F4F6}
+.bc-map-filters button[aria-pressed=true]{border-color:#237C8B;background:#DCEFF0;color:#104A5A}
+.bc-map-filters button:focus-visible{outline:3px solid #E37729;outline-offset:2px}
+.bc-map-count{font-size:11px;color:#52667E;line-height:1.5;margin:4px 4px 9px;font-variant-numeric:tabular-nums}
+#geoMap .bc-map-marker{cursor:pointer;outline:none}
+#geoMap .bc-map-marker circle{fill:#E67A27;stroke:#FFE7CB;stroke-width:1.7;transition:stroke-width .15s ease}
+#geoMap .bc-map-marker.clustered circle{fill:#2B9BA8;stroke:#A4F1E3;stroke-width:2.4}
+#geoMap .bc-map-marker text{fill:white;font-family:system-ui,sans-serif;font-size:14px;font-weight:800;pointer-events:none}
+#geoMap .bc-map-marker:hover circle,#geoMap .bc-map-marker.selected circle,#geoMap .bc-map-marker:focus-visible circle{stroke:white;stroke-width:4;filter:drop-shadow(0 0 5px #8FE7EE)}
+#geoMap .bc-map-marker:focus-visible{outline:none}
+.bc-map-detail{margin:12px 2px 4px;border:1px solid #CADAE8;background:#FCFEFF;border-radius:11px;padding:13px 15px;max-height:400px;overflow-y:auto;overscroll-behavior:contain}
+.bc-map-detail h3{font-size:17px;margin:0 0 7px;letter-spacing:-.03em}
+.bc-map-disclaimer,.bc-map-empty{font-size:12px;line-height:1.5;color:#50657B;margin:3px 0 9px}
+.bc-map-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:9px}
+.bc-map-contact{display:grid;align-content:start;gap:5px;padding:11px;border:1px solid #DCE6F1;border-radius:9px;background:#fff;min-width:0}
+.bc-map-contact strong{font-size:13px;line-height:1.35;overflow-wrap:anywhere}
+.bc-map-contact span,.bc-map-contact small{font-size:11px;color:#4A5F75;overflow-wrap:anywhere}
+.bc-map-contact p{font-size:12px;margin:0;color:#33495F;overflow-wrap:anywhere}
+.bc-map-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:2px}
+.bc-map-links a{display:inline-flex;align-items:center;min-height:33px;padding:6px 9px;font-size:11px;font-weight:750;border:1px solid #CFDFE8;background:#F1F8FB;border-radius:7px;color:#145A6A;text-decoration:none}
+.bc-map-links a:hover{border-color:#3F8998}
+.bc-map-links a:focus-visible{outline:3px solid #E37729;outline-offset:2px}
+@media(max-width:740px){.bc-map-filters{gap:6px}.bc-map-filters button{font-size:11px;padding:7px 9px;min-height:39px}.bc-map-detail{max-height:360px;padding:10px}.bc-map-list{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){#geoMap .bc-map-marker circle{transition:none}}
+@media print{.bc-map-filters{display:none}.bc-map-detail{max-height:none;overflow:visible}.bc-map-list{grid-template-columns:repeat(2,1fr)}}
+
+
+.bc-map-more{display:block;margin:10px auto 0;background:#E5F2F5;color:#13586A;border:1px solid #9FBFCC;border-radius:7px;padding:9px 14px;font-weight:800;cursor:pointer;min-height:40px}
+.bc-map-more:hover{background:#CFEAF0}
+.bc-map-more:focus-visible{outline:3px solid #E37729;outline-offset:2px}

@@ -1,0 +1,20 @@
+
+.top .tools{display:flex;align-items:center;gap:10px;flex-wrap:nowrap;min-width:0}
+.top .tools #bcWorkspaceLanguage{min-width:67px;flex:none}
+.top .tools #liveState{font-size:12px;max-width:200px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bc-toolbar-menu{position:relative;flex:none;z-index:11}
+.bc-toolbar-menu>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;min-height:40px;padding:8px 14px;border-radius:11px;border:1px solid #729eaf80;background:#13364c;color:#ecfaff;font-weight:760}
+.bc-toolbar-menu>summary::-webkit-details-marker,.bc-week-menu>summary::-webkit-details-marker{display:none}
+.bc-toolbar-menu>summary span{color:#E86040;font-size:18px}
+.bc-toolbar-panel{position:absolute;right:0;top:calc(100% + 9px);z-index:20;width:min(370px,calc(100vw - 32px));display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px;background:#102b42;border:1px solid #50788e;border-radius:15px;box-shadow:0 20px 52px #0009}
+.top .bc-toolbar-panel>button{width:100%;min-height:44px;margin:0;background:#eef8fd;color:#112e43;border-radius:9px;border:1px solid #add0df}
+.top .bc-toolbar-panel>button:first-child{grid-column:1/-1}
+.bc-week-menu{position:relative;flex:none;margin-left:auto}
+.bc-week-menu>summary{cursor:pointer;list-style:none;background:#193d57;color:#e5f8ff;font-weight:760;min-height:40px;display:flex;align-items:center;border:1px solid #78b6c4;border-radius:10px;padding:8px 12px}
+.bc-week-menu>div{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:11px;background:#14334a;border:1px solid #6f9cae;border-radius:13px;box-shadow:0 18px 40px #0008;position:absolute;right:0;top:calc(100% + 6px);z-index:12;width:300px;max-width:calc(100vw - 36px)}
+.bc-week-menu button{font-size:13px;min-height:42px;padding:8px!important}
+.bc-week-menu a{grid-column:1/-1;padding:8px 11px;border:1px solid #5688a0;border-radius:9px;text-decoration:none;text-align:center;background:#102c44}
+.bc-toolbar-menu>summary:focus-visible,.bc-week-menu>summary:focus-visible{outline:3px solid #E86040;outline-offset:3px}
+@media(max-width:900px){.top .tools{width:100%;margin:0;flex-wrap:wrap;justify-content:flex-end}.top .tools #liveState{margin-right:auto;max-width:32vw}.bc-workspace-tabs button{min-height:52px}}
+@media(max-width:540px){.bc-weekbar .bc-grow{flex:1 1 100%}.bc-toolbar-panel{width:min(320px,calc(100vw - 28px))}.bc-week-menu>div{right:0}}
+@media print{.bc-toolbar-menu,.bc-week-menu{display:none!important}}

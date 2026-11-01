@@ -1,0 +1,1 @@
+(()=>{"use strict";const a=new URLSearchParams(location.search);if(location.pathname.endsWith("/clientfinder/dashboard.html")&&"installed"===a.get("source")&&!location.hash){const e=a.get("lang");location.replace("/"+(["es","en","pt"].includes(e)?"?lang="+e:""))}})();
