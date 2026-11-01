@@ -71,3 +71,6 @@ html body .crm-list-footer:not(#_){background:transparent!important}
 /* agenda-silk fuerza -webkit-text-fill-color oscuro: el relleno sigue al color para que el modo oscuro y el control de contraste sean reales. */
 html body *:not(#_):not(#__){-webkit-text-fill-color:currentColor!important}
 html body :is(.crm-filterbar button,.crm-search-wrap):not(#_):not(#__){border:1px solid #2B4658!important;border-radius:999px}
+html body :is(h1,h2,h3,h4,.crm-overline,.index,.index *):not(#_):not(#__){color:#E7ECF4!important}
+html body .crm-overline:not(#_):not(#__){color:#9FE6DD!important}
+@media (max-width:600px){html body .crm-filterbar:not(#_){flex-wrap:wrap!important;overflow:visible!important}}

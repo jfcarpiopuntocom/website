@@ -12,7 +12,8 @@ const GA4_MEASUREMENT_ID = "G-4E9KPCFR8E";
 // All other public HTML is measured centrally here so future pages inherit GA4 without
 // duplicating tags in dozens of static files.
 function shouldInjectAnalytics(pathname) {
-  return !(pathname === "/friendly123" || pathname.startsWith("/friendly123/"));
+  // BuscaClientes trae su propia CSP sin GA: inyectarlo solo producía errores sin medir nada.
+  return !(pathname === "/friendly123" || pathname.startsWith("/friendly123/") || pathname.startsWith("/buscaclientes/"));
 }
 
 class GA4HeadInjector {

@@ -19,3 +19,12 @@
 
 /* Pie: subir contraste a AA (4.19 → >4.5) */
 html body .footer span:not(#_){color:#B7C9D6!important}
+/* QA móvil (agente, 31 oct): cabecera en una fila y buscador más arriba; espacio tras la cifra en tarjetas. */
+.lead-data strong{margin-right:.3em}
+@media (max-width:600px){
+  .top .menu .bc-launch-link,.top .menu .bc-quick-help{display:none!important}
+  .top .menu{flex-wrap:nowrap!important;gap:6px!important;justify-content:flex-start!important;max-width:100%}
+  .top .menu>*{flex:0 1 auto;min-width:0;white-space:nowrap}
+  .globe-wrap{height:250px!important}
+  .hero h1{font-size:clamp(30px,8.5vw,40px)!important}
+}
