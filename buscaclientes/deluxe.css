@@ -16,3 +16,6 @@
 .bc-migra{max-width:1296px;margin:0 auto 12px;padding:10px 16px;border:1px solid #2b4658;border-radius:12px;background:#0d2633cc;color:#cfe6ef;font-size:14px}
 .bc-migra a{color:#83F0E5;font-weight:700}
 .bc-migra button{float:right;background:none;border:0;color:#cfe6ef;font-size:18px;cursor:pointer;line-height:1}
+
+/* Pie: subir contraste a AA (4.19 → >4.5) */
+html body .footer span:not(#_){color:#B7C9D6!important}

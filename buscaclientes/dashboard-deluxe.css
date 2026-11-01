@@ -1,0 +1,73 @@
+/* Agenda deluxe (JFC 31 oct 2026): mismo estilo oscuro que la búsqueda. Capa aparte y reversible. */
+:root{color-scheme:dark;--canvas:#08111F;--white:#0F1E33;--ice:#13253D;--ink:#E7ECF4;--muted:#A9BBD6;--line:#2B4658}
+html body,body,body.bc-desktop-app{background:radial-gradient(ellipse 70% 50% at 50% 0%,#12354a 0%,#08111F 70%)!important;color:#E7ECF4!important}
+#workspaceCRM,
+.as-chip,
+.as-contacts,
+.bc-delight-export button,
+.bc-desktop-app #crmFullDirectory[open],
+.bc-desktop-app #crmFullDirectory[open] summary,
+.bc-map-contact,
+.bc-map-detail,
+.bc-map-filters button,
+.bc-map-links a,
+.bc-map-more,
+.bc-resource-page,
+.bc-resource-page .note,
+.bc-resource-page select,
+.bc-search-dock,
+.bc-search-dock input,.bc-search-dock select,
+.bc-upsell-tag,
+.bc-weekbar button,
+.bc-workspace-tabs,
+.crm-channel-link,
+.crm-contact-card,
+.crm-counter,
+.crm-directory-disclosure,
+.crm-directory-disclosure summary,
+.crm-edit-form input,.crm-edit-form select,.crm-edit-form textarea,
+.crm-empty,
+.crm-filterbar button,
+.crm-inbox,.crm-detail,
+.crm-metrics article,
+.crm-next-action,
+.crm-outreach,
+.crm-search-wrap,
+.explain,
+.force,
+.force .status,
+.force:first-child .status,
+.kpi,.card,.map-card,
+.notice,
+.route,
+.route a,
+.run,
+.small-chip,
+.tablewrap,
+.tl-cell,
+.tl-controls,
+.tl-controls select,
+.tl-evidence,
+.tl-panel,
+.tools button,
+.top,
+.top .bc-toolbar-panel>button,
+.track,
+input[type=search],
+th{background:#0F1E33!important;color:#E7ECF4!important;border-color:#2B4658!important}
+input,select,textarea{background:#0B1729!important;color:#E7ECF4!important;border-color:#2B4658!important}
+input::placeholder,textarea::placeholder{color:#8DA6B5!important}
+.bc-workspace-tabs button[aria-selected=true],.crm-contact-card.is-selected{background:#16324A!important;color:#fff!important;border-color:#83F0E5!important}
+/* Anulaciones con especificidad alta (:not(#_) suma nivel id) para reglas originales más fuertes. */
+html body :is(#tabIntel,#crmDetail,#crmQuickSearch,#crmListCount,#crmFullDirectory,#crmFullDirectory>summary,.crm-metrics,.crm-metrics article,.crm-inbox,.crm-search-wrap,.crm-filterbar button,.crm-empty,.empty):not(#_):not(#__){background:#0F1E33!important;color:#E7ECF4!important;border-color:#2B4658!important}
+html body :is(.crm-metrics strong,.crm-metrics b,.crm-metrics span,.crm-detail h2,.crm-detail h3,.crm-detail strong,.crm-empty strong,.crm-empty a,.crm-inbox h2,.crm-inbox h3,.crm-inbox label,.crm-directory-disclosure a,#crmFullDirectory summary):not(#_):not(#__){color:#E7ECF4!important}
+html body :is(.crm-metrics p,.crm-metrics small,.crm-detail p,.crm-empty p,.empty,.crm-counter,.crm-inbox label span):not(#_):not(#__){color:#A9BBD6!important}
+html body .crm-filterbar button[aria-pressed=true]:not(#_):not(#__),html body .crm-filterbar button.is-active:not(#_):not(#__){background:#16324A!important;border-color:#83F0E5!important}
+html body .crm-search-cta:not(#_):not(#__){background:#C24A2C!important;color:#fff!important}
+html body :is(#tabIntel,#tabIntel *,#crmFullDirectory *,.crm-directory-hint):not(#_):not(#__){color:#D3DEEC!important}
+html body a[href*="migrar"]:not(#_):not(#__){color:#83F0E5!important}
+html body :is(.crm-list-footer,.crm-list-footer *):not(#_):not(#__){color:#C9D6E6!important}
+html body .crm-list-footer:not(#_){background:transparent!important}
+/* agenda-silk fuerza -webkit-text-fill-color oscuro: el relleno sigue al color para que el modo oscuro y el control de contraste sean reales. */
+html body *:not(#_):not(#__){-webkit-text-fill-color:currentColor!important}
+html body :is(.crm-filterbar button,.crm-search-wrap):not(#_):not(#__){border:1px solid #2B4658!important;border-radius:999px}
