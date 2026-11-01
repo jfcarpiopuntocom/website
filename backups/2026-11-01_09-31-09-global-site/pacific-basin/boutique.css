@@ -1,0 +1,25 @@
+/* PBIU · capa boutique sobre tema.css: serif, un solo acento dorado, líneas finas, botones rectos.
+   Se activa con <body class="bq">. Los colores siguen saliendo de las variables del tema. */
+.bq{--c:var(--amber)}
+.bq .c1,.bq .c2,.bq .c3,.bq .c4,.bq [style*="--c"]{--c:var(--amber)!important}
+.bq h1,.bq h2,.bq h3,.bq .price,.bq .pr,.bq .ebitda,.bq .price-big{font-family:'Playfair Display',Georgia,serif;text-transform:none;font-weight:600;letter-spacing:-.01em;line-height:1.12}
+.bq h1{font-size:clamp(36px,4vw,58px)}
+.bq h2{font-size:clamp(28px,2.8vw,42px)}
+.bq h3{font-size:clamp(19px,1.5vw,23px)}
+.bq .hl,.bq .hl.a,.bq .hl.b,.bq .hl.m{color:var(--amber);font-style:italic;text-decoration:none}
+.bq .strip{height:3px;background:var(--amber)}
+.bq .card{border-top:2px solid var(--amber);border-radius:4px;box-shadow:none}
+.bq .card.star,.bq .step.star{border:1px solid var(--amber);border-top:4px solid var(--amber)}
+.bq .btn{border-radius:2px;letter-spacing:.16em}
+.bq .btn.g{border-width:1px}
+.bq .mono{letter-spacing:.2em}
+.bq .k,.bq .mono.k{color:var(--amber)}
+.bq .kpis div,.bq .metrics div,.bq .opps div{border-top-width:2px;border-radius:4px}
+.bq .hph,.bq .cover{border-top-width:3px;border-radius:4px}
+.bq .tema{border-radius:2px}
+.bq .eyebrow{border-radius:2px}
+.lang{display:flex;border:1px solid var(--line);border-radius:2px;overflow:hidden;flex:none}
+.lang a,.lang span{font:700 11px 'Space Mono';letter-spacing:.14em;padding:0 10px;min-height:44px;display:grid;place-items:center;text-decoration:none;color:var(--mute)}
+.lang span{background:var(--head);color:var(--bg)}
+.lang a:hover{color:var(--head)}
+@media (max-width:340px){.lang a,.lang span{padding:0 6px;min-height:40px}}

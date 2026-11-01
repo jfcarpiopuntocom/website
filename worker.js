@@ -108,7 +108,7 @@ export default {
     }
 
     // 1c. Slides borrados por JFC 2026-09-30 (El dato, Dashboards: redundantes con Visores). 301 para no perder SEO.
-    const GONE = { "/el-dato/": "/visores/", "/dashboards/": "/visores/", "/en/the-data-point/": "/en/business-viewers/",
+    const GONE = { "/es/": "/", "/el-dato/": "/visores/", "/dashboards/": "/visores/", "/en/the-data-point/": "/en/business-viewers/",
       "/en/dashboards/": "/en/business-viewers/", "/17-consecuencias-es.pdf": "/consecuencias-es.pdf", "/17-consecuencias-en.pdf": "/consecuencias-en.pdf" };
     const to = GONE[url.pathname] || GONE[url.pathname + "/"];
     if (to) return Response.redirect("https://jfcarpio.com" + to, 301);

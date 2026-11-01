@@ -1,0 +1,1250 @@
+[
+  {
+    "file": ".github/workflows/validate-html.yml",
+    "sha256": "cc5cc4e46b9cbe2039537c6ac89737f2c878a2697bc0d706501991bb5858a6bf",
+    "bytes": 10111,
+    "lines": 282
+  },
+  {
+    "file": "404.html",
+    "sha256": "20e6f5d9c0c7189fc8130a387868316903a4a5729f528f9609be179a2a4e3a3e",
+    "bytes": 2586,
+    "lines": 28
+  },
+  {
+    "file": "AGENTS.md",
+    "sha256": "0786946c4ae45d7b03c2d09b3099b7fc2ae63e2e8f5de6f5bc940b87bb5bba72",
+    "bytes": 22245,
+    "lines": 249
+  },
+  {
+    "file": "LEDD-sale/index.html",
+    "sha256": "8a338710d39788b7c7207110d3eee948ea417170302414b82f4e2b45a57441a7",
+    "bytes": 17987,
+    "lines": 288
+  },
+  {
+    "file": "apps/index.html",
+    "sha256": "1c7c0e974bce5a1bf4ff5401b6224360cf37220fff7e1aec99b8920e342e7715",
+    "bytes": 16620,
+    "lines": 119
+  },
+  {
+    "file": "articulos/descuentos-margen-ventas-adicionales/index.html",
+    "sha256": "fc50c8e4a40103750d749375e238829e05dfa2212448ebdf96f7fd72da644cb4",
+    "bytes": 9491,
+    "lines": 59
+  },
+  {
+    "file": "articulos/index.html",
+    "sha256": "f5472015869fd1e41da0b3fbfeb8a0916e461af862721984871ea1275bc053b7",
+    "bytes": 8410,
+    "lines": 62
+  },
+  {
+    "file": "articulos/inventario-inmovilizado-caja-proveedores/index.html",
+    "sha256": "7ed90f056a179b409abe89dfde12f7f1eeb471962dd7f0c9ed476eb771db6ea6",
+    "bytes": 10373,
+    "lines": 38
+  },
+  {
+    "file": "articulos/margen-bruto-contribucion-utilidad-neta/index.html",
+    "sha256": "dd9fbccb32c4236d4cd20ff484b24159195e7010b30967caa45732fd38ab7bed",
+    "bytes": 12178,
+    "lines": 50
+  },
+  {
+    "file": "articulos/ventas-suben-caja-baja/index.html",
+    "sha256": "462f53045d5c227c8c0c50c52eb2d057f0a552e2b38e029bb67f2ed746ff5df0",
+    "bytes": 10312,
+    "lines": 42
+  },
+  {
+    "file": "asesorias-express.css",
+    "sha256": "037a7bc5d11927b1395c1becb544a0d19df50740d26913f9fe9835223dab7588",
+    "bytes": 2750,
+    "lines": 23
+  },
+  {
+    "file": "assets/pbiu.css",
+    "sha256": "1336fd89d3595928b460e2ccf0ed728223bdd4eb02930c81e8f2876e51fb7312",
+    "bytes": 14070,
+    "lines": 23
+  },
+  {
+    "file": "assets/v2/interior.css",
+    "sha256": "dcb47bc16b97a20e2ab120b487d3a2a8e4f628de632be55ffca1e6572b9c4a2d",
+    "bytes": 739,
+    "lines": 8
+  },
+  {
+    "file": "assets/v2/tema.css",
+    "sha256": "842314837605823f922ae5474d5a3b81a5e000707d3961efbd5028a62e3cda75",
+    "bytes": 11922,
+    "lines": 144
+  },
+  {
+    "file": "blog/index.html",
+    "sha256": "75da0d4f9036ccdfdb9194471511a6f6f3f2ef1156cf03c2e4838b2b4a4978f1",
+    "bytes": 37298,
+    "lines": 719
+  },
+  {
+    "file": "buscaclientes/about.html",
+    "sha256": "48946f70ae1d7edd774f2c9f504cfa83a7f0e588c3b941df577fd659dbf0a6aa",
+    "bytes": 1826,
+    "lines": 0
+  },
+  {
+    "file": "buscaclientes/agenda-silk.css",
+    "sha256": "0fa7ff21cd830da8d2b1b7cfc0b5089dcdc91a93cf0b48405b2bb67908e3ca7f",
+    "bytes": 20711,
+    "lines": 189
+  },
+  {
+    "file": "buscaclientes/bc-motion.css",
+    "sha256": "3a0a1f9e79a849ab6f8c8acb8b5b45fc664ce655b5fbe9e6e95410676e262b4b",
+    "bytes": 1786,
+    "lines": 17
+  },
+  {
+    "file": "buscaclientes/brand-logo-fix.css",
+    "sha256": "5cc1c1f3ecd65e0ad122012ee332de2d830c8498b869ab842b2a888296a02baf",
+    "bytes": 1277,
+    "lines": 45
+  },
+  {
+    "file": "buscaclientes/brand-stack.css",
+    "sha256": "a93d444b5a32d5e9991ca6aa5d680e2c023fdef25938d12b7e12ec5cb4c0ddc2",
+    "bytes": 1550,
+    "lines": 16
+  },
+  {
+    "file": "buscaclientes/choice-b.css",
+    "sha256": "c82847ef3c62ed9c64a3cfbbaa32dbd184fa937996fe7ddcb411c7e25c6cd38f",
+    "bytes": 9510,
+    "lines": 114
+  },
+  {
+    "file": "buscaclientes/crm-delight.css",
+    "sha256": "e05ac4e0d47f3bc8aebbe2a8d2d9b7c9ec1d83c1f28098d6b646a6b615cb7543",
+    "bytes": 5576,
+    "lines": 49
+  },
+  {
+    "file": "buscaclientes/crm-studio.css",
+    "sha256": "d1ee500ce5fa292589a526e0aee396477ab55c77257fdbbe620f1debac8680de",
+    "bytes": 14438,
+    "lines": 130
+  },
+  {
+    "file": "buscaclientes/dashboard-deluxe.css",
+    "sha256": "d53831c99401b4565bc6ff27cc7f32eb9d195925ef823a2fecf8582c17d11be8",
+    "bytes": 4011,
+    "lines": 76
+  },
+  {
+    "file": "buscaclientes/dashboard.css",
+    "sha256": "2530484a777f1edc8bcabe125fa2ebaa9c6104392b8485359300ebc5081ec1cd",
+    "bytes": 9405,
+    "lines": 71
+  },
+  {
+    "file": "buscaclientes/dashboard.html",
+    "sha256": "5f719224ff2ade75f0d8f808f8fe592f8e20d88c689914b9762ce812420570d1",
+    "bytes": 22574,
+    "lines": 181
+  },
+  {
+    "file": "buscaclientes/deluxe.css",
+    "sha256": "f4a9c0bbf10889c81c64549587a0387240f64318c141da773f139b97edc56951",
+    "bytes": 2190,
+    "lines": 43
+  },
+  {
+    "file": "buscaclientes/help.html",
+    "sha256": "f9a12f66e608150f7c0da7f03ed59f0d9c05ca4de5c525d3ea4d5ce83819c9de",
+    "bytes": 20039,
+    "lines": 118
+  },
+  {
+    "file": "buscaclientes/index-splash-anterior-2026-10-31.html",
+    "sha256": "f7117b6d72d0319c822b3e84986995fa73e2fc064cde39cc13527cd78357cc8c",
+    "bytes": 9376,
+    "lines": 100
+  },
+  {
+    "file": "buscaclientes/index.html",
+    "sha256": "25b30b9eb03a65efc3c29f4fd8faff396eb378501a9fd731e8a96d69ac5d87e1",
+    "bytes": 108252,
+    "lines": 55
+  },
+  {
+    "file": "buscaclientes/instalar.html",
+    "sha256": "2694baa63341625a3b38221a8ec34a62beb8e7c4d3dd05cedf10f4fca661dc72",
+    "bytes": 11084,
+    "lines": 34
+  },
+  {
+    "file": "buscaclientes/kit-libre.html",
+    "sha256": "760128164ad1905a68e71b737876f242b88cb2025ac94eae239bee4a1401cc98",
+    "bytes": 4002,
+    "lines": 0
+  },
+  {
+    "file": "buscaclientes/map-explorer.css",
+    "sha256": "b4371cbd353536b4dab5e141ccf957467eea1d31dadc46802e92865ef45b5d8f",
+    "bytes": 3205,
+    "lines": 33
+  },
+  {
+    "file": "buscaclientes/migrar.html",
+    "sha256": "1f072249f10a3c81b46f37241a1b5b9725cbf30c99d242893dc190768429250d",
+    "bytes": 6542,
+    "lines": 11
+  },
+  {
+    "file": "buscaclientes/mision.html",
+    "sha256": "eecd4ad223ccf02024e0194b33235fbb928c11ddfea8c5ba0c545b321811a3a7",
+    "bytes": 1194,
+    "lines": 0
+  },
+  {
+    "file": "buscaclientes/planes-anterior-2026-10-31.html",
+    "sha256": "6edb4deedbe70b69ab06c2120293e83c7baa62bb70e7f7f414749d7875e137aa",
+    "bytes": 5192,
+    "lines": 7
+  },
+  {
+    "file": "buscaclientes/planes.html",
+    "sha256": "0fe0806e048829517f659b3f6428692181aa19a7d1b9bff960089a8602c46eae",
+    "bytes": 5789,
+    "lines": 7
+  },
+  {
+    "file": "buscaclientes/privacy.html",
+    "sha256": "cdaaa2e4090871dec0a5b7ea13e9d0e78e710a25d0a9c8cec6628d4e801e6380",
+    "bytes": 3034,
+    "lines": 0
+  },
+  {
+    "file": "buscaclientes/resource-delight.css",
+    "sha256": "44b4439c02bd588f1bd677c407539577d013112789fa8e338eca206fba1caaeb",
+    "bytes": 7183,
+    "lines": 58
+  },
+  {
+    "file": "buscaclientes/results-wow.css",
+    "sha256": "fb0414a1b3a70d60cd32052623ea1b0331888e0da094bee34be76e00f0ac3fab",
+    "bytes": 11530,
+    "lines": 155
+  },
+  {
+    "file": "buscaclientes/shell-005-editorial.css",
+    "sha256": "42dffaafcde6b1d51c6fb271f2f591e1ed52ba03c0f3b1fb9584ecdff2ac4e72",
+    "bytes": 2136,
+    "lines": 30
+  },
+  {
+    "file": "buscaclientes/shell-009-visual.css",
+    "sha256": "98ac3cc7e109b20a6bbe49651e04b42f97396e112d5bf6f157624c358b7979dc",
+    "bytes": 2100,
+    "lines": 15
+  },
+  {
+    "file": "buscaclientes/shell-010-elegance.css",
+    "sha256": "94dc3e7a58967021d2609cbcb727702760b798c6f8322334e5b3f96be11358ad",
+    "bytes": 3512,
+    "lines": 49
+  },
+  {
+    "file": "buscaclientes/shell-014-ux.css",
+    "sha256": "998a82e0340d606aa6af8d5adf051d9c08ce7d2bfd36b7a94ac77077b4b4ef45",
+    "bytes": 2840,
+    "lines": 20
+  },
+  {
+    "file": "buscaclientes/shell-015-launch.css",
+    "sha256": "2ed459dd4b5a5a137eb1353c8854feda88c3bb5f07da4bb874c4a0ae690a07f3",
+    "bytes": 3745,
+    "lines": 27
+  },
+  {
+    "file": "buscaclientes/shell-021-workspace.css",
+    "sha256": "49b068a3be528cdb81b02331a9f5a5c4fb9f21c575ed0a6b7d3b092e02ebf8db",
+    "bytes": 6436,
+    "lines": 35
+  },
+  {
+    "file": "buscaclientes/shell-023-reading.css",
+    "sha256": "dc8d22b5992f7c4ee56bd5dbbabec4d54f06c9ccc1b296a68fd2ab7ff689f152",
+    "bytes": 2694,
+    "lines": 22
+  },
+  {
+    "file": "buscaclientes/shell-028-ui.css",
+    "sha256": "e13c08b245484f5c008634aaadccc4ac1b39fb9f288b7fc257db950ef477f4c8",
+    "bytes": 2412,
+    "lines": 23
+  },
+  {
+    "file": "buscaclientes/shell-029-dashboard.css",
+    "sha256": "4b195b1026b590f4727b4d1c0e75d078cbd5763760504d892728a302cf2461f1",
+    "bytes": 2480,
+    "lines": 20
+  },
+  {
+    "file": "buscaclientes/site-entry-handoff.css",
+    "sha256": "7eb78066c9657fd6276d009bccda221d41ee9383d04c271ec53cf9435526a227",
+    "bytes": 5264,
+    "lines": 39
+  },
+  {
+    "file": "buscaclientes/swiss-army.css",
+    "sha256": "a9819636765dc2d47db4c35a448e4e6afa1797e9bbb75d40ff790e01c1231b11",
+    "bytes": 13523,
+    "lines": 182
+  },
+  {
+    "file": "buscaclientes/terminator-scan.css",
+    "sha256": "acc1bded7cd5890fe5e2f4ded364cbcb928ec668f529054a29d84d3c4e3c20ad",
+    "bytes": 3814,
+    "lines": 77
+  },
+  {
+    "file": "buscaclientes/terms.html",
+    "sha256": "10628473c66b23c555809123e1d3b64e1386f8c7be0b2e75864b093324423a3c",
+    "bytes": 2144,
+    "lines": 0
+  },
+  {
+    "file": "buscaclientes/territory-lab.css",
+    "sha256": "37ce817131c0abd606d9217a82176677b1bc26d848f31f0112b79be3ae1695ac",
+    "bytes": 3086,
+    "lines": 28
+  },
+  {
+    "file": "clientes/index.html",
+    "sha256": "da6fdcdf23ea7d15f8f5e3685495d3375a0a9831e1dd2e3638876b0848e92ac1",
+    "bytes": 5956,
+    "lines": 48
+  },
+  {
+    "file": "clientfinder/about.html",
+    "sha256": "3d0876653272dc34740bbd639b585bf8e9aaa16f851d696fd3838c736787a3b5",
+    "bytes": 2040,
+    "lines": 0
+  },
+  {
+    "file": "clientfinder/agenda-silk.css",
+    "sha256": "c62f65b28b8a99c30358997b9827f7c47b24faf5dbdb6331ecb1616ce1f82db5",
+    "bytes": 20898,
+    "lines": 189
+  },
+  {
+    "file": "clientfinder/bc-motion.css",
+    "sha256": "3a0a1f9e79a849ab6f8c8acb8b5b45fc664ce655b5fbe9e6e95410676e262b4b",
+    "bytes": 1786,
+    "lines": 17
+  },
+  {
+    "file": "clientfinder/brand-logo-fix.css",
+    "sha256": "5cc1c1f3ecd65e0ad122012ee332de2d830c8498b869ab842b2a888296a02baf",
+    "bytes": 1277,
+    "lines": 45
+  },
+  {
+    "file": "clientfinder/brand-stack.css",
+    "sha256": "a93d444b5a32d5e9991ca6aa5d680e2c023fdef25938d12b7e12ec5cb4c0ddc2",
+    "bytes": 1550,
+    "lines": 16
+  },
+  {
+    "file": "clientfinder/choice-b.css",
+    "sha256": "c82847ef3c62ed9c64a3cfbbaa32dbd184fa937996fe7ddcb411c7e25c6cd38f",
+    "bytes": 9510,
+    "lines": 114
+  },
+  {
+    "file": "clientfinder/crm-delight.css",
+    "sha256": "e05ac4e0d47f3bc8aebbe2a8d2d9b7c9ec1d83c1f28098d6b646a6b615cb7543",
+    "bytes": 5576,
+    "lines": 49
+  },
+  {
+    "file": "clientfinder/crm-studio.css",
+    "sha256": "d1ee500ce5fa292589a526e0aee396477ab55c77257fdbbe620f1debac8680de",
+    "bytes": 14438,
+    "lines": 130
+  },
+  {
+    "file": "clientfinder/dashboard-deluxe.css",
+    "sha256": "d53831c99401b4565bc6ff27cc7f32eb9d195925ef823a2fecf8582c17d11be8",
+    "bytes": 4011,
+    "lines": 76
+  },
+  {
+    "file": "clientfinder/dashboard.css",
+    "sha256": "2530484a777f1edc8bcabe125fa2ebaa9c6104392b8485359300ebc5081ec1cd",
+    "bytes": 9405,
+    "lines": 71
+  },
+  {
+    "file": "clientfinder/dashboard.html",
+    "sha256": "e6adecd801e17b73c58cbd722d8e2d80cfdb4ffafc6d080eada63f946e705a7d",
+    "bytes": 22784,
+    "lines": 181
+  },
+  {
+    "file": "clientfinder/deluxe.css",
+    "sha256": "f4a9c0bbf10889c81c64549587a0387240f64318c141da773f139b97edc56951",
+    "bytes": 2190,
+    "lines": 43
+  },
+  {
+    "file": "clientfinder/help.html",
+    "sha256": "129c47f658d7414ad92f959caba24548cab46e3a2988ccd53de6c0f3417d1ef1",
+    "bytes": 20253,
+    "lines": 118
+  },
+  {
+    "file": "clientfinder/index.html",
+    "sha256": "f03fda70a5feb7c67c1199d61ec92286367392b7c8d09ae4092edac55fcb7d56",
+    "bytes": 108446,
+    "lines": 55
+  },
+  {
+    "file": "clientfinder/instalar.html",
+    "sha256": "2fb6b7b03ba155f2e1297e773b510663a97802ccba3a4fab242cc8dee96c781f",
+    "bytes": 11286,
+    "lines": 34
+  },
+  {
+    "file": "clientfinder/kit-libre.html",
+    "sha256": "b77bbee40f76b6bc9aa58d89133314b5125ea9436831b78d809783b170d8fb51",
+    "bytes": 4216,
+    "lines": 0
+  },
+  {
+    "file": "clientfinder/map-explorer.css",
+    "sha256": "b4371cbd353536b4dab5e141ccf957467eea1d31dadc46802e92865ef45b5d8f",
+    "bytes": 3205,
+    "lines": 33
+  },
+  {
+    "file": "clientfinder/migrar.html",
+    "sha256": "e744258f7398a1bfd0fb1cd923721c004ba32f3fba8b643688fee62a9a7b46fc",
+    "bytes": 6767,
+    "lines": 11
+  },
+  {
+    "file": "clientfinder/mision.html",
+    "sha256": "97f0fdae4cb5642cc0345776cba12724f065b2c01e62fda90387e78d512fa319",
+    "bytes": 1408,
+    "lines": 0
+  },
+  {
+    "file": "clientfinder/planes.html",
+    "sha256": "a354f439d25805cbf7d1d156c7d118cf51ad237fd65ad611789c5dcee579a632",
+    "bytes": 6003,
+    "lines": 7
+  },
+  {
+    "file": "clientfinder/privacy.html",
+    "sha256": "ba52e5ff64f6531a539c1719fb6c7ffbab562a77aae6f1c9a4474ed336cb7749",
+    "bytes": 3248,
+    "lines": 0
+  },
+  {
+    "file": "clientfinder/resource-delight.css",
+    "sha256": "44b4439c02bd588f1bd677c407539577d013112789fa8e338eca206fba1caaeb",
+    "bytes": 7183,
+    "lines": 58
+  },
+  {
+    "file": "clientfinder/results-wow.css",
+    "sha256": "fb0414a1b3a70d60cd32052623ea1b0331888e0da094bee34be76e00f0ac3fab",
+    "bytes": 11530,
+    "lines": 155
+  },
+  {
+    "file": "clientfinder/shell-005-editorial.css",
+    "sha256": "42dffaafcde6b1d51c6fb271f2f591e1ed52ba03c0f3b1fb9584ecdff2ac4e72",
+    "bytes": 2136,
+    "lines": 30
+  },
+  {
+    "file": "clientfinder/shell-009-visual.css",
+    "sha256": "98ac3cc7e109b20a6bbe49651e04b42f97396e112d5bf6f157624c358b7979dc",
+    "bytes": 2100,
+    "lines": 15
+  },
+  {
+    "file": "clientfinder/shell-010-elegance.css",
+    "sha256": "94dc3e7a58967021d2609cbcb727702760b798c6f8322334e5b3f96be11358ad",
+    "bytes": 3512,
+    "lines": 49
+  },
+  {
+    "file": "clientfinder/shell-014-ux.css",
+    "sha256": "998a82e0340d606aa6af8d5adf051d9c08ce7d2bfd36b7a94ac77077b4b4ef45",
+    "bytes": 2840,
+    "lines": 20
+  },
+  {
+    "file": "clientfinder/shell-015-launch.css",
+    "sha256": "2ed459dd4b5a5a137eb1353c8854feda88c3bb5f07da4bb874c4a0ae690a07f3",
+    "bytes": 3745,
+    "lines": 27
+  },
+  {
+    "file": "clientfinder/shell-021-workspace.css",
+    "sha256": "49b068a3be528cdb81b02331a9f5a5c4fb9f21c575ed0a6b7d3b092e02ebf8db",
+    "bytes": 6436,
+    "lines": 35
+  },
+  {
+    "file": "clientfinder/shell-023-reading.css",
+    "sha256": "dc8d22b5992f7c4ee56bd5dbbabec4d54f06c9ccc1b296a68fd2ab7ff689f152",
+    "bytes": 2694,
+    "lines": 22
+  },
+  {
+    "file": "clientfinder/shell-028-ui.css",
+    "sha256": "e13c08b245484f5c008634aaadccc4ac1b39fb9f288b7fc257db950ef477f4c8",
+    "bytes": 2412,
+    "lines": 23
+  },
+  {
+    "file": "clientfinder/shell-029-dashboard.css",
+    "sha256": "4b195b1026b590f4727b4d1c0e75d078cbd5763760504d892728a302cf2461f1",
+    "bytes": 2480,
+    "lines": 20
+  },
+  {
+    "file": "clientfinder/site-entry-handoff.css",
+    "sha256": "7eb78066c9657fd6276d009bccda221d41ee9383d04c271ec53cf9435526a227",
+    "bytes": 5264,
+    "lines": 39
+  },
+  {
+    "file": "clientfinder/swiss-army.css",
+    "sha256": "a9819636765dc2d47db4c35a448e4e6afa1797e9bbb75d40ff790e01c1231b11",
+    "bytes": 13523,
+    "lines": 182
+  },
+  {
+    "file": "clientfinder/terminator-scan.css",
+    "sha256": "acc1bded7cd5890fe5e2f4ded364cbcb928ec668f529054a29d84d3c4e3c20ad",
+    "bytes": 3814,
+    "lines": 77
+  },
+  {
+    "file": "clientfinder/terms.html",
+    "sha256": "b5e728f785f37ea1957db3fb79371676af65d25aa88d340fdb744a7edb1730fc",
+    "bytes": 2358,
+    "lines": 0
+  },
+  {
+    "file": "clientfinder/territory-lab.css",
+    "sha256": "37ce817131c0abd606d9217a82176677b1bc26d848f31f0112b79be3ae1695ac",
+    "bytes": 3086,
+    "lines": 28
+  },
+  {
+    "file": "contacto/index.html",
+    "sha256": "d185b8906ca063b2e75d9675d55460d10b10ba1c1375412fdaca5e1d44c42cdc",
+    "bytes": 10368,
+    "lines": 60
+  },
+  {
+    "file": "conversion-interiors.css",
+    "sha256": "0c4fdf5d1307db1086da25826ffd8af4a707d326e8d8d8c24999f91ae7b31107",
+    "bytes": 11601,
+    "lines": 101
+  },
+  {
+    "file": "editorial.css",
+    "sha256": "6ab25f2eeb07bf514a87472b065c0544444beddf6ae82f2cbef0c4ce1f457209",
+    "bytes": 10485,
+    "lines": 92
+  },
+  {
+    "file": "en/apps/index.html",
+    "sha256": "ccaacbf621aba471e1104f23671b1684b92c5914ca1bc8ae27b8bafd58ad34e8",
+    "bytes": 16310,
+    "lines": 119
+  },
+  {
+    "file": "en/articles/discounts-margin-extra-sales/index.html",
+    "sha256": "c09f63c82637bcd7d996cf9d6d77a1fed5d69160b1e2487897fe229c3835104c",
+    "bytes": 9126,
+    "lines": 59
+  },
+  {
+    "file": "en/articles/gross-margin-contribution-margin-net-profit/index.html",
+    "sha256": "06e4cb138e2a8df98bb63d6789e89b479df19e52e8f53a94977d6e7bfa147dc5",
+    "bytes": 11553,
+    "lines": 50
+  },
+  {
+    "file": "en/articles/index.html",
+    "sha256": "e07d949cdf3810ae255fd3f8e0de4717cec1bc750e83977df6b11818887e9370",
+    "bytes": 8375,
+    "lines": 62
+  },
+  {
+    "file": "en/articles/inventory-cash-suppliers/index.html",
+    "sha256": "d9427417ee4937722a8e3750745755e35f0e100ec028e0a0c0bc95fd7584cc73",
+    "bytes": 9772,
+    "lines": 38
+  },
+  {
+    "file": "en/articles/sales-up-cash-down/index.html",
+    "sha256": "9e282aec7587fded84617ed46afae688c3b0b8772265c950b9d6c31eb292da95",
+    "bytes": 10102,
+    "lines": 42
+  },
+  {
+    "file": "en/book/index.html",
+    "sha256": "115e7685d3c2399fb045060d8f4bc48a2ee40bae33562b9b579cc48540d30c8c",
+    "bytes": 8345,
+    "lines": 66
+  },
+  {
+    "file": "en/business-viewers/index.html",
+    "sha256": "c92947c4b57f8e32d47338877fb4477fda393716891ac495a63b340a0bb41bdf",
+    "bytes": 10114,
+    "lines": 58
+  },
+  {
+    "file": "en/clients/index.html",
+    "sha256": "eb2035bb0b9096d83f41db7882d6db497005c95e56371051bdd92e2c6a0036e7",
+    "bytes": 6027,
+    "lines": 48
+  },
+  {
+    "file": "en/contact/index.html",
+    "sha256": "189506b192c17ceeeac30774c4dc159afde52f7955ad83dad4337c71532debb1",
+    "bytes": 10354,
+    "lines": 60
+  },
+  {
+    "file": "en/free-resources/index.html",
+    "sha256": "637d7670b32ea27a9933d4c6ac78a6c412dd38a45bf29cbce6979b0fa32ade29",
+    "bytes": 6258,
+    "lines": 52
+  },
+  {
+    "file": "en/gumroad-store/index.html",
+    "sha256": "f217036c91e5c59b2fc53299497c377bb7d7214a15ec22cfa86ca9b8d59065c8",
+    "bytes": 8574,
+    "lines": 65
+  },
+  {
+    "file": "en/index.html",
+    "sha256": "bb471c6bf26508a984ae0175cc673c39a8f0eb89ff45dd06d2b0807a888d598c",
+    "bytes": 315989,
+    "lines": 3315
+  },
+  {
+    "file": "en/launch-review/index.html",
+    "sha256": "de129cd41f635fe17f05d2dbe044f46e74b6863ce63782f916bc705ce4477782",
+    "bytes": 15217,
+    "lines": 118
+  },
+  {
+    "file": "en/money-school/index.html",
+    "sha256": "16c1d2860a37cd8111b7949e8f1a899a2db688cebf724c8cd21e72fcaba3aa0c",
+    "bytes": 10113,
+    "lines": 68
+  },
+  {
+    "file": "en/reports/index.html",
+    "sha256": "455f069eb317554d4663e8eb7db1eb6d294d793eaf5bfb0274800d022736f791",
+    "bytes": 21779,
+    "lines": 191
+  },
+  {
+    "file": "en/tale-of-two-businesses/data-is-not-seeing/index.html",
+    "sha256": "ff3644034db65de5aba95817b0259c7dc68d3bb1e6d04b50652d5f3733c16436",
+    "bytes": 6392,
+    "lines": 50
+  },
+  {
+    "file": "en/tale-of-two-businesses/index.html",
+    "sha256": "ffa724c936f863deb075f1f6c1cbf68e921bf2f232bf1d5639608d8e2d97b16e",
+    "bytes": 8642,
+    "lines": 52
+  },
+  {
+    "file": "en/tale-of-two-businesses/information-alone-is-not-enough/index.html",
+    "sha256": "1e2f1e4b7563e2d047d47867db979bbcc5f8d00b69d475922f6b6c2c1e4814ab",
+    "bytes": 6760,
+    "lines": 50
+  },
+  {
+    "file": "en/tale-of-two-businesses/the-decision/index.html",
+    "sha256": "963166f7cf8395f290184b891b2931aa001d4289d81f7a139a8cce5d5b110299",
+    "bytes": 6421,
+    "lines": 50
+  },
+  {
+    "file": "en/tale-of-two-businesses/two-ways-to-operate/index.html",
+    "sha256": "9a9a4f006a2e3301d4c05d14306949ead62c087b7781afdd84bc411bbc145862",
+    "bytes": 6399,
+    "lines": 50
+  },
+  {
+    "file": "en/tale-of-two-businesses/what-happens-outside/index.html",
+    "sha256": "831b8f2dfd6cd65f2cadf6552bcd88334c3fdaf945ebede915e2262bdd959fda",
+    "bytes": 6492,
+    "lines": 50
+  },
+  {
+    "file": "en/track-record/index.html",
+    "sha256": "da7653b849cbb769958d1bf66b42412c4311f1b2d248f198b7620eb431ed68cf",
+    "bytes": 8125,
+    "lines": 58
+  },
+  {
+    "file": "es/index-anterior-2026-10-31.html",
+    "sha256": "ae6f2f4cf733907ae90b5a59bda9412747fa73fc0b65a1ee5feb9eb2e69addd0",
+    "bytes": 316904,
+    "lines": 3315
+  },
+  {
+    "file": "es/index.html",
+    "sha256": "75a7871936f45cf78a6d65ea4f1b4f8721ba3dcab1d2b7a98e861372517a795c",
+    "bytes": 238,
+    "lines": 0
+  },
+  {
+    "file": "friendly123/clips/clip1-split-fable.html",
+    "sha256": "8132600377ecf1f5495c1d7b62bd5d8cac0abbb5280b9793eea58836ff5792d6",
+    "bytes": 6173,
+    "lines": 80
+  },
+  {
+    "file": "friendly123/consignment-commissions/index.html",
+    "sha256": "3a7085d2c4b20f54c51a4e6cd252b6181e1e2c5478dffa2f40c3b1dcedc856e2",
+    "bytes": 446595,
+    "lines": 388
+  },
+  {
+    "file": "friendly123/es/comisiones-de-consignacion/index.html",
+    "sha256": "bf06867c249f8650601f89d5bac370f0c01972928e4e3262855a33ac8fe0b2fb",
+    "bytes": 446923,
+    "lines": 388
+  },
+  {
+    "file": "friendly123/es/cuaderno-digital-compartido/index.html",
+    "sha256": "ef2e899042add5919e26bfa1833bfafe8d01abec436bbde82f1145d9e86d14d6",
+    "bytes": 446918,
+    "lines": 388
+  },
+  {
+    "file": "friendly123/es/index.html",
+    "sha256": "9ebae0fb978286c16655078190e4e36b1fb962e3da752efa5f1d3543c27b1e0a",
+    "bytes": 447298,
+    "lines": 397
+  },
+  {
+    "file": "friendly123/index.html",
+    "sha256": "599d8d06cfc99da3821d94866a23371f2b882c9bc11888ac1cc5c3d721886e6f",
+    "bytes": 446697,
+    "lines": 388
+  },
+  {
+    "file": "friendly123/mosaico.html",
+    "sha256": "586c78da78354ea3b71ba4122fabef45caa5f7035cb107a091a7fbc1abe65862",
+    "bytes": 12547,
+    "lines": 211
+  },
+  {
+    "file": "friendly123/shared-digital-notebook/index.html",
+    "sha256": "f8dbd487c7867df568b76d28a4330264d86ba06998bdf0ea990c49df51e6424c",
+    "bytes": 446529,
+    "lines": 388
+  },
+  {
+    "file": "guia-indicadores-marketing.html",
+    "sha256": "b604aa090b6140701306b70bf0ce3c8965f61aaf0eef7c88268eb7e624beee73",
+    "bytes": 28462,
+    "lines": 492
+  },
+  {
+    "file": "historia-de-dos-negocios/datos-no-es-ver/index.html",
+    "sha256": "f77be37059078ba0f0fff8be1a889c2094a6f8316dc8fc94b62331fee017b0b8",
+    "bytes": 6346,
+    "lines": 50
+  },
+  {
+    "file": "historia-de-dos-negocios/dos-maneras-de-operar/index.html",
+    "sha256": "71d7819ef2103904345f240688a400544b3b79b975d2c4e14246af713ed7bdec",
+    "bytes": 6392,
+    "lines": 50
+  },
+  {
+    "file": "historia-de-dos-negocios/index.html",
+    "sha256": "0b46a478695d2a12d20834da1bcdffde62867a5ea6193e53b636075f36c76ece",
+    "bytes": 8490,
+    "lines": 52
+  },
+  {
+    "file": "historia-de-dos-negocios/la-decision/index.html",
+    "sha256": "6db0228af4e12f8b5af2fb11d494a51a8aedd68c30a5c5244a464f3e08cde423",
+    "bytes": 6235,
+    "lines": 50
+  },
+  {
+    "file": "historia-de-dos-negocios/la-informacion-sola-no-basta/index.html",
+    "sha256": "af4fe12315ff51b29c3342122e4b96f89f822acc8c2e55bef9a550b37c413561",
+    "bytes": 6596,
+    "lines": 50
+  },
+  {
+    "file": "historia-de-dos-negocios/lo-que-pasa-afuera/index.html",
+    "sha256": "2093ee7a51617b54ff1fa6b21800e4fed070c8d7f5f766a667db7ba4444b4209",
+    "bytes": 6315,
+    "lines": 50
+  },
+  {
+    "file": "index-anterior-2026-10-31.html",
+    "sha256": "5b5789d817f3972b90a2c17690a7ea31213cb84fe212cca8f29bedd7e32e9caa",
+    "bytes": 315983,
+    "lines": 3315
+  },
+  {
+    "file": "index-dark-abril262026.html",
+    "sha256": "f50ac923d21166e5016e976c606c155c9a5533e2e3c4cad5ddf31218e56003bf",
+    "bytes": 291461,
+    "lines": 3274
+  },
+  {
+    "file": "index-safari-broken-abril262026.html",
+    "sha256": "891f8540e131f0be568a5f045160b01ca31c835614bffc5dc35271c30b63cba1",
+    "bytes": 305793,
+    "lines": 3685
+  },
+  {
+    "file": "index-white-contrast-abril262026-v1141.html",
+    "sha256": "891f8540e131f0be568a5f045160b01ca31c835614bffc5dc35271c30b63cba1",
+    "bytes": 305793,
+    "lines": 3685
+  },
+  {
+    "file": "index-white-contrast.html",
+    "sha256": "6b04f2388dba58f4bd060221c0a1f85e00ea6144f963bb82070b1c8bc142969d",
+    "bytes": 197719,
+    "lines": 4136
+  },
+  {
+    "file": "index.html",
+    "sha256": "b4ff432a95f285e629a906ecef1a5241c129ad569c0106addc3984867f1ec62f",
+    "bytes": 37187,
+    "lines": 549
+  },
+  {
+    "file": "indexabril182026.html",
+    "sha256": "f3ea7637af5d5837c6bc4ad18f1485d525cf6335b01a5e724d97b28ad38885bb",
+    "bytes": 285346,
+    "lines": 3262
+  },
+  {
+    "file": "indexbackup28sept2026-reel-codex.html",
+    "sha256": "4771923d8b793cdc48bb6f84cd8d92801fd16b28356c366718901c6905eb75b2",
+    "bytes": 388165,
+    "lines": 4606
+  },
+  {
+    "file": "indexbackup29abril2026.html",
+    "sha256": "b9cfad1a7a81c75523f601c7d8215a858b134ce4f9d8a3de4035fbfd1f1bb2e4",
+    "bytes": 293101,
+    "lines": 2989
+  },
+  {
+    "file": "indexbackupabril272026.html",
+    "sha256": "4bb99e6c5a1512152b8b2dcb88f90aed02bd66f13055b39e99d7555a4d268337",
+    "bytes": 304379,
+    "lines": 3661
+  },
+  {
+    "file": "juan-fernando-carpio/index.html",
+    "sha256": "13cf1eb340ca83607fae261de67518f525de79ba419b88b53d7b5aec8e339f21",
+    "bytes": 9727,
+    "lines": 125
+  },
+  {
+    "file": "la-escuela-del-dinero/index.html",
+    "sha256": "17f999a48a2800df0947f85f10170b699d4efd2e41c1bf1bb2481d2abc52fe91",
+    "bytes": 10048,
+    "lines": 68
+  },
+  {
+    "file": "las7formas/campana-cuenca.html",
+    "sha256": "6022de06e0f1a282471ff753083d9c5a285480d9bd10d6acaf806d3910f94a09",
+    "bytes": 18877,
+    "lines": 482
+  },
+  {
+    "file": "las7formas/index.html",
+    "sha256": "87dbcb970bf6780a4b0a4d8926543aab76ffdabb1e3a387b1c930b735aee3222",
+    "bytes": 65774,
+    "lines": 881
+  },
+  {
+    "file": "las7formas/indexv0_9 FONDO AZUL mal copy.html",
+    "sha256": "47049892ff7c3954f35d4394beb8e04e8f52edc34c9aaffeab0bda25656a07ae",
+    "bytes": 29269,
+    "lines": 669
+  },
+  {
+    "file": "las7formas/styles.css",
+    "sha256": "30a7f05c82f1c77834583a4c699c59ba51ead491e8956e72397d23908bf14485",
+    "bytes": 67866,
+    "lines": 2648
+  },
+  {
+    "file": "las7formas/styles_2026-05-06_12-57-43.css",
+    "sha256": "eda42a0df3d60a19c361d5a48ea43edc0bfdc1414931c513430cc6de72f80865",
+    "bytes": 45638,
+    "lines": 1766
+  },
+  {
+    "file": "las7formas/styles_2026-05-06_13-10-29.css",
+    "sha256": "e35f07bb417627e63fcbea1c08e195b3d156310e25efc08663996c7c86b54ac6",
+    "bytes": 45638,
+    "lines": 1766
+  },
+  {
+    "file": "launch-review.css",
+    "sha256": "dcc4b6eee8af8860619d996986d6f1a5a2a7062675709590073093ed8ca145be",
+    "bytes": 7112,
+    "lines": 68
+  },
+  {
+    "file": "libro/index.html",
+    "sha256": "bc6fee197823bd96eeb9fb1d35a899d7a5b38cadc9390f22a97546a2d326c700",
+    "bytes": 8320,
+    "lines": 66
+  },
+  {
+    "file": "llms.txt",
+    "sha256": "40338a393bca08c1b1a9012ae5ec4e93b98a962b19332c9a439a08494bda62e5",
+    "bytes": 5728,
+    "lines": 69
+  },
+  {
+    "file": "market-intelligence-latam/index.html",
+    "sha256": "5229e756b09c31d10e6da9f4fb1e22eb29deede073707206b9091270dab63797",
+    "bytes": 15997,
+    "lines": 118
+  },
+  {
+    "file": "mindos-talleres.html",
+    "sha256": "96635f81929868e2ab73f8fe49f630755b4efbac65db667a99f589ba1dc8e642",
+    "bytes": 33207,
+    "lines": 621
+  },
+  {
+    "file": "pacific-basin/analysis.html",
+    "sha256": "ed0b10de6d4d5538b18093c1ea065439a510d6cc8bec97d45504de12b7b3daf0",
+    "bytes": 13791,
+    "lines": 51
+  },
+  {
+    "file": "pacific-basin/boutique.css",
+    "sha256": "ec0f16d6dc5c3ced98c39610debba545599cf1efe1a0dc83e771035a7a20fef8",
+    "bytes": 1701,
+    "lines": 25
+  },
+  {
+    "file": "pacific-basin/es/analisis.html",
+    "sha256": "9746b8d9c8271e6f720a3dc205692ce71d7d84a0a3fdbbfe7b6736fd410cb7f2",
+    "bytes": 15216,
+    "lines": 51
+  },
+  {
+    "file": "pacific-basin/es/index.html",
+    "sha256": "f09ce4a11da79785bd891960a3edf0f9051adc216c2f21b45f7bfc8160ac07d6",
+    "bytes": 35606,
+    "lines": 218
+  },
+  {
+    "file": "pacific-basin/index.html",
+    "sha256": "9378b35aac09ef0d8a11362b5534db9993491b0fe80afcf906762f937b7efaab",
+    "bytes": 33970,
+    "lines": 219
+  },
+  {
+    "file": "pacific-basin/pbiu.css",
+    "sha256": "ced8665c0a5e87d4129df9690488689aeba38dccc9c48fd327de983e4e9b245e",
+    "bytes": 9615,
+    "lines": 121
+  },
+  {
+    "file": "pacific-basin/teaser-macro-es.html",
+    "sha256": "27ce99def5c35c4384e5b44fc6adfdf59eb29fbafb40c24e8f572f855d1d477f",
+    "bytes": 6801,
+    "lines": 59
+  },
+  {
+    "file": "pacific-basin/teaser-macro.html",
+    "sha256": "29ddf8d7467d0ce3290679badf376d78e2eafd57e168519d27fd325f822e7861",
+    "bytes": 6436,
+    "lines": 55
+  },
+  {
+    "file": "pacific-basin/teaser-matrix-es.html",
+    "sha256": "fc4f90765251a86332b59fa3bcd845c34814f21f212b53f92a049e311f9bac09",
+    "bytes": 6681,
+    "lines": 47
+  },
+  {
+    "file": "pacific-basin/teaser-matrix.html",
+    "sha256": "ded2804120d162f0cba75c806aed75698c8271865f5b2944a4b548f8dee667f6",
+    "bytes": 6328,
+    "lines": 44
+  },
+  {
+    "file": "pacific-basin/teaser-minerales-es.html",
+    "sha256": "fc89245112fb9ac98fbb7f7312dfe8249438f883fcbeb345ce731f38753b47af",
+    "bytes": 6996,
+    "lines": 58
+  },
+  {
+    "file": "pacific-basin/teaser-minerales.html",
+    "sha256": "33561db6efe2dff830b8782b66c661d99be20be4bbc805d8b1a774be68eb7d19",
+    "bytes": 6666,
+    "lines": 54
+  },
+  {
+    "file": "pacific-basin/teaser.css",
+    "sha256": "c671c7b05c46d828580e694a73d1f1931f60ed86eb5d9883a6fb7793abce36fb",
+    "bytes": 3359,
+    "lines": 41
+  },
+  {
+    "file": "pacific-basin/tema.css",
+    "sha256": "988f66aba9efb069933f7ceebfca46a87bfa32259c01e2aa388d3525688d8566",
+    "bytes": 11329,
+    "lines": 137
+  },
+  {
+    "file": "publicaciones/index.html",
+    "sha256": "f158add8b93b3205a68c1acfa5f8469cce7cc04c4ed5629b01adcfbbc65ae81f",
+    "bytes": 44498,
+    "lines": 755
+  },
+  {
+    "file": "publicaciones/indexbackup29deabril2026.html",
+    "sha256": "af0e5d1bbd0a78f591e4fccae7cbb27bd7ea47650be7fb04cd51073f3b4cb776",
+    "bytes": 200512,
+    "lines": 1582
+  },
+  {
+    "file": "recursos-gratuitos/index.html",
+    "sha256": "afade4b122b8c6588ff9f0018783db33eb7890a49a9c68547dcd109d8bf5daee",
+    "bytes": 6200,
+    "lines": 52
+  },
+  {
+    "file": "report-offer.css",
+    "sha256": "6b5f4a03b7bf25df59a232bf57be9f8075e5fd99f205413c0100241c4757a810",
+    "bytes": 3259,
+    "lines": 33
+  },
+  {
+    "file": "reportes/index.html",
+    "sha256": "f9810b5d964985f4699d8aaba6edbbb90a068db5b3351a0a79815a256a34c596",
+    "bytes": 21929,
+    "lines": 191
+  },
+  {
+    "file": "revision-de-lanzamiento/index.html",
+    "sha256": "6db9f2824eabc1b38d5273bda597b5dcbd67e502d28d4d537fce8f9a109b1832",
+    "bytes": 15662,
+    "lines": 118
+  },
+  {
+    "file": "robots.txt",
+    "sha256": "fd674423af10d354fb0c60fd2da1fcfd10f25bf3fba9a07d564bcc7a32a1aecb",
+    "bytes": 870,
+    "lines": 31
+  },
+  {
+    "file": "scripts/build-slide-pages.py",
+    "sha256": "c98ea5ee2e1ce73bc60294bf97023b708d737091d069392155d544d0e4f2ac28",
+    "bytes": 39774,
+    "lines": 526
+  },
+  {
+    "file": "sitemap.xml",
+    "sha256": "33d08dd652cbbba206fa9f52c8f5f571b6990e05a1e40ea8018900b4ef088381",
+    "bytes": 27192,
+    "lines": 442
+  },
+  {
+    "file": "slide-page.css",
+    "sha256": "c10b2fba118f1b0e8fd7719caec6d5ce6712f25c532a6493d830a6a593e78ac7",
+    "bytes": 6960,
+    "lines": 71
+  },
+  {
+    "file": "talleres-onepager.html",
+    "sha256": "55eb6f6f1497e7826001d07d5bb9a0a6e357865bb093cdf07a19523037b856bd",
+    "bytes": 9775,
+    "lines": 141
+  },
+  {
+    "file": "talleres/index.html",
+    "sha256": "90372c6bcefd1dc7aa15b3ed13c7afb36489baba6d76dc2cff11a71a3440f929",
+    "bytes": 156029,
+    "lines": 2455
+  },
+  {
+    "file": "talleres/indexBACKUP0_9.html",
+    "sha256": "9987c8fb83d8a1f068c6c939e56ea47165875f9f2f873216c12c192d2eae17ab",
+    "bytes": 43381,
+    "lines": 1169
+  },
+  {
+    "file": "talleres/indexBORRAR.html",
+    "sha256": "b1a6ca8e7946369aec41ea3e5a248d81990f16bfd6919542e27eafe09c8c3fb7",
+    "bytes": 54331,
+    "lines": 1571
+  },
+  {
+    "file": "talleres/indexbackup7demayo2026.html",
+    "sha256": "a02d250c7c80e885e74fc319270c4aa0193a035ab83afb9fdd3c361145ce8f3c",
+    "bytes": 41341,
+    "lines": 1139
+  },
+  {
+    "file": "talleres/onepager.html",
+    "sha256": "55eb6f6f1497e7826001d07d5bb9a0a6e357865bb093cdf07a19523037b856bd",
+    "bytes": 9775,
+    "lines": 141
+  },
+  {
+    "file": "test-de-crecimiento/index.html",
+    "sha256": "1304214f86fc8d9dc3aba140c80adc23eecef1b5d19e1de67b4f91dc66318ced",
+    "bytes": 27268,
+    "lines": 245
+  },
+  {
+    "file": "tienda-gumroad/index.html",
+    "sha256": "22974425bbb84fdfae03c30de3d4f4fc44f1341cedbfdba9de902b4efd1a9745",
+    "bytes": 8480,
+    "lines": 65
+  },
+  {
+    "file": "trayectoria/index.html",
+    "sha256": "8d569eeadd47e63caad8d85b7af09395c0227f5aaaf3e5ef54bfbe023f79f0f5",
+    "bytes": 8268,
+    "lines": 58
+  },
+  {
+    "file": "visorantiquiebra/index.html",
+    "sha256": "2cc91607ac00548dfc6dc01efdf37768ee542d45dc62c2e1140cddd8e23d23ea",
+    "bytes": 507011,
+    "lines": 5972
+  },
+  {
+    "file": "visorantiquiebra/sss.html",
+    "sha256": "2e455df79bb358a8540943d22f169055e4cef7e948135b08449571ef50582460",
+    "bytes": 72979,
+    "lines": 1406
+  },
+  {
+    "file": "visorantiquiebra/visor6-24.html",
+    "sha256": "419cd0d720e6d249d814e0588dce5dfc0779a16b28b09a6100c403bec36b7377",
+    "bytes": 354394,
+    "lines": 5050
+  },
+  {
+    "file": "visordemarketing/index.html",
+    "sha256": "d21ce391f6b3dae1a8c66a3ecc2aa0ef16893e2899954ba0f9ef8977689c6a06",
+    "bytes": 223520,
+    "lines": 2411
+  },
+  {
+    "file": "visordemarketing/indexC.html",
+    "sha256": "35b5ffc1796e5ed6d0f2e1c9cdccc0bfd70bb8b8a2d72aae7f3a1913e4b1f5a6",
+    "bytes": 523957,
+    "lines": 5934
+  },
+  {
+    "file": "visordemarketing/indexbackupabril192026.html",
+    "sha256": "d229df8dedb5af6a2afedddcca6154974a5d0436cb7e50d6fc2592aa0c0b75b2",
+    "bytes": 215257,
+    "lines": 2272
+  },
+  {
+    "file": "visores/index.html",
+    "sha256": "ac19dc2b1fed57885a6945d2284671b761c4f6b4d3b910ec879315fda4effe75",
+    "bytes": 10005,
+    "lines": 58
+  },
+  {
+    "file": "visorgerencial/index.html",
+    "sha256": "00637acc1423001fb1c4ece5adce87124a31dc88391fe2500cb6b7d5c5540d5e",
+    "bytes": 134565,
+    "lines": 1827
+  },
+  {
+    "file": "visorgerencial/indexbackupabril192026.html",
+    "sha256": "cbfc938f2c011a4a219669a34cd07e95a1c468804fdfdd800d00dbc7273aaba7",
+    "bytes": 131071,
+    "lines": 1651
+  },
+  {
+    "file": "vuelo-v6/index.html",
+    "sha256": "349156cd7563791b1897e621fdd083d9d0e8f7d2e4bb248e9347d14202e60863",
+    "bytes": 41636,
+    "lines": 345
+  },
+  {
+    "file": "vuelo/index.html",
+    "sha256": "67f4caced305ab2f3ee0637563be6d7f97e169f9dac082d440e0771c5bc33918",
+    "bytes": 45468,
+    "lines": 398
+  },
+  {
+    "file": "working-paper-hidden-cost.html",
+    "sha256": "3b5fb1acce9e17a476223fa3d6a8b85cfd1448dd76da0179171d708d86dc5a76",
+    "bytes": 39463,
+    "lines": 798
+  },
+  {
+    "file": "workshops-onepager.html",
+    "sha256": "b5964029e7542fefbbdedeaf33461722ca25590aa6343870dd967bedaca4d70b",
+    "bytes": 8165,
+    "lines": 126
+  },
+  {
+    "file": "workshops/index.html",
+    "sha256": "16348fdebd8e210bf06c0b201253c257536449ecebe1f6e765cb505897ed508b",
+    "bytes": 152339,
+    "lines": 2455
+  },
+  {
+    "file": "workshops/indexBORRAR.html",
+    "sha256": "fe7618c5d9d6408ee06eeb5fd5ddff0f89a72b9f19f150cd3b680b10c62ebfab",
+    "bytes": 52015,
+    "lines": 1535
+  },
+  {
+    "file": "workshops/indexbackup7demayo2026.html",
+    "sha256": "9e46a440772352c12ca92a4e30b6de97470b5090b1e4cae83a278b9e0ed2ec6b",
+    "bytes": 40953,
+    "lines": 1137
+  },
+  {
+    "file": "workshops/onepager.html",
+    "sha256": "b5964029e7542fefbbdedeaf33461722ca25590aa6343870dd967bedaca4d70b",
+    "bytes": 8165,
+    "lines": 126
+  }
+]

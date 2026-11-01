@@ -1,0 +1,20 @@
+
+header .bc-quick-help{position:relative;flex:none;font-family:system-ui,sans-serif;font-weight:500;letter-spacing:0}
+header .bc-quick-help summary{list-style:none;display:inline-flex;align-items:center;gap:5px;cursor:pointer;border:1px solid #4B657D;padding:7px 9px;border-radius:8px;font-size:11px;color:#DAF1F5;background:#12283C;min-height:29px}
+header .bc-quick-help summary::-webkit-details-marker{display:none}
+header .bc-quick-help summary span{display:grid;place-items:center;border:1px solid #7B9CB0;width:15px;height:15px;border-radius:100%;font-size:10px}
+header .bc-quick-help[open] summary{border-color:#82CFCB}
+header .bc-help-body{position:absolute;right:0;top:calc(100% + 11px);z-index:120;width:min(340px,calc(100vw - 28px));padding:16px 18px;border:1px solid #4D7D91;border-radius:10px;background:#0D2134;box-shadow:0 15px 45px #000b;color:#DFEFF8;font-size:12px;line-height:1.6}
+header .bc-help-body strong{display:block;color:#F1FCFF;font-size:14px;line-height:1.4}
+header .bc-help-body p{margin:9px 0;color:#CBDFEB}
+header .bc-help-body a{display:inline-flex;min-height:37px;align-items:center;color:#B0EFE1;font-size:12px;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+header .bc-quick-help summary:focus-visible,header .bc-help-body a:focus-visible{outline:2px solid #A4EEDC;outline-offset:3px}
+header .brand .wordmark{font-kerning:normal}
+.bc-wa-link{border-color:#46948B!important;color:#C5FFEF!important}
+@media(max-width:740px){header .brand .wordmark{font-size:clamp(13px,4.2vw,21px)!important;letter-spacing:-.055em!important}header .bc-quick-help summary{font-size:10px;padding:7px 7px}header .menu{gap:5px}header .bc-help-body{right:-5px}}
+@media(max-width:390px){header .brand .wordmark{font-size:13px!important}header .brand .bc-brand-symbol{width:32px;height:32px}header .bc-quick-help summary{padding:5px}}
+@media(prefers-reduced-motion:reduce){header .bc-help-body{scroll-behavior:auto}}
+
+
+.bc-help-close{position:absolute;top:8px;right:9px;width:40px;height:40px;background:#15394d;color:white;border:1px solid #50798b;border-radius:8px;font-size:25px}
+@media(max-width:740px){header.top{z-index:150}header .menu{display:flex;flex-wrap:wrap;justify-content:flex-end;max-width:100%;gap:7px}header .bc-quick-help{min-width:max-content}header .bc-quick-help summary{min-height:44px;white-space:nowrap;font-size:13px;padding:9px 12px}header .bc-help-body{position:fixed;left:12px;right:12px;top:calc(72px + env(safe-area-inset-top));width:auto;max-height:calc(100dvh - 96px - env(safe-area-inset-top) - env(safe-area-inset-bottom));overflow-y:auto;overflow-wrap:anywhere;overscroll-behavior:contain;font-size:15px;line-height:1.6;padding:18px}header .bc-help-body strong{font-size:17px;padding-right:40px}header .bc-help-body p,header .bc-help-body a{font-size:15px;line-height:1.6}}

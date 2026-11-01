@@ -1,0 +1,45 @@
+
+header.top .brand img.bc-brand-symbol,
+header .brand img.bc-brand-symbol,
+header .brand img[src$="brand-submarine-cutout-v2.svg"],
+header .bc-plan-brand img.bc-brand-symbol {
+  display:block !important;
+  width:160px !important;
+  height:72px !important;
+  min-width:0;
+  flex:0 0 auto !important;
+  max-width:none;
+  object-fit:contain !important;
+  object-position:center !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  outline:0;
+  background:transparent !important;
+  box-shadow:none !important;
+  filter:none !important;
+  clip-path:none !important;
+  overflow:visible !important;
+}
+@media(max-width:740px) {
+  header.top .brand img.bc-brand-symbol,
+  header .brand img.bc-brand-symbol,
+  header .brand img[src$="brand-submarine-cutout-v2.svg"],
+  header .bc-plan-brand img.bc-brand-symbol {
+    width:112px !important;
+    height:50px !important;
+  }
+}
+@media(max-width:390px) {
+  header.top .brand img.bc-brand-symbol,
+  header .brand img.bc-brand-symbol,
+  header .brand img[src$="brand-submarine-cutout-v2.svg"],
+  header .bc-plan-brand img.bc-brand-symbol {
+    width:97px !important;
+    height:44px !important;
+  }
+}
+@media print {
+  header .brand img.bc-brand-symbol { filter:none !important; }
+}

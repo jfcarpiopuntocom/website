@@ -1,0 +1,155 @@
+
+
+:root{--wow-orange:#E86040;--wow-gold:#E8A020;--wow-green:#28ECAA;--wow-white:#FFFFFF;--wow-soft:#CCCCCC;--wow-chip:#13263A;--wow-panel:#0E1C2C}
+
+
+.wow-hero{display:grid;gap:12px;margin:0 0 16px;padding:16px;border:2px solid var(--wow-orange);border-radius:18px;background:var(--wow-panel)}
+.wow-hero-top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.wow-count{font-size:48px;font-weight:800;line-height:1;letter-spacing:-0.02em;font-variant-numeric:tabular-nums}
+.wow-what{font-size:20px;font-weight:700}
+.wow-sub{font-size:16px;font-weight:600}
+.wow-stats,.wow-sources{display:flex;flex-wrap:wrap;gap:8px}
+.wow-stat,.wow-src{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 14px;border-radius:999px;background:var(--wow-chip);border:2px solid var(--wow-soft);font-size:15px;font-weight:700}
+.wow-stat b{font-size:18px;font-variant-numeric:tabular-nums}
+.wow-stat.phone{border-color:var(--wow-green)}.wow-stat.web{border-color:var(--wow-orange)}.wow-stat.mail{border-color:var(--wow-gold)}.wow-stat.wa{border-color:var(--wow-green)}
+.wow-dot{display:inline-block;width:12px;height:12px;border-radius:50%;flex:0 0 12px}
+.wow-dot.overture{background:var(--wow-orange)}.wow-dot.osm{background:var(--wow-green)}.wow-dot.wikidata{background:var(--wow-gold)}.wow-dot.directory{background:#FFFFFF}
+
+
+.lead.wow-ready{position:relative;border-left:4px solid var(--wow-orange)}
+.lead.wow-ready.wow-full{border-left-color:var(--wow-green)}
+.wow-icon{display:inline-grid;place-items:center;width:44px;height:44px;margin-right:12px;border-radius:14px;background:var(--wow-chip);border:2px solid var(--wow-gold);font-size:24px;flex:0 0 44px}
+.lead.wow-ready .lead-header>div:first-child{display:flex;align-items:center}
+.wow-contacts{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.wow-chip{display:inline-flex;align-items:center;gap:8px;min-height:44px;max-width:100%;padding:8px 14px;border-radius:12px;background:var(--wow-chip);border:2px solid var(--wow-soft);font-size:15px;font-weight:700;text-decoration:none;overflow-wrap:anywhere}
+.wow-chip.phone{border-color:var(--wow-green)}.wow-chip.wa{border-color:var(--wow-green)}.wow-chip.mail{border-color:var(--wow-gold)}.wow-chip.web{border-color:var(--wow-orange)}
+.wow-chip .wow-i{font-size:18px}
+.wow-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:14px;font-weight:700}
+.wow-meter{display:inline-flex;gap:4px}
+.wow-meter i{display:inline-block;width:18px;height:8px;border-radius:4px;background:#33465C}
+.wow-meter i.on{background:var(--wow-green)}
+.wow-srcs{display:inline-flex;align-items:center;gap:6px}
+
+
+.wow-live{display:inline-flex;align-items:center;gap:8px;margin-left:8px;padding:4px 12px;border-radius:999px;background:var(--wow-orange);font-size:14px;font-weight:800;font-variant-numeric:tabular-nums}
+
+
+.wow-hero,.wow-hero *,.wow-contacts,.wow-contacts *,.wow-meta,.wow-meta *,.wow-live,.wow-live *{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+.wow-count{color:#E8A020!important;-webkit-text-fill-color:#E8A020!important}
+.wow-sub,.wow-meta .wow-soft{color:#CCCCCC!important;-webkit-text-fill-color:#CCCCCC!important}
+@media (prefers-color-scheme:dark){
+ .wow-hero,.wow-hero *,.wow-contacts,.wow-contacts *,.wow-meta,.wow-meta *,.wow-live,.wow-live *{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+ .wow-count{color:#E8A020!important;-webkit-text-fill-color:#E8A020!important}
+ .wow-sub,.wow-meta .wow-soft{color:#CCCCCC!important;-webkit-text-fill-color:#CCCCCC!important}
+}
+
+
+@media (min-width:768px){.wow-count{font-size:64px}.wow-what{font-size:24px}.wow-hero{padding:20px 24px}}
+
+
+@media (prefers-reduced-motion:no-preference){
+ .wow-anim .lead.wow-ready{animation:wowRise .5s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--wow-i,0) * 35ms)}
+ .wow-hero.wow-pop{animation:wowPop .6s cubic-bezier(.2,.9,.2,1.2) both}
+ .wow-live{animation:wowPulse 1.2s ease-in-out infinite}
+ .wow-chip{transition:transform .15s ease}
+ .wow-chip:hover{transform:translateY(-2px)}
+}
+@keyframes wowRise{from{transform:translateY(18px) scale(.98)}to{transform:none}}
+@keyframes wowPop{from{transform:scale(.94)}to{transform:none}}
+@keyframes wowPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@media (prefers-reduced-motion:reduce){.wow-anim .lead.wow-ready,.wow-hero,.wow-live,.wow-chip{animation:none!important;transition:none!important}}
+
+
+#showSaved{border:2px solid #E86040!important;border-radius:999px;min-height:44px;padding:8px 18px;font-weight:800;background:#1A1410}
+#showSaved,#showSaved *{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+#showSaved[aria-pressed="true"],#showSaved.active{background:#E86040}
+@media (prefers-reduced-motion:no-preference){#showSaved{transition:transform .15s ease}#showSaved:hover{transform:translateY(-2px)}}
+
+
+.lead-actions a[href*="openstreetmap.org/"],.lead-actions a[href*="overturemaps.org"],.lead-actions a[href*="wikidata.org"],.lead-actions a[href*="soloarquitectos.com"]{display:none!important}
+
+
+.wow-hero{grid-template-columns:auto 1fr;align-items:center;gap:14px;padding:14px;margin-bottom:12px}
+.wow-hero-body{display:grid;gap:8px;min-width:0}
+.wow-eyebrow{font-size:12px;font-weight:900;letter-spacing:.06em;color:#28ECAA!important;-webkit-text-fill-color:#28ECAA!important}
+.wow-hero .wow-stat{min-height:40px;padding:6px 12px;font-size:14px}
+.wow-sonar{position:relative;width:76px;height:76px;border-radius:50%;background:#06261F;border:2px solid #28ECAA;overflow:hidden;flex:0 0 76px}
+.wow-sonar i{position:absolute;inset:0;margin:auto;border-radius:50%;border:2px solid #1C8F6C}
+.wow-sonar i:nth-child(1){width:70%;height:70%}.wow-sonar i:nth-child(2){width:42%;height:42%}.wow-sonar i:nth-child(3){width:14%;height:14%;background:#28ECAA;border-color:#28ECAA}
+.wow-sonar b{position:absolute;inset:0;border-radius:50%}
+@supports (background:conic-gradient(red,blue)){.wow-sonar b{background:conic-gradient(from 0deg,#28ECAA 0deg,#06261F 70deg,#06261F 360deg)}}
+@media (prefers-reduced-motion:no-preference){.wow-sonar b{animation:wowSweep 2.4s linear infinite;mix-blend-mode:screen}}
+@keyframes wowSweep{to{transform:rotate(360deg)}}
+
+
+#results .results-items{display:grid!important;grid-template-columns:1fr!important;gap:8px!important}
+@media (min-width:760px){#results .results-items{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media (min-width:1280px){#results .results-items{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+
+
+#results article.lead.wow-ready{padding:12px!important;gap:8px!important;border-radius:14px!important;background:#0B1626!important;border:1px solid #33465C!important;border-left:4px solid #E86040!important}
+#results article.lead.wow-ready.wow-full{border-left-color:#28ECAA!important}
+#results .lead.wow-ready .lead-name{font-size:16px!important}
+#results .lead.wow-ready .lead-location{font-size:13px!important;margin-top:2px!important;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;color:#CCCCCC!important;-webkit-text-fill-color:#CCCCCC!important}
+#results .lead.wow-ready .num{font-size:13px;font-weight:800;color:#E8A020!important;-webkit-text-fill-color:#E8A020!important}
+.wow-icon{width:40px;height:40px;flex:0 0 40px;font-size:22px;border-radius:12px;margin-right:10px}
+.wow-contacts{gap:6px;margin:0}
+.wow-chip{min-height:44px;padding:6px 12px;font-size:14px;border-radius:10px}
+.wow-tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.wow-tags .lead-data{display:inline-flex;align-items:center;min-height:30px;padding:4px 10px;border-radius:999px;background:#13263A;border:1px solid #33465C;font-size:12px!important;line-height:1.3!important;color:#CCCCCC!important;-webkit-text-fill-color:#CCCCCC!important}
+.wow-tags .lead-data *{font-size:12px!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+.wow-meta{gap:6px 10px}
+#results .lead.wow-ready .lead-actions{gap:6px!important}
+#results .lead.wow-ready .lead-actions .action{min-height:44px!important;padding:6px 12px!important;font-size:14px!important;font-weight:700;border-radius:10px!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+#results .lead.wow-ready .lead-actions .action[data-save]{border:2px solid #E86040!important;background:#2A160F!important}
+@media (prefers-color-scheme:dark){
+ .wow-eyebrow{color:#28ECAA!important;-webkit-text-fill-color:#28ECAA!important}
+ #results .lead.wow-ready .lead-location,.wow-tags .lead-data{color:#CCCCCC!important;-webkit-text-fill-color:#CCCCCC!important}
+ .wow-tags .lead-data *,#results .lead.wow-ready .lead-actions .action{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+ #results .lead.wow-ready .num{color:#E8A020!important;-webkit-text-fill-color:#E8A020!important}
+}
+@media (max-width:420px){.wow-hero{grid-template-columns:1fr}.wow-sonar{width:60px;height:60px;flex-basis:60px}.wow-count{font-size:40px}}
+
+
+.wow-hide{display:none!important}
+
+
+@media (prefers-reduced-motion:no-preference){.wow-chip.wow-new{animation:wowPop .45s cubic-bezier(.2,.9,.2,1.3) both}}
+
+
+#periscope .scope-mini-message{display:flex;flex-direction:column;gap:2px;min-width:0}
+#periscope .wow-counts-in{display:flex;gap:12px;margin-top:4px;flex-wrap:wrap}
+#periscope .scope-mini-foot.wow-hide{display:none!important}
+
+body.bc-has-results #scopeDetail{display:none!important}
+@media (max-width:900px){
+ body.bc-has-results .content{display:flex!important;flex-direction:column}
+ body.bc-has-results .content>.sidebar{order:-1;display:contents}
+ body.bc-has-results .content>.sidebar>.sidebar-card:first-child{order:-1;margin-bottom:12px}
+ body.bc-has-results .content>.sidebar>.sidebar-card:not(:first-child){order:5}
+}
+
+#periscope.bc-scope-retry .scope-mini-message,#periscope.bc-scope-retry .scope-mini-foot,#periscope.bc-scope-retry [id="scopeBadge"]{visibility:hidden}
+#periscope.bc-scope-off{display:none!important}
+
+
+
+.bc-fill-note{margin:8px 0 0;padding:8px 10px;border-radius:10px;border:1px solid #435777;background:#10182B;font-size:14px;line-height:1.35;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+#results .lead-actions a.action[href*="openstreetmap.org"],#results .lead-actions a.action[href*="overturemaps"],#results .lead-actions a.action[href*="wikidata"],#results .lead-actions a.action[href*="soloarquitectos"]{display:none!important}
+@media (prefers-color-scheme:dark){.bc-fill-note{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}}
+
+#targetUI .target-reticle{display:none!important}
+
+.menu a.bc-dashboard-shortcut,#scopeTry,.suggest .chip,.footer a{min-height:44px!important}
+.menu a.bc-dashboard-shortcut{display:inline-flex!important;align-items:center}
+#scopeTry{min-width:44px!important}
+.suggest .chip{display:inline-flex!important;align-items:center}
+.footer a{display:inline-flex!important;align-items:center;padding:0 6px}
+.scope-features{display:none!important}
+
+#periscope #scopeBadge{width:auto!important;min-width:max-content!important;max-width:none!important;padding:6px 12px!important;white-space:nowrap!important;overflow:visible!important;flex:0 0 auto!important;box-sizing:border-box}
+
+@media (max-width:760px){#periscope #scopeBadge{padding:5px 8px!important;letter-spacing:0!important;white-space:normal!important;min-width:min-content!important;max-width:110px!important;text-align:center;line-height:1.15!important;word-break:keep-all;overflow-wrap:normal}}
+
+
+#periscope #scopeBadge{text-transform:none!important}

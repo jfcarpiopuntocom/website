@@ -1,0 +1,8 @@
+/* Páginas interiores en escritorio (JFC 31 oct 2026): sin escala de celular; lo esencial en el primer pantallazo (1366×768).
+   Capa común y reversible: se quita borrando el <link> de cada página. No aplica a páginas con marca propia. */
+@media (min-width:900px){
+  h1{font-size:clamp(36px,3.5vw,58px)!important;line-height:1.02!important;max-width:22ch}
+  h2{font-size:clamp(26px,2.3vw,38px)!important;line-height:1.1!important}
+  body>header+main>section:first-child,body>header+section,main>section:first-of-type,.hero{min-height:0!important;padding-top:clamp(22px,4vh,44px)!important;padding-bottom:clamp(22px,4vh,44px)!important}
+  main>section:first-of-type h1,.hero h1{margin-top:8px!important;margin-bottom:14px!important}
+}

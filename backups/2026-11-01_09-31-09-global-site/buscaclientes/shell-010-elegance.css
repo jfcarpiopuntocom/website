@@ -1,0 +1,49 @@
+
+:root{--bc-classy-blue:#9cc9f5;--bc-classy-teal:#92ded7;--bc-classy-border:#4b6a85;--bc-classy-ink:#eef7ff}
+.hero h1,.hero h1 em,.intro h1,.intro h1 em{text-decoration:none!important;text-decoration-line:none!important}
+.hero h1 em::before,.hero h1 em::after,.intro h1 em::before,.intro h1 em::after{content:none!important;display:none!important}
+.brand,.brand *{text-decoration:none!important;text-decoration-line:none!important}
+.brand .wordmark::after,.brand .wordmark-first::after,.brand .wordmark-second::after,.brand strong::after{content:none!important;display:none!important}
+
+.hero .swiss-search .section-title::after,#radar .section-title::after{
+ transform:none!important;rotate:0deg!important;skew:0deg!important;
+ border-radius:1px!important;height:2px!important;box-shadow:none!important;
+}
+.hero .swiss-search .section-title::after{width:46px!important}
+#radar .section-title::after{width:42px!important}
+@media screen{
+ body:not(:has(#dashboard)) .hero h1{font-weight:700;letter-spacing:-.048em;text-wrap:balance}
+ body:not(:has(#dashboard)) .hero .sub{color:#d4e1ee;line-height:1.65;max-width:53ch}
+ body:not(:has(#dashboard)) .hero h1 em{color:#f0f8ff;text-shadow:none}
+ body:not(:has(#dashboard)) .hero .swiss-search{border-color:#526e87;background:linear-gradient(145deg,#192a43,#101b30);box-shadow:0 15px 42px #020b1c7a}
+ body:not(:has(#dashboard)) .swiss-search .panel-head{background:linear-gradient(100deg,#243950,#18283c)}
+ body:not(:has(#dashboard)) .hero .swiss-search .section-title{color:#f4f9ff;font-weight:700;letter-spacing:-.035em}
+ body:not(:has(#dashboard)) .hero .swiss-search .section-note{color:#bfd3e3}
+ body:not(:has(#dashboard)) .hero .swiss-search input,
+ body:not(:has(#dashboard)) .hero .swiss-search select{background:#0b1729;color:#edf5fc;border-color:#526f88}
+ body:not(:has(#dashboard)) .hero .swiss-search input:focus-visible,
+ body:not(:has(#dashboard)) .hero .swiss-search select:focus-visible{outline:2px solid #7bd9cd;outline-offset:2px;border-color:#7bd9cd}
+ body:not(:has(#dashboard)) .hero .swiss-search .go{background:linear-gradient(100deg,#b6eee1,#70d5c9);color:#092e37;box-shadow:0 4px 15px #58cfc32e;font-weight:800}
+ body:not(:has(#dashboard)) .hero .swiss-search .go:hover{filter:brightness(1.04);box-shadow:0 5px 18px #68ded248}
+ body:not(:has(#dashboard)) .hero .swiss-search .chip{border-radius:7px}
+ body:not(:has(#dashboard)) .globe-wrap{filter:drop-shadow(0 0 22px #5a8dd52a)}
+ body:not(:has(#dashboard)) .bc-globe-slogan{box-shadow:0 3px 13px #020b1980;border-color:#648a9c;color:#c7e8ee}
+ body:not(:has(#dashboard)) .scope-mini{box-shadow:inset 2px 0 #ff6900,0 11px 30px #020b1955!important}
+ body:not(:has(#dashboard)) .scope-features>div{box-shadow:none;border-color:#425e78}
+ body:not(:has(#dashboard)) #radar .lead{box-shadow:none;border-color:#425a76}
+ body:not(:has(#dashboard)) #radar .lead:hover{border-color:#78b7c5;box-shadow:0 5px 17px #08112155}
+}
+
+#dashboard .intro h1 em{color:#2353a4!important}
+#dashboard .intro h1{letter-spacing:-.048em}
+#dashboard .kpi{box-shadow:0 2px 15px #0b17300a}
+#dashboard .route a{border:1px solid #d4dfed}
+@media(max-width:740px){
+ body:not(:has(#dashboard)) .hero h1{letter-spacing:-.045em}
+ body:not(:has(#dashboard)) .hero .swiss-search{box-shadow:0 9px 28px #020b1a73}
+ body:not(:has(#dashboard)) .globe-wrap{filter:none}
+}
+@media(prefers-reduced-motion:reduce){
+ body:not(:has(#dashboard)) .hero .swiss-search .go{transition:none}
+ body:not(:has(#dashboard)) #radar .lead{transition:none}
+}

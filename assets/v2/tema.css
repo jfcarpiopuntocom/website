@@ -2,8 +2,8 @@
 :root,[data-theme=light]{
  color-scheme:light;
  --bg:#FAFAF7;--bg2:#EEF2F8;--panel:#FFFFFF;--panel2:#F5F7FB;--line:#D6DEEA;--line2:#E6EBF3;
- --text:#16213A;--soft:#3D4A63;--mute:#55627A;--head:#0B1F3F;
- --blue:#255FB8;--link:#1D56AE;--coral:#B8391C;--mint:#077052;--amber:#9E1530;--wine:#9E1530;
+ --text:#16213A;--soft:#16213A;--mute:#1E2A44;--head:#0B1F3F;
+ --blue:#1F55A6;--link:#1A4C9C;--coral:#962D14;--mint:#055C43;--amber:#9E1530;--wine:#9E1530;
  --coralbg:#E86040;--on-accent:#FFFFFF;
  --grid:rgba(11,31,63,.045);--glow1:rgba(37,95,184,.10);--glow2:rgba(232,96,64,.08);
  --shadow:0 30px 70px -30px rgba(6,14,29,.5);--nav:rgba(250,250,247,.88);
@@ -11,7 +11,7 @@
 [data-theme=dark]{
  color-scheme:dark;
  --bg:#060E1D;--bg2:#081428;--panel:#0B1F3F;--panel2:#0E2550;--line:#2F4670;--line2:#1C3358;
- --text:#F2F2F2;--soft:#D6DEEC;--mute:#A8BDDC;--head:#FFFFFF;
+ --text:#F2F2F2;--soft:#FFFFFF;--mute:#EAF1FF;--head:#FFFFFF;
  --blue:#255FB8;--link:#7FB0FF;--coral:#F07355;--mint:#28ECAA;--amber:#F2738F;--wine:#F2738F;
  --coralbg:#E86040;--on-accent:#060E1D;
  --grid:rgba(127,176,255,.035);--glow1:rgba(37,95,184,.22);--glow2:rgba(158,21,48,.12);
@@ -42,7 +42,7 @@ section{padding:clamp(48px,8vw,96px) 0;position:relative}
 .btn{display:inline-flex;align-items:center;gap:10px;font:700 12px/1 'Space Mono',monospace;letter-spacing:.14em;text-transform:uppercase;padding:16px 22px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s,background .25s,color .25s;min-height:44px}
 .btn.p{background:var(--blue);color:#fff}
 .btn.p:hover{background:#2C6BD0;transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(37,95,184,.8)}
-.btn.c{background:var(--coralbg);color:#0B1F3F}
+.btn.c{background:var(--coralbg);color:#050B16;font-weight:700}
 .btn.c:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(232,96,64,.75)}
 .btn.a{background:var(--amber);color:#fff}[data-theme=dark] .btn.a{color:#060E1D}.btn.g{background:transparent;color:var(--text);border:1.5px solid var(--line)}
 .btn.g:hover{border-color:var(--text)}
@@ -142,3 +142,6 @@ footer.site a:hover{color:var(--link)}
 .lang span{background:var(--head);color:var(--bg)}
 .lang a:hover{color:var(--head)}
 @media (max-width:340px){.lang a,.lang span{padding:0 6px;min-height:40px}}
+
+/* Ben Settle: concepto clave en negrita, mismo color del título (JFC 2026-11-01: contraste, nada de grises) */
+p strong,li strong{font-weight:700;color:inherit}

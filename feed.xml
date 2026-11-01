@@ -42,20 +42,40 @@
       <description>Illustrative mathematics of discounts and contribution in English.</description>
     </item>
     <item>
-    <title>Ventas suben, caja baja</title>
-    <link>https://jfcarpio.com/articulos/ventas-suben-caja-baja/</link>
-    <guid>https://jfcarpio.com/articulos/ventas-suben-caja-baja/</guid>
-    <description>Ejemplo ilustrativo de la diferencia entre ventas, cobros e inventario y su impacto en caja.</description>
-  </item>
-  <item>
-    <title>Sales are up, cash is down</title>
-    <link>https://jfcarpio.com/en/articles/sales-up-cash-down/</link>
-    <guid>https://jfcarpio.com/en/articles/sales-up-cash-down/</guid>
-    <description>Illustrative cash-flow example: collections, inventory and cash paid to suppliers.</description>
-  </item>
-    <item><title>Margen bruto, contribución y utilidad neta</title><link>https://jfcarpio.com/articulos/margen-bruto-contribucion-utilidad-neta/</link><guid>https://jfcarpio.com/articulos/margen-bruto-contribucion-utilidad-neta/</guid><description>Ejemplo económico original: fórmulas y tres indicadores distintos.</description></item>
-    <item><title>Gross, contribution and net margin</title><link>https://jfcarpio.com/en/articles/gross-margin-contribution-margin-net-profit/</link><guid>https://jfcarpio.com/en/articles/gross-margin-contribution-margin-net-profit/</guid><description>Original educational example: three margins and their formulas.</description></item>
-    <item><title>Inventario inmovilizado y caja</title><link>https://jfcarpio.com/articulos/inventario-inmovilizado-caja-proveedores/</link><guid>https://jfcarpio.com/articulos/inventario-inmovilizado-caja-proveedores/</guid><description>Cuenta ilustrativa: cobertura de inventario, proveedor y caja disponible.</description></item>
-    <item><title>Inventory tied up vs cash</title><link>https://jfcarpio.com/en/articles/inventory-cash-suppliers/</link><guid>https://jfcarpio.com/en/articles/inventory-cash-suppliers/</guid><description>Fictional example comparing stock coverage, a supplier invoice and cash available.</description></item>
+      <title>Ventas suben, caja baja</title>
+      <link>https://jfcarpio.com/articulos/ventas-suben-caja-baja/</link>
+      <guid>https://jfcarpio.com/articulos/ventas-suben-caja-baja/</guid>
+      <description>Ejemplo ficticio: cobros, pagos e inventario y su impacto en caja.</description>
+    </item>
+    <item>
+      <title>Sales up, cash down</title>
+      <link>https://jfcarpio.com/en/articles/sales-up-cash-down/</link>
+      <guid>https://jfcarpio.com/en/articles/sales-up-cash-down/</guid>
+      <description>Example: sales, collections and operating cash flow.</description>
+    </item>
+    <item>
+      <title>Margen bruto, contribución y utilidad neta</title>
+      <link>https://jfcarpio.com/articulos/margen-bruto-contribucion-utilidad-neta/</link>
+      <guid>https://jfcarpio.com/articulos/margen-bruto-contribucion-utilidad-neta/</guid>
+      <description>Ejemplo inventado con fórmula de margen bruto, contribución y utilidad neta.</description>
+    </item>
+    <item>
+      <title>Gross, contribution and net margin</title>
+      <link>https://jfcarpio.com/en/articles/gross-margin-contribution-margin-net-profit/</link>
+      <guid>https://jfcarpio.com/en/articles/gross-margin-contribution-margin-net-profit/</guid>
+      <description>A reproducible fictional example comparing gross, contribution and net margins.</description>
+    </item>
+    <item>
+      <title>Inventario inmovilizado y caja</title>
+      <link>https://jfcarpio.com/articulos/inventario-inmovilizado-caja-proveedores/</link>
+      <guid>https://jfcarpio.com/articulos/inventario-inmovilizado-caja-proveedores/</guid>
+      <description>Cuenta ficticia: cobertura de inventario y caja exigible.</description>
+    </item>
+    <item>
+      <title>Inventory tied up vs cash</title>
+      <link>https://jfcarpio.com/en/articles/inventory-cash-suppliers/</link>
+      <guid>https://jfcarpio.com/en/articles/inventory-cash-suppliers/</guid>
+      <description>Fictional stock coverage, a supplier payment and cash shortfall.</description>
+    </item>
   </channel>
 </rss>

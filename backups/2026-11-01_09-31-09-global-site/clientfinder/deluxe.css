@@ -1,0 +1,43 @@
+/* BuscaClientes deluxe (JFC 31 oct 2026): capa aparte y reversible. Escritorio: el buscador entra en el primer pantallazo. */
+@media (min-width:1000px){
+  .hero{min-height:0}
+  .globe-wrap{height:330px}
+  .hero h1{font-size:clamp(38px,3.6vw,56px)!important;margin:2px 0 8px!important}
+  .hero>.hero-live>#periscope{margin:10px 0 0!important}
+  .scope-mini{margin:4px 0 8px!important}
+  .scope-features{margin:6px 0 10px}
+}
+/* Destello al encontrar resultados */
+#radar{position:relative}
+#bcFx{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0;transition:opacity 1.2s;border-radius:inherit}
+#bcFx.on{opacity:.85}
+#radar>*:not(#bcFx){position:relative;z-index:1}
+@media (prefers-reduced-motion:reduce){#bcFx{display:none}}
+.bc-migra{max-width:1296px;margin:0 auto 12px;padding:10px 16px;border:1px solid #2b4658;border-radius:12px;background:#0d2633cc;color:#cfe6ef;font-size:14px}
+.bc-migra a{color:#83F0E5;font-weight:700}
+.bc-migra button{float:right;background:none;border:0;color:#cfe6ef;font-size:18px;cursor:pointer;line-height:1}
+
+/* Pie: subir contraste a AA (4.19 → >4.5) */
+html body .footer span:not(#_){color:#B7C9D6!important}
+/* QA móvil (agente, 31 oct): cabecera en una fila y buscador más arriba; espacio tras la cifra en tarjetas. */
+.lead-data strong{margin-right:.3em}
+@media (max-width:600px){
+  .top .menu .bc-launch-link,.top .menu .bc-quick-help{display:none!important}
+  .top .menu{flex-wrap:nowrap!important;gap:6px!important;justify-content:flex-start!important;max-width:100%}
+  .top .menu>*{flex:0 1 auto;min-width:0;white-space:nowrap}
+  .globe-wrap{height:250px!important}
+  .hero h1{font-size:clamp(30px,8.5vw,40px)!important}
+}
+/* Celular: título → buscador → globo, para que buscar esté en el primer pantallazo (sin tocar el HTML). */
+@media (max-width:600px){
+  .shell{display:flex!important;flex-direction:column}
+  .shell>.top{order:0}
+  .shell>.hero{display:contents!important}
+  .hero-copy{order:1}
+  .shell>.panel{order:2}
+  .hero-live{order:3}
+  .shell>.scope-features{order:4}
+  .shell>.content{order:5}
+  .shell>.bc-mission-strip{order:6}
+  .shell>.footer{order:7}
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#FAFAF7">
+<script>(function(){var t;try{t=localStorage.getItem('jfc-tema')}catch(e){}document.documentElement.dataset.theme=t==='dark'?'dark':'light'})()</script>
+<title>¿Cuál es tu siguiente paso para crecer? · Test de 3 minutos · JFCarpio.com</title>
+<meta name="description" content="10 preguntas para saber qué te conviene primero: ordenar tu negocio, medir, cobrar mejor, formar a tu equipo o invertir con evidencia. Gratis y sin registro.">
+<link rel="icon" href="data:,">
+<link rel="canonical" href="https://jfcarpio.com/test-de-crecimiento/">
+<meta property="og:type" content="website"><meta property="og:url" content="https://jfcarpio.com/test-de-crecimiento/"><meta property="og:site_name" content="JFCarpio.com"><meta property="og:locale" content="es_EC">
+<meta property="og:title" content="¿Cuál es tu siguiente paso para crecer? · Test de 3 minutos"><meta property="og:description" content="10 preguntas para saber qué te conviene primero: ordenar tu negocio, medir, cobrar mejor, formar a tu equipo o invertir con evidencia.">
+<meta property="og:image" content="https://jfcarpio.com/og/test-de-crecimiento.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@jfcarpio">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Jost:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/v2/tema.css">
+<style>
+main{max-width:1060px;margin:0 auto;padding:92px clamp(12px,4vw,28px) 32px}
+.hidden{display:none!important}
+.pains{margin-top:0}.pains button{text-align:left;cursor:pointer;font:inherit;padding:14px 16px;border:1px solid var(--line);border-left:5px solid var(--c);background:var(--panel);border-radius:12px;display:flex;flex-direction:column;gap:6px;transition:transform .2s var(--ease),box-shadow .2s;color:var(--text)}.pains button:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.pains b{font:700 17px/1.2 Jost;color:var(--head);text-transform:none}.pains span{font-size:14px;color:var(--mute);font-style:italic}
+.stage{position:relative;overflow:hidden;background:#060E1D;--head:#F2F2F2}.stage .mono{color:#A8BDDC}.stage>canvas,.band>canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:0;transition:opacity 1.4s}.stage>canvas.on,.band>canvas.on{opacity:1}.stage>*:not(canvas),.band>*:not(canvas){position:relative;z-index:1}
+.band{position:relative;overflow:hidden;background:#060E1D;--head:#F2F2F2;margin:calc(-1*clamp(20px,3vw,32px)) calc(-1*clamp(20px,3vw,32px)) 16px;height:170px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:10px;border-radius:16px 16px 0 0}
+main>section{padding:0}/* el relleno de section es para la portada larga, no para el test */
+.box{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+/* planta pixel que crece */
+.plant{width:var(--s,180px);aspect-ratio:1;position:relative;display:block}
+.plant img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(0,0,0,.28))}
+.plant img.bolsa{position:absolute;width:46%;height:46%;right:-6%;bottom:-2%}
+.plant.pop img{animation:crece .55s cubic-bezier(.2,1.4,.4,1)}
+@keyframes crece{from{transform:scale(.6) translateY(12%);opacity:.3}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.plant.pop img{animation:none}}
+/* portada */
+.intro{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:start}
+.intro h1{font-size:clamp(34px,3.8vw,54px);font-weight:800;margin:8px 0 12px}
+.intro p{color:var(--soft);font-size:clamp(17px,1.3vw,19px);max-width:34em}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
+.facts span{font:700 11.5px 'Space Mono';letter-spacing:.12em;text-transform:uppercase;padding:7px 10px;border:1px solid var(--line);border-radius:999px;color:var(--mute)}
+.stage{display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px;border-top:6px solid var(--mint)}
+.stage .mono{color:var(--mute)}
+.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.offers div{padding:12px 14px;border-left:5px solid var(--c);background:var(--panel);border-radius:10px;font-size:14.5px;color:var(--soft)}
+.offers b{display:block;font:700 18px 'Barlow Condensed';text-transform:uppercase;color:var(--head)}
+/* pregunta */
+.qwrap{display:grid;grid-template-columns:1fr 210px;gap:22px;align-items:start}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:4px}
+.top button{background:none;border:0;font:700 11.5px 'Space Mono';letter-spacing:.12em;text-transform:uppercase;color:var(--link);cursor:pointer;min-height:44px}
+.top .mono{color:var(--mute)}
+.bar{height:6px;border-radius:99px;background:var(--line2);overflow:hidden;margin-bottom:14px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--coralbg),var(--mint));transition:width .5s var(--ease)}
+.qcard{padding:clamp(18px,2.4vw,28px);border-top:6px solid var(--c)}
+.qcard .mono{color:var(--c)}
+.qcard h2{font-size:clamp(24px,2.6vw,34px);margin:8px 0 4px;text-transform:none;letter-spacing:-.005em}
+.qcard .hint{color:var(--mute);font-size:15px}
+.likert{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:22px}
+.lk{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px 6px;display:flex;flex-direction:column;align-items:center;gap:6px;border-bottom:5px solid var(--c);cursor:pointer;color:var(--text);min-height:92px;transition:transform .2s var(--ease),box-shadow .2s}
+.lk b{font:800 26px/1 'Barlow Condensed'}
+.lk span{font-size:12.5px;font-weight:600;text-align:center;line-height:1.25}
+.lk:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.alt{text-align:center;margin-top:14px}
+.alt button{background:none;border:0;font:700 11.5px 'Space Mono';letter-spacing:.12em;text-transform:uppercase;color:var(--mute);cursor:pointer;text-decoration:underline;min-height:44px}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.ch{text-align:left;background:var(--panel2);border:1px solid var(--line);border-left:5px solid var(--c);border-radius:12px;padding:14px 16px;display:flex;gap:12px;align-items:center;font:600 16px Jost;color:var(--text);cursor:pointer;min-height:60px;transition:transform .2s var(--ease),box-shadow .2s}
+.ch:hover{transform:translateX(4px);box-shadow:var(--shadow)}
+.ch .k{font:700 12px 'Space Mono';color:var(--c);flex:none}
+.side{position:sticky;top:90px;padding:18px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.side .mono{color:var(--mute)}
+.side b{font:800 30px/1 'Barlow Condensed';color:var(--head)}
+/* resultado */
+.res{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:start}
+.rcard{padding:clamp(20px,3vw,32px);border-top:8px solid var(--mint);position:relative}
+.rcard .mono{color:var(--mint)}
+.rcard h2{font-size:clamp(30px,3.4vw,46px);margin:10px 0 12px}
+
+.rcard .pct{font:800 64px/1 'Barlow Condensed';color:var(--head)}
+.rcard .pct small{display:block;font:700 11px 'Space Mono';letter-spacing:.12em;color:var(--mute);margin-top:6px;text-transform:uppercase}
+.rcard p{color:var(--soft)}
+.rcard .price{margin-top:10px}
+.panel{padding:20px}
+.panel h3{font-size:22px;margin-bottom:12px}
+.radio{display:grid;gap:10px}
+.radio div{display:grid;grid-template-columns:120px 1fr 40px;gap:10px;align-items:center;font-size:14px;color:var(--soft)}
+.radio .tr{height:10px;border-radius:99px;background:var(--line2);overflow:hidden}
+.radio .tr i{display:block;height:100%;width:0;background:var(--c);transition:width 1.2s var(--ease)}
+.why{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.why li{padding:10px 12px;border-left:4px solid var(--coralbg);background:var(--panel2);border-radius:6px;font-size:15px;color:var(--text)}
+.alts{display:grid;gap:8px}
+.alts a{display:flex;justify-content:space-between;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--text);font-weight:600}
+.alts em{font:700 13px 'Space Mono';font-style:normal;color:var(--link)}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.small{font-size:13px;color:var(--mute)}
+@media (max-width:860px){.intro,.res,.qwrap{grid-template-columns:1fr}.side{display:none}.offers{grid-template-columns:1fr 1fr}.choices{grid-template-columns:1fr}.likert{gap:6px}.lk span{font-size:11px}.rcard h2{padding-right:0}.rcard .plant{position:static;margin-bottom:8px;--s:110px!important}}
+@media (max-width:440px){.likert{grid-template-columns:1fr}.lk{flex-direction:row;min-height:52px;justify-content:flex-start;padding:8px 14px;gap:12px}.lk span{font-size:14px}.offers{grid-template-columns:1fr}.radio div{grid-template-columns:90px 1fr 34px}}
+@media (max-width:240px){.intro h1{font-size:24px}.rcard .pct{font-size:42px}.facts{display:none}}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Principal"><div class="strip"></div><div class="wrap">
+  <a class="brand" href="/">JFCarpio<span>.com</span></a>
+  <span class="mono" style="margin-left:auto;color:var(--mute)">Test · 3 min</span>
+  <button class="tema" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false"><svg class="luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</div></nav>
+
+<main aria-live="polite">
+  <section id="s-intro">
+    <div class="intro">
+      <div>
+        <span class="mono k">Test de crecimiento · JFCarpio.com</span>
+        <h1>¿Cuál es tu siguiente paso para <span class="hl m">crecer?</span></h1>
+        <p>Diez preguntas sobre tu negocio, tu dinero y tus decisiones. Al final, el equipo de JFCarpio.com te dice qué te conviene primero y cuánto cuesta.</p>
+        <div class="facts"><span>10 preguntas</span><span>3 minutos</span><span>Sin registro</span></div>
+        <button class="btn c" id="go" type="button">Empezar el test →</button>
+      </div>
+      <div class="box stage"><canvas id="fx0" aria-hidden="true"></canvas><div class="plant" id="p0" style="--s:200px" aria-hidden="true"></div><span class="mono">Tu planta crece con cada respuesta</span></div>
+    </div>
+    <p class="mono k" style="margin:22px 0 10px">¿Te suena alguno de estos?</p>
+    <div class="offers pains">
+      <button type="button" style="--c:var(--coral)"><b>Cierras el mes y no sabes cuánto ganaste.</b><span>Quiero ver ventas, caja e inventario cada día para decidir sin adivinar.</span></button>
+      <button type="button" style="--c:var(--amber)"><b>Cobras lo mismo que hace dos años.</b><span>Quiero un precio que cubra mi tiempo, mis costos y mi margen.</span></button>
+      <button type="button" style="--c:var(--link)"><b>Pagas publicidad y no sabes cuánto te cuesta cada cliente.</b><span>Quiero saber cuánto me cuesta conseguir un cliente y cuánto me deja.</span></button>
+      <button type="button" style="--c:var(--mint)"><b>Si faltas una semana, el negocio se detiene.</b><span>Quiero un negocio que funcione sin depender de mí.</span></button>
+      <button type="button" style="--c:var(--coral)"><b>Tu equipo trabaja duro, pero no sabe cómo gana dinero la empresa.</b><span>Quiero que mi equipo decida con el mismo criterio que yo.</span></button>
+      <button type="button" style="--c:var(--link)"><b>Vas a invertir con datos de hace un año.</b><span>Quiero contrastar mis supuestos con evidencia antes de mover capital.</span></button>
+    </div>
+  </section>
+
+  <section id="s-q" class="hidden">
+    <div class="qwrap">
+      <div>
+        <div class="top"><button id="back" type="button">← Atrás</button><span class="mono" id="count">1 de 10</span><button id="leave" type="button">Salir</button></div>
+        <div class="bar"><i id="barf"></i></div>
+        <div class="box qcard" id="qcard"><span class="mono" id="qcat"></span><h2 id="qtext"></h2><p class="hint" id="qhint"></p><div id="qopts"></div></div>
+      </div>
+      <div class="box side"><div class="plant" id="p1" style="--s:170px" aria-hidden="true"></div><b id="grow">0%</b><span class="mono">crecimiento</span></div>
+    </div>
+  </section>
+
+  <section id="s-r" class="hidden">
+    <div class="res">
+      <div>
+        <div class="box rcard" id="rcard"></div>
+        <div class="ctas"><a class="btn c" id="wa" target="_blank" rel="noopener">Hablar con el equipo →</a><a class="btn g" id="go2" target="_blank" rel="noopener">Ver la oferta</a><button class="btn g" id="share" type="button">Copiar enlace</button></div>
+        <p class="small" id="copied" role="status"></p>
+      </div>
+      <div style="display:grid;gap:16px">
+        <div class="box panel"><h3>Tu mapa de crecimiento</h3><div class="radio" id="radio"></div><p class="small" style="margin-top:10px">Cada barra muestra qué tan sólido está ese frente según tus respuestas, en una escala de 0 a 100.</p></div>
+        <div class="box panel"><h3>Por qué te lo recomendamos</h3><ul class="why" id="why"></ul></div>
+        <div class="box panel"><h3>Después, te puede servir</h3><div class="alts" id="alts"></div></div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:22px"><button class="btn g" id="again" type="button">Repetir el test</button></p>
+  </section>
+</main>
+
+<footer class="site"><div class="wrap"><div><a class="brand" href="/">JFCarpio<span>.com</span></a><p style="margin-top:10px">Tus respuestas se procesan en tu navegador y no se guardan.</p><p>Ilustraciones: Microsoft Fluent Emoji (licencia MIT).</p></div><div><b>Contacto</b><a href="https://wa.me/593999905080">WhatsApp +593 99 990 5080</a><a href="mailto:staff@jfcarpio.com">staff@jfcarpio.com</a></div><div><b>Oficina</b><p>General Torres #14, Cuenca, Ecuador</p></div></div></footer>
+<script src="/assets/v2/tema.js" defer></script>
+<script type="importmap">{"imports":{"three":"/assets/v2/vendor/three.module.min.js","postprocessing":"/assets/v2/vendor/postprocessing.js"}}</script>
+<script type="module">import { brillo } from '/assets/v2/brillo.js'; window.brilloFx = brillo; document.dispatchEvent(new Event('brillo-listo'));</script>
+<script>
+// ---------- planta pixel 24×24 que crece de semilla a árbol con frutos (etapa 0..10) ----------
+function plant(el, st) {
+  // Etapas con Microsoft Fluent Emoji 3D (MIT): brote → hierba → maceta → árbol → árbol con bolsa de dinero
+  const B = '/assets/v2/', img = st <= 2 ? 'brote' : st <= 5 ? 'hierba' : st <= 8 ? 'maceta' : 'arbol';
+  if (el.dataset.etapa === img + (st >= 10)) return; el.dataset.etapa = img + (st >= 10);
+  el.innerHTML = `<img src="${B}fluent-${img}.webp" alt="" width="256" height="256">` + (st >= 10 ? `<img class="bolsa" src="${B}fluent-bolsa-dinero.webp" alt="" width="256" height="256">` : '');
+  el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop');
+}
+plant(document.getElementById('p0'), 10);
+const fx0 = () => window.brilloFx && window.brilloFx(document.getElementById('fx0'), { modo: 'subir', cantidad: 90, colores: ['#E8A020', '#F2C14E', '#28ECAA', '#7FB0FF'] });
+window.brilloFx ? fx0() : document.addEventListener('brillo-listo', fx0, { once: true });
+
+// ---------- ofertas (texto y precios de jfcarpio.com) ----------
+const F = { N: ['Negocio', 'var(--coral)'], D: ['Datos', 'var(--link)'], P: ['Precios', 'var(--amber)'], E: ['Equipo', 'var(--mint)'], I: ['Patrimonio', 'var(--coral)'] };
+const O = {
+  APP: { n: 'friendly-123', k: 'Ordenar', d: 'friendly-123 reúne inventario, ventas, clientes y comisiones en una sola app. Amigable es la edición en español, y Consultorio, para salud y veterinaria, está en beta.', p: '$399 · 5 años · demostración con PIN 456', u: 'https://jfcarpio.com/friendly123/', s: 'Entra a la demostración con el PIN 456 y registra las ventas de una semana.' },
+  VAQ: { n: 'Visor Antiquiebra', k: 'Medir', d: 'El visor reúne ocho indicadores para revisar caja, clientes y dependencia del fundador entre los meses 6 y 24. Cada revisión mensual toma unos 45 minutos.', p: 'Gratis', u: 'https://jfcarpio.com/visorantiquiebra/', s: 'Haz tu primera revisión mensual con el visor; toma unos 45 minutos.' },
+  VGE: { n: 'Visor Gerencial · Marketing', k: 'Medir', d: 'El área de marketing ya está disponible, con seis indicadores y calculadoras. Las otras seis áreas gerenciales están en desarrollo.', p: 'Gratis', u: 'https://jfcarpio.com/visorgerencial/', s: 'Abre el área de marketing y calcula tus seis indicadores.' },
+  ASE: { n: 'Asesorías express', k: 'Decidir', d: 'Puedes elegir entre cinco temas: experiencia del cliente, estrategia comercial, transformación digital, finanzas del negocio y atracción orgánica. Trabajamos contigo en tu negocio.', p: 'USD 100 por asesoría · 2–3 horas · reporte incluido', u: 'https://jfcarpio.com/reportes/', s: 'Elige uno de los cinco temas y agenda tu asesoría.' },
+  LIB: { n: 'Ponle precio a tu trabajo', k: 'Cobrar mejor', d: 'Este libro te enseña a cotizar un servicio sin olvidar el tiempo, los costos y el margen.', p: 'Nuevo · 28 oct 2026', u: 'https://jfcarpio.com/libro/', s: 'Recalcula el precio de tu servicio principal con su tiempo, sus costos y su margen.' },
+  TAL: { n: 'Talleres corporativos', k: 'Formar', d: 'Ofrecemos dos talleres de 2 horas: dinero y finanzas personales y familiares, y apreciación de la empresa privada. Cada participante se lleva un número, un criterio y una próxima acción.', p: 'Cotización · disponibilidad limitada', u: 'https://jfcarpio.com/talleres/', s: 'Pide una cotización del taller que más le sirve a tu equipo.' },
+  ESC: { n: 'La Escuela del Dinero', k: 'Formar', d: 'La escuela te ayuda con el ahorro, la deuda, el patrimonio y la seguridad familiar, una decisión a la vez. La oferta va desde ebooks hasta un sistema completo con asesoría.', p: 'Desde USD 9.99 · Semáforo Financiero gratis', u: 'https://jfcarpio.com/la-escuela-del-dinero/', s: 'Empieza gratis con el Semáforo Financiero.' },
+  REV: { n: 'Revisión de lanzamiento', k: 'Lanzar', d: 'Revisamos tu producto o SaaS antes de publicarlo para que te encuentren, funcione bien y dé confianza. Recibes los problemas detectados y un orden para corregirlos.', p: 'Alcance y precio según el proyecto', u: 'https://jfcarpio.com/revision-de-lanzamiento/', s: 'Cuéntanos qué vas a lanzar y acordamos qué páginas y recorridos revisamos.' },
+  PBI: { n: 'Pacific Basin Intelligence Unit', k: 'Anticipar', d: 'Publicamos reportes de inteligencia de inversión sobre Chile, Ecuador, Perú y Colombia, con un executive summary gratuito antes de comprar.', p: 'Desde USD 3,800', u: 'https://pacific-basin.jfcarpio.com/', s: 'Pide el executive summary gratuito antes de comprar.' }
+};
+const Q = [
+  { f: 'N', type: 'ch', t: '¿Quién eres hoy?', h: 'Elige lo más cercano.', o: [['Tengo un negocio pequeño', { APP: 2, ASE: 2, VAQ: 2 }], ['Dirijo un equipo o una empresa', { TAL: 3, ASE: 1, VGE: 1 }], ['Invierto o evalúo mercados', { PBI: 5 }], ['Estoy lanzando un producto o SaaS', { REV: 5 }], ['Quiero ordenar mi dinero personal', { ESC: 4, TAL: 1 }]] },
+  { f: 'N', type: 'ch', t: '¿Qué quieres que crezca primero?', h: 'Piensa en los próximos seis meses.', o: [['Mis ventas y clientes', { ASE: 3, VGE: 2 }], ['Mi margen', { LIB: 3, ASE: 2 }], ['El orden del día a día', { APP: 4 }], ['Mi equipo', { TAL: 4 }], ['Mi patrimonio', { ESC: 4 }], ['Mi capital invertido', { PBI: 4 }]] },
+  { f: 'D', type: 'lk', t: 'Sé cuánto vendí, cuánto cobré y qué inventario tengo, sin reconstruirlo a fin de mes.', w: { APP: 1 } },
+  { f: 'P', type: 'lk', t: 'Mis precios cubren tiempo, costos y margen.', w: { LIB: 1, ASE: .4 } },
+  { f: 'D', type: 'lk', t: 'Reviso cada mes la caja, los clientes y cuánto depende todo de mí.', w: { VAQ: 1 } },
+  { f: 'D', type: 'lk', t: 'Sé cuánto me cuesta conseguir un cliente y cuánto me deja.', w: { VGE: 1, ASE: .4 } },
+  { f: 'E', type: 'lk', t: 'Mi equipo entiende cómo gana dinero la empresa.', w: { TAL: 1 } },
+  { f: 'I', type: 'lk', t: 'Mis finanzas personales están separadas del negocio y tengo ahorro.', w: { ESC: 1, TAL: .3 } },
+  { f: 'I', type: 'lk', t: 'Antes de invertir, contrasto mis supuestos con evidencia.', w: { PBI: .8, ASE: .2 } },
+  { f: 'P', type: 'ch', t: '¿Cuánto quieres invertir para empezar?', h: 'También puedes empezar gratis.', o: [['Nada por ahora', { VAQ: 2, VGE: 2, ESC: 1 }], ['Hasta USD 100', { ASE: 3, LIB: 2, ESC: 1 }], ['Entre USD 100 y 1.000', { APP: 3, TAL: 2 }], ['Más de USD 1.000', { PBI: 3, REV: 2, TAL: 1 }]] }
+];
+const MAD = { N: [2], D: [4, 5], P: [3], E: [6], I: [7, 8] };
+const LK = [['Nada cierto', 'var(--wine)'], ['Poco', 'var(--coral)'], ['A medias', 'var(--amber)'], ['Bastante', 'var(--link)'], ['Totalmente', 'var(--mint)']];
+let A = Array(Q.length).fill(null), i = 0;
+const $ = id => document.getElementById(id), show = id => ['s-intro', 's-q', 's-r'].forEach(s => $(s).classList.toggle('hidden', s !== id));
+function render() {
+  const q = Q[i]; $('count').textContent = `${i + 1} de ${Q.length}`; $('barf').style.width = (100 * i / Q.length) + '%';
+  plant($('p1'), i); $('grow').textContent = Math.round(100 * i / Q.length) + '%';
+  $('qcard').style.setProperty('--c', F[q.f][1]); $('qcat').textContent = F[q.f][0];
+  $('qtext').textContent = q.t; $('qhint').textContent = q.type === 'lk' ? '¿Qué tan cierto es para ti?' : q.h; $('back').style.visibility = i ? 'visible' : 'hidden';
+  $('qopts').innerHTML = q.type === 'lk'
+    ? '<div class="likert">' + LK.map(([l, c], k) => `<button type="button" class="lk" style="--c:${c}" data-v="${k + 1}"><b>${k + 1}</b><span>${l}</span></button>`).join('') + '</div><div class="alt"><button type="button" data-v="0">No lo sé</button></div>'
+    : '<div class="choices">' + q.o.map(([l], k) => `<button type="button" class="ch" style="--c:${['var(--coral)', 'var(--link)', 'var(--mint)', 'var(--amber)', 'var(--coral)', 'var(--link)'][k]}" data-v="${k}"><span class="k">${'ABCDEF'[k]}</span>${l}</button>`).join('') + '</div>';
+}
+$('qopts').addEventListener('click', e => { const b = e.target.closest('button[data-v]'); if (!b) return; A[i] = +b.dataset.v; plant($('p1'), i + 1); setTimeout(() => { i < Q.length - 1 ? (i++, render()) : result(); }, 220); });
+addEventListener('keydown', e => { if ($('s-q').classList.contains('hidden')) return; const q = Q[i], n = +e.key; if (q.type === 'lk' && n >= 1 && n <= 5) $('qopts').querySelector(`[data-v="${n}"]`).click(); if (q.type === 'ch' && n >= 1 && n <= q.o.length) $('qopts').querySelector(`[data-v="${n - 1}"]`).click(); });
+document.querySelectorAll('.pains button').forEach(b => b.onclick = () => $('go').click());
+$('go').onclick = () => { i = 0; A = A.map(() => null); show('s-q'); render(); };
+$('back').onclick = () => { if (i) { i--; render(); } };
+$('leave').onclick = () => show('s-intro');
+$('again').onclick = () => { history.replaceState(null, '', location.pathname); $('go').click(); };
+function score(ans) {
+  const s = {}, mx = {}; Object.keys(O).forEach(k => { s[k] = 0; mx[k] = 0; });
+  Q.forEach((q, k) => {
+    if (q.type === 'ch') { const best = {}; q.o.forEach(([, w]) => Object.entries(w).forEach(([p, v]) => best[p] = Math.max(best[p] || 0, v))); Object.entries(best).forEach(([p, v]) => mx[p] += v); Object.entries(q.o[ans[k]][1]).forEach(([p, v]) => s[p] += v); }
+    else { const gap = ans[k] === 0 ? 3 : 5 - ans[k]; Object.entries(q.w).forEach(([p, v]) => { s[p] += gap * v; mx[p] += 4 * v; }); }
+  });
+  return Object.keys(O).map(k => ({ k, pct: Math.round(100 * s[k] / mx[k]) })).sort((a, b) => b.pct - a.pct);
+}
+function result() {
+  show('s-r'); const r = score(A), t = r[0], o = O[t.k];
+  $('rcard').innerHTML = `<div class="band"><canvas id="fx1" aria-hidden="true"></canvas><div class="plant" style="--s:140px" aria-hidden="true"></div></div><span class="mono">Tu siguiente paso · ${o.k}</span><h2>${o.n}</h2><div class="pct">${t.pct}%<small>de afinidad con tus respuestas</small></div><p style="margin-top:12px">${o.d}</p><p style="margin-top:10px"><b>Primer paso:</b> ${o.s[0].toLowerCase() + o.s.slice(1)}</p><p class="price">${o.p}</p>`;
+  plant($('rcard').querySelector('.plant'), 10);
+  const fx = () => window.brilloFx && window.brilloFx($('fx1'), { modo: 'estallido', cantidad: 120, colores: ['#E8A020', '#F2C14E', '#28ECAA', '#F2738F'] });
+  window.brilloFx ? fx() : document.addEventListener('brillo-listo', fx, { once: true });
+  $('alts').innerHTML = r.slice(1, 3).map(x => `<a href="${O[x.k].u}" target="_blank" rel="noopener"><span>${O[x.k].n}<br><small style="font-weight:500;color:var(--mute)">${O[x.k].s}</small></span><em>${x.pct}%</em></a>`).join('');
+  $('radio').innerHTML = Object.entries(MAD).map(([f, qs]) => { const v = qs.map(k => A[k] === 0 ? 1 : A[k]); const m = Math.round(100 * (v.reduce((a, b) => a + b, 0) / v.length - 1) / 4); return `<div><span>${F[f][0]}</span><span class="tr" style="--c:${F[f][1]}"><i data-w="${m}"></i></span><span>${m}</span></div>`; }).join('');
+  requestAnimationFrame(() => requestAnimationFrame(() => document.querySelectorAll('#radio i').forEach(x => x.style.width = x.dataset.w + '%')));
+  const lows = Q.map((q, k) => ({ q, k, v: A[k] })).filter(x => x.q.type === 'lk' && x.q.w[t.k]).sort((a, b) => (a.v || 0) - (b.v || 0)).slice(0, 2);
+  $('why').innerHTML = lows.map(x => (x.v === 0 ? `<li>Respondiste <b>«No lo sé»</b> a la afirmación «${x.q.t}» Cuando algo no se mide, conviene empezar por ahí.</li>` : `<li>Calificaste con <b>${x.v} de 5</b> la afirmación «${x.q.t}»</li>`)).join('') + `<li>Elegiste <b>«${Q[0].o[A[0]][0]}»</b> como tu perfil y <b>«${Q[1].o[A[1]][0]}»</b> como tu prioridad.</li>`;
+  $('wa').href = 'https://wa.me/593999905080?text=' + encodeURIComponent(`Hola, equipo de JFCarpio.com. Hice el test de crecimiento y mi siguiente paso es: ${o.n} (${t.pct}% de afinidad). ¿Me ayudan a empezar?`);
+  $('go2').href = o.u; history.replaceState(null, '', '#r=' + A.join(''));
+}
+$('share').onclick = async () => { try { await navigator.clipboard.writeText(location.href); $('copied').textContent = 'Enlace copiado: quien lo abra verá tu resultado.'; } catch { $('copied').textContent = location.href; } };
+const m = location.hash.match(/^#r=([0-5]{10})$/); if (m) { A = [...m[1]].map(Number); if (A.every((v, k) => Q[k].type === 'lk' || v < Q[k].o.length)) result(); }
+console.assert(score([2, 5, 5, 5, 5, 5, 5, 5, 1, 3])[0].k === 'PBI', 'inversionista sin evidencia → PBIU');
+console.assert(score([0, 2, 1, 5, 5, 5, 5, 5, 5, 2])[0].k === 'APP', 'negocio pequeño desordenado → friendly-123');
+</script>
+</body>
+</html>

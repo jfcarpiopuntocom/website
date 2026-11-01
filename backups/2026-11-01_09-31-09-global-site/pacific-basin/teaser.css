@@ -1,0 +1,41 @@
+/* Fichas teaser de PBIU: una página, imprimible. Usa las variables de tema.css. */
+.doc{max-width:980px;margin:96px auto 40px;padding:0 clamp(12px,4vw,28px)}
+.cover{position:relative;border-radius:16px;overflow:hidden;color:#fff;background:#060E1D;padding:clamp(22px,4vw,48px);border-top:8px solid #F2738F}
+.cover:before{content:"";position:absolute;inset:0;background:var(--img) center/cover;opacity:.35}
+.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,14,29,.96) 0,rgba(6,14,29,.7) 60%,rgba(6,14,29,.4))}
+.cover>*{position:relative;z-index:1}
+.cover .mono{color:#F2738F}
+.cover h1{color:#fff;font-size:clamp(34px,4.6vw,62px);font-weight:800;margin:12px 0 12px}
+.cover p{color:#D6DEEC;max-width:40em;font-size:clamp(16px,1.3vw,19px)}
+.cover .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.cover .meta span{font:700 11px 'Space Mono';letter-spacing:.12em;padding:7px 10px;border-radius:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2)}
+.blk{margin-top:22px;padding:clamp(18px,3vw,30px)}
+.blk h2{font-size:clamp(24px,2.4vw,34px);margin-bottom:12px}
+.blk .mono{color:var(--amber)}
+.blk p{color:var(--soft)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+.metrics div{padding:14px;border-radius:10px;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--c)}
+.metrics b{display:block;font:800 30px/1 'Barlow Condensed';color:var(--head)}
+.metrics span{font-size:12.5px;color:var(--mute)}
+ol.toc{margin:10px 0 0;padding:0;list-style:none;counter-reset:c;display:grid;gap:4px}
+ol.toc li{counter-increment:c;display:grid;grid-template-columns:30px 1fr;gap:8px;padding:8px 0;border-bottom:1px dotted var(--line);color:var(--soft)}
+ol.toc li:before{content:counter(c,decimal-leading-zero);font:700 12px 'Space Mono';color:var(--amber);padding-top:3px}
+.sample{border-left:5px solid var(--amber);padding:14px 18px;background:var(--panel2);border-radius:8px;margin-top:12px}
+.sample p{margin-bottom:8px}
+.blur{filter:blur(4.5px);user-select:none}
+.lockline{font:700 11px 'Space Mono';letter-spacing:.1em;color:var(--mute);margin-top:8px}
+.who{display:grid;gap:8px;margin-top:8px;padding:0;list-style:none}
+.who li{padding-left:22px;position:relative;color:var(--soft)}
+.who li:before{content:"→";position:absolute;left:0;color:var(--amber);font-weight:700}
+.buy{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;margin-top:22px;padding:clamp(18px,3vw,30px)}
+.buy .pr{font:800 48px/1 'Barlow Condensed';color:var(--head)}
+.buy .pr small{display:block;font:500 14px Jost;color:var(--mute);margin-top:6px}
+.buy .cta{display:flex;flex-direction:column;gap:10px}
+.btn.a{background:var(--amber);color:#fff}
+[data-theme=dark] .btn.a{color:#060E1D}
+.back{font:700 11px 'Space Mono';letter-spacing:.12em;text-transform:uppercase;color:var(--link);text-decoration:none}
+.legal{font-size:12.5px;color:var(--mute);margin-top:18px}
+@media (max-width:760px){.two,.buy{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}}
+@media (max-width:240px){.metrics{grid-template-columns:1fr}.cover h1{font-size:22px}}
+@media print{nav.top,.tema,.menu,.back{display:none!important}.doc{margin-top:0}.card{box-shadow:none}.blk,.buy{break-inside:avoid}}

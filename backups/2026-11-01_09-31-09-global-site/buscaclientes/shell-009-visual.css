@@ -1,0 +1,15 @@
+
+header .brand .bc-brand-symbol{display:block;object-fit:contain;flex:none;background:transparent;border:0;box-shadow:none;border-radius:0;filter:drop-shadow(0 2px 5px #18aac450)}
+header .brand .wordmark,header .brand strong{position:relative;text-decoration:none!important;border-bottom:0!important;box-shadow:none!important}
+header .brand .wordmark::after,header .brand .wordmark-first::after,header .brand .wordmark-second::after,header .brand strong::after{content:none!important;display:none!important}
+.bc-globe-slogan{left:3%!important;top:6%!important;right:auto;max-width:min(82%,340px);white-space:normal;line-height:1.4;letter-spacing:.025em;text-wrap:balance;overflow-wrap:anywhere;box-shadow:0 4px 14px #020a1d99}
+.bc-globe-slogan span{font-size:clamp(10px,1.15vw,13px);font-weight:800;color:#f0fcff}
+.bc-globe-fallback{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;z-index:0;background:#02070d;transition:opacity 250ms ease}
+.bc-globe-fallback img{width:100%;height:100%;object-fit:cover;opacity:1;filter:none}
+.bc-globe-live .bc-globe-fallback{opacity:0;visibility:hidden}
+.globe-wrap .orb-tag.b{max-width:70%;white-space:normal;overflow-wrap:anywhere;line-height:1.35}
+.globe-wrap .target-coords{font-variant-numeric:tabular-nums}
+@media(max-width:740px){header .brand{min-width:0;max-width:100%;gap:8px!important}header .brand .bc-brand-symbol{width:37px;height:37px}header .brand .wordmark{font-size:clamp(17px,5vw,25px);letter-spacing:-.05em!important}.bc-globe-slogan{top:6%!important;left:3%!important;max-width:72%}.bc-globe-slogan span{font-size:11px}.globe-wrap .orb-tag.b{max-width:66%;bottom:12%!important}}
+@media(max-width:390px){header .brand .bc-brand-symbol{width:34px;height:34px}.bc-globe-slogan{max-width:84%;padding:6px 8px!important}.bc-globe-slogan span{font-size:10px;letter-spacing:0}}
+@media(prefers-reduced-motion:reduce){.bc-globe-fallback{transition:none}.bc-globe-fallback img{filter:none}header .brand .bc-brand-symbol{filter:none!important}}
+@media print{.bc-globe-fallback{display:none}.bc-globe-slogan{box-shadow:none}}
