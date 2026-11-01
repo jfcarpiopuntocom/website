@@ -23,7 +23,8 @@ const latam = () => {
   document.querySelectorAll('.suggest .chip[data-cat]').forEach((c, i) => {
     const d = LAT[i]; if (!d) return;
     c.dataset.cat = d[3]; c.dataset.city = d[2]; c.dataset.cc = d[1];
-    c.textContent = d[0] + ' ' + d[2].split(',')[0] + ' · ' + d[4][k];
+    const EN = { 'Ciudad de Panamá': 'Panama City', 'Ciudad de Guatemala': 'Guatemala City' }, city = d[2].split(',')[0];
+    c.textContent = d[0] + ' ' + (k === 1 ? EN[city] || city : city) + ' · ' + d[4][k];
   });
 };
 document.addEventListener('click', (e) => {
