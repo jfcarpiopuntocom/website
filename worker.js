@@ -120,13 +120,16 @@ export default {
     // El backend solo acepta su propio origen; ambos son de JFC, así que el proxy lo declara.
     const bcProxy = (p) => { const r = new Request(BCO + "/" + p + url.search, request); const hh = new Headers(r.headers); hh.set("Origin", BCO); hh.set("Referer", BCO + "/"); return fetch(new Request(r, { headers: hh })); };
     if (url.pathname.startsWith(BC + "api/") || url.pathname === BC + "__health" || url.pathname.startsWith(BC + "cities/")) {
+      // Solo la propia applet: una petición de navegador desde otro sitio no puede usar el proxy.
+      const o = request.headers.get("Origin");
+      if (o && o !== "https://jfcarpio.com") return new Response("Forbidden", { status: 403 });
       return bcProxy(url.pathname.slice(BC.length));
     }
 
     // 2. Archivos del sitio desde Cloudflare (sin volver a GitHub)
     let res = await env.ASSETS.fetch(request);
     // Lo que la applet no tenga copiado (módulos de three.js, índices /ov/) sale del backend original.
-    if (res.status === 404 && url.pathname.startsWith(BC)) return bcProxy(url.pathname.slice(BC.length));
+    if (res.status === 404 && url.pathname.startsWith(BC) && (request.method === "GET" || request.method === "HEAD")) return bcProxy(url.pathname.slice(BC.length));
     if (url.pathname.endsWith('.mp4')) res = mediaRange(res, request);
     // 3. Cabeceras de seguridad en todo
     const h = new Headers(res.headers);
