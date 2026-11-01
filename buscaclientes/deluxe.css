@@ -28,3 +28,16 @@ html body .footer span:not(#_){color:#B7C9D6!important}
   .globe-wrap{height:250px!important}
   .hero h1{font-size:clamp(30px,8.5vw,40px)!important}
 }
+/* Celular: título → buscador → globo, para que buscar esté en el primer pantallazo (sin tocar el HTML). */
+@media (max-width:600px){
+  .shell{display:flex!important;flex-direction:column}
+  .shell>.top{order:0}
+  .shell>.hero{display:contents!important}
+  .hero-copy{order:1}
+  .shell>.panel{order:2}
+  .hero-live{order:3}
+  .shell>.scope-features{order:4}
+  .shell>.content{order:5}
+  .shell>.bc-mission-strip{order:6}
+  .shell>.footer{order:7}
+}
