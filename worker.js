@@ -124,6 +124,8 @@ export default {
 
     // 2. Archivos del sitio desde Cloudflare (sin volver a GitHub)
     let res = await env.ASSETS.fetch(request);
+    // Lo que la applet no tenga copiado (módulos de three.js, índices /ov/) sale del backend original.
+    if (res.status === 404 && url.pathname.startsWith(BC)) return bcProxy(url.pathname.slice(BC.length));
     if (url.pathname.endsWith('.mp4')) res = mediaRange(res, request);
     // 3. Cabeceras de seguridad en todo
     const h = new Headers(res.headers);
