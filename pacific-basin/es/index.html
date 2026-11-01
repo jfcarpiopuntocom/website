@@ -13,11 +13,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Jost:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/pacific-basin/tema.css">
 <link rel="stylesheet" href="/pacific-basin/pbiu.css"><link rel="stylesheet" href="/pacific-basin/boutique.css"><link rel="alternate" hreflang="en" href="/pacific-basin/"><link rel="alternate" hreflang="es" href="/pacific-basin/es/">
+<style>
+.fx{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
+.fx .wrap{display:flex;gap:28px;align-items:center;flex-wrap:wrap;padding:12px 0;font:700 14px/1.2 'Space Mono',monospace}
+.fx .live{display:inline-flex;align-items:center;gap:8px;color:var(--amber);text-transform:uppercase;letter-spacing:.1em;font-size:12px}
+.fx .live i{width:8px;height:8px;border-radius:50%;background:var(--amber);animation:pulso 1.6s ease-in-out infinite}
+.fx b{color:var(--head)}.fx .fx-src{color:var(--mute);font-weight:400;font-size:12px;margin-left:auto}
+@keyframes pulso{0%,100%{opacity:1}50%{opacity:.25}}
+.pilares{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
+.pilares .card .n,.sectores .card .n{font:800 30px/1 'Playfair Display',serif;color:var(--amber)}
+.servs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cifras{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px}
+.cifras .card b{display:block;font:800 34px/1 'Playfair Display',serif;color:var(--head);margin-bottom:6px}
+.cifras .card small{display:block;margin-top:6px;font:700 11px/1.3 'Space Mono',monospace;letter-spacing:.06em;color:var(--mute);text-transform:uppercase}
+.sectores{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.sectores .card{padding:14px 16px}.sectores .card b{display:block;margin-bottom:2px}
+.paises{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.paises .card h3{margin:0 0 6px}.paises .card .pib{font:800 36px/1 'Playfair Display',serif;color:var(--head)}
+.paises dl{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;margin:10px 0 0;font-size:14px}.paises dt{color:var(--mute)}.paises dd{margin:0;font-weight:600}
+.estudios{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.estudios .card{display:flex;flex-direction:column;gap:6px}.estudios .card .more{margin-top:auto;font-weight:700;color:var(--amber)}
+.faq2 details{border-bottom:1px solid var(--line);padding:14px 0}.faq2 summary{cursor:pointer;font:700 18px/1.35 'Jost',sans-serif;color:var(--head)}.faq2 p{margin:10px 0 0;line-height:1.65;color:var(--soft)}
+.pilares .card,.servs .card,.estudios .card,.paises .card{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.pilares .card:hover,.servs .card:hover,.estudios .card:hover,.paises .card:hover{transform:translateY(-5px);box-shadow:0 26px 50px -28px rgba(6,14,29,.45)}
+@media (max-width:1000px){.pilares,.servs,.cifras,.paises{grid-template-columns:repeat(2,1fr)}.sectores{grid-template-columns:repeat(2,1fr)}.estudios{grid-template-columns:1fr}}
+@media (max-width:560px){.pilares,.servs,.cifras,.paises,.sectores{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.fx .live i{animation:none}.pilares .card:hover,.servs .card:hover,.estudios .card:hover,.paises .card:hover{transform:none}}
+</style>
 </head>
 <body class="bq">
 <nav class="top" aria-label="Principal"><div class="strip"></div><div class="wrap">
   <a class="brand" href="#inicio">PBIU<span>.</span><small>Pacific Basin Intelligence Unit · JFCarpio.com</small></a>
-  <ul><li><a href="#tesis">Tesis</a></li><li><a href="#oportunidades">Oportunidades</a></li><li><a href="#reportes">Reportes</a></li><li><a href="#como">Cómo comprar</a></li><li><a href="#recursos">Recursos</a></li></ul>
+  <ul><li><a href="#tesis">Tesis</a></li><li><a href="#oportunidades">Oportunidades</a></li><li><a href="#reportes">Reportes</a></li><li><a href="#como">Cómo comprar</a></li><li><a href="/pacific-basin/es/analisis.html">Análisis</a></li><li><a href="#recursos">Recursos</a></li></ul>
   <a class="btn a" href="#acceso">Executive summary</a>
   <div class="lang" aria-label="Idioma"><a href="/pacific-basin/" hreflang="en" lang="en">EN</a><span aria-current="true">ES</span></div><button class="tema" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false"><svg class="luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
   <details class="menu"><summary>Menú</summary><nav aria-label="Menú móvil"><a style="--c:var(--amber)" href="#tesis">Tesis</a><a style="--c:var(--coral)" href="#oportunidades">Oportunidades</a><a style="--c:var(--link)" href="#reportes">Reportes y precios</a><a style="--c:var(--mint)" href="#como">Cómo comprar</a><a style="--c:var(--amber)" href="#recursos">Recursos gratuitos</a><a style="--c:var(--coral)" href="#acceso">Solicitar executive summary</a></nav></details>
@@ -41,6 +68,7 @@
 </div></header>
 
 <div class="cred" aria-label="Cifras de la región"><div class="tick track"><span>CL · <b>Cobre</b> #1 mundial</span><span>EC · Spread soberano <b>&gt;1,200 bps</b></span><span>PE · Minería <b>63%</b> de exportaciones</span><span>CO · IED <b>$17.7B</b> · 2024</span><span>Minerales críticos · déficit <b>8 M t</b> al 2035</span><span>EC · <b>25 años</b> dolarizado</span><span>CO · <b>+12 GW</b> renovables en proyecto</span><span>Cartera minera <b>&gt;$80B</b> al 2027</span></div></div>
+<div class="fx" id="fx-rates" aria-label="Tipos de cambio"><div class="wrap"><span class="live"><i></i>En vivo</span><span>USD/CLP <b data-fx="CLP">—</b></span><span>USD/PEN <b data-fx="PEN">—</b></span><span>USD/COP <b data-fx="COP">—</b></span><span class="fx-src">cargando…</span></div></div>
 
 <section id="tesis"><div class="wrap">
   <div class="head rv"><div><span class="mono k" style="color:var(--amber)">La tesis</span><h2>La cadena de suministro que su directorio preguntará el próximo trimestre <span class="hl a">se está cerrando ahora.</span></h2></div>
@@ -53,6 +81,12 @@
   <p class="note rv">Las firmas que llegan tarde a estas ventanas suelen tener los mismos datos macro que usted: terminales, modelos y consensos. Les falta la síntesis específica del punto de entrada.</p>
 </div></section>
 
+<section id="por-que"><div class="wrap">
+ <div class="head rv"><div><span class="mono k">Por qué PBIU</span><h2>La diferencia entre datos <span class="hl">e inteligencia.</span></h2></div><p>No producimos papel: producimos ventaja. Cada entregable está diseñado para proteger márgenes y capturar rentabilidad antes que la competencia.</p></div>
+ <div class="pilares"><article class="card rv"><span class="n">01</span><h3>Metodología propia</h3><p>Nuestro marco PBIU Intel integra análisis cuantitativo, inteligencia de fuentes primarias y síntesis estratégica ejecutiva.</p></article><article class="card rv d1"><span class="n">02</span><h3>Perspectiva regional</h3><p>Entendemos la economía política de Ecuador, los ciclos del mercado andino y las dinámicas de inversión latinoamericanas.</p></article><article class="card rv d2"><span class="n">03</span><h3>Entregables accionables</h3><p>Cada reporte, dashboard o estudio termina en recomendaciones concretas: el qué y el cómo.</p></article><article class="card rv"><span class="n">04</span><h3>Confidencialidad</h3><p>Trabajamos bajo NDA. Su información estratégica nunca cruza conversaciones con otros clientes.</p></article></div>
+ <div class="head rv" style="margin-top:30px"><div><span class="mono k">Lo que hacemos</span><h2>Inteligencia aplicada, <span class="hl">en cuatro formatos.</span></h2></div><p>Para empresas, inversores y ejecutivos con exposición en Chile, Ecuador, Perú y Colombia.</p></div>
+ <div class="servs"><article class="card rv"><span class="mono">01</span><h3>Inteligencia de negocios e inversiones</h3><p>Reportes de mercado, due diligence sectorial y análisis de oportunidades en BFSI, agroindustria, retail y logística.</p></article><article class="card rv d1"><span class="mono">02</span><h3>Estudios estratégicos</h3><p>Investigación de largo aliento sobre sectores, tendencias macro y dinámicas competitivas. Ideal para decidir la entrada a un mercado.</p></article><article class="card rv d2"><span class="mono">03</span><h3>Consultoría</h3><p>Asesoría directa con consultores senior para proyectos de transformación, expansión o reestructuración.</p></article><article class="card rv"><span class="mono">04</span><h3>Tableros de control</h3><p>Dashboards ejecutivos con los KPI que importan: márgenes, riesgo soberano, exposición sectorial y alertas de mercado.</p></article></div>
+</div></section>
 <section class="alt" id="oportunidades"><div class="wrap">
   <div class="head rv"><div><span class="mono k" style="color:var(--amber)">Cinco oportunidades · cuatro jurisdicciones · una ventana</span><h2>La ventana se cierra <span class="hl">antes de 2027.</span></h2></div>
   <p>Registros de concesiones, estructuras de entrada, contrapartes de offtake, desglose de CAPEX y puntaje de riesgo regulatorio están en el reporte completo.</p></div>
@@ -71,6 +105,12 @@
   </article>
 </div></section>
 
+<section class="alt" id="cobertura"><div class="wrap">
+ <div class="head rv"><div><span class="mono k">Cobertura de países</span><h2>Las cuatro <span class="hl">del Pacífico.</span></h2></div><p>Cobertura macroeconómica continua de las economías más estratégicas del Pacífico sudamericano. PIB 2025 proyectado; actualización trimestral.</p></div>
+ <div class="paises"><article class="card rv"><h3>🇨🇱 Chile</h3><span class="pib">2.4%</span><span class="mono"> PIB 2025 proy.</span><dl><dt>Inflación</dt><dd>4.4%</dd><dt>Riesgo</dt><dd>Medio</dd><dt>Sector clave</dt><dd>Cobre · litio</dd></dl></article><article class="card rv d1"><h3>🇪🇨 Ecuador</h3><span class="pib">3.2%</span><span class="mono"> PIB 2025 proy.</span><dl><dt>Inflación</dt><dd>1.2%</dd><dt>Riesgo</dt><dd>Alto político</dd><dt>Moneda</dt><dd>USD (dolarizado)</dd></dl></article><article class="card rv d2"><h3>🇵🇪 Perú</h3><span class="pib">3.1%</span><span class="mono"> PIB 2025 proy.</span><dl><dt>Inflación</dt><dd>En objetivo</dd><dt>Riesgo</dt><dd>Mejor riesgo/retorno</dd><dt>Sector clave</dt><dd>Minería · infraestructura</dd></dl></article><article class="card rv"><h3>🇨🇴 Colombia</h3><span class="pib">2.6%</span><span class="mono"> PIB 2025 proy.</span><dl><dt>Inflación</dt><dd>5.1%</dd><dt>Riesgo</dt><dd>Alto fiscal</dd><dt>Déficit</dt><dd>−7.1% PIB</dd></dl></article></div>
+ <div class="head rv" style="margin-top:34px"><div><span class="mono k">Inteligencia de mercado · contexto 2025</span><h2>Dónde se concentra <span class="hl">la demanda de BI.</span></h2></div><p>Los sectores de América Latina donde la inteligencia de negocios mueve más decisiones.</p></div>
+ <div class="cifras"><div class="card rv"><b>$72B</b>Gasto global proyectado en software de BI en 12 meses<small>HG Insights</small></div><div class="card rv"><b>63%</b>Del gasto global en BI se concentra en finanzas, manufactura y sector público<small>HG Insights</small></div><div class="card rv"><b>39%</b>Adopción de BI en la nube en LatAm, frente a 87% en Norteamérica</div><div class="card rv"><b>35.8%</b>CAGR de la consultoría de riesgo e inteligencia estratégica 2025–2033</div></div><div class="sectores"><div class="card rv"><b>BFSI</b><span>Banca, seguros y fintech</span></div><div class="card rv"><b>Agroindustria</b><span>Cadenas de valor y exportaciones</span></div><div class="card rv"><b>Energía y renovables</b><span>Due diligence y riesgo regulatorio</span></div><div class="card rv"><b>Manufactura</b><span>Cadenas y competitividad</span></div><div class="card rv"><b>Retail y consumo</b><span>Pricing y expansión</span></div><div class="card rv"><b>Logística y comercio</b><span>Nearshoring y puertos</span></div><div class="card rv"><b>Salud y pharma</b><span>Regulación y M&A</span></div><div class="card rv"><b>Real estate</b><span>Mercado GYE/UIO y financiamiento</span></div></div>
+</div></section>
 <section id="reportes"><div class="wrap">
   <div class="head rv"><div><span class="mono k" style="color:var(--amber)">Reportes y escalera de valor</span><h2>Empiece gratis. <span class="hl a">Decida con el reporte insignia.</span></h2></div>
   <p>Licencias individuales en USD. PDF sellado con marca de agua y NDA estándar. Sin revendedores ni intermediarios: cada licencia va directo al tomador de decisiones.</p></div>
@@ -143,6 +183,14 @@
   <div class="card c4 analyst rv" style="margin-top:24px"><img src="/pacific-basin/a/fotojfc.png" alt="Juan Fernando Carpio" loading="lazy"><div><span class="mono" style="color:var(--amber)">Dirección de investigación</span><h3 style="font-size:28px;margin-top:6px">Juan Fernando Carpio</h3><p>Más de 25 años de investigación económica, docencia y consultoría. Fundó el primer subdepartamento de Economía Austriaca e Institucional del Ecuador y es autor de «10 Lecciones de Economía». Cada reporte combina análisis cuantitativo, fuentes primarias (bancos centrales, ministerios de finanzas, multilaterales) y síntesis ejecutiva.</p></div></div>
 </div></section>
 
+<section id="estudios"><div class="wrap">
+ <div class="head rv"><div><span class="mono k">Investigación aplicada</span><h2>Estudios <span class="hl">estratégicos.</span></h2></div><p>Investigaciones de largo aliento sobre lo que reconfigurará los negocios en LatAm en los próximos 3 a 5 años. Por suscripción o encargo.</p></div>
+ <div class="estudios"><article class="card rv"><span class="mono">Logística · comercio</span><h3>Geopolítica, nearshoring y reconfiguración de cadenas de suministro en las Américas</h3><p>Impacto de la política industrial norteamericana, los aranceles y los acuerdos comerciales sobre el tejido productivo latinoamericano.</p><a class="more" href="#acceso">Solicitar →</a></article><article class="card rv d1"><span class="mono">Corporativo · ASG</span><h3>Gobernanza corporativa y riesgo ASG en empresas familiares latinoamericanas</h3><p>Brechas de gobierno, exposición a riesgos no financieros y rutas de profesionalización.</p><a class="more" href="#acceso">Solicitar →</a></article><article class="card rv d2"><span class="mono">Real estate · GYE</span><h3>El mercado inmobiliario de Guayaquil 2025–2028</h3><p>Segmentos residencial, comercial e industrial, con proyecciones de precios, demanda y perfil de inversores.</p><a class="more" href="#acceso">Solicitar →</a></article><article class="card rv"><span class="mono">Puertos · logística</span><h3>Sector portuario y logístico de Ecuador</h3><p>El hub portuario de Guayaquil, corredores logísticos, zonas francas y oportunidades de inversión.</p><a class="more" href="#acceso">Solicitar →</a></article><article class="card rv d1"><span class="mono">Rentabilidad · control</span><h3>Profit intelligence: tableros de control para empresas medianas</h3><p>Cómo las empresas de la región andina convierten datos operativos en ventaja con tableros de márgenes y riesgo.</p><a class="more" href="#acceso">Solicitar →</a></article><a class="card rv d2" href="/pacific-basin/es/analisis.html" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:6px"><span class="mono">Análisis editorial</span><h3>Seis análisis sobre minerales críticos</h3><p>Litio, regulación, soberanía híbrida, ASG y nacionalización en América Latina.</p><span class="more" style="margin-top:auto;font-weight:700;color:var(--amber)">Leer los análisis →</span></a></div>
+</div></section>
+<section class="alt faq2" id="preguntas"><div class="wrap">
+ <div class="head rv"><div><span class="mono k">Preguntas frecuentes</span><h2>Lo que necesita <span class="hl">saber.</span></h2></div></div>
+ <details class="rv"><summary>¿Con qué clientes trabajan?</summary><p>Empresas medianas y grandes, grupos de inversión, family offices, instituciones financieras y organismos públicos en Ecuador y la región andina, además de inversores internacionales con intereses en la región.</p></details><details class="rv"><summary>¿Cómo se estructura un reporte?</summary><p>Con la metodología PBIU Intel: definición del problema, fuentes primarias y secundarias, modelado analítico, síntesis ejecutiva y recomendaciones accionables.</p></details><details class="rv"><summary>¿Trabajan con clientes fuera de Ecuador?</summary><p>Sí. Operamos de forma 100 % remota, con clientes en Norteamérica, Europa y Asia. Todos los reportes están disponibles en español e inglés.</p></details><details class="rv"><summary>¿Cuánto tarda un reporte?</summary><p>Un reporte estándar toma de 2 a 4 semanas; un estudio estratégico, de 6 a 12. Hay modalidad Express de 7 a 10 días para necesidades urgentes.</p></details><details class="rv"><summary>¿Qué diferencia hay entre reporte, dashboard y estudio?</summary><p>El reporte responde una pregunta concreta; el dashboard monitorea indicadores clave de forma continua; el estudio investiga a fondo un fenómeno sectorial o estructural.</p></details><details class="rv"><summary>¿Cómo garantizan la confidencialidad?</summary><p>Con NDA estricto para cada cliente. Ningún dato, hallazgo ni nombre de cliente se comparte con terceros.</p></details>
+</div></section>
 <section class="flight alt" id="acceso"><div class="wrap rv"><div class="card c4 fcard">
   <figure class="ph"><img src="/pacific-basin/a/px7256463.webp" alt="Apretón de manos en una oficina con vista a la ciudad" loading="lazy"></figure>
   <div class="ftx"><span class="mono" style="color:var(--amber)">Licencia individual · NDA incluido</span><h2>Solicite el <span class="hl a">executive summary.</span></h2>
@@ -160,5 +208,11 @@
   <div><b>Contacto</b><a href="https://wa.me/593999905080">WhatsApp +593 99 990 5080</a><a href="mailto:staff@jfcarpio.com">staff@jfcarpio.com</a><p style="margin-top:10px">Fotos: Pexels.</p></div>
 </div></footer>
 <script src="/pacific-basin/tema.js" defer></script>
+<script>
+// Divisas en vivo (servicio propio /api/pbiu/fx: fuentes públicas diarias con respaldo).
+(function(){var el=document.getElementById('fx-rates');if(!el)return;fetch('/api/pbiu/fx').then(function(r){return r.ok?r.json():Promise.reject()}).then(function(d){
+['CLP','PEN','COP'].forEach(function(k){var s=el.querySelector('[data-fx="'+k+'"]');if(s)s.textContent=Number(d.rates[k]).toLocaleString(document.documentElement.lang==='es'?'es-EC':'en-US',{maximumFractionDigits:k==='PEN'?3:0})});
+var n=el.querySelector('.fx-src');if(n)n.textContent=d.source+' · '+d.asOf}).catch(function(){var n=el.querySelector('.fx-src');if(n)n.textContent=document.documentElement.lang==='es'?'Tipos de cambio no disponibles por ahora':'Rates temporarily unavailable'})})();
+</script>
 </body>
 </html>
