@@ -143,6 +143,8 @@ export default {
     const ct = res.headers.get("Content-Type") ?? "";
     if (ct.includes("text/html")) {
       h.set("Content-Security-Policy", /^\/(buscaclientes|clientfinder)\//.test(url.pathname) ? CSP.replace("connect-src 'self'", "connect-src 'self' https:").replace("default-src 'self';", "default-src 'self'; worker-src 'self' blob:;").replace("script-src 'self'", "script-src 'self' 'wasm-unsafe-eval'") : CSP);
+      // Only the homepages embed the owner's approved YouTube videos.
+      if (url.hostname === 'jfcarpio.com' && /^\/(?:en\/?)?$/.test(url.pathname)) h.set('Content-Security-Policy', h.get('Content-Security-Policy') + "; frame-src 'self' https://www.youtube-nocookie.com");
       h.set("Cache-Control", "public, max-age=0, must-revalidate");
     } else if (/image\/|font\//.test(ct)) {
       h.set("Cache-Control", "public, max-age=2592000");
