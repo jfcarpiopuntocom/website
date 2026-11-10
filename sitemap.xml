@@ -71,6 +71,13 @@
   </url>
 
 
+  <!-- Estadisticas de minerales criticos LatAm (JFC 2026-11-10). Fuente USGS MCS 2026. Slug sin ano. -->
+  <url>
+    <loc>https://jfcarpio.com/latin-america-critical-minerals-statistics/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Estadisticas de consignacion USA (JFC 2026-11-10). Slug sin ano: se actualiza en el mismo URL. -->
   <url>
     <loc>https://jfcarpio.com/consignment-statistics/</loc>

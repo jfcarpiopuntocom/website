@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#FAFAF7">
+<!-- Pagina de estadisticas de minerales criticos LatAm (JFC 10 nov 2026: "Las dos, consignacion primero"; luego
+     "sigue con la pagina de minerales criticos"). Fuente unica: USGS Mineral Commodity Summaries 2026 (feb 2026,
+     ver. 1.1 mar 2026), produccion estimada 2025, tablas por pais leidas con codigo (PyMuPDF) y revisadas a mano.
+     Cifras calculadas con codigo. Si se actualiza: recalcular conteo, mediana, tarjetas, tablas y JSON-LD juntos.
+     Berilio y boro NO cuentan (tabla ambigua / productos distintos por pais). Slug sin ano a proposito. -->
+<script>(function(){var t;try{t=localStorage.getItem('jfc-tema')}catch(e){}document.documentElement.dataset.theme=t==='dark'?'dark':'light'})()</script>
+<title>Latin America Critical Minerals Statistics: Where the Region Ranks · JFCarpio.com</title>
+<link rel="canonical" href="https://jfcarpio.com/latin-america-critical-minerals-statistics/">
+<meta name="description" content="Latin America ranks among the world's top three producers of at least 13 of the 60 US critical minerals. Shares by mineral from USGS 2026 data: niobium, silver, copper, lithium, rhenium and more.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="JFCarpio.com">
+<meta property="og:title" content="Latin America critical minerals statistics: where the region ranks">
+<meta property="og:description" content="At least 13 of the 60 US critical minerals have a Latin American country among the world's top three producers. USGS 2026 data, with method.">
+<meta property="og:url" content="https://jfcarpio.com/latin-america-critical-minerals-statistics/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://jfcarpio.com/og-jfcarpio-v2.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Barlow+Condensed:wght@600;700;800&family=Jost:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/v2/tema.css"><link rel="stylesheet" href="/pacific-basin/pbiu.css"><link rel="stylesheet" href="/pacific-basin/boutique.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"JFCarpio.com LatAm Top-Three Count: Latin America in US critical minerals","description":"Latin American share of estimated 2025 world production and best world rank for the minerals on the US Final 2025 Critical Minerals List, computed from the USGS Mineral Commodity Summaries 2026.","url":"https://jfcarpio.com/latin-america-critical-minerals-statistics/","creator":{"@type":"Organization","name":"JFCarpio.com","url":"https://jfcarpio.com/"},"dateModified":"2026-11-10","temporalCoverage":"2025","spatialCoverage":"Latin America","variableMeasured":["Minerals with a Latin American country among the top three world producers (at least 13 of 60)","Latin American share of world production by mineral"],"isBasedOn":"https://pubs.usgs.gov/publication/mcs2026","isAccessibleForFree":true}</script>
+<style>
+/* Solo para esta pagina; mismo sistema que /consignment-statistics/. Colores: SIEMPRE variables de tema.css. Texto minimo 12px. */
+.stat{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--amber);border-radius:4px;padding:clamp(22px,4vw,40px);box-shadow:var(--shadow)}
+.stat .mono{color:var(--amber)}
+.stat .big{display:block;font:700 clamp(72px,12vw,130px)/1 'Playfair Display',serif;color:var(--head);margin:10px 0 6px}
+.stat .big small{font-size:.38em;font-weight:600}
+.stat p{margin:0;font-size:17px;line-height:1.55;color:var(--text)}
+.stat p+p{margin-top:12px;font-size:15px}
+.find{display:grid;grid-template-columns:1fr;gap:16px;margin-top:28px}
+.find .card{padding:22px 22px 20px}
+.find .card h3{font:700 24px/1.2 'Playfair Display',serif;color:var(--head);margin:6px 0 10px}
+.find .card p{margin:0;font-size:16px;line-height:1.6;color:var(--text)}
+.find .card .n{font:700 34px/1 'Barlow Condensed',sans-serif;color:var(--amber)}
+.tw{overflow-x:auto;margin-top:22px;border:1px solid var(--line);border-radius:4px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:1.45;color:var(--text)}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line2);vertical-align:top}
+th{font:700 12px/1.4 'Space Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--head);background:var(--panel2)}
+.tw td,.tw td:first-child{font:400 15px/1.45 Jost,system-ui,sans-serif;letter-spacing:0;text-transform:none;color:var(--text)}
+.tw td:first-child{font-weight:600;color:var(--head)}
+td.v{font-weight:700;color:var(--head);white-space:nowrap}
+footer.site b{font-size:12px}
+a.src{color:var(--link)}
+.prose{max-width:780px}
+.prose p,.prose li{font-size:17px;line-height:1.65;color:var(--text)}
+.prose ul{padding-left:20px}
+.prose a{color:var(--link)}
+.cite{margin-top:18px;background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:16px 18px;font-size:15px;line-height:1.6;color:var(--text)}
+@media (min-width:760px){.find{grid-template-columns:1fr 1fr}}
+@media (min-width:1100px){.find{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body class="bq">
+<nav class="top" aria-label="Main"><div class="strip"></div><div class="wrap">
+ <a class="brand" href="/">JFCarpio<span>.com</span></a>
+ <ul><li><a href="#findings">Findings</a></li><li><a href="#data">The data</a></li><li><a href="#method">Method</a></li></ul>
+ <a class="btn a" href="mailto:staff@jfcarpio.com?subject=Executive%20summary%20%C2%B7%20Critical%20Minerals%20Regulatory%20Outlook">Request the summary</a>
+ <button class="tema" type="button" aria-label="Switch to dark mode" aria-pressed="false"><svg class="luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+ <details class="menu"><summary>Menu</summary><nav aria-label="Mobile menu"><a href="#findings">Findings</a><a href="#data">The data</a><a href="#method">Method</a></nav></details>
+</div></nav>
+
+<header class="hlight" id="top"><div class="wrap">
+ <div>
+  <span class="mono eyebrow"><i></i>Critical minerals statistics · Latin America</span>
+  <h1>Where Latin America ranks in <span class="hl">critical minerals.</span></h1>
+  <p class="lead">The United States lists 60 critical minerals. We went through the country tables in the US Geological Survey's 2026 report and asked one question for each mineral: is a Latin American country among the world's three largest producers?</p>
+  <div class="kpis"><div><b>60</b><span>minerals on the US list</span></div><div><b>13</b><span>with a LatAm top-three producer</span></div><div><b>5</b><span>where LatAm ranks first</span></div><div><b>26.2%</b><span>median regional share in those 13</span></div></div>
+  <p class="fine">Estimated 2025 production. USGS Mineral Commodity Summaries 2026. Reviewed November 10, 2026.</p>
+ </div>
+ <div class="stat">
+  <span class="mono">The JFCarpio.com LatAm Top-Three Count</span>
+  <span class="big">13 <small>of 60</small></span>
+  <p>Critical minerals on the US 2025 list for which a Latin American country ranks among the world's top three producers.</p>
+  <p>Chile, Peru, Mexico or Brazil ranks first in niobium, silver, arsenic, copper and rhenium.</p>
+ </div>
+</div></header>
+
+<section id="findings"><div class="wrap">
+ <span class="mono k">Six findings</span>
+ <h2>Five minerals led by the region. <span class="hl">Eight more in the top three.</span></h2>
+ <div class="find">
+  <div class="card"><span class="n">5 of 13</span><h3>The region leads five minerals</h3><p>Brazil mines 92.9% of the world's niobium. Mexico leads in silver, Peru in arsenic, and Chile in both copper and rhenium.</p></div>
+  <div class="card"><span class="n">52.3%</span><h3>Half of the world's silver</h3><p>Mexico, Peru, Bolivia, Chile and Argentina together mine 52.3% of world silver. Mexico alone accounts for 24.2%, and Peru ranks second.</p></div>
+  <div class="card"><span class="n">37.8%</span><h3>More than a third of mined copper</h3><p>Chile leads with 23.0% of world mine output and Peru ranks third with 11.7%. Copper joined the US list in 2025.</p></div>
+  <div class="card"><span class="n">5 of 10</span><h3>Half of the 2025 additions</h3><p>The 2025 list added ten minerals to the 2022 list. A Latin American country ranks in the top three for five of them: copper, lead, rhenium, silicon and silver.</p></div>
+  <div class="card"><span class="n">31.4%</span><h3>Lithium: a third, but not the lead</h3><p>Chile, Argentina and Brazil produce 31.4% of world lithium. Chile ranks third, behind Australia and China.</p></div>
+  <div class="card"><span class="n">7 of 8</span><h3>China leads where the region follows</h3><p>In the eight minerals where Latin America is in the top three but not first, China leads seven. Australia leads the eighth, lithium.</p></div>
+ </div>
+</div></section>
+
+<section id="data"><div class="wrap">
+ <span class="mono k">The data</span>
+ <h2>Thirteen minerals, <span class="hl">ranked by regional share.</span></h2>
+ <p class="lead">Latin American share of estimated 2025 world production, with the region's best-placed country.</p>
+ <div class="tw"><table>
+  <thead><tr><th>Mineral</th><th>LatAm share of world output</th><th>Best LatAm rank</th><th>Latin American producers</th><th>World leader</th></tr></thead>
+  <tbody>
+   <tr><td>Niobium</td><td class="v">92.9%</td><td>1st, Brazil</td><td>Brazil</td><td>Brazil</td></tr>
+   <tr><td>Silver</td><td class="v">52.3%</td><td>1st, Mexico</td><td>Mexico, Peru (2nd), Bolivia, Chile, Argentina</td><td>Mexico</td></tr>
+   <tr><td>Arsenic</td><td class="v">49.2%</td><td>1st, Peru</td><td>Peru</td><td>Peru</td></tr>
+   <tr><td>Copper (mine)</td><td class="v">37.8%</td><td>1st, Chile</td><td>Chile, Peru (3rd), Mexico</td><td>Chile</td></tr>
+   <tr><td>Rhenium</td><td class="v">37.0%</td><td>1st, Chile</td><td>Chile</td><td>Chile</td></tr>
+   <tr><td>Lithium</td><td class="v">31.4%</td><td>3rd, Chile</td><td>Chile, Argentina, Brazil</td><td>Australia</td></tr>
+   <tr><td>Tin</td><td class="v">26.2%</td><td>3rd, Peru</td><td>Peru, Brazil, Bolivia</td><td>China</td></tr>
+   <tr><td>Zinc</td><td class="v">21.4%</td><td>2nd, Peru</td><td>Peru, Mexico, Bolivia</td><td>China</td></tr>
+   <tr><td>Fluorspar</td><td class="v">16.0%</td><td>2nd, Mexico (tied)</td><td>Mexico, Brazil</td><td>China</td></tr>
+   <tr><td>Lead</td><td class="v">13.1%</td><td>3rd, Peru</td><td>Peru, Mexico, Bolivia</td><td>China</td></tr>
+   <tr><td>Vanadium</td><td class="v">4.8%</td><td>3rd, Brazil</td><td>Brazil</td><td>China</td></tr>
+   <tr><td>Silicon metal</td><td class="v">3.9%</td><td>2nd, Brazil</td><td>Brazil</td><td>China</td></tr>
+   <tr><td>Magnesium metal</td><td class="v">1.8%</td><td>3rd, Brazil (tied)</td><td>Brazil</td><td>China</td></tr>
+  </tbody>
+ </table></div>
+ <h3 style="margin-top:34px;font:700 24px/1.2 'Playfair Display',serif;color:var(--head)">Present, but outside the top three</h3>
+ <div class="tw"><table>
+  <thead><tr><th>Mineral</th><th>LatAm share of world output</th><th>Latin American producers</th></tr></thead>
+  <tbody>
+   <tr><td>Tantalum</td><td class="v">7.7%</td><td>Brazil, Bolivia</td></tr>
+   <tr><td>Antimony</td><td class="v">5.1%</td><td>Bolivia, Mexico, Guatemala</td></tr>
+   <tr><td>Phosphate rock</td><td class="v">4.1%</td><td>Brazil, Peru, Mexico</td></tr>
+   <tr><td>Manganese</td><td class="v">4.0%</td><td>Brazil</td></tr>
+   <tr><td>Graphite (natural)</td><td class="v">3.7%</td><td>Brazil, Mexico</td></tr>
+   <tr><td>Barite</td><td class="v">3.4%</td><td>Mexico</td></tr>
+   <tr><td>Tungsten</td><td class="v">2.0%</td><td>Bolivia</td></tr>
+   <tr><td>Nickel</td><td class="v">1.8%</td><td>Brazil</td></tr>
+   <tr><td>Cobalt</td><td class="v">0.6%</td><td>Cuba</td></tr>
+   <tr><td>Rare earths</td><td class="v">0.5%</td><td>Brazil</td></tr>
+  </tbody>
+ </table></div>
+</div></section>
+
+<section id="next"><div class="wrap mr">
+ <div>
+  <span class="mono k">Pacific Basin Intelligence Unit</span>
+  <h2>Production is the easy part <span class="hl">to measure.</span></h2>
+  <p class="lead">The rules decide whether that output grows or stalls. Our Critical Minerals Regulatory Outlook compares five Latin American jurisdictions for lithium, copper and nickel, ranked by bankability and regulatory risk.</p>
+  <div class="cta"><a class="btn a" href="mailto:staff@jfcarpio.com?subject=Executive%20summary%20%C2%B7%20Critical%20Minerals%20Regulatory%20Outlook">Request the executive summary →</a></div>
+  <p class="fine">We reply by email. <a class="src" href="/pacific-basin/teaser-minerales.html">See what the report covers</a>.</p>
+ </div>
+</div></section>
+
+<section id="method"><div class="wrap prose">
+ <span class="mono k">Method</span>
+ <h2>How we <span class="hl">counted.</span></h2>
+ <ul>
+  <li>Source: <a href="https://pubs.usgs.gov/publication/mcs2026">US Geological Survey, Mineral Commodity Summaries 2026</a>, world production tables, estimated 2025 figures. The list of 60 minerals is the <a href="https://pubs.usgs.gov/publication/mcs2026">US Final 2025 List of Critical Minerals</a> (90 FR 50494, November 7, 2025), as reprinted in that report.</li>
+  <li>Latin America here means the countries of South America, Central America, Mexico and the Caribbean. Shares add every Latin American country USGS lists for that mineral and divide by the USGS world total.</li>
+  <li>The count is a minimum. We left out beryllium and boron, where USGS reports different products for each country or the table does not give a clean 2025 ranking. Copper is mine output; silicon and magnesium are metal output.</li>
+  <li>Ties count as shared places: Mexico ties Mongolia in fluorspar, and Brazil ties Israel in magnesium metal.</li>
+  <li>Several minerals on the list, such as uranium and metallurgical coal, have no USGS production table. Rare earths and platinum-group metals are each reported as a group.</li>
+ </ul>
+ <div class="cite"><b>Cite this page:</b> JFCarpio.com, "Latin America critical minerals statistics: where the region ranks," https://jfcarpio.com/latin-america-critical-minerals-statistics/ (USGS 2026 data, reviewed November 10, 2026).</div>
+</div></section>
+
+<footer class="site"><div class="wrap">
+ <div><a class="brand" href="/">JFCarpio<span>.com</span></a><p style="margin-top:12px">Economic and business research for owners who decide with numbers.</p></div>
+ <div><b>Explore</b><a href="/pacific-basin/">Pacific Basin Intelligence Unit</a><a href="/consignment-statistics/">Consignment statistics</a><a href="/en/reports/">Reports</a><a href="/workshops/">Workshops</a></div>
+ <div><b>Contact</b><a href="https://wa.me/593999905080">WhatsApp +593 99 990 5080</a><a href="mailto:staff@jfcarpio.com">staff@jfcarpio.com</a></div>
+</div></footer>
+<script src="/assets/v2/tema.js" defer></script>
+</body>
+</html>
