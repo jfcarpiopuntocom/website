@@ -71,6 +71,13 @@
   </url>
 
 
+  <!-- Estadisticas de consignacion USA (JFC 2026-11-10). Slug sin ano: se actualiza en el mismo URL. -->
+  <url>
+    <loc>https://jfcarpio.com/consignment-statistics/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- FRIENDLY-123 (landing comercial, JFC 2026-09-24). Landing EN/ES y articulos: cada direccion es la
        misma landing con el articulo abierto (friendly123/generar-urls-seo.mjs). hreflang aqui. -->
   <url>

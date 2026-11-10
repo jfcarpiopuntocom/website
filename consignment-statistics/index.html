@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#FAFAF7">
+<!-- Pagina de estadisticas de consignacion USA (JFC 10 nov 2026: "Las dos, consignacion primero").
+     Datos: contratos publicos de 20 tiendas, leidos el 10 nov 2026. Cifras calculadas con codigo
+     (mediana/promedio), no a mano. Si se actualiza la muestra: recalcular las 6 tarjetas, los KPI,
+     la tabla y el JSON-LD juntos. Slug sin ano a proposito (se actualiza en el mismo URL). -->
+<script>(function(){var t;try{t=localStorage.getItem('jfc-tema')}catch(e){}document.documentElement.dataset.theme=t==='dark'?'dark':'light'})()</script>
+<title>Consignment Statistics: What US Shops Pay Consignors · JFCarpio.com</title>
+<link rel="canonical" href="https://jfcarpio.com/consignment-statistics/">
+<meta name="description" content="US consignment statistics from 20 published consignor agreements: the median shop pays the consignor 50% on a $60 item. Splits, terms, markdowns and payout days, with sources.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="JFCarpio.com">
+<meta property="og:title" content="Consignment statistics: what US shops pay their consignors">
+<meta property="og:description" content="The median US consignment shop pays the consignor 50% on a $60 item. Data from 20 published agreements, with sources.">
+<meta property="og:url" content="https://jfcarpio.com/consignment-statistics/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://jfcarpio.com/og-jfcarpio-v2.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Barlow+Condensed:wght@600;700;800&family=Jost:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/v2/tema.css"><link rel="stylesheet" href="/pacific-basin/pbiu.css"><link rel="stylesheet" href="/pacific-basin/boutique.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"JFCarpio.com Consignor Split: US consignment shop terms","description":"Consignor share of the sale price on a $60 item, consignment term, split rules, markdown schedules and payout timing, taken from the published consignor agreements of 20 independent US consignment shops.","url":"https://jfcarpio.com/consignment-statistics/","creator":{"@type":"Organization","name":"JFCarpio.com","url":"https://jfcarpio.com/"},"dateModified":"2026-11-10","temporalCoverage":"2026-11","spatialCoverage":"United States","variableMeasured":["Consignor share on a $60 item (median 50%)","Consignment term (median 90 days)"],"isAccessibleForFree":true}</script>
+<style>
+/* Solo para esta pagina. Colores: SIEMPRE variables de tema.css (contraste AA en claro y oscuro). Texto minimo 12px. */
+.stat{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--amber);border-radius:4px;padding:clamp(22px,4vw,40px);box-shadow:var(--shadow)}
+.stat .mono{color:var(--amber)}
+.stat .big{display:block;font:700 clamp(84px,14vw,150px)/1 'Playfair Display',serif;color:var(--head);margin:10px 0 6px}
+.stat p{margin:0;font-size:17px;line-height:1.55;color:var(--text)}
+.stat p+p{margin-top:12px;font-size:15px}
+.find{display:grid;grid-template-columns:1fr;gap:16px;margin-top:28px}
+.find .card{padding:22px 22px 20px}
+.find .card h3{font:700 24px/1.2 'Playfair Display',serif;color:var(--head);margin:6px 0 10px}
+.find .card p{margin:0;font-size:16px;line-height:1.6;color:var(--text)}
+.find .card .n{font:700 34px/1 'Barlow Condensed',sans-serif;color:var(--amber)}
+.ctx{display:grid;grid-template-columns:1fr;gap:16px;margin-top:24px}
+.ctx div{border-left:3px solid var(--amber);padding:4px 0 4px 16px}
+.ctx b{display:block;font:700 34px/1.1 'Barlow Condensed',sans-serif;color:var(--head)}
+.ctx p{margin:6px 0 0;font-size:16px;line-height:1.55;color:var(--text)}
+.tw{overflow-x:auto;margin-top:22px;border:1px solid var(--line);border-radius:4px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:15px;line-height:1.45;color:var(--text)}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line2);vertical-align:top}
+th{font:700 12px/1.4 'Space Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--head);background:var(--panel2)}
+.tw td,.tw td:first-child{font:400 15px/1.45 Jost,system-ui,sans-serif;letter-spacing:0;text-transform:none;color:var(--text)}
+.tw td:first-child{font-weight:600;color:var(--head)}
+footer.site b{font-size:12px}
+td a{color:var(--link)}
+td.v{font-weight:700;color:var(--head);white-space:nowrap}
+.prose{max-width:780px}
+.prose p,.prose li{font-size:17px;line-height:1.65;color:var(--text)}
+.prose ul{padding-left:20px}
+.cite{margin-top:18px;background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:16px 18px;font-size:15px;line-height:1.6;color:var(--text)}
+.hlight .wrap{align-items:center}
+@media (min-width:760px){.find{grid-template-columns:1fr 1fr}.ctx{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1100px){.find{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body class="bq">
+<nav class="top" aria-label="Main"><div class="strip"></div><div class="wrap">
+ <a class="brand" href="/">JFCarpio<span>.com</span></a>
+ <ul><li><a href="#findings">Findings</a></li><li><a href="#data">The data</a></li><li><a href="#method">Method</a></li></ul>
+ <a class="btn a" href="/friendly123/">Try friendly-123</a>
+ <button class="tema" type="button" aria-label="Switch to dark mode" aria-pressed="false"><svg class="luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+ <details class="menu"><summary>Menu</summary><nav aria-label="Mobile menu"><a href="#findings">Findings</a><a href="#data">The data</a><a href="#method">Method</a><a href="/friendly123/">Try friendly-123</a></nav></details>
+</div></nav>
+
+<header class="hlight" id="top"><div class="wrap">
+ <div>
+  <span class="mono eyebrow"><i></i>Consignment statistics · United States</span>
+  <h1>What US consignment shops <span class="hl">pay their consignors.</span></h1>
+  <p class="lead">We read the published consignor agreements of 20 independent shops, from Dallas to Buffalo and from Santa Monica to Cambridge. Clothing, kids' gear, furniture, crafts and building salvage. Here is what they pay, for how long they hold an item, and when the money goes out.</p>
+  <div class="kpis"><div><b>20</b><span>shops reviewed</span></div><div><b>90</b><span>days, most common term</span></div><div><b>10 of 20</b><span>use more than one split</span></div><div><b>40–65%</b><span>range on a $60 item</span></div></div>
+  <p class="fine">Data reviewed November 10, 2026. Every number links to its source below.</p>
+ </div>
+ <div class="stat">
+  <span class="mono">The JFCarpio.com Consignor Split</span>
+  <span class="big">50%</span>
+  <p>Median share of the sale price that a US consignment shop pays the consignor on a $60 item, across 18 published agreements.</p>
+  <p>Average: 48.3%. Six shops pay 40%, eight pay 50%, and only three pay more than half.</p>
+ </div>
+</div></header>
+
+<section id="findings"><div class="wrap">
+ <span class="mono k">Six findings</span>
+ <h2>Half is the norm. <span class="hl">The rules around it are not.</span></h2>
+ <div class="find">
+  <div class="card"><span class="n">8 of 18</span><h3>Half is the most common split</h3><p>Eight shops pay 50% on a $60 item and six pay 40%. Only Thrift Pony and Craftworks (60%) and Rhealana (65%) pay more than half. The average is 48.3%.</p></div>
+  <div class="card"><span class="n">10 of 20</span><h3>Many shops run several splits at once</h3><p>Half of the shops change the consignor's share by price, category, time on the floor or consignor status. Clotheshorse Anonymous pays 25% on items of $25 and under and 80% on sales of $5,000 or more. Modern Resale pays 50% in the first three months, 40% up to month nine and 30% after that.</p></div>
+  <div class="card"><span class="n">90 days</span><h3>The usual clock</h3><p>Of the 17 shops that state a term, seven use exactly 90 days, and the median is 90. Terms run from 60 days to a full year.</p></div>
+  <div class="card"><span class="n">Day 30</span><h3>When the first markdown lands</h3><p>At least seven shops publish a markdown schedule tied to days on the floor, and six of them make the first cut at day 30. Wiggle Worms takes 25% off after 30 days, 50% after 60 and 75% after 90.</p></div>
+  <div class="card"><span class="n">4 of 20</span><h3>Store credit pays more</h3><p>At least four shops pay more when the consignor takes store credit instead of cash. What's New Furniture pays 50% in cash or 60% in store credit; Great Labels raises 40% to 50% when proceeds are spent in the store.</p></div>
+  <div class="card"><span class="n">No standard</span><h3>Payday varies shop by shop</h3><p>Clotheshorse Anonymous pays on the 1st of each month and Furniture Consignment Group on the 20th of the following month. Jack &amp; Juni pays once a balance reaches $100. Modern Resale pays 15 to 30 days after the buyer takes delivery.</p></div>
+ </div>
+</div></section>
+
+<section id="owners"><div class="wrap mr">
+ <div>
+  <span class="mono k">For shop owners</span>
+  <h2>One check, <span class="hl">four rules.</span></h2>
+  <p class="lead">Put these terms together and a single consignor check depends on the item's price tier, the day it sold, the markdown in force that day and how the consignor wants to be paid. Then repeat it for every consignor, every month.</p>
+  <div class="cta"><a class="btn a" href="/friendly123/">Try friendly-123 with your own shop →</a></div>
+  <p class="fine">friendly-123 keeps stock, sales and each consignor's commission in one shared notebook for your phones and staff.</p>
+ </div>
+ <div class="ctx" style="grid-template-columns:1fr">
+  <div><b>Price tier</b><p>Which split applies to this item?</p></div>
+  <div><b>Sale date</b><p>Was it sold at full price, or after the day-30 or day-60 markdown?</p></div>
+  <div><b>Payout method</b><p>Cash, check or store credit, and is there a bonus or a fee?</p></div>
+ </div>
+</div></section>
+
+<section id="market"><div class="wrap">
+ <span class="mono k">The market around these shops</span>
+ <h2>Resale keeps <span class="hl">growing.</span></h2>
+ <div class="ctx">
+  <div><b>$78.8 billion</b><p>Projected size of the US secondhand apparel market by 2030, growing about 7.3% a year. <a href="https://www.retaildive.com/news/us-resale-market-surpass-78-billion-in-2030-secondhand/816470/">ThredUp 2026 Resale Report, conducted by GlobalData, via Retail Dive (April 3, 2026)</a>.</p></div>
+  <div><b>Nearly 4×</b><p>In 2025 the US secondhand market grew nearly four times faster than the broader retail clothing market. <a href="https://www.retaildive.com/news/us-resale-market-surpass-78-billion-in-2030-secondhand/816470/">Same report</a>.</p></div>
+  <div><b>25,000+</b><p>Resale, consignment and not-for-profit resale shops in the US, according to NARTS: The Association of Resale Professionals, <a href="https://www.census.gov/newsroom/stories/thrift-store-day.html">as quoted by the US Census Bureau (2023)</a>. No federal registry counts consignment shops on their own.</p></div>
+ </div>
+</div></section>
+
+<section id="data"><div class="wrap">
+ <span class="mono k">The data</span>
+ <h2>Twenty shops, <span class="hl">one table.</span></h2>
+ <p class="lead">Consignor share is the cash rate on a $60 item at the start of the term, before store-credit bonuses, fees or markdowns.</p>
+ <div class="tw"><table>
+  <thead><tr><th>Shop</th><th>Location</th><th>Share on a $60 item</th><th>Term</th><th>Source</th></tr></thead>
+  <tbody>
+   <tr><td>Clotheshorse Anonymous</td><td>Dallas, TX</td><td class="v">45%</td><td>90 days</td><td><a href="https://clotheshorseanonymous.com/pages/consignment-faqs">Consignment FAQs</a></td></tr>
+   <tr><td>Rhealana</td><td>Amarillo, TX</td><td class="v">65%</td><td>Not stated</td><td><a href="https://amarillo.rhealana.com/wixconsignorlinks.asp">Consignor page</a></td></tr>
+   <tr><td>Sui Generis Designer Consignment</td><td>San Francisco, CA</td><td class="v">40%</td><td>Not stated</td><td><a href="https://suigenerisconsignment.com/pages/consigning-your-items-has-never-been-easier">Consigning page</a></td></tr>
+   <tr><td>Bella Boutique Consignment</td><td>Blaine, WA</td><td class="v">40%</td><td>90 days</td><td><a href="https://bellaboutiqueconsignment.ricoconsign.com/store/custom-page-1">Consign with us</a></td></tr>
+   <tr><td>Labels</td><td>Atlanta, GA</td><td class="v">50%</td><td>90 days</td><td><a href="https://labelsrb.com/pages/consign-with-us">Consign with us</a></td></tr>
+   <tr><td>Furnish Traders</td><td>Hartford, WI</td><td class="v">50%</td><td>120 days</td><td><a href="https://alixe-rheeve.squarespace.com/consign-with-us">Consignor terms</a></td></tr>
+   <tr><td>Ann's Fabulous Finds</td><td>Bloomfield Hills, MI</td><td class="v">n/a</td><td>100 days minimum</td><td><a href="https://cdn.shopify.com/s/files/1/0254/1935/files/AFF_Consignment_Agreeement_T0323.pdf">Agreement (PDF)</a>. Accepts items worth $400 or more.</td></tr>
+   <tr><td>Raspberry Beret</td><td>Cambridge, MA</td><td class="v">40%</td><td>60 days</td><td><a href="https://cdn.shopify.com/s/files/1/0616/4289/9622/files/Raspberry_Beret_Agreement_2022.pdf">Agreement (PDF)</a></td></tr>
+   <tr><td>Wiggle Worms</td><td>Fernandina Beach, FL</td><td class="v">40%</td><td>120 days</td><td><a href="https://irp.cdn-website.com/42043f26/files/uploaded/Consignment+Agreement+-+Wiggle+Worms.pdf">Agreement (PDF)</a></td></tr>
+   <tr><td>Furniture Consignment Group</td><td>New England</td><td class="v">50%</td><td>60 days, then 30%</td><td><a href="https://furnitureconsignment.com/selling">Selling page</a></td></tr>
+   <tr><td>Bougie Buffalo</td><td>Buffalo, NY</td><td class="v">50%</td><td>3 months</td><td><a href="https://bougiebuffalo.ricoconsign.com/store/Consign%20with%20us">Consign with us</a></td></tr>
+   <tr><td>What's New Furniture</td><td>Portland, OR</td><td class="v">50%</td><td>90 days</td><td><a href="https://www.whatsnewfurniture.com/pages/consign-with-us">Consign with us</a></td></tr>
+   <tr><td>Jack &amp; Juni</td><td>Owings, MD</td><td class="v">50%</td><td>9 to 24 months</td><td><a href="https://jackandjuni.com/consignment-info">Consignment info</a></td></tr>
+   <tr><td>Afterwards</td><td>Menlo Park, CA</td><td class="v">40%</td><td>90 days</td><td><a href="https://cdn.shopify.com/s/files/1/0411/1066/7430/files/Afterwards-Consignment-Form.pdf">Agreement (PDF)</a></td></tr>
+   <tr><td>Craftworks</td><td>Northboro, MA</td><td class="v">60%</td><td>6 months</td><td><a href="https://media.rainpos.com/6969/Consignment_Agreement_2026.pdf">Agreement 2026 (PDF)</a></td></tr>
+   <tr><td>Selective Seconds</td><td>Greenwood, IN</td><td class="v">40–70%</td><td>60 days</td><td><a href="https://selectiveseconds.com/pages/consignor-agreement">Consignor agreement</a>. Tier for a $60 item not published.</td></tr>
+   <tr><td>Modern Resale</td><td>Culver City, CA</td><td class="v">50%</td><td>Up to 1 year</td><td><a href="https://www.modernresale.com/pages/consign-with-us">Consign with us</a></td></tr>
+   <tr><td>Great Labels</td><td>Santa Monica, CA</td><td class="v">40%</td><td>90 days</td><td><a href="https://greatlabels.com/consignment">Consign with us</a></td></tr>
+   <tr><td>Thrift Pony</td><td>Charlotte, NC</td><td class="v">60%</td><td>Not stated</td><td><a href="https://www.thriftpony.com/pages/rental-consignment">How it works</a></td></tr>
+   <tr><td>Rebuilders Xchange</td><td>Cleveland, OH</td><td class="v">50%</td><td>1 year</td><td><a href="https://www.rbxhub.com/pages/sell-with-us">Sell with us</a></td></tr>
+  </tbody>
+ </table></div>
+</div></section>
+
+<section id="method"><div class="wrap prose">
+ <span class="mono k">Method</span>
+ <h2>How we <span class="hl">counted.</span></h2>
+ <ul>
+  <li>We read each shop's own consignor page or signed-agreement template, as published online on November 10, 2026.</li>
+  <li>The JFCarpio.com Consignor Split is the median consignor share on a $60 item, the cash rate at the start of the term. Eighteen of the 20 shops publish a rate that applies to that item.</li>
+  <li>"Use more than one split" counts shops whose rate changes with price, category, time on the floor or consignor status. Markdown, store-credit and payday counts are minimums: some shops do not publish those terms.</li>
+  <li>We left out shops outside the US, agreements dated before 2020, pages with no location, and online platforms without a fixed rate.</li>
+  <li>This is a reviewed sample, not a random survey. Terms change, so check the source before relying on any single shop's numbers.</li>
+ </ul>
+ <div class="cite"><b>Cite this page:</b> JFCarpio.com, "Consignment statistics: what US shops pay their consignors," https://jfcarpio.com/consignment-statistics/ (data reviewed November 10, 2026).</div>
+</div></section>
+
+<footer class="site"><div class="wrap">
+ <div><a class="brand" href="/">JFCarpio<span>.com</span></a><p style="margin-top:12px">Economic and business research for owners who decide with numbers.</p></div>
+ <div><b>Explore</b><a href="/friendly123/">friendly-123</a><a href="/en/reports/">Reports</a><a href="/workshops/">Workshops</a><a href="/pacific-basin/">Pacific Basin Intelligence Unit</a></div>
+ <div><b>Contact</b><a href="https://wa.me/593999905080">WhatsApp +593 99 990 5080</a><a href="mailto:staff@jfcarpio.com">staff@jfcarpio.com</a></div>
+</div></footer>
+<script src="/assets/v2/tema.js" defer></script>
+</body>
+</html>
